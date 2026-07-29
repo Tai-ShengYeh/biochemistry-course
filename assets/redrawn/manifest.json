@@ -1,0 +1,319 @@
+{
+  "canvas": {
+    "width": 1672,
+    "height": 941,
+    "background": "#FDF8E8"
+  },
+  "items": [
+    {
+      "topic": "w02_water_hbond",
+      "clean_required": true,
+      "files": [
+        "w02_water_hbond_clean.png",
+        "w02_water_hbond_labeled.png"
+      ],
+      "marker_count": 2,
+      "repeated_structures": "Water molecules repeat in both hydration examples."
+    },
+    {
+      "topic": "w02_titration",
+      "clean_required": true,
+      "files": [
+        "w02_titration_clean.png",
+        "w02_titration_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "No repeated molecular structure."
+    },
+    {
+      "topic": "w03_aa_general",
+      "clean_required": true,
+      "files": [
+        "w03_aa_general_clean.png",
+        "w03_aa_general_labeled.png"
+      ],
+      "marker_count": 5,
+      "repeated_structures": "One generic amino-acid structure."
+    },
+    {
+      "topic": "w03_aa_classes",
+      "clean_required": true,
+      "files": [
+        "w03_aa_classes_clean.png",
+        "w03_aa_classes_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Amino-acid examples repeat within four side-chain classes."
+    },
+    {
+      "topic": "w03_peptide_bond",
+      "clean_required": true,
+      "files": [
+        "w03_peptide_bond_clean.png",
+        "w03_peptide_bond_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Two amino-acid reactants and one dipeptide product."
+    },
+    {
+      "topic": "w04_four_levels",
+      "clean_required": true,
+      "files": [
+        "w04_four_levels_clean.png",
+        "w04_four_levels_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Four distinct levels of protein structure."
+    },
+    {
+      "topic": "w04_helix_sheet",
+      "clean_required": true,
+      "files": [
+        "w04_helix_sheet_clean.png",
+        "w04_helix_sheet_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Beta-strand arrows repeat in parallel and antiparallel sheets."
+    },
+    {
+      "topic": "w05_heme_o2",
+      "clean_required": true,
+      "files": [
+        "w05_heme_o2_clean.png",
+        "w05_heme_o2_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "One heme center with one bound O2 molecule."
+    },
+    {
+      "topic": "w05_o2_curves",
+      "clean_required": true,
+      "files": [
+        "w05_o2_curves_clean.png",
+        "w05_o2_curves_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Two oxygen-binding curves share the same axes."
+    },
+    {
+      "topic": "w06_activation",
+      "clean_required": true,
+      "files": [
+        "w06_activation_clean.png",
+        "w06_activation_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Catalyzed and uncatalyzed paths share reactants and products."
+    },
+    {
+      "topic": "w06_induced_fit",
+      "clean_required": true,
+      "files": [
+        "w06_induced_fit_clean.png",
+        "w06_induced_fit_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Three sequential enzyme-binding states."
+    },
+    {
+      "topic": "w07_mm_curve",
+      "clean_required": true,
+      "files": [
+        "w07_mm_curve_clean.png",
+        "w07_mm_curve_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "One Michaelis-Menten curve."
+    },
+    {
+      "topic": "w07_inhibition",
+      "clean_required": true,
+      "files": [
+        "w07_inhibition_clean.png",
+        "w07_inhibition_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Control curve repeats in both inhibition panels."
+    },
+    {
+      "topic": "w09_glucose_forms",
+      "clean_required": true,
+      "files": [
+        "w09_glucose_forms_clean.png",
+        "w09_glucose_forms_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Glucose appears as open chain, alpha ring, and beta ring."
+    },
+    {
+      "topic": "w09_polysaccharides",
+      "clean_required": true,
+      "files": [
+        "w09_polysaccharides_clean.png",
+        "w09_polysaccharides_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Glucose units repeat throughout starch, glycogen, and cellulose."
+    },
+    {
+      "topic": "w10_fatty_acids",
+      "clean_required": true,
+      "files": [
+        "w10_fatty_acids_clean.png",
+        "w10_fatty_acids_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Fatty-acid chains repeat in packed arrays."
+    },
+    {
+      "topic": "w10_membrane",
+      "clean_required": true,
+      "files": [
+        "w10_membrane_clean.png",
+        "w10_membrane_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Phospholipids and cholesterol repeat across the bilayer."
+    },
+    {
+      "topic": "w10_transport",
+      "clean_required": true,
+      "files": [
+        "w10_transport_clean.png",
+        "w10_transport_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Three separate membrane transport mechanisms."
+    },
+    {
+      "topic": "w11_nucleotide",
+      "clean_required": true,
+      "files": [
+        "w11_nucleotide_clean.png",
+        "w11_nucleotide_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "The same nucleoside motif appears with and without phosphate."
+    },
+    {
+      "topic": "w11_dna_helix",
+      "clean_required": true,
+      "files": [
+        "w11_dna_helix_clean.png",
+        "w11_dna_helix_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Base-pair hydrogen bonds repeat along the double helix."
+    },
+    {
+      "topic": "w12_deltaG",
+      "clean_required": true,
+      "files": [
+        "w12_deltaG_clean.png",
+        "w12_deltaG_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Two reaction-coordinate plots share the same axes."
+    },
+    {
+      "topic": "w12_atp_cycle",
+      "clean_required": true,
+      "files": [
+        "w12_atp_cycle_clean.png",
+        "w12_atp_cycle_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "ATP/ADP cycle connects three forms of cellular work."
+    },
+    {
+      "topic": "w13_glycolysis",
+      "clean_required": true,
+      "files": [
+        "w13_glycolysis_clean.png",
+        "w13_glycolysis_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Intermediates after cleavage represent two molecules each."
+    },
+    {
+      "topic": "w13_fermentation",
+      "clean_required": true,
+      "files": [
+        "w13_fermentation_clean.png",
+        "w13_fermentation_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Pyruvate is repeated at the start of both fermentation branches."
+    },
+    {
+      "topic": "w14_tca",
+      "clean_required": true,
+      "files": [
+        "w14_tca_clean.png",
+        "w14_tca_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Oxaloacetate is regenerated each cycle."
+    },
+    {
+      "topic": "w15_etc",
+      "clean_required": true,
+      "files": [
+        "w15_etc_clean.png",
+        "w15_etc_labeled.png"
+      ],
+      "marker_count": 5,
+      "repeated_structures": "Protons and electron carriers repeat along the inner membrane."
+    },
+    {
+      "topic": "w15_chemiosmosis",
+      "clean_required": true,
+      "files": [
+        "w15_chemiosmosis_clean.png",
+        "w15_chemiosmosis_labeled.png"
+      ],
+      "marker_count": 3,
+      "repeated_structures": "Protons repeat in the intermembrane-space gradient."
+    },
+    {
+      "topic": "w16_beta_ox",
+      "clean_required": true,
+      "files": [
+        "w16_beta_ox_clean.png",
+        "w16_beta_ox_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "The four-step spiral repeats until the chain is converted."
+    },
+    {
+      "topic": "w16_urea",
+      "clean_required": true,
+      "files": [
+        "w16_urea_clean.png",
+        "w16_urea_labeled.png"
+      ],
+      "marker_count": 4,
+      "repeated_structures": "Ornithine is regenerated each cycle."
+    },
+    {
+      "topic": "w17_organs",
+      "clean_required": true,
+      "files": [
+        "w17_organs_clean.png",
+        "w17_organs_labeled.png"
+      ],
+      "marker_count": 5,
+      "repeated_structures": "Blood-borne fuels recur between organ pairs."
+    },
+    {
+      "topic": "w17_fed_fasted",
+      "clean_required": true,
+      "files": [
+        "w17_fed_fasted_clean.png",
+        "w17_fed_fasted_labeled.png"
+      ],
+      "marker_count": 6,
+      "repeated_structures": "Liver, muscle, and adipose tissue repeat across fed and fasted states."
+    }
+  ]
+}
