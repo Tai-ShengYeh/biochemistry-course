@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第 7 週 · 酵素(二):動力學與抑制 | 越南學生 A2 中文</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+<link rel="stylesheet" href="../assets/css/course.css?v=3">
+</head>
+<body>
+<div class="reveal"><div class="slides">
+<section>
+<p>第 7 週</p>
+<p>酵素(二)</p>
+<p>動力學與抑制</p>
+<p>Enzyme (2): động học và chất ức chế</p>
+</section>
+<section>
+<div class="hd">
+<h2>先接上週</h2>
+<p class="vi">Nối tiếp tuần trước</p>
+</div>
+<div class="banner">
+<b>很多藥物就是酵素抑制劑。</b>
+<span class="vi">Nhiều thuốc chính là chất ức chế enzyme.</span>
+</div>
+<div class="cards c2">
+<div class="card s">
+<h4>上週</h4>
+<p>酵素抓受質,讓反應變快。</p>
+<p class="vi">Enzyme bắt cơ chất, phản ứng nhanh</p>
+</div>
+<div class="card a">
+<h4>這週</h4>
+<p>量『有多快』、『抓多緊』,還有怎麼『擋住』它。</p>
+<p class="vi">Đo tốc độ, độ bám, và cách ức chế</p>
+</div>
+</div>
+</section>
+<section>
+<div class="hd">
+<h2>先看詞</h2>
+<p class="vi">Từ vựng · 不用背,看過就好</p>
+</div>
+<table>
+<tr>
+<th>中文</th>
+<th>Tiếng Việt</th>
+<th>English</th>
+<th>中文</th>
+<th>Tiếng Việt</th>
+<th>English</th>
+</tr>
+<tr>
+<td>酵素動力學</td>
+<td>Động học enzyme</td>
+<td>Kinetics</td>
+<td>抑制劑</td>
+<td>Chất ức chế</td>
+<td>Inhibitor</td>
+</tr>
+<tr>
+<td>米氏方程式</td>
+<td>PT Michaelis-Menten</td>
+<td>MM equation</td>
+<td>競爭性抑制</td>
+<td>Ức chế cạnh tranh</td>
+<td>Competitive</td>
+</tr>
+<tr>
+<td>米氏常數</td>
+<td>Hằng số Michaelis</td>
+<td>Km</td>
+<td>非競爭性抑制</td>
+<td>Ức chế không cạnh tranh</td>
+<td>Noncompetitive</td>
+</tr>
+<tr>
+<td>最大速率</td>
+<td>Tốc độ tối đa</td>
+<td>Vmax</td>
+<td>回饋抑制</td>
+<td>Ức chế ngược</td>
+<td>Feedback</td>
+</tr>
+<tr>
+<td>初速率</td>
+<td>Tốc độ ban đầu</td>
+<td>V₀</td>
+<td>磷酸化</td>
+<td>Sự phosphoryl hóa</td>
+<td>Phosphorylation</td>
+</tr>
+</table>
+<p style="color:var(--accent);font-weight:700">競爭性 = cạnh tranh。非競爭性 = không cạnh tranh。差別就是加不加「không」。</p>
+</section>
+<section>
+<div class="hd">
+<h2>米氏曲線:酵素有多快</h2>
+<p class="vi">Đường cong Michaelis-Menten</p>
+</div>
+<img class="r-stretch" src="../assets/figures/w07_mm_curve.jpg" alt="w07_mm_curve">
+<p>受質越多,酵素越快 —— 但有上限。</p>
+<p class="vi">到了上限,再加受質也沒用 —— 酵素都在忙。</p>
+</section>
+<section>
+<div class="hd">
+<h2>Vmax 與 Km</h2>
+<p class="vi">Vmax và Km</p>
+</div>
+<div class="banner">
+<b>Km 小 = 抓得緊。Km 大 = 抓得鬆。</b>
+<span class="vi">Km nhỏ = bám chặt. Km lớn = bám lỏng.</span>
+</div>
+<div class="cards c2">
+<div class="card s">
+<h4>Vmax</h4>
+<p>最快的速率。</p>
+<p>是漸近線 —— 永遠碰不到。</p>
+<p class="vi">Đường tiệm cận</p>
+</div>
+<div class="card ">
+<h4>Km</h4>
+<p>速率到 ½Vmax 時的受質濃度。</p>
+<p class="vi">Nồng độ cơ chất tại ½Vmax</p>
+</div>
+</div>
+</section>
+<section>
+<div class="hd">
+<h2>注意:Km 在 X 軸</h2>
+<p class="vi">Km nằm trên trục X</p>
+</div>
+<div class="wrong"><b>錯:把 Km 當成速率。</b></div>
+<div class="banner">
+<b>Km 是「受質濃度」,在 X 軸上。</b>
+<span class="vi">Km là nồng độ cơ chất — trên trục X.</span>
+</div>
+<p>它剛好是速率等於一半 Vmax 時的那個濃度。</p>
+</section>
+<section>
+<div class="hd">
+<h2>抑制劑:擋住酵素</h2>
+<p class="vi">Chất ức chế</p>
+</div>
+<img class="r-stretch" src="../assets/figures/w07_inhibition.jpg" alt="w07_inhibition">
+<p style="color:var(--accent);font-weight:700">很多藥物就是抑制劑。擋住某個酵素,病就好了。</p>
+<p class="vi">兩種:搶活性部位(競爭性)/ 黏別的地方(非競爭性)。</p>
+</section>
+<section>
+<div class="hd">
+<h2>兩種抑制的比較</h2>
+<p class="vi">So sánh 2 loại ức chế</p>
+</div>
+<table>
+<tr>
+<th></th>
+<th>競爭性 Cạnh tranh</th>
+<th>非競爭性 Không cạnh tranh</th>
+</tr>
+<tr>
+<td>黏在哪</td>
+<td>活性部位(跟受質搶)</td>
+<td>別的地方</td>
+</tr>
+<tr>
+<td>加很多受質</td>
+<td>可以救回來</td>
+<td>救不回來</td>
+</tr>
+<tr>
+<td>Vmax</td>
+<td>不變</td>
+<td>下降</td>
+</tr>
+<tr>
+<td>Km</td>
+<td>變大</td>
+<td>不變</td>
+</tr>
+</table>
+<p style="color:var(--accent);font-weight:700">這張最容易背反 —— 一定要對照圖。</p>
+</section>
+<section>
+<div class="hd">
+<h2>怎麼記,不會反</h2>
+<p class="vi">Cách nhớ không bị ngược</p>
+</div>
+<div class="banner">
+<b>競爭性動 Km。非競爭性動 Vmax。</b>
+<span class="vi">Cạnh tranh → Km. Không cạnh tranh → Vmax.</span>
+</div>
+<div class="cards c2">
+<div class="card s">
+<h4>競爭性</h4>
+<p>搶「位置」。</p>
+<p>加夠受質能擠掉它。</p>
+<p>→ 動 Km(Vmax 不變)</p>
+<p class="vi">Giành vị trí → đổi Km</p>
+</div>
+<div class="card a">
+<h4>非競爭性</h4>
+<p>降「上限」。</p>
+<p>受質趕不走它。</p>
+<p>→ 動 Vmax(Km 不變)</p>
+<p class="vi">Hạ trần → đổi Vmax</p>
+</div>
+</div>
+</section>
+<section>
+<div class="hd">
+<h2>回饋抑制:自己喊停</h2>
+<p class="vi">Ức chế ngược</p>
+</div>
+<div class="flow">
+<div class="step"><b>最終產物太多</b><span>→ · Sản phẩm cuối dư</span></div>
+<div class="arw">→</div>
+<div class="step"><b>回頭抑制</b><span>→ · Ức chế ngược</span></div>
+<div class="arw">→</div>
+<div class="step"><b>第一個酵素</b><span>→ · Enzyme đầu tiên</span></div>
+<div class="arw">→</div>
+<div class="step"><b>整條路徑慢下來</b><span>Cả đường chậm lại</span></div>
+</div>
+<p>工廠做太多產品,就該停工。細胞也一樣。</p>
+<p style="color:var(--accent);font-weight:700">細胞省成本的方式。第 13、15 週的代謝路徑都靠它調控。</p>
+</section>
+<section>
+<div class="hd">
+<h2>開關:磷酸化</h2>
+<p class="vi">Công tắc: phosphoryl hóa</p>
+</div>
+<div class="banner">
+<b>加一個磷酸 → 開(或關)。</b>
+<span class="vi">Thêm 1 phosphate → bật (hoặc tắt).</span>
+</div>
+<div class="cards c2">
+<div class="card s">
+<h4>加磷酸</h4>
+<p>開關切換。</p>
+<p class="vi">Thêm phosphate → chuyển trạng thái</p>
+</div>
+<div class="card ">
+<h4>拿掉磷酸</h4>
+<p>切回去。</p>
+<p class="vi">Bỏ phosphate → đổi lại</p>
+</div>
+</div>
+<p style="color:var(--accent);font-weight:700">第 17 週的胰島素、升糖素就是用這招控制代謝。</p>
+</section>
+<section>
+<div class="hd">
+<h2>練習:看圖</h2>
+<p class="vi">Bài tập: Nhìn hình</p>
+</div>
+<div class="cards c3">
+<div class="card ">
+<h4>(a) Vmax</h4>
+</div>
+<div class="card ">
+<h4>(b) ½Vmax</h4>
+</div>
+<div class="card ">
+<h4>(c) Km</h4>
+</div>
+</div>
+<img class="r-stretch" src="../assets/figures/w07_mm_curve.jpg" alt="w07_mm_curve">
+<p style="color:var(--accent);font-weight:700">在米氏曲線上指出 Chỉ ra trên đường cong:</p>
+</section>
+<section>
+<div class="hd">
+<h2>練習:對或錯</h2>
+<p class="vi">Bài tập: Đúng hay sai</p>
+</div>
+<div class="cards ">
+<div class="card ">
+<h4>O / X</h4>
+<p>Km 越小,酵素抓受質抓得越緊。</p>
+</div>
+</div>
+<div class="cards ">
+<div class="card ">
+<h4>O / X</h4>
+<p>競爭性抑制會讓 Vmax 下降。</p>
+</div>
+</div>
+<div class="cards ">
+<div class="card ">
+<h4>O / X</h4>
+<p>加很多受質可以克服競爭性抑制。</p>
+</div>
+</div>
+<div class="cards ">
+<div class="card ">
+<h4>O / X</h4>
+<p>回饋抑制是最終產物抑制第一個酵素。</p>
+</div>
+</div>
+<p style="color:var(--accent);font-weight:700">想一想:設計藥物,競爭性好還是非競爭性好?</p>
+</section>
+<section>
+<p>下週 · Tuần sau</p>
+<p>碳水化合物</p>
+<p>Carbohydrate</p>
+<p style="color:var(--accent);font-weight:700">▶</p>
+<p>課前:看詞彙表第 8 週(18 個詞)</p>
+<p>Xem trước 18 từ của tuần 8</p>
+<p style="color:var(--accent);font-weight:700">▶</p>
+<p>小測:下週前 10 分鐘,考今天的詞</p>
+<p>Kiểm tra 5 câu</p>
+<p style="color:var(--accent);font-weight:700">▶</p>
+<p>注意:第 9 週期中考,範圍第 1–8 週</p>
+<p>Chú ý: thi giữa kỳ tuần 9, phạm vi tuần 1–8</p>
+</section>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script>
+Reveal.initialize({ hash:true, slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
+  transition:'slide', plugins:[RevealNotes] });
+</script>
+</body>
+</html>

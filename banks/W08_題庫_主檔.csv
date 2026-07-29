@@ -1,0 +1,19 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W08-001,8,單醣,Đường đơn (monosaccharide),Monosaccharide,「Đường đơn (monosaccharide)」的中文是什麼?,醛醣,果糖,多醣,單醣,4,越→中
+W08-002,8,雙醣,Đường đôi (disaccharide),Disaccharide,「Đường đôi (disaccharide)」的中文是什麼?,雙醣,乳糖,酮醣,蔗糖,1,越→中
+W08-003,8,多醣,Đường đa (polysaccharide),Polysaccharide,「Đường đa (polysaccharide)」的中文是什麼?,果糖,多醣,雙醣,蔗糖,2,越→中
+W08-004,8,葡萄糖,Glucose,Glucose,「Glucose」的中文是什麼?,葡萄糖,醣蛋白,肝醣,異構物,1,越→中
+W08-005,8,果糖,Fructose,Fructose,「Fructose」的中文是什麼?,乳糖,酮醣,果糖,多醣,3,越→中
+W08-006,8,半乳糖,Galactose,Galactose,「Galactose」的中文是什麼?,醣苷鍵,纖維素,半乳糖,葡萄糖,3,越→中
+W08-007,8,蔗糖,Sucrose,Sucrose,「Sucrose」的中文是什麼?,澱粉,蔗糖,單醣,醛醣,2,越→中
+W08-008,8,乳糖,Lactose,Lactose,「Lactose」的中文是什麼?,醛醣,乳糖,肝醣,果糖,2,越→中
+W08-009,8,麥芽糖,Maltose,Maltose,「Maltose」的中文是什麼?,纖維素,醣蛋白,單醣,麥芽糖,4,越→中
+W08-010,8,醣苷鍵,Liên kết glycosidic,Glycosidic bond,「Liên kết glycosidic」的中文是什麼?,醣苷鍵,纖維素,還原糖,半乳糖,1,越→中
+W08-011,8,澱粉,Tinh bột,Starch,「Tinh bột」的中文是什麼?,果糖,澱粉,醛醣,酮醣,2,越→中
+W08-012,8,肝醣,Glycogen,Glycogen,「Glycogen」的中文是什麼?,單醣,乳糖,酮醣,肝醣,4,越→中
+W08-013,8,纖維素,Cellulose,Cellulose,「Cellulose」的中文是什麼?,纖維素,麥芽糖,醣苷鍵,半乳糖,1,越→中
+W08-014,8,醛醣,Aldose,Aldose,「Aldose」的中文是什麼?,澱粉,果糖,肝醣,醛醣,4,越→中
+W08-015,8,酮醣,Ketose,Ketose,「Ketose」的中文是什麼?,乳糖,果糖,酮醣,單醣,3,越→中
+W08-016,8,異構物,Đồng phân,Isomer,「Đồng phân」的中文是什麼?,醣苷鍵,異構物,醣蛋白,纖維素,2,越→中
+W08-017,8,醣蛋白,Glycoprotein,Glycoprotein,「Glycoprotein」的中文是什麼?,還原糖,澱粉,醣蛋白,異構物,3,越→中
+W08-018,8,還原糖,Đường khử,Reducing sugar,「Đường khử」的中文是什麼?,還原糖,麥芽糖,纖維素,葡萄糖,1,越→中

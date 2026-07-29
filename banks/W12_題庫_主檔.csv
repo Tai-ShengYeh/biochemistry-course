@@ -1,0 +1,19 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W12-001,12,生物能量學,Năng lượng sinh học,Bioenergetics,「Năng lượng sinh học」的中文是什麼?,自由能變化,生物能量學,吸能反應,氧化還原反應,2,越→中
+W12-002,12,自由能,Năng lượng tự do,Free energy (G),「Năng lượng tự do」的中文是什麼?,水解,電子載體,自由能,還原,3,越→中
+W12-003,12,自由能變化,Biến thiên năng lượng tự do,ΔG,「Biến thiên năng lượng tự do」的中文是什麼?,自由能變化,三磷酸腺苷,生物能量學,還原電位,1,越→中
+W12-004,12,標準自由能,Năng lượng tự do chuẩn,ΔG°′,「Năng lượng tự do chuẩn」的中文是什麼?,三磷酸腺苷,標準自由能,放能反應,異化作用,2,越→中
+W12-005,12,放能反應,Phản ứng tỏa năng,Exergonic reaction,「Phản ứng tỏa năng」的中文是什麼?,電子載體,放能反應,異化作用,還原電位,2,越→中
+W12-006,12,吸能反應,Phản ứng thu năng,Endergonic reaction,「Phản ứng thu năng」的中文是什麼?,吸能反應,電子載體,自由能變化,異化作用,1,越→中
+W12-007,12,自發反應,Phản ứng tự phát,Spontaneous reaction,「Phản ứng tự phát」的中文是什麼?,能量耦合,自發反應,高能磷酸鍵,還原電位,2,越→中
+W12-008,12,能量耦合,Sự ghép cặp năng lượng,Energy coupling,「Sự ghép cặp năng lượng」的中文是什麼?,自發反應,同化作用,生物能量學,能量耦合,4,越→中
+W12-009,12,三磷酸腺苷,ATP,ATP,「ATP」的中文是什麼?,氧化還原反應,標準自由能,三磷酸腺苷,還原電位,3,越→中
+W12-010,12,高能磷酸鍵,Liên kết phosphate cao năng,High-energy phosphate bond,「Liên kết phosphate cao năng」的中文是什麼?,高能磷酸鍵,生物能量學,三磷酸腺苷,氧化還原反應,1,越→中
+W12-011,12,水解,Sự thủy phân,Hydrolysis,「Sự thủy phân」的中文是什麼?,還原,電子載體,異化作用,水解,4,越→中
+W12-012,12,氧化,Sự oxy hóa,Oxidation,「Sự oxy hóa」的中文是什麼?,放能反應,氧化,自發反應,吸能反應,2,越→中
+W12-013,12,還原,Sự khử,Reduction,「Sự khử」的中文是什麼?,還原,異化作用,自由能,放能反應,1,越→中
+W12-014,12,氧化還原反應,Phản ứng oxy hóa khử,Redox reaction,「Phản ứng oxy hóa khử」的中文是什麼?,高能磷酸鍵,標準自由能,氧化還原反應,自發反應,3,越→中
+W12-015,12,電子載體,Chất mang điện tử,Electron carrier,「Chất mang điện tử」的中文是什麼?,還原電位,同化作用,電子載體,自由能變化,3,越→中
+W12-016,12,還原電位,Thế khử,Reduction potential,「Thế khử」的中文是什麼?,放能反應,自發反應,異化作用,還原電位,4,越→中
+W12-017,12,異化作用,Dị hóa,Catabolism,「Dị hóa」的中文是什麼?,異化作用,電子載體,吸能反應,能量耦合,1,越→中
+W12-018,12,同化作用,Đồng hóa,Anabolism,「Đồng hóa」的中文是什麼?,吸能反應,電子載體,自由能變化,同化作用,4,越→中

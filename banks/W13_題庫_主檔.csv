@@ -1,0 +1,16 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W13-001,13,糖解作用,Đường phân,Glycolysis,「Đường phân」的中文是什麼?,肝醣分解,投資期,收穫期,糖解作用,4,越→中
+W13-002,13,己糖激酶,Hexokinase,Hexokinase,「Hexokinase」的中文是什麼?,己糖激酶,丙酮酸激酶,醣質新生,丙酮酸,1,越→中
+W13-003,13,磷酸果糖激酶,Phosphofructokinase-1 (PFK-1),PFK-1,「Phosphofructokinase-1 (PFK-1)」的中文是什麼?,磷酸果糖激酶,肝醣分解,己糖激酶,醣質新生,1,越→中
+W13-004,13,丙酮酸激酶,Pyruvate kinase,Pyruvate kinase,「Pyruvate kinase」的中文是什麼?,己糖激酶,丙酮酸激酶,磷酸果糖激酶,肝醣分解,2,越→中
+W13-005,13,丙酮酸,Pyruvate,Pyruvate,「Pyruvate」的中文是什麼?,糖解作用,丙酮酸,肝醣分解,醣質新生,2,越→中
+W13-006,13,投資期,Giai đoạn đầu tư,Preparatory phase,「Giai đoạn đầu tư」的中文是什麼?,發酵,收穫期,投資期,醣質新生,3,越→中
+W13-007,13,收穫期,Giai đoạn thu hồi,Payoff phase,「Giai đoạn thu hồi」的中文是什麼?,丙酮酸,收穫期,醣質新生,乙醇,2,越→中
+W13-008,13,受質層次磷酸化,Phosphoryl hóa mức cơ chất,Substrate-level phosphorylation,「Phosphoryl hóa mức cơ chất」的中文是什麼?,己糖激酶,受質層次磷酸化,糖解作用,磷酸果糖激酶,2,越→中
+W13-009,13,發酵,Sự lên men,Fermentation,「Sự lên men」的中文是什麼?,醣質新生,己糖激酶,乙醇,發酵,4,越→中
+W13-010,13,乳酸,Lactate,Lactate,「Lactate」的中文是什麼?,投資期,收穫期,乙醇,乳酸,4,越→中
+W13-011,13,乙醇,Ethanol,Ethanol,「Ethanol」的中文是什麼?,乳酸,收穫期,乙醇,肝醣分解,3,越→中
+W13-012,13,醣質新生,Tân tạo glucose,Gluconeogenesis,「Tân tạo glucose」的中文是什麼?,醣質新生,糖解作用,丙酮酸,肝醣分解,1,越→中
+W13-013,13,肝醣分解,Sự phân giải glycogen,Glycogenolysis,「Sự phân giải glycogen」的中文是什麼?,丙酮酸激酶,糖解作用,肝醣分解,收穫期,3,越→中
+W13-014,13,戊糖磷酸途徑,Con đường pentose phosphate,Pentose phosphate pathway,「Con đường pentose phosphate」的中文是什麼?,受質層次磷酸化,肝醣分解,戊糖磷酸途徑,醣質新生,3,越→中
+W13-015,13,菸鹼醯胺腺嘌呤二核苷酸,NADH,NADH,「NADH」的中文是什麼?,菸鹼醯胺腺嘌呤二核苷酸,醣質新生,己糖激酶,戊糖磷酸途徑,1,越→中

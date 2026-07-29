@@ -1,0 +1,21 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W02-001,2,水,Nước,Water,「Nước」的中文是什麼?,鹼,極性,解離,水,4,越→中
+W02-002,2,氫鍵,Liên kết hydrogen,Hydrogen bond,「Liên kết hydrogen」的中文是什麼?,平衡,溶劑,氫鍵,熵,3,越→中
+W02-003,2,共價鍵,Liên kết cộng hóa trị,Covalent bond,「Liên kết cộng hóa trị」的中文是什麼?,溶質,共價鍵,離子鍵,平衡,2,越→中
+W02-004,2,極性,Phân cực,Polar,「Phân cực」的中文是什麼?,極性,熵,濃度,解離,1,越→中
+W02-005,2,非極性,Không phân cực,Nonpolar,「Không phân cực」的中文是什麼?,平衡,共價鍵,氫鍵,非極性,4,越→中
+W02-006,2,親水性,Ưa nước,Hydrophilic,「Ưa nước」的中文是什麼?,滴定曲線,非極性,離子鍵,親水性,4,越→中
+W02-007,2,疏水性,Kỵ nước,Hydrophobic,「Kỵ nước」的中文是什麼?,極性,疏水性,親水性,滴定曲線,2,越→中
+W02-008,2,溶質,Chất tan,Solute,「Chất tan」的中文是什麼?,溶質,酸,平衡,溶劑,1,越→中
+W02-009,2,溶劑,Dung môi,Solvent,「Dung môi」的中文是什麼?,極性,解離,平衡,溶劑,4,越→中
+W02-010,2,濃度,Nồng độ,Concentration,「Nồng độ」的中文是什麼?,熵,濃度,共價鍵,氫鍵,2,越→中
+W02-011,2,酸,Acid,Acid,「Acid」的中文是什麼?,熵,解離,酸,氫鍵,3,越→中
+W02-012,2,鹼,Base,Base,「Base」的中文是什麼?,鹼,極性,溶劑,濃度,1,越→中
+W02-013,2,解離,Sự phân li,Dissociation,「Sự phân li」的中文是什麼?,溶劑,熵,解離,平衡,3,越→中
+W02-014,2,平衡,Cân bằng,Equilibrium,「Cân bằng」的中文是什麼?,平衡,解離,溶質,溶劑,1,越→中
+W02-015,2,平衡常數,Hằng số cân bằng,Equilibrium constant,「Hằng số cân bằng」的中文是什麼?,平衡常數,滴定曲線,離子鍵,解離,1,越→中
+W02-016,2,緩衝溶液,Dung dịch đệm,Buffer solution,「Dung dịch đệm」的中文是什麼?,疏水性,緩衝溶液,平衡常數,共價鍵,2,越→中
+W02-017,2,滴定曲線,Đường cong chuẩn độ,Titration curve,「Đường cong chuẩn độ」的中文是什麼?,親水性,共價鍵,凡德瓦力,滴定曲線,4,越→中
+W02-018,2,凡德瓦力,Lực van der Waals,Van der Waals force,「Lực van der Waals」的中文是什麼?,離子鍵,氫鍵,凡德瓦力,非極性,3,越→中
+W02-019,2,離子鍵,Liên kết ion,Ionic bond,「Liên kết ion」的中文是什麼?,濃度,解離,離子鍵,疏水性,3,越→中
+W02-020,2,熵,Entropy,Entropy,「Entropy」的中文是什麼?,濃度,熵,水,平衡,2,越→中

@@ -1,0 +1,18 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W15-001,15,氧化磷酸化,Phosphoryl hóa oxy hóa,Oxidative phosphorylation,「Phosphoryl hóa oxy hóa」的中文是什麼?,氧化磷酸化,鐵硫中心,質子動力,電子傳遞鏈,1,越→中
+W15-002,15,電子傳遞鏈,Chuỗi vận chuyển điện tử,Electron transport chain,「Chuỗi vận chuyển điện tử」的中文是什麼?,細胞色素c,ATP合成酶,電子傳遞鏈,鐵硫中心,3,越→中
+W15-003,15,呼吸鏈,Chuỗi hô hấp,Respiratory chain,「Chuỗi hô hấp」的中文是什麼?,基質,複合體,呼吸鏈,解偶聯劑,3,越→中
+W15-004,15,複合體,Phức hợp,Complex,「Phức hợp」的中文是什麼?,呼吸鏈,複合體,膜間隙,鐵硫中心,2,越→中
+W15-005,15,泛醌,Ubiquinone (Q),Ubiquinone,「Ubiquinone (Q)」的中文是什麼?,基質,呼吸鏈,質子動力,泛醌,4,越→中
+W15-006,15,細胞色素c,Cytochrome c,Cytochrome c,「Cytochrome c」的中文是什麼?,化學滲透,細胞色素c,氧化磷酸化,電子傳遞鏈,2,越→中
+W15-007,15,鐵硫中心,Trung tâm sắt-lưu huỳnh,Iron-sulfur center,「Trung tâm sắt-lưu huỳnh」的中文是什麼?,鐵硫中心,質子動力,解偶聯劑,化學滲透,1,越→中
+W15-008,15,內膜,Màng trong,Inner membrane,「Màng trong」的中文是什麼?,膜間隙,內膜,呼吸鏈,氰化物,2,越→中
+W15-009,15,膜間隙,Khoang gian màng,Intermembrane space,「Khoang gian màng」的中文是什麼?,內膜,膜間隙,複合體,氰化物,2,越→中
+W15-010,15,基質,Chất nền (matrix),Matrix,「Chất nền (matrix)」的中文是什麼?,基質,質子動力,泛醌,膜間隙,1,越→中
+W15-011,15,質子梯度,Gradient proton,Proton gradient,「Gradient proton」的中文是什麼?,呼吸鏈,鐵硫中心,複合體,質子梯度,4,越→中
+W15-012,15,質子動力,Lực đẩy proton,Proton-motive force,「Lực đẩy proton」的中文是什麼?,細胞色素c,化學滲透,質子動力,解偶聯劑,3,越→中
+W15-013,15,化學滲透,Thẩm thấu hóa học,Chemiosmosis,「Thẩm thấu hóa học」的中文是什麼?,膜間隙,鐵硫中心,氰化物,化學滲透,4,越→中
+W15-014,15,ATP合成酶,ATP synthase,ATP synthase,「ATP synthase」的中文是什麼?,解偶聯劑,化學滲透,氧化磷酸化,ATP合成酶,4,越→中
+W15-015,15,解偶聯劑,Chất tách cặp,Uncoupler,「Chất tách cặp」的中文是什麼?,解偶聯劑,質子動力,細胞色素c,氧化磷酸化,1,越→中
+W15-016,15,氰化物,Cyanide,Cyanide,「Cyanide」的中文是什麼?,氰化物,呼吸鏈,膜間隙,質子動力,1,越→中
+W15-017,15,最終電子接受者,Chất nhận điện tử cuối cùng,Final electron acceptor,「Chất nhận điện tử cuối cùng」的中文是什麼?,質子梯度,化學滲透,最終電子接受者,解偶聯劑,3,越→中

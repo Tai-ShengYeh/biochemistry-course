@@ -1,0 +1,15 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W07-001,7,酵素動力學,Động học enzyme,Enzyme kinetics,「Động học enzyme」的中文是什麼?,回饋抑制,不可逆抑制,酵素動力學,共價修飾,3,越→中
+W07-002,7,米氏方程式,Phương trình Michaelis-Menten,Michaelis-Menten equation,「Phương trình Michaelis-Menten」的中文是什麼?,米氏方程式,酵素動力學,回饋抑制,競爭性抑制,1,越→中
+W07-003,7,米氏常數,Hằng số Michaelis (Km),Km,「Hằng số Michaelis (Km)」的中文是什麼?,雙倒數作圖,米氏常數,米氏方程式,共價修飾,2,越→中
+W07-004,7,最大速率,Tốc độ tối đa (Vmax),Vmax,「Tốc độ tối đa (Vmax)」的中文是什麼?,最大速率,酵素動力學,米氏方程式,轉換數,1,越→中
+W07-005,7,初速率,Tốc độ ban đầu,Initial velocity,「Tốc độ ban đầu」的中文是什麼?,初速率,米氏常數,轉換數,抑制劑,1,越→中
+W07-006,7,轉換數,Số vòng xúc tác (kcat),Turnover number,「Số vòng xúc tác (kcat)」的中文是什麼?,米氏常數,轉換數,初速率,磷酸化,2,越→中
+W07-007,7,抑制劑,Chất ức chế,Inhibitor,「Chất ức chế」的中文是什麼?,回饋抑制,磷酸化,初速率,抑制劑,4,越→中
+W07-008,7,競爭性抑制,Ức chế cạnh tranh,Competitive inhibition,「Ức chế cạnh tranh」的中文是什麼?,共價修飾,米氏方程式,競爭性抑制,回饋抑制,3,越→中
+W07-009,7,非競爭性抑制,Ức chế không cạnh tranh,Noncompetitive inhibition,「Ức chế không cạnh tranh」的中文是什麼?,米氏常數,非競爭性抑制,最大速率,不可逆抑制,2,越→中
+W07-010,7,不可逆抑制,Ức chế không thuận nghịch,Irreversible inhibition,「Ức chế không thuận nghịch」的中文是什麼?,雙倒數作圖,競爭性抑制,不可逆抑制,回饋抑制,3,越→中
+W07-011,7,雙倒數作圖,Đồ thị Lineweaver-Burk,Lineweaver-Burk plot,「Đồ thị Lineweaver-Burk」的中文是什麼?,回饋抑制,共價修飾,酵素動力學,雙倒數作圖,4,越→中
+W07-012,7,回饋抑制,Ức chế ngược,Feedback inhibition,「Ức chế ngược」的中文是什麼?,最大速率,轉換數,酵素動力學,回饋抑制,4,越→中
+W07-013,7,共價修飾,Biến đổi cộng hóa trị,Covalent modification,「Biến đổi cộng hóa trị」的中文是什麼?,磷酸化,共價修飾,回饋抑制,最大速率,2,越→中
+W07-014,7,磷酸化,Sự phosphoryl hóa,Phosphorylation,「Sự phosphoryl hóa」的中文是什麼?,磷酸化,最大速率,米氏常數,轉換數,1,越→中

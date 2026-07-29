@@ -1,0 +1,18 @@
+﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
+W16-001,16,β-氧化,β-Oxy hóa,Beta oxidation,「β-Oxy hóa」的中文是什麼?,脂解作用,β-氧化,尿素循環,肉鹼穿梭,2,越→中
+W16-002,16,脂解作用,Sự phân giải lipid,Lipolysis,「Sự phân giải lipid」的中文是什麼?,轉胺作用,肉鹼穿梭,脂解作用,去胺作用,3,越→中
+W16-003,16,肉鹼穿梭,Thoi carnitine,Carnitine shuttle,「Thoi carnitine」的中文是什麼?,麩胺酸,肉鹼穿梭,去胺作用,脂解作用,2,越→中
+W16-004,16,醯基輔酶A,Acyl-CoA,Acyl-CoA,「Acyl-CoA」的中文是什麼?,β-氧化,脂解作用,生糖胺基酸,醯基輔酶A,4,越→中
+W16-005,16,酮體,Thể ceton,Ketone body,「Thể ceton」的中文是什麼?,尿素,酮體,銨離子,氨,2,越→中
+W16-006,16,生酮作用,Sự tạo ceton,Ketogenesis,「Sự tạo ceton」的中文是什麼?,生酮作用,去胺作用,轉胺作用,尿素循環,1,越→中
+W16-007,16,轉胺作用,Sự chuyển amin,Transamination,「Sự chuyển amin」的中文是什麼?,肉鹼穿梭,去胺作用,轉胺作用,尿素循環,3,越→中
+W16-008,16,轉胺酶,Transaminase,Transaminase,「Transaminase」的中文是什麼?,酮體,脂解作用,麩胺酸,轉胺酶,4,越→中
+W16-009,16,去胺作用,Sự khử amin,Deamination,「Sự khử amin」的中文是什麼?,肉鹼穿梭,β-氧化,去胺作用,生糖胺基酸,3,越→中
+W16-010,16,氨,Ammonia (NH3),Ammonia,「Ammonia (NH3)」的中文是什麼?,氨,麩醯胺,尿素,轉胺作用,1,越→中
+W16-011,16,銨離子,Ion ammonium,Ammonium ion,「Ion ammonium」的中文是什麼?,酮體,銨離子,轉胺作用,去胺作用,2,越→中
+W16-012,16,尿素,Urea,Urea,「Urea」的中文是什麼?,尿素,銨離子,麩胺酸,酮體,1,越→中
+W16-013,16,尿素循環,Chu trình ure,Urea cycle,「Chu trình ure」的中文是什麼?,生酮作用,去胺作用,脂解作用,尿素循環,4,越→中
+W16-014,16,麩胺酸,Glutamate,Glutamate,「Glutamate」的中文是什麼?,麩胺酸,麩醯胺,生酮作用,酮體,1,越→中
+W16-015,16,麩醯胺,Glutamine,Glutamine,「Glutamine」的中文是什麼?,轉胺酶,銨離子,β-氧化,麩醯胺,4,越→中
+W16-016,16,生酮胺基酸,Amino acid sinh ceton,Ketogenic amino acid,「Amino acid sinh ceton」的中文是什麼?,生酮胺基酸,生酮作用,去胺作用,醯基輔酶A,1,越→中
+W16-017,16,生糖胺基酸,Amino acid sinh đường,Glucogenic amino acid,「Amino acid sinh đường」的中文是什麼?,生酮胺基酸,β-氧化,生糖胺基酸,尿素循環,3,越→中

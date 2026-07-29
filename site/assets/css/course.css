@@ -1,0 +1,86 @@
+/* 生物化學課程 — reveal.js 共用主題
+   設計原則:延續 pptx 的配色與版面邏輯。深青主色、磚紅強調色、米白底。
+   兩套課程共用此檔;越南語行 (.vi) 只在 A2 課程出現。 */
+:root{
+  --primary:#1F4E5F; --secondary:#2E7D8A; --accent:#C8532B;
+  --vi:#5A7A85; --bg-dark:#163C49; --bg:#F7FBFC;
+  --text:#1F2933; --muted:#9AAEB5; --border:#D9E7EC; --card:#FFFFFF;
+}
+.reveal{ font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+         font-size:25px; color:var(--text); }
+.reveal .slides{ text-align:left; }
+.reveal section{ padding:0 !important; }
+.reveal h1,.reveal h2,.reveal h3{ font-weight:700; color:var(--text);
+  text-transform:none; letter-spacing:0; margin:0 0 .2em; line-height:1.25; }
+.reveal h2{ font-size:1.32em; }
+.reveal h3{ font-size:1.15em; color:var(--primary); }
+.reveal p{ line-height:1.4; margin:.25em 0; }
+.reveal a{ color:var(--secondary); }
+
+/* 頁首:標題 + 越南語副標 */
+.hd{ border-bottom:3px solid var(--primary); padding-bottom:.15em; margin-bottom:.4em; flex:0 0 auto; }
+.hd .vi{ font-size:.5em; color:var(--vi); margin:.15em 0 0; }
+
+/* 越南語行 —— A2 課程的鷹架。台生課程不會用到。 */
+.vi{ color:var(--vi); font-size:.62em; line-height:1.4; }
+
+/* 深色橫幅:一句話結論 */
+.banner{ background:var(--bg-dark); color:#fff; padding:.5em .8em; border-radius:6px; margin:.35em 0; }
+.banner b{ font-size:1.15em; display:block; }
+.banner .vi{ color:#9FD3DE; margin-top:.3em; }
+
+/* 卡片 */
+.cards{ display:grid; gap:.4em; margin:.35em 0; }
+.cards.c2{ grid-template-columns:1fr 1fr; } .cards.c3{ grid-template-columns:repeat(3,1fr); }
+.card{ background:var(--card); border:1px solid var(--border); border-left:5px solid var(--primary);
+       border-radius:5px; padding:.35em .55em; box-shadow:0 2px 6px rgba(0,0,0,.07); }
+.card.s{ border-left-color:var(--secondary); } .card.a{ border-left-color:var(--accent); }
+.card h4{ margin:0 0 .2em; font-size:.82em; color:var(--primary); font-weight:700; line-height:1.3; }
+.card.a h4{ color:var(--accent); } .card.s h4{ color:var(--secondary); }
+.card p{ font-size:.7em; margin:.12em 0; }
+
+/* 錯 / 對 對打 —— 打迷思用 */
+.wrong{ background:#FFE8E0; border:2px solid var(--accent); border-radius:5px; padding:.6em .9em; margin:.4em 0; }
+.wrong b{ color:var(--accent); }
+.right{ background:var(--bg-dark); color:#fff; border-radius:5px; padding:.6em .9em; margin:.4em 0; }
+
+/* 表格 */
+.reveal table{ font-size:.58em; border-collapse:collapse; width:100%; margin:.35em 0; }
+.reveal th{ background:var(--primary); color:#fff; font-weight:700; padding:.5em .6em; text-align:left; }
+.reveal td{ border:1px solid var(--border); padding:.45em .6em; background:#fff; }
+.reveal tr:nth-child(even) td{ background:#F4FAFB; }
+
+figcaption{ font-size:.5em; color:#666; margin-top:.25em; flex:0 0 auto; }
+
+/* 流程 */
+.flow{ display:flex; align-items:center; gap:.4em; margin:.6em 0; }
+.flow .step{ flex:1; background:var(--secondary); color:#fff; border-radius:6px; padding:.6em .4em; text-align:center; }
+.flow .step:last-child{ background:var(--accent); }
+.flow .step b{ display:block; font-size:.85em; }
+.flow .step span{ font-size:.5em; color:#DDEEF2; }
+.flow .arw{ color:var(--primary); font-size:1.2em; font-weight:700; }
+
+/* 頁尾 */
+.reveal .footer{ position:absolute; bottom:12px; left:24px; font-size:13px; color:var(--muted); }
+.reveal .slide-number{ font-size:14px; color:var(--muted); }
+/* 標題頁 */
+.title-slide{ background:var(--bg-dark); color:#fff; height:100%; display:flex;
+  flex-direction:column; justify-content:center; padding-left:1.2em; border-left:14px solid var(--accent); }
+.title-slide h1{ color:#fff; font-size:2.1em; }
+.title-slide .sub{ color:#9FD3DE; font-size:1em; margin-top:.2em; }
+.title-slide .vi{ color:#9FD3DE; font-size:.62em; margin-top:.8em; }
+
+/* ── 防溢出(reveal center:false 前提)──
+   每頁 = 固定高度的 flex 直欄。圖用 flex:1 吸收剩餘空間並 contain 縮放,
+   所以「4 張卡 + 大圖」這種頁,圖會自動縮到剩餘空間,永遠不會把內容擠出頁面。 */
+.reveal .slides > section{
+  height:100%; box-sizing:border-box; padding:22px 40px 44px;
+  display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; }
+.reveal .slides > section > *{ flex:0 0 auto; }
+.hd{ flex:0 0 auto; }
+/* 標題頁不套用上面的 padding/flex(它有自己的置中版面)*/
+.reveal .slides > section:has(.title-slide){ padding:0; }
+/* r-stretch 圖:reveal 自動設高,置中並限寬 */
+.reveal .r-stretch{ object-fit:contain; max-width:100%; margin:.2em auto; display:block;
+  border-radius:6px; box-shadow:0 3px 12px rgba(0,0,0,.12); }
+.title-slide{ height:100%; }
