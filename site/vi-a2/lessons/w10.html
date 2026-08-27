@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 10 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元三　生物分子（第 8、10、11 週）',week:10,icon:'🧈',accent:'#D97A4A',
+ theme:'脂質與生物膜',
+ keypoints:[
+  {h:'脂肪酸：飽和與不飽和',p:[
+   '<span class=kw>脂肪酸</span>有長長的碳鏈。',
+   '<span class=kw>飽和脂肪酸</span>是直的。',
+   '直的排得緊，難融，是固體。',
+   '<span class=kw>不飽和脂肪酸</span>有雙鍵，是彎的。',
+   '彎的排不緊，好融，是液體。'
+  ],img:'../../assets/figures/w10_fatty_acids.jpg',imgCap:'飽和與不飽和脂肪酸結構 ／ Cấu trúc acid béo no và không no'},
+  {h:'順式雙鍵決定形狀',p:[
+   '<span class=kw>順式雙鍵</span>會折彎約30度。',
+   '有雙鍵 → 折彎 → 排不緊。',
+   '排不緊 → 好融 → 液體。',
+   '橄欖油是液體，豬油是固體。'
+  ]},
+  {h:'磷脂：兩親性分子',p:[
+   '<span class=kw>磷脂</span>一頭愛水，一頭怕水。',
+   '這叫<span class=kw>兩親性</span>。',
+   '親水的頭會碰水。',
+   '疏水的尾巴躲水，共兩條。',
+   '丟到水裡會自動排成雙層。'
+  ]},
+  {h:'脂雙層與細胞膜構造',p:[
+   '<span class=kw>脂雙層</span>組成細胞膜。',
+   '疏水尾一定朝內，又是疏水效應。',
+   '<span class=kw>膽固醇</span>插在磷脂之間。',
+   '膽固醇調節膜的軟硬。',
+   '這叫<span class=kw>流體鑲嵌模型</span>。'
+  ],img:'../../assets/figures/w10_membrane.jpg',imgCap:'細胞膜構造：膽固醇、通道蛋白、醣蛋白 ／ Cấu trúc màng tế bào: cholesterol, kênh, glycoprotein'},
+  {h:'物質怎麼過膜',p:[
+   '<span class=kw>被動運輸</span>順梯度，不耗能。',
+   '被動運輸像溜滑梯。',
+   '<span class=kw>主動運輸</span>逆梯度，要ATP。',
+   '主動運輸像爬樓梯。',
+   '<span class=kw>鈉鉀幫浦</span>是主動運輸的例子。'
+  ],img:'../../assets/figures/w10_transport.jpg',imgCap:'被動運輸與主動運輸示意 ／ Sơ đồ vận chuyển thụ động và chủ động'}
+ ],
+ vocab:[
+  {w:'脂肪酸',py:'zhī fáng suān',vn:'Acid béo',en:'Fatty acid',df:'長碳鏈的脂質分子。',ex:'脂肪酸有飽和與不飽和。'},
+  {w:'飽和脂肪酸',py:'bǎo hé zhī fáng suān',vn:'Acid béo no',en:'Saturated fatty acid',df:'沒有雙鍵，是直的。',ex:'豬油是飽和脂肪酸。'},
+  {w:'不飽和脂肪酸',py:'bù bǎo hé zhī fáng suān',vn:'Acid béo không no',en:'Unsaturated fatty acid',df:'有雙鍵，是彎的。',ex:'橄欖油是不飽和脂肪酸。'},
+  {w:'三酸甘油酯',py:'sān suān gān yóu zhǐ',vn:'Triacylglycerol',en:'Triacylglycerol',df:'甘油接三個脂肪酸。',ex:'三酸甘油酯儲存能量。'},
+  {w:'磷脂',py:'lín zhī',vn:'Phospholipid',en:'Phospholipid',df:'細胞膜的主要成分。',ex:'磷脂是兩親性分子。'},
+  {w:'固醇',py:'gù chún',vn:'Steroid',en:'Steroid',df:'環狀結構的脂質。',ex:'膽固醇是一種固醇。'},
+  {w:'膽固醇',py:'dǎn gù chún',vn:'Cholesterol',en:'Cholesterol',df:'調節細胞膜軟硬。',ex:'膽固醇插在磷脂之間。'},
+  {w:'脂雙層',py:'zhī shuāng céng',vn:'Lớp lipid kép',en:'Lipid bilayer',df:'磷脂排成的兩層構造。',ex:'脂雙層組成細胞膜。'},
+  {w:'兩親性',py:'liǎng qīn xìng',vn:'Lưỡng cực (amphipathic)',en:'Amphipathic',df:'一邊親水一邊疏水。',ex:'磷脂是兩親性分子。'},
+  {w:'細胞膜',py:'xì bāo mó',vn:'Màng tế bào',en:'Cell membrane',df:'細胞的邊界構造。',ex:'細胞膜由脂雙層組成。'},
+  {w:'流體鑲嵌模型',py:'liú tǐ xiāng qiàn mó xíng',vn:'Mô hình khảm lỏng',en:'Fluid mosaic model',df:'描述細胞膜的模型。',ex:'蛋白質浮在膜上移動。'},
+  {w:'被動運輸',py:'bèi dòng yùn shū',vn:'Vận chuyển thụ động',en:'Passive transport',df:'順梯度，不耗能。',ex:'氧氣用被動運輸過膜。'},
+  {w:'主動運輸',py:'zhǔ dòng yùn shū',vn:'Vận chuyển chủ động',en:'Active transport',df:'逆梯度，需要ATP。',ex:'鈉鉀幫浦是主動運輸。'},
+  {w:'鈉鉀幫浦',py:'nà jiǎ bāng pǔ',vn:'Bơm Na+/K+',en:'Sodium-potassium pump',df:'把鈉打出、鉀抓進。',ex:'鈉鉀幫浦耗大量ATP。'}
+ ],
+ g1:[
+  {zh:'脂肪酸',py:'zhī fáng suān',vn:'Acid béo'},
+  {zh:'磷脂',py:'lín zhī',vn:'Phospholipid'},
+  {zh:'膽固醇',py:'dǎn gù chún',vn:'Cholesterol'},
+  {zh:'脂雙層',py:'zhī shuāng céng',vn:'Lớp lipid kép'},
+  {zh:'兩親性',py:'liǎng qīn xìng',vn:'Lưỡng cực (amphipathic)'},
+  {zh:'細胞膜',py:'xì bāo mó',vn:'Màng tế bào'},
+  {zh:'被動運輸',py:'bèi dòng yùn shū',vn:'Vận chuyển thụ động'},
+  {zh:'主動運輸',py:'zhǔ dòng yùn shū',vn:'Vận chuyển chủ động'}
+ ],
+ g2:[
+  {t:'主動運輸需要ATP。',a:true,e:'對，主動運輸逆梯度，要消耗ATP。'},
+  {t:'不飽和脂肪酸在室溫是固體。',a:false,e:'錯，不飽和脂肪酸彎曲、排不緊，室溫是液體。'},
+  {t:'磷脂的疏水尾朝向膜的外側。',a:false,e:'錯，疏水尾朝內，親水頭才朝外側碰水。'},
+  {t:'鈉鉀幫浦是被動運輸。',a:false,e:'錯，鈉鉀幫浦逆梯度且耗ATP，是主動運輸。'},
+  {t:'膽固醇插在磷脂之間，調節膜的軟硬。',a:true,e:'對，這是流體鑲嵌模型的重點之一。'}
+ ],
+ g3:[
+  {label:'排序題目：脂肪酸的形狀怎麼決定融點？',tokens:['有雙鍵','折彎','排不緊','好融＝液體']}
+ ],
+ g4:[
+  {s:'橄欖油在室溫是液體，豬油是固體，關鍵差別在哪裡？',o:['不飽和脂肪酸有雙鍵，分子彎曲','兩者的碳鏈長度不同','橄欖油沒有脂肪酸'],a:0,e:'雙鍵造成彎曲，分子排不緊，融點較低，室溫是液體。'},
+  {s:'細胞膜上的磷脂為什麼會自動排成雙層？',o:['因為磷脂是兩親性，疏水尾要躲開水','因為磷脂帶負電互相吸引','因為細胞主動用ATP排列磷脂'],a:0,e:'磷脂一頭親水一頭疏水，丟入水中疏水尾會自動聚在一起躲水，形成雙層，這也是疏水效應。'},
+  {s:'葡萄糖要逆著濃度梯度進入細胞，需要哪一種運輸方式？',o:['被動運輸','主動運輸','兩者都不需要'],a:1,e:'逆梯度移動需要消耗ATP，屬於主動運輸。'}
+ ],
+ g5:[
+  {s:'飽和脂肪酸的形狀是___。',o:['直的','彎的','環狀'],a:0},
+  {s:'磷脂是___分子，一頭親水一頭疏水。',o:['兩親性','飽和','酸性'],a:0},
+  {s:'膽固醇插在磷脂之間，負責調節膜的___。',o:['軟硬','顏色','厚度'],a:0},
+  {s:'被動運輸的方向是___。',o:['順梯度','逆梯度','沒有方向'],a:0},
+  {s:'鈉鉀幫浦把鈉打出去、___抓進來。',o:['鉀','鈣','鎂'],a:0}
+ ],
+ review:[
+  {s:'澱粉和肝醣都是由葡萄糖組成，主要差別是什麼？',o:['分支多少不同','單醣種類不同','化學式不同'],a:0,e:'肝醣分支較多，出口多，能快速釋放葡萄糖；澱粉分支較少。'},
+  {s:'人可以消化澱粉，卻不能消化纖維素，為什麼？',o:['兩者的醣苷鍵種類不同（α與β）','纖維素不是由葡萄糖組成','澱粉沒有醣苷鍵'],a:0,e:'澱粉是α鍵，人能分解；纖維素是β鍵，人的酵素無法分解。'},
+  {s:'單醣接成雙醣時，會發生什麼反應？',o:['脫水形成醣苷鍵','吸水分解','直接融合不反應'],a:0,e:'單醣之間用醣苷鍵連接，同時脫去一分子水，與胜肽鍵的形成方式類似。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

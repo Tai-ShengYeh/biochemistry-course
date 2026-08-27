@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 15 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:15,icon:'⚡',accent:'#6B4A8A',
+ theme:'氧化磷酸化與電子傳遞鏈',
+ keypoints:[
+  {h:'電子傳遞鏈：接力發電',p:[
+   '<span class=kw>電子傳遞鏈</span>在內膜上。',
+   '電子從複合體開始傳遞。',
+   '接力經過泛醌和複合體。',
+   '最後交給<span class=kw>氧氣</span>，變成水。'
+  ],img:'../../assets/figures/w15_etc.jpg',imgCap:'電子傳遞鏈，複合體 I 到 IV ／ Chuỗi vận chuyển điện tử, phức hợp I đến IV'},
+  {h:'複合體 II 不泵質子',p:[
+   '只有I、III、IV泵質子。',
+   '<span class=kw>複合體II</span>不泵質子。',
+   'FADH₂從複合體II進來。',
+   'FADH₂做的ATP比較少。'
+  ]},
+  {h:'化學滲透：梯度變 ATP',p:[
+   '質子泵到膜間隙。',
+   '質子越積越多，形成<span class=kw>梯度</span>。',
+   '質子流回經過<span class=kw>ATP合成酶</span>。',
+   '這個過程叫<span class=kw>化學滲透</span>。'
+  ],img:'../../assets/figures/w15_chemiosmosis.jpg',imgCap:'化學滲透，質子梯度驅動 ATP 合成酶 ／ Thẩm thấu hóa học, gradient proton chạy ATP synthase'},
+  {h:'氰化物為什麼致命',p:[
+   '<span class=kw>氰化物</span>擋住複合體IV。',
+   '電子不能交給氧氣。',
+   '電子傳遞鏈整個塞住。',
+   '細胞很快就會死亡。'
+  ]},
+  {h:'一個葡萄糖，約 30–32 個 ATP',p:[
+   '許多<span class=kw>NADH</span>送去發電。',
+   'NADH約做2.5個ATP。',
+   'FADH₂約做1.5個。',
+   '加起來約<span class=kw>30–32個ATP</span>。'
+  ]}
+ ],
+ vocab:[
+  {w:'氧化磷酸化',py:'yǎng huà lín suān huà',vn:'Phosphoryl hóa oxy hóa',en:'Oxidative phosphorylation',df:'用電子傳遞鏈做ATP的過程。',ex:'氧化磷酸化在粒線體內膜進行。'},
+  {w:'電子傳遞鏈',py:'diàn zǐ chuán dì liàn',vn:'Chuỗi vận chuyển điện tử',en:'Electron transport chain',df:'電子接力傳遞的路線。',ex:'電子傳遞鏈由四個複合體組成。'},
+  {w:'呼吸鏈',py:'hū xī liàn',vn:'Chuỗi hô hấp',en:'Respiratory chain',df:'電子傳遞鏈的另一個名字。',ex:'呼吸鏈也叫電子傳遞鏈。'},
+  {w:'複合體',py:'fù hé tǐ',vn:'Phức hợp',en:'Complex',df:'內膜上傳遞電子的蛋白質群。',ex:'複合體I到IV都在內膜上。'},
+  {w:'泛醌',py:'fàn kūn',vn:'Ubiquinone (Q)',en:'Ubiquinone',df:'在膜上傳電子的小分子。',ex:'泛醌把電子從I、II送到III。'},
+  {w:'細胞色素c',py:'xì bāo sè sù c',vn:'Cytochrome c',en:'Cytochrome c',df:'把電子從III送到IV的蛋白質。',ex:'細胞色素c在膜間隙傳電子。'},
+  {w:'內膜',py:'nèi mó',vn:'Màng trong',en:'Inner membrane',df:'粒線體裡面那層膜。',ex:'電子傳遞鏈在內膜上。'},
+  {w:'膜間隙',py:'mó jiān xì',vn:'Khoang gian màng',en:'Intermembrane space',df:'內膜和外膜中間的空間。',ex:'質子被泵到膜間隙。'},
+  {w:'基質',py:'jī zhì',vn:'Chất nền (matrix)',en:'Matrix',df:'粒線體內膜裡面的空間。',ex:'檸檬酸循環在基質進行。'},
+  {w:'質子梯度',py:'zhì zǐ tī dù',vn:'Gradient proton',en:'Proton gradient',df:'膜兩邊質子濃度不一樣。',ex:'質子梯度儲存能量。'},
+  {w:'化學滲透',py:'huà xué shèn tòu',vn:'Thẩm thấu hóa học',en:'Chemiosmosis',df:'質子梯度變成ATP的過程。',ex:'化學滲透靠ATP合成酶運作。'},
+  {w:'ATP合成酶',py:'ATP hé chéng méi',vn:'ATP synthase',en:'ATP synthase',df:'用質子流動來做ATP的酵素。',ex:'質子流過ATP合成酶，做出ATP。'}
+ ],
+ g1:[
+  {zh:'氧化磷酸化',py:'yǎng huà lín suān huà',vn:'Phosphoryl hóa oxy hóa'},
+  {zh:'電子傳遞鏈',py:'diàn zǐ chuán dì liàn',vn:'Chuỗi vận chuyển điện tử'},
+  {zh:'複合體',py:'fù hé tǐ',vn:'Phức hợp'},
+  {zh:'泛醌',py:'fàn kūn',vn:'Ubiquinone (Q)'},
+  {zh:'質子梯度',py:'zhì zǐ tī dù',vn:'Gradient proton'},
+  {zh:'化學滲透',py:'huà xué shèn tòu',vn:'Thẩm thấu hóa học'},
+  {zh:'ATP合成酶',py:'ATP hé chéng méi',vn:'ATP synthase'},
+  {zh:'氰化物',py:'qíng huà wù',vn:'Cyanide'}
+ ],
+ g2:[
+  {t:'複合體II會泵質子。',a:false,e:'錯，只有I、III、IV泵質子，II不泵。'},
+  {t:'氧氣是最終電子接受者。',a:true,e:'對，電子最後交給氧氣，變成水。'},
+  {t:'ATP合成酶靠質子流動來運轉。',a:true,e:'對，質子流過ATP合成酶才能做ATP。'},
+  {t:'氰化物擋住複合體IV。',a:true,e:'對，氰化物讓電子無法交給氧氣。'},
+  {t:'FADH₂做出的ATP比NADH多。',a:false,e:'錯，FADH₂比NADH少經過一個泵，做的ATP較少。'}
+ ],
+ g3:[
+  {label:'排序題目：電子怎麼變成ATP？',tokens:['NADH','電子傳遞鏈','H⁺梯度','ATP合成酶','ATP']},
+  {label:'排序題目：質子去了哪裡？',tokens:['基質','內膜複合體','膜間隙','ATP合成酶']}
+ ],
+ g4:[
+  {s:'解偶聯劑（像DNP）會在膜上打洞，讓質子直接漏回基質，不經過ATP合成酶。這樣會怎樣？',o:['燒燃料但做不出ATP，只發熱','ATP做得更多','電子傳遞鏈停止運作'],a:0,e:'質子漏光，沒有經過ATP合成酶，能量變成熱，不變ATP。'},
+  {s:'為什麼氰化物中毒會在幾分鐘內致命？',o:['因為擋住複合體IV，電子塞住，細胞不能做ATP','因為氰化物直接破壞DNA','因為氰化物讓血糖太高'],a:0,e:'氰化物擋住複合體IV，電子傳遞鏈停止，細胞無法製造ATP。'},
+  {s:'為什麼FADH₂比NADH做出的ATP少？',o:['FADH₂從複合體II進來，少經過一個泵質子的複合體','FADH₂比較大，不能進入電子傳遞鏈','FADH₂不能給出電子'],a:0,e:'複合體II不泵質子，所以FADH₂少泵一次質子，ATP較少。'}
+ ],
+ g5:[
+  {s:'電子傳遞鏈上，泵質子的複合體是___。',o:['I、III、IV','I、II、III','只有IV'],a:0},
+  {s:'質子流回基質時，會經過___。',o:['ATP合成酶','細胞核','高基氏體'],a:0},
+  {s:'電子最後交給___，變成水。',o:['氧氣','二氧化碳','葡萄糖'],a:0},
+  {s:'質子梯度變成ATP的過程叫___。',o:['化學滲透','糖解作用','去羧作用'],a:0},
+  {s:'一個葡萄糖經過完整代謝，大約產生___個ATP。',o:['30–32','5–8','100'],a:0}
+ ],
+ review:[
+  {s:'檸檬酸循環轉一圈，會產生哪些帶電子的分子？',o:['3 NADH + 1 FADH₂','1 NADH + 3 FADH₂','2 NADH + 2 GTP'],a:0,e:'一圈檸檬酸循環產生3個NADH和1個FADH₂，這些電子這週拿去發電。'},
+  {s:'為什麼檸檬酸循環叫做「循環」？',o:['因為草醯乙酸最後又生回來，可以再接下一個乙醯CoA','因為它只發生一次就停止','因為它跟糖解是同一條路線'],a:0,e:'草醯乙酸在循環最後再生，所以能不斷接收新的乙醯CoA。'},
+  {s:'進入檸檬酸循環的兩個原料是什麼？',o:['乙醯CoA + 草醯乙酸','葡萄糖 + 氧氣','NADH + FADH₂'],a:0,e:'乙醯CoA和草醯乙酸結合成檸檬酸，開始循環。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

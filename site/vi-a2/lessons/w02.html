@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 2 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元一　生命的化學基礎',week:2,icon:'💧',accent:'#2E7D8A',
+ theme:'水、pH 與緩衝溶液',
+ keypoints:[
+  {h:'水是極性分子',p:[
+   '<span class=kw>水分子</span>帶正負電。',
+   '氧那邊帶負電。',
+   '氫那邊帶正電。'
+  ],img:'../../assets/figures/w02_water_hbond.jpg',imgCap:'水分子的氫鍵 ／ Liên kết hydrogen của nước'},
+  {h:'氫鍵：弱，但很多',p:[
+   '一個<span class=kw>氫鍵</span>很弱。',
+   '只有共價鍵的1/20。',
+   '一杯水有幾兆個氫鍵。',
+   '加起來，力量很大。'
+  ]},
+  {h:'親水性與疏水性',p:[
+   '<span class=kw>親水性</span>分子溶於水。',
+   '<span class=kw>疏水性</span>分子不溶於水。',
+   '不是油討厭水。',
+   '是水把油擠出去。'
+  ]},
+  {h:'pH代表解離的程度',p:[
+   'pH = −log [H⁺]。',
+   'pH差1，濃度差10倍。',
+   '血液pH要維持7.35–7.45。',
+   '差0.4就可能致命。'
+  ]},
+  {h:'緩衝溶液抵抗pH改變',p:[
+   '<span class=kw>緩衝溶液</span>＝弱酸＋共軛鹼。',
+   '加酸，A⁻把H⁺吃掉。',
+   '加鹼，HA放出H⁺補上。',
+   'pH＝pKa時效果最好。'
+  ],img:'../../assets/figures/w02_titration.jpg',imgCap:'滴定曲線 ／ Đường cong chuẩn độ'}
+ ],
+ vocab:[
+  {w:'水',py:'shuǐ',vn:'Nước',en:'Water',df:'極性分子，帶正負電。',ex:'水是極性分子。'},
+  {w:'氫鍵',py:'qīng jiàn',vn:'Liên kết hydrogen',en:'Hydrogen bond',df:'一種很弱的化學作用力。',ex:'一個氫鍵很弱，很多個很強。'},
+  {w:'極性',py:'jí xìng',vn:'Phân cực',en:'Polar',df:'分子帶正負電荷。',ex:'水是極性分子。'},
+  {w:'非極性',py:'fēi jí xìng',vn:'Không phân cực',en:'Nonpolar',df:'分子不帶電荷。',ex:'油是非極性分子。'},
+  {w:'親水性',py:'qīn shuǐ xìng',vn:'Ưa nước',en:'Hydrophilic',df:'能溶於水的特性。',ex:'鹽和糖有親水性。'},
+  {w:'疏水性',py:'shū shuǐ xìng',vn:'Kỵ nước',en:'Hydrophobic',df:'不能溶於水的特性。',ex:'油和脂質有疏水性。'},
+  {w:'濃度',py:'nóng dù',vn:'Nồng độ',en:'Concentration',df:'物質的多少程度。',ex:'[H⁺]代表氫離子濃度。'},
+  {w:'酸',py:'suān',vn:'Acid',en:'Acid',df:'能放出H⁺的物質。',ex:'胃酸的pH很低。'},
+  {w:'鹼',py:'jiǎn',vn:'Base',en:'Base',df:'能接受H⁺的物質。',ex:'小腸液偏鹼性。'},
+  {w:'解離',py:'jiě lí',vn:'Sự phân li',en:'Dissociation',df:'分子分開成離子。',ex:'水會解離成H⁺和OH⁻。'},
+  {w:'緩衝溶液',py:'huǎn chōng róng yè',vn:'Dung dịch đệm',en:'Buffer solution',df:'能抵抗pH改變的溶液。',ex:'血液靠緩衝溶液維持pH。'},
+  {w:'滴定曲線',py:'dī dìng qū xiàn',vn:'Đường cong chuẩn độ',en:'Titration curve',df:'加酸鹼時pH變化的圖。',ex:'滴定曲線最平的地方是pKa。'}
+ ],
+ g1:[
+  {zh:'水',py:'shuǐ',vn:'Nước'},
+  {zh:'氫鍵',py:'qīng jiàn',vn:'Liên kết hydrogen'},
+  {zh:'親水性',py:'qīn shuǐ xìng',vn:'Ưa nước'},
+  {zh:'疏水性',py:'shū shuǐ xìng',vn:'Kỵ nước'},
+  {zh:'酸',py:'suān',vn:'Acid'},
+  {zh:'鹼',py:'jiǎn',vn:'Base'},
+  {zh:'解離',py:'jiě lí',vn:'Sự phân li'},
+  {zh:'緩衝溶液',py:'huǎn chōng róng yè',vn:'Dung dịch đệm'}
+ ],
+ g2:[
+  {t:'pH 5 的 [H⁺] 是 pH 6 的 10 倍。',a:true,e:'對，pH每差1，[H⁺]差10倍。'},
+  {t:'氫鍵比共價鍵強。',a:false,e:'錯，一個氫鍵只有共價鍵的1/20，很弱。'},
+  {t:'油不溶於水，是因為水分子彼此抓得太緊。',a:true,e:'對，水互相吸引，把油擠出去，這叫疏水效應。'},
+  {t:'緩衝溶液在pH＝pKa時效果最好。',a:true,e:'對，這時弱酸和共軛鹼濃度相等，緩衝力最強。'},
+  {t:'血液的正常pH範圍是7.35–7.45。',a:true,e:'對，範圍很窄，差0.4就可能致命。'}
+ ],
+ g3:[
+  {label:'步驟排序：緩衝溶液怎麼抵抗pH改變？',tokens:['加酸','A⁻吸收H⁺','pH幾乎不變']},
+  {label:'步驟排序：糖尿病人為什麼會酸中毒？',tokens:['不能用葡萄糖','燒脂肪','產生酮體','血液pH下降']}
+ ],
+ g4:[
+  {s:'糖尿病人不能用葡萄糖，只好燒脂肪、產生酮體，血液pH會怎樣？',o:['下降，變成酸中毒','上升，變成鹼中毒','完全不變'],a:0,e:'酮體是酸，會讓血液pH下降，造成酮酸中毒。'},
+  {s:'你要配一個pH 7的緩衝液，有pKa 4.8、6.4、9.2三種弱酸，選哪個?',o:['pKa 4.8','pKa 6.4','pKa 9.2'],a:1,e:'緩衝範圍是pKa±1，pKa 6.4最接近pH 7。'},
+  {s:'把油倒進水裡，油會聚成一團，這是為什麼？',o:['因為油討厭水','因為水分子彼此抓太緊，把油擠出去','因為油是酸性的'],a:1,e:'不是油討厭水，是水分子間的氫鍵把油擠出去。'}
+ ],
+ g5:[
+  {s:'pH = −log [___]。',o:['H⁺','OH⁻','H₂O'],a:0},
+  {s:'緩衝溶液＝弱酸＋它的___。',o:['共軛鹼','共價鍵','非極性物質'],a:0},
+  {s:'水是___分子，一邊帶正電一邊帶負電。',o:['極性','非極性','疏水性'],a:0},
+  {s:'pH每差1，[H⁺]就差___倍。',o:['10','100','2'],a:0},
+  {s:'緩衝溶液效果最好時，pH等於___。',o:['pKa','pI','Kd'],a:0}
+ ],
+ review:[
+  {s:'細胞是生命的什麼？',o:['最小單位','最大單位','中間單位'],a:0,e:'細胞是生命最小的構造與功能單位，第1週學過。'},
+  {s:'蛋白質的單體是什麼？',o:['胺基酸','單醣','核苷酸'],a:0,e:'蛋白質由許多胺基酸接起來組成。'},
+  {s:'DNA主要放在細胞的哪裡？',o:['細胞核','粒線體','細胞膜'],a:0,e:'DNA主要放在細胞核裡，粒線體負責製造ATP。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

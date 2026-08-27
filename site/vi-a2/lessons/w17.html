@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 17 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:17,icon:'⚖️',accent:'#2E5F4A',
+ theme:'代謝整合與激素調節',
+ keypoints:[
+  {h:'器官分工：誰做什麼',p:[
+   '<span class=kw>肝臟</span>是全身總指揮。',
+   '調節血糖、酮體、尿素。',
+   '<span class=kw>骨骼肌</span>肝醣只供自己。',
+   '<span class=kw>脂肪組織</span>負責存脂肪。'
+  ],img:'../../assets/figures/w17_organs.jpg',imgCap:'肝、肌肉、脂肪、腦分工合作 ／ Gan, cơ, mỡ, não phối hợp phân công'},
+  {h:'腦只能燒葡萄糖',p:[
+   '<span class=kw>腦</span>不能燒脂肪酸。',
+   '脂肪酸過不了血腦障壁。',
+   '飢餓久了改燒<span class=kw>酮體</span>。',
+   '酮體能通過血腦障壁。'
+  ]},
+  {h:'飽食 vs 飢餓',p:[
+   '<span class=kw>胰島素</span>負責儲存。',
+   '<span class=kw>升糖素</span>負責動員。',
+   '飽食時血糖高，胰島素升。',
+   '飢餓時血糖低，升糖素升。'
+  ],img:'../../assets/figures/w17_fed_fasted.jpg',imgCap:'飽食與飢餓時的代謝變化 ／ Thay đổi chuyển hóa lúc no và đói'},
+  {h:'糖尿病：控糖出問題',p:[
+   '<span class=kw>第一型</span>做不出胰島素。',
+   '<span class=kw>第二型</span>細胞不理胰島素。',
+   '兩型都會血糖過高。',
+   '嚴重會酮酸中毒。'
+  ]}
+ ],
+ vocab:[
+  {w:'胰島素',py:'yí dǎo sù',vn:'Insulin',en:'Insulin',df:'降血糖的激素。',ex:'吃飯後胰島素會上升。'},
+  {w:'升糖素',py:'shēng táng sù',vn:'Glucagon',en:'Glucagon',df:'升血糖的激素。',ex:'飢餓時升糖素會上升。'},
+  {w:'血糖',py:'xuè táng',vn:'Đường huyết',en:'Blood glucose',df:'血液裡的葡萄糖。',ex:'胰島素能降低血糖。'},
+  {w:'肝臟',py:'gān zàng',vn:'Gan',en:'Liver',df:'調節血糖的器官。',ex:'肝臟負責做酮體。'},
+  {w:'骨骼肌',py:'gǔ gé jī',vn:'Cơ xương',en:'Skeletal muscle',df:'儲存肝醣，只給自己用。',ex:'骨骼肌的肝醣不能給血液。'},
+  {w:'脂肪組織',py:'zhī fáng zǔ zhī',vn:'Mô mỡ',en:'Adipose tissue',df:'儲存脂肪的組織。',ex:'脂肪組織是能量倉庫。'},
+  {w:'飽食狀態',py:'bǎo shí zhuàng tài',vn:'Trạng thái no',en:'Fed state',df:'吃飽後的狀態。',ex:'飽食狀態時胰島素升高。'},
+  {w:'飢餓狀態',py:'jī è zhuàng tài',vn:'Trạng thái đói',en:'Fasting state',df:'沒吃東西的狀態。',ex:'飢餓狀態時升糖素升高。'},
+  {w:'受體',py:'shòu tǐ',vn:'Thụ thể',en:'Receptor',df:'接收訊號的構造。',ex:'胰島素要先結合受體。'},
+  {w:'瘦體素',py:'shòu tǐ sù',vn:'Leptin',en:'Leptin',df:'告訴大腦吃飽了的激素。',ex:'瘦體素會抑制食慾。'},
+  {w:'糖尿病',py:'táng niào bìng',vn:'Bệnh đái tháo đường',en:'Diabetes mellitus',df:'血糖控制壞掉的疾病。',ex:'糖尿病病人血糖過高。'},
+  {w:'恆定',py:'héng dìng',vn:'Sự cân bằng nội môi',en:'Homeostasis',df:'身體維持穩定的狀態。',ex:'激素幫助身體維持恆定。'}
+ ],
+ g1:[
+  {zh:'胰島素',py:'yí dǎo sù',vn:'Insulin'},
+  {zh:'升糖素',py:'shēng táng sù',vn:'Glucagon'},
+  {zh:'血糖',py:'xuè táng',vn:'Đường huyết'},
+  {zh:'肝臟',py:'gān zàng',vn:'Gan'},
+  {zh:'骨骼肌',py:'gǔ gé jī',vn:'Cơ xương'},
+  {zh:'脂肪組織',py:'zhī fáng zǔ zhī',vn:'Mô mỡ'},
+  {zh:'受體',py:'shòu tǐ',vn:'Thụ thể'},
+  {zh:'瘦體素',py:'shòu tǐ sù',vn:'Leptin'}
+ ],
+ g2:[
+  {t:'肌肉的肝醣可以放出葡萄糖到血液。',a:false,e:'錯，肌肉沒有葡萄糖-6-磷酸酶，肝醣只能自己用。'},
+  {t:'胰島素的作用是儲存。',a:true,e:'對，胰島素讓身體儲存葡萄糖和脂肪。'},
+  {t:'腦平常主要燒脂肪酸。',a:false,e:'錯，腦只能燒葡萄糖，飢餓時才用酮體。'},
+  {t:'第二型糖尿病是因為做不出胰島素。',a:false,e:'錯，第二型是細胞對胰島素不敏感（胰島素阻抗）。'},
+  {t:'肝臟能調節血糖、做酮體和尿素。',a:true,e:'對，肝臟是代謝的總指揮。'}
+ ],
+ g3:[
+  {label:'步驟排序題目：吃飯後身體怎麼反應？',tokens:['吃飯後','血糖上升','胰島素','肝臟儲存肝醣']},
+  {label:'步驟排序題目：飢餓時身體怎麼反應？',tokens:['飢餓','血糖下降','升糖素','肝臟釋放葡萄糖']}
+ ],
+ g4:[
+  {s:'運動時血糖突然變低，肌肉的肝醣能直接幫忙嗎？為什麼？',o:['不能，因為肌肉沒有葡萄糖-6-磷酸酶','能，肌肉肝醣可以直接進血液','不能，因為肌肉沒有肝醣'],a:0,e:'肌肉缺少關鍵酵素，肝醣只能自己用，不能送到血液。'},
+  {s:'飢餓三天後，腦要用什麼當燃料？',o:['脂肪酸','酮體','蛋白質'],a:1,e:'脂肪酸過不了血腦障壁，腦改用能通過的酮體。'},
+  {s:'第一型和第二型糖尿病，哪裡不一樣？',o:['第一型做不出胰島素，第二型細胞不理胰島素','兩型原因完全相同','第二型比較少見高血糖'],a:0,e:'第一型是胰島素不足，第二型是細胞對胰島素反應變差。'}
+ ],
+ g5:[
+  {s:'飽食時，主要激素是___。',o:['胰島素','升糖素','腎上腺素'],a:0},
+  {s:'飢餓時，主要激素是___。',o:['升糖素','胰島素','瘦體素'],a:0},
+  {s:'肝臟能調節血糖、做酮體和___。',o:['尿素','肝醣','脂肪酸'],a:0},
+  {s:'腦平常只能燒___。',o:['葡萄糖','脂肪酸','胺基酸'],a:0},
+  {s:'告訴大腦「吃飽了」的激素叫___。',o:['瘦體素','升糖素','皮質醇'],a:0}
+ ],
+ review:[
+  {s:'C16脂肪酸做β-氧化，總共要幾圈？',o:['7圈','8圈','16圈'],a:0,e:'C16脂肪酸做7圈β-氧化，產生8個乙醯CoA。'},
+  {s:'氨對身體有毒，身體怎麼處理它？',o:['尿素循環把氨變成尿素','直接排出氨','把氨變成葡萄糖'],a:0,e:'尿素循環把有毒的氨轉變成安全的尿素，經尿液排出。'},
+  {s:'長期飢餓時，身體會大量產生什麼？',o:['酮體','肝醣','胺基酸'],a:0,e:'長期飢餓時大量燒脂肪，乙醯CoA過剩，形成酮體。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

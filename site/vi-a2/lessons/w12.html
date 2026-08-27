@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 12 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:12,icon:'⚡',accent:'#8A5A2E',
+ theme:'生物能量學：ΔG 與 ATP',
+ keypoints:[
+  {h:'自由能決定會不會發生',p:[
+   '<span class=kw>自由能</span>簡寫是 G。',
+   '<span class=kw>自由能變化</span>簡寫是 ΔG。',
+   'ΔG 小於零，反應會自己發生。',
+   'ΔG 大於零，反應不會自己發生。'
+  ],img:'../../assets/figures/w12_deltaG.jpg',imgCap:'ΔG 與反應方向 ／ ΔG và chiều phản ứng'},
+  {h:'放能反應與吸能反應',p:[
+   '<span class=kw>放能反應</span>的 ΔG 小於零。',
+   '像球從山上滾下來。',
+   '<span class=kw>吸能反應</span>的 ΔG 大於零。',
+   '像把球推上山，需要能量。'
+  ]},
+  {h:'自發不等於快',p:[
+   '<span class=kw>自發反應</span>不代表反應很快。',
+   'ΔG 決定「會不會」發生。',
+   '活化能決定「多快」發生。',
+   '酵素只降低活化能，不改變 ΔG。'
+  ]},
+  {h:'ATP 是能量貨幣',p:[
+   '<span class=kw>三磷酸腺苷</span>簡稱 ATP。',
+   'ATP 水解變 ADP，會放能。',
+   'ADP 加磷酸變回 ATP，要吸能。',
+   '能量不是裝在<span class=kw>高能磷酸鍵</span>裡。',
+   '切開後產物更穩定，才放出能量。'
+  ],img:'../../assets/figures/w12_atp_cycle.jpg',imgCap:'ATP 循環 ／ Chu trình ATP'},
+  {h:'能量耦合與氧化還原',p:[
+   '<span class=kw>能量耦合</span>把兩個反應綁在一起。',
+   '放能反應帶動吸能反應發生。',
+   '<span class=kw>氧化</span>是失去電子。',
+   '<span class=kw>還原</span>是得到電子。',
+   '<span class=kw>異化作用</span>拆大分子、放能。'
+  ]}
+ ],
+ vocab:[
+  {w:'生物能量學',py:'shēng wù néng liàng xué',vn:'Năng lượng sinh học',en:'Bioenergetics',df:'研究生命的能量。',ex:'生物能量學研究細胞的能量。'},
+  {w:'自由能',py:'zì yóu néng',vn:'Năng lượng tự do',en:'Free energy (G)',df:'能做功的能量。',ex:'自由能簡寫是 G。'},
+  {w:'自由能變化',py:'zì yóu néng biàn huà',vn:'Biến thiên năng lượng tự do',en:'ΔG',df:'反應前後能量差。',ex:'ΔG 決定反應會不會發生。'},
+  {w:'放能反應',py:'fàng néng fǎn yīng',vn:'Phản ứng tỏa năng',en:'Exergonic reaction',df:'ΔG小於零的反應。',ex:'放能反應會自發。'},
+  {w:'吸能反應',py:'xī néng fǎn yīng',vn:'Phản ứng thu năng',en:'Endergonic reaction',df:'ΔG大於零的反應。',ex:'吸能反應不會自發。'},
+  {w:'自發反應',py:'zì fā fǎn yīng',vn:'Phản ứng tự phát',en:'Spontaneous reaction',df:'不需外力就發生。',ex:'自發反應不一定很快。'},
+  {w:'能量耦合',py:'néng liàng ǒu hé',vn:'Sự ghép cặp năng lượng',en:'Energy coupling',df:'兩反應綁在一起。',ex:'能量耦合讓吸能反應發生。'},
+  {w:'三磷酸腺苷',py:'sān lín suān xiàn gān',vn:'ATP',en:'ATP',df:'細胞的能量貨幣。',ex:'ATP水解會放能。'},
+  {w:'高能磷酸鍵',py:'gāo néng lín suān jiàn',vn:'Liên kết phosphate cao năng',en:'High-energy phosphate bond',df:'切開後產物更穩定。',ex:'高能磷酸鍵切開會放能。'},
+  {w:'氧化還原反應',py:'yǎng huà hái yuán fǎn yīng',vn:'Phản ứng oxy hóa khử',en:'Redox reaction',df:'電子轉移的反應。',ex:'燒葡萄糖是氧化還原反應。'},
+  {w:'異化作用',py:'yì huà zuò yòng',vn:'Dị hóa',en:'Catabolism',df:'拆解大分子、放能。',ex:'異化作用會產生ATP。'},
+  {w:'同化作用',py:'tóng huà zuò yòng',vn:'Đồng hóa',en:'Anabolism',df:'合成大分子、耗能。',ex:'同化作用需要吸能。'}
+ ],
+ g1:[
+  {zh:'自由能',py:'zì yóu néng',vn:'Năng lượng tự do'},
+  {zh:'放能反應',py:'fàng néng fǎn yīng',vn:'Phản ứng tỏa năng'},
+  {zh:'吸能反應',py:'xī néng fǎn yīng',vn:'Phản ứng thu năng'},
+  {zh:'自發反應',py:'zì fā fǎn yīng',vn:'Phản ứng tự phát'},
+  {zh:'能量耦合',py:'néng liàng ǒu hé',vn:'Sự ghép cặp năng lượng'},
+  {zh:'三磷酸腺苷',py:'sān lín suān xiàn gān',vn:'ATP'},
+  {zh:'異化作用',py:'yì huà zuò yòng',vn:'Dị hóa'},
+  {zh:'同化作用',py:'tóng huà zuò yòng',vn:'Đồng hóa'}
+ ],
+ g2:[
+  {t:'ΔG小於零的反應一定跑得很快。',a:false,e:'錯，ΔG只決定會不會發生，活化能才決定快慢。'},
+  {t:'能量裝在ATP的磷酸鍵「裡面」。',a:false,e:'錯，切開後產物比較穩定，穩定度的差才是放出的能量。'},
+  {t:'氧化是失去電子。',a:true,e:'對，氧化失去電子，還原得到電子。'},
+  {t:'異化作用會產生ATP。',a:true,e:'對，異化作用拆大分子、放能、產ATP。'},
+  {t:'酵素能把ΔG大於零的反應變成自發反應。',a:false,e:'錯，酵素只降低活化能，不能改變ΔG的正負。'}
+ ],
+ g3:[
+  {label:'步驟排序題目：細胞怎麼利用ATP做事？',tokens:['ATP','水解','ADP+Pi','放出能量']},
+  {label:'步驟排序題目：不自發的反應怎麼發生？',tokens:['ATP水解放能','綁在一起','吸能反應被帶動','反應發生']}
+ ],
+ g4:[
+  {s:'反應A單獨ΔG是+3，綁上ATP水解（ΔG−7）後變−4，這代表什麼？',o:['能量耦合讓不自發反應發生','反應A變得不需要能量','ATP不再被消耗'],a:0,e:'放能反應（ATP水解）帶動吸能反應，這就是能量耦合。'},
+  {s:'兩個反應ΔG都是負值，為什麼一個很快、一個很慢？',o:['活化能不同','ΔG不同','兩者無關係'],a:0,e:'ΔG只決定會不會自發，反應快慢由活化能決定。'},
+  {s:'細胞燒葡萄糖時，電子交給NADH，這個過程屬於什麼？',o:['氧化還原反應','同化作用','水解反應'],a:0,e:'葡萄糖失去電子被氧化，NADH得到電子被還原，這是氧化還原反應。'}
+ ],
+ g5:[
+  {s:'ΔG小於零的反應稱為___。',o:['放能反應','吸能反應','同化作用'],a:0},
+  {s:'ATP水解會___。',o:['放出能量','吸收能量','不變化'],a:0},
+  {s:'失去電子叫做___。',o:['氧化','還原','水解'],a:0},
+  {s:'拆解大分子、放出能量的過程叫___。',o:['異化作用','同化作用','能量耦合'],a:0},
+  {s:'決定反應「多快」發生的是___。',o:['活化能','ΔG','自由能'],a:0}
+ ],
+ review:[
+  {s:'DNA雙股中，A和哪一個鹼基配對？',o:['T','G','C'],a:0,e:'A與T配對，兩個氫鍵；G與C配對，三個氫鍵。'},
+  {s:'核苷酸由哪三個部分組成？',o:['含氮鹼基、五碳醣、磷酸','蛋白質、脂質、醣類','細胞核、粒線體、細胞膜'],a:0,e:'核苷酸＝含氮鹼基＋五碳醣＋磷酸，這是第11週的重點。'},
+  {s:'DNA和RNA最主要的差別，下列何者正確？',o:['DNA用T，RNA用U代替T','DNA是單股，RNA是雙股','DNA沒有磷酸，RNA有磷酸'],a:0,e:'DNA含胸腺嘧啶（T），RNA以尿嘧啶（U）取代T，且DNA通常雙股、RNA通常單股。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

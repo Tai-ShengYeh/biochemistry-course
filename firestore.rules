@@ -1,0 +1,243 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // =====================================================
+    // 通用工具
+    // =====================================================
+
+    // 文字雲（舊的 wordcloud 工具）
+    match /wordcloud_words/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.text is string
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.text.size() <= 30
+                    && request.resource.data.question in ['q1', 'q2', 'q3']
+                    && request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+      allow update, delete: if false;
+    }
+
+    // Exit Ticket 回答
+    match /exit_tickets/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.q1 is string
+                    && request.resource.data.q1.size() <= 200
+                    && request.resource.data.q2 is string
+                    && request.resource.data.q2.size() <= 500
+                    && request.resource.data.q3 is string
+                    && request.resource.data.q3.size() <= 500
+                    && request.resource.data.seat is string
+                    && request.resource.data.seat.size() <= 10
+                    && request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+      allow update, delete: if false;
+    }
+
+    // Chap5 in-slide minigames
+    match /ch5_responses/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.game is string
+                    && request.resource.data.game.size() <= 40
+                    && request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40
+                    && request.resource.data.payload is map;
+      allow update: if false;
+      allow delete: if true;
+    }
+
+    // =====================================================
+    // 麥當勞無塑包裝（高職彈性課，2026-05-19）
+    // =====================================================
+    match /results/{doc} {
+      allow create: if request.resource.data.studentId is string
+                    && request.resource.data.sessionId is string;
+      allow read: if true;
+    }
+
+    // =====================================================
+    // 食品包裝綠色革命（越南華語班，2026-05-25）
+    // =====================================================
+    match /fpvn_results/{doc} {
+      allow create: if request.resource.data.studentId is string
+                    && request.resource.data.sessionId is string;
+      allow read: if true;
+    }
+
+    // =====================================================
+    // 替代蛋白（大學版）
+    // =====================================================
+    match /altprot_uni_votes/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /altprot_uni_matches/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /altprot_uni_decisions/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // 替代蛋白（高職班）
+    // =====================================================
+    match /altprot_votes/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /altprot_matches/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /altprot_decisions/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // 優格 × 腸球菌（5 個 collection）
+    // =====================================================
+    match /yogurt_votes/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /yogurt_matches/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /yogurt_ph/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /yogurt_decisions/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /yogurt_quiz/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // GLP-1（暖身投票 + 完整答題）
+    // =====================================================
+    match /glp1_warmup_votes/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /glp1_answers/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // 食品分析（四技 · Nielsen Ch7）
+    // =====================================================
+    match /food_analysis_nielsen_ch7_results/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /food_analysis_nielsen_ch7_views/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // 食品分析（五專 · II Ch4-1）
+    // =====================================================
+    match /food_analysis_II_5y_ch4_1_results/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /food_analysis_II_5y_ch4_1_views/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // Chap7 文字雲
+    // =====================================================
+    match /ch7_wordcloud_words/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.text is string
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.text.size() <= 30
+                    && request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+      allow update, delete: if false;
+    }
+
+    // =====================================================
+    // 通用事件記錄
+    // =====================================================
+    match /lesson_events/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /student_events/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /decision_tree_responses/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+    match /quiz_votes/{doc} {
+      allow read: if true;
+      allow create: if request.resource.data.session is string
+                    && request.resource.data.session.size() <= 40;
+    }
+
+    // =====================================================
+    // 食品營養華語 寫作 I（越南班，上學期 16 週課件，2026-08-27）
+    // 來源：next_year_plan/semester1_lessons/lesson_engine.js award() 雙寫
+    // =====================================================
+    match /vncs1_results/{doc} {
+      allow create: if request.resource.data.studentId is string
+                    && request.resource.data.sessionId is string;
+      allow read: if true;
+    }
+
+    // =====================================================
+    // 生物化學（越南學生班 vi-a2，2026-08-27）
+    // 來源：biochemistry-course site/assets/js/bio_tracker.js 雙寫
+    // =====================================================
+    match /biochem_results/{doc} {
+      allow create: if request.resource.data.studentId is string
+                    && request.resource.data.sessionId is string;
+      allow read: if true;
+    }
+
+    // =====================================================
+    // 預留：未來新課程一律用 {coursecode}_results 格式
+    // 加新課時，把對應 match 區塊加在這上面
+    // =====================================================
+
+    // 預設拒絕（安全網，避免攻擊者寫到任意 collection）
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

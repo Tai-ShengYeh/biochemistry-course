@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>教師即時儀表板 · 生物化學</title>
+<style>
+:root{--primary:#1F4E5F;--secondary:#2E7D8A;--accent:#C8532B;--bg:#F7FBFC;--text:#1F2933;--border:#D9E7EC;--muted:#7A8C93;--ok:#2E7D8A;--warn:#C8532B}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--primary);color:#fff;padding:1.6rem 1rem;border-bottom:6px solid var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1rem}
+header h1{margin:0;font-size:1.5rem}
+header p{margin:.35rem 0 0;color:#9FD3DE;font-size:.85rem}
+header a.back{color:#cfeef4;font-size:.82rem;text-decoration:none}
+header a.back:hover{text-decoration:underline}
+main{padding:1.2rem 0 3rem}
+.controls{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem;margin:1rem 0;box-shadow:0 2px 10px rgba(0,0,0,.05);display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.controls select{padding:.55rem .7rem;border:1px solid var(--border);border-radius:7px;font-size:.9rem;font-family:inherit;background:#fff}
+.controls .spacer{flex:1}
+.controls .status{color:var(--muted);font-size:.8rem}
+.controls button{padding:.55rem .9rem;border:1px solid var(--border);border-radius:7px;background:var(--bg);cursor:pointer;font-size:.85rem;font-family:inherit;color:var(--text)}
+.controls button:hover{border-color:var(--secondary)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin:1rem 0}
+.card{background:#fff;border:1px solid var(--border);border-left:5px solid var(--secondary);border-radius:10px;padding:1rem 1.1rem;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.card .num{font-size:1.7rem;font-weight:700;color:var(--primary)}
+.card .lbl{color:var(--muted);font-size:.8rem;margin-top:.15rem}
+section.block{background:#fff;border:1px solid var(--border);border-left:5px solid var(--secondary);border-radius:10px;padding:1.2rem 1.3rem;margin:1.2rem 0;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+section.block h2{margin:0 0 .8rem;font-size:1.1rem;color:var(--primary)}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+thead th{text-align:left;padding:.5rem .6rem;border-bottom:2px solid var(--border);color:var(--muted);font-size:.78rem;white-space:nowrap}
+tbody td{padding:.5rem .6rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tbody tr:hover{background:#F0F8FA}
+.bar-row{display:flex;align-items:center;gap:.7rem;padding:.4rem 0}
+.bar-label{width:9.5rem;flex:0 0 9.5rem;font-size:.85rem;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{flex:1;background:var(--bg);border-radius:5px;overflow:hidden;height:20px;border:1px solid var(--border)}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--secondary),var(--primary));border-radius:5px 0 0 5px;display:flex;align-items:center;justify-content:flex-end;padding-right:.4rem}
+.bar-fill.low{background:linear-gradient(90deg,var(--accent),#e0784a)}
+.bar-fill span{color:#fff;font-size:.72rem;font-weight:700}
+.bar-n{width:4.5rem;flex:0 0 4.5rem;color:var(--muted);font-size:.75rem;text-align:right}
+.tip{background:#FFF4EE;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;padding:.6rem .9rem;font-size:.85rem;margin-top:.8rem;color:var(--text)}
+.empty{text-align:center;color:var(--muted);padding:2rem 1rem}
+footer{border-top:1px solid var(--border);padding:1.2rem;text-align:center;color:var(--muted);font-size:.8rem}
+#lock{position:fixed;inset:0;z-index:99;background:radial-gradient(800px 500px at 50% 0%,var(--secondary),var(--primary));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;padding:24px;text-align:center}
+#lock h2{color:#fff;font-size:1.4rem;margin:0}
+#lock p{color:#dceef2;font-size:.85rem;max-width:320px}
+#lock input{width:min(280px,80vw);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);color:#fff;font-size:1rem;text-align:center;font-family:inherit}
+#lock input::placeholder{color:rgba(255,255,255,.7)}
+#lock button{width:min(280px,80vw);padding:12px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit}
+#pwerr{color:#ffd7c4;font-size:.8rem;min-height:1em}
+</style>
+</head>
+<body>
+<!--
+  這道通關碼只是「裝飾性遮擋」，用來避免學生隨手點進來看到全班成績，
+  不是真正的存取控制：頁面原始碼、Supabase anon key 與資料本身都是公開可讀的。
+  真正需要保護敏感資料時，請在 Supabase 端設定 RLS，而不是依賴這道前端密碼。
+-->
+<div id="lock">
+  <h2>🔒 教師儀表板</h2>
+  <p>老師專用。輸入通關碼查看班級即時學習數據。</p>
+  <input id="pw" type="password" placeholder="通關碼" onkeydown="if(event.key==='Enter')unlock()">
+  <button onclick="unlock()">進入</button>
+  <div id="pwerr"></div>
+</div>
+
+<header><div class="wrap">
+  <a class="back" href="../index.html">&larr; 回課程首頁</a>
+  <h1>📊 教師即時儀表板</h1>
+  <p>生物化學（越南學生班）· 課程代碼 <code>biochem-vi</code> · 資料每 30 秒自動更新</p>
+</div></header>
+
+<main class="wrap">
+  <div class="controls">
+    <select id="sessionSel"><option value="">全部場次</option></select>
+    <select id="weekSel"><option value="">全部週次</option></select>
+    <div class="spacer"></div>
+    <span class="status" id="statusLine">載入中…</span>
+    <button onclick="loadData()">🔄 立即重整</button>
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="num" id="cTotal">–</div><div class="lbl">互動紀錄（筆）</div></div>
+    <div class="card"><div class="num" id="cStudents">–</div><div class="lbl">參與學生（人）</div></div>
+    <div class="card"><div class="num" id="cAvg">–</div><div class="lbl">平均分數</div></div>
+  </div>
+
+  <section class="block">
+    <h2>每位學生</h2>
+    <div id="studentTableWrap">
+      <table>
+        <thead><tr><th>姓名 / 學號</th><th>完成遊戲數</th><th>平均分</th><th>最後活動時間</th></tr></thead>
+        <tbody id="studentRows"></tbody>
+      </table>
+      <div class="empty" id="studentEmpty" style="display:none">目前沒有符合篩選條件的資料。</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>各遊戲平均分（由低到高 — 最低者為下週複習重點）</h2>
+    <div id="gameBars"></div>
+    <div class="tip" id="reviewTip" style="display:none"></div>
+    <div class="empty" id="gameEmpty" style="display:none">目前沒有符合篩選條件的資料。</div>
+  </section>
+</main>
+
+<footer>生物化學課程 · 教師專用頁面 · 資料來源 Supabase</footer>
+
+<script>
+var SUPA_URL = "https://qmldcjkllisvfgegkfsz.supabase.co";
+var SUPA_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbGRjamtsbGlzdmZnZWdrZnN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzExMjM5ODYsImV4cCI6MjA4NjY5OTk4Nn0.Bfj0W7HN_n_vcjGe5502Chamk0YV-de8a0fxF4Nyczk";
+var COURSE = "biochem-vi";
+var PASS = "biochem2026"; // 裝飾性遮擋，見上方註解
+var ROWS = [];
+var REFRESH_MS = 30000;
+var timerId = null;
+
+function unlock(){
+  if (document.getElementById('pw').value === PASS) {
+    document.getElementById('lock').style.display = 'none';
+    loadData();
+    if (timerId) clearInterval(timerId);
+    timerId = setInterval(loadData, REFRESH_MS);
+  } else {
+    document.getElementById('pwerr').textContent = '通關碼不對，請再試一次。';
+  }
+}
+
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];
+  });
+}
+
+function weekOf(r){
+  var meta = r.client_meta || {};
+  if (meta.week != null && meta.week !== '') return String(meta.week);
+  var m = String(r.game_id || '').match(/^w(\d+)/i);
+  return m ? String(Number(m[1])) : '?';
+}
+
+function studentLabel(r){
+  return (r.student_name && String(r.student_name).trim()) || ('（匿名 ' + r.student_id + '）');
+}
+
+function avg(list){
+  if (!list.length) return 0;
+  var sum = list.reduce(function(s, r){ return s + (Number(r.score) || 0); }, 0);
+  return Math.round(sum / list.length);
+}
+
+function loadData(){
+  var statusEl = document.getElementById('statusLine');
+  statusEl.textContent = '更新中…';
+  var url = SUPA_URL + '/rest/v1/interactions?course_code=eq.' + encodeURIComponent(COURSE) +
+    '&order=completed_at.desc&limit=5000';
+  fetch(url, { headers: { apikey: SUPA_KEY, Authorization: 'Bearer ' + SUPA_KEY } })
+    .then(function(r){ return r.json(); })
+    .then(function(rows){
+      ROWS = Array.isArray(rows) ? rows : [];
+      populateFilters();
+      render();
+      statusEl.textContent = '最後更新：' + new Date().toLocaleTimeString('zh-TW', { hour12: false });
+    })
+    .catch(function(e){
+      statusEl.textContent = '連線異常，稍後將自動重試。';
+      console.warn('[dashboard] load failed', e);
+    });
+}
+
+function populateFilters(){
+  var sessionSel = document.getElementById('sessionSel');
+  var weekSel = document.getElementById('weekSel');
+  var curSession = sessionSel.value;
+  var curWeek = weekSel.value;
+
+  var sessions = Array.from(new Set(ROWS.map(function(r){ return r.session_id; }).filter(Boolean))).sort();
+  sessionSel.innerHTML = '<option value="">全部場次</option>' +
+    sessions.map(function(s){ return '<option value="' + esc(s) + '">' + esc(s) + '</option>'; }).join('');
+  sessionSel.value = sessions.indexOf(curSession) > -1 ? curSession : '';
+
+  var weeks = Array.from(new Set(ROWS.map(weekOf))).filter(function(w){ return w !== '?'; })
+    .sort(function(a, b){ return Number(a) - Number(b); });
+  weekSel.innerHTML = '<option value="">全部週次</option>' +
+    weeks.map(function(w){ return '<option value="' + esc(w) + '">第 ' + esc(w) + ' 週</option>'; }).join('');
+  weekSel.value = weeks.indexOf(curWeek) > -1 ? curWeek : '';
+}
+
+function filteredRows(){
+  var session = document.getElementById('sessionSel').value;
+  var week = document.getElementById('weekSel').value;
+  return ROWS.filter(function(r){
+    if (session && r.session_id !== session) return false;
+    if (week && weekOf(r) !== week) return false;
+    return true;
+  });
+}
+
+function render(){
+  var rows = filteredRows();
+
+  document.getElementById('cTotal').textContent = rows.length;
+  var byStudentMap = new Map();
+  rows.forEach(function(r){
+    var k = studentLabel(r);
+    if (!byStudentMap.has(k)) byStudentMap.set(k, []);
+    byStudentMap.get(k).push(r);
+  });
+  document.getElementById('cStudents').textContent = byStudentMap.size;
+  document.getElementById('cAvg').textContent = rows.length ? (avg(rows) + ' / 100') : '–';
+
+  renderStudentTable(byStudentMap);
+  renderGameBars(rows);
+}
+
+function renderStudentTable(byStudentMap){
+  var tbody = document.getElementById('studentRows');
+  var emptyEl = document.getElementById('studentEmpty');
+  var entries = Array.from(byStudentMap.entries()).sort(function(a, b){ return b[1].length - a[1].length; });
+  if (!entries.length) {
+    tbody.innerHTML = '';
+    emptyEl.style.display = 'block';
+    return;
+  }
+  emptyEl.style.display = 'none';
+  var html = '';
+  entries.forEach(function(entry){
+    var name = entry[0], list = entry[1];
+    var last = list.reduce(function(latest, r){
+      return (!latest || (r.completed_at && r.completed_at > latest)) ? r.completed_at : latest;
+    }, null);
+    var lastStr = last ? new Date(last).toLocaleString('zh-TW', { hour12: false }) : '–';
+    html += '<tr><td>' + esc(name) + '</td><td>' + list.length + '</td><td>' + avg(list) + '</td><td>' + esc(lastStr) + '</td></tr>';
+  });
+  tbody.innerHTML = html;
+}
+
+function renderGameBars(rows){
+  var wrap = document.getElementById('gameBars');
+  var emptyEl = document.getElementById('gameEmpty');
+  var tip = document.getElementById('reviewTip');
+  var byGame = new Map();
+  rows.forEach(function(r){
+    var g = (r.game_name && String(r.game_name).trim()) || r.game_id || '（未知遊戲）';
+    if (!byGame.has(g)) byGame.set(g, []);
+    byGame.get(g).push(r);
+  });
+  var entries = Array.from(byGame.entries()).map(function(e){
+    return { name: e[0], list: e[1], avg: avg(e[1]) };
+  }).sort(function(a, b){ return a.avg - b.avg; });
+
+  if (!entries.length) {
+    wrap.innerHTML = '';
+    tip.style.display = 'none';
+    emptyEl.style.display = 'block';
+    return;
+  }
+  emptyEl.style.display = 'none';
+
+  var maxAvg = Math.max.apply(null, entries.map(function(e){ return e.avg; }).concat([1]));
+  var html = '';
+  entries.forEach(function(e, i){
+    var pct = Math.max(4, Math.round((e.avg / Math.max(maxAvg, 100)) * 100));
+    var lowCls = i === 0 ? ' low' : '';
+    html += '<div class="bar-row">' +
+      '<div class="bar-label" title="' + esc(e.name) + '">' + esc(e.name) + '</div>' +
+      '<div class="bar-track"><div class="bar-fill' + lowCls + '" style="width:' + pct + '%"><span>' + e.avg + '</span></div></div>' +
+      '<div class="bar-n">' + e.list.length + ' 筆</div>' +
+      '</div>';
+  });
+  wrap.innerHTML = html;
+
+  tip.style.display = 'block';
+  tip.innerHTML = '📌 下週複習重點：<b>' + esc(entries[0].name) + '</b>（平均 ' + entries[0].avg + ' 分，全班最低）';
+}
+</script>
+</body>
+</html>

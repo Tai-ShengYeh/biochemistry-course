@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 7 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元二　蛋白質與酵素',week:7,icon:'📈',accent:'#2F7886',
+ theme:'酵素（二）：米氏動力學與抑制作用',
+ keypoints:[
+  {h:'米氏曲線：酵素有多快',p:[
+   '受質越多，酵素反應越快。',
+   '但有上限，酵素都在忙。',
+   '<span class=kw>米氏方程式</span>描述這條曲線。'
+  ],img:'../../assets/figures/w07_mm_curve.jpg',imgCap:'米氏曲線 ／ Đường cong Michaelis-Menten'},
+  {h:'Vmax與Km',p:[
+   '<span class=kw>最大速率</span>是漸近線，碰不到。',
+   '<span class=kw>米氏常數</span>是速率到½Vmax時的濃度。',
+   'Km小＝抓得緊，Km大＝抓得鬆。'
+  ]},
+  {h:'注意：Km在X軸',p:[
+   '常見錯誤：把Km當成速率。',
+   'Km其實是「受質濃度」。',
+   '它畫在X軸上，不是Y軸。'
+  ]},
+  {h:'抑制劑：擋住酵素',p:[
+   '<span class=kw>抑制劑</span>會擋住酵素工作。',
+   '很多藥物就是抑制劑。',
+   '一種搶活性部位，一種黏別處。'
+  ],img:'../../assets/figures/w07_inhibition.jpg',imgCap:'競爭性與非競爭性抑制 ／ Ức chế cạnh tranh và không cạnh tranh'},
+  {h:'回饋抑制與磷酸化開關',p:[
+   '<span class=kw>回饋抑制</span>：最終產物喊停。',
+   '停的是第一個酵素。',
+   '整條路徑因此慢下來。',
+   '加一個<span class=kw>磷酸</span>能開或關酵素。'
+  ]}
+ ],
+ vocab:[
+  {w:'酵素動力學',py:'jiào sù dòng lì xué',vn:'Động học enzyme',en:'Enzyme kinetics',df:'研究酵素速率的學問。',ex:'酵素動力學量酵素有多快。'},
+  {w:'米氏方程式',py:'mǐ shì fāng chéng shì',vn:'Phương trình Michaelis-Menten',en:'Michaelis-Menten equation',df:'描述酵素速率的公式。',ex:'米氏方程式畫出米氏曲線。'},
+  {w:'米氏常數',py:'mǐ shì cháng shù',vn:'Hằng số Michaelis (Km)',en:'Km',df:'速率到½Vmax時的受質濃度。',ex:'Km小代表抓得緊。'},
+  {w:'最大速率',py:'zuì dà sù lǜ',vn:'Tốc độ tối đa (Vmax)',en:'Vmax',df:'酵素最快的反應速率。',ex:'Vmax是曲線的漸近線。'},
+  {w:'初速率',py:'chū sù lǜ',vn:'Tốc độ ban đầu',en:'Initial velocity',df:'反應剛開始時的速率。',ex:'實驗通常測初速率。'},
+  {w:'抑制劑',py:'yì zhì jì',vn:'Chất ức chế',en:'Inhibitor',df:'擋住酵素工作的物質。',ex:'很多藥物就是抑制劑。'},
+  {w:'競爭性抑制',py:'jìng zhēng xìng yì zhì',vn:'Ức chế cạnh tranh',en:'Competitive inhibition',df:'抑制劑搶活性部位。',ex:'競爭性抑制讓Km變大。'},
+  {w:'非競爭性抑制',py:'fēi jìng zhēng xìng yì zhì',vn:'Ức chế không cạnh tranh',en:'Noncompetitive inhibition',df:'抑制劑黏在別的地方。',ex:'非競爭性抑制讓Vmax下降。'},
+  {w:'回饋抑制',py:'huí kuì yì zhì',vn:'Ức chế ngược',en:'Feedback inhibition',df:'最終產物抑制第一個酵素。',ex:'回饋抑制讓細胞省成本。'},
+  {w:'磷酸化',py:'lín suān huà',vn:'Sự phosphoryl hóa',en:'Phosphorylation',df:'加一個磷酸來開關酵素。',ex:'磷酸化是常見的開關。'},
+  {w:'轉換數',py:'zhuǎn huàn shù',vn:'Số vòng xúc tác (kcat)',en:'Turnover number',df:'一個酵素每秒能處理的次數。',ex:'轉換數越大，酵素越快。'},
+  {w:'不可逆抑制',py:'bù kě nì yì zhì',vn:'Ức chế không thuận nghịch',en:'Irreversible inhibition',df:'抑制劑黏死，不會分開。',ex:'不可逆抑制無法用受質救回。'}
+ ],
+ g1:[
+  {zh:'米氏常數',py:'mǐ shì cháng shù',vn:'Hằng số Michaelis (Km)'},
+  {zh:'最大速率',py:'zuì dà sù lǜ',vn:'Tốc độ tối đa (Vmax)'},
+  {zh:'初速率',py:'chū sù lǜ',vn:'Tốc độ ban đầu'},
+  {zh:'抑制劑',py:'yì zhì jì',vn:'Chất ức chế'},
+  {zh:'競爭性抑制',py:'jìng zhēng xìng yì zhì',vn:'Ức chế cạnh tranh'},
+  {zh:'非競爭性抑制',py:'fēi jìng zhēng xìng yì zhì',vn:'Ức chế không cạnh tranh'},
+  {zh:'回饋抑制',py:'huí kuì yì zhì',vn:'Ức chế ngược'},
+  {zh:'磷酸化',py:'lín suān huà',vn:'Sự phosphoryl hóa'}
+ ],
+ g2:[
+  {t:'Km越小，酵素抓受質抓得越緊。',a:true,e:'對，Km小代表抓得緊，Km大代表抓得鬆。'},
+  {t:'競爭性抑制會讓Vmax下降。',a:false,e:'錯，競爭性抑制不改變Vmax，只讓Km變大。'},
+  {t:'加很多受質可以克服競爭性抑制。',a:true,e:'對，受質夠多能把抑制劑擠掉。'},
+  {t:'回饋抑制是最終產物抑制第一個酵素。',a:true,e:'對，這樣整條路徑就會慢下來。'},
+  {t:'非競爭性抑制加很多受質可以救回來。',a:false,e:'錯，抑制劑黏在別的地方，受質趕不走它。'}
+ ],
+ g3:[
+  {label:'步驟排序：受質濃度與速率的關係？',tokens:['受質少，速率低','受質增加，速率上升','到達Vmax，不再上升']},
+  {label:'步驟排序：回饋抑制怎麼發生？',tokens:['最終產物太多','回頭抑制第一個酵素','整條路徑慢下來']}
+ ],
+ g4:[
+  {s:'為什麼加很多受質能克服競爭性抑制，卻克服不了非競爭性抑制？',o:['競爭性搶活性部位可被擠掉，非競爭性黏別處趕不走','兩種都可以被擠掉','兩種都不能被擠掉'],a:0,e:'競爭性是搶位置，受質夠多能贏；非競爭性降上限，受質再多也沒用。'},
+  {s:'設計藥物時想讓藥效不受食物（受質濃度）影響，該選哪種抑制？',o:['非競爭性抑制','競爭性抑制','兩種都一樣'],a:0,e:'非競爭性抑制的效果不會被受質濃度蓋過去，比較穩定。'},
+  {s:'身體用磷酸化開關酵素，而不是重新製造或分解酵素，最主要的好處是什麼？',o:['速度快、可逆、省能量','比較貴','會破壞酵素結構'],a:0,e:'加或拿掉一個磷酸很快，還能隨時切回去。'}
+ ],
+ g5:[
+  {s:'Km是速率到___時的受質濃度。',o:['½Vmax','Vmax','2Vmax'],a:0},
+  {s:'競爭性抑制劑黏在___。',o:['活性部位','別的地方','受質上'],a:0},
+  {s:'非競爭性抑制會讓___下降。',o:['Vmax','Km','初速率'],a:0},
+  {s:'加一個磷酸讓酵素___。',o:['開或關','變大','變小'],a:0},
+  {s:'回饋抑制中，被抑制的是___。',o:['第一個酵素','最後一個酵素','所有酵素'],a:0}
+ ],
+ review:[
+  {s:'活化能是什麼？',o:['反應要翻過的能量的山','反應的最終產物','酵素的形狀'],a:0,e:'活化能就是反應要翻過的那座山，山越高反應越慢。'},
+  {s:'酵素會不會改變反應的ΔG？',o:['不會，山兩邊高度不變','會，讓ΔG變大','會，讓ΔG變小'],a:0,e:'酵素只挖隧道讓山變矮，不改變山兩邊的高度差。'},
+  {s:'誘導契合說明什麼？',o:['酵素形狀會改變去包住受質','酵素形狀固定不會變','受質的形狀會改變'],a:0,e:'新的想法是酵素會變形，包住受質，跟鎖與鑰匙不同。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 11 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元三　生物分子（第 8、10、11 週）',week:11,icon:'🧬',accent:'#B8461F',
+ theme:'核苷酸與核酸',
+ keypoints:[
+  {h:'核苷酸的三個部分',p:[
+   '<span class=kw>核苷酸</span>由三部分組成。',
+   '含氮<span class=kw>鹼基</span>是A T G C。',
+   '五碳醣是去氧核糖或核糖。',
+   '磷酸接在五號碳上。'
+  ],img:'../../assets/figures/w11_nucleotide.jpg',imgCap:'核苷酸的三個部分 ／ Ba phần của nucleotide'},
+  {h:'核苷 vs 核苷酸',p:[
+   '<span class=kw>核苷</span>等於鹼基加醣。',
+   '<span class=kw>核苷酸</span>等於核苷加磷酸。',
+   '差別只在一個磷酸。'
+  ]},
+  {h:'嘌呤與嘧啶',p:[
+   '<span class=kw>嘌呤</span>是雙環，A和G。',
+   '<span class=kw>嘧啶</span>是單環，C T U。',
+   '這週的base指鹼基。',
+   '不是酸鹼的鹼。'
+  ]},
+  {h:'DNA雙螺旋與鹼基配對',p:[
+   'DNA是<span class=kw>雙螺旋</span>結構。',
+   '<span class=kw>鹼基配對</span>有固定規則。',
+   'A配T，有兩個氫鍵。',
+   'G配C，有三個氫鍵。'
+  ],img:'../../assets/figures/w11_dna_helix.jpg',imgCap:'DNA雙螺旋構造 ／ Cấu trúc chuỗi xoắn kép DNA'},
+  {h:'互補股與DNA vs RNA',p:[
+   '兩股DNA<span class=kw>反平行</span>。',
+   '方向相反，頭尾相對。',
+   '兩股互相<span class=kw>互補</span>。',
+   'RNA用核糖，DNA用去氧核糖。',
+   'RNA用U代替T。'
+  ]}
+ ],
+ vocab:[
+  {w:'核苷酸',py:'hé gān suān',vn:'Nucleotide',en:'Nucleotide',df:'核苷加磷酸的分子。',ex:'核苷酸是DNA的單體。'},
+  {w:'核苷',py:'hé gān',vn:'Nucleoside',en:'Nucleoside',df:'鹼基加醣的分子。',ex:'核苷不含磷酸。'},
+  {w:'含氮鹼基',py:'hán dàn jiǎn jī',vn:'Base nitrogen',en:'Nitrogenous base',df:'核苷酸裡含氮的部分。',ex:'A T G C都是含氮鹼基。'},
+  {w:'嘌呤',py:'piào lìng',vn:'Purine',en:'Purine',df:'雙環鹼基，A和G。',ex:'腺嘌呤是一種嘌呤。'},
+  {w:'嘧啶',py:'mì dìng',vn:'Pyrimidine',en:'Pyrimidine',df:'單環鹼基，C T U。',ex:'胞嘧啶是一種嘧啶。'},
+  {w:'去氧核糖',py:'qù yǎng hé táng',vn:'Deoxyribose',en:'Deoxyribose',df:'DNA用的五碳醣。',ex:'DNA的醣是去氧核糖。'},
+  {w:'核糖',py:'hé táng',vn:'Ribose',en:'Ribose',df:'RNA用的五碳醣。',ex:'RNA的醣是核糖。'},
+  {w:'雙螺旋',py:'shuāng luó xuán',vn:'Chuỗi xoắn kép',en:'Double helix',df:'DNA的立體結構。',ex:'DNA是雙螺旋結構。'},
+  {w:'鹼基配對',py:'jiǎn jī pèi duì',vn:'Sự bắt cặp base',en:'Base pairing',df:'A配T，G配C。',ex:'鹼基配對有固定規則。'},
+  {w:'互補',py:'hù bǔ',vn:'Bổ sung',en:'Complementary',df:'兩股鹼基互相對應。',ex:'兩股DNA互相互補。'},
+  {w:'反平行',py:'fǎn píng xíng',vn:'Đối song song',en:'Antiparallel',df:'兩股方向相反排列。',ex:'DNA兩股是反平行的。'},
+  {w:'去氧核糖核酸',py:'qù yǎng hé táng hé suān',vn:'DNA',en:'DNA',df:'存放遺傳資訊的分子。',ex:'DNA存放遺傳資訊。'}
+ ],
+ g1:[
+  {zh:'核苷酸',py:'hé gān suān',vn:'Nucleotide'},
+  {zh:'核苷',py:'hé gān',vn:'Nucleoside'},
+  {zh:'含氮鹼基',py:'hán dàn jiǎn jī',vn:'Base nitrogen'},
+  {zh:'嘌呤',py:'piào lìng',vn:'Purine'},
+  {zh:'嘧啶',py:'mì dìng',vn:'Pyrimidine'},
+  {zh:'雙螺旋',py:'shuāng luó xuán',vn:'Chuỗi xoắn kép'},
+  {zh:'鹼基配對',py:'jiǎn jī pèi duì',vn:'Sự bắt cặp base'},
+  {zh:'互補',py:'hù bǔ',vn:'Bổ sung'}
+ ],
+ g2:[
+  {t:'A和G都是嘌呤。',a:true,e:'對，嘌呤是雙環鹼基，包括A和G。'},
+  {t:'G和C之間有兩個氫鍵。',a:false,e:'錯，G和C之間有三個氫鍵，A和T才是兩個。'},
+  {t:'DNA的兩股方向相同。',a:false,e:'錯，DNA兩股是反平行，方向相反。'},
+  {t:'RNA的醣是核糖。',a:true,e:'對，RNA用核糖，DNA用去氧核糖。'},
+  {t:'核苷酸比核苷多一個磷酸。',a:true,e:'對，核苷加上磷酸就是核苷酸。'}
+ ],
+ g3:[
+  {label:'步驟排序題目：核苷酸怎麼組成？',tokens:['鹼基','核苷','核苷酸']},
+  {label:'步驟排序題目：從小分子到雙股DNA？',tokens:['核苷酸','單股DNA','雙股DNA']}
+ ],
+ g4:[
+  {s:'若一段DNA的G和C含量很高，這段DNA會比較怎麼樣？',o:['更耐熱，因為氫鍵較多','更不穩定，因為氫鍵較少','跟G-C含量無關'],a:0,e:'G-C之間有三個氫鍵，比A-T的兩個氫鍵更牢固，所以GC含量高的DNA更耐熱。'},
+  {s:'一個分子只有鹼基和醣，沒有磷酸，這個分子該叫什麼？',o:['核苷','核苷酸','雙螺旋'],a:0,e:'核苷酸＝核苷＋磷酸，少了磷酸就只是核苷，不能叫核苷酸。'},
+  {s:'為什麼知道DNA一股的序列，就能推知另一股？',o:['鹼基配對是固定規則，A配T、G配C','因為兩股序列完全相同','因為只有一股有意義'],a:0,e:'鹼基配對有固定規則，且兩股反平行，所以知道一股就能推出互補股。'}
+ ],
+ g5:[
+  {s:'核苷酸的三個部分是鹼基、醣和___。',o:['磷酸','蛋白質','脂質'],a:0},
+  {s:'DNA的醣是___。',o:['去氧核糖','核糖','葡萄糖'],a:0},
+  {s:'RNA用___代替胸腺嘧啶。',o:['尿嘧啶','胞嘧啶','鳥嘌呤'],a:0},
+  {s:'嘌呤是___環的鹼基。',o:['雙','單','三'],a:0},
+  {s:'DNA的兩股是___排列的。',o:['反平行','平行','垂直'],a:0}
+ ],
+ review:[
+  {s:'主動運輸需要什麼？',o:['ATP','水','鹼基'],a:0,e:'主動運輸要逆濃度梯度移動物質，需要消耗ATP。'},
+  {s:'磷脂的疏水尾巴，在細胞膜中朝向哪裡？',o:['膜的內側（互相相對）','膜的外側（朝向水）','沒有固定方向'],a:0,e:'磷脂的疏水尾巴躲避水，所以朝向膜的內側，形成脂雙層。'},
+  {s:'不飽和脂肪酸因為雙鍵而彎曲，這造成什麼結果？',o:['排列不緊密，常溫是液體','排列更緊密，常溫是固體','跟熔點無關'],a:0,e:'雙鍵造成脂肪酸鏈彎曲，分子排列不緊密，所以不飽和脂肪酸常溫下是液體。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

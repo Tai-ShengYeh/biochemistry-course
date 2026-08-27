@@ -12,16 +12,24 @@ header{background:var(--primary);color:#fff;padding:2.6rem 1.5rem;border-bottom:
 .wrap{max-width:1000px;margin:0 auto;padding:0 1.5rem}
 header h1{margin:0;font-size:2rem}
 header p{margin:.4rem 0 0;color:#9FD3DE}
+.hdlinks{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.hdlinks a{color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:.35rem .9rem;font-size:.85rem;text-decoration:none;transition:.15s}
+.hdlinks a:hover{background:rgba(255,255,255,.22)}
+footer .teacher{display:block;margin-top:.5rem;opacity:.6;font-size:.78rem}
+footer .teacher a{color:var(--muted);text-decoration:none}
+footer .teacher a:hover{text-decoration:underline}
 main{padding:2rem 0 4rem}
 .course{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1.5rem 0;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .course h2{margin:0 0 .2rem;color:var(--primary);font-size:1.35rem}
 .course .meta{color:var(--muted);font-size:.9rem;margin:0 0 1rem}
 .weeks{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.6rem}
+.weekcell{display:flex;flex-direction:column;gap:.35rem}
 .weeks a{display:block;padding:.6rem .7rem;background:var(--bg);border:1px solid var(--border);border-left:4px solid var(--secondary);border-radius:5px;text-decoration:none;color:var(--text);font-size:.88rem;transition:.15s}
 .weeks a:hover{border-left-color:var(--accent);transform:translateX(2px)}
 .weeks a b{display:block;color:var(--primary);font-size:.78rem}
 .weeks .exam{border-left-color:var(--accent);background:#FFF4EE}
 .weeks .todo{opacity:.45;pointer-events:none;border-left-color:#ccc}
+.weeks a.lesson{padding:.35rem .7rem;font-size:.76rem;border-left-color:var(--accent);background:#FFF8F3;color:var(--accent)}
 .note{background:#FFF8E1;border-left:5px solid #E8B84B;padding:.9rem 1.1rem;border-radius:5px;font-size:.9rem;margin:1rem 0}
 footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem}
 </style>
@@ -30,6 +38,10 @@ footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color
 <header><div class="wrap">
   <h1>生物化學 · Biochemistry</h1>
   <p>18 週課程教材 · 投影片以 reveal.js 製作,方向鍵翻頁</p>
+  <div class="hdlinks">
+    <a href="vi-a2/glossary.html">📖 詞彙總表</a>
+    <a href="vi-a2/lessons/index.html">🎮 互動課程總覽</a>
+  </div>
 </div></header>
 <main class="wrap">
 
@@ -41,24 +53,24 @@ footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color
     <h2>A · 越南學生班(中文 A2)</h2>
     <p class="meta">Hóa sinh cho sinh viên Việt Nam — tiếng Trung trình độ A2 · 中文為主,術語附越南語與英文</p>
     <div class="weeks">
-      <a href="vi-a2/w01.html"><b>第 1 週</b>生物化學是什麼?</a>
-      <a href="vi-a2/w02.html"><b>第 2 週</b>水、pH 與緩衝溶液</a>
-      <a href="vi-a2/w03.html"><b>第 3 週</b>胺基酸與胜肽</a>
-      <a href="vi-a2/w04.html"><b>第 4 週</b>蛋白質三維結構</a>
-      <a href="vi-a2/w05.html"><b>第 5 週</b>蛋白質功能</a>
-      <a href="vi-a2/w06.html"><b>第 6 週</b>酵素(一)</a>
-      <a href="vi-a2/w07.html"><b>第 7 週</b>酵素(二)</a>
-      <a href="vi-a2/w08.html"><b>第 8 週</b>碳水化合物</a>
-      <a class="exam todo"><b>第 9 週</b>期中考</a>
-      <a href="vi-a2/w10.html"><b>第 10 週</b>脂質與生物膜</a>
-      <a href="vi-a2/w11.html"><b>第 11 週</b>核苷酸與核酸</a>
-      <a href="vi-a2/w12.html"><b>第 12 週</b>生物能量學</a>
-      <a href="vi-a2/w13.html"><b>第 13 週</b>糖解作用</a>
-      <a href="vi-a2/w14.html"><b>第 14 週</b>檸檬酸循環</a>
-      <a href="vi-a2/w15.html"><b>第 15 週</b>氧化磷酸化</a>
-      <a href="vi-a2/w16.html"><b>第 16 週</b>脂肪酸與胺基酸代謝</a>
-      <a href="vi-a2/w17.html"><b>第 17 週</b>代謝整合</a>
-      <a class="exam todo"><b>第 18 週</b>期末考</a>
+      <div class="weekcell"><a href="vi-a2/w01.html"><b>第 1 週</b>生物化學是什麼?</a><a class="lesson" href="vi-a2/lessons/w01.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w02.html"><b>第 2 週</b>水、pH 與緩衝溶液</a><a class="lesson" href="vi-a2/lessons/w02.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w03.html"><b>第 3 週</b>胺基酸與胜肽</a><a class="lesson" href="vi-a2/lessons/w03.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w04.html"><b>第 4 週</b>蛋白質三維結構</a><a class="lesson" href="vi-a2/lessons/w04.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w05.html"><b>第 5 週</b>蛋白質功能</a><a class="lesson" href="vi-a2/lessons/w05.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w06.html"><b>第 6 週</b>酵素(一)</a><a class="lesson" href="vi-a2/lessons/w06.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w07.html"><b>第 7 週</b>酵素(二)</a><a class="lesson" href="vi-a2/lessons/w07.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w08.html"><b>第 8 週</b>碳水化合物</a><a class="lesson" href="vi-a2/lessons/w08.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a class="exam todo"><b>第 9 週</b>期中考</a></div>
+      <div class="weekcell"><a href="vi-a2/w10.html"><b>第 10 週</b>脂質與生物膜</a><a class="lesson" href="vi-a2/lessons/w10.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w11.html"><b>第 11 週</b>核苷酸與核酸</a><a class="lesson" href="vi-a2/lessons/w11.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w12.html"><b>第 12 週</b>生物能量學</a><a class="lesson" href="vi-a2/lessons/w12.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w13.html"><b>第 13 週</b>糖解作用</a><a class="lesson" href="vi-a2/lessons/w13.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w14.html"><b>第 14 週</b>檸檬酸循環</a><a class="lesson" href="vi-a2/lessons/w14.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w15.html"><b>第 15 週</b>氧化磷酸化</a><a class="lesson" href="vi-a2/lessons/w15.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w16.html"><b>第 16 週</b>脂肪酸與胺基酸代謝</a><a class="lesson" href="vi-a2/lessons/w16.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a href="vi-a2/w17.html"><b>第 17 週</b>代謝整合</a><a class="lesson" href="vi-a2/lessons/w17.html">🎮 互動課程</a></div>
+      <div class="weekcell"><a class="exam todo"><b>第 18 週</b>期末考</a></div>
     </div>
   </div>
 
@@ -71,6 +83,8 @@ footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color
   </div>
 
 </main>
-<footer>教材圖片為原創繪製 · 內容參考 Lehninger Principles of Biochemistry</footer>
+<footer>教材圖片為原創繪製 · 內容參考 Lehninger Principles of Biochemistry
+  <span class="teacher"><a href="teacher/dashboard.html">教師區</a></span>
+</footer>
 </body>
 </html>

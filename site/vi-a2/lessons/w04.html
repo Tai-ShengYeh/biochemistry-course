@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 4 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元二　蛋白質與酵素',week:4,icon:'🌀',accent:'#4BA1B0',
+ theme:'蛋白質的三維結構',
+ keypoints:[
+  {h:'蛋白質的四個層級',p:[
+   '<span class=kw>一級結構</span>：胺基酸順序。',
+   '<span class=kw>二級結構</span>：局部規則形狀。',
+   '<span class=kw>三級結構</span>：一條鏈的立體形狀。',
+   '<span class=kw>四級結構</span>：很多條鏈組合。'
+  ],img:'../../assets/figures/w04_four_levels.jpg',imgCap:'蛋白質結構的四個層級 ／ 4 bậc cấu trúc protein'},
+  {h:'二級結構：α螺旋與β摺板',p:[
+   '靠主鏈的氫鍵維持。',
+   '跟側鏈是什麼無關。',
+   '<span class=kw>α螺旋</span>像彈簧。',
+   '<span class=kw>β摺板</span>像摺紙。'
+  ],img:'../../assets/figures/w04_helix_sheet.jpg',imgCap:'α螺旋與β摺板 ／ Xoắn α và gấp nếp β'},
+  {h:'三級結構靠疏水核心',p:[
+   '非極性側鏈躲進內部。',
+   '極性側鏈留在表面。',
+   '因為水把疏水部分擠進去。'
+  ]},
+  {h:'四級結構要多條鏈',p:[
+   '一條鏈摺完只是三級。',
+   '四級一定要多條鏈。',
+   '血紅素有4條鏈，屬於四級。'
+  ]},
+  {h:'變性：形狀壞了，功能沒了',p:[
+   '<span class=kw>變性</span>由加熱、極端pH造成。',
+   '破壞的是弱作用力。',
+   '一級結構（胜肽鍵）不會壞。'
+  ]}
+ ],
+ vocab:[
+  {w:'一級結構',py:'yī jí jié gòu',vn:'Cấu trúc bậc một',en:'Primary structure',df:'胺基酸的排列順序。',ex:'一級結構靠胜肽鍵維持。'},
+  {w:'二級結構',py:'èr jí jié gòu',vn:'Cấu trúc bậc hai',en:'Secondary structure',df:'局部的規則形狀。',ex:'α螺旋是一種二級結構。'},
+  {w:'三級結構',py:'sān jí jié gòu',vn:'Cấu trúc bậc ba',en:'Tertiary structure',df:'一條鏈的立體形狀。',ex:'三級結構靠疏水作用維持。'},
+  {w:'四級結構',py:'sì jí jié gòu',vn:'Cấu trúc bậc bốn',en:'Quaternary structure',df:'很多條鏈組合而成。',ex:'血紅素有四級結構。'},
+  {w:'α螺旋',py:'α luó xuán',vn:'Xoắn alpha (xoắn α)',en:'Alpha helix',df:'像彈簧的二級結構。',ex:'角蛋白裡有很多α螺旋。'},
+  {w:'β摺板',py:'β zhé bǎn',vn:'Gấp nếp beta (phiến gấp nếp β)',en:'Beta sheet',df:'像摺紙的二級結構。',ex:'絲蛋白裡有β摺板。'},
+  {w:'摺疊',py:'zhé dié',vn:'Sự cuộn gập',en:'Folding',df:'蛋白質變成立體形狀。',ex:'胺基酸鏈摺疊成蛋白質。'},
+  {w:'變性',py:'biàn xìng',vn:'Sự biến tính',en:'Denaturation',df:'形狀壞掉，功能消失。',ex:'煎蛋讓蛋白質變性。'},
+  {w:'次單元',py:'cì dān yuán',vn:'Tiểu đơn vị',en:'Subunit',df:'組成四級結構的一條鏈。',ex:'血紅素有4個次單元。'},
+  {w:'伴護蛋白',py:'bàn hù dàn bái',vn:'Protein đồng hành (chaperone)',en:'Chaperone',df:'幫助蛋白質正確摺疊。',ex:'伴護蛋白防止蛋白質摺錯。'},
+  {w:'球狀蛋白',py:'qiú zhuàng dàn bái',vn:'Protein dạng cầu',en:'Globular protein',df:'圓形，負責做事情。',ex:'酵素是球狀蛋白。'},
+  {w:'纖維狀蛋白',py:'xiān wéi zhuàng dàn bái',vn:'Protein dạng sợi',en:'Fibrous protein',df:'長條形，負責做結構。',ex:'膠原蛋白是纖維狀蛋白。'}
+ ],
+ g1:[
+  {zh:'一級結構',py:'yī jí jié gòu',vn:'Cấu trúc bậc một'},
+  {zh:'二級結構',py:'èr jí jié gòu',vn:'Cấu trúc bậc hai'},
+  {zh:'三級結構',py:'sān jí jié gòu',vn:'Cấu trúc bậc ba'},
+  {zh:'四級結構',py:'sì jí jié gòu',vn:'Cấu trúc bậc bốn'},
+  {zh:'α螺旋',py:'α luó xuán',vn:'Xoắn alpha (xoắn α)'},
+  {zh:'β摺板',py:'β zhé bǎn',vn:'Gấp nếp beta (phiến gấp nếp β)'},
+  {zh:'摺疊',py:'zhé dié',vn:'Sự cuộn gập'},
+  {zh:'變性',py:'biàn xìng',vn:'Sự biến tính'}
+ ],
+ g2:[
+  {t:'一條多肽鏈摺疊完成後，就有四級結構。',a:false,e:'錯，1條鏈摺完最多到三級，四級一定要多條鏈。'},
+  {t:'α螺旋靠側鏈的氫鍵維持。',a:false,e:'錯，α螺旋靠主鏈的C=O和N—H氫鍵維持，與側鏈無關。'},
+  {t:'煎蛋時，蛋白質的胜肽鍵被打斷了。',a:false,e:'錯，變性只破壞弱作用力，胜肽鍵（一級結構）不會斷。'},
+  {t:'非極性側鏈通常在蛋白質內部。',a:true,e:'對，非極性側鏈疏水，被水擠進蛋白質內部。'},
+  {t:'血紅素有4條鏈，屬於四級結構。',a:true,e:'對，血紅素由4個次單元組成，是四級結構的例子。'}
+ ],
+ g3:[
+  {label:'步驟排序：蛋白質怎麼一層一層組裝？',tokens:['一級：胺基酸順序','二級：α螺旋／β摺板','三級：一條鏈摺疊','四級：多條鏈組合']},
+  {label:'步驟排序：三級結構的疏水核心怎麼形成？',tokens:['非極性側鏈','被水擠進內部','形成疏水核心','三級結構完成']}
+ ],
+ g4:[
+  {s:'一個蛋白質只有1條鏈，摺疊完成後最高會到哪個層級？',o:['三級結構','四級結構','二級結構'],a:0,e:'四級結構一定要多條鏈組成，1條鏈摺完最多到三級。'},
+  {s:'病人發高燒到41度，體內的酵素蛋白質可能發生什麼？',o:['變性，功能喪失','一級結構斷裂','分子突然變大'],a:0,e:'高溫破壞弱作用力，讓蛋白質變性，但胜肽鍵不會斷。'},
+  {s:'一段蛋白質表面都是極性、帶電胺基酸，內部都是非極性胺基酸，這是哪個層級形成的？',o:['一級結構','二級結構','三級結構'],a:2,e:'三級結構讓非極性側鏈躲進內部，極性側鏈留在表面。'}
+ ],
+ g5:[
+  {s:'蛋白質的___是胺基酸的排列順序。',o:['一級結構','二級結構','三級結構'],a:0},
+  {s:'α螺旋和β摺板都是靠___的氫鍵維持。',o:['主鏈','側鏈','雙硫鍵'],a:0},
+  {s:'血紅素有___條鏈，屬於四級結構。',o:['4','1','2'],a:0},
+  {s:'蛋白質變性後，___結構通常沒有壞。',o:['一級','二級','三級'],a:0},
+  {s:'非極性側鏈通常躲進蛋白質的___。',o:['內部','表面','細胞核'],a:0}
+ ],
+ review:[
+  {s:'20種胺基酸的差別在哪裡？',o:['側鏈','α碳','羧基'],a:0,e:'20種胺基酸的α碳結構都一樣，差別在側鏈。'},
+  {s:'形成胜肽鍵時會產生什麼？',o:['一分子水','一個離子','一個氫氣'],a:0,e:'羧基和胺基連接時，一定會脫掉一個H₂O。'},
+  {s:'pH等於pI時，胺基酸的淨電荷是多少？',o:['0','正電','負電'],a:0,e:'pI是淨電荷剛好為0的pH，這時分子在電泳中不移動。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

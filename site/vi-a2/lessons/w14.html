@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 14 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:14,icon:'🔄',accent:'#7A6B2E',
+ theme:'檸檬酸循環',
+ keypoints:[
+  {h:'三個名字，同一循環',p:[
+   '<span class=kw>檸檬酸循環</span>是主要名字。',
+   '也叫<span class=kw>克氏循環</span>。',
+   '也叫<span class=kw>TCA循環</span>。',
+   '三個名字指同一件事。'
+  ]},
+  {h:'循環的入口',p:[
+   '<span class=kw>乙醯CoA</span>進入循環。',
+   '和<span class=kw>草醯乙酸</span>結合。',
+   '生成<span class=kw>檸檬酸</span>。'
+  ],img:'../../assets/figures/w14_tca.jpg',imgCap:'檸檬酸循環全圖，找出入口與產物 ／ Sơ đồ chu trình acid citric, tìm điểm vào và sản phẩm'},
+  {h:'一圈的產物',p:[
+   '一圈產生<span class=kw>3個NADH</span>。',
+   '還有<span class=kw>1個FADH₂</span>。',
+   '和<span class=kw>1個GTP</span>。',
+   '放出<span class=kw>2個CO₂</span>。'
+  ]},
+  {h:'為什麼叫循環',p:[
+   '<span class=kw>草醯乙酸</span>最後再生。',
+   '可以再接新的乙醯CoA。',
+   '所以能一直轉下去。'
+  ]},
+  {h:'循環也是原料庫',p:[
+   '循環叫<span class=kw>兩性途徑</span>。',
+   '中間物可以合成胺基酸。',
+   '被拿走要靠<span class=kw>回補反應</span>補回。'
+  ]}
+ ],
+ vocab:[
+  {w:'檸檬酸循環',py:'níng méng suān xún huán',vn:'Chu trình acid citric',en:'Citric acid cycle',df:'粒線體裡分解乙醯CoA的循環。',ex:'檸檬酸循環在粒線體進行。'},
+  {w:'克氏循環',py:'kè shì xún huán',vn:'Chu trình Krebs',en:'Krebs cycle',df:'檸檬酸循環的別名。',ex:'克氏循環和檸檬酸循環是同一個。'},
+  {w:'乙醯輔酶A',py:'yǐ xī fǔ méi A',vn:'Acetyl-CoA',en:'Acetyl-CoA',df:'進入循環的入口分子。',ex:'乙醯CoA和草醯乙酸結合成檸檬酸。'},
+  {w:'丙酮酸去氫酶複合體',py:'bǐng tóng suān qù qīng méi fù hé tǐ',vn:'Phức hợp pyruvate dehydrogenase',en:'Pyruvate dehydrogenase complex',df:'把丙酮酸變成乙醯CoA的酵素。',ex:'丙酮酸去氫酶複合體連接糖解和循環。'},
+  {w:'去羧作用',py:'qù suō zuò yòng',vn:'Sự khử carboxyl',en:'Decarboxylation',df:'分子放出CO₂的反應。',ex:'循環中有兩次去羧作用。'},
+  {w:'檸檬酸',py:'níng méng suān',vn:'Citrate',en:'Citrate',df:'循環的第一個產物。',ex:'乙醯CoA進入循環先變成檸檬酸。'},
+  {w:'草醯乙酸',py:'cǎo xī yǐ suān',vn:'Oxaloacetate',en:'Oxaloacetate',df:'循環最後再生的分子。',ex:'草醯乙酸在循環末端重新生成。'},
+  {w:'黃素腺嘌呤二核苷酸',py:'huáng sù xiàn piào lìng èr hé gān suān',vn:'FADH2',en:'FADH2',df:'帶電子的分子，像NADH。',ex:'一圈循環產生1個FADH₂。'},
+  {w:'三磷酸鳥苷',py:'sān lín suān niǎo gān',vn:'GTP',en:'GTP',df:'和ATP類似的能量分子。',ex:'一圈循環產生1個GTP。'},
+  {w:'回補反應',py:'huí bǔ fǎn yīng',vn:'Phản ứng bổ sung',en:'Anaplerotic reaction',df:'補充循環中間物的反應。',ex:'中間物被拿走要靠回補反應補充。'},
+  {w:'兩性途徑',py:'liǎng xìng tú jìng',vn:'Con đường lưỡng tính',en:'Amphibolic pathway',df:'循環既能分解也能合成。',ex:'循環是兩性途徑，能供應合成原料。'}
+ ],
+ g1:[
+  {zh:'檸檬酸',py:'níng méng suān',vn:'Citrate'},
+  {zh:'異檸檬酸',py:'yì níng méng suān',vn:'Isocitrate'},
+  {zh:'α-酮戊二酸',py:'α-tóng wù èr suān',vn:'α-Ketoglutarate'},
+  {zh:'琥珀酸',py:'hǔ pò suān',vn:'Succinate'},
+  {zh:'延胡索酸',py:'yán hú suǒ suān',vn:'Fumarate'},
+  {zh:'蘋果酸',py:'píng guǒ suān',vn:'Malate'},
+  {zh:'草醯乙酸',py:'cǎo xī yǐ suān',vn:'Oxaloacetate'},
+  {zh:'乙醯輔酶A',py:'yǐ xī fǔ méi A',vn:'Acetyl-CoA'}
+ ],
+ g2:[
+  {t:'檸檬酸循環在粒線體裡進行。',a:true,e:'對，檸檬酸循環發生在粒線體基質。'},
+  {t:'一圈循環會產生3個FADH₂。',a:false,e:'錯，一圈只產生1個FADH₂，NADH才有3個。'},
+  {t:'循環中草醯乙酸最後會再生。',a:true,e:'對，草醯乙酸在循環尾端重新生成。'},
+  {t:'循環中會有去羧作用放出CO₂。',a:true,e:'對，循環中有兩次去羧作用，共放出2個CO₂。'},
+  {t:'乙醯CoA進入循環時要先跟檸檬酸結合。',a:false,e:'錯，乙醯CoA要跟草醯乙酸結合，生成檸檬酸。'}
+ ],
+ g3:[
+  {label:'排出檸檬酸循環的中間物順序',tokens:['檸檬酸','異檸檬酸','α-酮戊二酸','琥珀酸','延胡索酸','蘋果酸','草醯乙酸']},
+  {label:'從葡萄糖到進入循環的順序',tokens:['葡萄糖','丙酮酸','乙醯CoA','進入循環']}
+ ],
+ g4:[
+  {s:'如果細胞一直把循環中間物拿去做別的分子（例如胺基酸），循環會怎麼樣？',o:['中間物變少，循環轉不動','循環會轉得更快','完全不受影響'],a:0,e:'中間物被拿走太多，需要靠回補反應補充循環才能繼續運作。'},
+  {s:'為什麼胺基酸的碳架可以用檸檬酸循環的中間物來合成？',o:['因為循環是兩性途徑，中間物也是生合成原料','因為胺基酸和循環無關','因為胺基酸只能從蛋白質分解得到'],a:0,e:'循環兼有分解與合成功能，稱為兩性途徑，中間物可作為原料。'},
+  {s:'為什麼說草醯乙酸的再生對循環很重要？',o:['沒有草醯乙酸，乙醯CoA就無法進入循環','草醯乙酸只是廢物','草醯乙酸和循環無關'],a:0,e:'草醯乙酸要跟新的乙醯CoA結合成檸檬酸，循環才能持續。'}
+ ],
+ g5:[
+  {s:'乙醯CoA進入循環時，要先跟___結合。',o:['草醯乙酸','檸檬酸','琥珀酸'],a:0},
+  {s:'檸檬酸循環一圈會產生___個NADH。',o:['3','1','5'],a:0},
+  {s:'檸檬酸循環也叫做___循環。',o:['克氏','糖解','發酵'],a:0},
+  {s:'循環中間物被大量拿走時，需要靠___補充。',o:['回補反應','去羧作用','發酵作用'],a:0},
+  {s:'檸檬酸循環發生在細胞的___。',o:['粒線體','細胞核','細胞膜'],a:0}
+ ],
+ review:[
+  {s:'糖解作用淨產生多少ATP？',o:['2個ATP','4個ATP','6個ATP'],a:0,e:'糖解共產4個ATP，但投資期花了2個，淨得2個ATP。'},
+  {s:'糖解作用中最重要的調控點是哪一個酵素？',o:['PFK-1','己糖激酶','丙酮酸激酶'],a:0,e:'PFK-1是第3步的酵素，是糖解最重要的調控閥門。'},
+  {s:'發酵作用的主要目的是什麼？',o:['再生NAD⁺讓糖解繼續','產生更多ATP','分解脂肪'],a:0,e:'發酵把NADH變回NAD⁺，讓糖解能持續進行。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 16 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:16,icon:'🔥',accent:'#4A6B8A',
+ theme:'脂肪酸與胺基酸代謝',
+ keypoints:[
+  {h:'β-氧化：切碎脂肪酸',p:[
+   '<span class=kw>β-氧化</span>切碎脂肪酸。',
+   '每圈切掉2個碳。',
+   '做出1個乙醯CoA。',
+   '也做出FADH₂。',
+   '也做出NADH。'
+  ],img:'../../assets/figures/w16_beta_ox.jpg',imgCap:'β-氧化，每圈切2個碳 ／ β-oxy hóa, mỗi vòng cắt 2 carbon'},
+  {h:'C16要7圈，不是8圈',p:[
+   'C16脂肪酸有16個碳。',
+   '要跑7圈<span class=kw>β-氧化</span>。',
+   '最後一圈特別。',
+   '一次生出2個乙醯CoA。',
+   '7圈→8個乙醯CoA。'
+  ]},
+  {h:'酮體：飢餓的備用燃料',p:[
+   '長期飢餓，脂肪燒很多。',
+   '乙醯CoA太多。',
+   '做成<span class=kw>酮體</span>。',
+   '酮體是酸性的。',
+   '太多會酮酸中毒。'
+  ]},
+  {h:'胺基酸當燃料：先去氮',p:[
+   '<span class=kw>轉胺作用</span>先搬走胺基。',
+   '<span class=kw>去胺作用</span>放出氨。',
+   '氨（NH₃）對身體有毒。',
+   '碳架可以拿去燒。'
+  ]},
+  {h:'尿素循環：把氨變安全',p:[
+   '<span class=kw>尿素循環</span>處理氨。',
+   '氨變成<span class=kw>尿素</span>。',
+   '尿素不毒，可以排出。',
+   '前兩步在粒線體進行。'
+  ],img:'../../assets/figures/w16_urea.jpg',imgCap:'尿素循環，氨變成尿素 ／ Chu trình ure, ammonia thành ure'}
+ ],
+ vocab:[
+  {w:'β-氧化',py:'β-yǎng huà',vn:'β-Oxy hóa',en:'Beta oxidation',df:'切碎脂肪酸的反應。',ex:'β-氧化每圈切掉2個碳。'},
+  {w:'脂解作用',py:'zhī jiě zuò yòng',vn:'Sự phân giải lipid',en:'Lipolysis',df:'把脂肪分解成脂肪酸。',ex:'脂解作用先把脂肪拆開。'},
+  {w:'肉鹼穿梭',py:'ròu jiǎn chuān suō',vn:'Thoi carnitine',en:'Carnitine shuttle',df:'把脂肪酸送進粒線體。',ex:'肉鹼穿梭幫脂肪酸進粒線體。'},
+  {w:'醯基輔酶A',py:'xī jī fǔ méi A',vn:'Acyl-CoA',en:'Acyl-CoA',df:'脂肪酸接上輔酶A。',ex:'β-氧化前先做出醯基輔酶A。'},
+  {w:'酮體',py:'tóng tǐ',vn:'Thể ceton',en:'Ketone body',df:'飢餓時的備用燃料。',ex:'長期飢餓會做出酮體。'},
+  {w:'生酮作用',py:'shēng tóng zuò yòng',vn:'Sự tạo ceton',en:'Ketogenesis',df:'做出酮體的過程。',ex:'乙醯CoA太多會發生生酮作用。'},
+  {w:'轉胺作用',py:'zhuǎn àn zuò yòng',vn:'Sự chuyển amin',en:'Transamination',df:'把胺基搬到別的分子。',ex:'轉胺作用先搬走胺基。'},
+  {w:'去胺作用',py:'qù àn zuò yòng',vn:'Sự khử amin',en:'Deamination',df:'拿掉胺基，放出氨。',ex:'去胺作用會放出氨。'},
+  {w:'氨',py:'ān',vn:'Ammonia (NH3)',en:'Ammonia',df:'對身體有毒的小分子。',ex:'氨不能一直留在血液裡。'},
+  {w:'尿素',py:'niào sù',vn:'Urea',en:'Urea',df:'氨變成的安全分子。',ex:'尿素可以隨尿液排出。'},
+  {w:'尿素循環',py:'niào sù xún huán',vn:'Chu trình ure',en:'Urea cycle',df:'把氨變成尿素的循環。',ex:'尿素循環前兩步在粒線體。'},
+  {w:'生糖胺基酸',py:'shēng táng àn jī suān',vn:'Amino acid sinh đường',en:'Glucogenic amino acid',df:'能變成葡萄糖的胺基酸。',ex:'生糖胺基酸的碳架能做葡萄糖。'}
+ ],
+ g1:[
+  {zh:'β-氧化',py:'β-yǎng huà',vn:'β-Oxy hóa'},
+  {zh:'肉鹼穿梭',py:'ròu jiǎn chuān suō',vn:'Thoi carnitine'},
+  {zh:'酮體',py:'tóng tǐ',vn:'Thể ceton'},
+  {zh:'轉胺作用',py:'zhuǎn àn zuò yòng',vn:'Sự chuyển amin'},
+  {zh:'去胺作用',py:'qù àn zuò yòng',vn:'Sự khử amin'},
+  {zh:'氨',py:'ān',vn:'Ammonia (NH3)'},
+  {zh:'尿素',py:'niào sù',vn:'Urea'},
+  {zh:'尿素循環',py:'niào sù xún huán',vn:'Chu trình ure'}
+ ],
+ g2:[
+  {t:'C16脂肪酸做β-氧化要8圈。',a:false,e:'錯，只要7圈，最後一圈同時生出2個乙醯CoA。'},
+  {t:'氨對身體有毒。',a:true,e:'對，所以氨要趕快變成尿素。'},
+  {t:'尿素循環把氨變成尿素。',a:true,e:'對，尿素比氨安全，可以排出體外。'},
+  {t:'脂肪酸和葡萄糖都會變成乙醯CoA。',a:true,e:'對，兩種燃料最後都進同一條發電線。'},
+  {t:'酮體太多不會影響身體。',a:false,e:'錯，酮體是酸性的，太多會造成酮酸中毒。'}
+ ],
+ g3:[
+  {label:'排序題目：脂肪怎麼變成乙醯CoA？',tokens:['脂肪','脂解作用','脂肪酸','肉鹼穿梭','β-氧化','乙醯CoA']},
+  {label:'排序題目：胺基酸的氮怎麼處理？',tokens:['胺基酸','去胺作用','氨','尿素循環','尿素']}
+ ],
+ g4:[
+  {s:'同樣重量，脂肪能產生的能量比肝醣多，為什麼身體要用脂肪來儲存能量？',o:['脂肪儲能密度高，同重量能量更多','脂肪比較好吃','脂肪比肝醣重'],a:0,e:'脂肪儲存的能量比同重量的醣多很多，適合長期儲存。'},
+  {s:'長期飢餓時，為什麼容易發生酮酸中毒？',o:['因為喝水太少','脂肪大量分解，酮體過多使血液變酸','因為肝醣完全用光'],a:1,e:'長期飢餓大量燒脂肪，酮體是酸性的，太多會讓血液pH下降。'},
+  {s:'身體為什麼要把氨變成尿素才排出？',o:['氨有毒，尿素比較安全','尿素比較好聞','氨太重不好排'],a:0,e:'氨對細胞有毒，尿素循環把它變成無毒的尿素再排出。'}
+ ],
+ g5:[
+  {s:'β-氧化每圈切掉___個碳。',o:['2','4','6'],a:0},
+  {s:'C16脂肪酸做β-氧化要___圈。',o:['7','8','6'],a:0},
+  {s:'去胺作用放出___。',o:['氨','尿素','酮體'],a:0},
+  {s:'尿素循環把氨變成___。',o:['尿素','酮體','乙醯CoA'],a:0},
+  {s:'長期飢餓，身體用___當備用燃料。',o:['酮體','葡萄糖','肝醣'],a:0}
+ ],
+ review:[
+  {s:'複合體II和其他複合體比，有什麼不同？',o:['複合體II不泵質子','複合體II泵最多質子','複合體II不用電子'],a:0,e:'只有複合體I、III、IV泵質子，所以FADH₂產的ATP比NADH少。'},
+  {s:'ATP合成酶靠什麼運轉？',o:['質子梯度（化學滲透）','直接用葡萄糖','直接用氧氣'],a:0,e:'質子流回膜內時經過ATP合成酶，帶動它做出ATP。'},
+  {s:'氰化物為什麼會致命？',o:['擋住複合體IV，細胞不能用氧氣做ATP','讓血糖太高','破壞細胞膜'],a:0,e:'氰化物擋住複合體IV，電子鏈停止，細胞做不出ATP。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

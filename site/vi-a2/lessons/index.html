@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生物化學 A（越南學生班）· 互動課程目錄</title>
+<style>
+:root{--primary:#1F4E5F;--secondary:#2E7D8A;--accent:#C8532B;--bg:#F7FBFC;--text:#1F2933;--border:#D9E7EC;--muted:#7A8C93;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:var(--primary);color:#fff;padding:2.4rem 1.5rem;border-bottom:6px solid var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+header h1{margin:0;font-size:1.9rem}
+header p{margin:.5rem 0 0;color:#9FD3DE;font-size:.92rem}
+main{padding:2rem 0 4rem}
+.unit{margin:2rem 0}
+.unit h2{font-size:1.2rem;color:var(--primary);border-left:5px solid var(--accent);padding-left:.6rem;margin:0 0 .9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.9rem}
+.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;text-decoration:none;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.05);border-top:5px solid var(--c,var(--secondary));transition:.15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.card .wk{font-size:.76rem;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.card .tt{font-size:1.05rem;font-weight:800;color:var(--primary);margin-top:.15rem}
+.exam{display:flex;align-items:center;gap:.8rem;margin:1.2rem 0;color:var(--accent);font-weight:700;font-size:.92rem}
+.exam::before,.exam::after{content:'';flex:1;border-top:2px dashed var(--accent)}
+.note{background:#FFF8E1;border-left:5px solid #E8B84B;padding:.9rem 1.1rem;border-radius:5px;font-size:.9rem;margin:1rem 0}
+footer{border-top:1px solid var(--border);padding:1.5rem;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--secondary);text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>🧬 生物化學 A · 越南學生班（中文 A2）</h1>
+  <p>Hóa sinh cho sinh viên Việt Nam — tiếng Trung trình độ A2 · 每週：本週重點｜三語詞彙｜5 個互動遊戲</p>
+</div></header>
+<main class="wrap">
+
+  <div class="note">
+    <b>行事曆</b>：第 1–8 週上課 · <b>第 9 週期中考</b> · 第 10–17 週上課 · <b>第 18 週期末考</b>
+  </div>
+
+  <div id="host"></div>
+
+</main>
+<footer>
+  教材圖片為原創繪製 · 內容參考 Lehninger Principles of Biochemistry ｜
+  <a href="../../index.html">← 回課程首頁</a>
+</footer>
+
+<script>
+const UNITS=[
+ {name:'單元一　生命的化學基礎（第 1–2 週）',weeks:[
+   {w:1,t:'生物化學是什麼？',c:'#1F4E5F'},
+   {w:2,t:'水、pH 與緩衝溶液',c:'#2E7D8A'}
+ ]},
+ {name:'單元二　蛋白質與酵素（第 3–7 週）',weeks:[
+   {w:3,t:'胺基酸與胜肽',c:'#3D8FA0'},
+   {w:4,t:'蛋白質三維結構',c:'#4BA1B0'},
+   {w:5,t:'蛋白質功能',c:'#1B5E6B'},
+   {w:6,t:'酵素（一）',c:'#256B77'},
+   {w:7,t:'酵素（二）',c:'#2F7886'}
+ ]},
+ {name:'單元三　生物分子（第 8、10、11 週）',weeks:[
+   {w:8,t:'碳水化合物',c:'#C8532B'},
+   {w:10,t:'脂質與生物膜',c:'#D97A4A'},
+   {w:11,t:'核苷酸與核酸',c:'#B8461F'}
+ ]},
+ {name:'單元四　代謝（第 12–17 週）',weeks:[
+   {w:12,t:'生物能量學',c:'#8A5A2E'},
+   {w:13,t:'糖解作用',c:'#A8501F'},
+   {w:14,t:'檸檬酸循環',c:'#7A6B2E'},
+   {w:15,t:'氧化磷酸化',c:'#6B4A8A'},
+   {w:16,t:'脂肪酸與胺基酸代謝',c:'#4A6B8A'},
+   {w:17,t:'代謝整合',c:'#2E5F4A'}
+ ]}
+];
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function pad2(n){return String(n).padStart(2,'0');}
+const host=document.getElementById('host');
+UNITS.forEach(u=>{
+  const sec=document.createElement('div');sec.className='unit';
+  sec.innerHTML=`<h2>${esc(u.name)}</h2><div class="grid">${
+    u.weeks.map(x=>`<a class="card" style="--c:${x.c}" href="w${pad2(x.w)}.html"><div class="wk">第 ${x.w} 週</div><div class="tt">${esc(x.t)}</div></a>`).join('')
+  }</div>`;
+  host.appendChild(sec);
+  if(u.weeks.some(x=>x.w===8)){
+    const ex=document.createElement('div');ex.className='exam';ex.textContent='📝 第 9 週　期中考';host.appendChild(ex);
+  }
+});
+const exFinal=document.createElement('div');exFinal.className='exam';exFinal.textContent='📝 第 18 週　期末考';
+host.appendChild(exFinal);
+</script>
+</body>
+</html>

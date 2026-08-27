@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 3 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元二　蛋白質與酵素',week:3,icon:'🧪',accent:'#3D8FA0',
+ theme:'胺基酸與胜肽',
+ keypoints:[
+  {h:'胺基酸的四個部分',p:[
+   '<span class=kw>α碳</span>是中心。',
+   '<span class=kw>胺基</span>是鹼，—NH₃⁺。',
+   '<span class=kw>羧基</span>是酸，—COO⁻。',
+   '<span class=kw>側鏈</span>決定20種的差別。'
+  ],img:'../../assets/figures/w03_aa_general.jpg',imgCap:'胺基酸的一般結構 ／ Cấu trúc chung của amino acid'},
+  {h:'要畫成兩性離子',p:[
+   '體內pH是7.4。',
+   '胺基抓住H⁺。',
+   '羧基放掉H⁺。',
+   '同時帶正電和負電，叫<span class=kw>兩性離子</span>。'
+  ]},
+  {h:'側鏈分成四類',p:[
+   '非極性：疏水，躲裡面。',
+   '極性不帶電：形成氫鍵。',
+   '帶正電：鹼性側鏈。',
+   '帶負電：酸性側鏈。'
+  ],img:'../../assets/figures/w03_aa_classes.jpg',imgCap:'20種側鏈分四類 ／ 4 nhóm mạch bên'},
+  {h:'胜肽鍵連接胺基酸',p:[
+   '羧基加胺基，脫一個水。',
+   'C—N鍵不能轉，是平面。',
+   '有方向：N端接到C端。'
+  ],img:'../../assets/figures/w03_peptide_bond.jpg',imgCap:'胜肽鍵的形成 ／ Sự hình thành liên kết peptide'},
+  {h:'等電點pI',p:[
+   '<span class=kw>等電點</span>是淨電荷為0的pH。',
+   'pH小於pI，帶正電。',
+   'pH大於pI，帶負電。',
+   '這是<span class=kw>電泳</span>分離蛋白質的原理。'
+  ]}
+ ],
+ vocab:[
+  {w:'胺基酸',py:'àn jī suān',vn:'Amino acid',en:'Amino acid',df:'蛋白質的單體。',ex:'蛋白質由胺基酸組成。'},
+  {w:'側鏈',py:'cè liàn',vn:'Mạch bên',en:'Side chain (R group)',df:'20種胺基酸的差別處。',ex:'側鏈決定胺基酸的個性。'},
+  {w:'胺基',py:'àn jī',vn:'Nhóm amino',en:'Amino group',df:'—NH₃⁺，是鹼。',ex:'胺基可以接住H⁺。'},
+  {w:'羧基',py:'suō jī',vn:'Nhóm carboxyl',en:'Carboxyl group',df:'—COO⁻，是酸。',ex:'羧基可以放出H⁺。'},
+  {w:'胜肽',py:'shēng tài',vn:'Peptide',en:'Peptide',df:'胺基酸連接而成的分子。',ex:'兩個胺基酸接成二肽。'},
+  {w:'胜肽鍵',py:'shēng tài jiàn',vn:'Liên kết peptide',en:'Peptide bond',df:'連接胺基酸的鍵。',ex:'胜肽鍵是平面結構。'},
+  {w:'多肽',py:'duō tài',vn:'Polypeptide',en:'Polypeptide',df:'很多胺基酸連成的鏈。',ex:'多肽摺疊後變成蛋白質。'},
+  {w:'N端',py:'N duān',vn:'Đầu N',en:'N-terminus',df:'胜肽鏈的胺基端。',ex:'序列從N端寫到C端。'},
+  {w:'C端',py:'C duān',vn:'Đầu C',en:'C-terminus',df:'胜肽鏈的羧基端。',ex:'序列從N端寫到C端。'},
+  {w:'兩性離子',py:'liǎng xìng lí zǐ',vn:'Ion lưỡng cực',en:'Zwitterion',df:'同時帶正負電的分子。',ex:'體內胺基酸是兩性離子。'},
+  {w:'等電點',py:'děng diàn diǎn',vn:'Điểm đẳng điện',en:'Isoelectric point (pI)',df:'淨電荷為0的pH。',ex:'pH等於pI時分子不移動。'},
+  {w:'雙硫鍵',py:'shuāng liú jiàn',vn:'Liên kết disulfide',en:'Disulfide bond',df:'兩個Cys之間的共價鍵。',ex:'雙硫鍵把蛋白質結構釘住。'}
+ ],
+ g1:[
+  {zh:'胺基酸',py:'àn jī suān',vn:'Amino acid'},
+  {zh:'側鏈',py:'cè liàn',vn:'Mạch bên'},
+  {zh:'胺基',py:'àn jī',vn:'Nhóm amino'},
+  {zh:'羧基',py:'suō jī',vn:'Nhóm carboxyl'},
+  {zh:'胜肽',py:'shēng tài',vn:'Peptide'},
+  {zh:'胜肽鍵',py:'shēng tài jiàn',vn:'Liên kết peptide'},
+  {zh:'N端',py:'N duān',vn:'Đầu N'},
+  {zh:'C端',py:'C duān',vn:'Đầu C'}
+ ],
+ g2:[
+  {t:'20種胺基酸的差別在α碳。',a:false,e:'錯，20種胺基酸的α碳都一樣，差別在側鏈。'},
+  {t:'形成胜肽鍵會產生一分子水。',a:true,e:'對，羧基和胺基連接時，一定脫掉一個H₂O。'},
+  {t:'胜肽鍵可以自由旋轉。',a:false,e:'錯，C—N鍵不能轉，是平面結構。'},
+  {t:'在pH等於pI時，蛋白質在電泳中不移動。',a:true,e:'對，這時淨電荷為0，不會往任何電極移動。'},
+  {t:'兩個半胱胺酸的—SH可以形成雙硫鍵。',a:true,e:'對，雙硫鍵是共價鍵，能把蛋白質結構釘住。'}
+ ],
+ g3:[
+  {label:'步驟排序：胜肽鍵怎麼形成？',tokens:['一個胺基酸的羧基','接上另一個的胺基','脫掉一個H₂O','形成胜肽鍵']},
+  {label:'步驟排序：胺基酸接越多，叫什麼？',tokens:['2個：二肽','3個：三肽','超過10個：多肽','摺疊有功能：蛋白質']}
+ ],
+ g4:[
+  {s:'在pH 7.4的體內，胺基酸的胺基和羧基是什麼狀態？',o:['—NH₃⁺和—COO⁻，兩性離子','—NH₂和—COOH，中性','兩個都不帶電'],a:0,e:'體內胺基抓住H⁺、羧基放掉H⁺，形成兩性離子。'},
+  {s:'用電泳分離兩種蛋白質，一種正好在pH＝pI，它會怎樣移動？',o:['不移動，淨電荷為0','往正極移動','往負極移動'],a:0,e:'pH＝pI時淨電荷為0，蛋白質在電泳中不會移動。'},
+  {s:'一個非極性側鏈（如Leu）通常會出現在蛋白質的哪裡？',o:['表面，接觸水','內部，躲避水','細胞核裡'],a:1,e:'非極性側鏈疏水，會被水擠進蛋白質內部。'}
+ ],
+ g5:[
+  {s:'20種胺基酸的差別在___。',o:['側鏈','α碳','羧基'],a:0},
+  {s:'形成胜肽鍵時，一定會產生一個___。',o:['H₂O','H⁺','OH⁻'],a:0},
+  {s:'胜肽鏈的序列，從N端寫到___。',o:['C端','α碳','側鏈'],a:0},
+  {s:'pH等於pI時，胺基酸的淨電荷是___。',o:['0','正電','負電'],a:0},
+  {s:'兩個半胱胺酸的—SH可以形成___。',o:['雙硫鍵','氫鍵','胜肽鍵'],a:0}
+ ],
+ review:[
+  {s:'pH每差1，[H⁺]差幾倍？',o:['10倍','2倍','100倍'],a:0,e:'pH是對數尺度，每差1就差10倍。'},
+  {s:'緩衝溶液由什麼組成？',o:['弱酸＋共軛鹼','強酸＋強鹼','水＋鹽'],a:0,e:'緩衝溶液＝弱酸加上它的共軛鹼。'},
+  {s:'疏水性分子放進水裡會怎樣？',o:['被水擠開，不溶解','溶解在水裡','和水結合'],a:0,e:'疏水性分子不帶電，水抓不住它，把它擠開。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

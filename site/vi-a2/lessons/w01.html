@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 1 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元一　生命的化學基礎',week:1,icon:'🧬',accent:'#1F4E5F',
+ theme:'生物化學是什麼？細胞與生物分子',
+ keypoints:[
+  {h:'生物化學是什麼',p:[
+   '<span class=kw>生物化學</span>研究生命的化學。',
+   '身體是很多<span class=kw>分子</span>組成的。',
+   '分子會發生反應，反應需要能量。'
+  ]},
+  {h:'細胞是生命的最小單位',p:[
+   '<span class=kw>細胞</span>是生命的最小單位。',
+   '<span class=kw>原核細胞</span>沒有細胞核，例如細菌。',
+   '<span class=kw>真核細胞</span>有細胞核，例如人和植物。'
+  ],img:'../../assets/figures/animal_cell.jpg',imgCap:'動物細胞構造，找出 1 到 5 ／ Cấu trúc tế bào động vật, tìm số 1–5'},
+  {h:'細胞裡的五個構造',p:[
+   '<span class=kw>細胞核</span>裡面放著 DNA。',
+   '<span class=kw>粒線體</span>負責製造 ATP。',
+   '內質網負責製造蛋白質。',
+   '高基氏體負責包裝蛋白質。',
+   '細胞膜是細胞的邊界。'
+  ]},
+  {h:'四大類生物分子',p:[
+   '<span class=kw>蛋白質</span>的單體是胺基酸。',
+   '<span class=kw>碳水化合物</span>的單體是單醣。',
+   '<span class=kw>脂質</span>不是聚合物。',
+   '<span class=kw>核酸</span>的單體是核苷酸。'
+  ]},
+  {h:'官能基：分子會反應的部分',p:[
+   '分子很大，只有一小部分會反應。',
+   '這一小部分叫做<span class=kw>官能基</span>。',
+   '紅色代表氧，藍色代表氮。',
+   '羧基（—COOH）是酸，胺基（—NH₂）是鹼。'
+  ],img:'../../assets/figures/functional_groups.jpg',imgCap:'常見官能基 ／ Các nhóm chức thường gặp'}
+ ],
+ vocab:[
+  {w:'生物化學',py:'shēng wù huà xué',vn:'Hóa sinh',en:'Biochemistry',df:'研究生命的化學。',ex:'生物化學研究生命的化學。'},
+  {w:'細胞',py:'xì bāo',vn:'Tế bào',en:'Cell',df:'生命的最小單位。',ex:'身體由很多細胞組成。'},
+  {w:'原核細胞',py:'yuán hé xì bāo',vn:'Tế bào nhân sơ',en:'Prokaryotic cell',df:'沒有細胞核的細胞。',ex:'細菌是原核細胞。'},
+  {w:'真核細胞',py:'zhēn hé xì bāo',vn:'Tế bào nhân thực',en:'Eukaryotic cell',df:'有細胞核的細胞。',ex:'人是真核細胞。'},
+  {w:'細胞核',py:'xì bāo hé',vn:'Nhân tế bào',en:'Nucleus',df:'DNA放的地方。',ex:'DNA放在細胞核裡。'},
+  {w:'粒線體',py:'lì xiàn tǐ',vn:'Ty thể',en:'Mitochondrion',df:'負責製造ATP的胞器。',ex:'粒線體做ATP給細胞用。'},
+  {w:'官能基',py:'guān néng jī',vn:'Nhóm chức',en:'Functional group',df:'分子上會反應的部分。',ex:'羧基是一種官能基。'},
+  {w:'蛋白質',py:'dàn bái zhì',vn:'Protein',en:'Protein',df:'由胺基酸組成的大分子。',ex:'蛋白質的單體是胺基酸。'},
+  {w:'碳水化合物',py:'tàn shuǐ huà hé wù',vn:'Carbohydrate',en:'Carbohydrate',df:'提供能量的大分子。',ex:'碳水化合物的單體是單醣。'},
+  {w:'脂質',py:'zhī zhì',vn:'Lipid',en:'Lipid',df:'做細胞膜、儲存能量。',ex:'脂質不是聚合物。'},
+  {w:'核酸',py:'hé suān',vn:'Nucleic acid',en:'Nucleic acid',df:'放遺傳資訊的大分子。',ex:'DNA和RNA都是核酸。'},
+  {w:'大分子',py:'dà fēn zǐ',vn:'Đại phân tử',en:'Macromolecule',df:'由很多單體接成的分子。',ex:'蛋白質是一種大分子。'}
+ ],
+ g1:[
+  {zh:'細胞',py:'xì bāo',vn:'Tế bào'},
+  {zh:'分子',py:'fēn zǐ',vn:'Phân tử'},
+  {zh:'蛋白質',py:'dàn bái zhì',vn:'Protein'},
+  {zh:'碳水化合物',py:'tàn shuǐ huà hé wù',vn:'Carbohydrate'},
+  {zh:'脂質',py:'zhī zhì',vn:'Lipid'},
+  {zh:'核酸',py:'hé suān',vn:'Nucleic acid'},
+  {zh:'細胞核',py:'xì bāo hé',vn:'Nhân tế bào'},
+  {zh:'粒線體',py:'lì xiàn tǐ',vn:'Ty thể'}
+ ],
+ g2:[
+  {t:'細胞裡佔重量最多的成分是水。',a:true,e:'對，水大約佔細胞總重量的70%。'},
+  {t:'粒線體負責放DNA。',a:false,e:'錯，DNA主要放在細胞核，粒線體負責製造ATP。'},
+  {t:'脂質是聚合物。',a:false,e:'錯，脂質不是聚合物；蛋白質、碳水化合物、核酸才是。'},
+  {t:'官能基是分子上會反應的部分。',a:true,e:'對，官能基就是分子上會反應的一小部分。'},
+  {t:'原核細胞有細胞核。',a:false,e:'錯，原核細胞沒有細胞核，真核細胞才有。'}
+ ],
+ g3:[
+  {label:'步驟排序題目：飯怎麼變成力氣？',tokens:['飯','葡萄糖','ATP','力氣']},
+  {label:'步驟排序題目：小零件怎麼變成大分子？',tokens:['單體','接起來','大分子']}
+ ],
+ g4:[
+  {s:'你想知道DNA放在細胞的哪裡，你會看哪個構造？',o:['細胞核','粒線體','細胞膜'],a:0,e:'DNA主要放在細胞核裡。'},
+  {s:'細胞需要能量（ATP），是哪個胞器負責製造？',o:['內質網','粒線體','高基氏體'],a:1,e:'粒線體負責製造ATP，供細胞使用。'},
+  {s:'蛋白質有3000種，卻只佔細胞重量15%，為什麼？',o:['胺基酸組合方式非常多','因為蛋白質不重要','因為蛋白質都一樣'],a:0,e:'20種胺基酸能排出非常多種組合，所以蛋白質種類特別多。'}
+ ],
+ g5:[
+  {s:'細胞是生命的___。',o:['最小單位','最大單位','中間單位'],a:0},
+  {s:'蛋白質的單體是___。',o:['胺基酸','單醣','核苷酸'],a:0},
+  {s:'DNA主要放在___裡。',o:['細胞核','細胞膜','細胞質'],a:0},
+  {s:'羧基（—COOH）是___。',o:['酸','鹼','鹽'],a:0},
+  {s:'細胞裡佔重量最多的成分是___。',o:['水','蛋白質','脂質'],a:0}
+ ],
+ review:[
+  {s:'「細胞」是什麼？（用你原本的知識猜猜看）',o:['生物體的基本構造單位','一種化學元素','一種疾病名稱'],a:0,e:'細胞是所有生物體的基本構造與功能單位，這是常見的生物先備知識。'},
+  {s:'水的化學式是什麼？',o:['H₂O','CO₂','O₂'],a:0,e:'水由兩個氫原子和一個氧原子組成，寫作 H₂O。'},
+  {s:'「蛋白質」這個詞，你以前在哪裡聽過？',o:['營養學／飲食','天氣預報','交通號誌'],a:0,e:'蛋白質是常見的營養學詞彙，本課會學習它在生物化學裡的角色。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

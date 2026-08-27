@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 8 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元三　生物分子',week:8,icon:'🍚',accent:'#C8532B',
+ theme:'碳水化合物：單醣、雙醣、多醣的世界',
+ keypoints:[
+  {h:'糖 vs 醣：中文陷阱',p:[
+   '兩個字都讀táng，但不一樣。',
+   '<span class=kw>糖</span>是吃起來甜的，例如葡萄糖。',
+   '<span class=kw>醣</span>是所有碳水化合物的總稱。',
+   '澱粉是「醣」但不是「糖」，不甜。'
+  ]},
+  {h:'葡萄糖：開鏈與環狀',p:[
+   '葡萄糖在水裡大多是環狀。',
+   '成環時C1的OH可以朝上或朝下。',
+   '朝上朝下，形成<span class=kw>α</span>和<span class=kw>β</span>兩種。'
+  ],img:'../../assets/figures/w09_glucose_forms.jpg',imgCap:'葡萄糖開鏈與環狀 ／ Dạng mạch hở và mạch vòng của glucose'},
+  {h:'α和β：差很多',p:[
+   '你吃得下米飯，吃不下木頭。',
+   'α接起來變<span class=kw>澱粉</span>，能吃。',
+   'β接起來變<span class=kw>纖維素</span>，不能消化。'
+  ]},
+  {h:'單醣→雙醣→多醣',p:[
+   '蔗糖＝葡萄糖＋果糖。',
+   '乳糖＝葡萄糖＋半乳糖。',
+   '麥芽糖＝葡萄糖＋葡萄糖。',
+   '用<span class=kw>醣苷鍵</span>接起來，脫一個水。'
+  ]},
+  {h:'三種多醣',p:[
+   '<span class=kw>澱粉</span>：α鍵，少分支，來自植物。',
+   '<span class=kw>肝醣</span>：α鍵，多分支，來自動物。',
+   '<span class=kw>纖維素</span>：β鍵，直鏈，當骨架。'
+  ],img:'../../assets/figures/w09_polysaccharides.jpg',imgCap:'澱粉、肝醣與纖維素 ／ Tinh bột, glycogen và cellulose'}
+ ],
+ vocab:[
+  {w:'單醣',py:'dān táng',vn:'Đường đơn (monosaccharide)',en:'Monosaccharide',df:'最小的醣，例如葡萄糖。',ex:'葡萄糖是一種單醣。'},
+  {w:'雙醣',py:'shuāng táng',vn:'Đường đôi (disaccharide)',en:'Disaccharide',df:'兩個單醣接起來。',ex:'蔗糖是一種雙醣。'},
+  {w:'多醣',py:'duō táng',vn:'Đường đa (polysaccharide)',en:'Polysaccharide',df:'很多單醣接起來的大分子。',ex:'澱粉是一種多醣。'},
+  {w:'葡萄糖',py:'pú táo táng',vn:'Glucose',en:'Glucose',df:'最常見的單醣。',ex:'身體燒葡萄糖產生能量。'},
+  {w:'果糖',py:'guǒ táng',vn:'Fructose',en:'Fructose',df:'水果裡常見的單醣。',ex:'蔗糖含有果糖。'},
+  {w:'蔗糖',py:'zhè táng',vn:'Sucrose',en:'Sucrose',df:'家裡的砂糖，葡萄糖加果糖。',ex:'蔗糖是你家的砂糖。'},
+  {w:'乳糖',py:'rǔ táng',vn:'Lactose',en:'Lactose',df:'牛奶裡的雙醣。',ex:'缺乳糖酶會讓肚子痛。'},
+  {w:'麥芽糖',py:'mài yá táng',vn:'Maltose',en:'Maltose',df:'兩個葡萄糖接起來。',ex:'麥芽糖來自麥芽。'},
+  {w:'醣苷鍵',py:'táng gān jiàn',vn:'Liên kết glycosidic',en:'Glycosidic bond',df:'接起單醣的化學鍵。',ex:'醣苷鍵脫一個水形成。'},
+  {w:'澱粉',py:'diàn fěn',vn:'Tinh bột',en:'Starch',df:'植物儲存能量的多醣。',ex:'phở和bánh mì都含澱粉。'},
+  {w:'肝醣',py:'gān táng',vn:'Glycogen',en:'Glycogen',df:'動物儲存能量的多醣。',ex:'肝醣存在肝臟裡。'},
+  {w:'纖維素',py:'xiān wéi sù',vn:'Cellulose',en:'Cellulose',df:'植物的骨架多醣。',ex:'人不能消化纖維素。'}
+ ],
+ g1:[
+  {zh:'單醣',py:'dān táng',vn:'Đường đơn (monosaccharide)'},
+  {zh:'雙醣',py:'shuāng táng',vn:'Đường đôi (disaccharide)'},
+  {zh:'多醣',py:'duō táng',vn:'Đường đa (polysaccharide)'},
+  {zh:'葡萄糖',py:'pú táo táng',vn:'Glucose'},
+  {zh:'澱粉',py:'diàn fěn',vn:'Tinh bột'},
+  {zh:'肝醣',py:'gān táng',vn:'Glycogen'},
+  {zh:'纖維素',py:'xiān wéi sù',vn:'Cellulose'},
+  {zh:'醣苷鍵',py:'táng gān jiàn',vn:'Liên kết glycosidic'}
+ ],
+ g2:[
+  {t:'澱粉和肝醣都是葡萄糖組成的。',a:true,e:'對，兩者都是葡萄糖用α鍵接起來，差別在分支多少。'},
+  {t:'α和β葡萄糖是不同的分子式。',a:false,e:'錯，分子式相同，只是結構不同，是異構物。'},
+  {t:'人可以消化纖維素。',a:false,e:'錯，人沒有酶能分解β鍵，纖維素消化不了。'},
+  {t:'肝醣的分支比澱粉多。',a:true,e:'對，動物需要快速放糖，分支多出口就多。'},
+  {t:'蔗糖是葡萄糖加果糖組成的。',a:true,e:'對，蔗糖＝葡萄糖＋果糖，用醣苷鍵接起來。'}
+ ],
+ g3:[
+  {label:'步驟排序：醣類分子從大到小？',tokens:['多醣','雙醣','單醣']},
+  {label:'步驟排序：吃澱粉後發生什麼？',tokens:['澱粉','葡萄糖','能量']}
+ ],
+ g4:[
+  {s:'為什麼動物用肝醣，不用澱粉來儲存能量？',o:['肝醣分支多，能快速放糖','肝醣比較甜','肝醣的分子比較硬'],a:0,e:'動物需要快速取得能量，分支多代表出口多，放糖比較快。'},
+  {s:'你能消化米飯，但不能消化木頭，最主要的原因是什麼？',o:['米飯是α鍵，木頭是β鍵，人沒有酶分解β鍵','木頭有毒','米飯比較軟'],a:0,e:'α和β醣苷鍵差很多，人體的酶只能分解α鍵。'},
+  {s:'喝牛奶後常常肚子痛，最可能的原因是什麼？',o:['缺乳糖酶，不能分解乳糖','缺澱粉酶','缺纖維素酶'],a:0,e:'乳糖是葡萄糖加半乳糖，缺乳糖酶就無法消化牛奶。'}
+ ],
+ g5:[
+  {s:'澱粉是「醣」但不是「___」，因為不甜。',o:['糖','醣類','多醣'],a:0},
+  {s:'葡萄糖成環時，C1的OH可以朝___或朝下。',o:['上','左','右'],a:0},
+  {s:'α醣苷鍵接起來會變成___。',o:['澱粉','纖維素','蛋白質'],a:0},
+  {s:'蔗糖＝葡萄糖＋___。',o:['果糖','半乳糖','葡萄糖'],a:0},
+  {s:'醣苷鍵是脫一個___接起來的。',o:['水','氧','氮'],a:0}
+ ],
+ review:[
+  {s:'Km小代表什麼？',o:['酵素抓受質抓得緊','酵素抓受質抓得鬆','酵素速率很慢'],a:0,e:'Km小＝抓得緊，Km大＝抓得鬆。'},
+  {s:'競爭性抑制劑黏在哪裡？',o:['活性部位，跟受質搶','別的地方','受質上面'],a:0,e:'競爭性抑制搶活性部位，加夠受質能擠掉它。'},
+  {s:'回饋抑制是什麼？',o:['最終產物抑制第一個酵素','第一個酵素抑制最終產物','完全沒有抑制作用'],a:0,e:'最終產物太多，就回頭抑制第一個酵素，讓路徑慢下來。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

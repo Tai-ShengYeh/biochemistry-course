@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 5 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元二　蛋白質與酵素',week:5,icon:'🩸',accent:'#1B5E6B',
+ theme:'蛋白質功能：肌紅素與血紅素',
+ keypoints:[
+  {h:'蛋白質要抓配位基',p:[
+   '<span class=kw>配位基</span>：被抓的東西。',
+   '<span class=kw>結合位置</span>：抓它的地方。',
+   '<span class=kw>解離常數</span>越小，抓得越緊。'
+  ]},
+  {h:'血基質：抓氧的工具',p:[
+   '一個環加一個鐵Fe²⁺。',
+   'O₂接在鐵上面。',
+   'Fe³⁺就抓不住氧了。'
+  ],img:'../../assets/figures/w05_heme_o2.jpg',imgCap:'血基質與氧結合 ／ Nhóm heme gắn oxygen'},
+  {h:'肌紅素與血紅素不同',p:[
+   '<span class=kw>肌紅素</span>1條鏈，雙曲線。',
+   '<span class=kw>血紅素</span>4條鏈，S型。',
+   '肌紅素存氧，血紅素運氧。'
+  ],img:'../../assets/figures/w05_o2_curves.jpg',imgCap:'氧合曲線比較 ／ So sánh đường cong gắn oxygen'},
+  {h:'協同性造就S型曲線',p:[
+   '第一個O₂很難抓。',
+   '抓到後形狀改變。',
+   '其他3個O₂變得容易抓。'
+  ]},
+  {h:'波耳效應與鐮刀型貧血',p:[
+   '運動產生CO₂、乳酸。',
+   'pH下降，血紅素放氧。',
+   '一個胺基酸錯了，變鐮刀型貧血。'
+  ]}
+ ],
+ vocab:[
+  {w:'配位基',py:'pèi wèi jī',vn:'Phối tử (ligand)',en:'Ligand',df:'被蛋白質抓住的東西。',ex:'氧氣是血紅素的配位基。'},
+  {w:'結合位置',py:'jié hé wèi zhì',vn:'Vị trí gắn',en:'Binding site',df:'蛋白質抓配位基的地方。',ex:'血基質是氧的結合位置。'},
+  {w:'肌紅素',py:'jī hóng sù',vn:'Myoglobin',en:'Myoglobin',df:'1條鏈，在肌肉存氧。',ex:'肌紅素只有三級結構。'},
+  {w:'血紅素',py:'xuè hóng sù',vn:'Hemoglobin',en:'Hemoglobin',df:'4條鏈，在血液運氧。',ex:'血紅素有四級結構。'},
+  {w:'血基質',py:'xuè jī zhì',vn:'Nhóm heme',en:'Heme',df:'含鐵的抓氧工具。',ex:'血基質讓血液是紅色的。'},
+  {w:'氧合曲線',py:'yǎng hé qū xiàn',vn:'Đường cong gắn oxygen',en:'Oxygen-binding curve',df:'蛋白質抓氧的關係圖。',ex:'血紅素的氧合曲線是S型。'},
+  {w:'協同性',py:'xié tóng xìng',vn:'Tính hợp tác',en:'Cooperativity',df:'抓到一個，其他更容易。',ex:'協同性讓曲線變成S型。'},
+  {w:'異位調節',py:'yì wèi diào jié',vn:'Điều hòa dị lập thể',en:'Allosteric regulation',df:'別處改變影響結合位置。',ex:'異位調節控制血紅素抓氧。'},
+  {w:'波耳效應',py:'bō ěr xiào yīng',vn:'Hiệu ứng Bohr',en:'Bohr effect',df:'pH影響血紅素放氧。',ex:'波耳效應讓氧送到肌肉。'},
+  {w:'解離常數',py:'jiě lí cháng shù',vn:'Hằng số phân li',en:'Dissociation constant (Kd)',df:'Kd越小，抓得越緊。',ex:'肌紅素的Kd比血紅素小。'},
+  {w:'鐮刀型貧血',py:'lián dāo xíng pín xuè',vn:'Thiếu máu hồng cầu hình liềm',en:'Sickle cell anemia',df:'一個胺基酸錯了造成的病。',ex:'鐮刀型貧血讓紅血球變形。'},
+  {w:'抗體',py:'kàng tǐ',vn:'Kháng thể',en:'Antibody',df:'抓抗原的蛋白質。',ex:'抗體能辨認外來的抗原。'}
+ ],
+ g1:[
+  {zh:'配位基',py:'pèi wèi jī',vn:'Phối tử (ligand)'},
+  {zh:'結合位置',py:'jié hé wèi zhì',vn:'Vị trí gắn'},
+  {zh:'肌紅素',py:'jī hóng sù',vn:'Myoglobin'},
+  {zh:'血紅素',py:'xuè hóng sù',vn:'Hemoglobin'},
+  {zh:'血基質',py:'xuè jī zhì',vn:'Nhóm heme'},
+  {zh:'氧合曲線',py:'yǎng hé qū xiàn',vn:'Đường cong gắn oxygen'},
+  {zh:'協同性',py:'xié tóng xìng',vn:'Tính hợp tác'},
+  {zh:'波耳效應',py:'bō ěr xiào yīng',vn:'Hiệu ứng Bohr'}
+ ],
+ g2:[
+  {t:'肌紅素有四級結構。',a:false,e:'錯，肌紅素只有1條鏈，最高到三級結構。'},
+  {t:'血紅素抓氧比肌紅素緊。',a:false,e:'錯，肌紅素抓得比血紅素更緊，它是拿來存氧的。'},
+  {t:'協同性讓血紅素的曲線變成S型。',a:true,e:'對，抓到第一個O₂後其他變容易抓，形成S型曲線。'},
+  {t:'鐮刀型貧血是因為胜肽鍵斷掉。',a:false,e:'錯，是β鏈第6個胺基酸被換掉，不是鍵斷裂。'},
+  {t:'血基質裡的鐵必須是Fe²⁺才能抓氧。',a:true,e:'對，變成Fe³⁺後血基質就抓不住氧了。'}
+ ],
+ g3:[
+  {label:'步驟排序：波耳效應怎麼運作？',tokens:['肌肉運動','產生CO₂、乳酸','pH下降','血紅素放掉氧']},
+  {label:'步驟排序：鐮刀型貧血怎麼發生？',tokens:['一個胺基酸錯了','側鏈變非極性','表面出現疏水區','紅血球變鐮刀形']}
+ ],
+ g4:[
+  {s:'某蛋白質的Kd很小，代表什麼？',o:['它抓配位基抓得很緊','它抓配位基抓得很鬆','它不能抓配位基'],a:0,e:'Kd越小代表抓得越緊，肌紅素的Kd比血紅素小。'},
+  {s:'如果血紅素抓氧跟肌紅素一樣緊，會發生什麼問題？',o:['到組織後也放不掉氧，氧送不到','血液顏色會變藍','紅血球會消失'],a:0,e:'抓太緊等於放不掉，氧氣就沒辦法送到需要的組織。'},
+  {s:'病人血基質裡的鐵離子被氧化成Fe³⁺，會發生什麼？',o:['不能抓氧了','抓氧抓得更緊','完全沒有影響'],a:0,e:'血基質必須是Fe²⁺才能抓氧，變成Fe³⁺就抓不住了。'}
+ ],
+ g5:[
+  {s:'蛋白質抓住的東西叫做___。',o:['配位基','結合位置','解離常數'],a:0},
+  {s:'___越小，代表蛋白質抓配位基抓得越緊。',o:['Kd','pH','pI'],a:0},
+  {s:'血基質裡的鐵必須是___才能抓氧。',o:['Fe²⁺','Fe³⁺','Fe⁰'],a:0},
+  {s:'血紅素的氧合曲線是___型。',o:['S','雙曲線','直線'],a:0},
+  {s:'運動時肌肉pH下降，會讓血紅素___氧。',o:['放掉','抓住','忽略'],a:0}
+ ],
+ review:[
+  {s:'蛋白質只有1條鏈，摺疊完成後最高到哪個層級？',o:['三級結構','四級結構','二級結構'],a:0,e:'四級結構一定要多條鏈，1條鏈最高只到三級。'},
+  {s:'α螺旋靠什麼維持？',o:['主鏈氫鍵','側鏈氫鍵','雙硫鍵'],a:0,e:'α螺旋靠主鏈的C=O和N—H氫鍵維持，與側鏈無關。'},
+  {s:'蛋白質變性後，哪個結構通常沒壞？',o:['一級結構','二級結構','三級結構'],a:0,e:'變性只破壞弱作用力，胜肽鍵（一級結構）不會斷。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>

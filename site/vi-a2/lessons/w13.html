@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='zh-TW'>
+<head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>第 13 週</title></head>
+<body>
+<script>
+const WEEK={
+ course:'生物化學',unit:'單元四　代謝',week:13,icon:'🍬',accent:'#A8501F',
+ theme:'糖解作用：葡萄糖變丙酮酸與能量',
+ keypoints:[
+  {h:'糖解作用是什麼',p:[
+   '<span class=kw>糖解作用</span>分解葡萄糖。',
+   '產物是<span class=kw>丙酮酸</span>。',
+   '發生在細胞質，不需氧氣。',
+   '幾乎所有細胞都會糖解。'
+  ]},
+  {h:'十步驟分兩期',p:[
+   '<span class=kw>糖解作用</span>共十步，分兩期。',
+   '<span class=kw>投資期</span>：前5步，花2 ATP。',
+   '<span class=kw>收穫期</span>：後5步，賺4 ATP。',
+   '收穫期還做出2個NADH。'
+  ],img:'../../assets/figures/w13_glycolysis.jpg',imgCap:'糖解十步驟：投資期與收穫期 ／ 10 bước đường phân: giai đoạn đầu tư và giai đoạn thu hồi'},
+  {h:'淨產能：別忘記×2',p:[
+   '一個<span class=kw>葡萄糖</span>裂成兩個三碳。',
+   '收穫期每一步都要乘以2。',
+   '淨：4減2，等於2個ATP。',
+   '還有淨2個NADH。'
+  ]},
+  {h:'三個調控點',p:[
+   '<span class=kw>己糖激酶</span>在第1步，鎖住葡萄糖。',
+   '<span class=kw>磷酸果糖激酶</span>在第3步，最重要。',
+   '<span class=kw>丙酮酸激酶</span>在第10步，最後一步。',
+   'ATP多時，PFK-1會被抑制。'
+  ]},
+  {h:'丙酮酸的三條去路',p:[
+   '有氧時，<span class=kw>丙酮酸</span>變乙醯CoA。',
+   '缺氧時（動物），變成<span class=kw>乳酸</span>。',
+   '缺氧時（酵母），變成<span class=kw>乙醇</span>。',
+   '<span class=kw>發酵</span>目的是再生NAD⁺。'
+  ],img:'../../assets/figures/w13_fermentation.jpg',imgCap:'丙酮酸的三條路：乳酸與乙醇發酵 ／ 3 con đường của pyruvate: lên men lactate và ethanol'}
+ ],
+ vocab:[
+  {w:'糖解作用',py:'táng jiě zuò yòng',vn:'Đường phân',en:'Glycolysis',df:'葡萄糖變丙酮酸的路徑。',ex:'糖解作用發生在細胞質。'},
+  {w:'己糖激酶',py:'jǐ táng jī méi',vn:'Hexokinase',en:'Hexokinase',df:'糖解第一步的酵素。',ex:'己糖激酶把葡萄糖鎖住。'},
+  {w:'磷酸果糖激酶',py:'lín suān guǒ táng jī méi',vn:'Phosphofructokinase-1 (PFK-1)',en:'PFK-1',df:'糖解最重要的閥門。',ex:'ATP多會抑制PFK-1。'},
+  {w:'丙酮酸激酶',py:'bǐng tóng suān jī méi',vn:'Pyruvate kinase',en:'Pyruvate kinase',df:'糖解第十步的酵素。',ex:'丙酮酸激酶做出丙酮酸。'},
+  {w:'丙酮酸',py:'bǐng tóng suān',vn:'Pyruvate',en:'Pyruvate',df:'糖解作用的最終產物。',ex:'丙酮酸可以進入循環。'},
+  {w:'投資期',py:'tóu zī qī',vn:'Giai đoạn đầu tư',en:'Preparatory phase',df:'糖解前五步，花能量。',ex:'投資期花掉兩個ATP。'},
+  {w:'收穫期',py:'shōu huò qī',vn:'Giai đoạn thu hồi',en:'Payoff phase',df:'糖解後五步，賺能量。',ex:'收穫期做出四個ATP。'},
+  {w:'受質層次磷酸化',py:'shòu zhì céng cì lín suān huà',vn:'Phosphoryl hóa mức cơ chất',en:'Substrate-level phosphorylation',df:'酵素直接做出ATP。',ex:'糖解用受質層次磷酸化。'},
+  {w:'發酵',py:'fā jiào',vn:'Sự lên men',en:'Fermentation',df:'缺氧時代謝丙酮酸。',ex:'發酵能再生NAD⁺。'},
+  {w:'乳酸',py:'rǔ suān',vn:'Lactate',en:'Lactate',df:'動物缺氧時的產物。',ex:'肌肉痠痛跟乳酸有關。'},
+  {w:'乙醇',py:'yǐ chún',vn:'Ethanol',en:'Ethanol',df:'酵母發酵的產物。',ex:'酒精發酵做出乙醇。'},
+  {w:'醣質新生',py:'táng zhì xīn shēng',vn:'Tân tạo glucose',en:'Gluconeogenesis',df:'用非醣類做葡萄糖。',ex:'醣質新生跟糖解方向相反。'}
+ ],
+ g1:[
+  {zh:'糖解作用',py:'táng jiě zuò yòng',vn:'Đường phân'},
+  {zh:'己糖激酶',py:'jǐ táng jī méi',vn:'Hexokinase'},
+  {zh:'磷酸果糖激酶',py:'lín suān guǒ táng jī méi',vn:'Phosphofructokinase-1 (PFK-1)'},
+  {zh:'丙酮酸激酶',py:'bǐng tóng suān jī méi',vn:'Pyruvate kinase'},
+  {zh:'丙酮酸',py:'bǐng tóng suān',vn:'Pyruvate'},
+  {zh:'投資期',py:'tóu zī qī',vn:'Giai đoạn đầu tư'},
+  {zh:'收穫期',py:'shōu huò qī',vn:'Giai đoạn thu hồi'},
+  {zh:'發酵',py:'fā jiào',vn:'Sự lên men'}
+ ],
+ g2:[
+  {t:'糖解淨產4個ATP。',a:false,e:'錯，淨產是2個ATP（4減2）。'},
+  {t:'PFK-1是糖解最重要的調控點。',a:true,e:'對，PFK-1是糖解最重要的閥門。'},
+  {t:'發酵的目的是再生NAD⁺。',a:true,e:'對，糖解需要NAD⁺，發酵補回來。'},
+  {t:'乳酸發酵會產生CO₂。',a:false,e:'錯，乳酸發酵不產CO₂，酒精發酵才產。'},
+  {t:'紅血球沒有粒線體，只能靠糖解產能。',a:true,e:'對，紅血球缺粒線體，只能靠糖解。'}
+ ],
+ g3:[
+  {label:'步驟排序題目：糖解作用怎麼進行？',tokens:['葡萄糖','投資期','收穫期','丙酮酸']},
+  {label:'步驟排序題目：葡萄糖最後變成什麼？',tokens:['葡萄糖','丙酮酸','乳酸或乙醇']}
+ ],
+ g4:[
+  {s:'紅血球沒有粒線體，主要靠什麼產生ATP？',o:['糖解作用','檸檬酸循環','電子傳遞鏈'],a:0,e:'紅血球沒有粒線體，只能靠糖解作用產生ATP。'},
+  {s:'劇烈運動時，肌肉為什麼會累積乳酸？',o:['缺氧，糖解靠發酵','細胞核受損','蛋白質分解太快'],a:0,e:'缺氧時無法有氧呼吸，糖解靠發酵再生NAD⁺，產生乳酸。'},
+  {s:'細胞內ATP濃度已經很高，PFK-1會怎麼樣？',o:['被抑制，糖解變慢','活性增加','完全不受影響'],a:0,e:'ATP多代表能量夠了，PFK-1受回饋抑制，糖解減慢。'}
+ ],
+ g5:[
+  {s:'糖解作用發生在細胞的___。',o:['細胞質','細胞核','粒線體'],a:0},
+  {s:'糖解淨產___個ATP。',o:['2','4','6'],a:0},
+  {s:'投資期要花掉___個ATP。',o:['2','4','1'],a:0},
+  {s:'酵母發酵產生乙醇和___。',o:['CO₂','NH₃','H₂O'],a:0},
+  {s:'PFK-1是糖解第___步的酵素。',o:['3','1','10'],a:0}
+ ],
+ review:[
+  {s:'ΔG小於0的反應是___反應。',o:['放能（自發）','吸能（不自發）','中性'],a:0,e:'ΔG<0代表放能，反應會自發進行。'},
+  {s:'酵素能不能改變反應的ΔG？',o:['不能，只能降低活化能','能，讓ΔG變負','能，讓反應變吸能'],a:0,e:'酵素只降低活化能，不改變ΔG，這是第12週的重點。'},
+  {s:'細胞如何完成不自發的吸能反應？',o:['和放能反應（如ATP水解）耦合','讓溫度升高','增加受質濃度'],a:0,e:'能量耦合：放能反應「付錢」給吸能反應，讓整體ΔG變負。'}
+ ]
+};
+</script>
+<script src='bio_engine.js'></script>
+</body></html>
