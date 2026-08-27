@@ -136,21 +136,21 @@
       "repeated_structures": "Control curve repeats in both inhibition panels."
     },
     {
-      "topic": "w09_glucose_forms",
+      "topic": "w08_glucose_forms",
       "clean_required": true,
       "files": [
-        "w09_glucose_forms_clean.png",
-        "w09_glucose_forms_labeled.png"
+        "w08_glucose_forms_clean.png",
+        "w08_glucose_forms_labeled.png"
       ],
       "marker_count": 4,
       "repeated_structures": "Glucose appears as open chain, alpha ring, and beta ring."
     },
     {
-      "topic": "w09_polysaccharides",
+      "topic": "w08_polysaccharides",
       "clean_required": true,
       "files": [
-        "w09_polysaccharides_clean.png",
-        "w09_polysaccharides_labeled.png"
+        "w08_polysaccharides_clean.png",
+        "w08_polysaccharides_labeled.png"
       ],
       "marker_count": 3,
       "repeated_structures": "Glucose units repeat throughout starch, glycogen, and cellulose."
