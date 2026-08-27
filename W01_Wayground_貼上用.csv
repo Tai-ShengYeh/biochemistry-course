@@ -1,16 +1,20 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Tế bào」的中文是什麼?,Multiple Choice,細胞,脂質,蛋白質,分子,1,30,W01-002
-「Phân tử」的中文是什麼?,Multiple Choice,單體,核酸,分子,細胞,3,30,W01-009
-「Protein」的中文是什麼?,Multiple Choice,碳水化合物,脂質,蛋白質,核酸,3,30,W01-012
-「Carbohydrate」的中文是什麼?,Multiple Choice,脂質,核酸,蛋白質,碳水化合物,4,30,W01-013
-「Lipid」的中文是什麼?,Multiple Choice,單體,核酸,脂質,醣類,3,30,W01-014
-「Nucleic acid」的中文是什麼?,Multiple Choice,核酸,蛋白質,脂質,大分子,1,30,W01-015
-「Nhân tế bào」的中文是什麼?,Multiple Choice,細胞核,粒線體,細胞質,細胞膜,1,30,W01-006
-「Ty thể」的中文是什麼?,Multiple Choice,細胞核,粒線體,胞器,細胞膜,2,30,W01-007
+「Tế bào」的中文是什麼?,Multiple Choice,蛋白質,細胞,分子,脂質,2,30,W01-002
+「Phân tử」的中文是什麼?,Multiple Choice,細胞,單體,核酸,分子,4,30,W01-009
+「Protein」的中文是什麼?,Multiple Choice,碳水化合物,核酸,蛋白質,脂質,3,30,W01-012
+「Carbohydrate」的中文是什麼?,Multiple Choice,脂質,蛋白質,碳水化合物,核酸,3,30,W01-013
+「Lipid」的中文是什麼?,Multiple Choice,脂質,核酸,醣類,單體,1,30,W01-014
+「Nucleic acid」的中文是什麼?,Multiple Choice,核酸,大分子,蛋白質,脂質,1,30,W01-015
+「Nhân tế bào」的中文是什麼?,Multiple Choice,粒線體,細胞膜,細胞核,細胞質,3,30,W01-006
+「Ty thể」的中文是什麼?,Multiple Choice,胞器,細胞核,粒線體,細胞膜,3,30,W01-007
 做 ATP 的胞器是什麼?,Multiple Choice,核糖體,細胞核,細胞膜,粒線體,4,30,W01-007
-DNA 放在哪裡?,Multiple Choice,細胞膜,細胞核,細胞質,粒線體,2,30,W01-006
-「Đại phân tử」的中文是什麼?,Multiple Choice,聚合物,大分子,分子,單體,2,30,W01-016
-「Đơn phân」的中文是什麼?,Multiple Choice,大分子,聚合物,單體,官能基,3,30,W01-017
-「Nhóm chức」的中文是什麼?,Multiple Choice,官能基,側鏈,單體,胞器,1,30,W01-011
-"分子上會反應的那一小部分,叫什麼?",Multiple Choice,聚合物,官能基,大分子,單體,2,30,W01-011
-蛋白質的單體是什麼?,Multiple Choice,單醣,脂肪酸,核苷酸,胺基酸,4,30,W01-012
+DNA 放在哪裡?,Multiple Choice,粒線體,細胞核,細胞膜,細胞質,2,30,W01-006
+「Đại phân tử」的中文是什麼?,Multiple Choice,分子,大分子,聚合物,單體,2,30,W01-016
+「Đơn phân」的中文是什麼?,Multiple Choice,單體,官能基,大分子,聚合物,1,30,W01-017
+「Nhóm chức」的中文是什麼?,Multiple Choice,單體,胞器,官能基,側鏈,3,30,W01-011
+"分子上會反應的那一小部分,叫什麼?",Multiple Choice,大分子,聚合物,單體,官能基,4,30,W01-011
+蛋白質的單體是什麼?,Multiple Choice,核苷酸,單醣,脂肪酸,胺基酸,4,30,W01-012
+(標圖:細胞構造) 圖正中央、含核仁的紫色構造是什麼?,Multiple Choice,細胞核,內質網,粒線體,高基氏體,1,30,W01-E01
+(標圖:細胞構造) 圖左下方、像一疊薄餅的構造是什麼?,Multiple Choice,內質網,高基氏體,粒線體,細胞膜,2,30,W01-E02
+哪一個配對正確?,Multiple Choice,細胞核—ATP合成,粒線體—ATP合成,蛋白質—由核苷酸組成,核酸—細胞能量來源,2,30,W01-E03
+沒有細胞核的細胞稱為什麼?,Multiple Choice,原核細胞,單體,真核細胞,大分子,1,30,W01-E04

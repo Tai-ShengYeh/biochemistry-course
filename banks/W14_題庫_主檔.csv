@@ -1,17 +1,21 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W14-001,14,檸檬酸循環,Chu trình acid citric,Citric acid cycle,「Chu trình acid citric」的中文是什麼?,乙醯輔酶A,去羧作用,回補反應,檸檬酸循環,4,越→中
-W14-002,14,克氏循環,Chu trình Krebs,Krebs cycle,「Chu trình Krebs」的中文是什麼?,草醯乙酸,異檸檬酸,克氏循環,去羧作用,3,越→中
-W14-003,14,乙醯輔酶A,Acetyl-CoA,Acetyl-CoA,「Acetyl-CoA」的中文是什麼?,回補反應,乙醯輔酶A,延胡索酸,α-酮戊二酸,2,越→中
-W14-004,14,丙酮酸去氫酶複合體,Phức hợp pyruvate dehydrogenase,Pyruvate dehydrogenase complex,「Phức hợp pyruvate dehydrogenase」的中文是什麼?,草醯乙酸,乙醯輔酶A,丙酮酸去氫酶複合體,黃素腺嘌呤二核苷酸,3,越→中
+W14-001,14,檸檬酸循環,Chu trình acid citric,Citric acid cycle,「Chu trình acid citric」的中文是什麼?,去羧作用,回補反應,檸檬酸循環,乙醯輔酶A,3,越→中
+W14-002,14,克氏循環,Chu trình Krebs,Krebs cycle,「Chu trình Krebs」的中文是什麼?,草醯乙酸,去羧作用,克氏循環,異檸檬酸,3,越→中
+W14-003,14,乙醯輔酶A,Acetyl-CoA,Acetyl-CoA,「Acetyl-CoA」的中文是什麼?,乙醯輔酶A,延胡索酸,回補反應,α-酮戊二酸,1,越→中
+W14-004,14,丙酮酸去氫酶複合體,Phức hợp pyruvate dehydrogenase,Pyruvate dehydrogenase complex,「Phức hợp pyruvate dehydrogenase」的中文是什麼?,乙醯輔酶A,草醯乙酸,丙酮酸去氫酶複合體,黃素腺嘌呤二核苷酸,3,越→中
 W14-005,14,去羧作用,Sự khử carboxyl,Decarboxylation,「Sự khử carboxyl」的中文是什麼?,去羧作用,克氏循環,回補反應,草醯乙酸,1,越→中
-W14-006,14,檸檬酸,Citrate,Citrate,「Citrate」的中文是什麼?,蘋果酸,檸檬酸,回補反應,琥珀酸,2,越→中
-W14-007,14,異檸檬酸,Isocitrate,Isocitrate,「Isocitrate」的中文是什麼?,克氏循環,兩性途徑,異檸檬酸,回補反應,3,越→中
-W14-008,14,α-酮戊二酸,α-Ketoglutarate,Alpha-ketoglutarate,「α-Ketoglutarate」的中文是什麼?,乙醯輔酶A,α-酮戊二酸,三磷酸鳥苷,草醯乙酸,2,越→中
-W14-009,14,琥珀酸,Succinate,Succinate,「Succinate」的中文是什麼?,琥珀酸,檸檬酸,蘋果酸,延胡索酸,1,越→中
-W14-010,14,延胡索酸,Fumarate,Fumarate,「Fumarate」的中文是什麼?,回補反應,克氏循環,異檸檬酸,延胡索酸,4,越→中
-W14-011,14,蘋果酸,Malate,Malate,「Malate」的中文是什麼?,蘋果酸,回補反應,克氏循環,琥珀酸,1,越→中
-W14-012,14,草醯乙酸,Oxaloacetate,Oxaloacetate,「Oxaloacetate」的中文是什麼?,克氏循環,延胡索酸,草醯乙酸,回補反應,3,越→中
-W14-013,14,黃素腺嘌呤二核苷酸,FADH2,FADH2,「FADH2」的中文是什麼?,黃素腺嘌呤二核苷酸,乙醯輔酶A,延胡索酸,三磷酸鳥苷,1,越→中
-W14-014,14,三磷酸鳥苷,GTP,GTP,「GTP」的中文是什麼?,克氏循環,乙醯輔酶A,異檸檬酸,三磷酸鳥苷,4,越→中
-W14-015,14,回補反應,Phản ứng bổ sung,Anaplerotic reaction,「Phản ứng bổ sung」的中文是什麼?,蘋果酸,回補反應,兩性途徑,延胡索酸,2,越→中
-W14-016,14,兩性途徑,Con đường lưỡng tính,Amphibolic pathway,「Con đường lưỡng tính」的中文是什麼?,異檸檬酸,延胡索酸,克氏循環,兩性途徑,4,越→中
+W14-006,14,檸檬酸,Citrate,Citrate,「Citrate」的中文是什麼?,回補反應,檸檬酸,蘋果酸,琥珀酸,2,越→中
+W14-007,14,異檸檬酸,Isocitrate,Isocitrate,「Isocitrate」的中文是什麼?,克氏循環,回補反應,兩性途徑,異檸檬酸,4,越→中
+W14-008,14,α-酮戊二酸,α-Ketoglutarate,Alpha-ketoglutarate,「α-Ketoglutarate」的中文是什麼?,乙醯輔酶A,草醯乙酸,α-酮戊二酸,三磷酸鳥苷,3,越→中
+W14-009,14,琥珀酸,Succinate,Succinate,「Succinate」的中文是什麼?,延胡索酸,蘋果酸,檸檬酸,琥珀酸,4,越→中
+W14-010,14,延胡索酸,Fumarate,Fumarate,「Fumarate」的中文是什麼?,異檸檬酸,延胡索酸,回補反應,克氏循環,2,越→中
+W14-011,14,蘋果酸,Malate,Malate,「Malate」的中文是什麼?,回補反應,蘋果酸,克氏循環,琥珀酸,2,越→中
+W14-012,14,草醯乙酸,Oxaloacetate,Oxaloacetate,「Oxaloacetate」的中文是什麼?,回補反應,延胡索酸,克氏循環,草醯乙酸,4,越→中
+W14-013,14,黃素腺嘌呤二核苷酸,FADH2,FADH2,「FADH2」的中文是什麼?,黃素腺嘌呤二核苷酸,三磷酸鳥苷,乙醯輔酶A,延胡索酸,1,越→中
+W14-014,14,三磷酸鳥苷,GTP,GTP,「GTP」的中文是什麼?,乙醯輔酶A,克氏循環,異檸檬酸,三磷酸鳥苷,4,越→中
+W14-015,14,回補反應,Phản ứng bổ sung,Anaplerotic reaction,「Phản ứng bổ sung」的中文是什麼?,延胡索酸,兩性途徑,回補反應,蘋果酸,3,越→中
+W14-016,14,兩性途徑,Con đường lưỡng tính,Amphibolic pathway,「Con đường lưỡng tính」的中文是什麼?,延胡索酸,異檸檬酸,克氏循環,兩性途徑,4,越→中
+W14-E01,14,檸檬酸,Citrate,Citrate,(標圖:w14_tca_labeled) 標號1這一步驟的產物是什麼?,檸檬酸,琥珀醯輔酶A,異檸檬酸,蘋果酸,1,標圖
+W14-E02,14,菸鹼醯胺腺嘌呤二核苷酸,NADH,NADH,(標圖:w14_tca_labeled) 標號2箭頭代表哪一種產物?,二氧化碳,菸鹼醯胺腺嘌呤二核苷酸,黃素腺嘌呤二核苷酸,三磷酸鳥苷,2,標圖
+W14-E03,14,琥珀酸—去氫產生FADH2,,,哪一個配對正確?,草醯乙酸—去氫產生GTP,琥珀酸—去氫產生FADH2,α-酮戊二酸—與乙醯輔酶A縮合成檸檬酸,檸檬酸—去羧產生二氧化碳,2,配對
+W14-E04,14,3個NADH,,,檸檬酸循環每轉一圈(每1個乙醯輔酶A)共產生幾個NADH?,3個NADH,2個NADH,4個NADH,1個NADH,1,計算

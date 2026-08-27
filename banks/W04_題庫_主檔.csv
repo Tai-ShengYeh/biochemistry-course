@@ -1,18 +1,22 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W04-001,4,一級結構,Cấu trúc bậc một,Primary structure,「Cấu trúc bậc một」的中文是什麼?,球狀蛋白,一級結構,伴護蛋白,膠原蛋白,2,越→中
-W04-002,4,二級結構,Cấu trúc bậc hai,Secondary structure,「Cấu trúc bậc hai」的中文是什麼?,二級結構,三級結構,伴護蛋白,四級結構,1,越→中
-W04-003,4,三級結構,Cấu trúc bậc ba,Tertiary structure,「Cấu trúc bậc ba」的中文是什麼?,三級結構,一級結構,膠原蛋白,伴護蛋白,1,越→中
-W04-004,4,四級結構,Cấu trúc bậc bốn,Quaternary structure,「Cấu trúc bậc bốn」的中文是什麼?,膠原蛋白,四級結構,伴護蛋白,α螺旋,2,越→中
-W04-005,4,α螺旋,Xoắn alpha (xoắn α),Alpha helix,「Xoắn alpha (xoắn α)」的中文是什麼?,β摺板,角蛋白,α螺旋,四級結構,3,越→中
-W04-006,4,β摺板,Gấp nếp beta (phiến gấp nếp β),Beta sheet,「Gấp nếp beta (phiến gấp nếp β)」的中文是什麼?,β摺板,伴護蛋白,轉角,球狀蛋白,1,越→中
-W04-007,4,轉角,Đoạn quay,Turn,「Đoạn quay」的中文是什麼?,β摺板,摺疊,二級結構,轉角,4,越→中
-W04-008,4,摺疊,Sự cuộn gập,Folding,「Sự cuộn gập」的中文是什麼?,摺疊,β摺板,轉角,球狀蛋白,1,越→中
+W04-001,4,一級結構,Cấu trúc bậc một,Primary structure,「Cấu trúc bậc một」的中文是什麼?,伴護蛋白,膠原蛋白,一級結構,球狀蛋白,3,越→中
+W04-002,4,二級結構,Cấu trúc bậc hai,Secondary structure,「Cấu trúc bậc hai」的中文是什麼?,四級結構,三級結構,伴護蛋白,二級結構,4,越→中
+W04-003,4,三級結構,Cấu trúc bậc ba,Tertiary structure,「Cấu trúc bậc ba」的中文是什麼?,一級結構,三級結構,伴護蛋白,膠原蛋白,2,越→中
+W04-004,4,四級結構,Cấu trúc bậc bốn,Quaternary structure,「Cấu trúc bậc bốn」的中文是什麼?,膠原蛋白,α螺旋,四級結構,伴護蛋白,3,越→中
+W04-005,4,α螺旋,Xoắn alpha (xoắn α),Alpha helix,「Xoắn alpha (xoắn α)」的中文是什麼?,α螺旋,角蛋白,四級結構,β摺板,1,越→中
+W04-006,4,β摺板,Gấp nếp beta (phiến gấp nếp β),Beta sheet,「Gấp nếp beta (phiến gấp nếp β)」的中文是什麼?,球狀蛋白,伴護蛋白,β摺板,轉角,3,越→中
+W04-007,4,轉角,Đoạn quay,Turn,「Đoạn quay」的中文是什麼?,β摺板,二級結構,摺疊,轉角,4,越→中
+W04-008,4,摺疊,Sự cuộn gập,Folding,「Sự cuộn gập」的中文是什麼?,轉角,β摺板,摺疊,球狀蛋白,3,越→中
 W04-009,4,變性,Sự biến tính,Denaturation,「Sự biến tính」的中文是什麼?,β摺板,結構域,次單元,變性,4,越→中
-W04-010,4,次單元,Tiểu đơn vị,Subunit,「Tiểu đơn vị」的中文是什麼?,摺疊,球狀蛋白,次單元,角蛋白,3,越→中
-W04-011,4,結構域,Vùng cấu trúc (domain),Domain,「Vùng cấu trúc (domain)」的中文是什麼?,二級結構,α螺旋,結構域,次單元,3,越→中
-W04-012,4,伴護蛋白,Protein đồng hành (chaperone),Chaperone,「Protein đồng hành (chaperone)」的中文是什麼?,伴護蛋白,二級結構,纖維狀蛋白,β摺板,1,越→中
-W04-013,4,纖維狀蛋白,Protein dạng sợi,Fibrous protein,「Protein dạng sợi」的中文是什麼?,一級結構,膠原蛋白,纖維狀蛋白,球狀蛋白,3,越→中
-W04-014,4,球狀蛋白,Protein dạng cầu,Globular protein,「Protein dạng cầu」的中文是什麼?,膠原蛋白,β摺板,三級結構,球狀蛋白,4,越→中
-W04-015,4,膠原蛋白,Collagen,Collagen,「Collagen」的中文是什麼?,二級結構,膠原蛋白,一級結構,結構域,2,越→中
-W04-016,4,角蛋白,Keratin,Keratin,「Keratin」的中文是什麼?,一級結構,角蛋白,次單元,膠原蛋白,2,越→中
-W04-017,4,X光晶體繞射,Nhiễu xạ tia X,X-ray crystallography,「Nhiễu xạ tia X」的中文是什麼?,二級結構,球狀蛋白,纖維狀蛋白,X光晶體繞射,4,越→中
+W04-010,4,次單元,Tiểu đơn vị,Subunit,「Tiểu đơn vị」的中文是什麼?,角蛋白,次單元,摺疊,球狀蛋白,2,越→中
+W04-011,4,結構域,Vùng cấu trúc (domain),Domain,「Vùng cấu trúc (domain)」的中文是什麼?,α螺旋,結構域,二級結構,次單元,2,越→中
+W04-012,4,伴護蛋白,Protein đồng hành (chaperone),Chaperone,「Protein đồng hành (chaperone)」的中文是什麼?,β摺板,二級結構,纖維狀蛋白,伴護蛋白,4,越→中
+W04-013,4,纖維狀蛋白,Protein dạng sợi,Fibrous protein,「Protein dạng sợi」的中文是什麼?,纖維狀蛋白,膠原蛋白,球狀蛋白,一級結構,1,越→中
+W04-014,4,球狀蛋白,Protein dạng cầu,Globular protein,「Protein dạng cầu」的中文是什麼?,球狀蛋白,β摺板,膠原蛋白,三級結構,1,越→中
+W04-015,4,膠原蛋白,Collagen,Collagen,「Collagen」的中文是什麼?,結構域,二級結構,膠原蛋白,一級結構,3,越→中
+W04-016,4,角蛋白,Keratin,Keratin,「Keratin」的中文是什麼?,膠原蛋白,一級結構,次單元,角蛋白,4,越→中
+W04-017,4,X光晶體繞射,Nhiễu xạ tia X,X-ray crystallography,「Nhiễu xạ tia X」的中文是什麼?,X光晶體繞射,球狀蛋白,二級結構,纖維狀蛋白,1,越→中
+W04-E01,4,一級結構,Cấu trúc bậc một,Primary structure,(標圖:蛋白質結構層次) 標號1所在的胺基酸鏈代表哪一層結構?,一級結構,二級結構,四級結構,三級結構,1,標圖
+W04-E02,4,氫鍵,Liên kết hydrogen,Hydrogen bond,(標圖:α螺旋與β摺板) 標號1的虛線代表α螺旋中哪一種鍵?,離子鍵,氫鍵,雙硫鍵,胜肽鍵,2,標圖
+W04-E03,4,四級結構—多個次單元組合,,,哪一個配對正確?,三級結構—胺基酸序列本身,四級結構—多個次單元組合,一級結構—多個次單元組合,二級結構—決定胺基酸種類,2,配對
+W04-E04,4,變性,Sự biến tính,Denaturation,使蛋白質失去原本立體結構、失去功能的過程稱為什麼?,變性,轉角,摺疊,結構域,1,概念

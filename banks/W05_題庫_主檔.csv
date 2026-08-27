@@ -1,16 +1,20 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W05-001,5,配位基,Phối tử (ligand),Ligand,「Phối tử (ligand)」的中文是什麼?,結合位置,協同性,配位基,血基質,3,越→中
-W05-002,5,結合位置,Vị trí gắn,Binding site,「Vị trí gắn」的中文是什麼?,肌動蛋白,異位調節,解離常數,結合位置,4,越→中
-W05-003,5,肌紅素,Myoglobin,Myoglobin,「Myoglobin」的中文是什麼?,協同性,肌紅素,血紅素,異位調節,2,越→中
-W05-004,5,血紅素,Hemoglobin,Hemoglobin,「Hemoglobin」的中文是什麼?,血紅素,解離常數,結合位置,配位基,1,越→中
+W05-001,5,配位基,Phối tử (ligand),Ligand,「Phối tử (ligand)」的中文是什麼?,配位基,結合位置,協同性,血基質,1,越→中
+W05-002,5,結合位置,Vị trí gắn,Binding site,「Vị trí gắn」的中文是什麼?,肌動蛋白,結合位置,異位調節,解離常數,2,越→中
+W05-003,5,肌紅素,Myoglobin,Myoglobin,「Myoglobin」的中文是什麼?,協同性,血紅素,肌紅素,異位調節,3,越→中
+W05-004,5,血紅素,Hemoglobin,Hemoglobin,「Hemoglobin」的中文是什麼?,解離常數,血紅素,結合位置,配位基,2,越→中
 W05-005,5,血基質,Nhóm heme,Heme,「Nhóm heme」的中文是什麼?,配位基,結合位置,血基質,肌紅素,3,越→中
 W05-006,5,氧合曲線,Đường cong gắn oxygen,Oxygen-binding curve,「Đường cong gắn oxygen」的中文是什麼?,肌動蛋白,氧合曲線,結合位置,異位調節,2,越→中
 W05-007,5,協同性,Tính hợp tác,Cooperativity,「Tính hợp tác」的中文是什麼?,配位基,血基質,協同性,解離常數,3,越→中
-W05-008,5,異位調節,Điều hòa dị lập thể,Allosteric regulation,「Điều hòa dị lập thể」的中文是什麼?,氧合曲線,肌動蛋白,解離常數,異位調節,4,越→中
-W05-009,5,波耳效應,Hiệu ứng Bohr,Bohr effect,「Hiệu ứng Bohr」的中文是什麼?,波耳效應,異位調節,肌凝蛋白,肌動蛋白,1,越→中
-W05-010,5,解離常數,Hằng số phân li,Dissociation constant (Kd),「Hằng số phân li」的中文是什麼?,解離常數,異位調節,肌動蛋白,氧合曲線,1,越→中
+W05-008,5,異位調節,Điều hòa dị lập thể,Allosteric regulation,「Điều hòa dị lập thể」的中文是什麼?,氧合曲線,異位調節,肌動蛋白,解離常數,2,越→中
+W05-009,5,波耳效應,Hiệu ứng Bohr,Bohr effect,「Hiệu ứng Bohr」的中文是什麼?,異位調節,肌凝蛋白,波耳效應,肌動蛋白,3,越→中
+W05-010,5,解離常數,Hằng số phân li,Dissociation constant (Kd),「Hằng số phân li」的中文是什麼?,異位調節,肌動蛋白,氧合曲線,解離常數,4,越→中
 W05-011,5,鐮刀型貧血,Thiếu máu hồng cầu hình liềm,Sickle cell anemia,「Thiếu máu hồng cầu hình liềm」的中文是什麼?,結合位置,肌凝蛋白,鐮刀型貧血,波耳效應,3,越→中
-W05-012,5,抗體,Kháng thể,Antibody,「Kháng thể」的中文是什麼?,肌紅素,抗體,氧合曲線,血基質,2,越→中
-W05-013,5,抗原,Kháng nguyên,Antigen,「Kháng nguyên」的中文是什麼?,肌紅素,協同性,抗體,抗原,4,越→中
-W05-014,5,肌動蛋白,Actin,Actin,「Actin」的中文是什麼?,肌動蛋白,肌紅素,結合位置,解離常數,1,越→中
+W05-012,5,抗體,Kháng thể,Antibody,「Kháng thể」的中文是什麼?,肌紅素,氧合曲線,血基質,抗體,4,越→中
+W05-013,5,抗原,Kháng nguyên,Antigen,「Kháng nguyên」的中文是什麼?,抗原,肌紅素,協同性,抗體,1,越→中
+W05-014,5,肌動蛋白,Actin,Actin,「Actin」的中文是什麼?,肌紅素,結合位置,解離常數,肌動蛋白,4,越→中
 W05-015,5,肌凝蛋白,Myosin,Myosin,「Myosin」的中文是什麼?,波耳效應,肌凝蛋白,解離常數,肌動蛋白,2,越→中
+W05-E01,5,肌紅素,Myoglobin,Myoglobin,(標圖:氧解離曲線圖) 標號1所在的曲線是哪一種蛋白質?,肌紅素,肌動蛋白,抗體,血紅素,1,標圖
+W05-E02,5,血紅素,Hemoglobin,Hemoglobin,(標圖:氧解離曲線圖) 標號2所在的曲線是哪一種蛋白質?,血紅素,肌紅素,抗原,肌凝蛋白,1,標圖
+W05-E03,5,波耳效應—pH下降時血紅素放掉氧,,,哪一個配對正確?,協同性—肌紅素只有一條胜肽鏈,鐮刀型貧血—鐵離子變成Fe³⁺,解離常數—血紅素的曲線呈S形,波耳效應—pH下降時血紅素放掉氧,4,配對
+W05-E04,5,CO佔住血基質的結合位置比O2抓得更緊,,,為什麼一氧化碳中毒時人還是會缺氧?,CO佔住血基質的結合位置比O2抓得更緊,CO會把Fe²⁺變成Fe³⁺,CO會讓協同性消失,CO會讓紅血球全部死亡,1,概念

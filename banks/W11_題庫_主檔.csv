@@ -1,21 +1,25 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W11-001,11,核苷酸,Nucleotide,Nucleotide,「Nucleotide」的中文是什麼?,腺嘌呤,核苷酸,雙螺旋,鳥嘌呤,2,越→中
-W11-002,11,核苷,Nucleoside,Nucleoside,「Nucleoside」的中文是什麼?,嘧啶,核苷,核糖,基因,2,越→中
-W11-003,11,含氮鹼基,Base nitrogen,Nitrogenous base,「Base nitrogen」的中文是什麼?,尿嘧啶,胸腺嘧啶,含氮鹼基,核糖核酸,3,越→中
-W11-004,11,嘌呤,Purine,Purine,「Purine」的中文是什麼?,核糖,嘌呤,核苷,核苷酸,2,越→中
-W11-005,11,嘧啶,Pyrimidine,Pyrimidine,「Pyrimidine」的中文是什麼?,互補,基因,核苷,嘧啶,4,越→中
-W11-006,11,腺嘌呤,Adenine (A),Adenine,「Adenine (A)」的中文是什麼?,反平行,核苷酸,腺嘌呤,胞嘧啶,3,越→中
-W11-007,11,鳥嘌呤,Guanine (G),Guanine,「Guanine (G)」的中文是什麼?,核苷酸,互補,腺嘌呤,鳥嘌呤,4,越→中
-W11-008,11,胞嘧啶,Cytosine (C),Cytosine,「Cytosine (C)」的中文是什麼?,胞嘧啶,基因,反平行,雙螺旋,1,越→中
-W11-009,11,胸腺嘧啶,Thymine (T),Thymine,「Thymine (T)」的中文是什麼?,核苷酸,含氮鹼基,胞嘧啶,胸腺嘧啶,4,越→中
-W11-010,11,尿嘧啶,Uracil (U),Uracil,「Uracil (U)」的中文是什麼?,尿嘧啶,胸腺嘧啶,雙螺旋,胞嘧啶,1,越→中
-W11-011,11,去氧核糖,Deoxyribose,Deoxyribose,「Deoxyribose」的中文是什麼?,去氧核糖,雙螺旋,含氮鹼基,核糖核酸,1,越→中
-W11-012,11,核糖,Ribose,Ribose,「Ribose」的中文是什麼?,尿嘧啶,嘧啶,核糖,嘌呤,3,越→中
-W11-013,11,磷酸雙酯鍵,Liên kết phosphodiester,Phosphodiester bond,「Liên kết phosphodiester」的中文是什麼?,鳥嘌呤,去氧核糖,磷酸雙酯鍵,雙螺旋,3,越→中
-W11-014,11,雙螺旋,Chuỗi xoắn kép,Double helix,「Chuỗi xoắn kép」的中文是什麼?,雙螺旋,尿嘧啶,胞嘧啶,核苷酸,1,越→中
-W11-015,11,鹼基配對,Sự bắt cặp base,Base pairing,「Sự bắt cặp base」的中文是什麼?,胸腺嘧啶,胞嘧啶,去氧核糖,鹼基配對,4,越→中
-W11-016,11,互補,Bổ sung,Complementary,「Bổ sung」的中文是什麼?,互補,核糖,嘧啶,尿嘧啶,1,越→中
-W11-017,11,反平行,Đối song song,Antiparallel,「Đối song song」的中文是什麼?,含氮鹼基,反平行,鳥嘌呤,雙螺旋,2,越→中
-W11-018,11,去氧核糖核酸,DNA,DNA,「DNA」的中文是什麼?,鹼基配對,去氧核糖核酸,磷酸雙酯鍵,核苷酸,2,越→中
-W11-019,11,核糖核酸,RNA,RNA,「RNA」的中文是什麼?,鹼基配對,胸腺嘧啶,反平行,核糖核酸,4,越→中
-W11-020,11,基因,Gene,Gene,「Gene」的中文是什麼?,核苷,核糖,基因,嘌呤,3,越→中
+W11-001,11,核苷酸,Nucleotide,Nucleotide,「Nucleotide」的中文是什麼?,雙螺旋,鳥嘌呤,核苷酸,腺嘌呤,3,越→中
+W11-002,11,核苷,Nucleoside,Nucleoside,「Nucleoside」的中文是什麼?,核苷,基因,嘧啶,核糖,1,越→中
+W11-003,11,含氮鹼基,Base nitrogen,Nitrogenous base,「Base nitrogen」的中文是什麼?,尿嘧啶,含氮鹼基,核糖核酸,胸腺嘧啶,2,越→中
+W11-004,11,嘌呤,Purine,Purine,「Purine」的中文是什麼?,核糖,核苷酸,核苷,嘌呤,4,越→中
+W11-005,11,嘧啶,Pyrimidine,Pyrimidine,「Pyrimidine」的中文是什麼?,基因,核苷,嘧啶,互補,3,越→中
+W11-006,11,腺嘌呤,Adenine (A),Adenine,「Adenine (A)」的中文是什麼?,胞嘧啶,反平行,核苷酸,腺嘌呤,4,越→中
+W11-007,11,鳥嘌呤,Guanine (G),Guanine,「Guanine (G)」的中文是什麼?,核苷酸,腺嘌呤,鳥嘌呤,互補,3,越→中
+W11-008,11,胞嘧啶,Cytosine (C),Cytosine,「Cytosine (C)」的中文是什麼?,反平行,胞嘧啶,基因,雙螺旋,2,越→中
+W11-009,11,胸腺嘧啶,Thymine (T),Thymine,「Thymine (T)」的中文是什麼?,核苷酸,含氮鹼基,胸腺嘧啶,胞嘧啶,3,越→中
+W11-010,11,尿嘧啶,Uracil (U),Uracil,「Uracil (U)」的中文是什麼?,尿嘧啶,胞嘧啶,胸腺嘧啶,雙螺旋,1,越→中
+W11-011,11,去氧核糖,Deoxyribose,Deoxyribose,「Deoxyribose」的中文是什麼?,含氮鹼基,雙螺旋,去氧核糖,核糖核酸,3,越→中
+W11-012,11,核糖,Ribose,Ribose,「Ribose」的中文是什麼?,核糖,嘌呤,尿嘧啶,嘧啶,1,越→中
+W11-013,11,磷酸雙酯鍵,Liên kết phosphodiester,Phosphodiester bond,「Liên kết phosphodiester」的中文是什麼?,去氧核糖,雙螺旋,鳥嘌呤,磷酸雙酯鍵,4,越→中
+W11-014,11,雙螺旋,Chuỗi xoắn kép,Double helix,「Chuỗi xoắn kép」的中文是什麼?,胞嘧啶,尿嘧啶,核苷酸,雙螺旋,4,越→中
+W11-015,11,鹼基配對,Sự bắt cặp base,Base pairing,「Sự bắt cặp base」的中文是什麼?,去氧核糖,鹼基配對,胸腺嘧啶,胞嘧啶,2,越→中
+W11-016,11,互補,Bổ sung,Complementary,「Bổ sung」的中文是什麼?,尿嘧啶,核糖,互補,嘧啶,3,越→中
+W11-017,11,反平行,Đối song song,Antiparallel,「Đối song song」的中文是什麼?,鳥嘌呤,反平行,含氮鹼基,雙螺旋,2,越→中
+W11-018,11,去氧核糖核酸,DNA,DNA,「DNA」的中文是什麼?,鹼基配對,核苷酸,磷酸雙酯鍵,去氧核糖核酸,4,越→中
+W11-019,11,核糖核酸,RNA,RNA,「RNA」的中文是什麼?,胸腺嘧啶,鹼基配對,反平行,核糖核酸,4,越→中
+W11-020,11,基因,Gene,Gene,「Gene」的中文是什麼?,基因,嘌呤,核苷,核糖,1,越→中
+W11-E01,11,大溝,,,(標圖:DNA雙股螺旋) 標號1是什麼?,大溝,雙螺旋,小溝,磷酸雙酯鍵,1,標圖
+W11-E02,11,含氮鹼基,Base nitrogen,Nitrogenous base,(標圖:核苷酸結構) 標號3是什麼?,磷酸,含氮鹼基,核苷,去氧核糖,2,標圖
+W11-E03,11,腺嘌呤—胸腺嘧啶,,,哪一個配對正確?,胸腺嘧啶—鳥嘌呤,腺嘌呤—胸腺嘧啶,鳥嘌呤—尿嘧啶,腺嘌呤—胞嘧啶,2,配對
+W11-E04,11,30%,,,若DNA中A占30%，依鹼基互補原則，T約占多少%?,30%,70%,20%,50%,1,計算

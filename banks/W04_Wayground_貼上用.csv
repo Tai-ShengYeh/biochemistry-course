@@ -1,18 +1,22 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Cấu trúc bậc một」的中文是什麼?,Multiple Choice,球狀蛋白,一級結構,伴護蛋白,膠原蛋白,2,30,W04-001
-「Cấu trúc bậc hai」的中文是什麼?,Multiple Choice,二級結構,三級結構,伴護蛋白,四級結構,1,30,W04-002
-「Cấu trúc bậc ba」的中文是什麼?,Multiple Choice,三級結構,一級結構,膠原蛋白,伴護蛋白,1,30,W04-003
-「Cấu trúc bậc bốn」的中文是什麼?,Multiple Choice,膠原蛋白,四級結構,伴護蛋白,α螺旋,2,30,W04-004
-「Xoắn alpha (xoắn α)」的中文是什麼?,Multiple Choice,β摺板,角蛋白,α螺旋,四級結構,3,30,W04-005
-「Gấp nếp beta (phiến gấp nếp β)」的中文是什麼?,Multiple Choice,β摺板,伴護蛋白,轉角,球狀蛋白,1,30,W04-006
-「Đoạn quay」的中文是什麼?,Multiple Choice,β摺板,摺疊,二級結構,轉角,4,30,W04-007
-「Sự cuộn gập」的中文是什麼?,Multiple Choice,摺疊,β摺板,轉角,球狀蛋白,1,30,W04-008
+「Cấu trúc bậc một」的中文是什麼?,Multiple Choice,伴護蛋白,膠原蛋白,一級結構,球狀蛋白,3,30,W04-001
+「Cấu trúc bậc hai」的中文是什麼?,Multiple Choice,四級結構,三級結構,伴護蛋白,二級結構,4,30,W04-002
+「Cấu trúc bậc ba」的中文是什麼?,Multiple Choice,一級結構,三級結構,伴護蛋白,膠原蛋白,2,30,W04-003
+「Cấu trúc bậc bốn」的中文是什麼?,Multiple Choice,膠原蛋白,α螺旋,四級結構,伴護蛋白,3,30,W04-004
+「Xoắn alpha (xoắn α)」的中文是什麼?,Multiple Choice,α螺旋,角蛋白,四級結構,β摺板,1,30,W04-005
+「Gấp nếp beta (phiến gấp nếp β)」的中文是什麼?,Multiple Choice,球狀蛋白,伴護蛋白,β摺板,轉角,3,30,W04-006
+「Đoạn quay」的中文是什麼?,Multiple Choice,β摺板,二級結構,摺疊,轉角,4,30,W04-007
+「Sự cuộn gập」的中文是什麼?,Multiple Choice,轉角,β摺板,摺疊,球狀蛋白,3,30,W04-008
 「Sự biến tính」的中文是什麼?,Multiple Choice,β摺板,結構域,次單元,變性,4,30,W04-009
-「Tiểu đơn vị」的中文是什麼?,Multiple Choice,摺疊,球狀蛋白,次單元,角蛋白,3,30,W04-010
-「Vùng cấu trúc (domain)」的中文是什麼?,Multiple Choice,二級結構,α螺旋,結構域,次單元,3,30,W04-011
-「Protein đồng hành (chaperone)」的中文是什麼?,Multiple Choice,伴護蛋白,二級結構,纖維狀蛋白,β摺板,1,30,W04-012
-「Protein dạng sợi」的中文是什麼?,Multiple Choice,一級結構,膠原蛋白,纖維狀蛋白,球狀蛋白,3,30,W04-013
-「Protein dạng cầu」的中文是什麼?,Multiple Choice,膠原蛋白,β摺板,三級結構,球狀蛋白,4,30,W04-014
-「Collagen」的中文是什麼?,Multiple Choice,二級結構,膠原蛋白,一級結構,結構域,2,30,W04-015
-「Keratin」的中文是什麼?,Multiple Choice,一級結構,角蛋白,次單元,膠原蛋白,2,30,W04-016
-「Nhiễu xạ tia X」的中文是什麼?,Multiple Choice,二級結構,球狀蛋白,纖維狀蛋白,X光晶體繞射,4,30,W04-017
+「Tiểu đơn vị」的中文是什麼?,Multiple Choice,角蛋白,次單元,摺疊,球狀蛋白,2,30,W04-010
+「Vùng cấu trúc (domain)」的中文是什麼?,Multiple Choice,α螺旋,結構域,二級結構,次單元,2,30,W04-011
+「Protein đồng hành (chaperone)」的中文是什麼?,Multiple Choice,β摺板,二級結構,纖維狀蛋白,伴護蛋白,4,30,W04-012
+「Protein dạng sợi」的中文是什麼?,Multiple Choice,纖維狀蛋白,膠原蛋白,球狀蛋白,一級結構,1,30,W04-013
+「Protein dạng cầu」的中文是什麼?,Multiple Choice,球狀蛋白,β摺板,膠原蛋白,三級結構,1,30,W04-014
+「Collagen」的中文是什麼?,Multiple Choice,結構域,二級結構,膠原蛋白,一級結構,3,30,W04-015
+「Keratin」的中文是什麼?,Multiple Choice,膠原蛋白,一級結構,次單元,角蛋白,4,30,W04-016
+「Nhiễu xạ tia X」的中文是什麼?,Multiple Choice,X光晶體繞射,球狀蛋白,二級結構,纖維狀蛋白,1,30,W04-017
+(標圖:蛋白質結構層次) 標號1所在的胺基酸鏈代表哪一層結構?,Multiple Choice,一級結構,二級結構,四級結構,三級結構,1,30,W04-E01
+(標圖:α螺旋與β摺板) 標號1的虛線代表α螺旋中哪一種鍵?,Multiple Choice,離子鍵,氫鍵,雙硫鍵,胜肽鍵,2,30,W04-E02
+哪一個配對正確?,Multiple Choice,三級結構—胺基酸序列本身,四級結構—多個次單元組合,一級結構—多個次單元組合,二級結構—決定胺基酸種類,2,30,W04-E03
+使蛋白質失去原本立體結構、失去功能的過程稱為什麼?,Multiple Choice,變性,轉角,摺疊,結構域,1,30,W04-E04

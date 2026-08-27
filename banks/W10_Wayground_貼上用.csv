@@ -1,21 +1,25 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Acid béo」的中文是什麼?,Multiple Choice,膽固醇,細胞膜,脂肪酸,磷脂,3,30,W10-001
-「Acid béo no」的中文是什麼?,Multiple Choice,流體鑲嵌模型,轉運蛋白,兩親性,飽和脂肪酸,4,30,W10-002
-「Acid béo không no」的中文是什麼?,Multiple Choice,流體鑲嵌模型,不飽和脂肪酸,轉運蛋白,被動運輸,2,30,W10-003
-「Triacylglycerol」的中文是什麼?,Multiple Choice,流體鑲嵌模型,飽和脂肪酸,三酸甘油酯,被動運輸,3,30,W10-004
-「Glycerol」的中文是什麼?,Multiple Choice,固醇,滲透,細胞膜,甘油,4,30,W10-005
-「Phospholipid」的中文是什麼?,Multiple Choice,磷脂,甘油,擴散,脂雙層,1,30,W10-006
-「Steroid」的中文是什麼?,Multiple Choice,磷脂,固醇,脂肪酸,甘油,2,30,W10-007
-「Cholesterol」的中文是什麼?,Multiple Choice,膽固醇,擴散,被動運輸,滲透,1,30,W10-008
-「Lớp lipid kép」的中文是什麼?,Multiple Choice,脂雙層,擴散,細胞膜,滲透,1,30,W10-009
-「Lưỡng cực (amphipathic)」的中文是什麼?,Multiple Choice,擴散,脂肪酸,兩親性,細胞膜,3,30,W10-010
-「Màng tế bào」的中文是什麼?,Multiple Choice,滲透,主動運輸,細胞膜,磷脂,3,30,W10-011
-「Mô hình khảm lỏng」的中文是什麼?,Multiple Choice,流體鑲嵌模型,兩親性,轉運蛋白,主動運輸,1,30,W10-012
-「Sự khuếch tán」的中文是什麼?,Multiple Choice,磷脂,擴散,酯鍵,兩親性,2,30,W10-013
-「Sự thẩm thấu」的中文是什麼?,Multiple Choice,酯鍵,細胞膜,脂雙層,滲透,4,30,W10-014
-「Vận chuyển thụ động」的中文是什麼?,Multiple Choice,飽和脂肪酸,鈉鉀幫浦,轉運蛋白,被動運輸,4,30,W10-015
-「Vận chuyển chủ động」的中文是什麼?,Multiple Choice,主動運輸,轉運蛋白,鈉鉀幫浦,被動運輸,1,30,W10-016
-「Protein vận chuyển」的中文是什麼?,Multiple Choice,膽固醇,被動運輸,主動運輸,轉運蛋白,4,30,W10-017
-「Kênh ion」的中文是什麼?,Multiple Choice,飽和脂肪酸,離子通道,細胞膜,被動運輸,2,30,W10-018
-「Bơm Na+/K+」的中文是什麼?,Multiple Choice,兩親性,鈉鉀幫浦,主動運輸,膽固醇,2,30,W10-019
-「Liên kết ester」的中文是什麼?,Multiple Choice,擴散,磷脂,酯鍵,甘油,3,30,W10-020
+「Acid béo」的中文是什麼?,Multiple Choice,細胞膜,磷脂,脂肪酸,膽固醇,3,30,W10-001
+「Acid béo no」的中文是什麼?,Multiple Choice,飽和脂肪酸,兩親性,流體鑲嵌模型,轉運蛋白,1,30,W10-002
+「Acid béo không no」的中文是什麼?,Multiple Choice,流體鑲嵌模型,不飽和脂肪酸,被動運輸,轉運蛋白,2,30,W10-003
+「Triacylglycerol」的中文是什麼?,Multiple Choice,流體鑲嵌模型,被動運輸,飽和脂肪酸,三酸甘油酯,4,30,W10-004
+「Glycerol」的中文是什麼?,Multiple Choice,滲透,細胞膜,甘油,固醇,3,30,W10-005
+「Phospholipid」的中文是什麼?,Multiple Choice,脂雙層,甘油,擴散,磷脂,4,30,W10-006
+「Steroid」的中文是什麼?,Multiple Choice,磷脂,甘油,固醇,脂肪酸,3,30,W10-007
+「Cholesterol」的中文是什麼?,Multiple Choice,被動運輸,膽固醇,擴散,滲透,2,30,W10-008
+「Lớp lipid kép」的中文是什麼?,Multiple Choice,擴散,細胞膜,脂雙層,滲透,3,30,W10-009
+「Lưỡng cực (amphipathic)」的中文是什麼?,Multiple Choice,兩親性,細胞膜,擴散,脂肪酸,1,30,W10-010
+「Màng tế bào」的中文是什麼?,Multiple Choice,主動運輸,滲透,細胞膜,磷脂,3,30,W10-011
+「Mô hình khảm lỏng」的中文是什麼?,Multiple Choice,流體鑲嵌模型,主動運輸,兩親性,轉運蛋白,1,30,W10-012
+「Sự khuếch tán」的中文是什麼?,Multiple Choice,酯鍵,兩親性,磷脂,擴散,4,30,W10-013
+「Sự thẩm thấu」的中文是什麼?,Multiple Choice,細胞膜,酯鍵,脂雙層,滲透,4,30,W10-014
+「Vận chuyển thụ động」的中文是什麼?,Multiple Choice,轉運蛋白,被動運輸,飽和脂肪酸,鈉鉀幫浦,2,30,W10-015
+「Vận chuyển chủ động」的中文是什麼?,Multiple Choice,被動運輸,轉運蛋白,主動運輸,鈉鉀幫浦,3,30,W10-016
+「Protein vận chuyển」的中文是什麼?,Multiple Choice,被動運輸,轉運蛋白,膽固醇,主動運輸,2,30,W10-017
+「Kênh ion」的中文是什麼?,Multiple Choice,飽和脂肪酸,被動運輸,細胞膜,離子通道,4,30,W10-018
+「Bơm Na+/K+」的中文是什麼?,Multiple Choice,主動運輸,兩親性,膽固醇,鈉鉀幫浦,4,30,W10-019
+「Liên kết ester」的中文是什麼?,Multiple Choice,酯鍵,甘油,擴散,磷脂,1,30,W10-020
+(標圖:跨膜運輸) 標號1是什麼?,Multiple Choice,擴散,離子通道,主動運輸,鈉鉀幫浦,1,30,W10-E01
+(標圖:跨膜運輸) 標號3是什麼?,Multiple Choice,擴散,主動運輸,滲透,離子通道,2,30,W10-E02
+哪一個配對正確?,Multiple Choice,飽和脂肪酸—低熔點,磷脂—兩親性,離子通道—主動運輸,鈉鉀幫浦—被動運輸,2,30,W10-E03
+細胞膜的流動性主要受什麼因素影響?,Multiple Choice,脂肪酸飽和程度,醣類含量,蛋白質種類,水分子多寡,1,30,W10-E04

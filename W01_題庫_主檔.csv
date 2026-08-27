@@ -1,16 +1,20 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W01-002,1,細胞,Tế bào,Cell,「Tế bào」的中文是什麼?,細胞,脂質,蛋白質,分子,1,越→中
-W01-009,1,分子,Phân tử,Molecule,「Phân tử」的中文是什麼?,單體,核酸,分子,細胞,3,越→中
-W01-012,1,蛋白質,Protein,Protein,「Protein」的中文是什麼?,碳水化合物,脂質,蛋白質,核酸,3,越→中
-W01-013,1,碳水化合物,Carbohydrate,Carbohydrate,「Carbohydrate」的中文是什麼?,脂質,核酸,蛋白質,碳水化合物,4,越→中
-W01-014,1,脂質,Lipid,Lipid,「Lipid」的中文是什麼?,單體,核酸,脂質,醣類,3,越→中
-W01-015,1,核酸,Nucleic acid,Nucleic acid,「Nucleic acid」的中文是什麼?,核酸,蛋白質,脂質,大分子,1,越→中
-W01-006,1,細胞核,Nhân tế bào,Nucleus,「Nhân tế bào」的中文是什麼?,細胞核,粒線體,細胞質,細胞膜,1,越→中
-W01-007,1,粒線體,Ty thể,Mitochondrion,「Ty thể」的中文是什麼?,細胞核,粒線體,胞器,細胞膜,2,越→中
+W01-002,1,細胞,Tế bào,Cell,「Tế bào」的中文是什麼?,蛋白質,細胞,分子,脂質,2,越→中
+W01-009,1,分子,Phân tử,Molecule,「Phân tử」的中文是什麼?,細胞,單體,核酸,分子,4,越→中
+W01-012,1,蛋白質,Protein,Protein,「Protein」的中文是什麼?,碳水化合物,核酸,蛋白質,脂質,3,越→中
+W01-013,1,碳水化合物,Carbohydrate,Carbohydrate,「Carbohydrate」的中文是什麼?,脂質,蛋白質,碳水化合物,核酸,3,越→中
+W01-014,1,脂質,Lipid,Lipid,「Lipid」的中文是什麼?,脂質,核酸,醣類,單體,1,越→中
+W01-015,1,核酸,Nucleic acid,Nucleic acid,「Nucleic acid」的中文是什麼?,核酸,大分子,蛋白質,脂質,1,越→中
+W01-006,1,細胞核,Nhân tế bào,Nucleus,「Nhân tế bào」的中文是什麼?,粒線體,細胞膜,細胞核,細胞質,3,越→中
+W01-007,1,粒線體,Ty thể,Mitochondrion,「Ty thể」的中文是什麼?,胞器,細胞核,粒線體,細胞膜,3,越→中
 W01-007,1,粒線體,Ty thể,Mitochondrion,做 ATP 的胞器是什麼?,核糖體,細胞核,細胞膜,粒線體,4,功能
-W01-006,1,細胞核,Nhân tế bào,Nucleus,DNA 放在哪裡?,細胞膜,細胞核,細胞質,粒線體,2,功能
-W01-016,1,大分子,Đại phân tử,Macromolecule,「Đại phân tử」的中文是什麼?,聚合物,大分子,分子,單體,2,越→中
-W01-017,1,單體,Đơn phân,Monomer,「Đơn phân」的中文是什麼?,大分子,聚合物,單體,官能基,3,越→中
-W01-011,1,官能基,Nhóm chức,Functional group,「Nhóm chức」的中文是什麼?,官能基,側鏈,單體,胞器,1,越→中
-W01-011,1,官能基,Nhóm chức,Functional group,"分子上會反應的那一小部分,叫什麼?",聚合物,官能基,大分子,單體,2,概念
-W01-012,1,蛋白質,Protein,Protein,蛋白質的單體是什麼?,單醣,脂肪酸,核苷酸,胺基酸,4,概念
+W01-006,1,細胞核,Nhân tế bào,Nucleus,DNA 放在哪裡?,粒線體,細胞核,細胞膜,細胞質,2,功能
+W01-016,1,大分子,Đại phân tử,Macromolecule,「Đại phân tử」的中文是什麼?,分子,大分子,聚合物,單體,2,越→中
+W01-017,1,單體,Đơn phân,Monomer,「Đơn phân」的中文是什麼?,單體,官能基,大分子,聚合物,1,越→中
+W01-011,1,官能基,Nhóm chức,Functional group,「Nhóm chức」的中文是什麼?,單體,胞器,官能基,側鏈,3,越→中
+W01-011,1,官能基,Nhóm chức,Functional group,"分子上會反應的那一小部分,叫什麼?",大分子,聚合物,單體,官能基,4,概念
+W01-012,1,蛋白質,Protein,Protein,蛋白質的單體是什麼?,核苷酸,單醣,脂肪酸,胺基酸,4,概念
+W01-E01,1,細胞核,Nhân tế bào,Nucleus,(標圖:細胞構造) 圖正中央、含核仁的紫色構造是什麼?,細胞核,內質網,粒線體,高基氏體,1,標圖
+W01-E02,1,高基氏體,,,(標圖:細胞構造) 圖左下方、像一疊薄餅的構造是什麼?,內質網,高基氏體,粒線體,細胞膜,2,標圖
+W01-E03,1,粒線體—ATP合成,,,哪一個配對正確?,細胞核—ATP合成,粒線體—ATP合成,蛋白質—由核苷酸組成,核酸—細胞能量來源,2,配對
+W01-E04,1,原核細胞,Tế bào nhân sơ,Prokaryotic cell,沒有細胞核的細胞稱為什麼?,原核細胞,單體,真核細胞,大分子,1,概念

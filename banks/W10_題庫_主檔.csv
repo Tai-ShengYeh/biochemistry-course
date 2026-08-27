@@ -1,21 +1,25 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W10-001,10,脂肪酸,Acid béo,Fatty acid,「Acid béo」的中文是什麼?,膽固醇,細胞膜,脂肪酸,磷脂,3,越→中
-W10-002,10,飽和脂肪酸,Acid béo no,Saturated fatty acid,「Acid béo no」的中文是什麼?,流體鑲嵌模型,轉運蛋白,兩親性,飽和脂肪酸,4,越→中
-W10-003,10,不飽和脂肪酸,Acid béo không no,Unsaturated fatty acid,「Acid béo không no」的中文是什麼?,流體鑲嵌模型,不飽和脂肪酸,轉運蛋白,被動運輸,2,越→中
-W10-004,10,三酸甘油酯,Triacylglycerol,Triacylglycerol,「Triacylglycerol」的中文是什麼?,流體鑲嵌模型,飽和脂肪酸,三酸甘油酯,被動運輸,3,越→中
-W10-005,10,甘油,Glycerol,Glycerol,「Glycerol」的中文是什麼?,固醇,滲透,細胞膜,甘油,4,越→中
-W10-006,10,磷脂,Phospholipid,Phospholipid,「Phospholipid」的中文是什麼?,磷脂,甘油,擴散,脂雙層,1,越→中
-W10-007,10,固醇,Steroid,Steroid,「Steroid」的中文是什麼?,磷脂,固醇,脂肪酸,甘油,2,越→中
-W10-008,10,膽固醇,Cholesterol,Cholesterol,「Cholesterol」的中文是什麼?,膽固醇,擴散,被動運輸,滲透,1,越→中
-W10-009,10,脂雙層,Lớp lipid kép,Lipid bilayer,「Lớp lipid kép」的中文是什麼?,脂雙層,擴散,細胞膜,滲透,1,越→中
-W10-010,10,兩親性,Lưỡng cực (amphipathic),Amphipathic,「Lưỡng cực (amphipathic)」的中文是什麼?,擴散,脂肪酸,兩親性,細胞膜,3,越→中
-W10-011,10,細胞膜,Màng tế bào,Cell membrane,「Màng tế bào」的中文是什麼?,滲透,主動運輸,細胞膜,磷脂,3,越→中
-W10-012,10,流體鑲嵌模型,Mô hình khảm lỏng,Fluid mosaic model,「Mô hình khảm lỏng」的中文是什麼?,流體鑲嵌模型,兩親性,轉運蛋白,主動運輸,1,越→中
-W10-013,10,擴散,Sự khuếch tán,Diffusion,「Sự khuếch tán」的中文是什麼?,磷脂,擴散,酯鍵,兩親性,2,越→中
-W10-014,10,滲透,Sự thẩm thấu,Osmosis,「Sự thẩm thấu」的中文是什麼?,酯鍵,細胞膜,脂雙層,滲透,4,越→中
-W10-015,10,被動運輸,Vận chuyển thụ động,Passive transport,「Vận chuyển thụ động」的中文是什麼?,飽和脂肪酸,鈉鉀幫浦,轉運蛋白,被動運輸,4,越→中
-W10-016,10,主動運輸,Vận chuyển chủ động,Active transport,「Vận chuyển chủ động」的中文是什麼?,主動運輸,轉運蛋白,鈉鉀幫浦,被動運輸,1,越→中
-W10-017,10,轉運蛋白,Protein vận chuyển,Transporter,「Protein vận chuyển」的中文是什麼?,膽固醇,被動運輸,主動運輸,轉運蛋白,4,越→中
-W10-018,10,離子通道,Kênh ion,Ion channel,「Kênh ion」的中文是什麼?,飽和脂肪酸,離子通道,細胞膜,被動運輸,2,越→中
-W10-019,10,鈉鉀幫浦,Bơm Na+/K+,Sodium-potassium pump,「Bơm Na+/K+」的中文是什麼?,兩親性,鈉鉀幫浦,主動運輸,膽固醇,2,越→中
-W10-020,10,酯鍵,Liên kết ester,Ester bond,「Liên kết ester」的中文是什麼?,擴散,磷脂,酯鍵,甘油,3,越→中
+W10-001,10,脂肪酸,Acid béo,Fatty acid,「Acid béo」的中文是什麼?,細胞膜,磷脂,脂肪酸,膽固醇,3,越→中
+W10-002,10,飽和脂肪酸,Acid béo no,Saturated fatty acid,「Acid béo no」的中文是什麼?,飽和脂肪酸,兩親性,流體鑲嵌模型,轉運蛋白,1,越→中
+W10-003,10,不飽和脂肪酸,Acid béo không no,Unsaturated fatty acid,「Acid béo không no」的中文是什麼?,流體鑲嵌模型,不飽和脂肪酸,被動運輸,轉運蛋白,2,越→中
+W10-004,10,三酸甘油酯,Triacylglycerol,Triacylglycerol,「Triacylglycerol」的中文是什麼?,流體鑲嵌模型,被動運輸,飽和脂肪酸,三酸甘油酯,4,越→中
+W10-005,10,甘油,Glycerol,Glycerol,「Glycerol」的中文是什麼?,滲透,細胞膜,甘油,固醇,3,越→中
+W10-006,10,磷脂,Phospholipid,Phospholipid,「Phospholipid」的中文是什麼?,脂雙層,甘油,擴散,磷脂,4,越→中
+W10-007,10,固醇,Steroid,Steroid,「Steroid」的中文是什麼?,磷脂,甘油,固醇,脂肪酸,3,越→中
+W10-008,10,膽固醇,Cholesterol,Cholesterol,「Cholesterol」的中文是什麼?,被動運輸,膽固醇,擴散,滲透,2,越→中
+W10-009,10,脂雙層,Lớp lipid kép,Lipid bilayer,「Lớp lipid kép」的中文是什麼?,擴散,細胞膜,脂雙層,滲透,3,越→中
+W10-010,10,兩親性,Lưỡng cực (amphipathic),Amphipathic,「Lưỡng cực (amphipathic)」的中文是什麼?,兩親性,細胞膜,擴散,脂肪酸,1,越→中
+W10-011,10,細胞膜,Màng tế bào,Cell membrane,「Màng tế bào」的中文是什麼?,主動運輸,滲透,細胞膜,磷脂,3,越→中
+W10-012,10,流體鑲嵌模型,Mô hình khảm lỏng,Fluid mosaic model,「Mô hình khảm lỏng」的中文是什麼?,流體鑲嵌模型,主動運輸,兩親性,轉運蛋白,1,越→中
+W10-013,10,擴散,Sự khuếch tán,Diffusion,「Sự khuếch tán」的中文是什麼?,酯鍵,兩親性,磷脂,擴散,4,越→中
+W10-014,10,滲透,Sự thẩm thấu,Osmosis,「Sự thẩm thấu」的中文是什麼?,細胞膜,酯鍵,脂雙層,滲透,4,越→中
+W10-015,10,被動運輸,Vận chuyển thụ động,Passive transport,「Vận chuyển thụ động」的中文是什麼?,轉運蛋白,被動運輸,飽和脂肪酸,鈉鉀幫浦,2,越→中
+W10-016,10,主動運輸,Vận chuyển chủ động,Active transport,「Vận chuyển chủ động」的中文是什麼?,被動運輸,轉運蛋白,主動運輸,鈉鉀幫浦,3,越→中
+W10-017,10,轉運蛋白,Protein vận chuyển,Transporter,「Protein vận chuyển」的中文是什麼?,被動運輸,轉運蛋白,膽固醇,主動運輸,2,越→中
+W10-018,10,離子通道,Kênh ion,Ion channel,「Kênh ion」的中文是什麼?,飽和脂肪酸,被動運輸,細胞膜,離子通道,4,越→中
+W10-019,10,鈉鉀幫浦,Bơm Na+/K+,Sodium-potassium pump,「Bơm Na+/K+」的中文是什麼?,主動運輸,兩親性,膽固醇,鈉鉀幫浦,4,越→中
+W10-020,10,酯鍵,Liên kết ester,Ester bond,「Liên kết ester」的中文是什麼?,酯鍵,甘油,擴散,磷脂,1,越→中
+W10-E01,10,擴散,Sự khuếch tán,Diffusion,(標圖:跨膜運輸) 標號1是什麼?,擴散,離子通道,主動運輸,鈉鉀幫浦,1,標圖
+W10-E02,10,主動運輸,Vận chuyển chủ động,Active transport,(標圖:跨膜運輸) 標號3是什麼?,擴散,主動運輸,滲透,離子通道,2,標圖
+W10-E03,10,磷脂—兩親性,,,哪一個配對正確?,飽和脂肪酸—低熔點,磷脂—兩親性,離子通道—主動運輸,鈉鉀幫浦—被動運輸,2,配對
+W10-E04,10,脂肪酸飽和程度,,,細胞膜的流動性主要受什麼因素影響?,脂肪酸飽和程度,醣類含量,蛋白質種類,水分子多寡,1,概念

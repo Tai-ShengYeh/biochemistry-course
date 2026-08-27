@@ -1,21 +1,25 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W17-001,17,代謝整合,Tích hợp chuyển hóa,Metabolic integration,「Tích hợp chuyển hóa」的中文是什麼?,飽食狀態,瘦體素,代謝症候群,代謝整合,4,越→中
-W17-002,17,激素,Hormone,Hormone,「Hormone」的中文是什麼?,受體,胰島素,激素,血糖,3,越→中
-W17-003,17,受體,Thụ thể,Receptor,「Thụ thể」的中文是什麼?,恆定,肝臟,激素,受體,4,越→中
-W17-004,17,訊息傳遞,Sự truyền tín hiệu,Signal transduction,「Sự truyền tín hiệu」的中文是什麼?,骨骼肌,飽食狀態,訊息傳遞,代謝整合,3,越→中
-W17-005,17,第二傳訊者,Chất truyền tin thứ hai,Second messenger,「Chất truyền tin thứ hai」的中文是什麼?,腎上腺素,第二傳訊者,胰島素阻抗,脂肪組織,2,越→中
-W17-006,17,胰島素,Insulin,Insulin,「Insulin」的中文是什麼?,飽食狀態,糖尿病,飢餓狀態,胰島素,4,越→中
-W17-007,17,升糖素,Glucagon,Glucagon,「Glucagon」的中文是什麼?,瘦體素,脂肪組織,升糖素,血糖,3,越→中
-W17-008,17,腎上腺素,Adrenaline (epinephrine),Epinephrine,「Adrenaline (epinephrine)」的中文是什麼?,腎上腺素,飢餓狀態,脂肪組織,訊息傳遞,1,越→中
-W17-009,17,皮質醇,Cortisol,Cortisol,「Cortisol」的中文是什麼?,胰島素,皮質醇,瘦體素,恆定,2,越→中
-W17-010,17,瘦體素,Leptin,Leptin,「Leptin」的中文是什麼?,瘦體素,骨骼肌,肝臟,脂肪組織,1,越→中
-W17-011,17,血糖,Đường huyết,Blood glucose,「Đường huyết」的中文是什麼?,血糖,恆定,受體,皮質醇,1,越→中
-W17-012,17,恆定,Sự cân bằng nội môi,Homeostasis,「Sự cân bằng nội môi」的中文是什麼?,受體,皮質醇,恆定,骨骼肌,3,越→中
-W17-013,17,飽食狀態,Trạng thái no,Fed state,「Trạng thái no」的中文是什麼?,糖尿病,腎上腺素,骨骼肌,飽食狀態,4,越→中
-W17-014,17,飢餓狀態,Trạng thái đói,Fasting state,「Trạng thái đói」的中文是什麼?,飢餓狀態,脂肪組織,皮質醇,代謝症候群,1,越→中
-W17-015,17,脂肪組織,Mô mỡ,Adipose tissue,「Mô mỡ」的中文是什麼?,皮質醇,糖尿病,脂肪組織,飢餓狀態,3,越→中
-W17-016,17,肝臟,Gan,Liver,「Gan」的中文是什麼?,皮質醇,肝臟,血糖,恆定,2,越→中
-W17-017,17,骨骼肌,Cơ xương,Skeletal muscle,「Cơ xương」的中文是什麼?,訊息傳遞,受體,皮質醇,骨骼肌,4,越→中
-W17-018,17,糖尿病,Bệnh đái tháo đường,Diabetes mellitus,「Bệnh đái tháo đường」的中文是什麼?,胰島素,糖尿病,肝臟,骨骼肌,2,越→中
-W17-019,17,胰島素阻抗,Kháng insulin,Insulin resistance,「Kháng insulin」的中文是什麼?,皮質醇,胰島素阻抗,脂肪組織,飽食狀態,2,越→中
+W17-001,17,代謝整合,Tích hợp chuyển hóa,Metabolic integration,「Tích hợp chuyển hóa」的中文是什麼?,瘦體素,代謝症候群,代謝整合,飽食狀態,3,越→中
+W17-002,17,激素,Hormone,Hormone,「Hormone」的中文是什麼?,激素,受體,血糖,胰島素,1,越→中
+W17-003,17,受體,Thụ thể,Receptor,「Thụ thể」的中文是什麼?,肝臟,受體,恆定,激素,2,越→中
+W17-004,17,訊息傳遞,Sự truyền tín hiệu,Signal transduction,「Sự truyền tín hiệu」的中文是什麼?,飽食狀態,骨骼肌,代謝整合,訊息傳遞,4,越→中
+W17-005,17,第二傳訊者,Chất truyền tin thứ hai,Second messenger,「Chất truyền tin thứ hai」的中文是什麼?,腎上腺素,胰島素阻抗,第二傳訊者,脂肪組織,3,越→中
+W17-006,17,胰島素,Insulin,Insulin,「Insulin」的中文是什麼?,糖尿病,飽食狀態,飢餓狀態,胰島素,4,越→中
+W17-007,17,升糖素,Glucagon,Glucagon,「Glucagon」的中文是什麼?,瘦體素,血糖,升糖素,脂肪組織,3,越→中
+W17-008,17,腎上腺素,Adrenaline (epinephrine),Epinephrine,「Adrenaline (epinephrine)」的中文是什麼?,飢餓狀態,腎上腺素,訊息傳遞,脂肪組織,2,越→中
+W17-009,17,皮質醇,Cortisol,Cortisol,「Cortisol」的中文是什麼?,恆定,瘦體素,皮質醇,胰島素,3,越→中
+W17-010,17,瘦體素,Leptin,Leptin,「Leptin」的中文是什麼?,瘦體素,脂肪組織,骨骼肌,肝臟,1,越→中
+W17-011,17,血糖,Đường huyết,Blood glucose,「Đường huyết」的中文是什麼?,恆定,受體,血糖,皮質醇,3,越→中
+W17-012,17,恆定,Sự cân bằng nội môi,Homeostasis,「Sự cân bằng nội môi」的中文是什麼?,恆定,骨骼肌,皮質醇,受體,1,越→中
+W17-013,17,飽食狀態,Trạng thái no,Fed state,「Trạng thái no」的中文是什麼?,骨骼肌,糖尿病,腎上腺素,飽食狀態,4,越→中
+W17-014,17,飢餓狀態,Trạng thái đói,Fasting state,「Trạng thái đói」的中文是什麼?,皮質醇,脂肪組織,代謝症候群,飢餓狀態,4,越→中
+W17-015,17,脂肪組織,Mô mỡ,Adipose tissue,「Mô mỡ」的中文是什麼?,飢餓狀態,脂肪組織,糖尿病,皮質醇,2,越→中
+W17-016,17,肝臟,Gan,Liver,「Gan」的中文是什麼?,血糖,皮質醇,肝臟,恆定,3,越→中
+W17-017,17,骨骼肌,Cơ xương,Skeletal muscle,「Cơ xương」的中文是什麼?,受體,骨骼肌,訊息傳遞,皮質醇,2,越→中
+W17-018,17,糖尿病,Bệnh đái tháo đường,Diabetes mellitus,「Bệnh đái tháo đường」的中文是什麼?,骨骼肌,肝臟,胰島素,糖尿病,4,越→中
+W17-019,17,胰島素阻抗,Kháng insulin,Insulin resistance,「Kháng insulin」的中文是什麼?,脂肪組織,飽食狀態,皮質醇,胰島素阻抗,4,越→中
 W17-020,17,代謝症候群,Hội chứng chuyển hóa,Metabolic syndrome,「Hội chứng chuyển hóa」的中文是什麼?,代謝症候群,第二傳訊者,脂肪組織,代謝整合,1,越→中
+W17-E01,17,肝臟,Gan,Liver,(標圖:w17_organs_labeled) 標號2是哪個器官?,肝臟,骨骼肌,腦,脂肪組織,1,標圖
+W17-E02,17,肝醣分解,Sự phân giải glycogen,Glycogenolysis,(標圖:w17_fed_fasted_labeled) 標號4(飢餓狀態肝臟)何種作用增強?,醣解作用,肝醣分解,脂質新生,蛋白質合成,2,標圖
+W17-E03,17,升糖素—刺激肝醣分解與醣質新生,,,哪一個配對正確?,瘦體素—由胰臟分泌調控血糖,升糖素—刺激肝醣分解與醣質新生,腎上腺素—抑制肝醣分解,胰島素—刺激脂肪分解,2,配對
+W17-E04,17,酮體,Thể ceton,Ketone body,長期飢餓狀態下，腦部主要能量來源會轉換成什麼?,酮體,葡萄糖,乳酸,游離脂肪酸,1,概念

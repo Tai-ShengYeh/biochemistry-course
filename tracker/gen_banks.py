@@ -22,10 +22,10 @@ GLOSS = "../glossary_ids.csv"
 OUTDIR = "../banks"
 MAXQ = None        # 不設上限:每個術語都要有題。小測從中抽 5,其餘給 Gimkit 練習。
                    # 曾經設 15,結果每週第16個以後的術語(含「緩衝溶液」「糖尿病」)一題都沒有 —— 別再加回來。
-EXAM_WEEKS = {8, 18}
+EXAM_WEEKS = {9, 18}   # 2026-08-27 裁定:W9 期中考、W8 碳水(與 glossary/網站一致)
 
 TOPIC = {2:"水、pH 與緩衝溶液",3:"胺基酸與胜肽",4:"蛋白質三維結構",5:"蛋白質功能:肌紅素與血紅素",
- 6:"酵素(一):催化原理",7:"酵素(二):動力學與抑制",9:"碳水化合物",10:"脂質與生物膜",
+ 6:"酵素(一):催化原理",7:"酵素(二):動力學與抑制",8:"碳水化合物",10:"脂質與生物膜",
  11:"核苷酸與核酸",12:"生物能量學:ΔG 與 ATP",13:"糖解作用",14:"檸檬酸循環",
  15:"氧化磷酸化",16:"脂肪酸與胺基酸代謝",17:"代謝整合與激素調節"}
 
@@ -124,6 +124,12 @@ def main():
     print("-" * 72)
     for wk in weeks:
         rows = build_week(wk, g[wk], a.seed)
+        # 保留主檔裡人工出的期考題型列(標圖/配對/計算/概念),只有「越→中」是本腳本負責重生的。
+        # 沒有這段,重跑一次就把人工題全部洗掉。
+        prev = os.path.join(OUTDIR, f"W{wk:02d}_題庫_主檔.csv")
+        if os.path.exists(prev):
+            rows += [r for r in csv.DictReader(open(prev, encoding="utf-8-sig"))
+                     if r.get("type") and r["type"] != "越→中"]
         rows = rebalance(rows, seed=a.seed + wk)
         errs = validate(wk, rows)
         c = collections.Counter(r["correct"] for r in rows)

@@ -1,16 +1,20 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W06-001,6,酵素,Enzyme,Enzyme,「Enzyme」的中文是什麼?,受質,酶原,酵素,產物,3,越→中
-W06-002,6,受質,Cơ chất,Substrate,「Cơ chất」的中文是什麼?,受質,酵素,催化,輔酶,1,越→中
-W06-003,6,產物,Sản phẩm,Product,「Sản phẩm」的中文是什麼?,輔酶,酶原,產物,催化,3,越→中
-W06-004,6,活性部位,Trung tâm hoạt động,Active site,「Trung tâm hoạt động」的中文是什麼?,維生素,過渡態,誘導契合,活性部位,4,越→中
-W06-005,6,催化,Sự xúc tác,Catalysis,「Sự xúc tác」的中文是什麼?,產物,酵素,受質,催化,4,越→中
-W06-006,6,活化能,Năng lượng hoạt hóa,Activation energy,「Năng lượng hoạt hóa」的中文是什麼?,專一性,過渡態,活化能,活性部位,3,越→中
+W06-001,6,酵素,Enzyme,Enzyme,「Enzyme」的中文是什麼?,產物,酶原,酵素,受質,3,越→中
+W06-002,6,受質,Cơ chất,Substrate,「Cơ chất」的中文是什麼?,催化,受質,酵素,輔酶,2,越→中
+W06-003,6,產物,Sản phẩm,Product,「Sản phẩm」的中文是什麼?,產物,輔酶,催化,酶原,1,越→中
+W06-004,6,活性部位,Trung tâm hoạt động,Active site,「Trung tâm hoạt động」的中文是什麼?,過渡態,活性部位,維生素,誘導契合,2,越→中
+W06-005,6,催化,Sự xúc tác,Catalysis,「Sự xúc tác」的中文是什麼?,產物,催化,受質,酵素,2,越→中
+W06-006,6,活化能,Năng lượng hoạt hóa,Activation energy,「Năng lượng hoạt hóa」的中文是什麼?,過渡態,專一性,活性部位,活化能,4,越→中
 W06-007,6,過渡態,Trạng thái chuyển tiếp,Transition state,「Trạng thái chuyển tiếp」的中文是什麼?,輔酶,過渡態,維生素,輔因子,2,越→中
 W06-008,6,專一性,Tính đặc hiệu,Specificity,「Tính đặc hiệu」的中文是什麼?,過渡態,催化,專一性,維生素,3,越→中
-W06-009,6,誘導契合,Khớp cảm ứng,Induced fit,「Khớp cảm ứng」的中文是什麼?,過渡態,誘導契合,反應速率,維生素,2,越→中
-W06-010,6,輔因子,Cofactor,Cofactor,「Cofactor」的中文是什麼?,輔因子,活化能,誘導契合,過渡態,1,越→中
-W06-011,6,輔酶,Coenzyme,Coenzyme,「Coenzyme」的中文是什麼?,輔酶,受質,輔因子,輔基,1,越→中
-W06-012,6,輔基,Nhóm ngoại,Prosthetic group,「Nhóm ngoại」的中文是什麼?,輔酶,產物,酵素,輔基,4,越→中
-W06-013,6,維生素,Vitamin,Vitamin,「Vitamin」的中文是什麼?,輔因子,維生素,活化能,專一性,2,越→中
-W06-014,6,酶原,Tiền enzyme (zymogen),Zymogen,「Tiền enzyme (zymogen)」的中文是什麼?,活化能,酶原,輔基,輔酶,2,越→中
-W06-015,6,反應速率,Tốc độ phản ứng,Reaction rate,「Tốc độ phản ứng」的中文是什麼?,反應速率,活性部位,維生素,活化能,1,越→中
+W06-009,6,誘導契合,Khớp cảm ứng,Induced fit,「Khớp cảm ứng」的中文是什麼?,誘導契合,過渡態,反應速率,維生素,1,越→中
+W06-010,6,輔因子,Cofactor,Cofactor,「Cofactor」的中文是什麼?,輔因子,過渡態,活化能,誘導契合,1,越→中
+W06-011,6,輔酶,Coenzyme,Coenzyme,「Coenzyme」的中文是什麼?,輔因子,輔基,輔酶,受質,3,越→中
+W06-012,6,輔基,Nhóm ngoại,Prosthetic group,「Nhóm ngoại」的中文是什麼?,酵素,輔基,產物,輔酶,2,越→中
+W06-013,6,維生素,Vitamin,Vitamin,「Vitamin」的中文是什麼?,活化能,專一性,輔因子,維生素,4,越→中
+W06-014,6,酶原,Tiền enzyme (zymogen),Zymogen,「Tiền enzyme (zymogen)」的中文是什麼?,輔酶,輔基,酶原,活化能,3,越→中
+W06-015,6,反應速率,Tốc độ phản ứng,Reaction rate,「Tốc độ phản ứng」的中文是什麼?,活化能,維生素,反應速率,活性部位,3,越→中
+W06-E01,6,活化能,Năng lượng hoạt hóa,Activation energy,(標圖:自由能反應進程圖) 標號1所指的雙箭頭代表什麼?,過渡態,自由能變化(ΔG),受質,活化能,4,標圖
+W06-E02,6,誘導契合,Khớp cảm ứng,Induced fit,(標圖:誘導契合圖) 圖中下排酵素彎曲並包住受質代表哪個概念?,誘導契合,專一性,鎖與鑰匙,活性部位,1,標圖
+W06-E03,6,誘導契合—酵素形狀改變去包住受質,,,哪一個配對正確?,誘導契合—酵素形狀改變去包住受質,輔基—跟酵素鬆散結合的維生素,活化能—反應完成後剩下的能量,酶原—已經啟動的酵素,1,配對
+W06-E04,6,酵素有專一性活性部位只配合特定受質,,,為什麼胰蛋白酶不能拿來分解脂肪?,脂肪不是分子不能被分解,胰蛋白酶已經變性,胰蛋白酶沒有活性部位,酵素有專一性活性部位只配合特定受質,4,概念

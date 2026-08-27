@@ -1,21 +1,25 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Tích hợp chuyển hóa」的中文是什麼?,Multiple Choice,飽食狀態,瘦體素,代謝症候群,代謝整合,4,30,W17-001
-「Hormone」的中文是什麼?,Multiple Choice,受體,胰島素,激素,血糖,3,30,W17-002
-「Thụ thể」的中文是什麼?,Multiple Choice,恆定,肝臟,激素,受體,4,30,W17-003
-「Sự truyền tín hiệu」的中文是什麼?,Multiple Choice,骨骼肌,飽食狀態,訊息傳遞,代謝整合,3,30,W17-004
-「Chất truyền tin thứ hai」的中文是什麼?,Multiple Choice,腎上腺素,第二傳訊者,胰島素阻抗,脂肪組織,2,30,W17-005
-「Insulin」的中文是什麼?,Multiple Choice,飽食狀態,糖尿病,飢餓狀態,胰島素,4,30,W17-006
-「Glucagon」的中文是什麼?,Multiple Choice,瘦體素,脂肪組織,升糖素,血糖,3,30,W17-007
-「Adrenaline (epinephrine)」的中文是什麼?,Multiple Choice,腎上腺素,飢餓狀態,脂肪組織,訊息傳遞,1,30,W17-008
-「Cortisol」的中文是什麼?,Multiple Choice,胰島素,皮質醇,瘦體素,恆定,2,30,W17-009
-「Leptin」的中文是什麼?,Multiple Choice,瘦體素,骨骼肌,肝臟,脂肪組織,1,30,W17-010
-「Đường huyết」的中文是什麼?,Multiple Choice,血糖,恆定,受體,皮質醇,1,30,W17-011
-「Sự cân bằng nội môi」的中文是什麼?,Multiple Choice,受體,皮質醇,恆定,骨骼肌,3,30,W17-012
-「Trạng thái no」的中文是什麼?,Multiple Choice,糖尿病,腎上腺素,骨骼肌,飽食狀態,4,30,W17-013
-「Trạng thái đói」的中文是什麼?,Multiple Choice,飢餓狀態,脂肪組織,皮質醇,代謝症候群,1,30,W17-014
-「Mô mỡ」的中文是什麼?,Multiple Choice,皮質醇,糖尿病,脂肪組織,飢餓狀態,3,30,W17-015
-「Gan」的中文是什麼?,Multiple Choice,皮質醇,肝臟,血糖,恆定,2,30,W17-016
-「Cơ xương」的中文是什麼?,Multiple Choice,訊息傳遞,受體,皮質醇,骨骼肌,4,30,W17-017
-「Bệnh đái tháo đường」的中文是什麼?,Multiple Choice,胰島素,糖尿病,肝臟,骨骼肌,2,30,W17-018
-「Kháng insulin」的中文是什麼?,Multiple Choice,皮質醇,胰島素阻抗,脂肪組織,飽食狀態,2,30,W17-019
+「Tích hợp chuyển hóa」的中文是什麼?,Multiple Choice,瘦體素,代謝症候群,代謝整合,飽食狀態,3,30,W17-001
+「Hormone」的中文是什麼?,Multiple Choice,激素,受體,血糖,胰島素,1,30,W17-002
+「Thụ thể」的中文是什麼?,Multiple Choice,肝臟,受體,恆定,激素,2,30,W17-003
+「Sự truyền tín hiệu」的中文是什麼?,Multiple Choice,飽食狀態,骨骼肌,代謝整合,訊息傳遞,4,30,W17-004
+「Chất truyền tin thứ hai」的中文是什麼?,Multiple Choice,腎上腺素,胰島素阻抗,第二傳訊者,脂肪組織,3,30,W17-005
+「Insulin」的中文是什麼?,Multiple Choice,糖尿病,飽食狀態,飢餓狀態,胰島素,4,30,W17-006
+「Glucagon」的中文是什麼?,Multiple Choice,瘦體素,血糖,升糖素,脂肪組織,3,30,W17-007
+「Adrenaline (epinephrine)」的中文是什麼?,Multiple Choice,飢餓狀態,腎上腺素,訊息傳遞,脂肪組織,2,30,W17-008
+「Cortisol」的中文是什麼?,Multiple Choice,恆定,瘦體素,皮質醇,胰島素,3,30,W17-009
+「Leptin」的中文是什麼?,Multiple Choice,瘦體素,脂肪組織,骨骼肌,肝臟,1,30,W17-010
+「Đường huyết」的中文是什麼?,Multiple Choice,恆定,受體,血糖,皮質醇,3,30,W17-011
+「Sự cân bằng nội môi」的中文是什麼?,Multiple Choice,恆定,骨骼肌,皮質醇,受體,1,30,W17-012
+「Trạng thái no」的中文是什麼?,Multiple Choice,骨骼肌,糖尿病,腎上腺素,飽食狀態,4,30,W17-013
+「Trạng thái đói」的中文是什麼?,Multiple Choice,皮質醇,脂肪組織,代謝症候群,飢餓狀態,4,30,W17-014
+「Mô mỡ」的中文是什麼?,Multiple Choice,飢餓狀態,脂肪組織,糖尿病,皮質醇,2,30,W17-015
+「Gan」的中文是什麼?,Multiple Choice,血糖,皮質醇,肝臟,恆定,3,30,W17-016
+「Cơ xương」的中文是什麼?,Multiple Choice,受體,骨骼肌,訊息傳遞,皮質醇,2,30,W17-017
+「Bệnh đái tháo đường」的中文是什麼?,Multiple Choice,骨骼肌,肝臟,胰島素,糖尿病,4,30,W17-018
+「Kháng insulin」的中文是什麼?,Multiple Choice,脂肪組織,飽食狀態,皮質醇,胰島素阻抗,4,30,W17-019
 「Hội chứng chuyển hóa」的中文是什麼?,Multiple Choice,代謝症候群,第二傳訊者,脂肪組織,代謝整合,1,30,W17-020
+(標圖:w17_organs_labeled) 標號2是哪個器官?,Multiple Choice,肝臟,骨骼肌,腦,脂肪組織,1,30,W17-E01
+(標圖:w17_fed_fasted_labeled) 標號4(飢餓狀態肝臟)何種作用增強?,Multiple Choice,醣解作用,肝醣分解,脂質新生,蛋白質合成,2,30,W17-E02
+哪一個配對正確?,Multiple Choice,瘦體素—由胰臟分泌調控血糖,升糖素—刺激肝醣分解與醣質新生,腎上腺素—抑制肝醣分解,胰島素—刺激脂肪分解,2,30,W17-E03
+長期飢餓狀態下，腦部主要能量來源會轉換成什麼?,Multiple Choice,酮體,葡萄糖,乳酸,游離脂肪酸,1,30,W17-E04

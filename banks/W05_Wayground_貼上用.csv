@@ -1,16 +1,20 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Phối tử (ligand)」的中文是什麼?,Multiple Choice,結合位置,協同性,配位基,血基質,3,30,W05-001
-「Vị trí gắn」的中文是什麼?,Multiple Choice,肌動蛋白,異位調節,解離常數,結合位置,4,30,W05-002
-「Myoglobin」的中文是什麼?,Multiple Choice,協同性,肌紅素,血紅素,異位調節,2,30,W05-003
-「Hemoglobin」的中文是什麼?,Multiple Choice,血紅素,解離常數,結合位置,配位基,1,30,W05-004
+「Phối tử (ligand)」的中文是什麼?,Multiple Choice,配位基,結合位置,協同性,血基質,1,30,W05-001
+「Vị trí gắn」的中文是什麼?,Multiple Choice,肌動蛋白,結合位置,異位調節,解離常數,2,30,W05-002
+「Myoglobin」的中文是什麼?,Multiple Choice,協同性,血紅素,肌紅素,異位調節,3,30,W05-003
+「Hemoglobin」的中文是什麼?,Multiple Choice,解離常數,血紅素,結合位置,配位基,2,30,W05-004
 「Nhóm heme」的中文是什麼?,Multiple Choice,配位基,結合位置,血基質,肌紅素,3,30,W05-005
 「Đường cong gắn oxygen」的中文是什麼?,Multiple Choice,肌動蛋白,氧合曲線,結合位置,異位調節,2,30,W05-006
 「Tính hợp tác」的中文是什麼?,Multiple Choice,配位基,血基質,協同性,解離常數,3,30,W05-007
-「Điều hòa dị lập thể」的中文是什麼?,Multiple Choice,氧合曲線,肌動蛋白,解離常數,異位調節,4,30,W05-008
-「Hiệu ứng Bohr」的中文是什麼?,Multiple Choice,波耳效應,異位調節,肌凝蛋白,肌動蛋白,1,30,W05-009
-「Hằng số phân li」的中文是什麼?,Multiple Choice,解離常數,異位調節,肌動蛋白,氧合曲線,1,30,W05-010
+「Điều hòa dị lập thể」的中文是什麼?,Multiple Choice,氧合曲線,異位調節,肌動蛋白,解離常數,2,30,W05-008
+「Hiệu ứng Bohr」的中文是什麼?,Multiple Choice,異位調節,肌凝蛋白,波耳效應,肌動蛋白,3,30,W05-009
+「Hằng số phân li」的中文是什麼?,Multiple Choice,異位調節,肌動蛋白,氧合曲線,解離常數,4,30,W05-010
 「Thiếu máu hồng cầu hình liềm」的中文是什麼?,Multiple Choice,結合位置,肌凝蛋白,鐮刀型貧血,波耳效應,3,30,W05-011
-「Kháng thể」的中文是什麼?,Multiple Choice,肌紅素,抗體,氧合曲線,血基質,2,30,W05-012
-「Kháng nguyên」的中文是什麼?,Multiple Choice,肌紅素,協同性,抗體,抗原,4,30,W05-013
-「Actin」的中文是什麼?,Multiple Choice,肌動蛋白,肌紅素,結合位置,解離常數,1,30,W05-014
+「Kháng thể」的中文是什麼?,Multiple Choice,肌紅素,氧合曲線,血基質,抗體,4,30,W05-012
+「Kháng nguyên」的中文是什麼?,Multiple Choice,抗原,肌紅素,協同性,抗體,1,30,W05-013
+「Actin」的中文是什麼?,Multiple Choice,肌紅素,結合位置,解離常數,肌動蛋白,4,30,W05-014
 「Myosin」的中文是什麼?,Multiple Choice,波耳效應,肌凝蛋白,解離常數,肌動蛋白,2,30,W05-015
+(標圖:氧解離曲線圖) 標號1所在的曲線是哪一種蛋白質?,Multiple Choice,肌紅素,肌動蛋白,抗體,血紅素,1,30,W05-E01
+(標圖:氧解離曲線圖) 標號2所在的曲線是哪一種蛋白質?,Multiple Choice,血紅素,肌紅素,抗原,肌凝蛋白,1,30,W05-E02
+哪一個配對正確?,Multiple Choice,協同性—肌紅素只有一條胜肽鏈,鐮刀型貧血—鐵離子變成Fe³⁺,解離常數—血紅素的曲線呈S形,波耳效應—pH下降時血紅素放掉氧,4,30,W05-E03
+為什麼一氧化碳中毒時人還是會缺氧?,Multiple Choice,CO佔住血基質的結合位置比O2抓得更緊,CO會把Fe²⁺變成Fe³⁺,CO會讓協同性消失,CO會讓紅血球全部死亡,1,30,W05-E04

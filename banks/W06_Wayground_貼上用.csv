@@ -1,16 +1,20 @@
 ﻿Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Correct Answer,Time in seconds,Tag
-「Enzyme」的中文是什麼?,Multiple Choice,受質,酶原,酵素,產物,3,30,W06-001
-「Cơ chất」的中文是什麼?,Multiple Choice,受質,酵素,催化,輔酶,1,30,W06-002
-「Sản phẩm」的中文是什麼?,Multiple Choice,輔酶,酶原,產物,催化,3,30,W06-003
-「Trung tâm hoạt động」的中文是什麼?,Multiple Choice,維生素,過渡態,誘導契合,活性部位,4,30,W06-004
-「Sự xúc tác」的中文是什麼?,Multiple Choice,產物,酵素,受質,催化,4,30,W06-005
-「Năng lượng hoạt hóa」的中文是什麼?,Multiple Choice,專一性,過渡態,活化能,活性部位,3,30,W06-006
+「Enzyme」的中文是什麼?,Multiple Choice,產物,酶原,酵素,受質,3,30,W06-001
+「Cơ chất」的中文是什麼?,Multiple Choice,催化,受質,酵素,輔酶,2,30,W06-002
+「Sản phẩm」的中文是什麼?,Multiple Choice,產物,輔酶,催化,酶原,1,30,W06-003
+「Trung tâm hoạt động」的中文是什麼?,Multiple Choice,過渡態,活性部位,維生素,誘導契合,2,30,W06-004
+「Sự xúc tác」的中文是什麼?,Multiple Choice,產物,催化,受質,酵素,2,30,W06-005
+「Năng lượng hoạt hóa」的中文是什麼?,Multiple Choice,過渡態,專一性,活性部位,活化能,4,30,W06-006
 「Trạng thái chuyển tiếp」的中文是什麼?,Multiple Choice,輔酶,過渡態,維生素,輔因子,2,30,W06-007
 「Tính đặc hiệu」的中文是什麼?,Multiple Choice,過渡態,催化,專一性,維生素,3,30,W06-008
-「Khớp cảm ứng」的中文是什麼?,Multiple Choice,過渡態,誘導契合,反應速率,維生素,2,30,W06-009
-「Cofactor」的中文是什麼?,Multiple Choice,輔因子,活化能,誘導契合,過渡態,1,30,W06-010
-「Coenzyme」的中文是什麼?,Multiple Choice,輔酶,受質,輔因子,輔基,1,30,W06-011
-「Nhóm ngoại」的中文是什麼?,Multiple Choice,輔酶,產物,酵素,輔基,4,30,W06-012
-「Vitamin」的中文是什麼?,Multiple Choice,輔因子,維生素,活化能,專一性,2,30,W06-013
-「Tiền enzyme (zymogen)」的中文是什麼?,Multiple Choice,活化能,酶原,輔基,輔酶,2,30,W06-014
-「Tốc độ phản ứng」的中文是什麼?,Multiple Choice,反應速率,活性部位,維生素,活化能,1,30,W06-015
+「Khớp cảm ứng」的中文是什麼?,Multiple Choice,誘導契合,過渡態,反應速率,維生素,1,30,W06-009
+「Cofactor」的中文是什麼?,Multiple Choice,輔因子,過渡態,活化能,誘導契合,1,30,W06-010
+「Coenzyme」的中文是什麼?,Multiple Choice,輔因子,輔基,輔酶,受質,3,30,W06-011
+「Nhóm ngoại」的中文是什麼?,Multiple Choice,酵素,輔基,產物,輔酶,2,30,W06-012
+「Vitamin」的中文是什麼?,Multiple Choice,活化能,專一性,輔因子,維生素,4,30,W06-013
+「Tiền enzyme (zymogen)」的中文是什麼?,Multiple Choice,輔酶,輔基,酶原,活化能,3,30,W06-014
+「Tốc độ phản ứng」的中文是什麼?,Multiple Choice,活化能,維生素,反應速率,活性部位,3,30,W06-015
+(標圖:自由能反應進程圖) 標號1所指的雙箭頭代表什麼?,Multiple Choice,過渡態,自由能變化(ΔG),受質,活化能,4,30,W06-E01
+(標圖:誘導契合圖) 圖中下排酵素彎曲並包住受質代表哪個概念?,Multiple Choice,誘導契合,專一性,鎖與鑰匙,活性部位,1,30,W06-E02
+哪一個配對正確?,Multiple Choice,誘導契合—酵素形狀改變去包住受質,輔基—跟酵素鬆散結合的維生素,活化能—反應完成後剩下的能量,酶原—已經啟動的酵素,1,30,W06-E03
+為什麼胰蛋白酶不能拿來分解脂肪?,Multiple Choice,脂肪不是分子不能被分解,胰蛋白酶已經變性,胰蛋白酶沒有活性部位,酵素有專一性活性部位只配合特定受質,4,30,W06-E04

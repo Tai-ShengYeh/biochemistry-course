@@ -1,18 +1,22 @@
 ﻿term_id,week,zh_term,vi_term,en_term,question,opt1,opt2,opt3,opt4,correct,type
-W03-001,3,胺基酸,Amino acid,Amino acid,「Amino acid」的中文是什麼?,胺基酸,多肽,胜肽鍵,雙硫鍵,1,越→中
-W03-002,3,側鏈,Mạch bên,Side chain (R group),「Mạch bên」的中文是什麼?,層析,多肽,N端,側鏈,4,越→中
-W03-003,3,胺基,Nhóm amino,Amino group,「Nhóm amino」的中文是什麼?,胜肽,多肽,胺基,電泳,3,越→中
-W03-004,3,羧基,Nhóm carboxyl,Carboxyl group,「Nhóm carboxyl」的中文是什麼?,C端,手性,羧基,胺基,3,越→中
-W03-005,3,手性,Tính bất đối xứng,Chirality,「Tính bất đối xứng」的中文是什麼?,層析,胺基,多肽,手性,4,越→中
-W03-006,3,胜肽,Peptide,Peptide,「Peptide」的中文是什麼?,羧基,層析,多肽,胜肽,4,越→中
-W03-007,3,胜肽鍵,Liên kết peptide,Peptide bond,「Liên kết peptide」的中文是什麼?,兩性離子,C端,胜肽鍵,芳香族,3,越→中
-W03-008,3,多肽,Polypeptide,Polypeptide,「Polypeptide」的中文是什麼?,多肽,羧基,N端,C端,1,越→中
-W03-009,3,N端,Đầu N,N-terminus,「Đầu N」的中文是什麼?,N端,C端,胜肽,手性,1,越→中
-W03-010,3,C端,Đầu C,C-terminus,「Đầu C」的中文是什麼?,羧基,C端,N端,電泳,2,越→中
-W03-011,3,兩性離子,Ion lưỡng cực,Zwitterion,「Ion lưỡng cực」的中文是什麼?,胺基,兩性離子,芳香族,雙硫鍵,2,越→中
-W03-012,3,等電點,Điểm đẳng điện,Isoelectric point (pI),「Điểm đẳng điện」的中文是什麼?,胺基酸,胺基,等電點,胜肽鍵,3,越→中
-W03-013,3,必需胺基酸,Amino acid thiết yếu,Essential amino acid,「Amino acid thiết yếu」的中文是什麼?,必需胺基酸,等電點,多肽,雙硫鍵,1,越→中
-W03-014,3,芳香族,Nhóm thơm,Aromatic,「Nhóm thơm」的中文是什麼?,手性,芳香族,胜肽,胺基酸,2,越→中
-W03-015,3,雙硫鍵,Liên kết disulfide,Disulfide bond,「Liên kết disulfide」的中文是什麼?,電泳,雙硫鍵,羧基,兩性離子,2,越→中
-W03-016,3,層析,Sắc ký,Chromatography,「Sắc ký」的中文是什麼?,層析,手性,多肽,電泳,1,越→中
-W03-017,3,電泳,Điện di,Electrophoresis,「Điện di」的中文是什麼?,層析,N端,羧基,電泳,4,越→中
+W03-001,3,胺基酸,Amino acid,Amino acid,「Amino acid」的中文是什麼?,胜肽鍵,雙硫鍵,胺基酸,多肽,3,越→中
+W03-002,3,側鏈,Mạch bên,Side chain (R group),「Mạch bên」的中文是什麼?,N端,層析,多肽,側鏈,4,越→中
+W03-003,3,胺基,Nhóm amino,Amino group,「Nhóm amino」的中文是什麼?,胜肽,胺基,電泳,多肽,2,越→中
+W03-004,3,羧基,Nhóm carboxyl,Carboxyl group,「Nhóm carboxyl」的中文是什麼?,C端,胺基,羧基,手性,3,越→中
+W03-005,3,手性,Tính bất đối xứng,Chirality,「Tính bất đối xứng」的中文是什麼?,手性,胺基,多肽,層析,1,越→中
+W03-006,3,胜肽,Peptide,Peptide,「Peptide」的中文是什麼?,多肽,羧基,胜肽,層析,3,越→中
+W03-007,3,胜肽鍵,Liên kết peptide,Peptide bond,「Liên kết peptide」的中文是什麼?,兩性離子,芳香族,C端,胜肽鍵,4,越→中
+W03-008,3,多肽,Polypeptide,Polypeptide,「Polypeptide」的中文是什麼?,N端,羧基,多肽,C端,3,越→中
+W03-009,3,N端,Đầu N,N-terminus,「Đầu N」的中文是什麼?,C端,胜肽,手性,N端,4,越→中
+W03-010,3,C端,Đầu C,C-terminus,「Đầu C」的中文是什麼?,電泳,C端,羧基,N端,2,越→中
+W03-011,3,兩性離子,Ion lưỡng cực,Zwitterion,「Ion lưỡng cực」的中文是什麼?,芳香族,兩性離子,胺基,雙硫鍵,2,越→中
+W03-012,3,等電點,Điểm đẳng điện,Isoelectric point (pI),「Điểm đẳng điện」的中文是什麼?,胜肽鍵,胺基酸,胺基,等電點,4,越→中
+W03-013,3,必需胺基酸,Amino acid thiết yếu,Essential amino acid,「Amino acid thiết yếu」的中文是什麼?,必需胺基酸,多肽,雙硫鍵,等電點,1,越→中
+W03-014,3,芳香族,Nhóm thơm,Aromatic,「Nhóm thơm」的中文是什麼?,芳香族,胜肽,手性,胺基酸,1,越→中
+W03-015,3,雙硫鍵,Liên kết disulfide,Disulfide bond,「Liên kết disulfide」的中文是什麼?,兩性離子,電泳,雙硫鍵,羧基,3,越→中
+W03-016,3,層析,Sắc ký,Chromatography,「Sắc ký」的中文是什麼?,電泳,手性,多肽,層析,4,越→中
+W03-017,3,電泳,Điện di,Electrophoresis,「Điện di」的中文是什麼?,電泳,N端,層析,羧基,1,越→中
+W03-E01,3,胜肽鍵,Liên kết peptide,Peptide bond,(標圖:胜肽鍵形成) 標號3(黃色框)是什麼鍵?,胜肽鍵,雙硫鍵,氫鍵,離子鍵,1,標圖
+W03-E02,3,胺基,Nhóm amino,Amino group,(標圖:胺基酸通用結構) 標號2指的是什麼?,側鏈,胺基,羧基,α碳,2,標圖
+W03-E03,3,N端—胺基那一端,,,哪一個配對正確?,胜肽鍵—連接兩個醣類,N端—胺基那一端,C端—胺基那一端,側鏈—讓所有胺基酸都一樣,2,配對
+W03-E04,3,側鏈,Mạch bên,Side chain (R group),決定不同胺基酸性質差異的部分是什麼?,側鏈,羧基,胺基,α碳,1,概念
