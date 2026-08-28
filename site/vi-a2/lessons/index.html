@@ -84,10 +84,10 @@ UNITS.forEach(u=>{
   }</div>`;
   host.appendChild(sec);
   if(u.weeks.some(x=>x.w===8)){
-    const ex=document.createElement('div');ex.className='exam';ex.textContent='📝 第 9 週　期中考';host.appendChild(ex);
+    const ex=document.createElement('div');ex.className='exam';ex.innerHTML='📝 第 9 週　期中考 · <a href="../w09.html" style="color:inherit">複習賓果＋標圖牆 →</a>';host.appendChild(ex);
   }
 });
-const exFinal=document.createElement('div');exFinal.className='exam';exFinal.textContent='📝 第 18 週　期末考';
+const exFinal=document.createElement('div');exFinal.className='exam';exFinal.innerHTML='📝 第 18 週　期末考 · <a href="../w18.html" style="color:inherit">總複習 →</a>';
 host.appendChild(exFinal);
 </script>
 </body>

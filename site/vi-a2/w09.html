@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第 9 週 · 期中複習 | 生物化學 A2 越南學生班</title>
+<style>
+:root{
+  --primary:#1F4E5F; --secondary:#2E7D8A; --accent:#C8532B;
+  --bg:#F7FBFC; --ink:#1F2933; --mut:#7A8C93; --line:#D9E7EC;
+  --card:#fff; --gold:#E8B84B; --ok:#2E7D8A; --okbg:#E8F4F2; --bad:#C8532B; --badbg:#FFE5E7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans TC',-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding:0 0 60px;}
+a{color:inherit}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px;}
+.top{background:linear-gradient(135deg,#163C49,var(--primary) 65%,var(--secondary));color:#fff;padding:22px 0 20px;}
+.top .wrap{display:flex;flex-direction:column;gap:6px;}
+.top .backlink{font-size:.8rem;color:rgba(255,255,255,.85);text-decoration:none;font-weight:700;}
+.top .backlink:hover{color:#fff;}
+.kick{font-size:.76rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.85);margin-top:4px;}
+.top h1{font-size:1.5rem;font-weight:900;margin-top:2px;}
+.top .sub{font-size:.9rem;color:rgba(255,255,255,.92);}
+.top .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+.top .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:3px 11px;border-radius:20px;font-size:.75rem;}
+.nav{position:sticky;top:0;z-index:60;background:rgba(247,251,252,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:9px 16px;}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--primary);font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;}
+.nav a:hover{border-color:var(--accent);color:var(--accent);}
+.score-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 16px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.04);flex-wrap:wrap;font-size:.85rem;}
+#stuChip{cursor:pointer;font-weight:700;}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;margin:16px 0;box-shadow:0 2px 10px rgba(0,0,0,.04);}
+section h2{font-size:1.2rem;color:var(--primary);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+section .lead{color:var(--mut);font-size:.86rem;margin-bottom:14px;}
+section .lead .vi{display:block;color:var(--secondary);font-style:italic;}
+.btn{display:inline-block;padding:10px 22px;background:var(--accent);color:#fff;border:none;border-radius:20px;font-weight:700;cursor:pointer;font-size:.9rem;}
+.btn:hover{filter:brightness(.93);}
+.btn.ghost{background:#fff;color:var(--primary);border:2px solid var(--accent);padding:8px 20px;}
+.btn.sm{padding:7px 14px;font-size:.8rem;}
+.btn[disabled]{opacity:.45;cursor:default;}
+.toggle-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.toggle-row button{flex:1;min-width:120px;padding:9px 10px;border-radius:12px;border:2px solid var(--line);background:#fff;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--mut);}
+.toggle-row button.on{border-color:var(--accent);color:var(--accent);background:#FFF3EC;}
+.spk{border:0;background:transparent;cursor:pointer;font-size:1rem;padding:2px 5px;border-radius:6px;line-height:1;vertical-align:middle;}
+.spk:hover{background:#EAF3F4;}
+
+/* ---- bingo ---- */
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:480px;margin:0 auto 16px;}
+.bcell{aspect-ratio:1/1;border:2px solid var(--line);border-radius:10px;background:#FCFEFE;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;padding:4px;transition:.15s;}
+.bcell:hover{border-color:var(--gold);}
+.bcell .zh{font-weight:900;font-size:.95rem;line-height:1.2;}
+.bcell .py{font-size:.55rem;color:var(--mut);font-family:monospace;margin-top:2px;}
+.bcell.marked{background:var(--secondary);border-color:var(--secondary);color:#fff;}
+.bcell.marked .py{color:#DDEFF0;}
+.bcell.won{animation:pop .5s;background:var(--accent);border-color:var(--accent);}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.12)}100%{transform:scale(1)}}
+.bingo-banner{display:none;text-align:center;background:linear-gradient(135deg,var(--accent),var(--gold));color:#fff;font-weight:900;font-size:1.3rem;border-radius:12px;padding:14px;margin-bottom:14px;letter-spacing:.15em;}
+.bingo-banner.show{display:block;animation:pop .6s;}
+.bingo-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.caller{text-align:center;padding:20px 10px;}
+.caller .vi{font-size:1.5rem;font-weight:900;color:var(--primary);}
+.caller .py{font-family:monospace;color:var(--mut);margin:6px 0 14px;font-size:.95rem;}
+.caller .flip{border:2px dashed var(--line);border-radius:14px;padding:22px;margin:0 auto 14px;max-width:360px;cursor:pointer;background:#FCFEFE;}
+.caller .flip .zh{display:none;font-size:2rem;font-weight:900;color:var(--accent);margin-top:8px;}
+.caller .flip.revealed .zh{display:block;}
+.caller .flip .hint{font-size:.75rem;color:var(--mut);margin-top:8px;}
+.caller .flip.revealed .hint{display:none;}
+.call-progress{font-size:.8rem;color:var(--mut);text-align:center;margin-bottom:10px;}
+.history{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);}
+.history .chip{background:#EAF3F4;color:var(--primary);border-radius:14px;padding:4px 10px;font-size:.76rem;font-weight:700;}
+
+/* ---- figure wall ---- */
+.selftest-row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#FFF3EC;border:1px solid #F3D2BE;border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:.85rem;font-weight:700;color:var(--accent);}
+.selftest-row label{display:flex;align-items:center;gap:8px;cursor:pointer;}
+.fwall{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:600px){.fwall{grid-template-columns:1fr 1fr;}}
+.fcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#FCFEFE;border-left:5px solid var(--secondary);}
+.fcard .thumb{display:block;width:100%;cursor:zoom-in;border-bottom:1px solid var(--line);background:#fff;}
+.fcard .fmeta{padding:10px 12px 4px;}
+.fcard .wk{display:inline-block;background:var(--secondary);color:#fff;font-size:.7rem;font-weight:700;border-radius:10px;padding:2px 9px;margin-bottom:6px;}
+.fcard .cap-zh{font-weight:900;font-size:.98rem;}
+.fcard .cap-vi{color:var(--accent);font-size:.82rem;font-style:italic;margin-bottom:6px;}
+.fcard details{padding:0 12px 12px;}
+.fcard summary{cursor:pointer;font-weight:700;font-size:.82rem;color:var(--primary);padding:6px 0;}
+.fcard .lab{font-size:.8rem;padding:5px 0;border-top:1px dashed var(--line);}
+.fcard .lab b{color:var(--accent);}
+.fcard .lab .lvi{display:block;color:var(--mut);font-size:.75rem;}
+.wall.selftest .fmeta .cap-zh,.wall.selftest .fmeta .cap-vi,.wall.selftest .fmeta .wk,.wall.selftest details{display:none;}
+.overlay{display:none;position:fixed;inset:0;background:rgba(15,25,30,.92);z-index:200;align-items:center;justify-content:center;padding:20px;cursor:zoom-out;}
+.overlay.show{display:flex;}
+.overlay img{max-width:100%;max-height:90vh;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.5);}
+
+/* ---- quiz ---- */
+.qtypes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.qtypes span{background:#EAF3F4;color:var(--primary);font-size:.72rem;font-weight:700;border-radius:12px;padding:3px 10px;}
+.qbox{border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:16px;margin-bottom:14px;background:#FCFEFE;}
+.qbox .qtag{display:inline-block;font-size:.7rem;font-weight:700;color:#fff;background:var(--accent);border-radius:10px;padding:2px 9px;margin-bottom:8px;}
+.qbox .stem{font-weight:700;font-size:1rem;margin-bottom:10px;}
+.qbox .stem .n{display:inline-block;width:24px;height:24px;background:var(--primary);color:#fff;border-radius:50%;text-align:center;line-height:24px;font-size:.78rem;margin-right:7px;}
+.qbox img{max-width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin-bottom:10px;}
+.qopts{display:flex;flex-direction:column;gap:8px;}
+.qopt{border:2px solid var(--line);border-radius:10px;padding:10px 13px;cursor:pointer;font-weight:700;font-size:.92rem;background:#fff;}
+.qopt:hover{border-color:var(--accent);}
+.qopt.right{border-color:var(--ok);background:var(--okbg);color:var(--ok);}
+.qopt.wrong{border-color:var(--bad);background:var(--badbg);color:var(--bad);}
+.qopt.locked{pointer-events:none;}
+.qexp{display:none;font-size:.84rem;color:var(--primary);margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);}
+.qexp.show{display:block;}
+.quiz-done{display:none;text-align:center;background:#EAF3F4;border-radius:12px;padding:18px;margin-top:6px;}
+.quiz-done.show{display:block;}
+.quiz-done .pts{font-size:1.8rem;font-weight:900;color:var(--primary);}
+footer{text-align:center;color:var(--mut);font-size:.78rem;margin-top:20px;}
+@media(max-width:480px){
+  .top h1{font-size:1.28rem;}
+  .bcell .zh{font-size:.82rem;}
+  .bcell .py{font-size:.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <a class="backlink" href="../index.html">← 回課程首頁 · Về trang chủ</a>
+  <span class="kick">生物化學 A ｜ 越南學生班 · 中文 A2</span>
+  <h1>🧪 第 9 週 · 期中複習</h1>
+  <p class="sub">Ôn tập giữa kỳ (Tuần 1–8)</p>
+  <div class="meta">
+    <span>⏱️ 複習 50 分鐘＋考試 50 分鐘</span>
+    <span>📚 涵蓋第 1–8 週</span>
+    <span>🇻🇳／🇬🇧 三語對照</span>
+  </div>
+</div></div>
+
+<div class="nav"><div class="wrap">
+  <a href="#bingo">🎲 詞彙賓果</a>
+  <a href="#figs">🖼️ 標圖牆</a>
+  <a href="#quiz">📝 題型示範</a>
+  <a href="../index.html">📚 全部課程</a>
+</div></div>
+
+<div class="wrap">
+  <div class="score-strip">
+    <div id="stuChip" title="點一下可以改姓名">👤 <span id="stuName">點我登記姓名</span> <span id="cloudSt"></span></div>
+    <div>今天日期：<span id="todayLbl" style="font-weight:700"></span></div>
+  </div>
+
+  <section id="bingo">
+    <h2>🎲 三語詞彙賓果</h2>
+    <p class="lead">複習第 1–8 週的 40 個核心詞。連成一條線（橫、直、對角線都算）就是 BINGO！
+      <span class="vi">Ôn 40 từ vựng cốt lõi của Tuần 1–8. Nối được một hàng/cột/đường chéo là BINGO!</span></p>
+
+    <div class="toggle-row">
+      <button id="modeStuBtn" class="on">🧑‍🎓 學生模式（賓果卡）</button>
+      <button id="modeTeaBtn">🧑‍🏫 教師模式（唱名）</button>
+    </div>
+
+    <div id="stuBingoWrap">
+      <div class="bingo-banner" id="bingoBanner">🎉 BINGO！🎉</div>
+      <div class="bgrid" id="bgrid"></div>
+      <div class="bingo-actions">
+        <button class="btn ghost sm" id="newCardBtn">🔄 換一張卡</button>
+      </div>
+    </div>
+
+    <div id="teaCallWrap" style="display:none">
+      <div class="call-progress" id="callProgress">尚未開始 · Chưa bắt đầu</div>
+      <div class="caller">
+        <div class="flip" id="callFlip">
+          <div class="vi" id="callVi">請按「下一個」開始</div>
+          <div class="py" id="callPy"></div>
+          <div class="zh" id="callZh"></div>
+          <div class="hint">👆 點一下翻出中文 · Chạm để lật ra chữ Hán</div>
+        </div>
+        <button class="btn sm" id="callSpk">🔊 唸一次</button>
+      </div>
+      <div class="bingo-actions">
+        <button class="btn" id="callNextBtn">下一個 →</button>
+        <button class="btn ghost sm" id="callResetBtn">🔄 重新開始</button>
+      </div>
+      <div class="history" id="callHistory"></div>
+    </div>
+  </section>
+
+  <section id="figs">
+    <h2>🖼️ 標圖牆</h2>
+    <p class="lead">第 1–8 週的重要圖表。點圖可以放大；每張圖下面有「標號解答」可以打開核對。
+      <span class="vi">Các hình quan trọng của Tuần 1–8. Chạm vào hình để phóng to; mở "đáp án số" bên dưới để kiểm tra.</span></p>
+    <div class="selftest-row">
+      <label><input type="checkbox" id="selftestChk"> 🙈 自我測驗模式（隱藏圖名與解答）</label>
+      <span class="vi" style="font-weight:400">Chế độ tự kiểm tra</span>
+    </div>
+    <div class="fwall wall" id="fwall"></div>
+  </section>
+
+  <section id="quiz">
+    <h2>📝 期考題型示範</h2>
+    <p class="lead">8 題示範：標圖 2 題、配對 2 題、選擇 2 題、計算 2 題——跟期中考的題型一樣。點選答案立刻知道對錯。
+      <span class="vi">8 câu mẫu giống dạng đề kiểm tra giữa kỳ. Chọn đáp án là biết đúng/sai ngay.</span></p>
+    <div class="qtypes">
+      <span>🖼️ 標圖 40%</span><span>🔗 配對 20%</span><span>✅ 選擇 20%</span><span>🧮 計算 20%</span>
+    </div>
+    <div id="quizHost"></div>
+    <div class="quiz-done" id="quizDone">
+      <div class="pts"><span id="quizScore">0</span> / 8 題答對</div>
+      <p>成績已記錄。祝期中考順利！ <span style="color:var(--accent)">Chúc thi giữa kỳ tốt!</span></p>
+    </div>
+  </section>
+
+  <footer>生物化學 A（越南學生班・中文 A2）期中複習 ｜ 第 9 週 ｜ 繁體中文，附越南文與英文對照</footer>
+</div>
+
+<div class="overlay" id="overlay"><img id="overlayImg" src="" alt=""></div>
+
+<script>
+(function(){
+'use strict';
+/* ================= 字型（非同步載入，離線自動退回系統字） ================= */
+try{
+  var fl=document.createElement('link');fl.rel='stylesheet';
+  fl.href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap';
+  document.head.appendChild(fl);
+}catch(e){}
+
+/* ================= helpers ================= */
+function esc(s){return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function lsGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function djb2(s){s=String(s);let h=5381;for(let i=0;i<s.length;i++){h=((h<<5)+h+s.charCodeAt(i))>>>0;}return h>>>0;}
+function hash36(s){return djb2(s).toString(36);}
+function mulberry32(seed){
+  let a=seed>>>0;
+  return function(){
+    a|=0;a=a+0x6D2B79F5|0;
+    let t=Math.imul(a^a>>>15,1|a);
+    t=t+Math.imul(t^t>>>7,61|t)^t;
+    return ((t^t>>>14)>>>0)/4294967296;
+  };
+}
+function seededShuffle(arr,seed){
+  const rnd=mulberry32(seed);const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+function pad2(n){return String(n).padStart(2,'0');}
+function todayStr(){return new Date().toISOString().slice(0,10).replace(/-/g,'');}
+document.getElementById('todayLbl').textContent=new Date().toLocaleDateString('zh-TW');
+
+/* ================= 發音 Web Speech (zh-TW) ================= */
+const hasTTS=('speechSynthesis' in window)&&('SpeechSynthesisUtterance' in window);
+function speak(t){
+  if(!hasTTS||!t)return;
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(t);
+    const v=speechSynthesis.getVoices().find(x=>/^zh([-_]|$)|cmn/i.test(x.lang||''));
+    if(v)u.voice=v;
+    u.lang='zh-TW';u.rate=.85;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+document.addEventListener('click',function(e){
+  const b=e.target.closest('.spk');
+  if(b){e.stopPropagation();e.preventDefault();speak(b.dataset.t||'');}
+},true);
+
+/* ================= 學生身分（沿用 bio_engine.js 模式） ================= */
+const nameKey='bio_student_name', anonIdKey='bio_anon_id';
+function askName(){
+  const cur=lsGet(nameKey)||'';
+  const v=window.prompt('請輸入你的姓名或座號（老師記錄成績用）：',cur);
+  if(v===null)return;
+  lsSet(nameKey,v.trim());stuChipRefresh();
+}
+function getStudent(){
+  let name=lsGet(nameKey);
+  if(name===null){askName();name=lsGet(nameKey);}
+  name=(name||'').trim();
+  if(name)return{name,id:'stu_'+hash36(name)};
+  let anon=lsGet(anonIdKey);
+  if(!anon){anon='anon_'+Math.random().toString(36).slice(2,10);lsSet(anonIdKey,anon);}
+  return{name:'',id:anon};
+}
+/* 不彈窗版本：只用「已經存在」的姓名或匿名 id 來當賓果卡種子，
+   避免一進頁面就強制跳出 prompt()；姓名登記仍由 stuChip / 送出成績時觸發。 */
+function silentId(){
+  const name=(lsGet(nameKey)||'').trim();
+  if(name)return{name,id:'stu_'+hash36(name)};
+  let anon=lsGet(anonIdKey);
+  if(!anon){anon='anon_'+Math.random().toString(36).slice(2,10);lsSet(anonIdKey,anon);}
+  return{name:'',id:anon};
+}
+function stuChipRefresh(){
+  const n=(lsGet(nameKey)||'').trim();
+  const el=document.getElementById('stuName');
+  if(el)el.textContent=n||'點我登記姓名';
+}
+document.getElementById('stuChip').onclick=askName;
+stuChipRefresh();
+
+/* ================= 雲端雙寫：Firestore + Supabase（照抄 bio_engine.js） ================= */
+const TK={
+  fb:{apiKey:"AIzaSyCTLhRf7jcJH_AwUzbV4MawkrKNPrIVG5Y",authDomain:"my-teaching-tools-517a0.firebaseapp.com",projectId:"my-teaching-tools-517a0",storageBucket:"my-teaching-tools-517a0.firebasestorage.app",messagingSenderId:"244288457011",appId:"1:244288457011:web:4b3ff8a846a6c50b169646"},
+  fbVer:'10.7.0', col:'biochem_results',
+  sbUrl:'https://qmldcjkllisvfgegkfsz.supabase.co',
+  sbKey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbGRjamtsbGlzdmZnZWdrZnN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzExMjM5ODYsImV4cCI6MjA4NjY5OTk4Nn0.Bfj0W7HN_n_vcjGe5502Chamk0YV-de8a0fxF4Nyczk',
+  sbTable:'interactions', course:'biochem-vi'
+};
+const SESSION_ID='biovi_w09_'+todayStr();
+let _fb=null;
+async function fbEnsure(){
+  if(_fb)return _fb;
+  const app=await import(`https://www.gstatic.com/firebasejs/${TK.fbVer}/firebase-app.js`);
+  const fs=await import(`https://www.gstatic.com/firebasejs/${TK.fbVer}/firebase-firestore.js`);
+  const db=fs.getFirestore(app.initializeApp(TK.fb));
+  _fb={db,addDoc:fs.addDoc,collection:fs.collection,serverTimestamp:fs.serverTimestamp};
+  return _fb;
+}
+async function fbRecord(p){
+  try{
+    const fb=await fbEnsure();
+    await fb.addDoc(fb.collection(fb.db,TK.col),{...p,completedAt:fb.serverTimestamp(),ua:navigator.userAgent.substring(0,100)});
+    return true;
+  }catch(e){console.warn('[Firebase] write failed:',e);return false;}
+}
+async function sbRecord(p){
+  try{
+    const row={course_code:TK.course,session_id:p.sessionId,student_id:p.studentId,student_name:p.studentName||'',
+      game_id:p.gameId,game_name:p.gameName||'',score:Number(p.score)||0,wrong:Number(p.wrong)||0,total:Number(p.total)||0,
+      duration_ms:Number(p.durationMs)||0,client_meta:{ua:navigator.userAgent.substring(0,100),...(p.meta||{})}};
+    const res=await fetch(`${TK.sbUrl}/rest/v1/${TK.sbTable}`,{method:'POST',
+      headers:{'apikey':TK.sbKey,'Authorization':`Bearer ${TK.sbKey}`,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify(row)});
+    if(!res.ok){console.warn('[Supabase] HTTP',res.status,await res.text());return false;}
+    return true;
+  }catch(e){console.warn('[Supabase] write failed:',e);return false;}
+}
+function sendRecord(gameId,gameName,score,extra){
+  let payload;
+  try{
+    const stu=getStudent();
+    payload=Object.assign({studentId:stu.id,studentName:stu.name,sessionId:SESSION_ID,
+      gameId,gameName,score,total:100,wrong:0,durationMs:(extra&&extra.durationMs)||0,
+      meta:Object.assign({week:9},(extra&&extra.meta)||{})},{});
+  }catch(e){console.warn('[track]',e);return;}
+  Promise.allSettled([fbRecord(payload),sbRecord(payload)]).then(function(r){
+    const f=r[0],s=r[1];
+    const st=document.getElementById('cloudSt');
+    if(!st)return;
+    const fok=f.status==='fulfilled'&&f.value,sok=s.status==='fulfilled'&&s.value;
+    if(fok||sok){st.textContent='☁️✓';st.title='成績已上傳'+(fok&&sok?'（Firebase＋Supabase）':fok?'（Firebase）':'（Supabase）');}
+    else{st.textContent='📴';st.title='目前離線：成績只顯示在這一頁，沒有上傳';}
+  });
+}
+
+/* ============================================================
+   ① 三語詞彙賓果
+   ============================================================ */
+const TERMS=[
+  {zh:'細胞',py:'xì bāo',vi:'Tế bào',en:'Cell',wk:1},
+  {zh:'原核細胞',py:'yuán hé xì bāo',vi:'Tế bào nhân sơ',en:'Prokaryotic cell',wk:1},
+  {zh:'真核細胞',py:'zhēn hé xì bāo',vi:'Tế bào nhân thực',en:'Eukaryotic cell',wk:1},
+  {zh:'胞器',py:'bāo qì',vi:'Bào quan',en:'Organelle',wk:1},
+  {zh:'大分子',py:'dà fēn zǐ',vi:'Đại phân tử',en:'Macromolecule',wk:1},
+  {zh:'水',py:'shuǐ',vi:'Nước',en:'Water',wk:2},
+  {zh:'氫鍵',py:'qīng jiàn',vi:'Liên kết hydrogen',en:'Hydrogen bond',wk:2},
+  {zh:'酸',py:'suān',vi:'Acid',en:'Acid',wk:2},
+  {zh:'鹼',py:'jiǎn',vi:'Base',en:'Base',wk:2},
+  {zh:'緩衝溶液',py:'huǎn chōng róng yè',vi:'Dung dịch đệm',en:'Buffer solution',wk:2},
+  {zh:'胺基酸',py:'àn jī suān',vi:'Amino acid',en:'Amino acid',wk:3},
+  {zh:'側鏈',py:'cè liàn',vi:'Mạch bên',en:'Side chain',wk:3},
+  {zh:'胜肽鍵',py:'shēng tài jiàn',vi:'Liên kết peptide',en:'Peptide bond',wk:3},
+  {zh:'N端',py:'N duān',vi:'Đầu N',en:'N-terminus',wk:3},
+  {zh:'等電點',py:'děng diàn diǎn',vi:'Điểm đẳng điện',en:'Isoelectric point',wk:3},
+  {zh:'一級結構',py:'yī jí jié gòu',vi:'Cấu trúc bậc một',en:'Primary structure',wk:4},
+  {zh:'二級結構',py:'èr jí jié gòu',vi:'Cấu trúc bậc hai',en:'Secondary structure',wk:4},
+  {zh:'三級結構',py:'sān jí jié gòu',vi:'Cấu trúc bậc ba',en:'Tertiary structure',wk:4},
+  {zh:'α螺旋',py:'α luó xuán',vi:'Xoắn alpha',en:'Alpha helix',wk:4},
+  {zh:'β摺板',py:'β zhé bǎn',vi:'Gấp nếp beta',en:'Beta sheet',wk:4},
+  {zh:'肌紅素',py:'jī hóng sù',vi:'Myoglobin',en:'Myoglobin',wk:5},
+  {zh:'血紅素',py:'xuè hóng sù',vi:'Hemoglobin',en:'Hemoglobin',wk:5},
+  {zh:'血基質',py:'xuè jī zhì',vi:'Nhóm heme',en:'Heme',wk:5},
+  {zh:'協同性',py:'xié tóng xìng',vi:'Tính hợp tác',en:'Cooperativity',wk:5},
+  {zh:'波耳效應',py:'bō ěr xiào yīng',vi:'Hiệu ứng Bohr',en:'Bohr effect',wk:5},
+  {zh:'酵素',py:'jiào sù',vi:'Enzyme',en:'Enzyme',wk:6},
+  {zh:'受質',py:'shòu zhì',vi:'Cơ chất',en:'Substrate',wk:6},
+  {zh:'活性部位',py:'huó xìng bù wèi',vi:'Trung tâm hoạt động',en:'Active site',wk:6},
+  {zh:'活化能',py:'huó huà néng',vi:'Năng lượng hoạt hóa',en:'Activation energy',wk:6},
+  {zh:'誘導契合',py:'yòu dǎo qì hé',vi:'Khớp cảm ứng',en:'Induced fit',wk:6},
+  {zh:'米氏常數',py:'mǐ shì cháng shù',vi:'Hằng số Michaelis',en:'Km',wk:7},
+  {zh:'最大速率',py:'zuì dà sù lǜ',vi:'Tốc độ tối đa',en:'Vmax',wk:7},
+  {zh:'抑制劑',py:'yì zhì jì',vi:'Chất ức chế',en:'Inhibitor',wk:7},
+  {zh:'競爭性抑制',py:'jìng zhēng xìng yì zhì',vi:'Ức chế cạnh tranh',en:'Competitive inhibition',wk:7},
+  {zh:'非競爭性抑制',py:'fēi jìng zhēng xìng yì zhì',vi:'Ức chế không cạnh tranh',en:'Noncompetitive inhibition',wk:7},
+  {zh:'單醣',py:'dān táng',vi:'Đường đơn',en:'Monosaccharide',wk:8},
+  {zh:'雙醣',py:'shuāng táng',vi:'Đường đôi',en:'Disaccharide',wk:8},
+  {zh:'多醣',py:'duō táng',vi:'Đường đa',en:'Polysaccharide',wk:8},
+  {zh:'葡萄糖',py:'pú táo táng',vi:'Glucose',en:'Glucose',wk:8},
+  {zh:'醣苷鍵',py:'táng gān jiàn',vi:'Liên kết glycosidic',en:'Glycosidic bond',wk:8}
+];
+
+const LINES=[[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14,15],
+             [0,4,8,12],[1,5,9,13],[2,6,10,14],[3,7,11,15],
+             [0,5,10,15],[3,6,9,12]];
+
+let bingoRecordedThisLoad=false;
+let bStartTime=Date.now();
+let bMarked=new Array(16).fill(false);
+let bCard=[];
+let bRedrawNonce=0;
+
+function renderBingoCard(){
+  const stu=silentId();
+  const seedStr=stu.id+'_'+todayStr()+'_'+bRedrawNonce;
+  const seed=djb2(seedStr);
+  bCard=seededShuffle(TERMS,seed).slice(0,16);
+  bMarked=new Array(16).fill(false);
+  bStartTime=Date.now();
+  document.getElementById('bingoBanner').classList.remove('show');
+  const g=document.getElementById('bgrid');g.innerHTML='';
+  bCard.forEach(function(t,i){
+    const c=document.createElement('div');c.className='bcell';c.dataset.i=i;
+    c.innerHTML=`<div class="zh">${esc(t.zh)}</div><div class="py">${esc(t.py)}</div>`;
+    c.onclick=function(){toggleCell(i,c);};
+    g.appendChild(c);
+  });
+}
+function toggleCell(i,el){
+  bMarked[i]=!bMarked[i];
+  el.classList.toggle('marked',bMarked[i]);
+  checkBingo();
+}
+function checkBingo(){
+  let completed=0,anyNew=false;
+  LINES.forEach(function(line){
+    if(line.every(function(idx){return bMarked[idx];})){
+      completed++;
+      line.forEach(function(idx){
+        const cell=document.querySelector('#bgrid .bcell[data-i="'+idx+'"]');
+        if(cell&&!cell.classList.contains('won')){cell.classList.add('won');anyNew=true;}
+      });
+    }
+  });
+  if(completed>0&&anyNew){
+    const banner=document.getElementById('bingoBanner');
+    banner.classList.add('show');
+    if(!bingoRecordedThisLoad){
+      bingoRecordedThisLoad=true;
+      const elapsed=Date.now()-bStartTime;
+      sendRecord('w09_bingo','詞彙賓果',100,{durationMs:elapsed,meta:{week:9,lines:completed,elapsedMs:elapsed}});
+    }
+  }
+}
+document.getElementById('newCardBtn').onclick=function(){bRedrawNonce++;renderBingoCard();};
+
+/* ---- 教師唱名模式 ---- */
+let callPool=[],callIdx=-1,callHistoryArr=[];
+function renderCaller(fresh){
+  if(fresh){
+    const seed=djb2('teacher_'+todayStr());
+    callPool=seededShuffle(TERMS,seed);
+    callIdx=-1;callHistoryArr=[];
+    document.getElementById('callHistory').innerHTML='';
+  }
+  const total=callPool.length;
+  const prog=document.getElementById('callProgress');
+  const flip=document.getElementById('callFlip');
+  if(callIdx<0){
+    prog.textContent='尚未開始 · Chưa bắt đầu（共 '+total+' 個詞）';
+    document.getElementById('callVi').textContent='請按「下一個」開始';
+    document.getElementById('callPy').textContent='';
+    document.getElementById('callZh').textContent='';
+    flip.classList.remove('revealed');
+    return;
+  }
+  const t=callPool[callIdx];
+  prog.textContent='第 '+(callIdx+1)+' / '+total+' 個';
+  document.getElementById('callVi').textContent=t.vi;
+  document.getElementById('callPy').textContent=t.py;
+  document.getElementById('callZh').textContent=t.zh;
+  flip.classList.remove('revealed');
+}
+document.getElementById('callFlip').onclick=function(){this.classList.toggle('revealed');};
+document.getElementById('callSpk').onclick=function(){
+  if(callIdx>=0&&callPool[callIdx])speak(callPool[callIdx].zh);
+};
+document.getElementById('callNextBtn').onclick=function(){
+  if(callPool.length===0)renderCaller(true);
+  if(callIdx>=0){
+    const prev=callPool[callIdx];
+    callHistoryArr.push(prev);
+    const h=document.getElementById('callHistory');
+    const chip=document.createElement('span');chip.className='chip';
+    chip.textContent=(callHistoryArr.length)+'. '+prev.zh+'／'+prev.vi;
+    h.appendChild(chip);
+  }
+  if(callIdx+1>=callPool.length){
+    document.getElementById('callVi').textContent='已經唱完全部 '+callPool.length+' 個詞！';
+    document.getElementById('callPy').textContent='Đã gọi hết toàn bộ từ vựng!';
+    document.getElementById('callZh').textContent='';
+    document.getElementById('callProgress').textContent='完成 · Hoàn thành';
+    return;
+  }
+  callIdx++;
+  renderCaller(false);
+};
+document.getElementById('callResetBtn').onclick=function(){renderCaller(true);};
+
+/* ---- 模式切換 ---- */
+document.getElementById('modeStuBtn').onclick=function(){
+  this.classList.add('on');document.getElementById('modeTeaBtn').classList.remove('on');
+  document.getElementById('stuBingoWrap').style.display='';
+  document.getElementById('teaCallWrap').style.display='none';
+};
+document.getElementById('modeTeaBtn').onclick=function(){
+  this.classList.add('on');document.getElementById('modeStuBtn').classList.remove('on');
+  document.getElementById('stuBingoWrap').style.display='none';
+  document.getElementById('teaCallWrap').style.display='';
+  if(callPool.length===0)renderCaller(true);
+};
+renderBingoCard();
+
+/* ============================================================
+   ② 標圖牆
+   ============================================================ */
+const FIGURES=[
+  {file:'w01_cell_regions.jpg',wk:1,zh:'動物細胞構造',vi:'Cấu trúc tế bào động vật',
+   labels:[
+     {zh:'內質網 ER',vi:'Lưới nội chất'},
+     {zh:'細胞核 Nucleus',vi:'Nhân tế bào'},
+     {zh:'粒線體 Mitochondrion',vi:'Ty thể'},
+     {zh:'高基氏體 Golgi',vi:'Bộ máy Golgi'},
+     {zh:'細胞膜 Cell membrane',vi:'Màng tế bào'}
+   ]},
+  {file:'w02_titration.jpg',wk:2,zh:'pH 滴定曲線',vi:'Đường cong chuẩn độ pH',
+   labels:[
+     {n:'①',zh:'緩衝區內的一點（平緩段，pH 變化小）',vi:'Điểm trong vùng đệm (đoạn phẳng, pH đổi ít)'},
+     {n:'②',zh:'接近當量點前的陡升段',vi:'Đoạn dốc gần điểm tương đương'},
+     {n:'③',zh:'當量點之後，鹼過量的平坦段',vi:'Đoạn bằng phẳng sau điểm tương đương (dư base)'}
+   ]},
+  {file:'w02_water_hbond.jpg',wk:2,zh:'水分子的氫鍵與疏水甲烷',vi:'Liên kết hydrogen của nước và methane kỵ nước',
+   labels:[
+     {n:'①',zh:'水分子間的氫鍵（虛線）',vi:'Liên kết hydrogen giữa các phân tử nước'},
+     {n:'②',zh:'甲烷 C–H 鍵，非極性、不形成氫鍵（疏水）',vi:'Liên kết C–H không phân cực của methane (kỵ nước)'}
+   ]},
+  {file:'w03_aa_general.jpg',wk:3,zh:'胺基酸通用結構',vi:'Cấu trúc chung của amino acid',
+   labels:[
+     {n:'①',zh:'胺基與 α 碳之間的鍵',vi:'Liên kết giữa nhóm amino và carbon α'},
+     {n:'②',zh:'胺基 –NH₃⁺',vi:'Nhóm amino'},
+     {n:'③',zh:'羧基 –COO⁻ 的氧',vi:'Oxy của nhóm carboxyl'},
+     {n:'④',zh:'α 碳（不對稱中心）',vi:'Carbon α (trung tâm bất đối xứng)'},
+     {n:'⑤',zh:'接在 α 碳上的氫原子',vi:'Nguyên tử hydro gắn ở carbon α'}
+   ]},
+  {file:'w03_aa_classes.jpg',wk:3,zh:'胺基酸依側鏈分類',vi:'Phân loại amino acid theo mạch bên',
+   labels:[
+     {n:'①',zh:'甘胺酸 Gly（非極性）',vi:'Glycine (không phân cực)'},
+     {n:'②',zh:'絲胺酸 Ser（極性不帶電）',vi:'Serine (phân cực không tích điện)'},
+     {n:'③',zh:'離胺酸 Lys（帶正電）',vi:'Lysine (tích điện dương)'},
+     {n:'④',zh:'天門冬胺酸 Asp（帶負電）',vi:'Aspartate (tích điện âm)'}
+   ]},
+  {file:'w03_peptide_bond.jpg',wk:3,zh:'胜肽鍵的形成（脫水縮合）',vi:'Sự hình thành liên kết peptide (ngưng tụ mất nước)',
+   labels:[
+     {n:'①',zh:'第一個胺基酸的羧基氧',vi:'Oxy nhóm carboxyl của amino acid thứ nhất'},
+     {n:'②',zh:'第二個胺基酸的羧基氧',vi:'Oxy nhóm carboxyl của amino acid thứ hai'},
+     {n:'③',zh:'胜肽鍵（C–N 鍵，黃色框）',vi:'Liên kết peptide (khung vàng)'},
+     {n:'④',zh:'反應釋出的水分子',vi:'Phân tử nước được giải phóng'}
+   ]},
+  {file:'w04_four_levels.jpg',wk:4,zh:'蛋白質結構的四個層次',vi:'Bốn bậc cấu trúc protein',
+   labels:[
+     {n:'①',zh:'一級結構（胺基酸序列）',vi:'Cấu trúc bậc một (trình tự amino acid)'},
+     {n:'②',zh:'二級結構（β 摺板）',vi:'Cấu trúc bậc hai (gấp nếp β)'},
+     {n:'③',zh:'三級結構（單一多肽鏈的立體摺疊）',vi:'Cấu trúc bậc ba (gập không gian một chuỗi)'},
+     {n:'④',zh:'四級結構（多個次單元組合）',vi:'Cấu trúc bậc bốn (nhiều tiểu đơn vị kết hợp)'}
+   ]},
+  {file:'w04_helix_sheet.jpg',wk:4,zh:'α 螺旋與 β 摺板的氫鍵',vi:'Liên kết hydrogen trong xoắn α và gấp nếp β',
+   labels:[
+     {n:'①',zh:'α 螺旋內的氫鍵（第 n 個對第 n+4 個）',vi:'Liên kết hydrogen trong xoắn α (n với n+4)'},
+     {n:'②',zh:'平行 β 摺板間的氫鍵',vi:'Liên kết hydrogen giữa các sợi β song song'},
+     {n:'③',zh:'反平行 β 摺板間的氫鍵',vi:'Liên kết hydrogen giữa các sợi β đối song song'}
+   ]},
+  {file:'w05_heme_o2.jpg',wk:5,zh:'血基質與氧結合',vi:'Nhóm heme gắn với oxy',
+   labels:[
+     {n:'①',zh:'鐵離子 Fe²⁺（血基質中心）',vi:'Ion sắt Fe²⁺ (trung tâm nhóm heme)'},
+     {n:'②',zh:'紫質環上配位鐵的氮原子',vi:'Nguyên tử nitơ của vòng porphyrin phối trí với sắt'},
+     {n:'③',zh:'近端組胺酸（His）的氮，從另一側配位鐵',vi:'Nitơ của histidine gần (phối trí phía đối diện)'}
+   ]},
+  {file:'w05_o2_curves.jpg',wk:5,zh:'肌紅素與血紅素的氧解離曲線',vi:'Đường cong gắn oxy của myoglobin và hemoglobin',
+   labels:[
+     {n:'①',zh:'肌紅素曲線（雙曲線，單體、無協同性）',vi:'Đường cong myoglobin (hyperbol, không hợp tác)'},
+     {n:'②',zh:'血紅素曲線（S 形，有協同性）',vi:'Đường cong hemoglobin (hình chữ S, có hợp tác)'},
+     {n:'③',zh:'血紅素在肺部的高氧分壓區（接近飽和）',vi:'Hemoglobin ở vùng phổi (gần bão hòa)'}
+   ]},
+  {file:'w06_activation.jpg',wk:6,zh:'自由能反應進程圖（有無酵素比較）',vi:'Biểu đồ tiến trình năng lượng tự do (có/không có enzyme)',
+   labels:[
+     {n:'①',zh:'有酵素時的活化能（Ea enzyme，較低）',vi:'Năng lượng hoạt hóa khi có enzyme (thấp hơn)'},
+     {n:'②',zh:'酵素催化路徑經過渡態後下降至產物',vi:'Đường xúc tác bởi enzyme, sau trạng thái chuyển tiếp đi xuống sản phẩm'},
+     {n:'③',zh:'自由能變化 ΔG（反應物與產物的能量差，酵素不影響）',vi:'Biến thiên năng lượng tự do ΔG (enzyme không làm thay đổi)'}
+   ]},
+  {file:'w06_induced_fit.jpg',wk:6,zh:'酵素與受質結合的步驟',vi:'Các bước enzyme gắn với cơ chất',
+   labels:[
+     {n:'①',zh:'游離酵素，活性部位尚未結合受質',vi:'Enzyme tự do, vị trí hoạt động chưa gắn cơ chất'},
+     {n:'②',zh:'酵素－受質複合體（ES complex）形成',vi:'Phức hợp enzyme-cơ chất (ES) hình thành'},
+     {n:'③',zh:'反應完成，產物釋放，酵素恢復原狀',vi:'Phản ứng hoàn tất, sản phẩm được giải phóng'}
+   ]},
+  {file:'w07_inhibition.jpg',wk:7,zh:'競爭性與非競爭性抑制比較',vi:'So sánh ức chế cạnh tranh và không cạnh tranh',
+   labels:[
+     {n:'①',zh:'競爭性抑制曲線（Km 變大，Vmax 不變）',vi:'Đường ức chế cạnh tranh (Km tăng, Vmax không đổi)'},
+     {n:'②',zh:'非競爭性抑制曲線（Vmax 變小，Km 不變）',vi:'Đường ức chế không cạnh tranh (Vmax giảm, Km không đổi)'},
+     {n:'③',zh:'競爭性抑制的特徵：兩曲線終將達到同一個 Vmax',vi:'Đặc điểm ức chế cạnh tranh: hai đường cuối cùng đạt cùng Vmax'}
+   ]},
+  {file:'w07_mm_curve.jpg',wk:7,zh:'米氏方程式反應速率曲線',vi:'Đường cong tốc độ phản ứng Michaelis-Menten',
+   labels:[
+     {n:'①',zh:'飽和區（高 [S]，速率接近 Vmax）',vi:'Vùng bão hòa ([S] cao, gần Vmax)'},
+     {n:'②',zh:'Km 右側、接近半飽和的曲線',vi:'Đường cong gần bán bão hòa, bên phải Km'},
+     {n:'③',zh:'低 [S] 的線性區（速率正比於 [S]）',vi:'Vùng tuyến tính khi [S] thấp'}
+   ]},
+  {file:'w08_glucose_forms.jpg',wk:8,zh:'葡萄糖的開鏈與環狀異構物',vi:'Dạng mạch hở và dạng vòng của glucose',
+   labels:[
+     {n:'①',zh:'C3 碳（鏈狀結構上的第三個碳）',vi:'Carbon C3 (carbon thứ ba trên mạch hở)'},
+     {n:'②',zh:'環化反應：C5 的 OH 對 C1 進行分子內親核攻擊，形成半縮醛環',vi:'Phản ứng vòng hóa: OH ở C5 tấn công C1 tạo vòng hemiacetal'},
+     {n:'③',zh:'α-D-葡萄糖的異構碳 C1（OH 指向下方）',vi:'Carbon đồng phân C1 của α-D-glucose (OH hướng xuống)'},
+     {n:'④',zh:'β-D-葡萄糖的異構碳 C1（OH 指向上方）',vi:'Carbon đồng phân C1 của β-D-glucose (OH hướng lên)'}
+   ]},
+  {file:'w08_polysaccharides.jpg',wk:8,zh:'三種多醣的鏈狀結構比較',vi:'So sánh cấu trúc ba loại polysaccharide',
+   labels:[
+     {n:'①',zh:'澱粉 Starch：α(1→4) 鏈，偶有 α(1→6) 分支',vi:'Tinh bột: chuỗi α(1→4), thỉnh thoảng có nhánh α(1→6)'},
+     {n:'②',zh:'肝醣 Glycogen：α(1→4) 鏈，密集的 α(1→6) 分支',vi:'Glycogen: chuỗi α(1→4), nhánh α(1→6) dày đặc'},
+     {n:'③',zh:'纖維素 Cellulose：β(1→4) 直鏈，分子間氫鍵',vi:'Cellulose: chuỗi thẳng β(1→4), liên kết hydro giữa các chuỗi'}
+   ]}
+];
+(function(){
+  const host=document.getElementById('fwall');
+  FIGURES.forEach(function(f){
+    const card=document.createElement('div');card.className='fcard';
+    const labsHtml=f.labels.map(function(l){
+      return `<div class="lab">${l.n?('<b>'+esc(l.n)+'</b> '):''}${esc(l.zh)}<span class="lvi">${esc(l.vi)}</span></div>`;
+    }).join('');
+    card.innerHTML=`
+      <img class="thumb" src="../assets/figures/labeled/${f.file}" alt="${esc(f.zh)}" loading="lazy">
+      <div class="fmeta">
+        <span class="wk">第 ${f.wk} 週</span>
+        <div class="cap-zh">${esc(f.zh)}</div>
+        <div class="cap-vi">${esc(f.vi)}</div>
+      </div>
+      <details>
+        <summary>📋 標號解答 · Đáp án các số</summary>
+        ${labsHtml}
+      </details>`;
+    card.querySelector('.thumb').onclick=function(){openOverlay('../assets/figures/labeled/'+f.file,f.zh);};
+    host.appendChild(card);
+  });
+})();
+function openOverlay(src,alt){
+  const ov=document.getElementById('overlay'),img=document.getElementById('overlayImg');
+  img.src=src;img.alt=alt||'';ov.classList.add('show');
+}
+document.getElementById('overlay').onclick=function(){this.classList.remove('show');};
+document.getElementById('selftestChk').onchange=function(){
+  document.getElementById('fwall').classList.toggle('selftest',this.checked);
+};
+
+/* ============================================================
+   ③ 期考題型示範
+   ============================================================ */
+const QUESTIONS=[
+  {type:'標圖',wk:3,img:'w03_aa_general.jpg',
+   stem:'(標圖) 看右圖胺基酸通用結構，標號②所指的是什麼？',
+   opts:['側鏈','胺基','羧基','α碳'],correct:1,
+   exp:'標號②位於上方 N 原子與 H 之間，是胺基（–NH₃⁺）的位置；胺基帶正電，是鹼性的官能基。'},
+  {type:'標圖',wk:7,img:'w07_inhibition.jpg',
+   stem:'(標圖) 看右圖抑制作用比較圖，標號①所在的紅色曲線代表哪一種抑制作用？',
+   opts:['回饋抑制','競爭性抑制','不可逆抑制','非競爭性抑制'],correct:1,
+   exp:'這條紅色曲線最終仍能達到與對照組相同的 Vmax，只是需要更高的受質濃度（Km 變大）——這是競爭性抑制的特徵：抑制劑與受質競爭同一個活性部位。'},
+  {type:'配對',wk:5,
+   stem:'哪一個配對正確？',
+   opts:['協同性—肌紅素只有一條胜肽鏈','鐮刀型貧血—鐵離子變成Fe³⁺','解離常數—血紅素的曲線呈S形','波耳效應—pH下降時血紅素放掉氧'],correct:3,
+   exp:'波耳效應是指：組織中 pH 下降（H⁺變多、CO₂增加）時，血紅素對氧的親和力降低，更容易釋放氧氣供組織使用。'},
+  {type:'配對',wk:8,
+   stem:'哪一個配對正確？',
+   opts:['澱粉—α(1→4)鏈偶爾有α(1→6)分支','蔗糖—由兩個葡萄糖組成','纖維素—動物儲存能量用的多醣','肝醣—人體無法消化的β鍵多醣'],correct:0,
+   exp:'澱粉是植物的儲存多醣，主鏈是 α(1→4) 醣苷鍵，偶爾有 α(1→6) 分支；蔗糖是葡萄糖＋果糖，纖維素才是 β 鍵、人體無法消化，肝醣則是動物的儲存多醣。'},
+  {type:'選擇',wk:4,
+   stem:'使蛋白質失去原本立體結構、失去功能的過程稱為什麼？',
+   opts:['變性','轉角','摺疊','結構域'],correct:0,
+   exp:'高溫、極端 pH 或有機溶劑等因素會破壞氫鍵等次級鍵，使蛋白質失去立體結構與功能，這個過程稱為變性（denaturation）；一級結構（胺基酸序列）通常不會被破壞。'},
+  {type:'選擇',wk:6,
+   stem:'為什麼胰蛋白酶不能拿來分解脂肪？',
+   opts:['脂肪不是分子不能被分解','胰蛋白酶已經變性','胰蛋白酶沒有活性部位','酵素有專一性活性部位只配合特定受質'],correct:3,
+   exp:'每一種酵素的活性部位形狀只能辨識、結合特定的受質，這叫做專一性（specificity）。胰蛋白酶的活性部位只配合蛋白質，無法辨識脂肪分子。'},
+  {type:'計算',wk:2,
+   stem:'[H⁺] = 10⁻³ M，pH = 多少？',
+   opts:['3','10','4','11'],correct:0,
+   exp:'pH = −log[H⁺] = −log(10⁻³) = 3。'},
+  {type:'計算',wk:7,
+   stem:'已知某酵素 Vmax 為 80 μmol/min。當 [S] = Km 時，v₀ 大約是多少？',
+   opts:['160 μmol/min','80 μmol/min','20 μmol/min','40 μmol/min'],correct:3,
+   exp:'根據米氏方程式，當 [S] = Km 時，v₀ = Vmax／2 = 80／2 = 40 μmol/min。這正是 Km 的定義：達到一半最大反應速率時的受質濃度。'}
+];
+let quizPicked=new Array(QUESTIONS.length).fill(null);
+let quizSubmitted=false;
+(function(){
+  const host=document.getElementById('quizHost');
+  QUESTIONS.forEach(function(q,i){
+    const box=document.createElement('div');box.className='qbox';box.id='qbox'+i;
+    const img=q.img?`<img src="../assets/figures/labeled/${q.img}" alt="${esc(q.stem)}">`:'';
+    const opts=q.opts.map(function(t,k){
+      return `<div class="qopt" data-k="${k}">${esc(t)}</div>`;
+    }).join('');
+    box.innerHTML=`
+      <span class="qtag">${esc(q.type)} · 第${q.wk}週</span>
+      <div class="stem"><span class="n">${i+1}</span>${esc(q.stem)}</div>
+      ${img}
+      <div class="qopts">${opts}</div>
+      <div class="qexp">${esc(q.exp)}</div>`;
+    box.querySelectorAll('.qopt').forEach(function(o){
+      o.onclick=function(){answerQuiz(i,+o.dataset.k);};
+    });
+    host.appendChild(box);
+  });
+})();
+function answerQuiz(i,k){
+  if(quizPicked[i]!==null)return;
+  quizPicked[i]=k;
+  const box=document.getElementById('qbox'+i);
+  const opts=box.querySelectorAll('.qopt');
+  const q=QUESTIONS[i];
+  opts.forEach(function(o){o.classList.add('locked');});
+  opts[q.correct].classList.add('right');
+  if(k!==q.correct)opts[k].classList.add('wrong');
+  box.querySelector('.qexp').classList.add('show');
+  if(quizPicked.every(function(p){return p!==null;})&&!quizSubmitted){
+    quizSubmitted=true;
+    let correct=0;
+    quizPicked.forEach(function(p,idx){if(p===QUESTIONS[idx].correct)correct++;});
+    const score=Math.round(correct/QUESTIONS.length*100);
+    document.getElementById('quizScore').textContent=correct;
+    document.getElementById('quizDone').classList.add('show');
+    sendRecord('w09_sample','期考題型示範',score,{meta:{week:9,correct,total:QUESTIONS.length}});
+  }
+}
+
+})();
+</script>
+</body>
+</html>
