@@ -52,9 +52,9 @@ footer{border-top:1px solid var(--border);padding:1.2rem;text-align:center;color
 </head>
 <body>
 <!--
-  這道通關碼只是「裝飾性遮擋」，用來避免學生隨手點進來看到全班成績，
-  不是真正的存取控制：頁面原始碼、Supabase anon key 與資料本身都是公開可讀的。
-  真正需要保護敏感資料時，請在 Supabase 端設定 RLS，而不是依賴這道前端密碼。
+  2026-10-01 起這道通關碼是「真正的存取控制」：
+  interactions 表已對 anon 關閉 SELECT，本頁改走 RPC get_biochem_interactions(通關碼)，
+  通關碼在資料庫端以 SHA-256 雜湊比對，不出現在本頁原始碼。輸錯拿不到任何資料。
 -->
 <div id="lock">
   <h2>🔒 教師儀表板</h2>
@@ -110,20 +110,24 @@ footer{border-top:1px solid var(--border);padding:1.2rem;text-align:center;color
 var SUPA_URL = "https://qmldcjkllisvfgegkfsz.supabase.co";
 var SUPA_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbGRjamtsbGlzdmZnZWdrZnN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzExMjM5ODYsImV4cCI6MjA4NjY5OTk4Nn0.Bfj0W7HN_n_vcjGe5502Chamk0YV-de8a0fxF4Nyczk";
 var COURSE = "biochem-vi";
-var PASS = "biochem2026"; // 裝飾性遮擋，見上方註解
+// 2026-10-01 起通關碼改為伺服端驗證：資料表對 anon 關閉 SELECT，
+// 讀取一律走 RPC get_biochem_interactions(通關碼)，由資料庫比對雜湊後放行。
+// 通關碼不出現在本檔原始碼，輸對一次後存 localStorage。
+var DASH_PASS = null;
+try { DASH_PASS = localStorage.getItem('bio_dash_pass'); } catch(e) {}
 var ROWS = [];
 var REFRESH_MS = 30000;
 var timerId = null;
 
 function unlock(){
-  if (document.getElementById('pw').value === PASS) {
-    document.getElementById('lock').style.display = 'none';
-    loadData();
-    if (timerId) clearInterval(timerId);
-    timerId = setInterval(loadData, REFRESH_MS);
-  } else {
-    document.getElementById('pwerr').textContent = '通關碼不對，請再試一次。';
-  }
+  DASH_PASS = document.getElementById('pw').value;
+  loadData(true);
+}
+function onUnlocked(){
+  try { localStorage.setItem('bio_dash_pass', DASH_PASS); } catch(e) {}
+  document.getElementById('lock').style.display = 'none';
+  if (timerId) clearInterval(timerId);
+  timerId = setInterval(loadData, REFRESH_MS);
 }
 
 function esc(s){
@@ -149,15 +153,25 @@ function avg(list){
   return Math.round(sum / list.length);
 }
 
-function loadData(){
+function loadData(fromUnlock){
   var statusEl = document.getElementById('statusLine');
   statusEl.textContent = '更新中…';
-  var url = SUPA_URL + '/rest/v1/interactions?course_code=eq.' + encodeURIComponent(COURSE) +
-    '&order=completed_at.desc&limit=5000';
-  fetch(url, { headers: { apikey: SUPA_KEY, Authorization: 'Bearer ' + SUPA_KEY } })
+  fetch(SUPA_URL + '/rest/v1/rpc/get_biochem_interactions', {
+    method: 'POST',
+    headers: { apikey: SUPA_KEY, Authorization: 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ p_pass: DASH_PASS || '' })
+  })
     .then(function(r){ return r.json(); })
     .then(function(rows){
-      ROWS = Array.isArray(rows) ? rows : [];
+      if (!Array.isArray(rows)) {
+        try { localStorage.removeItem('bio_dash_pass'); } catch(e) {}
+        document.getElementById('lock').style.display = '';
+        document.getElementById('pwerr').textContent = '通關碼不對，請再試一次。';
+        statusEl.textContent = '';
+        return;
+      }
+      if (fromUnlock || document.getElementById('lock').style.display !== 'none') onUnlocked();
+      ROWS = rows;
       populateFilters();
       render();
       statusEl.textContent = '最後更新：' + new Date().toLocaleTimeString('zh-TW', { hour12: false });
@@ -273,6 +287,9 @@ function renderGameBars(rows){
   tip.style.display = 'block';
   tip.innerHTML = '📌 下週複習重點：<b>' + esc(entries[0].name) + '</b>（平均 ' + entries[0].avg + ' 分，全班最低）';
 }
+
+// 曾輸對通關碼的裝置自動解鎖
+if (DASH_PASS) loadData(true);
 </script>
 </body>
 </html>

@@ -21,6 +21,8 @@ jobs:
           node-version: 22
       - name: Generate report (doubles as Supabase keepalive)
         run: node scripts/weekly_report.mjs
+        env:
+          BIOCHEM_REPORT_PASS: ${{ secrets.BIOCHEM_REPORT_PASS }}
       - name: Commit report
         run: |
           git config user.name "github-actions[bot]"

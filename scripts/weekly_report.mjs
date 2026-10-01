@@ -3,21 +3,28 @@
    由 GitHub Actions 每週五自動執行（.github/workflows/weekly-report.yml）。
    對 Supabase 的查詢本身兼作 keepalive，免費專案不會因閒置被暫停。
 
-   注意：SB_KEY 是 anon 公開金鑰（RLS 只允許 select/insert），
-   與所有已部署課件頁面內嵌的是同一把，放在這裡沒有額外風險。
+   2026-10-01 起 interactions 對 anon 關閉 SELECT，改走通行碼 RPC：
+   需要環境變數 BIOCHEM_REPORT_PASS（GitHub Actions 由 secret 提供，
+   本機執行：$env:BIOCHEM_REPORT_PASS='...'; node scripts/weekly_report.mjs）。
    ============================================================ */
 import fs from 'node:fs';
 
 const SB_URL = 'https://qmldcjkllisvfgegkfsz.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbGRjamtsbGlzdmZnZWdrZnN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzExMjM5ODYsImV4cCI6MjA4NjY5OTk4Nn0.Bfj0W7HN_n_vcjGe5502Chamk0YV-de8a0fxF4Nyczk';
 const COURSE = 'biochem-vi';
+const PASS = process.env.BIOCHEM_REPORT_PASS;
+if (!PASS) { console.error('缺少環境變數 BIOCHEM_REPORT_PASS，無法讀取資料。'); process.exit(1); }
 const HDRS = { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` };
 
 const tw = (d) => new Date(d).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false });
 const twDate = (d) => new Date(d).toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' }); // YYYY-MM-DD
 
-async function q(pathAndQuery) {
-  const r = await fetch(`${SB_URL}/rest/v1/${pathAndQuery}`, { headers: HDRS });
+async function qRpc() {
+  const r = await fetch(`${SB_URL}/rest/v1/rpc/get_biochem_interactions`, {
+    method: 'POST',
+    headers: { ...HDRS, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ p_pass: PASS })
+  });
   if (!r.ok) throw new Error(`Supabase ${r.status}: ${await r.text()}`);
   return r.json();
 }
@@ -25,8 +32,8 @@ async function q(pathAndQuery) {
 const now = Date.now();
 const sinceIso = new Date(now - 7 * 86400e3).toISOString();
 
-// 全學期資料一次撈（一學期 30 人 × 17 週 × 5 遊戲 ≈ 2500 筆，遠低於上限）
-const rows = await q(`interactions?course_code=eq.${COURSE}&order=completed_at.desc&limit=10000`);
+// 全學期資料一次撈（RPC 內限定 course_code 並依 completed_at 遞減，上限 10000 筆）
+const rows = await qRpc();
 const weekRows = rows.filter(r => r.completed_at >= sinceIso);
 
 const label = (r) => (r.student_name && r.student_name.trim()) || `（匿名 ${r.student_id}）`;
