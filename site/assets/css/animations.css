@@ -1,0 +1,11 @@
+/* Shared accessible video layout; no global lesson styles. */
+.teaching-animation{max-width:960px;margin:1rem auto;color:#193946;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+.teaching-animation h3{font-size:1.1rem;margin:.35rem 0}
+.teaching-animation video{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;background:#f4fafc;border-radius:10px}
+.teaching-animation p{font-size:.9rem;line-height:1.5;margin:.4rem 0;overflow-wrap:anywhere}
+.teaching-animation a{color:#216d81}
+.reveal .animation-slide .teaching-animation{max-width:880px;margin:0 auto}
+.reveal .animation-slide .teaching-animation h3{font-size:27px;margin:12px 0}
+.reveal .animation-slide .teaching-animation video{max-height:470px;object-fit:contain}
+.reveal .animation-slide .teaching-animation p{font-size:18px;margin:7px 0}
+@media(max-width:600px){.teaching-animation h3{font-size:1rem}.teaching-animation p{font-size:.85rem}}

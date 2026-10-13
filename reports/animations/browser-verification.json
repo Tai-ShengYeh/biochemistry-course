@@ -1,0 +1,648 @@
+{
+  "browser": "Chromium",
+  "page_playback_checks": 64,
+  "expected_page_playback_checks": 64,
+  "gallery_video_count": 16,
+  "results": [
+    {
+      "week": "w01",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w01",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w02",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w02",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w03",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w03",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w04",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w04",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w05",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w05",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w06",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w06",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w07",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w07",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w08",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w08",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w10",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w10",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w11",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w11",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w12",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w12",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w13",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w13",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w14",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w14",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w15",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w15",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w16",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w16",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w17",
+      "profile": "desktop",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w17",
+      "profile": "desktop",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w01",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w01",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w02",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w02",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w03",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w03",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w04",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w04",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w05",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w05",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w06",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w06",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w07",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w07",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w08",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w08",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w10",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w10",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w11",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w11",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w12",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w12",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w13",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w13",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w14",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w14",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w15",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w15",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w16",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w16",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    },
+    {
+      "week": "w17",
+      "profile": "mobile",
+      "page": "slide",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "passed"
+    },
+    {
+      "week": "w17",
+      "profile": "mobile",
+      "page": "interactive",
+      "playback": "passed",
+      "subtitle_cues": 5,
+      "media_width": 960,
+      "inline_layout": "passed",
+      "reveal_keyboard_and_pause": "not_applicable"
+    }
+  ]
+}

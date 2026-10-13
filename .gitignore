@@ -18,3 +18,7 @@ __pycache__/
 # 系統
 .DS_Store
 Thumbs.db
+
+# Weekly animation narration and render intermediates
+.render-cache/
+*.wav
