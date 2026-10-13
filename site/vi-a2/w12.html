@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
+<link rel="stylesheet" href="../assets/css/animations.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -105,6 +106,17 @@
 提問:放能反應怎麼說?
 </aside>
 </section>
+<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w12">
+<h3>W12 教學動畫：ATP 怎麼帶動需要能量的反應？</h3>
+<video controls playsinline preload="metadata" poster="../assets/animations/w12/poster.jpg" aria-label="ATP 怎麼帶動需要能量的反應？">
+<source src="../assets/animations/w12/w12_animation.mp4" type="video/mp4">
+<track kind="subtitles" src="../assets/animations/w12/w12_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
+您的瀏覽器不支援影片，請下載 MP4。</video>
+<p class="animation-terms">自由能 / Free energy / Năng lượng tự do · 耦合 / Coupling / Ghép cặp · 水解 / Hydrolysis / Thủy phân</p>
+<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
+<p class="animation-links"><a href="../assets/animations/w12/w12_animation.mp4" download>MP4</a> · <a href="../assets/animations/w12/w12_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w12/w12_animation.vtt" download>VTT</a></p>
+</div></section>
+
 <section>
 <div class="hd">
 <h2>ΔG:自發還是不自發</h2>
@@ -367,5 +379,6 @@
 Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
   transition:'slide', plugins:[RevealNotes] });
 </script>
+<script src="../assets/animation-controls.js"></script>
 </body>
 </html>

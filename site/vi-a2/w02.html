@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
+<link rel="stylesheet" href="../assets/css/animations.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -71,6 +72,17 @@
 提問:今天要做哪兩件事?
 </aside>
 </section>
+<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w02">
+<h3>W02 教學動畫：緩衝溶液怎麼保護 pH？</h3>
+<video controls playsinline preload="metadata" poster="../assets/animations/w02/poster.jpg" aria-label="緩衝溶液怎麼保護 pH？">
+<source src="../assets/animations/w02/w02_animation.mp4" type="video/mp4">
+<track kind="subtitles" src="../assets/animations/w02/w02_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
+您的瀏覽器不支援影片，請下載 MP4。</video>
+<p class="animation-terms">弱酸 / Weak acid / Acid yếu · 共軛鹼 / Conjugate base / Base liên hợp · 緩衝液 / Buffer / Dung dịch đệm</p>
+<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
+<p class="animation-links"><a href="../assets/animations/w02/w02_animation.mp4" download>MP4</a> · <a href="../assets/animations/w02/w02_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w02/w02_animation.vtt" download>VTT</a></p>
+</div></section>
+
 <section>
 <div class="hd">
 <h2>先看詞</h2>
@@ -497,5 +509,6 @@
 Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
   transition:'slide', plugins:[RevealNotes] });
 </script>
+<script src="../assets/animation-controls.js"></script>
 </body>
 </html>
