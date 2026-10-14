@@ -1,0 +1,431 @@
+{
+  "title": "糖解的 ATP 帳算對了嗎？",
+  "hero": "ATP 收支與一個 6C",
+  "gloss": "Glycolysis · Đường phân",
+  "model": "glycolysis",
+  "scope": "只計糖解，每葡萄糖投入 2 ATP、生成 4 ATP、淨 2 ATP、2 NADH、2 丙酮酸。乳酸發酵再生 NAD⁺，不另加 ATP。",
+  "predict": {
+    "question": "投入 2 ATP，生成 4 ATP，淨得到？",
+    "choices": [
+      "4 ATP",
+      "2 ATP",
+      "6 ATP"
+    ],
+    "answer": 1,
+    "explanation": "淨得到要扣掉投入。"
+  },
+  "compare": {
+    "title": "先付出，再收回",
+    "task": "分開看投入、生成與淨值。",
+    "cues": [
+      "先投入 2 ATP。",
+      "6C 分成兩個 3C。",
+      "收穫期共生成 4 ATP。",
+      "淨值 4−2 = 2 ATP。"
+    ],
+    "check": {
+      "question": "為什麼不是淨 4 ATP？",
+      "choices": [
+        "因為只有一個碳",
+        "因為 ATP 是氧氣",
+        "要扣掉投入的 2 ATP"
+      ],
+      "answer": 2,
+      "explanation": "投入與生成不能混在同一欄。"
+    }
+  },
+  "mechanism": {
+    "title": "一個 6C 變兩個 3C",
+    "task": "看兩條後半段都要計算。",
+    "cues": [
+      "先追蹤一個六碳單元。",
+      "它分成兩個三碳單元。",
+      "後半段兩份都產生 ATP。",
+      "所以收穫總共要算兩份。"
+    ],
+    "check": {
+      "question": "後半段為什麼常要乘 2？",
+      "choices": [
+        "有兩個 3C 路徑",
+        "有兩個細胞核",
+        "有兩個氧分子"
+      ],
+      "answer": 0,
+      "explanation": "一份六碳糖分成兩份三碳。"
+    }
+  },
+  "experiment": {
+    "title": "改葡萄糖數量",
+    "task": "比較一份與兩份收支。",
+    "cues": [
+      "先選葡萄糖份數。",
+      "每份都先投入 2 ATP。",
+      "每份都生成 4 ATP。",
+      "總淨值依份數改變。"
+    ],
+    "check": {
+      "question": "2 個葡萄糖，糖解淨 ATP？",
+      "choices": [
+        "2",
+        "4",
+        "8"
+      ],
+      "answer": 1,
+      "explanation": "每份淨 2，兩份淨 4。"
+    }
+  },
+  "boundary": {
+    "title": "氧不足，NAD⁺ 怎麼回來？",
+    "task": "追蹤 NADH → NAD⁺，ATP 帳另看。",
+    "cues": [
+      "糖解需要可用的 NAD⁺。",
+      "乳酸發酵把 NADH 轉回 NAD⁺。",
+      "NAD⁺ 可以再參與糖解。",
+      "發酵這一步不另加 ATP。"
+    ],
+    "check": {
+      "question": "乳酸發酵在此主要幫忙什麼？",
+      "choices": [
+        "額外生成一大筆 ATP",
+        "提供全部氧氣",
+        "再生 NAD⁺"
+      ],
+      "answer": 2,
+      "explanation": "糖解的 ATP 與發酵再生 NAD⁺ 分開計。"
+    }
+  },
+  "cases": [
+    {
+      "label": "1 個葡萄糖",
+      "n": 1
+    },
+    {
+      "label": "2 個葡萄糖",
+      "n": 2
+    }
+  ],
+  "transfer": [
+    {
+      "question": "3 個葡萄糖，糖解生成 ATP 與淨 ATP？",
+      "choices": [
+        "生成 12，淨 6",
+        "生成 6，淨 12",
+        "生成 12，淨 12"
+      ],
+      "answer": 0,
+      "explanation": "每份生成 4，投入 2。"
+    },
+    {
+      "question": "乳酸發酵後，NAD⁺ 能做什麼？",
+      "choices": [
+        "直接變成氧氣",
+        "再參與糖解",
+        "切開所有 ATP"
+      ],
+      "answer": 1,
+      "explanation": "再生 NAD⁺ 可使糖解持續。"
+    }
+  ],
+  "week": 13,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/7-2-glycolysis"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "糖解的 ATP 帳算對了嗎？",
+      "task": "投入 2 ATP，生成 4 ATP，淨得到？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "投入 2 ATP，生成 4 ATP，淨得到？",
+        "choices": [
+          "4 ATP",
+          "2 ATP",
+          "6 ATP"
+        ],
+        "answer": 1,
+        "explanation": "淨得到要扣掉投入。"
+      },
+      "hero": "ATP 收支與一個 6C",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "先付出，再收回",
+      "task": "分開看投入、生成與淨值。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先投入 2 ATP。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "6C 分成兩個 3C。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "收穫期共生成 4 ATP。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "淨值 4−2 = 2 ATP。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "為什麼不是淨 4 ATP？",
+        "choices": [
+          "因為只有一個碳",
+          "因為 ATP 是氧氣",
+          "要扣掉投入的 2 ATP"
+        ],
+        "answer": 2,
+        "explanation": "投入與生成不能混在同一欄。"
+      },
+      "duration": 12,
+      "hero": "ATP 收支與一個 6C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "一個 6C 變兩個 3C",
+      "task": "看兩條後半段都要計算。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先追蹤一個六碳單元。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "它分成兩個三碳單元。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "後半段兩份都產生 ATP。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "所以收穫總共要算兩份。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "後半段為什麼常要乘 2？",
+        "choices": [
+          "有兩個 3C 路徑",
+          "有兩個細胞核",
+          "有兩個氧分子"
+        ],
+        "answer": 0,
+        "explanation": "一份六碳糖分成兩份三碳。"
+      },
+      "duration": 12,
+      "hero": "ATP 收支與一個 6C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "改葡萄糖數量",
+      "task": "比較一份與兩份收支。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選葡萄糖份數。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "每份都先投入 2 ATP。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "每份都生成 4 ATP。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "總淨值依份數改變。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "2 個葡萄糖，糖解淨 ATP？",
+        "choices": [
+          "2",
+          "4",
+          "8"
+        ],
+        "answer": 1,
+        "explanation": "每份淨 2，兩份淨 4。"
+      },
+      "duration": 12,
+      "hero": "ATP 收支與一個 6C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "1 個葡萄糖",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "目前 1 份葡萄糖，糖解淨 ATP？",
+            "choices": [
+              "4",
+              "2",
+              "6"
+            ],
+            "answer": 1,
+            "explanation": "4−2=2。淨值要扣掉投入。"
+          }
+        },
+        {
+          "condition": "2 個葡萄糖",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "目前 2 份葡萄糖，糖解淨 ATP？",
+            "choices": [
+              "8",
+              "4",
+              "12"
+            ],
+            "answer": 1,
+            "explanation": "8−4=4。淨值要扣掉投入。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "氧不足，NAD⁺ 怎麼回來？",
+      "task": "追蹤 NADH → NAD⁺，ATP 帳另看。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "糖解需要可用的 NAD⁺。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "乳酸發酵把 NADH 轉回 NAD⁺。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "NAD⁺ 可以再參與糖解。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "發酵這一步不另加 ATP。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "乳酸發酵在此主要幫忙什麼？",
+        "choices": [
+          "額外生成一大筆 ATP",
+          "提供全部氧氣",
+          "再生 NAD⁺"
+        ],
+        "answer": 2,
+        "explanation": "糖解的 ATP 與發酵再生 NAD⁺ 分開計。"
+      },
+      "duration": 12,
+      "hero": "NADH → NAD⁺",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "1 個葡萄糖",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "乳酸發酵在此主要幫忙什麼？",
+            "choices": [
+              "額外生成一大筆 ATP",
+              "提供全部氧氣",
+              "再生 NAD⁺"
+            ],
+            "answer": 2,
+            "explanation": "糖解的 ATP 與發酵再生 NAD⁺ 分開計。"
+          }
+        },
+        {
+          "condition": "2 個葡萄糖",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "乳酸發酵在此主要幫忙什麼？",
+            "choices": [
+              "額外生成一大筆 ATP",
+              "提供全部氧氣",
+              "再生 NAD⁺"
+            ],
+            "answer": 2,
+            "explanation": "糖解的 ATP 與發酵再生 NAD⁺ 分開計。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "ATP 收支與一個 6C",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

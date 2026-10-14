@@ -1,0 +1,468 @@
+{
+  "title": "酵素改了哪一座山？",
+  "hero": "反應能量路徑",
+  "gloss": "Enzyme · Enzyme",
+  "model": "energy",
+  "scope": "能量圖是反應座標，不是時間。示意反應有相同起終點；酵素不改變 ΔG 或平衡位置。",
+  "predict": {
+    "question": "加入酵素，哪一項會降低？",
+    "choices": [
+      "反應終點的能量",
+      "活化能",
+      "反應物的名字"
+    ],
+    "answer": 1,
+    "explanation": "酵素提供活化能較低的路徑。"
+  },
+  "compare": {
+    "title": "山變低，起終點相同",
+    "task": "只比較山頂與兩端。",
+    "cues": [
+      "兩條路徑的起點相同。",
+      "有酵素的山頂較低。",
+      "兩條路徑的終點相同。",
+      "活化能改變，ΔG 不改變。"
+    ],
+    "check": {
+      "question": "兩條路徑的 ΔG？",
+      "choices": [
+        "酵素使它變成零",
+        "無法比較",
+        "相同"
+      ],
+      "answer": 2,
+      "explanation": "ΔG 是起點與終點的能量差。"
+    }
+  },
+  "mechanism": {
+    "title": "受質先結合",
+    "task": "追蹤受質與活性部位。",
+    "cues": [
+      "受質靠近酵素的活性部位。",
+      "結合時，形狀可稍微改變。",
+      "酵素幫助通過較低能障。",
+      "產物離開，酵素可以再使用。"
+    ],
+    "check": {
+      "question": "反應後，酵素通常？",
+      "choices": [
+        "可再使用",
+        "一定被消耗掉",
+        "變成全部產物"
+      ],
+      "answer": 0,
+      "explanation": "催化劑不因一次催化就被永久消耗。"
+    }
+  },
+  "experiment": {
+    "title": "有沒有酵素？",
+    "task": "改條件，看山頂高度。",
+    "cues": [
+      "先選有無酵素。",
+      "有酵素時，反應路徑的能障降低。",
+      "失去活性的酵素不提供這條低山路徑。",
+      "兩端仍相同。"
+    ],
+    "check": {
+      "question": "低山路徑代表什麼？",
+      "choices": [
+        "ΔG 一定更負",
+        "活化能降低",
+        "所有受質都消失"
+      ],
+      "answer": 1,
+      "explanation": "較低能障可以增加反應速度。"
+    }
+  },
+  "boundary": {
+    "title": "自發，不等於很快",
+    "task": "看 ΔG 與活化能的不同位置。",
+    "cues": [
+      "終點低於起點，ΔG 小於零。",
+      "山頂仍可能很高。",
+      "所以自發反應仍可能很慢。",
+      "酵素改速度，不改兩端能量差。"
+    ],
+    "check": {
+      "question": "ΔG < 0 能保證反應很快嗎？",
+      "choices": [
+        "能，沒有能障",
+        "能，酵素一定存在",
+        "不能，還要看活化能"
+      ],
+      "answer": 2,
+      "explanation": "熱力學方向與反應速度是不同問題。"
+    }
+  },
+  "cases": [
+    {
+      "label": "沒有酵素",
+      "active": false
+    },
+    {
+      "label": "有活性酵素",
+      "active": true
+    },
+    {
+      "label": "失去活性的酵素",
+      "active": false
+    }
+  ],
+  "transfer": [
+    {
+      "question": "酵素能把不利反應的 ΔG 直接改成有利嗎？",
+      "choices": [
+        "不能，只改反應路徑",
+        "能，全部改成負值",
+        "能，全部改成零"
+      ],
+      "answer": 0,
+      "explanation": "若要改整體方向，需耦合或改變條件等。"
+    },
+    {
+      "question": "活化能在圖上如何看？",
+      "choices": [
+        "只看起點到終點",
+        "從反應物到山頂的差",
+        "只看橫軸長度"
+      ],
+      "answer": 1,
+      "explanation": "橫軸是反應座標。"
+    }
+  ],
+  "week": 6,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/6-5-enzymes",
+    "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "酵素改了哪一座山？",
+      "task": "加入酵素，哪一項會降低？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "加入酵素，哪一項會降低？",
+        "choices": [
+          "反應終點的能量",
+          "活化能",
+          "反應物的名字"
+        ],
+        "answer": 1,
+        "explanation": "酵素提供活化能較低的路徑。"
+      },
+      "hero": "反應能量路徑",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "山變低，起終點相同",
+      "task": "只比較山頂與兩端。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "兩條路徑的起點相同。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "有酵素的山頂較低。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "兩條路徑的終點相同。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "活化能改變，ΔG 不改變。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "兩條路徑的 ΔG？",
+        "choices": [
+          "酵素使它變成零",
+          "無法比較",
+          "相同"
+        ],
+        "answer": 2,
+        "explanation": "ΔG 是起點與終點的能量差。"
+      },
+      "duration": 12,
+      "hero": "反應能量路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "受質先結合",
+      "task": "追蹤受質與活性部位。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "受質靠近酵素的活性部位。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "結合時，形狀可稍微改變。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "酵素幫助通過較低能障。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "產物離開，酵素可以再使用。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "反應後，酵素通常？",
+        "choices": [
+          "可再使用",
+          "一定被消耗掉",
+          "變成全部產物"
+        ],
+        "answer": 0,
+        "explanation": "催化劑不因一次催化就被永久消耗。"
+      },
+      "duration": 12,
+      "hero": "受質 S → 產物 P，酵素 E 保留",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "有沒有酵素？",
+      "task": "改條件，看山頂高度。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選有無酵素。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "有酵素時，反應路徑的能障降低。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "失去活性的酵素不提供這條低山路徑。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "兩端仍相同。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "低山路徑代表什麼？",
+        "choices": [
+          "ΔG 一定更負",
+          "活化能降低",
+          "所有受質都消失"
+        ],
+        "answer": 1,
+        "explanation": "較低能障可以增加反應速度。"
+      },
+      "duration": 12,
+      "hero": "反應能量路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "沒有酵素",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此條件的反應路徑？",
+            "choices": [
+              "ΔG 一定變成零",
+              "沒有此酵素低能障路徑",
+              "活化能完全消失"
+            ],
+            "answer": 1,
+            "explanation": "有活性的酵素降低能障，不改起終點。"
+          }
+        },
+        {
+          "condition": "有活性酵素",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此條件的反應路徑？",
+            "choices": [
+              "ΔG 一定變成零",
+              "有酵素提供較低能障",
+              "活化能完全消失"
+            ],
+            "answer": 1,
+            "explanation": "有活性的酵素降低能障，不改起終點。"
+          }
+        },
+        {
+          "condition": "失去活性的酵素",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此條件的反應路徑？",
+            "choices": [
+              "ΔG 一定變成零",
+              "沒有此酵素低能障路徑",
+              "活化能完全消失"
+            ],
+            "answer": 1,
+            "explanation": "有活性的酵素降低能障，不改起終點。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "自發，不等於很快",
+      "task": "看 ΔG 與活化能的不同位置。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "終點低於起點，ΔG 小於零。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "山頂仍可能很高。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "所以自發反應仍可能很慢。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "酵素改速度，不改兩端能量差。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "ΔG < 0 能保證反應很快嗎？",
+        "choices": [
+          "能，沒有能障",
+          "能，酵素一定存在",
+          "不能，還要看活化能"
+        ],
+        "answer": 2,
+        "explanation": "熱力學方向與反應速度是不同問題。"
+      },
+      "duration": 12,
+      "hero": "反應能量路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "沒有酵素",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "ΔG < 0 能保證反應很快嗎？",
+            "choices": [
+              "能，沒有能障",
+              "能，酵素一定存在",
+              "不能，還要看活化能"
+            ],
+            "answer": 2,
+            "explanation": "熱力學方向與反應速度是不同問題。"
+          }
+        },
+        {
+          "condition": "有活性酵素",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "ΔG < 0 能保證反應很快嗎？",
+            "choices": [
+              "能，沒有能障",
+              "能，酵素一定存在",
+              "不能，還要看活化能"
+            ],
+            "answer": 2,
+            "explanation": "熱力學方向與反應速度是不同問題。"
+          }
+        },
+        {
+          "condition": "失去活性的酵素",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "ΔG < 0 能保證反應很快嗎？",
+            "choices": [
+              "能，沒有能障",
+              "能，酵素一定存在",
+              "不能，還要看活化能"
+            ],
+            "answer": 2,
+            "explanation": "熱力學方向與反應速度是不同問題。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "反應能量路徑",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

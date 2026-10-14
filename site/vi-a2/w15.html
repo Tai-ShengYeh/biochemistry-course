@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
 <link rel="stylesheet" href="../assets/css/animations.css">
+<link rel="stylesheet" href="../assets/learning-lab-route.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -105,18 +106,12 @@
 提問:電子傳遞鏈怎麼說?
 </aside>
 </section>
-<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w15">
-<h3>W15 教學動畫：質子流回來，怎麼做 ATP？</h3>
-<video controls playsinline preload="metadata" poster="../assets/animations/w15/poster.jpg" aria-label="質子流回來，怎麼做 ATP？">
-<source src="../assets/animations/w15/w15_animation.mp4" type="video/mp4">
-<track kind="subtitles" src="../assets/animations/w15/w15_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
-您的瀏覽器不支援影片，請下載 MP4。</video>
-<p class="animation-terms">質子 / Proton / Proton · 電子傳遞鏈 / Electron transport chain / Chuỗi vận chuyển điện tử · 合成酶 / Synthase / Enzyme tổng hợp</p>
-<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
-<p class="animation-links"><a href="../assets/animations/w15/w15_animation.mp4" download>MP4</a> · <a href="../assets/animations/w15/w15_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w15/w15_animation.vtt" download>VTT</a></p>
-</div></section>
+<section class="animation-slide learning-lab-slide" id="animation">
+<iframe class="learning-frame" data-week="15" src="../assets/animations/w15/simulation.html" title="W15 六幕互動實驗室"></iframe>
+<p class="learning-open"><a href="../assets/animations/w15/simulation.html" target="_blank" rel="noopener">另開實驗室 ↗</a> · <a href="#/learning-return">回本週課程 →</a></p>
+<aside class="notes">每幕一個觀看任務。先預測，再觀察、解釋與應用；答錯可重試。模型範圍見實驗室說明。</aside></section>
 
-<section>
+<section id="learning-return">
 <div class="hd">
 <h2>電子傳遞鏈</h2>
 <p class="vi">Chuỗi vận chuyển điện tử</p>
@@ -330,9 +325,10 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
+Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false, scrollActivationWidth:null,
   transition:'slide', plugins:[RevealNotes] });
 </script>
 <script src="../assets/animation-controls.js"></script>
+<script src="../assets/learning-lab-route.js"></script>
 </body>
 </html>

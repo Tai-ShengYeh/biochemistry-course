@@ -1,0 +1,467 @@
+{
+  "title": "變性，鏈斷了嗎？",
+  "hero": "同一條胺基酸鏈",
+  "gloss": "Denaturation · Biến tính",
+  "model": "fold",
+  "scope": "一般變性主要破壞高層級結構，通常不切斷胜肽鍵；蛋白酶水解是另一種變化。可逆性依蛋白質與條件而定。",
+  "predict": {
+    "question": "一般加熱變性，最先看到什麼？",
+    "choices": [
+      "形狀改變",
+      "胺基酸順序全換",
+      "每個胜肽鍵都斷"
+    ],
+    "answer": 0,
+    "explanation": "一般變性主要改變高層級形狀。"
+  },
+  "compare": {
+    "title": "同樣的鏈，不同形狀",
+    "task": "看順序是否保留。",
+    "cues": [
+      "兩條鏈原本有同樣順序。",
+      "一條維持摺疊。",
+      "加熱條件下，另一條可能展開。",
+      "連接順序仍保留。"
+    ],
+    "check": {
+      "question": "一般變性後，什麼通常還保留？",
+      "choices": [
+        "原本的活性一定保留",
+        "胺基酸順序",
+        "原本的立體形狀"
+      ],
+      "answer": 1,
+      "explanation": "一般變性不等於切斷主鏈胜肽鍵。"
+    }
+  },
+  "mechanism": {
+    "title": "疏水部分躲在裡面",
+    "task": "追蹤橘色疏水側鏈。",
+    "cues": [
+      "在水中，先看疏水側鏈。",
+      "摺疊把許多疏水部分藏到裡面。",
+      "親水部分較常朝向水。",
+      "形狀會影響功能。"
+    ],
+    "check": {
+      "question": "水溶性蛋白質裡，疏水部分常在哪裡？",
+      "choices": [
+        "外面接觸水",
+        "完全消失",
+        "較多藏在裡面"
+      ],
+      "answer": 2,
+      "explanation": "這是水溶性球狀蛋白質的概念示意。"
+    }
+  },
+  "experiment": {
+    "title": "加熱與蛋白酶不同",
+    "task": "改處理方式，看線是否斷開。",
+    "cues": [
+      "先看選到的處理。",
+      "加熱：形狀可能展開。",
+      "蛋白酶：胜肽鍵可被水解。",
+      "用連接線分辨兩種變化。"
+    ],
+    "check": {
+      "question": "圖中「展開」與「切斷」代表？",
+      "choices": [
+        "不同變化",
+        "完全一樣",
+        "都是順序重排"
+      ],
+      "answer": 0,
+      "explanation": "變性與水解不能混為一談。"
+    }
+  },
+  "boundary": {
+    "title": "形狀改變，功能可能變",
+    "task": "比較活性部位能否配合受質。",
+    "cues": [
+      "受質先靠近原來的活性部位。",
+      "摺疊形狀可以配合受質。",
+      "展開後，活性部位可能不再配合。",
+      "功能可能下降；不保證所有變性不可逆。"
+    ],
+    "check": {
+      "question": "蛋白質變性後，功能一定完全不變嗎？",
+      "choices": [
+        "一定不變",
+        "不一定，功能可能下降",
+        "一定變得更強"
+      ],
+      "answer": 1,
+      "explanation": "功能與形狀有關，結果取決於條件。"
+    }
+  },
+  "cases": [
+    {
+      "label": "保持摺疊",
+      "treatment": "native"
+    },
+    {
+      "label": "加熱變性示意",
+      "treatment": "heat"
+    },
+    {
+      "label": "蛋白酶水解示意",
+      "treatment": "cut"
+    }
+  ],
+  "transfer": [
+    {
+      "question": "蛋白酶把鏈切斷，是哪種變化？",
+      "choices": [
+        "只換形狀",
+        "只換溫度",
+        "胜肽鍵水解"
+      ],
+      "answer": 2,
+      "explanation": "蛋白酶能水解主鏈連接。"
+    },
+    {
+      "question": "看到蛋白質展開，可直接說胺基酸順序改了嗎？",
+      "choices": [
+        "不能，先看主鏈是否被切斷",
+        "可以，一定改了",
+        "可以，側鏈全部消失"
+      ],
+      "answer": 0,
+      "explanation": "形狀與順序是不同層級。"
+    }
+  ],
+  "week": 4,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/3-4-proteins"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "變性，鏈斷了嗎？",
+      "task": "一般加熱變性，最先看到什麼？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "一般加熱變性，最先看到什麼？",
+        "choices": [
+          "形狀改變",
+          "胺基酸順序全換",
+          "每個胜肽鍵都斷"
+        ],
+        "answer": 0,
+        "explanation": "一般變性主要改變高層級形狀。"
+      },
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "同樣的鏈，不同形狀",
+      "task": "看順序是否保留。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "兩條鏈原本有同樣順序。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "一條維持摺疊。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "加熱條件下，另一條可能展開。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "連接順序仍保留。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "一般變性後，什麼通常還保留？",
+        "choices": [
+          "原本的活性一定保留",
+          "胺基酸順序",
+          "原本的立體形狀"
+        ],
+        "answer": 1,
+        "explanation": "一般變性不等於切斷主鏈胜肽鍵。"
+      },
+      "duration": 12,
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "疏水部分躲在裡面",
+      "task": "追蹤橘色疏水側鏈。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "在水中，先看疏水側鏈。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "摺疊把許多疏水部分藏到裡面。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "親水部分較常朝向水。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "形狀會影響功能。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "水溶性蛋白質裡，疏水部分常在哪裡？",
+        "choices": [
+          "外面接觸水",
+          "完全消失",
+          "較多藏在裡面"
+        ],
+        "answer": 2,
+        "explanation": "這是水溶性球狀蛋白質的概念示意。"
+      },
+      "duration": 12,
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "加熱與蛋白酶不同",
+      "task": "改處理方式，看線是否斷開。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先看選到的處理。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "加熱：形狀可能展開。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "蛋白酶：胜肽鍵可被水解。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "用連接線分辨兩種變化。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "圖中「展開」與「切斷」代表？",
+        "choices": [
+          "不同變化",
+          "完全一樣",
+          "都是順序重排"
+        ],
+        "answer": 0,
+        "explanation": "變性與水解不能混為一談。"
+      },
+      "duration": 12,
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "保持摺疊",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此條件的右鏈保持什麼？",
+            "choices": [
+              "原有摺疊",
+              "所有胺基酸順序重排",
+              "所有側鏈都消失"
+            ],
+            "answer": 0,
+            "explanation": "加熱變性與蛋白酶水解是不同變化。"
+          }
+        },
+        {
+          "condition": "加熱變性示意",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "右鏈展開，主鏈線仍完整，表示？",
+            "choices": [
+              "形狀改變，順序保留",
+              "所有胺基酸順序重排",
+              "所有側鏈都消失"
+            ],
+            "answer": 0,
+            "explanation": "加熱變性與蛋白酶水解是不同變化。"
+          }
+        },
+        {
+          "condition": "蛋白酶水解示意",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "右鏈的主鏈線被切斷，屬於？",
+            "choices": [
+              "主鏈胜肽鍵水解",
+              "所有胺基酸順序重排",
+              "所有側鏈都消失"
+            ],
+            "answer": 0,
+            "explanation": "加熱變性與蛋白酶水解是不同變化。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "形狀改變，功能可能變",
+      "task": "比較活性部位能否配合受質。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "受質先靠近原來的活性部位。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "摺疊形狀可以配合受質。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "展開後，活性部位可能不再配合。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "功能可能下降；不保證所有變性不可逆。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "蛋白質變性後，功能一定完全不變嗎？",
+        "choices": [
+          "一定不變",
+          "不一定，功能可能下降",
+          "一定變得更強"
+        ],
+        "answer": 1,
+        "explanation": "功能與形狀有關，結果取決於條件。"
+      },
+      "duration": 12,
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "保持摺疊",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "蛋白質變性後，功能一定完全不變嗎？",
+            "choices": [
+              "一定不變",
+              "不一定，功能可能下降",
+              "一定變得更強"
+            ],
+            "answer": 1,
+            "explanation": "功能與形狀有關，結果取決於條件。"
+          }
+        },
+        {
+          "condition": "加熱變性示意",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "蛋白質變性後，功能一定完全不變嗎？",
+            "choices": [
+              "一定不變",
+              "不一定，功能可能下降",
+              "一定變得更強"
+            ],
+            "answer": 1,
+            "explanation": "功能與形狀有關，結果取決於條件。"
+          }
+        },
+        {
+          "condition": "蛋白酶水解示意",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "蛋白質變性後，功能一定完全不變嗎？",
+            "choices": [
+              "一定不變",
+              "不一定，功能可能下降",
+              "一定變得更強"
+            ],
+            "answer": 1,
+            "explanation": "功能與形狀有關，結果取決於條件。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "同一條胺基酸鏈",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

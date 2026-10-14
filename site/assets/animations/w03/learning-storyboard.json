@@ -1,0 +1,467 @@
+{
+  "title": "胺基酸怎麼接成鏈？",
+  "hero": "新形成的胜肽鍵",
+  "gloss": "Peptide · Liên kết peptide",
+  "model": "peptide",
+  "scope": "官能基反應用中性簡圖；游離胺基酸在常見水溶液 pH 可呈兩性離子。縮合是形式示意；細胞合成需活化與核糖體。",
+  "predict": {
+    "question": "兩個胺基酸接起來，新增幾個胜肽鍵？",
+    "choices": [
+      "兩個",
+      "一個",
+      "四個"
+    ],
+    "answer": 1,
+    "explanation": "兩個單元之間只有一個新連接。"
+  },
+  "compare": {
+    "title": "哪兩個位置接起來？",
+    "task": "看羧基的 C 與胺基的 N。",
+    "cues": [
+      "先分開看兩個胺基酸。",
+      "羧基的 C 與另一個胺基的 N 靠近。",
+      "形成 C—N 胜肽鍵。",
+      "R 側鏈保留下來。"
+    ],
+    "check": {
+      "question": "哪兩個位置形成胜肽鍵？",
+      "choices": [
+        "兩個 R 側鏈",
+        "兩個 H",
+        "羧基 C 與胺基 N"
+      ],
+      "answer": 2,
+      "explanation": "新鍵連接羧基碳與胺基氮。"
+    }
+  },
+  "mechanism": {
+    "title": "接鍵，不接側鏈",
+    "task": "追蹤橘色的新鍵。",
+    "cues": [
+      "羧基與胺基靠近。",
+      "形式上移去 OH 與 H。",
+      "形成水與胜肽鍵。",
+      "這是簡化的縮合示意。"
+    ],
+    "check": {
+      "question": "兩個側鏈也一起消失嗎？",
+      "choices": [
+        "會全部消失",
+        "不會，側鏈保留",
+        "會變成 ATP"
+      ],
+      "answer": 1,
+      "explanation": "側鏈屬於各自的胺基酸殘基。"
+    }
+  },
+  "experiment": {
+    "title": "增加一個單元",
+    "task": "改胺基酸數量，數連接線。",
+    "cues": [
+      "先數胺基酸單元。",
+      "從左到右接成一條鏈。",
+      "兩單元之間形成一個鍵。",
+      "直鏈有 n−1 個胜肽鍵。"
+    ],
+    "check": {
+      "question": "直鏈的胜肽鍵數量如何算？",
+      "choices": [
+        "n−1",
+        "n+1",
+        "永遠是 1"
+      ],
+      "answer": 0,
+      "explanation": "首個單元沒有前面的連接；之後每個增加一個鍵。"
+    }
+  },
+  "boundary": {
+    "title": "兩端還是不同",
+    "task": "指左端與右端。",
+    "cues": [
+      "鏈仍有兩個端點。",
+      "左端保留自由胺基。",
+      "右端保留自由羧基。",
+      "記住 N 端 → C 端。"
+    ],
+    "check": {
+      "question": "直鏈左端與右端？",
+      "choices": [
+        "都是 N 端",
+        "都是 C 端",
+        "N 端與 C 端"
+      ],
+      "answer": 2,
+      "explanation": "這張圖由 N 端畫到 C 端。"
+    }
+  },
+  "cases": [
+    {
+      "label": "2 個胺基酸",
+      "n": 2
+    },
+    {
+      "label": "3 個胺基酸",
+      "n": 3
+    },
+    {
+      "label": "4 個胺基酸",
+      "n": 4
+    }
+  ],
+  "transfer": [
+    {
+      "question": "5 個胺基酸的直鏈有幾個胜肽鍵？",
+      "choices": [
+        "5 個",
+        "4 個",
+        "6 個"
+      ],
+      "answer": 1,
+      "explanation": "5−1 = 4。此題限定未形成環的直鏈。"
+    },
+    {
+      "question": "這張縮合簡圖是細胞全部合成步驟嗎？",
+      "choices": [
+        "不是，細胞還需要其他步驟",
+        "是，只要混在一起",
+        "是，不需要能量"
+      ],
+      "answer": 0,
+      "explanation": "圖只說明連接位置；細胞合成還需要活化等步驟。"
+    }
+  ],
+  "week": 3,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/3-4-proteins"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "胺基酸怎麼接成鏈？",
+      "task": "兩個胺基酸接起來，新增幾個胜肽鍵？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "兩個胺基酸接起來，新增幾個胜肽鍵？",
+        "choices": [
+          "兩個",
+          "一個",
+          "四個"
+        ],
+        "answer": 1,
+        "explanation": "兩個單元之間只有一個新連接。"
+      },
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "哪兩個位置接起來？",
+      "task": "看羧基的 C 與胺基的 N。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先分開看兩個胺基酸。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "羧基的 C 與另一個胺基的 N 靠近。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "形成 C—N 胜肽鍵。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "R 側鏈保留下來。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "哪兩個位置形成胜肽鍵？",
+        "choices": [
+          "兩個 R 側鏈",
+          "兩個 H",
+          "羧基 C 與胺基 N"
+        ],
+        "answer": 2,
+        "explanation": "新鍵連接羧基碳與胺基氮。"
+      },
+      "duration": 12,
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "接鍵，不接側鏈",
+      "task": "追蹤橘色的新鍵。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "羧基與胺基靠近。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "形式上移去 OH 與 H。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "形成水與胜肽鍵。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "這是簡化的縮合示意。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "兩個側鏈也一起消失嗎？",
+        "choices": [
+          "會全部消失",
+          "不會，側鏈保留",
+          "會變成 ATP"
+        ],
+        "answer": 1,
+        "explanation": "側鏈屬於各自的胺基酸殘基。"
+      },
+      "duration": 12,
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "增加一個單元",
+      "task": "改胺基酸數量，數連接線。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先數胺基酸單元。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "從左到右接成一條鏈。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "兩單元之間形成一個鍵。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "直鏈有 n−1 個胜肽鍵。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "直鏈的胜肽鍵數量如何算？",
+        "choices": [
+          "n−1",
+          "n+1",
+          "永遠是 1"
+        ],
+        "answer": 0,
+        "explanation": "首個單元沒有前面的連接；之後每個增加一個鍵。"
+      },
+      "duration": 12,
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "2 個胺基酸",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "直鏈的胜肽鍵數量如何算？",
+            "choices": [
+              "n−1",
+              "n+1",
+              "永遠是 1"
+            ],
+            "answer": 0,
+            "explanation": "首個單元沒有前面的連接；之後每個增加一個鍵。"
+          }
+        },
+        {
+          "condition": "3 個胺基酸",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "直鏈的胜肽鍵數量如何算？",
+            "choices": [
+              "n−1",
+              "n+1",
+              "永遠是 1"
+            ],
+            "answer": 0,
+            "explanation": "首個單元沒有前面的連接；之後每個增加一個鍵。"
+          }
+        },
+        {
+          "condition": "4 個胺基酸",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "直鏈的胜肽鍵數量如何算？",
+            "choices": [
+              "n−1",
+              "n+1",
+              "永遠是 1"
+            ],
+            "answer": 0,
+            "explanation": "首個單元沒有前面的連接；之後每個增加一個鍵。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "兩端還是不同",
+      "task": "指左端與右端。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "鏈仍有兩個端點。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "左端保留自由胺基。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "右端保留自由羧基。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "記住 N 端 → C 端。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "直鏈左端與右端？",
+        "choices": [
+          "都是 N 端",
+          "都是 C 端",
+          "N 端與 C 端"
+        ],
+        "answer": 2,
+        "explanation": "這張圖由 N 端畫到 C 端。"
+      },
+      "duration": 12,
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "2 個胺基酸",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "直鏈左端與右端？",
+            "choices": [
+              "都是 N 端",
+              "都是 C 端",
+              "N 端與 C 端"
+            ],
+            "answer": 2,
+            "explanation": "這張圖由 N 端畫到 C 端。"
+          }
+        },
+        {
+          "condition": "3 個胺基酸",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "直鏈左端與右端？",
+            "choices": [
+              "都是 N 端",
+              "都是 C 端",
+              "N 端與 C 端"
+            ],
+            "answer": 2,
+            "explanation": "這張圖由 N 端畫到 C 端。"
+          }
+        },
+        {
+          "condition": "4 個胺基酸",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "直鏈左端與右端？",
+            "choices": [
+              "都是 N 端",
+              "都是 C 端",
+              "N 端與 C 端"
+            ],
+            "answer": 2,
+            "explanation": "這張圖由 N 端畫到 C 端。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "新形成的胜肽鍵",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

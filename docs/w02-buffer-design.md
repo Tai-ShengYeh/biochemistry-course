@@ -33,6 +33,6 @@
 
 ## 部署
 
-W02 舊 MP4、SRT、VTT、封面與舊分鏡已移除。動畫總覽與互動課程共用新版實驗室；影片產生器也移除 W02 舊腳本，重新產生索引不會恢復舊版。其餘 15 週影片維持原內容，W02 的互動 QA 與影片 QA 分開記錄。
+W02 舊 MP4、SRT、VTT、封面與舊分鏡已移除。動畫總覽與互動課程共用新版實驗室。2026-10-15，其他 15 週也改為各自的六幕互動實驗，見 `learning-animation-audit.md`；重建索引不會恢復舊影片。
 
 將變更分支合併到 `main`。既有 `.github/workflows/pages.yml` 會在 `site/**` 改變時部署 `site/` 到 GitHub Pages。部署完成後檢查 `https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w02.html#/animation`；若瀏覽器保留舊版，重新整理。分支推送本身不會更新正式網址。

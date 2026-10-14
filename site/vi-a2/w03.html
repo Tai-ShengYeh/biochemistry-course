@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
 <link rel="stylesheet" href="../assets/css/animations.css">
+<link rel="stylesheet" href="../assets/learning-lab-route.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -122,18 +123,12 @@
 提問:胜肽怎麼唸?
 </aside>
 </section>
-<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w03">
-<h3>W03 教學動畫：胺基酸怎麼接起來？</h3>
-<video controls playsinline preload="metadata" poster="../assets/animations/w03/poster.jpg" aria-label="胺基酸怎麼接起來？">
-<source src="../assets/animations/w03/w03_animation.mp4" type="video/mp4">
-<track kind="subtitles" src="../assets/animations/w03/w03_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
-您的瀏覽器不支援影片，請下載 MP4。</video>
-<p class="animation-terms">胺基酸 / Amino acid / Amino acid · 胜肽鍵 / Peptide bond / Liên kết peptide · 側鏈 / Side chain / Mạch bên</p>
-<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
-<p class="animation-links"><a href="../assets/animations/w03/w03_animation.mp4" download>MP4</a> · <a href="../assets/animations/w03/w03_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w03/w03_animation.vtt" download>VTT</a></p>
-</div></section>
+<section class="animation-slide learning-lab-slide" id="animation">
+<iframe class="learning-frame" data-week="3" src="../assets/animations/w03/simulation.html" title="W03 六幕互動實驗室"></iframe>
+<p class="learning-open"><a href="../assets/animations/w03/simulation.html" target="_blank" rel="noopener">另開實驗室 ↗</a> · <a href="#/learning-return">回本週課程 →</a></p>
+<aside class="notes">每幕一個觀看任務。先預測，再觀察、解釋與應用；答錯可重試。模型範圍見實驗室說明。</aside></section>
 
-<section>
+<section id="learning-return">
 <div class="hd">
 <h2>胺基酸長什麼樣?</h2>
 <p class="vi">Amino acid trông thế nào?</p>
@@ -512,9 +507,10 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
+Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false, scrollActivationWidth:null,
   transition:'slide', plugins:[RevealNotes] });
 </script>
 <script src="../assets/animation-controls.js"></script>
+<script src="../assets/learning-lab-route.js"></script>
 </body>
 </html>

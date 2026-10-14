@@ -1,0 +1,513 @@
+{
+  "title": "過膜，順著走還是逆著走？",
+  "hero": "一個運輸中的粒子",
+  "gloss": "Transport · Vận chuyển",
+  "model": "membrane",
+  "scope": "僅描繪特定通道或 ATP 幫浦的淨運輸方向，不把所有膜通量畫成單向。示意幫浦不代表所有主動運輸都直接用 ATP。",
+  "predict": {
+    "question": "不用 ATP 的被動淨運輸，往哪裡？",
+    "choices": [
+      "從多往少",
+      "永遠從少往多",
+      "一定完全不動"
+    ],
+    "answer": 0,
+    "explanation": "在此單一溶質模型中，沿濃度梯度。"
+  },
+  "compare": {
+    "title": "先看濃度梯度",
+    "task": "比較多的一側與少的一側。",
+    "cues": [
+      "膜兩邊的濃度不同。",
+      "被動淨運輸從多往少。",
+      "ATP 幫浦可把粒子從少送到多。",
+      "逆著梯度需要能量。"
+    ],
+    "check": {
+      "question": "ATP 幫浦可做哪件事？",
+      "choices": [
+        "讓膜消失",
+        "逆濃度梯度運輸",
+        "把粒子變成 ATP"
+      ],
+      "answer": 1,
+      "explanation": "這裡畫的是直接使用 ATP 的幫浦。"
+    }
+  },
+  "mechanism": {
+    "title": "兩面的頭都朝水",
+    "task": "只看磷脂頭與尾。",
+    "cues": [
+      "膜外有水，膜內也有水。",
+      "親水頭朝兩側的水。",
+      "疏水尾藏在兩層之間。",
+      "膜蛋白可以幫助運輸。"
+    ],
+    "check": {
+      "question": "親水頭怎麼排？",
+      "choices": [
+        "全部朝膜中間",
+        "只朝細胞外",
+        "兩面都朝水"
+      ],
+      "answer": 2,
+      "explanation": "細胞內側的親水頭也接觸水。"
+    }
+  },
+  "experiment": {
+    "title": "改梯度或 ATP",
+    "task": "看橘色粒子的淨移動方向。",
+    "cues": [
+      "先看哪一側比較多。",
+      "被動通道沿梯度。",
+      "ATP 幫浦逆梯度。",
+      "這個幫浦沒有 ATP 時停止。"
+    ],
+    "check": {
+      "question": "此圖沒有 ATP 的幫浦停下，能說所有過膜都停嗎？",
+      "choices": [
+        "不能，被動路徑仍可能存在",
+        "能，所有膜都關閉",
+        "能，水也一定不動"
+      ],
+      "answer": 0,
+      "explanation": "圖只表示選到的運輸路徑。"
+    }
+  },
+  "boundary": {
+    "title": "方向取決於梯度",
+    "task": "把多與少對調，重新觀察。",
+    "cues": [
+      "被動運輸先看兩側濃度。",
+      "多的一側改變，淨方向也改變。",
+      "不是固定往細胞內。",
+      "不能只背「進入細胞」。"
+    ],
+    "check": {
+      "question": "被動淨運輸永遠往細胞內嗎？",
+      "choices": [
+        "永遠往內",
+        "不一定，看梯度",
+        "永遠往外"
+      ],
+      "answer": 1,
+      "explanation": "方向取決於粒子的梯度。"
+    }
+  },
+  "cases": [
+    {
+      "label": "被動：外多內少",
+      "mode": "passive",
+      "outside": 8,
+      "inside": 2
+    },
+    {
+      "label": "被動：內多外少",
+      "mode": "passive",
+      "outside": 2,
+      "inside": 8
+    },
+    {
+      "label": "ATP 幫浦：外多內少",
+      "mode": "pump",
+      "outside": 8,
+      "inside": 2,
+      "atp": true
+    },
+    {
+      "label": "同一幫浦：沒有 ATP",
+      "mode": "pump",
+      "outside": 8,
+      "inside": 2,
+      "atp": false
+    }
+  ],
+  "transfer": [
+    {
+      "question": "外面少、裡面多，被動淨運輸往哪裡？",
+      "choices": [
+        "往裡面",
+        "沒有方向",
+        "往外面"
+      ],
+      "answer": 2,
+      "explanation": "從濃度較高的裡面往較低的外面。"
+    },
+    {
+      "question": "主動運輸與被動運輸如何分辨？",
+      "choices": [
+        "看梯度方向與能量需求",
+        "只看箭頭顏色",
+        "只看粒子大小"
+      ],
+      "answer": 0,
+      "explanation": "先比較梯度，再看是否需要能量。"
+    }
+  ],
+  "week": 10,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/5-3-active-transport"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "過膜，順著走還是逆著走？",
+      "task": "不用 ATP 的被動淨運輸，往哪裡？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "不用 ATP 的被動淨運輸，往哪裡？",
+        "choices": [
+          "從多往少",
+          "永遠從少往多",
+          "一定完全不動"
+        ],
+        "answer": 0,
+        "explanation": "在此單一溶質模型中，沿濃度梯度。"
+      },
+      "hero": "一個運輸中的粒子",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "先看濃度梯度",
+      "task": "比較多的一側與少的一側。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "膜兩邊的濃度不同。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "被動淨運輸從多往少。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "ATP 幫浦可把粒子從少送到多。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "逆著梯度需要能量。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "ATP 幫浦可做哪件事？",
+        "choices": [
+          "讓膜消失",
+          "逆濃度梯度運輸",
+          "把粒子變成 ATP"
+        ],
+        "answer": 1,
+        "explanation": "這裡畫的是直接使用 ATP 的幫浦。"
+      },
+      "duration": 12,
+      "hero": "一個運輸中的粒子",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "兩面的頭都朝水",
+      "task": "只看磷脂頭與尾。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "膜外有水，膜內也有水。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "親水頭朝兩側的水。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "疏水尾藏在兩層之間。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "膜蛋白可以幫助運輸。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "親水頭怎麼排？",
+        "choices": [
+          "全部朝膜中間",
+          "只朝細胞外",
+          "兩面都朝水"
+        ],
+        "answer": 2,
+        "explanation": "細胞內側的親水頭也接觸水。"
+      },
+      "duration": 12,
+      "hero": "兩面的親水頭與中間的疏水尾",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "改梯度或 ATP",
+      "task": "看橘色粒子的淨移動方向。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先看哪一側比較多。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "被動通道沿梯度。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "ATP 幫浦逆梯度。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "這個幫浦沒有 ATP 時停止。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "此圖沒有 ATP 的幫浦停下，能說所有過膜都停嗎？",
+        "choices": [
+          "不能，被動路徑仍可能存在",
+          "能，所有膜都關閉",
+          "能，水也一定不動"
+        ],
+        "answer": 0,
+        "explanation": "圖只表示選到的運輸路徑。"
+      },
+      "duration": 12,
+      "hero": "一個運輸中的粒子",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "被動：外多內少",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此被動淨運輸往哪裡？",
+            "choices": [
+              "外 → 內",
+              "內 → 外",
+              "永遠固定往內"
+            ],
+            "answer": 0,
+            "explanation": "此模型沿所選的濃度梯度。"
+          }
+        },
+        {
+          "condition": "被動：內多外少",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此被動淨運輸往哪裡？",
+            "choices": [
+              "內 → 外",
+              "外 → 內",
+              "永遠固定往內"
+            ],
+            "answer": 0,
+            "explanation": "此模型沿所選的濃度梯度。"
+          }
+        },
+        {
+          "condition": "ATP 幫浦：外多內少",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此 ATP 幫浦怎麼搬？",
+            "choices": [
+              "逆梯度，使用 ATP",
+              "沿梯度，不需能量",
+              "把粒子變成 ATP"
+            ],
+            "answer": 0,
+            "explanation": "這張圖只描述選定的路徑。"
+          }
+        },
+        {
+          "condition": "同一幫浦：沒有 ATP",
+          "parameters": {
+            "case": 3
+          },
+          "question": {
+            "question": "這個幫浦沒有 ATP，能說所有過膜都停嗎？",
+            "choices": [
+              "不能，只表示這個幫浦停下",
+              "能，所有路徑都停",
+              "能，水一定不動"
+            ],
+            "answer": 0,
+            "explanation": "這張圖只描述選定的路徑。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "方向取決於梯度",
+      "task": "把多與少對調，重新觀察。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "被動運輸先看兩側濃度。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "多的一側改變，淨方向也改變。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "不是固定往細胞內。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "不能只背「進入細胞」。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "被動淨運輸永遠往細胞內嗎？",
+        "choices": [
+          "永遠往內",
+          "不一定，看梯度",
+          "永遠往外"
+        ],
+        "answer": 1,
+        "explanation": "方向取決於粒子的梯度。"
+      },
+      "duration": 12,
+      "hero": "一個運輸中的粒子",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "被動：外多內少",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "被動淨運輸永遠往細胞內嗎？",
+            "choices": [
+              "永遠往內",
+              "不一定，看梯度",
+              "永遠往外"
+            ],
+            "answer": 1,
+            "explanation": "方向取決於粒子的梯度。"
+          }
+        },
+        {
+          "condition": "被動：內多外少",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "被動淨運輸永遠往細胞內嗎？",
+            "choices": [
+              "永遠往內",
+              "不一定，看梯度",
+              "永遠往外"
+            ],
+            "answer": 1,
+            "explanation": "方向取決於粒子的梯度。"
+          }
+        },
+        {
+          "condition": "ATP 幫浦：外多內少",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "被動淨運輸永遠往細胞內嗎？",
+            "choices": [
+              "永遠往內",
+              "不一定，看梯度",
+              "永遠往外"
+            ],
+            "answer": 1,
+            "explanation": "方向取決於粒子的梯度。"
+          }
+        },
+        {
+          "condition": "同一幫浦：沒有 ATP",
+          "parameters": {
+            "case": 3
+          },
+          "question": {
+            "question": "被動淨運輸永遠往細胞內嗎？",
+            "choices": [
+              "永遠往內",
+              "不一定，看梯度",
+              "永遠往外"
+            ],
+            "answer": 1,
+            "explanation": "方向取決於粒子的梯度。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "一個運輸中的粒子",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

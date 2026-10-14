@@ -1,0 +1,431 @@
+{
+  "title": "同樣葡萄糖，為什麼消化不同？",
+  "hero": "α／β 連接位置",
+  "gloss": "Linkage · Liên kết",
+  "model": "carbohydrate",
+  "scope": "連接方向是簡化符號，不是精確原子立體構型。人體沒有分解纖維素的纖維素酶；假設加酶情境不代表人體能力。",
+  "predict": {
+    "question": "同樣由葡萄糖組成，人都能消化嗎？",
+    "choices": [
+      "都能",
+      "都不能",
+      "要看連接方式"
+    ],
+    "answer": 2,
+    "explanation": "酵素辨認連接方式，不只看單元名稱。"
+  },
+  "compare": {
+    "title": "看連接，別只看單元",
+    "task": "比較 α 與 β 連接。",
+    "cues": [
+      "兩條鏈都用葡萄糖單元。",
+      "澱粉用 α 型連接。",
+      "纖維素用 β 型連接。",
+      "同樣單元，連接不同。"
+    ],
+    "check": {
+      "question": "澱粉與纖維素的關鍵差別？",
+      "choices": [
+        "一個有葡萄糖，一個沒有",
+        "連接方式",
+        "單元顏色"
+      ],
+      "answer": 1,
+      "explanation": "連接方向影響形狀與酵素辨認。"
+    }
+  },
+  "mechanism": {
+    "title": "酵素要配合連接",
+    "task": "追蹤要被切的橘色鍵。",
+    "cues": [
+      "人的澱粉分解酵素靠近鏈。",
+      "它可處理澱粉的適合連接。",
+      "纖維素的 β 連接沒有被這個酵素切開。",
+      "不是因為纖維素沒有葡萄糖。"
+    ],
+    "check": {
+      "question": "人難消化纖維素，主要因為？",
+      "choices": [
+        "缺少適合的酵素",
+        "它沒有任何碳",
+        "它是 ATP"
+      ],
+      "answer": 0,
+      "explanation": "人體缺少分解纖維素的纖維素酶。"
+    }
+  },
+  "experiment": {
+    "title": "換酵素，結果會變",
+    "task": "選酵素，看哪條鏈被切開。",
+    "cues": [
+      "先選澱粉分解酵素或纖維素酶。",
+      "澱粉分解酵素切適合的 α 連接。",
+      "假設加入纖維素酶，可切 β 鏈。",
+      "有酵素與人本來有此酵素，是不同事情。"
+    ],
+    "check": {
+      "question": "假設加纖維素酶後可以分解，表示？",
+      "choices": [
+        "人體本來就有此酵素",
+        "所有 α 鏈不能消化",
+        "酵素與連接必須配合"
+      ],
+      "answer": 2,
+      "explanation": "這是換酵素的假設實驗。"
+    }
+  },
+  "boundary": {
+    "title": "還要看分支",
+    "task": "比較澱粉與分支多的肝醣。",
+    "cues": [
+      "同樣是葡萄糖聚合物。",
+      "肝醣有很多分支。",
+      "分支增加鏈的端點。",
+      "名稱、連接與分支都要分清楚。"
+    ],
+    "check": {
+      "question": "肝醣的結構特點？",
+      "choices": [
+        "分支很多",
+        "一定沒有葡萄糖",
+        "完全沒有連接"
+      ],
+      "answer": 0,
+      "explanation": "肝醣是動物儲存葡萄糖的重要形式。"
+    }
+  },
+  "cases": [
+    {
+      "label": "人的澱粉分解酵素",
+      "enzyme": "amylase"
+    },
+    {
+      "label": "假設加入纖維素酶",
+      "enzyme": "cellulase"
+    }
+  ],
+  "transfer": [
+    {
+      "question": "把 G 單元全部畫成同色，兩條鏈一定一樣嗎？",
+      "choices": [
+        "一定一樣",
+        "不一定，要看連接",
+        "一定是蛋白質"
+      ],
+      "answer": 1,
+      "explanation": "顏色不是化學結構；要比較連接。"
+    },
+    {
+      "question": "動物常用什麼儲存葡萄糖？",
+      "choices": [
+        "纖維素",
+        "DNA",
+        "肝醣"
+      ],
+      "answer": 2,
+      "explanation": "肝醣有很多分支。"
+    }
+  ],
+  "week": 8,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/3-2-carbohydrates"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "同樣葡萄糖，為什麼消化不同？",
+      "task": "同樣由葡萄糖組成，人都能消化嗎？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "同樣由葡萄糖組成，人都能消化嗎？",
+        "choices": [
+          "都能",
+          "都不能",
+          "要看連接方式"
+        ],
+        "answer": 2,
+        "explanation": "酵素辨認連接方式，不只看單元名稱。"
+      },
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "看連接，別只看單元",
+      "task": "比較 α 與 β 連接。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "兩條鏈都用葡萄糖單元。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "澱粉用 α 型連接。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "纖維素用 β 型連接。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "同樣單元，連接不同。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "澱粉與纖維素的關鍵差別？",
+        "choices": [
+          "一個有葡萄糖，一個沒有",
+          "連接方式",
+          "單元顏色"
+        ],
+        "answer": 1,
+        "explanation": "連接方向影響形狀與酵素辨認。"
+      },
+      "duration": 12,
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "酵素要配合連接",
+      "task": "追蹤要被切的橘色鍵。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "人的澱粉分解酵素靠近鏈。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "它可處理澱粉的適合連接。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "纖維素的 β 連接沒有被這個酵素切開。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "不是因為纖維素沒有葡萄糖。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "人難消化纖維素，主要因為？",
+        "choices": [
+          "缺少適合的酵素",
+          "它沒有任何碳",
+          "它是 ATP"
+        ],
+        "answer": 0,
+        "explanation": "人體缺少分解纖維素的纖維素酶。"
+      },
+      "duration": 12,
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "換酵素，結果會變",
+      "task": "選酵素，看哪條鏈被切開。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選澱粉分解酵素或纖維素酶。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "澱粉分解酵素切適合的 α 連接。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "假設加入纖維素酶，可切 β 鏈。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "有酵素與人本來有此酵素，是不同事情。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "假設加纖維素酶後可以分解，表示？",
+        "choices": [
+          "人體本來就有此酵素",
+          "所有 α 鏈不能消化",
+          "酵素與連接必須配合"
+        ],
+        "answer": 2,
+        "explanation": "這是換酵素的假設實驗。"
+      },
+      "duration": 12,
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "人的澱粉分解酵素",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "現在這個酵素可切哪種連接？",
+            "choices": [
+              "β 連接",
+              "任何連接都切",
+              "適合的 α 連接"
+            ],
+            "answer": 2,
+            "explanation": "酵素要與連接配合；纖維素酶情境是假設加入。"
+          }
+        },
+        {
+          "condition": "假設加入纖維素酶",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "現在這個酵素可切哪種連接？",
+            "choices": [
+              "α 連接",
+              "任何連接都切",
+              "適合的 β 連接"
+            ],
+            "answer": 2,
+            "explanation": "酵素要與連接配合；纖維素酶情境是假設加入。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "還要看分支",
+      "task": "比較澱粉與分支多的肝醣。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "同樣是葡萄糖聚合物。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "肝醣有很多分支。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "分支增加鏈的端點。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "名稱、連接與分支都要分清楚。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "肝醣的結構特點？",
+        "choices": [
+          "分支很多",
+          "一定沒有葡萄糖",
+          "完全沒有連接"
+        ],
+        "answer": 0,
+        "explanation": "肝醣是動物儲存葡萄糖的重要形式。"
+      },
+      "duration": 12,
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "人的澱粉分解酵素",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "肝醣的結構特點？",
+            "choices": [
+              "分支很多",
+              "一定沒有葡萄糖",
+              "完全沒有連接"
+            ],
+            "answer": 0,
+            "explanation": "肝醣是動物儲存葡萄糖的重要形式。"
+          }
+        },
+        {
+          "condition": "假設加入纖維素酶",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "肝醣的結構特點？",
+            "choices": [
+              "分支很多",
+              "一定沒有葡萄糖",
+              "完全沒有連接"
+            ],
+            "answer": 0,
+            "explanation": "肝醣是動物儲存葡萄糖的重要形式。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "α／β 連接位置",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

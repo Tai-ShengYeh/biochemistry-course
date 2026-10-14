@@ -1,0 +1,471 @@
+{
+  "title": "飯怎麼幫細胞做事？",
+  "hero": "葡萄糖與能量標記",
+  "gloss": "Glucose · Năng lượng",
+  "model": "fuel",
+  "scope": "澱粉先消化成葡萄糖再吸收。圖只追蹤流程與能量；葡萄糖不是直接變成 ATP。",
+  "predict": {
+    "question": "澱粉能直接進入細胞，變成 ATP 嗎？",
+    "choices": [
+      "能直接進入",
+      "要先消化、吸收",
+      "ATP 就是澱粉"
+    ],
+    "answer": 1,
+    "explanation": "先消化、吸收，再經細胞內反應。"
+  },
+  "compare": {
+    "title": "先消化，再進細胞",
+    "task": "比較大分子與小分子的路徑。",
+    "cues": [
+      "左邊的澱粉還是大分子。",
+      "消化後，葡萄糖可以被吸收。",
+      "葡萄糖進細胞；部分能量轉到 ATP。",
+      "物質的路徑與能量的路徑不同。"
+    ],
+    "check": {
+      "question": "哪個可以在消化後被吸收？",
+      "choices": [
+        "整條澱粉",
+        "葡萄糖",
+        "整個細胞"
+      ],
+      "answer": 1,
+      "explanation": "葡萄糖是可被吸收的小分子。"
+    }
+  },
+  "mechanism": {
+    "title": "物質 ≠ 能量",
+    "task": "跟著葡萄糖；再看橘色能量標記。",
+    "cues": [
+      "葡萄糖進入細胞。",
+      "多步反應分解葡萄糖。",
+      "部分能量支持 ADP + Pi → ATP。",
+      "ATP 可把能量轉給細胞工作。"
+    ],
+    "check": {
+      "question": "ATP 在這裡的主要角色？",
+      "choices": [
+        "提供可利用的能量",
+        "取代所有細胞",
+        "變成整條澱粉"
+      ],
+      "answer": 0,
+      "explanation": "ATP 是能量轉移的工具。"
+    }
+  },
+  "experiment": {
+    "title": "如果缺少消化？",
+    "task": "改條件，看看物質走到哪裡。",
+    "cues": [
+      "先看選到的條件。",
+      "有消化作用，澱粉才變成小分子。",
+      "沒有消化時，大分子停在吸收前。",
+      "比較停止的位置。"
+    ],
+    "check": {
+      "question": "澱粉停在吸收前，主要缺少什麼？",
+      "choices": [
+        "更多 ATP 標籤",
+        "細胞大小",
+        "消化作用"
+      ],
+      "answer": 2,
+      "explanation": "少了消化，這條澱粉路徑無法先產生葡萄糖。"
+    }
+  },
+  "boundary": {
+    "title": "細胞工作需要能量",
+    "task": "改條件，追蹤 ATP 能量標記。",
+    "cues": [
+      "葡萄糖路徑先準備好。",
+      "細胞反應把部分能量轉到 ATP。",
+      "如果沒有可利用的 ATP，這個示意工作停下。",
+      "有食物，不代表每一步自動完成。"
+    ],
+    "check": {
+      "question": "這個需要 ATP 的工作停下，表示？",
+      "choices": [
+        "葡萄糖消失了",
+        "缺少可利用的 ATP",
+        "所有細胞都死亡"
+      ],
+      "answer": 1,
+      "explanation": "此圖只表示一個依賴 ATP 的工作。"
+    }
+  },
+  "cases": [
+    {
+      "label": "正常流程",
+      "digestion": true,
+      "atp": true
+    },
+    {
+      "label": "缺少消化作用",
+      "digestion": false,
+      "atp": true
+    },
+    {
+      "label": "這個工作沒有 ATP",
+      "digestion": true,
+      "atp": false
+    }
+  ],
+  "transfer": [
+    {
+      "question": "食物的小分子如何進入身體？",
+      "choices": [
+        "先消化再吸收",
+        "整個細胞直接吸收",
+        "先變成一個 ATP"
+      ],
+      "answer": 0,
+      "explanation": "消化與吸收是不同步驟。"
+    },
+    {
+      "question": "說「葡萄糖就是 ATP」對嗎？",
+      "choices": [
+        "對，兩者相同",
+        "不對，ATP 是能量轉移工具",
+        "對，兩者都是細胞"
+      ],
+      "answer": 1,
+      "explanation": "圖中橘色是能量路徑，不是物質改名。"
+    }
+  ],
+  "week": 1,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/3-2-carbohydrates",
+    "https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "飯怎麼幫細胞做事？",
+      "task": "澱粉能直接進入細胞，變成 ATP 嗎？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "澱粉能直接進入細胞，變成 ATP 嗎？",
+        "choices": [
+          "能直接進入",
+          "要先消化、吸收",
+          "ATP 就是澱粉"
+        ],
+        "answer": 1,
+        "explanation": "先消化、吸收，再經細胞內反應。"
+      },
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "先消化，再進細胞",
+      "task": "比較大分子與小分子的路徑。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "左邊的澱粉還是大分子。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "消化後，葡萄糖可以被吸收。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "葡萄糖進細胞；部分能量轉到 ATP。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "物質的路徑與能量的路徑不同。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "哪個可以在消化後被吸收？",
+        "choices": [
+          "整條澱粉",
+          "葡萄糖",
+          "整個細胞"
+        ],
+        "answer": 1,
+        "explanation": "葡萄糖是可被吸收的小分子。"
+      },
+      "duration": 12,
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "物質 ≠ 能量",
+      "task": "跟著葡萄糖；再看橘色能量標記。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "葡萄糖進入細胞。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "多步反應分解葡萄糖。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "部分能量支持 ADP + Pi → ATP。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "ATP 可把能量轉給細胞工作。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "ATP 在這裡的主要角色？",
+        "choices": [
+          "提供可利用的能量",
+          "取代所有細胞",
+          "變成整條澱粉"
+        ],
+        "answer": 0,
+        "explanation": "ATP 是能量轉移的工具。"
+      },
+      "duration": 12,
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "如果缺少消化？",
+      "task": "改條件，看看物質走到哪裡。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先看選到的條件。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "有消化作用，澱粉才變成小分子。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "沒有消化時，大分子停在吸收前。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "比較停止的位置。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "澱粉停在吸收前，主要缺少什麼？",
+        "choices": [
+          "更多 ATP 標籤",
+          "細胞大小",
+          "消化作用"
+        ],
+        "answer": 2,
+        "explanation": "少了消化，這條澱粉路徑無法先產生葡萄糖。"
+      },
+      "duration": 12,
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "正常流程",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "澱粉在吸收前要先做什麼？",
+            "choices": [
+              "先變成整個細胞",
+              "換粒子顏色",
+              "先經過消化"
+            ],
+            "answer": 2,
+            "explanation": "澱粉先消化成可吸收的小分子。"
+          }
+        },
+        {
+          "condition": "缺少消化作用",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "這條澱粉路徑為什麼停在吸收前？",
+            "choices": [
+              "先變成整個細胞",
+              "換粒子顏色",
+              "先經過消化"
+            ],
+            "answer": 2,
+            "explanation": "澱粉先消化成可吸收的小分子。"
+          }
+        },
+        {
+          "condition": "這個工作沒有 ATP",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此 ATP 依賴的工作為什麼停下？",
+            "choices": [
+              "所有細胞都死了",
+              "葡萄糖全部消失",
+              "此工作沒有可利用的 ATP"
+            ],
+            "answer": 2,
+            "explanation": "圖只描述一個 ATP 依賴的工作。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "細胞工作需要能量",
+      "task": "改條件，追蹤 ATP 能量標記。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "葡萄糖路徑先準備好。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "細胞反應把部分能量轉到 ATP。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "如果沒有可利用的 ATP，這個示意工作停下。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "有食物，不代表每一步自動完成。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "這個需要 ATP 的工作停下，表示？",
+        "choices": [
+          "葡萄糖消失了",
+          "缺少可利用的 ATP",
+          "所有細胞都死亡"
+        ],
+        "answer": 1,
+        "explanation": "此圖只表示一個依賴 ATP 的工作。"
+      },
+      "duration": 12,
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "正常流程",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "這個需要 ATP 的工作停下，表示？",
+            "choices": [
+              "葡萄糖消失了",
+              "缺少可利用的 ATP",
+              "所有細胞都死亡"
+            ],
+            "answer": 1,
+            "explanation": "此圖只表示一個依賴 ATP 的工作。"
+          }
+        },
+        {
+          "condition": "缺少消化作用",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "這個需要 ATP 的工作停下，表示？",
+            "choices": [
+              "葡萄糖消失了",
+              "缺少可利用的 ATP",
+              "所有細胞都死亡"
+            ],
+            "answer": 1,
+            "explanation": "此圖只表示一個依賴 ATP 的工作。"
+          }
+        },
+        {
+          "condition": "這個工作沒有 ATP",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "這個需要 ATP 的工作停下，表示？",
+            "choices": [
+              "葡萄糖消失了",
+              "缺少可利用的 ATP",
+              "所有細胞都死亡"
+            ],
+            "answer": 1,
+            "explanation": "此圖只表示一個依賴 ATP 的工作。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "葡萄糖與能量標記",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

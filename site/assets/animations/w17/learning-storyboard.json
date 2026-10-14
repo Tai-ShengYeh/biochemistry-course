@@ -1,0 +1,468 @@
+{
+  "title": "空腹時，誰把燃料送給腦？",
+  "hero": "燃料從來源到使用器官",
+  "gloss": "Fasting · Nhịn ăn",
+  "model": "organs",
+  "scope": "是器官分工的簡化路線，不是個人飲食或臨床建議。肝供血糖；肌肝醣主要自用。長期空腹腦可用更多酮體，仍有葡萄糖需求。",
+  "predict": {
+    "question": "空腹時，哪個器官可幫忙提供血糖？",
+    "choices": [
+      "肌肉把肝醣直接送到血中",
+      "肝臟",
+      "只有細胞核"
+    ],
+    "answer": 1,
+    "explanation": "肝臟能幫助維持血糖；肌肝醣主要自用。"
+  },
+  "compare": {
+    "title": "吃飽存，空腹動員",
+    "task": "比較燃料箭頭的方向。",
+    "cues": [
+      "吃飽後，使用與儲存養分。",
+      "肝與肌肉可儲存肝醣。",
+      "空腹時，肝臟幫忙提供血糖。",
+      "脂肪可動員，供其他組織使用。"
+    ],
+    "check": {
+      "question": "空腹時，肝臟的重要角色？",
+      "choices": [
+        "把所有燃料封住",
+        "直接變成脂肪",
+        "提供血糖"
+      ],
+      "answer": 2,
+      "explanation": "肝臟參與調節全身燃料供應。"
+    }
+  },
+  "mechanism": {
+    "title": "肌肝醣，主要自己用",
+    "task": "追蹤肌肉的短箭頭。",
+    "cues": [
+      "肌肉也能儲存肝醣。",
+      "需要工作時，肌肉可使用自己的儲存。",
+      "這條箭頭主要留在肌肉。",
+      "不要畫成肌肝醣直接提供血糖。"
+    ],
+    "check": {
+      "question": "肌肝醣主要供誰使用？",
+      "choices": [
+        "肌肉自己",
+        "全部直接送腦",
+        "全部變成尿素"
+      ],
+      "answer": 0,
+      "explanation": "肌肉與肝臟的燃料角色不同。"
+    }
+  },
+  "experiment": {
+    "title": "改成吃飽、空腹、長期空腹",
+    "task": "追蹤送到腦的燃料。",
+    "cues": [
+      "先選情境。",
+      "一般情況，腦主要用葡萄糖。",
+      "長期空腹，肝產生酮體供其他器官。",
+      "腦可用更多酮體，但仍有葡萄糖需求。"
+    ],
+    "check": {
+      "question": "長期空腹時，腦可以增加使用？",
+      "choices": [
+        "整條肌肝醣",
+        "酮體",
+        "所有長鏈脂肪酸直接進腦"
+      ],
+      "answer": 1,
+      "explanation": "酮體是可供腦使用的重要替代燃料。"
+    }
+  },
+  "boundary": {
+    "title": "兩個器官，不是同一張帳",
+    "task": "看血糖路線與自用路線。",
+    "cues": [
+      "肝的箭頭可通向血液。",
+      "肌肝醣的箭頭主要通向自用。",
+      "胰島素與升糖素幫助調節狀態。",
+      "簡圖不代表每種激素只影響一個器官。"
+    ],
+    "check": {
+      "question": "看到「都存肝醣」，可以說功能完全相同嗎？",
+      "choices": [
+        "可以，名字相同",
+        "可以，箭頭顏色相同",
+        "不可以，器官分工不同"
+      ],
+      "answer": 2,
+      "explanation": "位置與供應對象也要看。"
+    }
+  },
+  "cases": [
+    {
+      "label": "吃飽",
+      "state": "fed"
+    },
+    {
+      "label": "短期空腹",
+      "state": "fast"
+    },
+    {
+      "label": "長期空腹",
+      "state": "long"
+    }
+  ],
+  "transfer": [
+    {
+      "question": "哪句符合肌肝醣的主要角色？",
+      "choices": [
+        "供肌肉自用",
+        "直接供全部血糖",
+        "就是肝臟的肝醣"
+      ],
+      "answer": 0,
+      "explanation": "同名儲存形式，不代表相同器官功能。"
+    },
+    {
+      "question": "長期空腹，腦只用酮體、完全不需葡萄糖嗎？",
+      "choices": [
+        "完全正確",
+        "不對，仍有葡萄糖需求",
+        "腦直接用整條澱粉"
+      ],
+      "answer": 1,
+      "explanation": "燃料比例會改變，但不是完全取消葡萄糖。"
+    }
+  ],
+  "week": 17,
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK554523/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK493179/"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "空腹時，誰把燃料送給腦？",
+      "task": "空腹時，哪個器官可幫忙提供血糖？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "空腹時，哪個器官可幫忙提供血糖？",
+        "choices": [
+          "肌肉把肝醣直接送到血中",
+          "肝臟",
+          "只有細胞核"
+        ],
+        "answer": 1,
+        "explanation": "肝臟能幫助維持血糖；肌肝醣主要自用。"
+      },
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "吃飽存，空腹動員",
+      "task": "比較燃料箭頭的方向。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "吃飽後，使用與儲存養分。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "肝與肌肉可儲存肝醣。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "空腹時，肝臟幫忙提供血糖。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "脂肪可動員，供其他組織使用。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "空腹時，肝臟的重要角色？",
+        "choices": [
+          "把所有燃料封住",
+          "直接變成脂肪",
+          "提供血糖"
+        ],
+        "answer": 2,
+        "explanation": "肝臟參與調節全身燃料供應。"
+      },
+      "duration": 12,
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "肌肝醣，主要自己用",
+      "task": "追蹤肌肉的短箭頭。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "肌肉也能儲存肝醣。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "需要工作時，肌肉可使用自己的儲存。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "這條箭頭主要留在肌肉。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "不要畫成肌肝醣直接提供血糖。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "肌肝醣主要供誰使用？",
+        "choices": [
+          "肌肉自己",
+          "全部直接送腦",
+          "全部變成尿素"
+        ],
+        "answer": 0,
+        "explanation": "肌肉與肝臟的燃料角色不同。"
+      },
+      "duration": 12,
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "改成吃飽、空腹、長期空腹",
+      "task": "追蹤送到腦的燃料。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選情境。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "一般情況，腦主要用葡萄糖。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "長期空腹，肝產生酮體供其他器官。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "腦可用更多酮體，但仍有葡萄糖需求。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "長期空腹時，腦可以增加使用？",
+        "choices": [
+          "整條肌肝醣",
+          "酮體",
+          "所有長鏈脂肪酸直接進腦"
+        ],
+        "answer": 1,
+        "explanation": "酮體是可供腦使用的重要替代燃料。"
+      },
+      "duration": 12,
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "吃飽",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "目前「吃飽」情境，主要看到？",
+            "choices": [
+              "肌肝醣直接供應全部血糖",
+              "使用與儲存養分",
+              "所有器官都用同一種燃料"
+            ],
+            "answer": 1,
+            "explanation": "看燃料來源、使用器官與所選狀態。"
+          }
+        },
+        {
+          "condition": "短期空腹",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "目前「短期空腹」情境，主要看到？",
+            "choices": [
+              "肌肝醣直接供應全部血糖",
+              "肝幫助提供血糖",
+              "所有器官都用同一種燃料"
+            ],
+            "answer": 1,
+            "explanation": "看燃料來源、使用器官與所選狀態。"
+          }
+        },
+        {
+          "condition": "長期空腹",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "目前「長期空腹」情境，主要看到？",
+            "choices": [
+              "肌肝醣直接供應全部血糖",
+              "腦增加用酮體，仍需葡萄糖",
+              "所有器官都用同一種燃料"
+            ],
+            "answer": 1,
+            "explanation": "看燃料來源、使用器官與所選狀態。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "兩個器官，不是同一張帳",
+      "task": "看血糖路線與自用路線。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "肝的箭頭可通向血液。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "肌肝醣的箭頭主要通向自用。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "胰島素與升糖素幫助調節狀態。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "簡圖不代表每種激素只影響一個器官。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "看到「都存肝醣」，可以說功能完全相同嗎？",
+        "choices": [
+          "可以，名字相同",
+          "可以，箭頭顏色相同",
+          "不可以，器官分工不同"
+        ],
+        "answer": 2,
+        "explanation": "位置與供應對象也要看。"
+      },
+      "duration": 12,
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "吃飽",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "看到「都存肝醣」，可以說功能完全相同嗎？",
+            "choices": [
+              "可以，名字相同",
+              "可以，箭頭顏色相同",
+              "不可以，器官分工不同"
+            ],
+            "answer": 2,
+            "explanation": "位置與供應對象也要看。"
+          }
+        },
+        {
+          "condition": "短期空腹",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "看到「都存肝醣」，可以說功能完全相同嗎？",
+            "choices": [
+              "可以，名字相同",
+              "可以，箭頭顏色相同",
+              "不可以，器官分工不同"
+            ],
+            "answer": 2,
+            "explanation": "位置與供應對象也要看。"
+          }
+        },
+        {
+          "condition": "長期空腹",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "看到「都存肝醣」，可以說功能完全相同嗎？",
+            "choices": [
+              "可以，名字相同",
+              "可以，箭頭顏色相同",
+              "不可以，器官分工不同"
+            ],
+            "answer": 2,
+            "explanation": "位置與供應對象也要看。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "燃料從來源到使用器官",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

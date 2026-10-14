@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
 <link rel="stylesheet" href="../assets/css/animations.css">
+<link rel="stylesheet" href="../assets/learning-lab-route.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -53,19 +54,13 @@
 提問:官能基怎麼說?
   </aside>
 </section>
-<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w01">
-<h3>W01 教學動畫：飯怎麼變成力氣？</h3>
-<video controls playsinline preload="metadata" poster="../assets/animations/w01/poster.jpg" aria-label="飯怎麼變成力氣？">
-<source src="../assets/animations/w01/w01_animation.mp4" type="video/mp4">
-<track kind="subtitles" src="../assets/animations/w01/w01_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
-您的瀏覽器不支援影片，請下載 MP4。</video>
-<p class="animation-terms">細胞 / Cell / Tế bào · 葡萄糖 / Glucose / Glucose · 能量 / Energy / Năng lượng</p>
-<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
-<p class="animation-links"><a href="../assets/animations/w01/w01_animation.mp4" download>MP4</a> · <a href="../assets/animations/w01/w01_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w01/w01_animation.vtt" download>VTT</a></p>
-</div></section>
+<section class="animation-slide learning-lab-slide" id="animation">
+<iframe class="learning-frame" data-week="1" src="../assets/animations/w01/simulation.html" title="W01 六幕互動實驗室"></iframe>
+<p class="learning-open"><a href="../assets/animations/w01/simulation.html" target="_blank" rel="noopener">另開實驗室 ↗</a> · <a href="#/learning-return">回本週課程 →</a></p>
+<aside class="notes">每幕一個觀看任務。先預測，再觀察、解釋與應用；答錯可重試。模型範圍見實驗室說明。</aside></section>
 
 
-<section>
+<section id="learning-return">
   <div class="hd"><h2>生物化學是什麼?</h2><p class="vi">Hóa sinh là gì?</p></div>
   <div class="banner"><b>生物化學研究「生命的化學」。</b><span class="vi">Hóa sinh nghiên cứu hóa học của sự sống.</span></div>
   <div class="cards c3">
@@ -260,8 +255,9 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
 <script>
 Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0,
-  center:false, transition:'slide', plugins:[RevealNotes] });
+  center:false, scrollActivationWidth:null, transition:'slide', plugins:[RevealNotes] });
 </script>
 <script src="../assets/animation-controls.js"></script>
+<script src="../assets/learning-lab-route.js"></script>
 </body>
 </html>

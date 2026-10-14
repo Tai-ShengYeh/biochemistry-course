@@ -1,0 +1,467 @@
+{
+  "title": "寫互補股，方向對了嗎？",
+  "hero": "正在配對的一個鹼基",
+  "gloss": "Base pairing · Bắt cặp base",
+  "model": "dna",
+  "scope": "畫平面的配對與反平行方向，不代表精確雙螺旋。RNA 使用 U，但並非所有 RNA 都是雙股。",
+  "predict": {
+    "question": "上股 5′-ATGC-3′，下股由左到右是？",
+    "choices": [
+      "5′-TACG-3′",
+      "3′-TACG-5′",
+      "3′-ATGC-5′"
+    ],
+    "answer": 1,
+    "explanation": "配對相同位置，兩股方向相反。"
+  },
+  "compare": {
+    "title": "配對與方向都要看",
+    "task": "先看 A—T、G—C，再看端點。",
+    "cues": [
+      "上股由 5′ 指向 3′。",
+      "A 配 T，G 配 C。",
+      "下股由左到右是 3′ 到 5′。",
+      "配對正確，方向也要正確。"
+    ],
+    "check": {
+      "question": "DNA 兩股方向？",
+      "choices": [
+        "反平行",
+        "完全同方向",
+        "沒有端點"
+      ],
+      "answer": 0,
+      "explanation": "兩股的 5′→3′ 方向相反。"
+    }
+  },
+  "mechanism": {
+    "title": "一個位置，一組配對",
+    "task": "追蹤橘色位置的鹼基。",
+    "cues": [
+      "A 對面放 T。",
+      "G 對面放 C。",
+      "短虛線表示股間氫鍵。",
+      "主鏈连接與股間氫鍵不同。"
+    ],
+    "check": {
+      "question": "兩股之間的配對作用，在圖中用什麼表示？",
+      "choices": [
+        "胜肽鍵",
+        "所有線都是同一種鍵",
+        "短虛線氫鍵"
+      ],
+      "answer": 2,
+      "explanation": "主鏈共價連接與股間氫鍵要分清楚。"
+    }
+  },
+  "experiment": {
+    "title": "換上股，自己預測",
+    "task": "先寫下股，再按播放。",
+    "cues": [
+      "先讀上股序列。",
+      "依同一位置逐個配對。",
+      "下股端點保持反方向。",
+      "核對自己的答案。"
+    ],
+    "check": {
+      "question": "改上股後，下股應該？",
+      "choices": [
+        "完全不變",
+        "依配對規則改變",
+        "只改顏色"
+      ],
+      "answer": 1,
+      "explanation": "每個位置都要重新配對。"
+    }
+  },
+  "boundary": {
+    "title": "由 5′ 端重新讀一次",
+    "task": "看同一股，換閱讀方向。",
+    "cues": [
+      "下股由左到右是 3′→5′。",
+      "如果要寫成 5′→3′，要從右邊開始讀。",
+      "不能只把端點標籤互換。",
+      "序列閱讀方向會改變寫法。"
+    ],
+    "check": {
+      "question": "下股要改寫成 5′→3′，怎麼做？",
+      "choices": [
+        "反向讀同一股",
+        "只換端點標籤",
+        "把 A 都刪掉"
+      ],
+      "answer": 0,
+      "explanation": "從下股原來右端的 5′ 開始讀。"
+    }
+  },
+  "cases": [
+    {
+      "label": "上股 ATGC",
+      "sequence": "ATGC"
+    },
+    {
+      "label": "上股 GCTA",
+      "sequence": "GCTA"
+    },
+    {
+      "label": "上股 AAGC",
+      "sequence": "AAGC"
+    }
+  ],
+  "transfer": [
+    {
+      "question": "5′-AG-3′ 的對面，由左到右是？",
+      "choices": [
+        "5′-TC-3′",
+        "3′-TC-5′",
+        "3′-AG-5′"
+      ],
+      "answer": 1,
+      "explanation": "A—T、G—C，方向反平行。"
+    },
+    {
+      "question": "RNA 常用哪個取代 T？",
+      "choices": [
+        "C",
+        "G",
+        "U"
+      ],
+      "answer": 2,
+      "explanation": "RNA 用 U；這不表示所有 RNA 是雙股。"
+    }
+  ],
+  "week": 11,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/3-5-nucleic-acids"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "寫互補股，方向對了嗎？",
+      "task": "上股 5′-ATGC-3′，下股由左到右是？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "上股 5′-ATGC-3′，下股由左到右是？",
+        "choices": [
+          "5′-TACG-3′",
+          "3′-TACG-5′",
+          "3′-ATGC-5′"
+        ],
+        "answer": 1,
+        "explanation": "配對相同位置，兩股方向相反。"
+      },
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "配對與方向都要看",
+      "task": "先看 A—T、G—C，再看端點。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "上股由 5′ 指向 3′。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "A 配 T，G 配 C。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "下股由左到右是 3′ 到 5′。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "配對正確，方向也要正確。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "DNA 兩股方向？",
+        "choices": [
+          "反平行",
+          "完全同方向",
+          "沒有端點"
+        ],
+        "answer": 0,
+        "explanation": "兩股的 5′→3′ 方向相反。"
+      },
+      "duration": 12,
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "一個位置，一組配對",
+      "task": "追蹤橘色位置的鹼基。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "A 對面放 T。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "G 對面放 C。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "短虛線表示股間氫鍵。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "主鏈连接與股間氫鍵不同。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "兩股之間的配對作用，在圖中用什麼表示？",
+        "choices": [
+          "胜肽鍵",
+          "所有線都是同一種鍵",
+          "短虛線氫鍵"
+        ],
+        "answer": 2,
+        "explanation": "主鏈共價連接與股間氫鍵要分清楚。"
+      },
+      "duration": 12,
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "換上股，自己預測",
+      "task": "先寫下股，再按播放。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先讀上股序列。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "依同一位置逐個配對。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "下股端點保持反方向。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "核對自己的答案。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "改上股後，下股應該？",
+        "choices": [
+          "完全不變",
+          "依配對規則改變",
+          "只改顏色"
+        ],
+        "answer": 1,
+        "explanation": "每個位置都要重新配對。"
+      },
+      "duration": 12,
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "上股 ATGC",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此上股的對面，由左到右是？",
+            "choices": [
+              "5′-TACG-3′",
+              "3′-TACG-5′",
+              "3′-ATGC-5′"
+            ],
+            "answer": 1,
+            "explanation": "配對與反平行方向都必須正確。"
+          }
+        },
+        {
+          "condition": "上股 GCTA",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此上股的對面，由左到右是？",
+            "choices": [
+              "5′-CGAT-3′",
+              "3′-CGAT-5′",
+              "3′-GCTA-5′"
+            ],
+            "answer": 1,
+            "explanation": "配對與反平行方向都必須正確。"
+          }
+        },
+        {
+          "condition": "上股 AAGC",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此上股的對面，由左到右是？",
+            "choices": [
+              "5′-TTCG-3′",
+              "3′-TTCG-5′",
+              "3′-AAGC-5′"
+            ],
+            "answer": 1,
+            "explanation": "配對與反平行方向都必須正確。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "由 5′ 端重新讀一次",
+      "task": "看同一股，換閱讀方向。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "下股由左到右是 3′→5′。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "如果要寫成 5′→3′，要從右邊開始讀。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "不能只把端點標籤互換。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "序列閱讀方向會改變寫法。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "下股要改寫成 5′→3′，怎麼做？",
+        "choices": [
+          "反向讀同一股",
+          "只換端點標籤",
+          "把 A 都刪掉"
+        ],
+        "answer": 0,
+        "explanation": "從下股原來右端的 5′ 開始讀。"
+      },
+      "duration": 12,
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "上股 ATGC",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此下股改寫成 5′→3′ 是？",
+            "choices": [
+              "5′-GCAT-3′",
+              "5′-TACG-3′",
+              "5′-ATGC-3′"
+            ],
+            "answer": 0,
+            "explanation": "由下股右端的 5′ 開始讀。"
+          }
+        },
+        {
+          "condition": "上股 GCTA",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此下股改寫成 5′→3′ 是？",
+            "choices": [
+              "5′-TAGC-3′",
+              "5′-CGAT-3′",
+              "5′-GCTA-3′"
+            ],
+            "answer": 0,
+            "explanation": "由下股右端的 5′ 開始讀。"
+          }
+        },
+        {
+          "condition": "上股 AAGC",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此下股改寫成 5′→3′ 是？",
+            "choices": [
+              "5′-GCTT-3′",
+              "5′-TTCG-3′",
+              "5′-AAGC-3′"
+            ],
+            "answer": 0,
+            "explanation": "由下股右端的 5′ 開始讀。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "正在配對的一個鹼基",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

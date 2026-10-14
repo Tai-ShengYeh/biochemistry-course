@@ -1,0 +1,470 @@
+{
+  "title": "H⁺ 流回來，怎麼做 ATP？",
+  "hero": "一個 H⁺ 與電子路徑",
+  "gloss": "Proton · Proton",
+  "model": "respiration",
+  "scope": "膜間隙與基質分開。只畫穩態方向與因果；無 O₂ 情境指等待原有梯度消散後。未以圖上粒子數計算 ATP 產率。",
+  "predict": {
+    "question": "通過 ATP 合成酶、帶動 ATP 的是？",
+    "choices": [
+      "電子直接變成 ATP",
+      "H⁺ 流回基質",
+      "整個氧分子穿膜"
+    ],
+    "answer": 1,
+    "explanation": "H⁺ 沿梯度流過 ATP 合成酶。"
+  },
+  "compare": {
+    "title": "電子與 H⁺ 是兩條路",
+    "task": "分開看藍色 e⁻ 與橘色 H⁺。",
+    "cues": [
+      "電子沿電子傳遞鏈移動。",
+      "部分複合體把 H⁺ 泵到膜間隙。",
+      "H⁺ 形成跨膜梯度。",
+      "H⁺ 流回基質，帶動 ATP 合成。"
+    ],
+    "check": {
+      "question": "哪一句正確？",
+      "choices": [
+        "e⁻ 與 H⁺ 是同一物質",
+        "H⁺ 直接變成 ATP",
+        "電子傳遞與 H⁺ 流動不同"
+      ],
+      "answer": 2,
+      "explanation": "電子提供傳遞能量，H⁺ 形成並利用梯度。"
+    }
+  },
+  "mechanism": {
+    "title": "II 不泵質子",
+    "task": "追蹤 I、III、IV 的向上箭頭。",
+    "cues": [
+      "I 可以泵 H⁺。",
+      "II 參與電子傳遞，但不泵 H⁺。",
+      "III 與 IV 也泵 H⁺。",
+      "最後電子交給氧。"
+    ],
+    "check": {
+      "question": "哪個不泵 H⁺？",
+      "choices": [
+        "II",
+        "I",
+        "III"
+      ],
+      "answer": 0,
+      "explanation": "圖中 II 沒有泵質子的向上箭頭。"
+    }
+  },
+  "experiment": {
+    "title": "拿走氧，或讓 H⁺ 漏回去",
+    "task": "改條件，觀察梯度與 ATP。",
+    "cues": [
+      "先選氧與膜條件。",
+      "沒有氧，電子傳遞最後一步無法持續。",
+      "漏膜可讓 H⁺ 繞過 ATP 合成酶。",
+      "等待梯度消散後，ATP 合成能力下降。"
+    ],
+    "check": {
+      "question": "H⁺ 繞過 ATP 合成酶漏回去，表示？",
+      "choices": [
+        "一定生成更多 ATP",
+        "梯度能量沒有有效用來合成 ATP",
+        "所有電子變成 H⁺"
+      ],
+      "answer": 1,
+      "explanation": "解偶聯可以降低 ATP 產生，電子傳遞未必立即停止。"
+    }
+  },
+  "boundary": {
+    "title": "有電子流，不保證有 ATP",
+    "task": "比較完整膜與漏膜。",
+    "cues": [
+      "有氧時，電子路徑可繼續。",
+      "完整膜可保留 H⁺ 梯度。",
+      "漏膜使梯度難以維持。",
+      "電子傳遞與 ATP 合成需要有效連結。"
+    ],
+    "check": {
+      "question": "有氧又漏膜，ATP 能保證和完整膜一樣嗎？",
+      "choices": [
+        "能，氧足夠就好",
+        "能，電子直接就是 ATP",
+        "不能，還需要維持梯度"
+      ],
+      "answer": 2,
+      "explanation": "需有效保留梯度並經 ATP 合成酶回流。"
+    }
+  },
+  "cases": [
+    {
+      "label": "有氧、完整膜",
+      "oxygen": true,
+      "leak": false
+    },
+    {
+      "label": "沒有氧（待梯度消散）",
+      "oxygen": false,
+      "leak": false
+    },
+    {
+      "label": "有氧、H⁺ 漏膜",
+      "oxygen": true,
+      "leak": true
+    }
+  ],
+  "transfer": [
+    {
+      "question": "電子最後交給什麼？",
+      "choices": [
+        "氧",
+        "ATP 的顏色",
+        "所有 H⁺"
+      ],
+      "answer": 0,
+      "explanation": "氧是末端電子接受者；最終形成水。"
+    },
+    {
+      "question": "ATP 合成酶主要利用什麼？",
+      "choices": [
+        "只利用膜大小",
+        "H⁺ 的電化學梯度",
+        "只利用細胞核"
+      ],
+      "answer": 1,
+      "explanation": "H⁺ 沿電化學梯度流回基質。"
+    }
+  ],
+  "week": 15,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/7-4-oxidative-phosphorylation"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "H⁺ 流回來，怎麼做 ATP？",
+      "task": "通過 ATP 合成酶、帶動 ATP 的是？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "通過 ATP 合成酶、帶動 ATP 的是？",
+        "choices": [
+          "電子直接變成 ATP",
+          "H⁺ 流回基質",
+          "整個氧分子穿膜"
+        ],
+        "answer": 1,
+        "explanation": "H⁺ 沿梯度流過 ATP 合成酶。"
+      },
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "電子與 H⁺ 是兩條路",
+      "task": "分開看藍色 e⁻ 與橘色 H⁺。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "電子沿電子傳遞鏈移動。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "部分複合體把 H⁺ 泵到膜間隙。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "H⁺ 形成跨膜梯度。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "H⁺ 流回基質，帶動 ATP 合成。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "哪一句正確？",
+        "choices": [
+          "e⁻ 與 H⁺ 是同一物質",
+          "H⁺ 直接變成 ATP",
+          "電子傳遞與 H⁺ 流動不同"
+        ],
+        "answer": 2,
+        "explanation": "電子提供傳遞能量，H⁺ 形成並利用梯度。"
+      },
+      "duration": 12,
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "II 不泵質子",
+      "task": "追蹤 I、III、IV 的向上箭頭。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "I 可以泵 H⁺。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "II 參與電子傳遞，但不泵 H⁺。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "III 與 IV 也泵 H⁺。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "最後電子交給氧。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "哪個不泵 H⁺？",
+        "choices": [
+          "II",
+          "I",
+          "III"
+        ],
+        "answer": 0,
+        "explanation": "圖中 II 沒有泵質子的向上箭頭。"
+      },
+      "duration": 12,
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "拿走氧，或讓 H⁺ 漏回去",
+      "task": "改條件，觀察梯度與 ATP。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選氧與膜條件。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "沒有氧，電子傳遞最後一步無法持續。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "漏膜可讓 H⁺ 繞過 ATP 合成酶。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "等待梯度消散後，ATP 合成能力下降。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "H⁺ 繞過 ATP 合成酶漏回去，表示？",
+        "choices": [
+          "一定生成更多 ATP",
+          "梯度能量沒有有效用來合成 ATP",
+          "所有電子變成 H⁺"
+        ],
+        "answer": 1,
+        "explanation": "解偶聯可以降低 ATP 產生，電子傳遞未必立即停止。"
+      },
+      "duration": 12,
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "有氧、完整膜",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "完整膜在此主要幫忙什麼？",
+            "choices": [
+              "ATP 一定更多",
+              "保留 H⁺ 梯度",
+              "電子直接變成 H⁺"
+            ],
+            "answer": 1,
+            "explanation": "電子傳遞、梯度與 ATP 合成是相關但不同的步驟。"
+          }
+        },
+        {
+          "condition": "沒有氧（待梯度消散）",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "沒有氧，等待原有梯度消散後？",
+            "choices": [
+              "ATP 一定更多",
+              "ATP 合成能力下降",
+              "電子直接變成 H⁺"
+            ],
+            "answer": 1,
+            "explanation": "電子傳遞、梯度與 ATP 合成是相關但不同的步驟。"
+          }
+        },
+        {
+          "condition": "有氧、H⁺ 漏膜",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此漏膜情境的主要影響？",
+            "choices": [
+              "ATP 一定更多",
+              "難以維持 H⁺ 梯度",
+              "電子直接變成 H⁺"
+            ],
+            "answer": 1,
+            "explanation": "電子傳遞、梯度與 ATP 合成是相關但不同的步驟。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "有電子流，不保證有 ATP",
+      "task": "比較完整膜與漏膜。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "有氧時，電子路徑可繼續。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "完整膜可保留 H⁺ 梯度。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "漏膜使梯度難以維持。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "電子傳遞與 ATP 合成需要有效連結。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "有氧又漏膜，ATP 能保證和完整膜一樣嗎？",
+        "choices": [
+          "能，氧足夠就好",
+          "能，電子直接就是 ATP",
+          "不能，還需要維持梯度"
+        ],
+        "answer": 2,
+        "explanation": "需有效保留梯度並經 ATP 合成酶回流。"
+      },
+      "duration": 12,
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "有氧、完整膜",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "有氧又漏膜，ATP 能保證和完整膜一樣嗎？",
+            "choices": [
+              "能，氧足夠就好",
+              "能，電子直接就是 ATP",
+              "不能，還需要維持梯度"
+            ],
+            "answer": 2,
+            "explanation": "需有效保留梯度並經 ATP 合成酶回流。"
+          }
+        },
+        {
+          "condition": "沒有氧（待梯度消散）",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "有氧又漏膜，ATP 能保證和完整膜一樣嗎？",
+            "choices": [
+              "能，氧足夠就好",
+              "能，電子直接就是 ATP",
+              "不能，還需要維持梯度"
+            ],
+            "answer": 2,
+            "explanation": "需有效保留梯度並經 ATP 合成酶回流。"
+          }
+        },
+        {
+          "condition": "有氧、H⁺ 漏膜",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "有氧又漏膜，ATP 能保證和完整膜一樣嗎？",
+            "choices": [
+              "能，氧足夠就好",
+              "能，電子直接就是 ATP",
+              "不能，還需要維持梯度"
+            ],
+            "answer": 2,
+            "explanation": "需有效保留梯度並經 ATP 合成酶回流。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "一個 H⁺ 與電子路徑",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}
