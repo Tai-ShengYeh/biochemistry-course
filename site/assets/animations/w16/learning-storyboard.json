@@ -1,0 +1,467 @@
+{
+  "title": "C16 為什麼只切七圈？",
+  "hero": "剩餘脂肪酸碳鏈",
+  "gloss": "β-oxidation · Oxy hóa β",
+  "model": "beta",
+  "scope": "限定偶數碳、飽和、直鏈脂肪酸的 β-氧化；不含活化成本、運輸與完整 ATP 盤點。最後 4C 一圈得到兩份 2C 乙醯 CoA。",
+  "predict": {
+    "question": "C16 完成 β-氧化，需要幾圈？",
+    "choices": [
+      "8 圈",
+      "6 圈",
+      "7 圈"
+    ],
+    "answer": 2,
+    "explanation": "最後剩 4C，一圈直接得到兩個 2C。"
+  },
+  "compare": {
+    "title": "每次少 2C，最後特別",
+    "task": "比較一般一圈與最後一圈。",
+    "cues": [
+      "C16 先逐圈移出 2C。",
+      "剩下的鏈每圈縮短 2C。",
+      "剩 4C 時，最後一圈得到兩個 2C。",
+      "因此圈數比乙醯 CoA 數少一。"
+    ],
+    "check": {
+      "question": "最後 4C，一圈產生幾份乙醯 CoA？",
+      "choices": [
+        "一份",
+        "兩份",
+        "四份"
+      ],
+      "answer": 1,
+      "explanation": "4C 分成兩份 2C，鏈已全部處理。"
+    }
+  },
+  "mechanism": {
+    "title": "數碳，不數顏色",
+    "task": "看剩餘碳與乙醯 CoA 是否守恆。",
+    "cues": [
+      "開始有 n 個碳。",
+      "每份乙醯 CoA 有 2C。",
+      "剩餘碳加產物碳仍等於起始碳。",
+      "最後全部成為 n/2 份乙醯 CoA。"
+    ],
+    "check": {
+      "question": "C16 最後有幾份乙醯 CoA？",
+      "choices": [
+        "8 份",
+        "7 份",
+        "16 份"
+      ],
+      "answer": 0,
+      "explanation": "16/2 = 8。"
+    }
+  },
+  "experiment": {
+    "title": "換碳鏈長度",
+    "task": "改 C8、C16 或 C18，比較公式。",
+    "cues": [
+      "限定偶數碳飽和鏈。",
+      "乙醯 CoA 份數 = n/2。",
+      "β-氧化圈數 = n/2−1。",
+      "這不是所有脂肪酸都能直接套的公式。"
+    ],
+    "check": {
+      "question": "這個公式的適用範圍？",
+      "choices": [
+        "所有分子",
+        "偶數碳、飽和、直鏈脂肪酸",
+        "所有蛋白質"
+      ],
+      "answer": 1,
+      "explanation": "奇數碳與不飽和脂肪酸有額外情況。"
+    }
+  },
+  "boundary": {
+    "title": "自己按，一圈一圈切",
+    "task": "每次按一圈，數剩餘鏈。",
+    "cues": [
+      "先看起始碳鏈長度。",
+      "按一次，做一圈。",
+      "最後 4C 產生兩份乙醯 CoA。",
+      "鏈用完後不能再多切一圈。"
+    ],
+    "check": {
+      "question": "為什麼不能再多按一圈？",
+      "choices": [
+        "ATP 一定無限",
+        "脂肪酸變成蛋白質",
+        "已沒有剩餘碳鏈"
+      ],
+      "answer": 2,
+      "explanation": "停止條件由剩餘物質決定。"
+    }
+  },
+  "cases": [
+    {
+      "label": "C8 飽和鏈",
+      "n": 8
+    },
+    {
+      "label": "C16 飽和鏈",
+      "n": 16
+    },
+    {
+      "label": "C18 飽和鏈",
+      "n": 18
+    }
+  ],
+  "stepper": true,
+  "transfer": [
+    {
+      "question": "C18 的圈數與乙醯 CoA 份數？",
+      "choices": [
+        "8 圈，9 份",
+        "9 圈，8 份",
+        "18 圈，18 份"
+      ],
+      "answer": 0,
+      "explanation": "18/2−1 = 8 圈；18/2 = 9 份。"
+    },
+    {
+      "question": "蛋白質當燃料，除了碳還要處理什麼？",
+      "choices": [
+        "只看鏈長",
+        "氮，例如用尿素循環處理",
+        "完全沒有其他問題"
+      ],
+      "answer": 1,
+      "explanation": "胺基酸含氮，不能只用脂肪酸公式。"
+    }
+  ],
+  "week": 16,
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK554523/",
+    "https://openstax.org/books/biology-2e/pages/7-6-connections-of-carbohydrate-protein-and-lipid-metabolic-pathways"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "C16 為什麼只切七圈？",
+      "task": "C16 完成 β-氧化，需要幾圈？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "C16 完成 β-氧化，需要幾圈？",
+        "choices": [
+          "8 圈",
+          "6 圈",
+          "7 圈"
+        ],
+        "answer": 2,
+        "explanation": "最後剩 4C，一圈直接得到兩個 2C。"
+      },
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "每次少 2C，最後特別",
+      "task": "比較一般一圈與最後一圈。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "C16 先逐圈移出 2C。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "剩下的鏈每圈縮短 2C。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "剩 4C 時，最後一圈得到兩個 2C。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "因此圈數比乙醯 CoA 數少一。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "最後 4C，一圈產生幾份乙醯 CoA？",
+        "choices": [
+          "一份",
+          "兩份",
+          "四份"
+        ],
+        "answer": 1,
+        "explanation": "4C 分成兩份 2C，鏈已全部處理。"
+      },
+      "duration": 12,
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "數碳，不數顏色",
+      "task": "看剩餘碳與乙醯 CoA 是否守恆。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "開始有 n 個碳。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "每份乙醯 CoA 有 2C。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "剩餘碳加產物碳仍等於起始碳。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "最後全部成為 n/2 份乙醯 CoA。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "C16 最後有幾份乙醯 CoA？",
+        "choices": [
+          "8 份",
+          "7 份",
+          "16 份"
+        ],
+        "answer": 0,
+        "explanation": "16/2 = 8。"
+      },
+      "duration": 12,
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "換碳鏈長度",
+      "task": "改 C8、C16 或 C18，比較公式。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "限定偶數碳飽和鏈。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "乙醯 CoA 份數 = n/2。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "β-氧化圈數 = n/2−1。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "這不是所有脂肪酸都能直接套的公式。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "這個公式的適用範圍？",
+        "choices": [
+          "所有分子",
+          "偶數碳、飽和、直鏈脂肪酸",
+          "所有蛋白質"
+        ],
+        "answer": 1,
+        "explanation": "奇數碳與不飽和脂肪酸有額外情況。"
+      },
+      "duration": 12,
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "C8 飽和鏈",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "這個公式的適用範圍？",
+            "choices": [
+              "所有分子",
+              "偶數碳、飽和、直鏈脂肪酸",
+              "所有蛋白質"
+            ],
+            "answer": 1,
+            "explanation": "奇數碳與不飽和脂肪酸有額外情況。"
+          }
+        },
+        {
+          "condition": "C16 飽和鏈",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "這個公式的適用範圍？",
+            "choices": [
+              "所有分子",
+              "偶數碳、飽和、直鏈脂肪酸",
+              "所有蛋白質"
+            ],
+            "answer": 1,
+            "explanation": "奇數碳與不飽和脂肪酸有額外情況。"
+          }
+        },
+        {
+          "condition": "C18 飽和鏈",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "這個公式的適用範圍？",
+            "choices": [
+              "所有分子",
+              "偶數碳、飽和、直鏈脂肪酸",
+              "所有蛋白質"
+            ],
+            "answer": 1,
+            "explanation": "奇數碳與不飽和脂肪酸有額外情況。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "自己按，一圈一圈切",
+      "task": "每次按一圈，數剩餘鏈。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先看起始碳鏈長度。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "按一次，做一圈。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "最後 4C 產生兩份乙醯 CoA。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "鏈用完後不能再多切一圈。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "為什麼不能再多按一圈？",
+        "choices": [
+          "ATP 一定無限",
+          "脂肪酸變成蛋白質",
+          "已沒有剩餘碳鏈"
+        ],
+        "answer": 2,
+        "explanation": "停止條件由剩餘物質決定。"
+      },
+      "duration": 6,
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0,
+        3,
+        6
+      ],
+      "condition_checks": [
+        {
+          "condition": "C8 飽和鏈",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "為什麼不能再多按一圈？",
+            "choices": [
+              "ATP 一定無限",
+              "脂肪酸變成蛋白質",
+              "已沒有剩餘碳鏈"
+            ],
+            "answer": 2,
+            "explanation": "停止條件由剩餘物質決定。"
+          }
+        },
+        {
+          "condition": "C16 飽和鏈",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "為什麼不能再多按一圈？",
+            "choices": [
+              "ATP 一定無限",
+              "脂肪酸變成蛋白質",
+              "已沒有剩餘碳鏈"
+            ],
+            "answer": 2,
+            "explanation": "停止條件由剩餘物質決定。"
+          }
+        },
+        {
+          "condition": "C18 飽和鏈",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "為什麼不能再多按一圈？",
+            "choices": [
+              "ATP 一定無限",
+              "脂肪酸變成蛋白質",
+              "已沒有剩餘碳鏈"
+            ],
+            "answer": 2,
+            "explanation": "停止條件由剩餘物質決定。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "剩餘脂肪酸碳鏈",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

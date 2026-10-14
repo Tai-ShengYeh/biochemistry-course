@@ -1,23 +1,12 @@
-# 每週生物化學動畫驗收
+# 動畫驗收記錄
 
-涵蓋 A2 班 W01–W08、W10–W17。2026-10-14 起，W02 改成六幕互動實驗並移除舊影片；保留其餘 15 支概念影片。W09/W18 為考試週，不新增動畫。台灣班尚未建置，不另造課程。W02 的新版設計与驗證見 `docs/w02-buffer-design.md`。
+此資料夾的 MP4、字幕、播放及 contact sheet 記錄來自原影片製作批次，屬歷史證據。2026-10-14 W02 改成互動實驗；2026-10-15 其他 15 週也完成互動改造，舊影片已移除。舊紀錄不代表現行網站或學生學習成效；其中引用的原資產可在 Git 歷史 `e2728e0` 回溯。
 
-- 960×540、12 fps、H.264/AAC；每支約 30–41 秒。
-- 繁體中文旁白與燒錄字幕，另附逐句完整 SRT/WebVTT；術語含中文、英文、越南文。
-- 同一週動畫共用於簡報和互動課程；新增 animations.html 總覽。
-- 15 支保留影片的原驗收結果：media-verification.json。
-- 30 次保留影片的桌機／手機最終 MP4 播放與結尾跳轉原驗收結果，SHA-256 記錄於 final-media-browser-verification.json。
-- 60 次保留影片的簡報／互動課程 × 桌機／手機原驗收結果：browser-verification.json；含字幕載入、版面、簡報鍵盤隔離和離頁暫停。
-- review-group-1.jpg 至 review-group-4.jpg 為原製作批次的歷史視覺摘要，不代表 W02 現行版本。新版 W02 另做互動驗證。
+現行介面、逐週判斷及科學界線見 `docs/learning-animation-audit.md`。W02 的 16 項控制、同步及響應檢查保留；新 15 週經桌面／手機共 30 次完整六幕流程、73 項模型性質與獨立算術檢查、15 個 Reveal 手機入口驗證。條件變更、字幕與圖像暫停、錯誤重試、反應中重播／重設皆通過。本機詳細結果與截圖由本次 Codex 輸出包提供，不把歷史影片驗收當成新版的驗收。
 
-重新驗收：
+目前未測 Safari／iOS 或真人課堂學習效果。新建置指令：
 
 ```sh
-python tools/verify_weekly_animations.py
-python tools/browser_final_media_smoke.py
-python tools/browser_verify_animations.py
+node tools/build_learning_labs.cjs
+python -X utf8 tools/embed_weekly_animations.py
 ```
-
-瀏覽器檢查需 Playwright Chromium 與系統函式庫。無 sudo 時可透過 LD_LIBRARY_PATH 使用使用者目錄內的相依函式庫。長批次若因工具時限中斷，未變更影片與 HTML 的前提下，可使用 BIO_VERIFY_RESUME=1 接續 browser_verify_animations.py；一般執行預設從頭驗收。
-
-旁白重製目前需要 Windows Hanhan TTS；Pillow/fontTools 和 ffmpeg 用於繪圖與編碼。所有動畫為概念示意，不是精確分子模擬。

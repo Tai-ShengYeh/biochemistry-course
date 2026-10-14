@@ -1,0 +1,478 @@
+{
+  "title": "Km 在哪一個軸？",
+  "hero": "半個 Vmax 的交點",
+  "gloss": "Substrate · Cơ chất",
+  "model": "kinetics",
+  "scope": "米氏模型 v=Vmax[S]/(Km+[S])，全部數值為任意模型單位。Km 不普遍等於結合強弱。非競爭情境限純非競爭。",
+  "predict": {
+    "question": "Km 是哪一種量？",
+    "choices": [
+      "反應速率",
+      "受質濃度",
+      "酵素顏色"
+    ],
+    "answer": 1,
+    "explanation": "在 v=Vmax/2 時，讀 X 軸的受質濃度。"
+  },
+  "compare": {
+    "title": "先找一半，再讀 X 軸",
+    "task": "跟著半個 Vmax 的水平線。",
+    "cues": [
+      "先看縱軸的反應速率。",
+      "找 Vmax 的一半。",
+      "水平移到曲線，再向下。",
+      "X 軸的位置就是模型的 Km。"
+    ],
+    "check": {
+      "question": "Km 應讀哪個軸？",
+      "choices": [
+        "X 軸：受質濃度",
+        "Y 軸：速率",
+        "時間軸"
+      ],
+      "answer": 0,
+      "explanation": "Km 是半最大速率時的受質濃度。"
+    }
+  },
+  "mechanism": {
+    "title": "受質多，速率接近上限",
+    "task": "追蹤曲線上的橘色點。",
+    "cues": [
+      "受質很少，速率也較小。",
+      "增加受質，更多酵素可結合受質。",
+      "位點漸漸接近飽和。",
+      "速率趨近 Vmax，不會無限增加。"
+    ],
+    "check": {
+      "question": "增加受質，速率會無限增加嗎？",
+      "choices": [
+        "會，永遠線性",
+        "會，Km 是時間",
+        "不會，趨近上限"
+      ],
+      "answer": 2,
+      "explanation": "本模型的酵素量固定，有最大速率。"
+    }
+  },
+  "experiment": {
+    "title": "選抑制方式，再改受質",
+    "task": "比較 Km 與 Vmax，不只看顏色。",
+    "cues": [
+      "先選抑制方式。",
+      "競爭抑制：表觀 Km 增加。",
+      "純非競爭：Vmax 降低，Km 不變。",
+      "滑桿會改變受質濃度與實際模型速率。"
+    ],
+    "check": {
+      "question": "哪種比較能用高受質減少抑制影響？",
+      "choices": [
+        "兩種一定都可以",
+        "競爭抑制",
+        "純非競爭抑制"
+      ],
+      "answer": 1,
+      "explanation": "競爭抑制可在高受質時趨近原 Vmax。"
+    }
+  },
+  "boundary": {
+    "title": "非競爭也分不同情況",
+    "task": "限定純非競爭，再讀圖。",
+    "cues": [
+      "純非競爭的曲線上限較低。",
+      "它的一半上限也較低。",
+      "半上限對應的 Km 不變。",
+      "混合型抑制不能套用同一結論。"
+    ],
+    "check": {
+      "question": "純非競爭的模型改變哪一項？",
+      "choices": [
+        "Vmax 降低",
+        "Km 一定增加",
+        "兩者都增加"
+      ],
+      "answer": 0,
+      "explanation": "此處限定純非競爭；混合型可能改變 Km。"
+    }
+  },
+  "cases": [
+    {
+      "label": "正常",
+      "km": 2,
+      "vmax": 10
+    },
+    {
+      "label": "競爭抑制",
+      "km": 5,
+      "vmax": 10
+    },
+    {
+      "label": "純非競爭抑制",
+      "km": 2,
+      "vmax": 5
+    }
+  ],
+  "slider": {
+    "label": "[S]（模型單位）",
+    "min": 0,
+    "max": 20,
+    "step": 1,
+    "value": 5,
+    "key": "substrate"
+  },
+  "transfer": [
+    {
+      "question": "模型中 Vmax=10、Km=2、[S]=2，速率？",
+      "choices": [
+        "2",
+        "10",
+        "5"
+      ],
+      "answer": 2,
+      "explanation": "10×2/(2+2)=5，是 Vmax 的一半。"
+    },
+    {
+      "question": "Km 就是反應有多快，對嗎？",
+      "choices": [
+        "對，是速率單位",
+        "不對，它是濃度",
+        "對，是時間單位"
+      ],
+      "answer": 1,
+      "explanation": "先分清楚座標軸。"
+    }
+  ],
+  "week": 7,
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK92001/"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "Km 在哪一個軸？",
+      "task": "Km 是哪一種量？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "Km 是哪一種量？",
+        "choices": [
+          "反應速率",
+          "受質濃度",
+          "酵素顏色"
+        ],
+        "answer": 1,
+        "explanation": "在 v=Vmax/2 時，讀 X 軸的受質濃度。"
+      },
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "先找一半，再讀 X 軸",
+      "task": "跟著半個 Vmax 的水平線。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先看縱軸的反應速率。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "找 Vmax 的一半。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "水平移到曲線，再向下。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "X 軸的位置就是模型的 Km。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "Km 應讀哪個軸？",
+        "choices": [
+          "X 軸：受質濃度",
+          "Y 軸：速率",
+          "時間軸"
+        ],
+        "answer": 0,
+        "explanation": "Km 是半最大速率時的受質濃度。"
+      },
+      "duration": 12,
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "受質多，速率接近上限",
+      "task": "追蹤曲線上的橘色點。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "受質很少，速率也較小。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "增加受質，更多酵素可結合受質。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "位點漸漸接近飽和。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "速率趨近 Vmax，不會無限增加。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "增加受質，速率會無限增加嗎？",
+        "choices": [
+          "會，永遠線性",
+          "會，Km 是時間",
+          "不會，趨近上限"
+        ],
+        "answer": 2,
+        "explanation": "本模型的酵素量固定，有最大速率。"
+      },
+      "duration": 12,
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "選抑制方式，再改受質",
+      "task": "比較 Km 與 Vmax，不只看顏色。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選抑制方式。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "競爭抑制：表觀 Km 增加。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "純非競爭：Vmax 降低，Km 不變。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "滑桿會改變受質濃度與實際模型速率。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "哪種比較能用高受質減少抑制影響？",
+        "choices": [
+          "兩種一定都可以",
+          "競爭抑制",
+          "純非競爭抑制"
+        ],
+        "answer": 1,
+        "explanation": "競爭抑制可在高受質時趨近原 Vmax。"
+      },
+      "duration": 12,
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "正常",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此模型 [S]=Km 時，v 是多少？",
+            "choices": [
+              "10",
+              "5",
+              "0"
+            ],
+            "answer": 1,
+            "explanation": "依公式，v = Vmax/2 = 5（模型單位）。"
+          }
+        },
+        {
+          "condition": "競爭抑制",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此模型 [S]=Km 時，v 是多少？",
+            "choices": [
+              "10",
+              "5",
+              "0"
+            ],
+            "answer": 1,
+            "explanation": "依公式，v = Vmax/2 = 5（模型單位）。"
+          }
+        },
+        {
+          "condition": "純非競爭抑制",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此模型 [S]=Km 時，v 是多少？",
+            "choices": [
+              "5",
+              "2.5",
+              "0"
+            ],
+            "answer": 1,
+            "explanation": "依公式，v = Vmax/2 = 2.5（模型單位）。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "非競爭也分不同情況",
+      "task": "限定純非競爭，再讀圖。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "純非競爭的曲線上限較低。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "它的一半上限也較低。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "半上限對應的 Km 不變。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "混合型抑制不能套用同一結論。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "純非競爭的模型改變哪一項？",
+        "choices": [
+          "Vmax 降低",
+          "Km 一定增加",
+          "兩者都增加"
+        ],
+        "answer": 0,
+        "explanation": "此處限定純非競爭；混合型可能改變 Km。"
+      },
+      "duration": 12,
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "正常",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此模型 [S] 越來越高，v 趨近？",
+            "choices": [
+              "10",
+              "20",
+              "無限大"
+            ],
+            "answer": 0,
+            "explanation": "上限是所選模型的 Vmax。"
+          }
+        },
+        {
+          "condition": "競爭抑制",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此模型 [S] 越來越高，v 趨近？",
+            "choices": [
+              "10",
+              "20",
+              "無限大"
+            ],
+            "answer": 0,
+            "explanation": "上限是所選模型的 Vmax。"
+          }
+        },
+        {
+          "condition": "純非競爭抑制",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此模型 [S] 越來越高，v 趨近？",
+            "choices": [
+              "5",
+              "10",
+              "無限大"
+            ],
+            "answer": 0,
+            "explanation": "上限是所選模型的 Vmax。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "半個 Vmax 的交點",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

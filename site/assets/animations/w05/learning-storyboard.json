@@ -1,0 +1,439 @@
+{
+  "title": "血紅素何時放氧？",
+  "hero": "O₂ 與四個結合位置",
+  "gloss": "Oxygen · Oxy",
+  "model": "oxygen",
+  "scope": "曲線以 Hill 形式作定性示意，軸與參數不代表人體實測值。Hb 有四個血基質位點；Mb 一個。低 pH 有利 Hb 放氧。",
+  "predict": {
+    "question": "在氧比較少的組織，Hb 應該？",
+    "choices": [
+      "繼續抓滿所有氧",
+      "放出部分氧",
+      "變成水"
+    ],
+    "answer": 1,
+    "explanation": "Hb 的角色包含把氧送到組織。"
+  },
+  "compare": {
+    "title": "存氧與運氧不同",
+    "task": "比較 Mb 與 Hb 曲線形狀。",
+    "cues": [
+      "Mb 只有一個結合位置。",
+      "Hb 有四個結合位置。",
+      "Hb 結合氧後，其他位置較容易結合。",
+      "Hb 的示意曲線呈 S 型。"
+    ],
+    "check": {
+      "question": "哪個有四個氧結合位置？",
+      "choices": [
+        "血紅素 Hb",
+        "肌紅素 Mb",
+        "一個 O₂"
+      ],
+      "answer": 0,
+      "explanation": "每個 Hb 有四個血基質位點。"
+    }
+  },
+  "mechanism": {
+    "title": "第一個氧帶來改變",
+    "task": "追蹤第一個 O₂ 與其他位點。",
+    "cues": [
+      "第一個 O₂ 靠近 Hb。",
+      "結合後，蛋白質形狀改變。",
+      "其他位置較容易結合 O₂。",
+      "這叫協同性，不是四個氧一起變成一個。"
+    ],
+    "check": {
+      "question": "協同性表示什麼？",
+      "choices": [
+        "氧氣消失",
+        "Mb 長出四條鏈",
+        "結合後其他位點較容易抓氧"
+      ],
+      "answer": 2,
+      "explanation": "位點間有互相影響。"
+    }
+  },
+  "experiment": {
+    "title": "改變氧氣量",
+    "task": "移動滑桿，看 Hb 的結合比例。",
+    "cues": [
+      "先設定氧氣多或少。",
+      "氧多時，結合比例較高。",
+      "氧少時，部分氧釋出。",
+      "氧氣量改變會改變結合狀態。"
+    ],
+    "check": {
+      "question": "氧氣量下降時，Hb 結合比例通常？",
+      "choices": [
+        "增加到永遠全滿",
+        "降低",
+        "完全不受影響"
+      ],
+      "answer": 1,
+      "explanation": "這個模型顯示低氧下的部分釋氧。"
+    }
+  },
+  "boundary": {
+    "title": "pH 下降，再比較",
+    "task": "保持同樣氧氣量，只改 pH 條件。",
+    "cues": [
+      "先固定氧氣量。",
+      "低 pH 條件下，Hb 曲線向右移。",
+      "相同氧氣量時，結合比例較低。",
+      "低 pH 有利把氧送給組織。"
+    ],
+    "check": {
+      "question": "低 pH 對 Hb 的效果？",
+      "choices": [
+        "較容易放氧",
+        "保證抓氧更多",
+        "切斷所有胜肽鍵"
+      ],
+      "answer": 0,
+      "explanation": "這是波耳效應的定性比較。"
+    }
+  },
+  "cases": [
+    {
+      "label": "一般 pH",
+      "ph": "normal"
+    },
+    {
+      "label": "較低 pH",
+      "ph": "low"
+    }
+  ],
+  "slider": {
+    "label": "氧氣量（示意）",
+    "min": 10,
+    "max": 90,
+    "step": 10,
+    "value": 50,
+    "key": "oxygen"
+  },
+  "transfer": [
+    {
+      "question": "組織氧少、pH 較低時，Hb 較有利？",
+      "choices": [
+        "一直抓滿氧",
+        "放氧給組織",
+        "變成 Mb"
+      ],
+      "answer": 1,
+      "explanation": "氧氣量與 pH 都影響 Hb 釋氧。"
+    },
+    {
+      "question": "Mb 有幾個血基質位點？",
+      "choices": [
+        "四個",
+        "兩個",
+        "一個"
+      ],
+      "answer": 2,
+      "explanation": "Mb 常用來存氧，只有一個血基質位點。"
+    }
+  ],
+  "week": 5,
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK54103/"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "血紅素何時放氧？",
+      "task": "在氧比較少的組織，Hb 應該？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "在氧比較少的組織，Hb 應該？",
+        "choices": [
+          "繼續抓滿所有氧",
+          "放出部分氧",
+          "變成水"
+        ],
+        "answer": 1,
+        "explanation": "Hb 的角色包含把氧送到組織。"
+      },
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "存氧與運氧不同",
+      "task": "比較 Mb 與 Hb 曲線形狀。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "Mb 只有一個結合位置。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "Hb 有四個結合位置。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "Hb 結合氧後，其他位置較容易結合。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "Hb 的示意曲線呈 S 型。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "哪個有四個氧結合位置？",
+        "choices": [
+          "血紅素 Hb",
+          "肌紅素 Mb",
+          "一個 O₂"
+        ],
+        "answer": 0,
+        "explanation": "每個 Hb 有四個血基質位點。"
+      },
+      "duration": 12,
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "第一個氧帶來改變",
+      "task": "追蹤第一個 O₂ 與其他位點。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "第一個 O₂ 靠近 Hb。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "結合後，蛋白質形狀改變。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "其他位置較容易結合 O₂。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "這叫協同性，不是四個氧一起變成一個。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "協同性表示什麼？",
+        "choices": [
+          "氧氣消失",
+          "Mb 長出四條鏈",
+          "結合後其他位點較容易抓氧"
+        ],
+        "answer": 2,
+        "explanation": "位點間有互相影響。"
+      },
+      "duration": 12,
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "改變氧氣量",
+      "task": "移動滑桿，看 Hb 的結合比例。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先設定氧氣多或少。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "氧多時，結合比例較高。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "氧少時，部分氧釋出。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "氧氣量改變會改變結合狀態。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "氧氣量下降時，Hb 結合比例通常？",
+        "choices": [
+          "增加到永遠全滿",
+          "降低",
+          "完全不受影響"
+        ],
+        "answer": 1,
+        "explanation": "這個模型顯示低氧下的部分釋氧。"
+      },
+      "duration": 12,
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "一般 pH",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "氧氣量下降時，Hb 結合比例通常？",
+            "choices": [
+              "增加到永遠全滿",
+              "降低",
+              "完全不受影響"
+            ],
+            "answer": 1,
+            "explanation": "這個模型顯示低氧下的部分釋氧。"
+          }
+        },
+        {
+          "condition": "較低 pH",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "氧氣量下降時，Hb 結合比例通常？",
+            "choices": [
+              "增加到永遠全滿",
+              "降低",
+              "完全不受影響"
+            ],
+            "answer": 1,
+            "explanation": "這個模型顯示低氧下的部分釋氧。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "pH 下降，再比較",
+      "task": "保持同樣氧氣量，只改 pH 條件。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先固定氧氣量。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "低 pH 條件下，Hb 曲線向右移。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "相同氧氣量時，結合比例較低。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "低 pH 有利把氧送給組織。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "低 pH 對 Hb 的效果？",
+        "choices": [
+          "較容易放氧",
+          "保證抓氧更多",
+          "切斷所有胜肽鍵"
+        ],
+        "answer": 0,
+        "explanation": "這是波耳效應的定性比較。"
+      },
+      "duration": 12,
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "一般 pH",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "低 pH 對 Hb 的效果？",
+            "choices": [
+              "較容易放氧",
+              "保證抓氧更多",
+              "切斷所有胜肽鍵"
+            ],
+            "answer": 0,
+            "explanation": "這是波耳效應的定性比較。"
+          }
+        },
+        {
+          "condition": "較低 pH",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "低 pH 對 Hb 的效果？",
+            "choices": [
+              "較容易放氧",
+              "保證抓氧更多",
+              "切斷所有胜肽鍵"
+            ],
+            "answer": 0,
+            "explanation": "這是波耳效應的定性比較。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "O₂ 與四個結合位置",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

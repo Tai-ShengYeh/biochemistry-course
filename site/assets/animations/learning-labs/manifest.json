@@ -1,0 +1,98 @@
+{
+  "1": {
+    "week": 1,
+    "title": "飯怎麼幫細胞做事？",
+    "hero": "葡萄糖與能量標記",
+    "simulation": "w01/simulation.html"
+  },
+  "2": {
+    "week": 2,
+    "title": "緩衝液實驗室",
+    "hero": "H⁺",
+    "simulation": "w02/simulation.html"
+  },
+  "3": {
+    "week": 3,
+    "title": "胺基酸怎麼接成鏈？",
+    "hero": "新形成的胜肽鍵",
+    "simulation": "w03/simulation.html"
+  },
+  "4": {
+    "week": 4,
+    "title": "變性，鏈斷了嗎？",
+    "hero": "同一條胺基酸鏈",
+    "simulation": "w04/simulation.html"
+  },
+  "5": {
+    "week": 5,
+    "title": "血紅素何時放氧？",
+    "hero": "O₂ 與四個結合位置",
+    "simulation": "w05/simulation.html"
+  },
+  "6": {
+    "week": 6,
+    "title": "酵素改了哪一座山？",
+    "hero": "反應能量路徑",
+    "simulation": "w06/simulation.html"
+  },
+  "7": {
+    "week": 7,
+    "title": "Km 在哪一個軸？",
+    "hero": "半個 Vmax 的交點",
+    "simulation": "w07/simulation.html"
+  },
+  "8": {
+    "week": 8,
+    "title": "同樣葡萄糖，為什麼消化不同？",
+    "hero": "α／β 連接位置",
+    "simulation": "w08/simulation.html"
+  },
+  "10": {
+    "week": 10,
+    "title": "過膜，順著走還是逆著走？",
+    "hero": "一個運輸中的粒子",
+    "simulation": "w10/simulation.html"
+  },
+  "11": {
+    "week": 11,
+    "title": "寫互補股，方向對了嗎？",
+    "hero": "正在配對的一個鹼基",
+    "simulation": "w11/simulation.html"
+  },
+  "12": {
+    "week": 12,
+    "title": "有 ATP，反應就一定能走嗎？",
+    "hero": "兩個反應的 ΔG 收支",
+    "simulation": "w12/simulation.html"
+  },
+  "13": {
+    "week": 13,
+    "title": "糖解的 ATP 帳算對了嗎？",
+    "hero": "ATP 收支與一個 6C",
+    "simulation": "w13/simulation.html"
+  },
+  "14": {
+    "week": 14,
+    "title": "為什麼叫檸檬酸循環？",
+    "hero": "再生的草醯乙酸 4C",
+    "simulation": "w14/simulation.html"
+  },
+  "15": {
+    "week": 15,
+    "title": "H⁺ 流回來，怎麼做 ATP？",
+    "hero": "一個 H⁺ 與電子路徑",
+    "simulation": "w15/simulation.html"
+  },
+  "16": {
+    "week": 16,
+    "title": "C16 為什麼只切七圈？",
+    "hero": "剩餘脂肪酸碳鏈",
+    "simulation": "w16/simulation.html"
+  },
+  "17": {
+    "week": 17,
+    "title": "空腹時，誰把燃料送給腦？",
+    "hero": "燃料從來源到使用器官",
+    "simulation": "w17/simulation.html"
+  }
+}

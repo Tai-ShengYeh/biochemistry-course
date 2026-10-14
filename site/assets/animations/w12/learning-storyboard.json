@@ -1,0 +1,473 @@
+{
+  "title": "有 ATP，反應就一定能走嗎？",
+  "hero": "兩個反應的 ΔG 收支",
+  "gloss": "Coupling · Ghép cặp",
+  "model": "coupling",
+  "scope": "所有 ΔG 數字為假設 kJ/mol，非細胞內 ATP 實測值。須真正耦合且總 ΔG 有利；只把兩反應放一起不足以保證耦合。",
+  "predict": {
+    "question": "兩反應只是放在一起，就算耦合嗎？",
+    "choices": [
+      "一定算",
+      "一定沒有能量",
+      "不一定，要有連動"
+    ],
+    "answer": 2,
+    "explanation": "需要連動的反應機制。"
+  },
+  "compare": {
+    "title": "分開與連動不同",
+    "task": "追蹤兩個反應中間的連接。",
+    "cues": [
+      "左邊的反應需要能量。",
+      "ATP 水解可提供有利反應。",
+      "真正連動時，才比較整體收支。",
+      "不是把 ATP 標籤放在旁邊就完成。"
+    ],
+    "check": {
+      "question": "判斷耦合是否有利，要看？",
+      "choices": [
+        "只看 ATP 字樣",
+        "是否連動與總 ΔG",
+        "只看箭頭長度"
+      ],
+      "answer": 1,
+      "explanation": "耦合機制與總自由能變化都要考慮。"
+    }
+  },
+  "mechanism": {
+    "title": "把 ΔG 加起來",
+    "task": "看正值與負值如何合計。",
+    "cues": [
+      "假設吸能反應是 +20。",
+      "假設 ATP 水解提供 −30。",
+      "真正耦合後，總和是 −10。",
+      "總 ΔG < 0，表示這個方向有利。"
+    ],
+    "check": {
+      "question": "假設 +20 與 −30 真正耦合，總 ΔG？",
+      "choices": [
+        "−10",
+        "+50",
+        "+10"
+      ],
+      "answer": 0,
+      "explanation": "+20+(−30)=−10 kJ/mol，此為假設值。"
+    }
+  },
+  "experiment": {
+    "title": "改連動與收支",
+    "task": "看看總和正負會不會改變。",
+    "cues": [
+      "先選連動條件。",
+      "沒有連動，不把兩條反應當同一反應。",
+      "連動後，才讀總和。",
+      "若總 ΔG > 0，此方向仍不利。"
+    ],
+    "check": {
+      "question": "總 ΔG > 0 時，此方向在設定條件下？",
+      "choices": [
+        "一定很快",
+        "不需要能量",
+        "不利"
+      ],
+      "answer": 2,
+      "explanation": "這是熱力學方向，不是速度判斷。"
+    }
+  },
+  "boundary": {
+    "title": "方向有利，也可能很慢",
+    "task": "把「能走」與「快慢」分開。",
+    "cues": [
+      "總 ΔG 的正負說明方向。",
+      "活化能還會影響速度。",
+      "ΔG < 0 不等於立刻發生。",
+      "酵素與耦合回答不同問題。"
+    ],
+    "check": {
+      "question": "ΔG < 0 保證反應很快嗎？",
+      "choices": [
+        "保證很快",
+        "不保證，還有活化能",
+        "保證沒有酵素"
+      ],
+      "answer": 1,
+      "explanation": "方向與速度不同。"
+    }
+  },
+  "cases": [
+    {
+      "label": "沒有真正耦合",
+      "linked": false,
+      "release": -30,
+      "cost": 20
+    },
+    {
+      "label": "連動：−30 + 20",
+      "linked": true,
+      "release": -30,
+      "cost": 20
+    },
+    {
+      "label": "連動：−30 + 40",
+      "linked": true,
+      "release": -30,
+      "cost": 40
+    }
+  ],
+  "transfer": [
+    {
+      "question": "假設連動反應 −30 + 40，總 ΔG？",
+      "choices": [
+        "+10，此方向不利",
+        "−10，此方向有利",
+        "0，沒有能量"
+      ],
+      "answer": 0,
+      "explanation": "−30+40 = +10 kJ/mol。"
+    },
+    {
+      "question": "「斷一個鍵就放能」完整嗎？",
+      "choices": [
+        "完整，只看斷鍵",
+        "完整，不用看產物",
+        "不完整，要看整個反應"
+      ],
+      "answer": 2,
+      "explanation": "斷鍵需要能量；淨變化要包括新鍵與產物等。"
+    }
+  ],
+  "week": 12,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "有 ATP，反應就一定能走嗎？",
+      "task": "兩反應只是放在一起，就算耦合嗎？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "兩反應只是放在一起，就算耦合嗎？",
+        "choices": [
+          "一定算",
+          "一定沒有能量",
+          "不一定，要有連動"
+        ],
+        "answer": 2,
+        "explanation": "需要連動的反應機制。"
+      },
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "分開與連動不同",
+      "task": "追蹤兩個反應中間的連接。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "左邊的反應需要能量。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "ATP 水解可提供有利反應。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "真正連動時，才比較整體收支。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "不是把 ATP 標籤放在旁邊就完成。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "判斷耦合是否有利，要看？",
+        "choices": [
+          "只看 ATP 字樣",
+          "是否連動與總 ΔG",
+          "只看箭頭長度"
+        ],
+        "answer": 1,
+        "explanation": "耦合機制與總自由能變化都要考慮。"
+      },
+      "duration": 12,
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "把 ΔG 加起來",
+      "task": "看正值與負值如何合計。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "假設吸能反應是 +20。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "假設 ATP 水解提供 −30。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "真正耦合後，總和是 −10。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "總 ΔG < 0，表示這個方向有利。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "假設 +20 與 −30 真正耦合，總 ΔG？",
+        "choices": [
+          "−10",
+          "+50",
+          "+10"
+        ],
+        "answer": 0,
+        "explanation": "+20+(−30)=−10 kJ/mol，此為假設值。"
+      },
+      "duration": 12,
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "改連動與收支",
+      "task": "看看總和正負會不會改變。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "先選連動條件。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "沒有連動，不把兩條反應當同一反應。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "連動後，才讀總和。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "若總 ΔG > 0，此方向仍不利。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "總 ΔG > 0 時，此方向在設定條件下？",
+        "choices": [
+          "一定很快",
+          "不需要能量",
+          "不利"
+        ],
+        "answer": 2,
+        "explanation": "這是熱力學方向，不是速度判斷。"
+      },
+      "duration": 12,
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "沒有真正耦合",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "未真正連動，可以把兩條反應當一條嗎？",
+            "choices": [
+              "可以，只要旁邊有 ATP",
+              "可以，總和永遠是零",
+              "不能，需要連動機制"
+            ],
+            "answer": 2,
+            "explanation": "把反應放一起不等於耦合。"
+          }
+        },
+        {
+          "condition": "連動：−30 + 20",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此連動的總 ΔG=-10，方向如何？",
+            "choices": [
+              "不利",
+              "保證立刻發生",
+              "有利"
+            ],
+            "answer": 2,
+            "explanation": "總 ΔG 的正負判斷設定條件下的方向，不判斷速度。"
+          }
+        },
+        {
+          "condition": "連動：−30 + 40",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "此連動的總 ΔG=10，方向如何？",
+            "choices": [
+              "有利",
+              "保證立刻發生",
+              "不利"
+            ],
+            "answer": 2,
+            "explanation": "總 ΔG 的正負判斷設定條件下的方向，不判斷速度。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "方向有利，也可能很慢",
+      "task": "把「能走」與「快慢」分開。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "總 ΔG 的正負說明方向。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "活化能還會影響速度。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "ΔG < 0 不等於立刻發生。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "酵素與耦合回答不同問題。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "ΔG < 0 保證反應很快嗎？",
+        "choices": [
+          "保證很快",
+          "不保證，還有活化能",
+          "保證沒有酵素"
+        ],
+        "answer": 1,
+        "explanation": "方向與速度不同。"
+      },
+      "duration": 12,
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "沒有真正耦合",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "ΔG < 0 保證反應很快嗎？",
+            "choices": [
+              "保證很快",
+              "不保證，還有活化能",
+              "保證沒有酵素"
+            ],
+            "answer": 1,
+            "explanation": "方向與速度不同。"
+          }
+        },
+        {
+          "condition": "連動：−30 + 20",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "ΔG < 0 保證反應很快嗎？",
+            "choices": [
+              "保證很快",
+              "不保證，還有活化能",
+              "保證沒有酵素"
+            ],
+            "answer": 1,
+            "explanation": "方向與速度不同。"
+          }
+        },
+        {
+          "condition": "連動：−30 + 40",
+          "parameters": {
+            "case": 2
+          },
+          "question": {
+            "question": "ΔG < 0 保證反應很快嗎？",
+            "choices": [
+              "保證很快",
+              "不保證，還有活化能",
+              "保證沒有酵素"
+            ],
+            "answer": 1,
+            "explanation": "方向與速度不同。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "兩個反應的 ΔG 收支",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}

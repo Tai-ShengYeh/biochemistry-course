@@ -1,0 +1,431 @@
+{
+  "title": "為什麼叫檸檬酸循環？",
+  "hero": "再生的草醯乙酸 4C",
+  "gloss": "Cycle · Chu trình",
+  "model": "cycle",
+  "scope": "追蹤總碳數與產物數，不追蹤個別碳原子的來源；首圈 CO₂ 不必是新加入的乙醯碳。盤點只含 TCA，不含丙酮酸氧化。",
+  "predict": {
+    "question": "每圈最後要再生哪個分子？",
+    "choices": [
+      "草醯乙酸",
+      "全部 ATP",
+      "新葡萄糖"
+    ],
+    "answer": 0,
+    "explanation": "再生草醯乙酸，才能與下一個乙醯基結合。"
+  },
+  "compare": {
+    "title": "2C 加 4C，先得到 6C",
+    "task": "沿著碳數看一圈。",
+    "cues": [
+      "乙醯基有 2C，草醯乙酸有 4C。",
+      "結合後形成 6C。",
+      "經反應放出兩個 CO₂。",
+      "最後再生 4C 草醯乙酸。"
+    ],
+    "check": {
+      "question": "2C + 4C，總共先形成？",
+      "choices": [
+        "4C",
+        "6C",
+        "8C"
+      ],
+      "answer": 1,
+      "explanation": "先做總碳數守恆。"
+    }
+  },
+  "mechanism": {
+    "title": "回到 4C，不是回到起點時間",
+    "task": "追蹤草醯乙酸角色再生。",
+    "cues": [
+      "4C 草醯乙酸接受乙醯基。",
+      "中間反應逐步進行。",
+      "碳數回到 4C。",
+      "再生的草醯乙酸可開始下一圈。"
+    ],
+    "check": {
+      "question": "循環能繼續，因為？",
+      "choices": [
+        "時間倒流",
+        "乙醯基變成整個細胞",
+        "草醯乙酸再生"
+      ],
+      "answer": 2,
+      "explanation": "角色再生不代表每個碳原子都原封不動。"
+    }
+  },
+  "experiment": {
+    "title": "一圈與兩圈的盤點",
+    "task": "改乙醯 CoA 份數，讀產物。",
+    "cues": [
+      "每份乙醯 CoA 跑一圈。",
+      "一圈得到 3 NADH、1 FADH₂。",
+      "還有 1 GTP 與 2 CO₂。",
+      "兩份就把圈數與產物乘 2。"
+    ],
+    "check": {
+      "question": "2 份乙醯 CoA，TCA 得到多少 NADH？",
+      "choices": [
+        "6",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "每圈 3，兩圈 6。"
+    }
+  },
+  "boundary": {
+    "title": "別把前一步混進來",
+    "task": "只看檸檬酸循環帳。",
+    "cues": [
+      "一個葡萄糖通常提供兩份乙醯 CoA。",
+      "此表只盤點這兩圈 TCA。",
+      "丙酮酸氧化的產物另計。",
+      "先說清楚計算範圍。"
+    ],
+    "check": {
+      "question": "此表包含丙酮酸氧化嗎？",
+      "choices": [
+        "包含全部代謝",
+        "不包含，只看 TCA",
+        "包含糖解所有 ATP"
+      ],
+      "answer": 1,
+      "explanation": "課程的大盤點才把各段加總。"
+    }
+  },
+  "cases": [
+    {
+      "label": "1 份乙醯 CoA",
+      "n": 1
+    },
+    {
+      "label": "2 份乙醯 CoA",
+      "n": 2
+    }
+  ],
+  "transfer": [
+    {
+      "question": "2 圈 TCA 的 CO₂ 數量？",
+      "choices": [
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": 2,
+      "explanation": "每圈 2，兩圈 4。"
+    },
+    {
+      "question": "首圈 CO₂ 一定來自新加入的乙醯碳嗎？",
+      "choices": [
+        "不一定，此圖不追原子來源",
+        "一定，只看顏色",
+        "一定，OAA 完全不變"
+      ],
+      "answer": 0,
+      "explanation": "總碳數守恆與原子來源是不同問題。"
+    }
+  ],
+  "week": 14,
+  "sources": [
+    "https://openstax.org/books/biology-2e/pages/7-3-oxidation-of-pyruvate-and-the-citric-acid-cycle"
+  ],
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "為什麼叫檸檬酸循環？",
+      "task": "每圈最後要再生哪個分子？",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "先預測。下一幕用模擬比較。",
+          "event": "challenge-0"
+        }
+      ],
+      "check": {
+        "question": "每圈最後要再生哪個分子？",
+        "choices": [
+          "草醯乙酸",
+          "全部 ATP",
+          "新葡萄糖"
+        ],
+        "answer": 0,
+        "explanation": "再生草醯乙酸，才能與下一個乙醯基結合。"
+      },
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "2C 加 4C，先得到 6C",
+      "task": "沿著碳數看一圈。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "乙醯基有 2C，草醯乙酸有 4C。",
+          "event": "compare-0"
+        },
+        {
+          "at": 3,
+          "text": "結合後形成 6C。",
+          "event": "compare-1"
+        },
+        {
+          "at": 6,
+          "text": "經反應放出兩個 CO₂。",
+          "event": "compare-2"
+        },
+        {
+          "at": 9,
+          "text": "最後再生 4C 草醯乙酸。",
+          "event": "compare-3"
+        }
+      ],
+      "check": {
+        "question": "2C + 4C，總共先形成？",
+        "choices": [
+          "4C",
+          "6C",
+          "8C"
+        ],
+        "answer": 1,
+        "explanation": "先做總碳數守恆。"
+      },
+      "duration": 12,
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "mechanism",
+      "title": "回到 4C，不是回到起點時間",
+      "task": "追蹤草醯乙酸角色再生。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "4C 草醯乙酸接受乙醯基。",
+          "event": "mechanism-0"
+        },
+        {
+          "at": 3,
+          "text": "中間反應逐步進行。",
+          "event": "mechanism-1"
+        },
+        {
+          "at": 6,
+          "text": "碳數回到 4C。",
+          "event": "mechanism-2"
+        },
+        {
+          "at": 9,
+          "text": "再生的草醯乙酸可開始下一圈。",
+          "event": "mechanism-3"
+        }
+      ],
+      "check": {
+        "question": "循環能繼續，因為？",
+        "choices": [
+          "時間倒流",
+          "乙醯基變成整個細胞",
+          "草醯乙酸再生"
+        ],
+        "answer": 2,
+        "explanation": "角色再生不代表每個碳原子都原封不動。"
+      },
+      "duration": 12,
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "experiment",
+      "title": "一圈與兩圈的盤點",
+      "task": "改乙醯 CoA 份數，讀產物。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "每份乙醯 CoA 跑一圈。",
+          "event": "experiment-0"
+        },
+        {
+          "at": 3,
+          "text": "一圈得到 3 NADH、1 FADH₂。",
+          "event": "experiment-1"
+        },
+        {
+          "at": 6,
+          "text": "還有 1 GTP 與 2 CO₂。",
+          "event": "experiment-2"
+        },
+        {
+          "at": 9,
+          "text": "兩份就把圈數與產物乘 2。",
+          "event": "experiment-3"
+        }
+      ],
+      "check": {
+        "question": "2 份乙醯 CoA，TCA 得到多少 NADH？",
+        "choices": [
+          "6",
+          "3",
+          "2"
+        ],
+        "answer": 0,
+        "explanation": "每圈 3，兩圈 6。"
+      },
+      "duration": 12,
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "1 份乙醯 CoA",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "目前 1 圈 TCA，產生多少 NADH？",
+            "choices": [
+              "3",
+              "2",
+              "1"
+            ],
+            "answer": 0,
+            "explanation": "每圈 3；1 圈是 3。"
+          }
+        },
+        {
+          "condition": "2 份乙醯 CoA",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "目前 2 圈 TCA，產生多少 NADH？",
+            "choices": [
+              "6",
+              "4",
+              "2"
+            ],
+            "answer": 0,
+            "explanation": "每圈 3；2 圈是 6。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "title": "別把前一步混進來",
+      "task": "只看檸檬酸循環帳。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "一個葡萄糖通常提供兩份乙醯 CoA。",
+          "event": "boundary-0"
+        },
+        {
+          "at": 3,
+          "text": "此表只盤點這兩圈 TCA。",
+          "event": "boundary-1"
+        },
+        {
+          "at": 6,
+          "text": "丙酮酸氧化的產物另計。",
+          "event": "boundary-2"
+        },
+        {
+          "at": 9,
+          "text": "先說清楚計算範圍。",
+          "event": "boundary-3"
+        }
+      ],
+      "check": {
+        "question": "此表包含丙酮酸氧化嗎？",
+        "choices": [
+          "包含全部代謝",
+          "不包含，只看 TCA",
+          "包含糖解所有 ATP"
+        ],
+        "answer": 1,
+        "explanation": "課程的大盤點才把各段加總。"
+      },
+      "duration": 12,
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "condition_checks": [
+        {
+          "condition": "1 份乙醯 CoA",
+          "parameters": {
+            "case": 0
+          },
+          "question": {
+            "question": "此表包含丙酮酸氧化嗎？",
+            "choices": [
+              "包含全部代謝",
+              "不包含，只看 TCA",
+              "包含糖解所有 ATP"
+            ],
+            "answer": 1,
+            "explanation": "課程的大盤點才把各段加總。"
+          }
+        },
+        {
+          "condition": "2 份乙醯 CoA",
+          "parameters": {
+            "case": 1
+          },
+          "question": {
+            "question": "此表包含丙酮酸氧化嗎？",
+            "choices": [
+              "包含全部代謝",
+              "不包含，只看 TCA",
+              "包含糖解所有 ATP"
+            ],
+            "answer": 1,
+            "explanation": "課程的大盤點才把各段加總。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "title": "換個情境，你會應用了嗎？",
+      "task": "完成兩題，再回課程。",
+      "duration": 0,
+      "cues": [
+        {
+          "at": 0,
+          "text": "用你剛才觀察到的規則來回答。",
+          "event": "transfer-0"
+        }
+      ],
+      "hero": "再生的草醯乙酸 4C",
+      "check_times": [
+        0
+      ]
+    }
+  ]
+}
