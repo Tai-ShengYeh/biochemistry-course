@@ -44,10 +44,10 @@ try:
      if w in (1,15) and kind=='interactive':page.screenshot(path=str(REPORT/f'browser-{profile}-w{w:02}.png'),full_page=False)
      page.evaluate('document.querySelector("video").pause()');results.append({'week':f'w{w:02}','profile':profile,'page':kind,'playback':'passed','subtitle_cues':result['cues'],'media_width':result['videoWidth'],'inline_layout':'passed','reveal_keyboard_and_pause':'passed' if kind=='slide' else 'not_applicable'})
      (REPORT/'browser-progress.json').write_text(json.dumps(results,indent=2)+'\n');print(profile,w,kind,'passed',flush=True)
-   page.goto(base+'/animations.html',wait_until='networkidle');assert page.locator('video').count()==16
+   page.goto(base+'/animations.html',wait_until='networkidle');assert page.locator('video').count()==len(CONTENT)
    assert page.evaluate('document.documentElement.scrollWidth')<=size['width']+2
    context.close()
   browser.close()
- report={'browser':'Chromium','page_playback_checks':len(results),'expected_page_playback_checks':64,'gallery_video_count':16,'results':results};assert len(results)==64
+ report={'browser':'Chromium','page_playback_checks':len(results),'expected_page_playback_checks':len(CONTENT)*4,'gallery_video_count':len(CONTENT),'results':results};assert len(results)==len(CONTENT)*4
  (REPORT/'browser-verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
 finally:server.shutdown()

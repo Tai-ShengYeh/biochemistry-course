@@ -56,10 +56,6 @@ def diagram(d,w,s,p,t):
    if p>.35:
     for y in (245,340):arrow(d,(440,280),(650,y));ball(d,650+80*math.sin(p*math.pi),y,'3C')
    text(d,480,155,'1 葡萄糖 → 2 丙酮酸',26);text(d,480,408,'花 2 ATP；得 4 ATP；淨 2 ATP + 2 NADH',24)
- elif w==2:
-  d.rounded_rectangle((190,180,790,390),25,outline=BLUE,width=4)
-  for i in range(8):ball(d,240+i*65,300+25*math.sin(t+i),'A-' if i%2 else 'HA',BLUE,23)
-  x=100+min(p*2,1)*400;ball(d,x,220,'H+',RED,22);arrow(d,(480,225),(570,275));text(d,480,155,'A- + H+ → HA；少量加酸',26);text(d,480,418,'緩衝能力有限，不是 pH 永遠不變',24)
  elif w==3:
   a=280+100*p;b=680-100*p
   for x in (a,b):ball(d,x,275,'C',BLUE,32);text(d,x,220,'R');text(d,x,335,'H')

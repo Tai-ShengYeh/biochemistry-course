@@ -1,17 +1,11 @@
 {
-  "final_media_checks": 32,
+  "final_media_checks": 30,
   "results": [
     {
       "week": "w01",
       "profile": "desktop",
       "playback_and_ending_seek": "passed",
       "mp4_sha256": "8ba631e3a5d3c8026c7524e317e32e198240684010d585b1cc470ac88c7fc778"
-    },
-    {
-      "week": "w02",
-      "profile": "desktop",
-      "playback_and_ending_seek": "passed",
-      "mp4_sha256": "84c417dfbfb60f30da95c4ffd7e535e2907caef6a42010d95f18147ed11c3306"
     },
     {
       "week": "w03",
@@ -102,12 +96,6 @@
       "profile": "mobile",
       "playback_and_ending_seek": "passed",
       "mp4_sha256": "8ba631e3a5d3c8026c7524e317e32e198240684010d585b1cc470ac88c7fc778"
-    },
-    {
-      "week": "w02",
-      "profile": "mobile",
-      "playback_and_ending_seek": "passed",
-      "mp4_sha256": "84c417dfbfb60f30da95c4ffd7e535e2907caef6a42010d95f18147ed11c3306"
     },
     {
       "week": "w03",

@@ -5,11 +5,6 @@
     "path": "site/assets/animations/w01"
   },
   {
-    "week": "w02",
-    "duration": 32.666666666666664,
-    "path": "site/assets/animations/w02"
-  },
-  {
     "week": "w03",
     "duration": 35.916666666666664,
     "path": "site/assets/animations/w03"
@@ -26,7 +21,7 @@
   },
   {
     "week": "w06",
-    "duration": 32.0,
+    "duration": 32,
     "path": "site/assets/animations/w06"
   },
   {
@@ -76,7 +71,7 @@
   },
   {
     "week": "w17",
-    "duration": 41.0,
+    "duration": 41,
     "path": "site/assets/animations/w17"
   }
 ]

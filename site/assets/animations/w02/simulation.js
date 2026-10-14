@@ -158,8 +158,8 @@
   el.next.addEventListener('click',()=> {
     if(!allowed())return;
     if(scene<5) {enter(scene+1);el.title.setAttribute('tabindex','-1');el.title.focus();}
-    else if(window.parent!==window) window.parent.postMessage({type:'w02-buffer-goto',target:'blood'},window.location.origin);
-    else window.location.href='../../../vi-a2/w02.html#/blood';
+    else if(window.parent!==window && new URL(document.referrer || window.location.href).pathname.endsWith('/vi-a2/w02.html')) window.parent.postMessage({type:'w02-buffer-goto',target:'blood'},window.location.origin);
+    else window.top.location.href=new URL('../../../vi-a2/w02.html#/blood',window.location.href).href;
   });
   el.replay.addEventListener('click',()=> {completed.delete(scene);enter(scene);});
   el.reset.addEventListener('click',()=> {completed.clear();enter(0);});

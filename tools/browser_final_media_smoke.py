@@ -30,6 +30,6 @@ try:
     page.goto(base+f'/vi-a2/lessons/w{w:02}.html#animation',wait_until='load');page.locator('video').scroll_into_view_if_needed();page.evaluate('document.querySelector("video").muted=true;document.querySelector("video").play()');page.wait_for_function('document.querySelector("video").currentTime>.2');page.screenshot(path=str(REPORT/f'browser-{profile}-w{w:02}.png'))
    context.close()
   b.close()
- assert len(results)==32
- report={'final_media_checks':32,'results':results};(REPORT/'final-media-browser-verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
+ assert len(results)==len(CONTENT)*2
+ report={'final_media_checks':len(results),'results':results};(REPORT/'final-media-browser-verification.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
 finally:server.shutdown()
