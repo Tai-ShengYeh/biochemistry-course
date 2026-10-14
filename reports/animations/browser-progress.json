@@ -20,26 +20,6 @@
     "reveal_keyboard_and_pause": "not_applicable"
   },
   {
-    "week": "w02",
-    "profile": "desktop",
-    "page": "slide",
-    "playback": "passed",
-    "subtitle_cues": 5,
-    "media_width": 960,
-    "inline_layout": "passed",
-    "reveal_keyboard_and_pause": "passed"
-  },
-  {
-    "week": "w02",
-    "profile": "desktop",
-    "page": "interactive",
-    "playback": "passed",
-    "subtitle_cues": 5,
-    "media_width": 960,
-    "inline_layout": "passed",
-    "reveal_keyboard_and_pause": "not_applicable"
-  },
-  {
     "week": "w03",
     "profile": "desktop",
     "page": "slide",
@@ -331,26 +311,6 @@
   },
   {
     "week": "w01",
-    "profile": "mobile",
-    "page": "interactive",
-    "playback": "passed",
-    "subtitle_cues": 5,
-    "media_width": 960,
-    "inline_layout": "passed",
-    "reveal_keyboard_and_pause": "not_applicable"
-  },
-  {
-    "week": "w02",
-    "profile": "mobile",
-    "page": "slide",
-    "playback": "passed",
-    "subtitle_cues": 5,
-    "media_width": 960,
-    "inline_layout": "passed",
-    "reveal_keyboard_and_pause": "passed"
-  },
-  {
-    "week": "w02",
     "profile": "mobile",
     "page": "interactive",
     "playback": "passed",

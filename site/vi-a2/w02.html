@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
 <link rel="stylesheet" href="../assets/css/course.css?v=4">
 <link rel="stylesheet" href="../assets/css/animations.css">
+<link rel="stylesheet" href="../assets/w02-buffer-route.css">
 </head>
 <body>
 <div class="reveal"><div class="slides">
@@ -72,16 +73,11 @@
 提問:今天要做哪兩件事?
 </aside>
 </section>
-<section class="animation-slide" id="animation"><div class="teaching-animation" data-week="w02">
-<h3>W02 教學動畫：緩衝溶液怎麼保護 pH？</h3>
-<video controls playsinline preload="metadata" poster="../assets/animations/w02/poster.jpg" aria-label="緩衝溶液怎麼保護 pH？">
-<source src="../assets/animations/w02/w02_animation.mp4" type="video/mp4">
-<track kind="subtitles" src="../assets/animations/w02/w02_animation.vtt" srclang="zh-Hant" label="繁體中文（完整旁白）">
-您的瀏覽器不支援影片，請下載 MP4。</video>
-<p class="animation-terms">弱酸 / Weak acid / Acid yếu · 共軛鹼 / Conjugate base / Base liên hợp · 緩衝液 / Buffer / Dung dịch đệm</p>
-<p class="animation-note">先看分子怎麼移動，再用一句話說明原因。概念示意，不是精確分子模擬。<br>字幕已燒錄；可選完整旁白字幕。／ Xem chuyển động, rồi giải thích bằng một câu.</p>
-<p class="animation-links"><a href="../assets/animations/w02/w02_animation.mp4" download>MP4</a> · <a href="../assets/animations/w02/w02_animation.srt" download>SRT 完整字幕</a> · <a href="../assets/animations/w02/w02_animation.vtt" download>VTT</a></p>
-</div></section>
+<section class="animation-slide buffer-slide" id="animation">
+<iframe class="buffer-frame" src="../assets/animations/w02/simulation.html" title="緩衝液實驗室：六幕互動模擬"></iframe>
+<p class="buffer-open"><a href="../assets/animations/w02/simulation.html" target="_blank" rel="noopener">另開實驗室 ↗</a> · <a href="#/blood">回課程：血液 →</a></p>
+<aside class="notes">先預測，再觀察、解釋與應用。六幕使用同步字幕。pH 數字是示意，容量以八份 A⁻ 表示。加酸看 A⁻；加鹼看 HA。血液還受肺與腎調節。</aside>
+</section>
 
 <section>
 <div class="hd">
@@ -396,7 +392,7 @@
 提問:緩衝溶液是由什麼組成?
 </aside>
 </section>
-<section>
+<section id="blood">
 <div class="hd">
 <h2>為什麼要學這個</h2>
 <p class="vi">Vì sao phải học cái này</p>
@@ -506,9 +502,10 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
 <script>
-Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false,
+Reveal.initialize({ hash:true, display:'flex', slideNumber:'c/t', width:1280, height:720, margin:0, center:false, scrollActivationWidth:null,
   transition:'slide', plugins:[RevealNotes] });
 </script>
 <script src="../assets/animation-controls.js"></script>
+<script src="../assets/w02-buffer-route.js"></script>
 </body>
 </html>

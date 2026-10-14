@@ -1,12 +1,12 @@
 {
-  "expected_count": 16,
-  "verified_count": 16,
+  "expected_count": 15,
+  "verified_count": 15,
   "exam_weeks_omitted": [
     "w09",
     "w18"
   ],
   "font_missing_glyphs": [],
-  "total_mp4_bytes": 8404810,
+  "total_mp4_bytes": 7962015,
   "results": [
     {
       "week": "w01",
@@ -22,21 +22,6 @@
       "changed_diagram_pixels": 20145,
       "ending_hold_seconds": 2.0221768707483,
       "review_sheet": "reports/animations/w01-frames.jpg"
-    },
-    {
-      "week": "w02",
-      "mp4": "site/assets/animations/w02/w02_animation.mp4",
-      "bytes": 442795,
-      "duration_seconds": 32.666667,
-      "video_codec": "h264",
-      "audio_codec": "aac",
-      "full_decode": "passed",
-      "subtitle_cues": 5,
-      "subtitle_text_and_timing": "passed",
-      "motion_region_difference": "passed",
-      "changed_diagram_pixels": 13130,
-      "ending_hold_seconds": 2.026394891156464,
-      "review_sheet": "reports/animations/w02-frames.jpg"
     },
     {
       "week": "w03",
@@ -87,7 +72,7 @@
       "week": "w06",
       "mp4": "site/assets/animations/w06/w06_animation.mp4",
       "bytes": 417487,
-      "duration_seconds": 32.0,
+      "duration_seconds": 32,
       "video_codec": "h264",
       "audio_codec": "aac",
       "full_decode": "passed",
@@ -237,7 +222,7 @@
       "week": "w17",
       "mp4": "site/assets/animations/w17/w17_animation.mp4",
       "bytes": 532300,
-      "duration_seconds": 41.0,
+      "duration_seconds": 41,
       "video_codec": "h264",
       "audio_codec": "aac",
       "full_decode": "passed",

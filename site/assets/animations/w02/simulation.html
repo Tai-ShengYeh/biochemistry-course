@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>緩衝液實驗室 · W02</title>
+  <link rel="stylesheet" href="simulation.css">
+</head>
+<body>
+<main id="lab" aria-label="緩衝液互動實驗室">
+  <header class="lab-header"><span class="lab-brand">W02 / 緩衝液實驗室</span><span class="lab-gloss">Dung dịch đệm</span></header>
+  <nav class="scene-map" aria-label="六幕學習進度"></nav>
+  <section class="scene-heading"><p id="flow"></p><h1 id="title"></h1><p id="task"></p></section>
+  <section id="stage" aria-label="反應示意圖"></section>
+  <div class="caption" aria-live="off"><span class="caption-label">看這裡</span><p id="caption"></p></div>
+  <div class="timeline"><progress id="progress" max="1" value="0" aria-label="本幕動畫進度"></progress><span id="time"></span></div>
+  <section id="activity" aria-label="預測與概念檢核"></section>
+  <p id="feedback" role="status" aria-live="polite"></p>
+  <footer class="controls" aria-label="動畫控制">
+    <button id="back" type="button">上一幕</button>
+    <button id="play" type="button">播放</button>
+    <button id="replay" type="button">重播本幕</button>
+    <button id="reset" type="button">全部重設</button>
+    <button id="next" class="primary" type="button">下一幕 →</button>
+  </footer>
+  <p class="model-note">概念模型：pH 與份數為示意；H⁺ 代表水中的酸。血液還受肺與腎調節。</p>
+  <details class="teacher-notes"><summary>教學與來源</summary><p>字幕與反應事件共用時間軸。每幕先預測，再觀察、解釋。圖中 H⁺ 是 H₃O⁺ 的簡寫；HA / A⁻ 是一般弱酸與共軛鹼。容量模型把 A⁻ 分成八份，真實溶液的平衡與變化是連續的。</p><p>本版使用同步文字字幕，沒有合成配音。數字只用來比較變化，不代表特定溶液、血液數值或診斷。</p><p><a href="https://openstax.org/books/chemistry-2e/pages/14-6-buffers" target="_blank" rel="noopener">OpenStax：Buffers</a> · <a href="https://www.ncbi.nlm.nih.gov/books/NBK620701/" target="_blank" rel="noopener">Endotext：DKA</a> · <a href="https://github.com/FW1201/code-animation-explainer" target="_blank" rel="noopener">分鏡與 QA 設計參考</a></p></details>
+</main>
+<script src="storyboard.js"></script>
+<script src="simulation.js"></script>
+</body>
+</html>
