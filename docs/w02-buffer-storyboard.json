@@ -1,0 +1,259 @@
+{
+  "hero_elements": [
+    "H⁺"
+  ],
+  "science_model": "illustrative",
+  "scenes": [
+    {
+      "id": "challenge",
+      "title": "同樣的酸，哪杯變更多？",
+      "flow": "預測 Predict",
+      "task": "先猜一次，再做實驗。",
+      "hero": "同一份 H⁺",
+      "duration": 0,
+      "composition": "左 48% 水；右 48% 緩衝液；上方 4% 同量加酸提示",
+      "question": "加同樣的酸，哪杯 pH 下降更多？",
+      "choices": [
+        "水 Water",
+        "緩衝液 Buffer",
+        "兩杯一樣"
+      ],
+      "cues": [
+        {
+          "at": 0,
+          "text": "兩杯先從 pH 7.0 開始。",
+          "event": "initial"
+        }
+      ],
+      "check_times": [
+        0
+      ],
+      "success": "先提交預測；此處不公布答案。"
+    },
+    {
+      "id": "compare",
+      "title": "看 pH，別只看粒子",
+      "flow": "觀察 Observe",
+      "task": "觀看任務：比較兩杯的 pH 變化。",
+      "hero": "同時加入的一份 H⁺",
+      "duration": 12,
+      "composition": "左右同版面比較；兩杯的 pH 讀數各占上方 25%",
+      "question": "哪杯 pH 變化比較小？",
+      "choices": [
+        "水",
+        "緩衝液",
+        "兩杯一樣"
+      ],
+      "answer": 1,
+      "explanation": "對！水下降 2.2；緩衝液下降 0.2（示意）。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "兩杯加入同樣的一份酸。",
+          "event": "add"
+        },
+        {
+          "at": 3,
+          "text": "水中的 H⁺ 增加。pH 明顯下降。",
+          "event": "free"
+        },
+        {
+          "at": 6,
+          "text": "A⁻ 接住 H⁺，變成 HA。",
+          "event": "capture"
+        },
+        {
+          "at": 9,
+          "text": "緩衝液也下降，但變化較小。",
+          "event": "compare"
+        }
+      ],
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "success": "完整觀察後，選緩衝液。"
+    },
+    {
+      "id": "mechanism",
+      "title": "H⁺ 去哪裡？",
+      "flow": "解釋 Explain",
+      "task": "觀看任務：追蹤橘色 H⁺。",
+      "hero": "H⁺ → HA 中的 H",
+      "duration": 12,
+      "composition": "反應主角占中央 70%；下方 30% 顯示反應式",
+      "question": "加入的 H⁺ 去哪裡？",
+      "choices": [
+        "完全消失了",
+        "變成 OH⁻",
+        "被 A⁻ 接住，成為 HA"
+      ],
+      "answer": 2,
+      "explanation": "H⁺ 沒有消失。它成為 HA 的一部分。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "酸帶來 H⁺。跟著橘色 H⁺ 看。",
+          "event": "add"
+        },
+        {
+          "at": 3,
+          "text": "H⁺ 靠近 A⁻。",
+          "event": "approach"
+        },
+        {
+          "at": 6,
+          "text": "A⁻ + H⁺ → HA。",
+          "event": "capture"
+        },
+        {
+          "at": 9,
+          "text": "H⁺ 成為 HA 的一部分。",
+          "event": "bound"
+        }
+      ],
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "success": "不把緩衝誤解為酸消失。"
+    },
+    {
+      "id": "base",
+      "title": "換成加鹼，誰來幫忙？",
+      "flow": "預測 → 觀察 → 解釋",
+      "task": "觀看任務：先看 HA，再看水。",
+      "hero": "HA 釋出的 H⁺",
+      "duration": 12,
+      "composition": "中央 HA；右側 OH⁻；下方依序顯示兩步反應",
+      "prediction": "加 OH⁻ 後，緩衝液 pH 往哪裡變？",
+      "prediction_choices": [
+        "小幅上升",
+        "小幅下降",
+        "永遠不變"
+      ],
+      "question": "加鹼時，誰提供 H⁺？",
+      "choices": [
+        "A⁻",
+        "HA",
+        "OH⁻"
+      ],
+      "answer": 1,
+      "explanation": "HA 提供 H⁺，中和 OH⁻。pH 仍小幅上升。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "現在加入 OH⁻。",
+          "event": "add-base"
+        },
+        {
+          "at": 3,
+          "text": "第一步：HA → H⁺ + A⁻。",
+          "event": "release"
+        },
+        {
+          "at": 6,
+          "text": "第二步：H⁺ + OH⁻ → H₂O。",
+          "event": "neutralize"
+        },
+        {
+          "at": 9,
+          "text": "OH⁻ 被中和。pH 小幅上升。",
+          "event": "base-result"
+        }
+      ],
+      "check_times": [
+        0,
+        3,
+        6,
+        9,
+        12
+      ],
+      "success": "先預測，再分辨弱酸與共軛鹼的角色。"
+    },
+    {
+      "id": "capacity",
+      "title": "一直加酸，還接得住嗎？",
+      "flow": "觀察 → 解釋",
+      "task": "觀看任務：比較 A⁻ 剩餘量與 pH。",
+      "hero": "同一份 H⁺ 與有限的 A⁻",
+      "duration": 6,
+      "composition": "左 45% 剩餘八份 A⁻；右 55% pH 趨勢；下方加酸",
+      "question": "為什麼後來 pH 下降更多？",
+      "choices": [
+        "H⁺ 變成 OH⁻",
+        "緩衝液永遠不變",
+        "可接住 H⁺ 的 A⁻ 不足"
+      ],
+      "answer": 2,
+      "explanation": "A⁻ 不足，就難以接住更多 H⁺。緩衝有容量。",
+      "cues": [
+        {
+          "at": 0,
+          "text": "加入一份酸。先看橘色 H⁺。",
+          "event": "add"
+        },
+        {
+          "at": 3,
+          "text": "還有 A⁻：H⁺ 被接住。",
+          "event": "capacity-capture"
+        }
+      ],
+      "exhausted_cue": "A⁻ 不足：更多 H⁺ 留在水中。pH 下降更多。",
+      "check_times": [
+        0,
+        3,
+        6
+      ],
+      "success": "連加九次酸，再解釋容量限制。"
+    },
+    {
+      "id": "transfer",
+      "title": "血液有緩衝，為什麼仍會酸化？",
+      "flow": "應用 Apply",
+      "task": "情境：酮酸持續增加。想想緩衝容量。",
+      "hero": "持續增加的酸負荷",
+      "duration": 0,
+      "composition": "由酸增加，經 HCO₃⁻ 緩衝，連到血液 pH 下降",
+      "cues": [
+        {
+          "at": 0,
+          "text": "緩衝能減少變化，但不能無限接住酸。",
+          "event": "transfer"
+        }
+      ],
+      "questions": [
+        {
+          "question": "酮酸很多，超過調節能力，血液 pH 可能？",
+          "choices": [
+            "永遠不變",
+            "下降",
+            "上升"
+          ],
+          "answer": 1,
+          "explanation": "酸持續增加，血液仍可能酸化。這叫酮酸中毒。"
+        },
+        {
+          "question": "新情境：大量加鹼，緩衝能力不足，pH 可能？",
+          "choices": [
+            "下降",
+            "永遠不變",
+            "上升"
+          ],
+          "answer": 2,
+          "explanation": "對！加酸要看 A⁻；加鹼要看 HA。兩者都有容量。"
+        }
+      ],
+      "check_times": [
+        0
+      ],
+      "success": "兩題皆答對；可回本課血液與臨床例子。"
+    }
+  ]
+}
