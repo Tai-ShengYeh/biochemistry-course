@@ -54,7 +54,9 @@ ITEMS = [
  ("w10_membrane", "exec-a3c526fb-e2aa-416e-9d46-6197e19f48ab.png", True, [(0.18,.48),(0.50,.48),(0.77,.48)], "Phospholipids and cholesterol repeat across the bilayer."),
  ("w10_transport", "exec-ba044c50-248c-4726-bcac-cf3f2568be1d.png", True, [(0.17,.50),(0.50,.50),(0.83,.50)], "Three separate membrane transport mechanisms."),
  ("w11_nucleotide", "exec-7cac714e-4986-4f61-b777-74370b59b941.png", True, [(0.14,.42),(0.39,.55),(0.55,.26),(0.82,.45)], "The same nucleoside motif appears with and without phosphate."),
- ("w11_dna_helix", "exec-947ca1e2-3532-407c-91df-9d73bb6cdc3f.png", True, [(0.23,.30),(0.23,.64),(0.68,.31),(0.69,.67)], "Base-pair hydrogen bonds repeat along the double helix."),
+ # 2026-10-16 移除:原 AI 圖 A-T 配對氫鍵畫錯(N...N 未經 H)。此圖改由
+ # tools/draw_w11_base_pairs.py 程式繪製,重跑本腳本不可再覆蓋它。
+ # ("w11_dna_helix", "exec-947ca1e2-3532-407c-91df-9d73bb6cdc3f.png", True, [(0.23,.30),(0.23,.64),(0.68,.31),(0.69,.67)], "Base-pair hydrogen bonds repeat along the double helix."),
  ("w12_deltaG", "exec-204e79b5-4166-4c0a-bb69-0b7711a85769.png", True, [(0.17,.45),(0.47,.45),(0.78,.20),(0.73,.66)], "Two reaction-coordinate plots share the same axes."),
  ("w12_atp_cycle", "exec-17af2da5-7e50-4de5-8fbc-6501bfdacfd8.png", True, [(0.48,.28),(0.48,.72),(0.15,.48),(0.82,.48)], "ATP/ADP cycle connects three forms of cellular work."),
  ("w13_glycolysis", "exec-64981498-bd88-41c0-8a72-017cdb42f9b0.png", True, [(0.39,.16),(0.39,.47),(0.39,.86),(0.82,.51)], "Intermediates after cleavage represent two molecules each."),

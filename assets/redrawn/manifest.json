@@ -204,7 +204,8 @@
         "w11_dna_helix_labeled.png"
       ],
       "marker_count": 4,
-      "repeated_structures": "Base-pair hydrogen bonds repeat along the double helix."
+      "repeated_structures": "Base-pair hydrogen bonds repeat along the double helix.",
+      "note": "2026-10-16 右半（A–T/G–C 配對）改由 tools/draw_w11_base_pairs.py 程式繪製（原 AI 圖 A–T 上方氫鍵畫成 N…N 未經 H），左半螺旋插畫保留原圖，不再由 build_redrawn_assets 產生。"
     },
     {
       "topic": "w12_deltaG",
