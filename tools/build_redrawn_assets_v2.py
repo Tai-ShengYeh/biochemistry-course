@@ -33,7 +33,9 @@ BG = (253, 248, 232)
 
 # name, source file, (v2:clean 一律 True), 錨點(要指的構造)normalized 座標, note
 ITEMS = [
- ("w02_water_hbond", "exec-e2508b0f-7820-4955-b3e0-45138cf4cce9.png", True, [(0.22,.33),(0.72,.38)], "Water molecules repeat in both hydration examples."),
+ # 2026-10-16 移除:原 AI 圖氫鍵畫成 H…H(化學錯誤)。此圖改由
+ # tools/draw_w02_water_hbond.py 程式繪製,重跑本腳本不可再覆蓋它。
+ # ("w02_water_hbond", "exec-e2508b0f-7820-4955-b3e0-45138cf4cce9.png", True, [(0.22,.33),(0.72,.38)], "Water molecules repeat in both hydration examples."),
  ("w02_titration", "exec-ca4a0f6c-a8fb-4788-8d1c-b9a815ba713a.png", True, [(0.25,.54),(0.52,.35),(0.78,.27)], "No repeated molecular structure."),
  ("w03_aa_general", "exec-eacd272e-e8bf-47ee-899e-0f955c249592.png", True, [(0.50,.45),(0.50,.23),(0.72,.45),(0.50,.68),(0.28,.45)], "One generic amino-acid structure."),
  ("w03_aa_classes", "exec-e9cd72ad-0cc1-480d-9f40-b8766f62bf26.png", True, [(0.12,.17),(0.37,.17),(0.62,.17),(0.87,.17)], "Amino-acid examples repeat within four side-chain classes."),

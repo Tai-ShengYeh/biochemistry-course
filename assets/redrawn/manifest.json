@@ -13,7 +13,8 @@
         "w02_water_hbond_labeled.png"
       ],
       "marker_count": 2,
-      "repeated_structures": "Water molecules repeat in both hydration examples."
+      "repeated_structures": "Water molecules repeat in both hydration examples.",
+      "note": "2026-10-16 改由 tools/draw_w02_water_hbond.py 程式繪製（原 AI 圖氫鍵畫成 H-H，化學錯誤），不再由 build_redrawn_assets 產生。"
     },
     {
       "topic": "w02_titration",
