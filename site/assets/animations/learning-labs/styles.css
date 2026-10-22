@@ -7,3 +7,5 @@
 #lab[data-scene="challenge"] .readouts,#lab[data-scene="challenge"] .formula,#lab[data-scene="challenge"] .diagram-note,#lab[data-scene="challenge"] .branches{display:none}
 @media(max-width:600px){.model-diagram text{font-size:42px}}
 @media(max-height:500px){.controls{position:sticky;bottom:0;z-index:2;background:var(--paper)}}
+.peptide-wrap{overflow-x:auto;overflow-y:hidden}.peptide-diagram{height:230px;min-width:560px}
+@media(max-width:600px){.peptide-diagram{height:200px;min-width:600px}}

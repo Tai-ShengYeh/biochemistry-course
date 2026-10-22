@@ -28,14 +28,67 @@ window.LEARNING_MODELS = (() => {
     html+=formula('葡萄糖不是直接改名成 ATP');metrics={digestion,atp,step,work:digestion&&atp&&t>=9};break;
    }
    case 'peptide':{
-    const n=advanced?c.n:2,formed=t>=6;
-    const gap=500/(n-1),points=Array.from({length:n},(_,i)=>[80+i*gap,95]);
-    const bonds=formed?n-1:0;
-    let drawing='';
-    for(let i=0;i<n-1;i++)drawing+=line(points[i][0]+32,95,points[i+1][0]-32,95,formed?'var(--orange)':'var(--line)',!formed);
-    drawing+=points.map(([x,y],i)=>node(x,y,String(i+1),i===1)).join('');
-    html=svg(drawing,'編號胺基酸單元與形成的胜肽鍵')+formula(scene===2?'羧基 C + 胺基 N → C(=O)—NH + H₂O':'N 端 → 胜肽鏈 → C 端')+values([['胺基酸',`${n} 個`],['已形成胜肽鍵',`${bonds} 個`],['形式縮合釋出水',`${bonds} 個`],['線性鏈完成後',`${n}−1 = ${n-1} 個鍵`]]);
-    html+=note('編號是胺基酸單元，不是原子；R 側鏈保留。');metrics={n,bonds,finalBonds:n-1,formed};break;
+    /* Structural condensation diagram: H₂N–Cα(R)–C(=O)–OH units. Per junction,
+       a = approach progress, b = bond progress (OH + H leave as H₂O, C–N forms). */
+    const n=advanced?c.n:2,Y=128;
+    const L=n<=2?62:n===3?52:44,G=.9*L,W=.8*L,D=L*.75,fs=Math.round(L*.44),sm=Math.round(fs*.8),p=fs*.55;
+    /* Scene 3 starts with the units apart, so its viewBox grows with n; the wrapper scrolls on narrow screens. */
+    const vw=Math.max(660,Math.ceil(3*n*L+(scene===3?(n-1)*(W+.65*L+G):0)+fs*2.2));
+    const a=[],b=[];
+    for(let i=0;i<n-1;i++){
+     let av=1,bv=1;
+     if(scene===0){av=0;bv=0;}
+     else if(scene===1){av=clamp((t-3)/2.5);bv=clamp((t-6)/2.5);}
+     else if(scene===2){av=clamp(t/2.5);bv=clamp((t-3)/5);}
+     else if(scene===3){const span=6/(n-1),st=3+i*span;av=clamp((t-st)/(span*.4));bv=clamp((t-st-span*.4)/(span*.55));}
+     a.push(av);b.push(bv);
+    }
+    const bonds=b.filter(v=>v>=.6).length,formed=bonds===n-1;
+    const extra=i=>(W+.65*L)*(1-b[i])+G*(1-a[i]);
+    const N=[];let run=0;for(let j=0;j<n;j++){N.push(run);run+=3*L+(j<n-1?extra(j):0);}
+    const x0=(vw-(run+fs*1.85))/2+fs*1.15;for(let j=0;j<n;j++)N[j]+=x0;
+    const ink='var(--ink)',teal='var(--teal)',orange='var(--orange)';
+    const tx=(x,y,s,size,color=ink,anchor='middle')=>`<text x="${x}" y="${y+size*.35}" text-anchor="${anchor}" style="font-size:${size}px" fill="${color}">${esc(s)}</text>`;
+    const bd=(x1,y1,x2,y2,color=ink,w=4)=>`<path d="M${x1},${y1} L${x2},${y2}" stroke="${color}" stroke-width="${w}" fill="none" stroke-linecap="round"/>`;
+    const ring=(x,y,r)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="${orange}" stroke-width="4"/>`;
+    const box=(x,y,w,h,o=1)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="#fff3c4" opacity="${o}"/>`;
+    const hiPair=scene===1&&t>=3&&t<6,hiLeave=scene===2&&t>=3&&(b[0]??1)<.6,hiR=scene===1&&t>=9;
+    let under='',over='';
+    for(let j=0;j<n;j++){
+     const nx=N[j],cax=nx+L,cx=nx+2*L,last=j===n-1;
+     over+=bd(nx+p,Y,cax-p*1.3,Y)+bd(cax+p*1.3,Y,cx-p,Y);
+     if(j===0)over+=tx(nx+p*.9,Y,'H₂N',fs,teal,'end');
+     else over+=tx(nx,Y,'N',fs,teal)+bd(nx,Y-p*1.2,nx,Y-D+p*1.1)+tx(nx,Y-D,'H',fs,ink);
+     over+=tx(cax,Y,'Cα',fs,ink)+bd(cax,Y+p*1.2,cax,Y+D-p*1.1)+tx(cax,Y+D,'R'+'₁₂₃₄'[j],fs,hiR?orange:teal);
+     over+=tx(cx,Y,'C',fs,ink)+bd(cx-3,Y-p*1.2,cx-3,Y-D+p*1.1)+bd(cx+3,Y-p*1.2,cx+3,Y-D+p*1.1)+tx(cx,Y-D,'O',fs,orange);
+     if(scene<=2)over+=tx(cax,Y+D+sm*1.45,`胺基酸 ${j+1}`,sm,teal);
+     else if(scene===3)over+=tx(cax,Y+D+sm*1.45,String(j+1),sm,teal);
+     if(last){over+=bd(cx+p,Y,cx+L-p*1.5,Y)+tx(cx+L,Y,'OH',fs,orange);continue;}
+     const nn=N[j+1],bv=b[j],ohx=cx+L,hx=nn-.65*L,wx=cx+L*.5,wy=Y-D-fs*2.2;
+     if(bv<.15){
+      over+=bd(cx+p,Y,ohx-p*1.5,Y)+tx(ohx,Y,'OH',fs,orange)+bd(hx+p*.9,Y,nn-p,Y)+tx(hx,Y,'H',fs,ink);
+      if(hiPair)over+=ring(cx,Y,p*1.7)+ring(nn,Y,p*1.7);
+      if(hiLeave)over+=ring(ohx,Y,p*1.8)+ring(hx,Y,p*1.3);
+     }else if(bv<.6){
+      const q=(bv-.15)/.45,ox=mix(ohx,wx-fs*.9,q),oy=mix(Y,wy,q),hx2=mix(ohx+W,wx+fs*.9,q),hy=mix(Y,wy,q);
+      over+=tx(ox,oy,'OH',fs,orange)+tx(hx2,hy,'H',fs,orange);
+      if(hiLeave)over+=ring(ox,oy,p*1.8)+ring(hx2,hy,p*1.3);
+     }else{
+      const q=clamp((bv-.6)/.4);
+      under+=box(cx-p*1.5,Y-D-p*1.4,nn-cx+p*3,D+p*3,.45+.55*q);
+      over+=bd(cx+p,Y,nn-p,Y,orange,6)+tx(cx+L*.5,Y+D,n===2?'胜肽鍵':`鍵 ${j+1}`,sm,orange);
+      if(scene<=3)over+=tx(wx,wy,'H₂O',fs,orange);
+     }
+    }
+    if(scene===4){
+     const ex=N[n-1]+3*L;
+     if(t>=3){under+=box(N[0]-fs*1.25,Y-p*1.6,fs*1.95,p*3.2);over+=tx(N[0]-fs*.3,Y-D,'N 端',sm,orange);}
+     if(t>=6){under+=box(N[n-1]+2*L-p*1.5,Y-D-p*1.4,L+p*3,D+p*3);over+=tx(ex,Y+D,'C 端',sm,orange);}
+     if(t>=9)over+=arrow(N[0]-fs*.6,16,ex+fs*.4,16);
+    }
+    html=`<div class="peptide-wrap"><svg class="model-diagram peptide-diagram" viewBox="0 0 ${vw} 230" role="img" aria-label="兩個胺基酸的羧基與胺基縮合，形成 C—N 胜肽鍵並放出一個水分子">${under}${over}</svg></div>`;
+    html+=formula(scene<=2?'—COOH ＋ H₂N— → —CO—NH— ＋ H₂O':'N 端 → 胜肽鏈 → C 端')+values([['胺基酸',`${n} 個`],['已形成胜肽鍵',`${bonds} 個`],['放出的水 H₂O',`${bonds} 個`],['直鏈完成後',`${n}−1 = ${n-1} 個鍵`]]);
+    html+=note('簡圖用中性官能基。R₁、R₂ 是側鏈，不參與接鍵。');metrics={n,bonds,finalBonds:n-1,formed};break;
    }
    case 'fold':{
     const treatment=advanced?c.treatment:'heat';
