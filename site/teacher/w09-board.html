@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>生物化學 期中複習課 流程板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--p:#1f5f8b;--a:#a04c08;--t:#117a65;--ink:#1b2a2b;--mut:#5a6a6b;--line:#cfd8dc;--bg:#f3f6f8}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.5}
+header{background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px}header .meta{font-size:15px;opacity:.9}
+.master{font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;background:#fff;color:var(--p);border-radius:8px;padding:2px 14px}.master.warn{color:#c00}
+main{display:grid;grid-template-columns:1fr 300px;gap:18px;padding:18px 22px;max-width:1500px;margin:0 auto}
+.blk{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 18px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.blk.active{border-color:var(--a);box-shadow:0 0 0 4px #fbe9dc}.blk.done{opacity:.55}
+.hd{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center}
+.time{font-size:20px;font-weight:700;color:var(--p)}.ttl h2{margin:0;font-size:22px}.sub{color:var(--mut);font-size:15px}
+.timer{text-align:right}.clock{display:block;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;color:var(--t)}.blk.active .clock.low{color:#c00}
+.go{font:inherit;font-size:15px;padding:4px 12px;border-radius:6px;border:1px solid var(--p);background:#fff;color:var(--p);cursor:pointer}.blk.active .go{background:var(--a);border-color:var(--a);color:#fff}
+.steps{margin:8px 0 6px;padding-left:26px}.steps li{margin:4px 0}
+.links a.lnk{display:inline-block;margin:4px 8px 0 0;padding:4px 12px;border-radius:6px;background:#eaf2f8;color:var(--p);text-decoration:none;font-size:15px;border:1px solid #c9dbe8}.links a.lnk:hover{background:#d9e8f3}
+.show{background:#f7f9fb;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:6px 0}.showt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px}.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px}.ck{font-size:13px;color:var(--p);font-weight:700}.cv{font-size:17px}
+aside{position:sticky;top:12px;align-self:start}
+.qr{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-bottom:12px;display:none}.qr.show{display:block;border-color:var(--a)}.qr img{width:100%;max-width:250px;display:block;margin:0 auto}
+.qt{font-weight:700;font-size:20px;margin-top:4px}.qn{font-size:14px;color:var(--mut)}.qu{font-size:11px;color:var(--mut);word-break:break-all}
+.roster{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px}.roster h3{margin:0 0 6px;font-size:17px}.roster .n{color:var(--a);font-weight:700}
+.stu{display:flex;gap:6px;align-items:center;margin:3px 0}.stu .nm{flex:1;font:inherit;font-size:15px;border:0;border-bottom:1px solid var(--line);padding:2px 4px}.stu input[type=checkbox]{width:20px;height:20px}
+.note{background:#fff8e6;border-left:4px solid var(--a);padding:8px 12px;border-radius:6px;font-size:15px;margin-bottom:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{position:static}}
+@media print{header,.go,aside{display:none}.qr{display:block}}
+</style></head><body>
+<header><div><h1>生物化學 期中複習課 流程板</h1><div class="meta">國合班 8 人 · 以 100 分鐘算 · 下週期中考：前 50 分賓果＋標圖牆、後 50 分考試</div></div>
+<div><span class="master" id="master">00:00</span> <button class="go" onclick="toggleMaster()" id="mbtn">上課開始</button></div></header>
+<main>
+<div>
+<div class="note">按每段的「開始這段」會啟動該段倒數，右邊 QR 自動切成那一段學生要掃的。上方總計時從「上課開始」算。</div>
+
+<section class="blk" id="b1" data-min="30" data-qr="kahoot">
+  <div class="hd">
+    <div class="time">0–30 分</div>
+    <div class="ttl"><h2>Kahoot 複習 2 ＋ 複習 3</h2><div class="sub">W06–07 八題、W01–03 回頭看四題</div></div>
+    <div class="timer"><span class="clock">30:00</span><button class="go" onclick="startBlock('b1')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>開「複習 2」實況主持 → 選取體驗選<b>正確度</b> → 齒輪：暱稱產生器關、答題時間不受限制開</li><li>投 PIN，旁邊投暱稱規則：<b>學號後三碼＋姓名</b>；到齊後「遊戲上鎖」</li><li>每題看完選項分布再按下一題；答對率最低的題記下來</li><li>接著開「複習 3」，同樣設定</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://create.kahoot.it/details/d6182cb2-a2f6-4ce3-8f92-c145eea60394">複習 2（8 題） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://create.kahoot.it/details/e8a90473-0fcb-493a-8079-9a48b690c9c4">複習 3（4 題） ↗</a></div>
+</section>
+<section class="blk" id="b2" data-min="25" data-qr="w09">
+  <div class="hd">
+    <div class="time">30–55 分</div>
+    <div class="ttl"><h2>題型示範 8 題，當場做、當場對</h2><div class="sub">標圖 2、配對 2、選擇 2、計算 2，比例跟考卷一樣</div></div>
+    <div class="timer"><span class="clock">25:00</span><button class="go" onclick="startBlock('b2')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>學生掃右邊 QR 開 w09 頁 → 點「題型示範」</li><li>給 12 分鐘自己做，不討論；做完一題一題投影對答案</li><li>說明考卷規則：標圖題給詞庫選、計算題公式印在旁邊、中英越都能寫</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w09.html#quiz">w09 頁 題型示範（老師投影） ↗</a></div>
+</section>
+<section class="blk" id="b3" data-min="25" data-qr="w09">
+  <div class="hd">
+    <div class="time">55–80 分</div>
+    <div class="ttl"><h2>標圖牆 16 張走一遍</h2><div class="sub">考卷只用這 16 張圖、只用這幾個題型</div></div>
+    <div class="timer"><span class="clock">25:00</span><button class="go" onclick="startBlock('b3')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>w09 頁 → 標圖牆 → 開「自我測驗模式」（隱藏圖名與解答）</li><li>一張一張問：這是哪週的？標號①是什麼？點開解答核對</li><li>複習 2、3 答對率最低的那幾張多停一下</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w09.html#figs">標圖牆 ↗</a></div>
+</section>
+<section class="blk" id="b4" data-min="20" data-qr="wayground">
+  <div class="hd">
+    <div class="time">80–100 分</div>
+    <div class="ttl"><h2>W01 Wayground 前後測課堂重做</h2><div class="sub">老師控制進度，讓沒做過的 6 人補上</div></div>
+    <div class="timer"><span class="clock">20:00</span><button class="go" onclick="startBlock('b4')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>Wayground 我的資源庫 → 生物化學 W01 前後測 → 開始 → <b>老師控制進度</b></li><li>設定：關計時、關排行榜、關顯示答案</li><li>學生掃右邊 QR 或到 wayground.com/join 輸入代碼</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://wayground.com/admin/private">Wayground 資源庫 ↗</a></div>
+</section>
+<div class="roster"><h3>點名 <span class="n" id="cnt">0</span>/8　<span class="sub">Kahoot 曾出現 11 人，先對名單</span></h3><label class="stu"><input type="checkbox" data-i="0"><input class="nm" type="text" placeholder="學生 1" data-i="0"></label><label class="stu"><input type="checkbox" data-i="1"><input class="nm" type="text" placeholder="學生 2" data-i="1"></label><label class="stu"><input type="checkbox" data-i="2"><input class="nm" type="text" placeholder="學生 3" data-i="2"></label><label class="stu"><input type="checkbox" data-i="3"><input class="nm" type="text" placeholder="學生 4" data-i="3"></label><label class="stu"><input type="checkbox" data-i="4"><input class="nm" type="text" placeholder="學生 5" data-i="4"></label><label class="stu"><input type="checkbox" data-i="5"><input class="nm" type="text" placeholder="學生 6" data-i="5"></label><label class="stu"><input type="checkbox" data-i="6"><input class="nm" type="text" placeholder="學生 7" data-i="6"></label><label class="stu"><input type="checkbox" data-i="7"><input class="nm" type="text" placeholder="學生 8" data-i="7"></label></div>
+<div class="roster"><h3>今天記下來（答對率最低的題、要放進考卷 A 層的概念）</h3><textarea id="memo" style="width:100%;height:90px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px"></textarea></div>
+</div>
+<aside>
+<div class="qr" id="qr-kahoot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAACHCAIAAACzhd1dAAACxklEQVR4nO2dQU4DMQwAKeIZ+QH8/yXwg/yjXKFCkSLbm3GZuSGgaXfk9SZO3Nv9fn8RGK+n34D8gVaIaIWIVoi8Pfw83j+uGXh+fRaNOwOvXPeutsY1VohohYhWiGilQ7ZfZ6EI68y5Hmj8/t91To4MBLkaxgoRrRDRChGtNMz2D0TmyYmvvGbrWSCSwOuuhrFCRCtEtEJEK/2zfR3rFD3zFti3BjqFsUJEK0S0QkQrRCjZ/oG5k3UTC/UQjBUiWiGiFSJa6Z/t63Jj4hx7BioIkaeMRIwVIlohohUiWmmY7S/blL5m7Czs163VX3Y1jBUiWiGiFSJaIXJjnrcfeQmcWZlfY6wQ0QoRrRDRSsPz9onz5LqDcSMw5a57cIhcSWOFiFaIaIWIVjpk+60db1vZD9JOZ+yMG/njyOc1VohohYhWiGilfy+9SAa7bAY+d6bcW79N3P9nd51+eAcjohUiWnm6E3hbq9ORpjcjb469ReTBIfJIYqwQ0QoRrRDRytNl+8Q187q3UdfGJ3GvgXX7BngHI6IVIlrpX7dPzI11TwoTuUXfun17vIMR0QoRrfzv78BjTvVHWaF+/VLW7fvhHYyIVohopf95e8i695q63juX9eQ1VohohYhWiGilQ7av25MfYR76Or1TFQRjhYhWiGiFiFaIUHrpQfrbzqt67LtLrx/ewYhohYhW/nfd/oG6RnQzbyHg1JY+Y4WIVohohYhWGp7AS8xviTWCmfekcOrju5LfD+9gRLRCRCv9z9tflirnoQ0CpwbyvH0DvIMR0QoRrTxdd506BuNb7k414TVWiGiFiFaIaIUIJdsnTqpHXhUg8ttInyJjhYhWiGiFiFb6Z/u6bWpbuXFNYtO+xMrF1qUzVohohYhWiGilYbaH1LGZJ/Dqqg/GChGtENEKEa0QoZy3l58YK0S0QkQrRLTyAuQbmI1m7cdHt1sAAAAASUVORK5CYII=" alt="QR"><div class="qt">kahoot.it</div><div class="qn">輸入 PIN，暱稱＝學號後三碼＋姓名</div><div class="qu">https://kahoot.it</div></div><div class="qr" id="qr-w09"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE4klEQVR4nO3dwW0cORAFUHmxYTADb/6ReDPoPOR7HwgQ/FXkCO/djBl191gfHIooFn99f39/wbZ/9i8BkkSMMYkMSSLj39e/x+//vlo8//+ZvPp6jJ03zz9R8M3Pxqtz849/yW/QmESGJJEhSWRIEjUz7p253tzOHHNpAr505eBjjJWHXJqAL/0dsPTqkvljGJPIkCQyJIkMSaJlxv1yamU2OKncudHSpeZ2/oYI3ndu6amMSWRIEhmSRIYkcWLG3WapjOSSdepgYcxccNk6yJhEhiSRIUlkSBI/esYdrNAITs93HnLkCmOClwoyJpEhSWRIEhmSxIkZd9vkbmdxue4hg7sfR9kK+NJjBBmTyJAkMiSJDEmiZcbd1vhiLtgVpG5PZlCwz0nbb9CYRIYkkSFJZEgSGb8u6ccdnGO+tBV71Anu9qxjTCJDksiQJDIkiZZ+3MGZ78vryqda3J0q5xhlk+hTJSjGJDIkiQxJIkOSaFnjvmRz4MtHXPkpu9SpY3rmn8iYRIYkkSFJZEgSF1SVtB3nOH/zzlPt/OwlRe6X7AU1JpEhSWRIEhmSxImqkp22fG3HnNd1+Nu50Uvw3PpTNe8vxiQyJIkMSSJDkrjgzMmlWuy6mW/QqQn4KGsaHrzvnDGJDEkiQ5LIkCRqZtx1pyzWLdTWTc+D68UjN7c9VVw/Z0wiQ5LIkCQyJImaOu66Iui2Kov5levac4+yue2pBjJL/7HGJDIkiQxJIkOSuOCU91Oz16VXl6pZll69pBb7KdtHusSYRIYkkSFJZEgSJ3qVtLWau2Tddsk4VCdTt8S/9FTGJDIkiQxJIkOSuGCNu64GfOe+dbsQg11QxqFzatRxczvfbmRIEhmSREt3wJdLSiNOla/UVWo/ud2PpxbxjUlkSBIZkkSGJHFfd8C5unniJTPQtq4v8zfv0I+b83y7kSFJZEgS91WV7FRZtB1bM7/US91i+iVdwpdeVcdNB99uZEgSGZJESz/uth2MbVUlwcKYtonwJfedMyaRIUlkSBIZkkTLGndwY+ElPbXbtmiOQwvibZdSx00J325kSBIZkkRLd8C2PXt1XeuC6j7gjraDh+Y/a0wiQ5LIkCQyJImWXiV1jffajmQMvnnpMe4s16lblzcmkSFJZEgSGZLEBTsnTzWznr95yc5eweCNgoJF7kuMSWRIEhmSRIYkUVNVcqr4oa6M5NTa+uiq424r9Zn/rDGJDEkiQ5LIkCQ+rTtg3b7KuhNwLimbebmzyN2YRIYkkSFJZEgS9824g5XLpybRdRPwoLbq8qVPZEwiQ5LIkCQyJImWXiVt6gq362rA63oWPmVtT+pO/DEmkSFJZEgSGZJES6+SOjtnTs4vdUnzvI/o3BKs3jEmkSFJZEgSGZLEh++cDC7ytjX+DnpyJ9PXrXEvMSaRIUlkSBIZksSJOu7g0vOOnSufOmx+THeK7rikMMaYRIYkkSFJZEgS1++cvLOV4KnD5i/phrjUImaJMYkMSSJDksiQJH70jHtngbjtqJ1Ldj8+K6f21K28G5PIkCQyJIkMSeLEjPvOHtN1eyPndubyT674+pI+J8YkMiSJDEkiQ5JomXG37SRs69YdvPLO9s6x8ifF0o3azrp8MSaRIUlkSBIZksTP6sfNpzMmkSFJZEgSGZLEV8RfuE/J2sz8XVUAAAAASUVORK5CYII=" alt="QR"><div class="qt">w09 複習頁</div><div class="qn">題型示範、標圖牆、賓果都在這一頁</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w09.html</div></div><div class="qr" id="qr-wayground"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAACHCAIAAACzhd1dAAACv0lEQVR4nO2dwW0jMQwAk+DKUAdJ/5XkOlAfvvcZgQCBpDR0Zn6Bnd21BxQtrqh9fzwebwLj4/YFyA9ohYhWiGiFyJ+nv8fn15kTz7/fi/NO5Kt1PJ3XWCGiFSJaIaKVDtl+nYUiJGbOsXOo9UfY+oDHvg1jhYhWiGiFiFYaZvu6NLt1orlzqMhkHvJtGCtEtEJEK0S00j/b17FOhiMvRdcl/0SMFSJaIaIVIlohQsn263nyDNTbmfl8jbFCRCtEtEJEK/2zfV2qjMztR94vhS3qjmysENEKEa0Q0UrDbH9sUXqLWv049W0YK0S0QkQrRLRC5L1Fv/3YydjMQsAWxgoRrRDRChGtdMj2kbyayCzrdUtM/om9+vbbN8ARjIhWiGilfyW/rsC+dRkREnv7tl59Yn1eY4WIVohohYhWGlbyE6e+EWbetPnYVUXqAsYKEa0Q0QoRrTTcOTdxW5v1mxOPfGwyX/e/xgoRrRDRChGt/O5++2Ml9Pn/kROX6CduwuvOuf1wBCOiFSJaefUOvLrK9ixrm6tbpRd5s7FCRCtEtEJEKw3X5B/b+v7WrfjJaL/3vn0DHMGIaIWIVvo/A+9WXp151fi6dfVbP5Ss5PfDEYyIVoho5eXu29c9K35eOvIWW1dlJb89jmBEtEJEKx2yfWQhWuTVxKrBKFuHd2xzIWOFiFaIaIWIVhp24NURSf6jbEnf1onW2G//ajiCEdEKEa30v28f4VYlf+aV/RNxTX4/HMGIaIWIVvrftz+WKsel9H6stLHGWCGiFSJaIaKV3727ToSRl94jdxDq2vXswGuAIxgRrRDRChFKtr+1oe28tLJwjbFCRCtEtEJEK/2z/a3Hv49TKRrS22esENEKEa0Q0cqr75wb4dZ0feQt7098KJCxQkQrRLRCRCsNn3grVzBWiGiFiFaIaOUNyD8//IR+DSCWwgAAAABJRU5ErkJggg==" alt="QR"><div class="qt">wayground.com/join</div><div class="qn">輸入老師投影的代碼</div><div class="qu">https://wayground.com/join</div></div>
+<div class="roster"><h3>連結備忘</h3><div style="font-size:14px"><a target="_blank" rel="noopener" href="https://create.kahoot.it/details/d6182cb2-a2f6-4ce3-8f92-c145eea60394">複習 2</a> · <a target="_blank" rel="noopener" href="https://create.kahoot.it/details/e8a90473-0fcb-493a-8079-9a48b690c9c4">複習 3</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w09.html">w09 頁</a> · <a target="_blank" rel="noopener" href="https://wayground.com/admin/private">Wayground</a> · <a target="_blank" rel="noopener" href="https://create.kahoot.it/user-reports">Kahoot 報告</a></div></div>
+</aside>
+</main>
+<footer>D:/course/biochemistry/W09_上課流程板.html · 由 build_board.py 產生 · 點名與備註只存在這台電腦的瀏覽器</footer>
+<script>
+'use strict';
+const KEY='bio_w09_board';const TOTAL=100;
+let st=JSON.parse(localStorage.getItem(KEY)||'{}');
+function save(){localStorage.setItem(KEY,JSON.stringify(st));}
+document.querySelectorAll('.stu').forEach(l=>{const cb=l.querySelector('[type=checkbox]'),nm=l.querySelector('.nm');const i=cb.dataset.i;
+  cb.checked=!!(st.present||{})[i]; nm.value=(st.names||{})[i]||'';
+  cb.onchange=()=>{st.present=st.present||{};st.present[i]=cb.checked;save();cnt();};
+  nm.oninput=()=>{st.names=st.names||{};st.names[i]=nm.value;save();};});
+function cnt(){document.getElementById('cnt').textContent=Object.values(st.present||{}).filter(Boolean).length;}cnt();
+const memo=document.getElementById('memo');memo.value=st.memo||'';memo.oninput=()=>{st.memo=memo.value;save();};
+let mStart=st.mStart||null;const mEl=document.getElementById('master'),mBtn=document.getElementById('mbtn');
+function toggleMaster(){ if(mStart){mStart=null;mBtn.textContent='上課開始';} else {mStart=Date.now();mBtn.textContent='重設';} st.mStart=mStart;save(); }
+if(mStart)mBtn.textContent='重設';
+let cur=null,curEnd=0;
+function showQr(k){document.querySelectorAll('.qr').forEach(q=>q.classList.toggle('show',q.id==='qr-'+k));}
+function startBlock(id){
+  document.querySelectorAll('.blk').forEach(b=>{ if(b.id===id){b.classList.add('active');b.classList.remove('done');} else if(b.classList.contains('active')){b.classList.remove('active');b.classList.add('done');} });
+  const b=document.getElementById(id);cur=b;curEnd=Date.now()+Number(b.dataset.min)*60000;if(b.dataset.qr)showQr(b.dataset.qr);
+  if(!mStart){mStart=Date.now();st.mStart=mStart;save();mBtn.textContent='重設';}
+}
+function fmt(ms){const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+setInterval(()=>{
+  if(mStart){const el=Date.now()-mStart;mEl.textContent=fmt(el);mEl.classList.toggle('warn',el>TOTAL*60000);}
+  if(cur){const left=curEnd-Date.now();const c=cur.querySelector('.clock');c.textContent=fmt(left);c.classList.toggle('low',left<120000);}
+},500);
+if('kahoot')showQr('kahoot');
+</script></body></html>
