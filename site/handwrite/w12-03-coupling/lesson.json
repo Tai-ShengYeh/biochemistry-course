@@ -1,0 +1,374 @@
+{
+  "title": "能量耦合：相加以前先看連動",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w12.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w12.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "需求加供能，必須真的連動",
+      "narration": "細胞常把不利的步驟，和有利的反應耦合。相同計量基準下，可以相加自由能差；但只把兩種反應放在旁邊，不保證發生耦合。",
+      "steps": [
+        "先寫出真正連動的總反應。",
+        "各項使用相同計量基準。",
+        "再相加 ΔG。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ghép cặp phản ứng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "假定例：正三加負七",
+      "narration": "這裡的三與負七，是假定的千焦耳每莫耳，不是三磷酸腺苷在細胞內的實測值。若兩個步驟確實耦合，合計是負四，總反應的淨方向有利。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giá trị giả định · kJ/mol",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "需求 +3",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "真正連動的反應",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "水解 -7",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "相同計量基準",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "合計 -4",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "假設 kJ/mol",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "只有相加且真正耦合，才能用總 ΔG 判斷淨方向。",
+          "x": 300,
+          "y": 835,
+          "size": 42,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "只把 ATP 放旁邊，就夠了嗎？",
+      "narration": "一個需求步驟和三磷酸腺苷水解各自進行，沒有共同機制連動。可以只因為兩個數字相加是負值，就保證需求步驟被推動嗎？",
+      "steps": [
+        "A：可以，混在一起就是耦合",
+        "B：不能，還需要實際連動機制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cần cơ chế liên kết",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。需要例如共同中間物或酵素機制上的連動。"
+    },
+    {
+      "title": "核對：算式不能取代反應機制",
+      "narration": "自由能相加，是在描述已定義好的總反應。如果沒有物理或化學上的連動，水解釋出的能量可能走向其他路徑，不能保證推動指定的需求步驟。",
+      "steps": [
+        "機制：兩步怎麼連動？",
+        "計量：每步用了多少？",
+        "能量：總 ΔG 是否有利？"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cơ chế · Tỉ lượng · Năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "供能不夠，合計仍可能為正",
+      "narration": "現在需求改成正九，供能仍是負七。一次加一次得到正二，單靠這個耦合仍不足。若真有另一個機制使用兩份供能，才另算新的總反應。",
+      "steps": [
+        "假定：+9 + (−7) = +2",
+        "若確實耦合兩份供能：",
+        "+9 + 2 × (−7) = −5"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tính theo tỉ lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "看到 ATP 標籤，就一定有利？",
+      "narration": "假定需求是正九，只有一份負七的供能步驟。下列哪一個判斷保留了正確的收支？",
+      "steps": [
+        "A：有 ATP 就保證總 ΔG 負",
+        "B：合計 +2，這個總反應仍不利"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tổng ΔG",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。要看計量與總 ΔG，不只看有沒有 ATP。"
+    },
+    {
+      "title": "核對：先定義總反應",
+      "narration": "這個一比一的假定例，總自由能差是正二。若改用兩份供能，需要先確認真有對應的耦合機制。不能只在算式中任意增加供能份數。",
+      "steps": [
+        "本例：+2，淨方向仍不利",
+        "改計量，也要改成真實機制。",
+        {
+          "text": "先看連動，再算總收支。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kiểm tra giả định",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

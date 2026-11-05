@@ -1,0 +1,390 @@
+{
+  "title": "長期空腹：腦的燃料從哪裡來？",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w17.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w17.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "供糖來源，會隨時間改變",
+      "narration": "空腹時，肝醣分解與醣質新生都可能供應血糖，貢獻比例隨時間改變。它們不是一個完全結束後，另一個才突然開始的固定排隊程序。",
+      "steps": [
+        "肝醣分解：利用儲存",
+        "醣質新生：用前驅物重新合成",
+        "不同來源可重疊，比例改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Glycogenolysis · Gluconeogenesis",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "酮體增加，腦可分擔部分需求",
+      "narration": "較長時間空腹時，肝臟酮體生成增加，腦可以提高酮體利用。這能降低部分葡萄糖需求，但不是把葡萄糖需求完全消除，也不是把長鏈脂肪酸當成腦的主要直接燃料。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhịn ăn kéo dài · Thể ceton",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肝臟",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "葡萄糖＋酮體",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "血液",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "運送燃料",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "腦",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "可增加利用酮體",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肌肝醣 → 肌肉主要自用",
+          "x": 430,
+          "y": 775,
+          "size": 57,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "長期空腹腦仍需部分葡萄糖；腎也可參與供糖。",
+          "x": 330,
+          "y": 875,
+          "size": 37,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "腦改用酮體，就完全不需要葡萄糖？",
+      "narration": "假設腦在較長空腹時，增加利用酮體。能不能推論，腦和全身從此完全不需要任何葡萄糖？",
+      "steps": [
+        "A：能，葡萄糖需求變成零",
+        "B：不能，仍有腦的部分與其他組織需求"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        9,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vẫn cần glucose",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。腦仍有部分葡萄糖需求，成熟紅血球等也需要糖解。"
+    },
+    {
+      "title": "核對：增加比例，不是全部替換",
+      "narration": "燃料比例改變，和某種燃料需求歸零，是兩件不同的事。腦使用更多酮體時，肝與腎等仍可參與供糖，支持剩餘需求與其他依賴葡萄糖的組織。",
+      "steps": [
+        "酮體使用比例：可以增加",
+        "葡萄糖需求：仍非零",
+        "供應來源：肝臟與腎等共同參與。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thay đổi tỉ lệ nhiên liệu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "脂肪的一部分能供糖，別混成全部",
+      "narration": "人體常見偶數碳脂肪酸，主要經乙醯輔酶Ａ氧化，不能靠這條路淨生成葡萄糖。但三酸甘油酯中的甘油可以參與醣質新生，某些奇數碳來源也有不同去路。",
+      "steps": [
+        "偶數碳脂肪酸：不經此路淨造糖",
+        "甘油：可作醣質新生前驅物",
+        "乳酸與部分胺基酸：也可供碳。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Glycerol · Lactate · Amino acid",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "脂肪酸不能淨造糖，等於整個脂肪都不行？",
+      "narration": "有人知道常見偶數碳脂肪酸的限制，就說三酸甘油酯的任何部分，都不可能提供醣質新生的碳。這個推論對嗎？",
+      "steps": [
+        "A：對，脂肪每個部分去路相同",
+        "B：不對，甘油和脂肪酸的去路不同"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân biệt các thành phần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。甘油可供碳；不能把脂肪酸限制套到整個三酸甘油酯。"
+    },
+    {
+      "title": "核對：先分成分，再畫交換路線",
+      "narration": "脂肪酸、甘油、乳酸與胺基酸碳架，各有自己的入口與限制。把它們分開，才能說明空腹時器官如何共同供應燃料。路徑圖描述分工，不是個人應該空腹多久的處方。",
+      "steps": [
+        "先分：脂肪酸、甘油、乳酸、碳架",
+        "再看：能進哪個路徑？",
+        "最後：誰輸出，誰利用？"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vẽ đúng đường trao đổi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

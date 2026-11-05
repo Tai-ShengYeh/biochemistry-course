@@ -1,0 +1,491 @@
+{
+  "title": "β-氧化：C16 為什麼是七圈？",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先限定：偶數碳、飽和、直鏈",
+      "narration": "這章先用偶數碳、飽和、直鏈脂肪酸的粒線體氧化模型。每圈通常形成一份菸鹼醯胺還原載體與一份黃素還原當量，並使脂醯鏈縮短。",
+      "steps": [
+        "限定：偶數碳、飽和、直鏈",
+        "每圈：1 NADH、1 FADH₂ 等價量",
+        "最後 4C 的處理，要特別看。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "β-oxy hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "最後四個碳，一圈分成兩份",
+      "narration": "當剩下四個碳時，最後一圈形成兩份二碳乙醯基，不需要再多做一圈，把二碳單位拆成另一份二碳。因此圈數與乙醯基份數，會差一。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vòng cuối tạo hai acetyl-CoA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "最後 4C",
+          "x": 350,
+          "y": 350,
+          "size": 63,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2C",
+          "x": 1200,
+          "y": 350,
+          "size": 63,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2C",
+          "x": 1550,
+          "y": 350,
+          "size": 63,
+          "at": 2,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 380,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 500,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 620,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 740,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              415,
+              565
+            ],
+            [
+              465,
+              565
+            ]
+          ],
+          "at": 1,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              535,
+              565
+            ],
+            [
+              585,
+              565
+            ]
+          ],
+          "at": 1,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              655,
+              565
+            ],
+            [
+              705,
+              565
+            ]
+          ],
+          "at": 1,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "arrow",
+          "from": [
+            850,
+            565
+          ],
+          "to": [
+            1080,
+            565
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "circle",
+          "cx": 1220,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1340,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1570,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 4,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1690,
+          "cy": 565,
+          "rx": 33,
+          "ry": 33,
+          "at": 4,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1255,
+              565
+            ],
+            [
+              1305,
+              565
+            ]
+          ],
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1605,
+              565
+            ],
+            [
+              1655,
+              565
+            ]
+          ],
+          "at": 4,
+          "color": "green",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "最後一圈，剩下的 4C 形成兩份乙醯基。",
+          "x": 360,
+          "y": 780,
+          "size": 48,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "限定偶數碳、飽和、直鏈的簡單 β-氧化模型。",
+          "x": 380,
+          "y": 875,
+          "size": 38,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "C16，到底七圈還是八圈？",
+      "narration": "用這個限定模型，十六碳脂肪酸最後形成八份二碳乙醯基。需要的氧化圈數，是七圈還是八圈？",
+      "steps": [
+        "A：7 圈",
+        "B：8 圈"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        12,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Bảy vòng · Tám acetyl-CoA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。16/2−1=7圈；16/2=8份乙醯CoA。"
+    },
+    {
+      "title": "核對：不要把產物份數當圈數",
+      "narration": "十六碳可分成八份二碳，但最後一圈一次形成兩份。因此七圈得到八份乙醯輔酶Ａ，並有七份兩類還原當量。這裡還沒有計入活化成本或循環產能。",
+      "steps": [
+        "C16：7 圈 → 8 乙醯 CoA",
+        "另有：7 NADH、7 FADH₂ 等價量",
+        "不含活化與後續 TCA／電子鏈。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phạm vi của phép tính",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "一般式，先把模型條件寫出來",
+      "narration": "對這個至少四碳的偶數飽和直鏈模型，乙醯基份數是碳數除二，圈數再少一。遇到奇數碳或不飽和脂肪酸，不能不改條件就直接套完整產物帳。",
+      "steps": [
+        "n ≥ 4，且 n 為偶數",
+        "乙醯 CoA 份數 = n/2",
+        "圈數 = n/2 − 1"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Công thức có điều kiện",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "換成 C18，怎麼算？",
+      "narration": "同樣的簡單模型，十八碳脂肪酸需要幾圈，又形成幾份乙醯輔酶Ａ？先算份數，再算圈數。",
+      "steps": [
+        "18/2 = 9",
+        "A：9 圈、8 份",
+        "B：8 圈、9 份"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đổi chiều dài chuỗi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。8圈，9份乙醯CoA。"
+    },
+    {
+      "title": "核對：看最後一圈，就不會多算",
+      "narration": "十八碳分成九份二碳，最後四碳一圈形成兩份，所以只需八圈。把最後一圈畫出來，比只背少一更容易解釋，也能檢查其他偶數碳例子。",
+      "steps": [
+        "C18：8 圈、9 份乙醯 CoA",
+        "每圈還原當量：也要乘 8",
+        "若要算總 ATP，還需其他條件。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        12,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giải thích bằng vòng cuối",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

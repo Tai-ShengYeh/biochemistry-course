@@ -1,0 +1,367 @@
+{
+  "title": "胺基酸：氮的處理與碳架去路",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "胺基酸當燃料，先分兩本帳",
+      "narration": "胺基酸帶有氮，也有碳架。氮需要被轉移與處理，碳架則可能進入丙酮酸、乙醯輔酶Ａ或循環中間物等位置。不是所有胺基酸都先走同一個入口。",
+      "steps": [
+        "氮：轉移、處理與排除",
+        "碳架：可有不同代謝入口",
+        "不是全部先變乙醯 CoA。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuyển hóa amino acid",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "轉胺與去胺，不是同一個動作",
+      "narration": "轉胺作用把胺基轉移到另一個碳架，常讓氮集中到麩胺酸。去胺則可釋出銨，兩者是不同步驟。水溶液中的氨與銨比例，還要看酸鹼條件。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuyển amin · Khử amin",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "胺基酸的氮",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "先可轉移胺基",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "麩胺酸等",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "可再釋出銨",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "尿素處理",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "肝臟的重要去路",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "轉胺，就一定立刻釋出游離氨？",
+      "narration": "如果一個反應只是把胺基，從一個碳架搬到另一個碳架，就能說它一定同時大量釋出游離氨嗎？",
+      "steps": [
+        "A：能，轉胺和去胺完全相同",
+        "B：不能，轉移與移除是不同反應"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân biệt hai phản ứng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。轉胺通常是胺基轉移，不等同直接去胺釋出氨／銨。"
+    },
+    {
+      "title": "核對：先追氮還在哪個分子上",
+      "narration": "轉胺後，氮可能仍連在另一個有機分子上。後續才透過其他反應釋出或送入處理路徑。體內可用麩醯胺與丙胺酸等運送氮，不是讓高濃度游離氨到處累積。",
+      "steps": [
+        "轉胺：氮換到另一個碳架",
+        "去胺：可釋出氨／銨",
+        "運送氮：也有適合的有機形式。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vận chuyển nitơ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "尿素循環，跨兩個細胞區域",
+      "narration": "肝臟尿素循環的起始兩個反應在粒線體，其餘主要在細胞質。尿素相對適合經血液送到腎臟，再由尿液排除。它需要能量，也不是所有氮唯一的排出形式。",
+      "steps": [
+        "肝臟：粒線體＋細胞質",
+        "尿素：由血液送到腎臟",
+        "腎臟：參與排除尿素。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chu trình urê · Gan · Thận",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "三種燃料，碳架都只進乙醯 CoA？",
+      "narration": "有些胺基酸的碳架可以進入草醯乙酸等循環中間物。能把代謝總圖，寫成所有燃料都只能先變乙醯輔酶Ａ嗎？",
+      "steps": [
+        "A：能，沒有其他入口",
+        "B：不能，碳架可進不同中間物"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhiều điểm vào chuyển hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。乙醯CoA是重要交會點，但不是所有碳架唯一的入口。"
+    },
+    {
+      "title": "核對：交會，不等於只有一條路",
+      "narration": "醣類、脂肪與胺基酸的路徑會交會，但入口與限制不同。碳可以走向供能或合成，氮則需要另外處理。下一週，看不同器官如何互相配合。",
+      "steps": [
+        "脂肪酸：先活化，再依條件氧化",
+        "酮體：肝臟製造，分工利用",
+        "胺基酸：氮與碳分開追蹤",
+        "下一週：器官與激素調節"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 16",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

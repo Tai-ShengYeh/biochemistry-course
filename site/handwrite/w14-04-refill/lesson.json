@@ -1,0 +1,368 @@
+{
+  "title": "中間物抽用、回補與氧氣",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w14.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w14.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "循環中間物，也能當合成原料",
+      "narration": "檸檬酸循環不只協助氧化燃料。中間物也可流向胺基酸等合成路徑，因此它同時連接分解與合成，常稱為兩性代謝途徑。",
+      "steps": [
+        "分解：提供電子載體等",
+        "合成：提供部分中間物",
+        "抽用與回補，需要配合。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Con đường lưỡng dụng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "抽走中間物，需要有回補來源",
+      "narration": "如果中間物持續被拿去做別的分子，循環可用的中間物池可能減少。回補反應可以補充，例如丙酮酸羧化形成草醯乙酸，這一步需要三磷酸腺苷。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        8,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phản ứng bổ sung",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "丙酮酸",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "可用作回補來源",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "草醯乙酸",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "羧化需 ATP 等條件",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "循環中間物池",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "支持後續循環",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "拿走中間物，永遠不會有影響？",
+      "narration": "假設一個模型中，中間物持續被抽走，又沒有任何回補來源。能保證循環速度永遠不受影響嗎？",
+      "steps": [
+        "A：能，叫循環就無限供應",
+        "B：不能，可用中間物可能減少"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        8,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Lấy đi và bù lại",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。再生不代表可以無限制抽走中間物。"
+    },
+    {
+      "title": "核對：再生與抽用要一起看",
+      "narration": "完成一圈能再生草醯乙酸，但如果把它或其他中間物持續移到路徑外，就要有回補維持供應。循環是反應網路的一部分，不是封閉且永遠不缺料的圈。",
+      "steps": [
+        "再生：完成循環的一部分",
+        "抽用：把物質移到其他路徑",
+        "回補：補回可用中間物"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mạng chuyển hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "TCA 不直接吃氧，卻依賴再氧化",
+      "narration": "循環本身沒有直接把氧分子當成受質的步驟。但在人的有氧代謝中，需要電子傳遞鏈再氧化載體。氧氣不足而載體無法有效再生時，循環也會受到限制。",
+      "steps": [
+        "TCA：不直接消耗 O₂",
+        "電子鏈：用 O₂ 接受電子",
+        "載體再氧化，間接支持 TCA。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phụ thuộc gián tiếp vào oxy",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "每圈不直接用 O₂，就能一直缺氧轉？",
+      "narration": "有人說循環反應式裡沒有直接用氧，所以在人的細胞裡，即使電子載體無法再氧化，也能保持相同速率不停轉。這句話對嗎？",
+      "steps": [
+        "A：對，完全不受氧化還原狀態影響",
+        "B：錯，氧化型載體供應可能成為限制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tái oxy hóa chất mang",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。直接受質與間接依賴，要分開看。"
+    },
+    {
+      "title": "核對：下一週，追到電子終點",
+      "narration": "循環提供還原型載體，也需要氧化型載體持續再生。下一週讓電子沿著傳遞鏈走到氧，再看質子梯度如何連到三磷酸腺苷合成。",
+      "steps": [
+        "乙醯基加入，草醯乙酸再生。",
+        "中間物抽用，需要回補。",
+        "電子載體，要持續再氧化。",
+        "下一週：電子鏈與質子梯度"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 14",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

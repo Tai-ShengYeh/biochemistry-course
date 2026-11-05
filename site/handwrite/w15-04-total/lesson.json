@@ -1,0 +1,240 @@
+{
+  "title": "一個葡萄糖：為什麼約 30–32 ATP？",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w15.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先把直接生成與載體分開",
+      "narration": "完整有氧氧化的常見教學估算，先列糖解兩個三磷酸腺苷與循環兩個三磷酸鳥苷，再列十份菸鹼醯胺載體與兩份黃素載體。載體的等價產能，要依入口條件估算。",
+      "steps": [
+        "直接：2 ATP＋2 GTP",
+        "載體：10 NADH＋2 FADH₂",
+        "常見估算，不是每個細胞固定值。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tổng hiệu suất ATP",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "用相對產率，示範三十二的帳",
+      "narration": "若以每份菸鹼醯胺載體約二點五、黃素載體約一點五個三磷酸腺苷等價量估算，再加四個直接生成的等價量，得到約三十二。這是指定假設下的估算。",
+      "steps": [
+        "10 × 2.5 = 25",
+        "2 × 1.5 = 3",
+        "直接 4＋25＋3 = 約 32"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "ATP tương đương",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "十份 NADH，都在同一個位置？",
+      "narration": "糖解在細胞質生成兩份還原型菸鹼醯胺載體。能直接說它們和粒線體基質生成的載體，都不用任何轉移機制，就走同一個入口嗎？",
+      "steps": [
+        "A：能，完全不用分位置",
+        "B：不能，細胞質還原當量需穿梭轉移"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thoi chuyển đương lượng khử",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。NADH 本身不直接自由穿過粒線體內膜，需看穿梭系統。"
+    },
+    {
+      "title": "核對：穿梭方式，影響估算值",
+      "narration": "細胞質載體的還原當量，可以經不同穿梭系統送進粒線體。若兩份還原當量以較低產率入口估算，每份少一個等價量，總數就從約三十二變成約三十。",
+      "steps": [
+        "細胞質的 2 NADH：看穿梭入口",
+        "若每份估算少 1 ATP 等價量，",
+        "32 − 2 = 約 30"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "30 hay 32 phụ thuộc giả định",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "三十到三十二，不是固定兌換券",
+      "narration": "實際產量也受質子漏損、運輸成本、細胞狀態與生合成分流影響。不是只要吃到一個葡萄糖，細胞就一定交出剛好三十二個可數的產物。",
+      "steps": [
+        "產率：取決於入口與耦合效率",
+        "實際用途：也可能分流到合成",
+        "教學估算：要寫明假設。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điều kiện sinh lý",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "考題給假設，算完還要寫什麼？",
+      "narration": "如果題目明確給每份載體的等價產率與計量，算得三十二。最完整的回答應該怎麼寫？",
+      "steps": [
+        "A：任何細胞都一定精確產 32",
+        "B：依題目假設，估算約 32 ATP 等價量"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nêu giả định",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。保留估算基準，不把特定模型改成普遍常數。"
+    },
+    {
+      "title": "核對：把前面三週的帳接起來",
+      "narration": "糖解、入口與循環提供直接核苷酸和電子載體，電子鏈建立梯度，合成酶再利用梯度。你現在可以分清物質、電子與能量三條路，下一週再換脂肪酸與胺基酸當燃料。",
+      "steps": [
+        "物質：葡萄糖碳到 CO₂",
+        "電子：載體到 O₂",
+        "能量：梯度連到 ATP 合成",
+        "下一週：不同燃料的入口"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 15",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

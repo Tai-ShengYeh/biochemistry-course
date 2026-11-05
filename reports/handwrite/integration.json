@@ -1,9 +1,9 @@
 {
-  "chapters": 32,
-  "scenes": 234,
-  "audio_files": 234,
-  "pauses": 64,
-  "minutes": 53.94,
+  "chapters": 64,
+  "scenes": 458,
+  "audio_files": 458,
+  "pauses": 128,
+  "minutes": 110.99,
   "source_lessons": [
     {
       "chapter": "w01-01-life",
@@ -164,6 +164,166 @@
       "chapter": "w08-04-food",
       "source_package": "biochemistry-w03-w08",
       "lesson_sha256": "e5ea36ee81b8ac14b5ce3685660277f849a8b6f2529676e61b19c50f8afc5605"
+    },
+    {
+      "chapter": "w10-01-fatty",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "a8a8305aa245c730355d3cde0e4cb48873fcb05a359eef7ded33757328eec499"
+    },
+    {
+      "chapter": "w10-02-bilayer",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "b917dc05ddee20e3e6126fe07e1d96d78ced1758eb407642578a96de789e35f0"
+    },
+    {
+      "chapter": "w10-03-passive",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "608004e4b349311630b2e968417129355846d9a469077d7d9b6566baf2b16356"
+    },
+    {
+      "chapter": "w10-04-active",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "ac492696b0cf3b787f11ea394f7204497499c9d44b68d67c93e5b9490411ccb0"
+    },
+    {
+      "chapter": "w11-01-nucleotide",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "666779ca09b2f902c2004e7d98a64094ad9cc865798dbfbbd55173c853f9f58e"
+    },
+    {
+      "chapter": "w11-02-pairing",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "79b96c098a85323bc68b5cd769dd1c885e30aa6f19bceb53614ddf6fed1f4113"
+    },
+    {
+      "chapter": "w11-03-direction",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "1a8bb5c0a16e0876a6562490082b47d424ca1648ab25018852afb99cf6cd6e3f"
+    },
+    {
+      "chapter": "w11-04-information",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "81d606db51ef1d3eaff04dd7950a90d3217f84a873b8ce65fd1e84dbf6ebbe00"
+    },
+    {
+      "chapter": "w12-01-dg",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "9a3500000e67b1e014fede97ca281df6b45df671e633047fef68d85e888d8ad4"
+    },
+    {
+      "chapter": "w12-02-atp",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "9bca8afb018bf2033d078feb315c87d396d3a51d3c83e7be0fe9d10bd3e5f2d2"
+    },
+    {
+      "chapter": "w12-03-coupling",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "bbd2eab6537425b202653f9f81b5dfef69630cd57e395c137f78b25341590381"
+    },
+    {
+      "chapter": "w12-04-redox",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "e067484e97797a4ad1e32bff86d0e5f4f879676cf990bc24e2bd4d63d10e0f48"
+    },
+    {
+      "chapter": "w13-01-overview",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "14ed203e756cf3dee38421e9ef24e55eab6af7129ae9a9aac5fe9f717b1242ca"
+    },
+    {
+      "chapter": "w13-02-ledger",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "3fb19bf0fb2ef35e2feda48e7d26224eae322bc37d80673087f9fe8cff430037"
+    },
+    {
+      "chapter": "w13-03-regulation",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "633095836730be08a3b22bd9fbdcc9b2de0bb01181ff7bf982fd072b499f2fc5"
+    },
+    {
+      "chapter": "w13-04-fermentation",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "6a4aade09ea00ac986434c590c2e0d9f09a967235528a17689674982740d6324"
+    },
+    {
+      "chapter": "w14-01-entry",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "4178a6e54fa55abe1524011d9cf41df46df62907b6498ea122dc788f10104326"
+    },
+    {
+      "chapter": "w14-02-cycle",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "c0116cf4d6d8d4287721f0157ce953a0ded1b3fc65edb0b1d8b33166314133fc"
+    },
+    {
+      "chapter": "w14-03-yield",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "fcbab5a9b9ecc96ec2d61e0a2aa3eb583ecb2173d7466476b909ffe2bec0f075"
+    },
+    {
+      "chapter": "w14-04-refill",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "313a2b64e231f62dbef147ee5c816cc19dcde1a745a779aaf076ca8976e45963"
+    },
+    {
+      "chapter": "w15-01-electrons",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "4a4909b86e50ccb7e0f6a996e057a2dce0e5aa0966252671b8fd29baa9788de1"
+    },
+    {
+      "chapter": "w15-02-gradient",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "3160ac05f0835ff97bbac7c6b842a7af008461b1403d4b2e41b448bc0930346a"
+    },
+    {
+      "chapter": "w15-03-disrupt",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "2e114132666a7bf15388f275f98a254e29ef3dfb75d00e1540e5c1cae4cf49f3"
+    },
+    {
+      "chapter": "w15-04-total",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "0cc9dfb92de4fb59bb0621e824f5f7f2e5f49009846a8891d45964e908ffd348"
+    },
+    {
+      "chapter": "w16-01-entry",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "f3b2978e737893489da9010e90a3046442b14dba9849a5f9cc64e2dd754d6018"
+    },
+    {
+      "chapter": "w16-02-beta",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "54d8cd3b60fa9b97cc9f15a026a3ff50827f7ac81e402fb104fe6e440075efd0"
+    },
+    {
+      "chapter": "w16-03-ketones",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "cfb63629f64cde6a516cad2829f1f4cfabdfa400fd0f34fb7f9cb00c649c1911"
+    },
+    {
+      "chapter": "w16-04-nitrogen",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "66415b62831c719f46cc6a2af85e05b977930b799cf74434af96b3c7b1a7ee17"
+    },
+    {
+      "chapter": "w17-01-organs",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "1d72d58931715b27c0a49e4b8befbf42d110f870871c6907352dc69fd48c66a3"
+    },
+    {
+      "chapter": "w17-02-fedfast",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "c8199cda37ee57eba9baef6f6fabe3f66a8067956b4e3c26f72eac4bea2498ed"
+    },
+    {
+      "chapter": "w17-03-fasting",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "acf819cfbfed439173273e116b1648b03caea258051736e5b2cf393ac4a0ec00"
+    },
+    {
+      "chapter": "w17-04-signals",
+      "source_package": "biochemistry-w10-w17",
+      "lesson_sha256": "d14951cb5ff4f3a84ee6946ae86b468441c852a2baa7e9a959c26c87760cf374"
     }
   ]
 }

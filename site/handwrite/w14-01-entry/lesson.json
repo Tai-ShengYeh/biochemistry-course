@@ -1,0 +1,393 @@
+{
+  "title": "丙酮酸氧化：三碳到二碳乙醯基",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w14.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w14.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "糖解之後，先過入口步驟",
+      "narration": "在人的有氧代謝路徑裡，細胞質中的丙酮酸可以進入粒線體，由丙酮酸去氫酶複合體轉成乙醯輔酶Ａ。這個入口反應，不直接等同一整圈檸檬酸循環。",
+      "steps": [
+        "糖解：在細胞質",
+        "丙酮酸氧化：粒線體基質",
+        "PDH 入口反應 ≠ TCA 一圈"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        5,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Pyruvate · Acetyl-CoA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "三個碳，少一個到哪裡？",
+      "narration": "每個三碳丙酮酸在入口反應中放出一個二氧化碳，剩下二碳乙醯基接到輔酶Ａ，並形成一份還原型電子載體。二碳指乙醯基，不是整個輔酶只有兩個碳。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        5,
+        6,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khử carboxyl · Oxy hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "丙酮酸 3C",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "氧化脫羧",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "乙醯基 2C",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "由 CoA 攜帶",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "進入 TCA",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "與 4C 中間物結合",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "每個丙酮酸另產生：1 CO₂ ＋ 1 NADH",
+          "x": 380,
+          "y": 800,
+          "size": 48,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2C 指乙醯基，不是整個輔酶 A 只有兩個碳。",
+          "x": 390,
+          "y": 875,
+          "size": 38,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "乙醯 CoA，整個分子只有 2C？",
+      "narration": "課本為了追蹤碳，把乙醯輔酶Ａ標成二碳。這是否表示，整個輔酶Ａ連同乙醯基，合計真的只有兩個碳？",
+      "steps": [
+        "A：是，整個分子只有兩個碳",
+        "B：不是，2C 指被攜帶的乙醯基"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        2,
+        6,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhóm acetyl hai carbon",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。CoA 是較大的載體；碳數盤點追蹤的是乙醯基。"
+    },
+    {
+      "title": "核對：載體與被帶的基團分開",
+      "narration": "輔酶Ａ攜帶乙醯基。簡圖中的二碳，是要追蹤這個乙醯基的去路，不是刪掉載體本身的所有碳。讀代謝圖時，先問圖上在數哪一部分。",
+      "steps": [
+        "乙醯基：2C",
+        "CoA：攜帶乙醯基的輔酶",
+        "簡圖碳數，要先讀範圍。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chất mang · Nhóm được mang",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "每個葡萄糖，入口要算兩份",
+      "narration": "一個葡萄糖經糖解得到兩個丙酮酸。如果兩個都進入這條氧化路徑，入口反應合計得到兩份乙醯基、兩個二氧化碳與兩份還原型電子載體。",
+      "steps": [
+        "2 丙酮酸 → 2 乙醯 CoA",
+        "入口另產：2 CO₂、2 NADH",
+        "這步不直接產生 ATP。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hai pyruvate",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "入口的 NADH，可以再算成循環產物？",
+      "narration": "同一個葡萄糖的盤點裡，入口反應已經列兩份還原型電子載體。再列兩圈循環時，能把這兩份又加進循環那一欄一次嗎？",
+      "steps": [
+        "A：能，看到 NADH 就每欄重算",
+        "B：不能，要分開列各階段來源"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tránh đếm hai lần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。入口、循環與糖解各自列帳，不能重複。"
+    },
+    {
+      "title": "核對：分帳，才能再合帳",
+      "narration": "入口反應是兩份還原型電子載體，兩圈循環則另有自己的產物。先分開列帳，再依一個葡萄糖的同一基準加總。下一章，看四碳中間物如何再生。",
+      "steps": [
+        "糖解：先保留自己的帳",
+        "PDH：另列入口產物",
+        "TCA：再列每圈與圈數",
+        "合計前，確認沒有重複。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân biệt các giai đoạn",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

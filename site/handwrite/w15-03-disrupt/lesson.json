@@ -1,0 +1,543 @@
+{
+  "title": "缺氧、電子鏈受阻與解偶聯",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w15.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "三種改變，不能都叫鏈斷掉",
+      "narration": "沒有足夠氧、電子傳遞被抑制，以及質子旁路漏回，是不同情況。它們都可能降低氧化磷酸化的效率，但受影響的步驟不完全相同。",
+      "steps": [
+        "缺 O₂：末端受體供應受限",
+        "電子鏈抑制：某步傳遞受阻",
+        "解偶聯：回流不充分經合成酶。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thiếu oxy · Tách cặp",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "旁路漏回，梯度較難維持",
+      "narration": "這張圖多了一個不經合成酶的質子回流路徑。電子傳遞可以仍持續，甚至在某些條件下加快，但每單位耗氧支持的三磷酸腺苷生成，會下降。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Rò proton · Hiệu suất giảm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "膜間隙：H⁺ 較多",
+          "x": 240,
+          "y": 330,
+          "size": 44,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "基質：H⁺ 較少",
+          "x": 240,
+          "y": 790,
+          "size": 44,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              520
+            ],
+            [
+              1650,
+              520
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              615
+            ],
+            [
+              1650,
+              615
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 400,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 530,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 660,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 790,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 920,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1050,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1180,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1310,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1440,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 500,
+          "y": 700,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 730,
+          "cy": 565,
+          "rx": 100,
+          "ry": 75,
+          "at": 2,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "泵",
+          "x": 700,
+          "y": 530,
+          "size": 48,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            730,
+            750
+          ],
+          "to": [
+            730,
+            380
+          ],
+          "at": 3,
+          "color": "green",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "circle",
+          "cx": 1220,
+          "cy": 565,
+          "rx": 110,
+          "ry": 75,
+          "at": 3,
+          "color": "purple",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "合成酶",
+          "x": 1135,
+          "y": 535,
+          "size": 42,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1220,
+            380
+          ],
+          "to": [
+            1220,
+            750
+          ],
+          "at": 4,
+          "color": "purple",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "ADP + Pi → ATP",
+          "x": 1060,
+          "y": 805,
+          "size": 46,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1580,
+            385
+          ],
+          "to": [
+            1580,
+            750
+          ],
+          "at": 5,
+          "color": "red",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "旁路漏回",
+          "x": 1450,
+          "y": 740,
+          "size": 38,
+          "at": 5,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "梯度較難維持，ATP／耗氧比下降。",
+          "x": 520,
+          "y": 880,
+          "size": 39,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "解偶聯，等於電子一定完全不走？",
+      "narration": "在這個質子旁路回流的模型裡，能保證電子傳遞鏈從此完全沒有電子流動嗎？",
+      "steps": [
+        "A：能，解偶聯就是把電子鏈全停掉",
+        "B：不能，電子可繼續而 ATP 效率下降"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân biệt cơ chế",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。解偶聯與電子鏈抑制是不同機制。"
+    },
+    {
+      "title": "核對：先找被改變的那一步",
+      "narration": "電子鏈受阻，會限制電子向下游傳遞。解偶聯則讓一部分梯度能量經其他路徑耗散。兩者都要看條件，不能只用最後三磷酸腺苷變少，就判定機制完全相同。",
+      "steps": [
+        "電子鏈抑制：先影響電子傳遞",
+        "解偶聯：先影響梯度與合成的連動",
+        "相同結果，不保證相同原因。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cùng kết quả, khác nguyên nhân",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "沒有氧，不代表所有 ATP 立刻歸零",
+      "narration": "缺氧使這條有氧電子傳遞路徑難以持續。原有梯度可能短暫支持合成，之後逐漸消散。糖解等其他來源仍要另看，不是細胞內每個三磷酸腺苷都瞬間消失。",
+      "steps": [
+        "氧化磷酸化：逐漸受限",
+        "已有梯度：可有短暫延續",
+        "糖解等來源：另外判讀。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        7,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thời gian và nguồn ATP",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "沒有氧，圖的下一秒必定全部歸零？",
+      "narration": "只知道氧氣供應中斷，沒有說明觀察時間與其他代謝來源，就能斷言下一秒所有三磷酸腺苷都等於零嗎？",
+      "steps": [
+        "A：能，全部立即消失",
+        "B：不能，要看既有梯度與其他來源"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phạm vi mô hình",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。模型需說清楚時間尺度與所計路徑。"
+    },
+    {
+      "title": "核對：用條件解釋，不用固定倒數",
+      "narration": "機制圖幫我們理解因果，不提供個人的中毒或缺氧時間預測。先分清電子路徑、質子梯度與合成耦合，才能指出哪一段先受影響。",
+      "steps": [
+        "電子路徑：是否能繼續？",
+        "質子梯度：是否能維持？",
+        "合成耦合：回流走哪裡？"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giải thích chuỗi nhân quả",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "title": "脂肪酸：活化與進入粒線體",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "脂肪酸先活化，才進入後續路徑",
+      "narration": "脂肪酸先形成脂醯輔酶Ａ，才能進入相應的分解步驟。這個活化常把三磷酸腺苷用到單磷酸腺苷，再伴隨焦磷酸水解，成本用兩個高能磷酸鍵等價量估算。",
+      "steps": [
+        "脂肪酸 → 脂醯 CoA",
+        "活化常為 ATP → AMP＋PPi",
+        "成本：約 2 ATP 等價量"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hoạt hóa acid béo",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "長鏈脂醯基，使用肉鹼穿梭",
+      "narration": "在人類常見的長鏈脂肪酸氧化中，肉鹼穿梭協助脂醯基通過粒線體內膜的限制，最後在基質重新形成脂醯輔酶Ａ。不是把完整脂醯輔酶Ａ自由搬過內膜。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thoi carnitine",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "活化脂肪酸",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "形成脂醯 CoA",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "肉鹼穿梭",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "長鏈脂醯基的轉移",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "基質 β-氧化",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "分步縮短碳鏈",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "所有脂肪酸，都要同一個穿梭？",
+      "narration": "圖示說明長鏈脂肪酸的粒線體運輸。能把它改成，所有長度的脂肪酸，都一定需要同樣的肉鹼穿梭嗎？",
+      "steps": [
+        "A：能，不管鏈長都一樣",
+        "B：不能，不同鏈長與位置有差異"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Độ dài chuỗi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。肉鹼穿梭的敘述主要針對常見長鏈粒線體氧化。"
+    },
+    {
+      "title": "核對：先限定鏈長與細胞位置",
+      "narration": "長鏈脂醯基常經肉鹼穿梭進入粒線體基質。較短鏈與超長鏈脂肪酸，則有不同處理與運輸情況。超長鏈的初始縮短，也可涉及過氧化體。",
+      "steps": [
+        "長鏈：常需肉鹼穿梭。",
+        "較短鏈：不能一律套同模型。",
+        "超長鏈：可先在過氧化體縮短。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ty thể · Peroxisome",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "儲存的脂肪，先分成不同部分",
+      "narration": "三酸甘油酯分解，可以釋出脂肪酸與甘油。脂肪酸和甘油的代謝去路不同，不能把整個脂肪都說成只走同一條入口。",
+      "steps": [
+        "三酸甘油酯 → 脂肪酸＋甘油",
+        "脂肪酸：活化後參與氧化",
+        "甘油：有自己的轉化入口。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Triglyceride · Glycerol",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "只用了一個 ATP，成本就是一個等價量？",
+      "narration": "若活化用一個三磷酸腺苷，形成單磷酸腺苷與焦磷酸，焦磷酸又被水解。只數用了幾個分子，就把成本當成一個等價量，正確嗎？",
+      "steps": [
+        "A：正確，永遠只算 1",
+        "B：不正確，常算 2 ATP 等價量"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân tử và ATP tương đương",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。要按高能磷酸轉移的等價量，而非只數ATP分子數。"
+    },
+    {
+      "title": "核對：分子數與等價成本不同",
+      "narration": "一個三磷酸腺苷轉到單磷酸腺苷，再加上焦磷酸水解，常記作兩個三磷酸腺苷等價量的活化成本。下一章先限定簡單脂肪酸模型，再算圈數與產物。",
+      "steps": [
+        "活化：先付成本。",
+        "運輸：看鏈長與位置。",
+        "氧化圈數：下一章另外計算。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuẩn bị trước oxy hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

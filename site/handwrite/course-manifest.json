@@ -286,5 +286,293 @@
     "minutes": 1.59,
     "pauses": 2,
     "audio": true
+  },
+  {
+    "id": "w10-01-fatty",
+    "week": 10,
+    "title": "脂肪酸：飽和、順式與反式",
+    "scenes": 7,
+    "minutes": 1.666,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w10-02-bilayer",
+    "week": 10,
+    "title": "磷脂雙層與流體鑲嵌模型",
+    "scenes": 7,
+    "minutes": 1.687,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w10-03-passive",
+    "week": 10,
+    "title": "被動運輸：梯度與淨方向",
+    "scenes": 7,
+    "minutes": 1.596,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w10-04-active",
+    "week": 10,
+    "title": "主動運輸與鈉鉀幫浦",
+    "scenes": 7,
+    "minutes": 1.712,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w11-01-nucleotide",
+    "week": 11,
+    "title": "核苷、核苷酸與 DNA／RNA",
+    "scenes": 7,
+    "minutes": 1.731,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w11-02-pairing",
+    "week": 11,
+    "title": "鹼基配對、氫鍵與雙股構造",
+    "scenes": 7,
+    "minutes": 1.795,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w11-03-direction",
+    "week": 11,
+    "title": "反平行與互補股的寫法",
+    "scenes": 7,
+    "minutes": 1.713,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w11-04-information",
+    "week": 11,
+    "title": "從核酸資訊到蛋白質功能",
+    "scenes": 7,
+    "minutes": 1.785,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w12-01-dg",
+    "week": 12,
+    "title": "ΔG：方向、平衡與速度",
+    "scenes": 7,
+    "minutes": 1.729,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w12-02-atp",
+    "week": 12,
+    "title": "ATP 水解：完整反應的能量差",
+    "scenes": 7,
+    "minutes": 1.742,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w12-03-coupling",
+    "week": 12,
+    "title": "能量耦合：相加以前先看連動",
+    "scenes": 7,
+    "minutes": 1.739,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w12-04-redox",
+    "week": 12,
+    "title": "氧化還原與代謝分工",
+    "scenes": 7,
+    "minutes": 1.78,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w13-01-overview",
+    "week": 13,
+    "title": "糖解：位置、碳數與兩期",
+    "scenes": 7,
+    "minutes": 1.711,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w13-02-ledger",
+    "week": 13,
+    "title": "糖解的 ATP 與 NADH 帳",
+    "scenes": 7,
+    "minutes": 1.697,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w13-03-regulation",
+    "week": 13,
+    "title": "糖解的三個常見調節點",
+    "scenes": 7,
+    "minutes": 1.802,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w13-04-fermentation",
+    "week": 13,
+    "title": "丙酮酸、發酵與 NAD⁺ 再生",
+    "scenes": 7,
+    "minutes": 1.833,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w14-01-entry",
+    "week": 14,
+    "title": "丙酮酸氧化：三碳到二碳乙醯基",
+    "scenes": 7,
+    "minutes": 1.851,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w14-02-cycle",
+    "week": 14,
+    "title": "檸檬酸循環：四碳中間物再生",
+    "scenes": 7,
+    "minutes": 1.694,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w14-03-yield",
+    "week": 14,
+    "title": "每圈產物與每葡萄糖總帳",
+    "scenes": 7,
+    "minutes": 1.837,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w14-04-refill",
+    "week": 14,
+    "title": "中間物抽用、回補與氧氣",
+    "scenes": 7,
+    "minutes": 1.796,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w15-01-electrons",
+    "week": 15,
+    "title": "電子傳遞鏈與氧的角色",
+    "scenes": 7,
+    "minutes": 1.779,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w15-02-gradient",
+    "week": 15,
+    "title": "化學滲透：質子泵與 ATP 合成酶",
+    "scenes": 7,
+    "minutes": 1.876,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w15-03-disrupt",
+    "week": 15,
+    "title": "缺氧、電子鏈受阻與解偶聯",
+    "scenes": 7,
+    "minutes": 1.753,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w15-04-total",
+    "week": 15,
+    "title": "一個葡萄糖：為什麼約 30–32 ATP？",
+    "scenes": 7,
+    "minutes": 1.901,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w16-01-entry",
+    "week": 16,
+    "title": "脂肪酸：活化與進入粒線體",
+    "scenes": 7,
+    "minutes": 1.851,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w16-02-beta",
+    "week": 16,
+    "title": "β-氧化：C16 為什麼是七圈？",
+    "scenes": 7,
+    "minutes": 1.78,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w16-03-ketones",
+    "week": 16,
+    "title": "酮體：肝臟製造、其他組織利用",
+    "scenes": 7,
+    "minutes": 1.759,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w16-04-nitrogen",
+    "week": 16,
+    "title": "胺基酸：氮的處理與碳架去路",
+    "scenes": 7,
+    "minutes": 1.858,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w17-01-organs",
+    "week": 17,
+    "title": "肝、肌肉、脂肪與腦的分工",
+    "scenes": 7,
+    "minutes": 1.942,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w17-02-fedfast",
+    "week": 17,
+    "title": "飽食與空腹：胰島素、升糖素",
+    "scenes": 7,
+    "minutes": 1.851,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w17-03-fasting",
+    "week": 17,
+    "title": "長期空腹：腦的燃料從哪裡來？",
+    "scenes": 7,
+    "minutes": 1.883,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w17-04-signals",
+    "week": 17,
+    "title": "訊號、磷酸化與血糖調節",
+    "scenes": 7,
+    "minutes": 1.92,
+    "pauses": 2,
+    "audio": true
   }
 ]

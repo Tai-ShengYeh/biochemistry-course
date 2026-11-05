@@ -1,0 +1,1001 @@
+{
+  "title": "反平行與互補股的寫法",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w11.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先寫方向，再補鹼基",
+      "narration": "核酸鏈有五端與三端。雙股去氧核糖核酸的兩股方向相反，稱為反平行。寫互補股時，要同時處理配對規則與方向。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đối song song · Bổ sung",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "一股：5′ → 3′",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "對面：3′ → 5′",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "先標方向，再做 A↔T、G↔C。",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        }
+      ],
+      "board_steps": [
+        "一股：5′ → 3′",
+        "對面：3′ → 5′",
+        "先標方向，再做 A↔T、G↔C。"
+      ]
+    },
+    {
+      "title": "對齊寫，不等於都從五端開始",
+      "narration": "原股從左到右是五端到三端，對面的互補股從左到右就要標三端到五端。字母配對正確，但方向寫錯，答案仍不完整。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đầu 5′ · Đầu 3′",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "5′",
+          "x": 240,
+          "y": 380,
+          "size": 58,
+          "at": 1,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "3′",
+          "x": 1550,
+          "y": 380,
+          "size": 58,
+          "at": 1,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "3′",
+          "x": 240,
+          "y": 730,
+          "size": 58,
+          "at": 1,
+          "color": "green",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "5′",
+          "x": 1550,
+          "y": 730,
+          "size": 58,
+          "at": 1,
+          "color": "green",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              440
+            ],
+            [
+              1510,
+              440
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              760
+            ],
+            [
+              1510,
+              760
+            ]
+          ],
+          "at": 1,
+          "color": "green",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 470,
+          "y": 465,
+          "size": 63,
+          "at": 2.0,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 470,
+          "y": 660,
+          "size": 63,
+          "at": 2.0,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              475,
+              575
+            ],
+            [
+              475,
+              625
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              488,
+              575
+            ],
+            [
+              488,
+              625
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 610,
+          "y": 465,
+          "size": 63,
+          "at": 2.35,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 610,
+          "y": 660,
+          "size": 63,
+          "at": 2.35,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              615,
+              575
+            ],
+            [
+              615,
+              625
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              628,
+              575
+            ],
+            [
+              628,
+              625
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              641,
+              575
+            ],
+            [
+              641,
+              625
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 750,
+          "y": 465,
+          "size": 63,
+          "at": 2.7,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 750,
+          "y": 660,
+          "size": 63,
+          "at": 2.7,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              755,
+              575
+            ],
+            [
+              755,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              768,
+              575
+            ],
+            [
+              768,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              781,
+              575
+            ],
+            [
+              781,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 890,
+          "y": 465,
+          "size": 63,
+          "at": 3.05,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 890,
+          "y": 660,
+          "size": 63,
+          "at": 3.05,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              895,
+              575
+            ],
+            [
+              895,
+              625
+            ]
+          ],
+          "at": 4.9,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              908,
+              575
+            ],
+            [
+              908,
+              625
+            ]
+          ],
+          "at": 4.9,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 1030,
+          "y": 465,
+          "size": 63,
+          "at": 3.4,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 1030,
+          "y": 660,
+          "size": 63,
+          "at": 3.4,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1035,
+              575
+            ],
+            [
+              1035,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1048,
+              575
+            ],
+            [
+              1048,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1061,
+              575
+            ],
+            [
+              1061,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 1170,
+          "y": 465,
+          "size": 63,
+          "at": 3.75,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 1170,
+          "y": 660,
+          "size": 63,
+          "at": 3.75,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1175,
+              575
+            ],
+            [
+              1175,
+              625
+            ]
+          ],
+          "at": 5.5,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1188,
+              575
+            ],
+            [
+              1188,
+              625
+            ]
+          ],
+          "at": 5.5,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 1310,
+          "y": 465,
+          "size": 63,
+          "at": 4.1,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 1310,
+          "y": 660,
+          "size": 63,
+          "at": 4.1,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1315,
+              575
+            ],
+            [
+              1315,
+              625
+            ]
+          ],
+          "at": 5.8,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1328,
+              575
+            ],
+            [
+              1328,
+              625
+            ]
+          ],
+          "at": 5.8,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "上下兩條線：糖磷酸骨架；中間短線：配對氫鍵示意。",
+          "x": 270,
+          "y": 865,
+          "size": 36,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "先把對齊的互補股寫出來",
+      "narration": "原股是五端，腺嘌呤、鳥嘌呤、鳥嘌呤、胸腺嘧啶、胞嘧啶、腺嘌呤、胸腺嘧啶，三端。對齊寫在下方的互補股，應是哪個方向？",
+      "steps": [],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Viết mạch bổ sung",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "原股：5′-AGGTCAT-3′",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "對面：？-TCCAGTA-？",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "A：3′ 到 5′　B：5′ 到 3′",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        }
+      ],
+      "board_steps": [
+        "原股：5′-AGGTCAT-3′",
+        "對面：？-TCCAGTA-？",
+        "A：3′ 到 5′　B：5′ 到 3′"
+      ],
+      "pause": true,
+      "answer": "A，對齊的互補股為 3′-TCCAGTA-5′。"
+    },
+    {
+      "title": "核對：先配對，兩端反過來",
+      "narration": "依照配對規則，對面的字母是胸、胞、胞、腺、鳥、胸、腺。方向則和上股相反，所以左側是三端，右側是五端。",
+      "steps": [],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kiểm tra hai đầu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "5′-A G G T C A T-3′",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "3′-T C C A G T A-5′",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "字母和方向，要一起核對。",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        },
+        {
+          "type": "box",
+          "of": "prime-step-2",
+          "at": 8.399999999999999,
+          "color": "blue",
+          "dur": 0.55
+        }
+      ],
+      "board_steps": [
+        "5′-A G G T C A T-3′",
+        "3′-T C C A G T A-5′",
+        {
+          "text": "字母和方向，要一起核對。",
+          "emphasis": "box"
+        }
+      ]
+    },
+    {
+      "title": "題目要求五到三，要整條反寫",
+      "narration": "如果題目要求用五端到三端寫互補股，就要從互補股右邊開始讀。這叫反向互補，不是只把兩端標籤交換，字母卻留在原處。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mạch bổ sung ngược",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "對齊：3′-TCCAGTA-5′",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "反向讀：5′-ATGACCT-3′",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "反轉整個順序，不能只換標籤。",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        }
+      ],
+      "board_steps": [
+        "對齊：3′-TCCAGTA-5′",
+        "反向讀：5′-ATGACCT-3′",
+        "反轉整個順序，不能只換標籤。"
+      ]
+    },
+    {
+      "title": "五到三的答案，哪個正確？",
+      "narration": "原股仍是五端到三端的這個七個鹼基序列。請選出用五端到三端寫出的反向互補股。",
+      "steps": [],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Reverse complement",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "原股：5′-AGGTCAT-3′",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "A：5′-TCCAGTA-3′",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "B：5′-ATGACCT-3′",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        }
+      ],
+      "board_steps": [
+        "原股：5′-AGGTCAT-3′",
+        "A：5′-TCCAGTA-3′",
+        "B：5′-ATGACCT-3′"
+      ],
+      "pause": true,
+      "answer": "B。A 只改標籤，沒有把互補股反向讀取。"
+    },
+    {
+      "title": "核對：三步就能自查",
+      "narration": "先補對面的鹼基，再標相反的方向。如果需要五端到三端，最後再反向讀取。也可以檢查，做兩次反向互補，是否回到原本序列。",
+      "steps": [
+        "一：互補配對",
+        "二：標反平行方向",
+        "三：依要求反向讀取",
+        "自查：兩次反向互補回原股。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tự kiểm tra",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

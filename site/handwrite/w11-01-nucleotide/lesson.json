@@ -1,0 +1,431 @@
+{
+  "title": "核苷、核苷酸與 DNA／RNA",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w11.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "這週的 base，是含氮鹼基",
+      "narration": "在這週，英文的鹼基指的是核酸中的含氮基團，不是把整個核酸當成第二週酸鹼分類裡的一個鹼。看到字，要先看學習情境。",
+      "steps": [
+        "含氮鹼基：A、G、C、T、U",
+        "核苷：鹼基＋糖",
+        "核苷酸：再加一個或多個磷酸"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        5,
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Base nitrogen · Nucleotide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "核苷酸的三個部分",
+      "narration": "先找含氮鹼基，再找五碳糖與磷酸。這張圖只表示連接關係。核苷沒有磷酸；核苷酸可以有一個、兩個或三個磷酸，不只限定一個。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Base · Đường · Phosphate",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 460,
+          "cy": 530,
+          "rx": 115,
+          "ry": 90,
+          "at": 1,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "磷酸",
+          "x": 390,
+          "y": 495,
+          "size": 54,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              580,
+              530
+            ],
+            [
+              760,
+              530
+            ]
+          ],
+          "at": 2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              790,
+              440
+            ],
+            [
+              920,
+              415
+            ],
+            [
+              1000,
+              530
+            ],
+            [
+              920,
+              650
+            ],
+            [
+              790,
+              615
+            ],
+            [
+              790,
+              440
+            ]
+          ],
+          "at": 2,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 2
+        },
+        {
+          "type": "text",
+          "text": "五碳糖",
+          "x": 790,
+          "y": 505,
+          "size": 50,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1000,
+              530
+            ],
+            [
+              1170,
+              530
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1390,
+          "cy": 530,
+          "rx": 190,
+          "ry": 110,
+          "at": 3,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "含氮鹼基",
+          "x": 1230,
+          "y": 495,
+          "size": 52,
+          "at": 4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "核苷：糖＋鹼基；核苷酸：再加一個或多個磷酸。",
+          "x": 240,
+          "y": 790,
+          "size": 42,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "示意連接順序，未畫完整原子與鍵。",
+          "x": 550,
+          "y": 865,
+          "size": 34,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "ATP 也算核苷酸嗎？",
+      "narration": "三磷酸腺苷有腺嘌呤、核糖與三個磷酸。它是否因為有三個磷酸，就不算核苷酸？",
+      "steps": [
+        "A：不算，核苷酸只能一個磷酸",
+        "B：仍算，磷酸數不只限一個"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nucleotide triphosphate",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。ATP 是含三個磷酸的核苷酸。"
+    },
+    {
+      "title": "核對：分清有沒有與有幾個",
+      "narration": "核苷和核苷酸的區別，先看有沒有磷酸。核苷酸還可以按磷酸數再分類。單磷酸、雙磷酸與三磷酸，不是同一個數量。",
+      "steps": [
+        "核苷：糖＋鹼基",
+        "核苷酸：含磷酸",
+        "ATP：腺苷三磷酸"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nucleoside · Nucleotide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "DNA 與 RNA：先比較糖",
+      "narration": "去氧核糖在第二號碳的位置是氫，核糖在對應位置有羥基。常見的核酸中，去氧核糖核酸使用胸腺嘧啶，核糖核酸通常以尿嘧啶取代它。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Deoxyribose · Ribose",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "DNA 糖的 2′：H",
+          "x": 190,
+          "y": 330,
+          "size": 68,
+          "at": 1.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-0"
+        },
+        {
+          "type": "text",
+          "text": "RNA 糖的 2′：OH",
+          "x": 190,
+          "y": 453,
+          "size": 68,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-1"
+        },
+        {
+          "type": "text",
+          "text": "常見鹼基：DNA 用 T；RNA 用 U",
+          "x": 190,
+          "y": 576,
+          "size": 68,
+          "at": 6.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0,
+          "id": "prime-step-2"
+        }
+      ],
+      "board_steps": [
+        "DNA 糖的 2′：H",
+        "RNA 糖的 2′：OH",
+        "常見鹼基：DNA 用 T；RNA 用 U"
+      ]
+    },
+    {
+      "title": "名字不同，就一定是不同分子？",
+      "narration": "越南語資料有時用另一組縮寫表示去氧核糖核酸。看到本課的縮寫和另一份資料不同，就一定代表分子不同嗎？",
+      "steps": [
+        "DNA 與 ADN",
+        "RNA 與 ARN",
+        "A：一定不同　B：需核對完整名稱"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        3
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "DNA / ADN · RNA / ARN",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。這兩組常是同一分子的不同語言縮寫。"
+    },
+    {
+      "title": "核對：用完整名稱建立對照",
+      "narration": "同一種分子可以有不同語言的縮寫。先核對完整名稱與結構，再比較內容。本章要記住的是鹼基、糖與磷酸的組合，以及糖在第二號碳的差異。",
+      "steps": [
+        "先核對名稱，再看結構。",
+        "核苷酸：三類組件",
+        "DNA／RNA：糖與常見鹼基有別。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        6,
+        7,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đối chiếu thuật ngữ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

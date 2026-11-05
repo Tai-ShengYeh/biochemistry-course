@@ -1,0 +1,371 @@
+{
+  "title": "飽食與空腹：胰島素、升糖素",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w17.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w17.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "激素訊號，配合不同營養狀態",
+      "narration": "胰臟貝塔細胞分泌胰島素，阿法細胞分泌升糖素。飽食與空腹時，兩者的相對訊號改變，幫助組織配合物質供應與需求，不是身體只剩一種激素。",
+      "steps": [
+        "胰島素：胰臟 β 細胞",
+        "升糖素：胰臟 α 細胞",
+        "營養狀態改變，相對訊號也改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Insulin · Glucagon",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "吃飽後，增加利用與儲存",
+      "narration": "一般飽食狀態下，胰島素訊號有利於某些組織攝取葡萄糖，以及促進肝醣、脂質等儲存。實際通量還要看器官與受質供應，不能只用一個儲存圖示代表所有反應。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Trạng thái no · Dự trữ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "進食後供應",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "血中養分改變",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "胰島素訊號",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "透過相應受體",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "利用與儲存",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "例如肝醣與脂質",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "所有細胞進葡萄糖，都必須靠胰島素？",
+      "narration": "胰島素能促進骨骼肌與脂肪組織的部分葡萄糖攝取。能把它改成，腦與紅血球等所有細胞，都必須靠同一個機制才進得了葡萄糖嗎？",
+      "steps": [
+        "A：能，所有細胞都只用 GLUT4",
+        "B：不能，不同組織使用不同運輸機制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        11,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vận chuyển theo từng mô",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。腦、紅血球等有不依賴相同胰島素-GLUT4機制的攝取。"
+    },
+    {
+      "title": "核對：胰島素重要，效果也分組織",
+      "narration": "骨骼肌與脂肪組織有受胰島素調節的葡萄糖載體。腦與紅血球有不同的載體與調節方式；肝臟也不能直接套成肌肉的同一個入口模式。",
+      "steps": [
+        "骨骼肌、脂肪：GLUT4 可受調節",
+        "腦、紅血球：不同攝取機制",
+        "肝臟：另看代謝調節與載體。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        11,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Không cùng một cơ chế",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "空腹動員，不等於血糖一定失控變低",
+      "narration": "空腹時，較低胰島素與肝臟升糖素訊號等，支持燃料動員。人的脂肪動員也受兒茶酚胺等影響，不能把升糖素說成直接控制每個器官相同的開關。",
+      "steps": [
+        "空腹：供糖與燃料動員增加",
+        "升糖素：重要作用器官是肝臟",
+        "脂肪動員：也受其他激素調節。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Trạng thái đói · Huy động",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "升糖素，對肌肉與肝臟完全同作用？",
+      "narration": "只知道升糖素能促進肝臟供糖，就能推論它對骨骼肌直接做完全相同的調節，也讓肌肉大量輸出葡萄糖嗎？",
+      "steps": [
+        "A：能，所有器官受體與酵素相同",
+        "B：不能，要看受體與器官代謝能力"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        8,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thụ thể và đường chuyển hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。激素作用需相應受體與路徑，不能直接跨器官照搬。"
+    },
+    {
+      "title": "核對：用狀態、訊號、器官一起說",
+      "narration": "一般調節會幫助維持血糖，而不是空腹就必定出現病理性低血糖。請說明哪個狀態、哪個訊號、作用在哪個器官，再指出可能改變的路徑。",
+      "steps": [
+        "狀態：飽食或空腹？",
+        "訊號：哪些激素相對改變？",
+        "器官：有什麼受體與酵素？",
+        "路徑：供應、利用或儲存？"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giải thích theo bối cảnh",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

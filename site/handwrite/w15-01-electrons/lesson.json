@@ -1,0 +1,549 @@
+{
+  "title": "電子傳遞鏈與氧的角色",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w15.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先追電子，再追質子",
+      "narration": "前面路徑形成的還原型載體，可以把電子交給粒線體電子傳遞系統。今天先看電子到哪裡，再看哪些步驟把質子送到膜另一側。",
+      "steps": [
+        "電子：沿載體依序傳遞",
+        "質子：部分步驟跨膜泵送",
+        "兩種箭頭，不能混成同一條。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuỗi vận chuyển electron",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "兩個入口，會合到 Q",
+      "narration": "這張圖比較還原型菸鹼醯胺載體經複合體一，以及琥珀酸氧化經複合體二的電子入口。兩條路都會通到泛醌，再經三、細胞色素與四，最後交給氧。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "I / II → Q → III → cyt c → IV",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "NADH",
+          "x": 200,
+          "y": 350,
+          "size": 53,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "琥珀酸氧化",
+          "x": 600,
+          "y": 350,
+          "size": 46,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 420,
+          "cy": 540,
+          "rx": 65,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "I",
+          "x": 385,
+          "y": 510,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 740,
+          "cy": 480,
+          "rx": 65,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "II",
+          "x": 705,
+          "y": 450,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 900,
+          "cy": 540,
+          "rx": 65,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "Q",
+          "x": 865,
+          "y": 510,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 1130,
+          "cy": 540,
+          "rx": 65,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "III",
+          "x": 1095,
+          "y": 510,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 1340,
+          "cy": 540,
+          "rx": 85,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "cyt c",
+          "x": 1275,
+          "y": 510,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 1550,
+          "cy": 540,
+          "rx": 65,
+          "ry": 48,
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "IV",
+          "x": 1515,
+          "y": 510,
+          "size": 46,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            350,
+            400
+          ],
+          "to": [
+            420,
+            480
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            740,
+            400
+          ],
+          "to": [
+            740,
+            425
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            490,
+            540
+          ],
+          "to": [
+            830,
+            540
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            800,
+            500
+          ],
+          "to": [
+            835,
+            520
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            970,
+            540
+          ],
+          "to": [
+            1060,
+            540
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1200,
+            540
+          ],
+          "to": [
+            1250,
+            540
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1430,
+            540
+          ],
+          "to": [
+            1480,
+            540
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "O₂ → H₂O",
+          "x": 1440,
+          "y": 750,
+          "size": 55,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1550,
+            600
+          ],
+          "to": [
+            1550,
+            725
+          ],
+          "at": 4,
+          "color": "orange",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "電子依序傳遞；Q 與 cyt c 是可移動的載體。",
+          "x": 330,
+          "y": 875,
+          "size": 38,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "電子最後交給誰？",
+      "narration": "在這裡的人類有氧呼吸電子傳遞鏈中，電子最後由複合體四轉交給哪個受體？",
+      "steps": [
+        "A：氧 O₂",
+        "B：ATP",
+        "C：二氧化碳 CO₂"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chất nhận electron cuối cùng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。O₂ 接受電子並在此過程中形成水。"
+    },
+    {
+      "title": "核對：氧被還原成水",
+      "narration": "氧接受電子，並與質子共同形成水。它不是在糖解的每一步直接幫忙，也不是把電子變成二氧化碳。二氧化碳來自前面燃料的脫羧反應。",
+      "steps": [
+        "O₂：最終電子受體",
+        "末端：電子＋O₂＋H⁺ → 水",
+        "CO₂ 與 H₂O：來源要分開。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Oxy bị khử thành nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "複合體 II，不泵質子",
+      "narration": "複合體一、三、四參與質子泵送，二不直接泵質子。本圖的琥珀酸路徑繞過一，所以通常保留較少可用來建立梯度的能量。不是所有黃素酵素的電子都從二進入。",
+      "steps": [
+        "泵質子：I、III、IV",
+        "II：傳電子，不直接泵 H⁺",
+        "本例：琥珀酸經 II → Q。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Complex II không bơm proton",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "看到 FADH₂，就都一定走 II？",
+      "narration": "其他代謝反應也可能使用黃素酵素。能只看到還原型黃素這個名字，就保證所有電子都一定由複合體二進入嗎？",
+      "steps": [
+        "A：能，所有黃素都只接 II",
+        "B：不能，其他黃素系統也可接到 Q"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Các đường vào khác nhau",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。琥珀酸脫氫酶是 II；其他入口機制需另看。"
+    },
+    {
+      "title": "核對：圖的範圍要說清楚",
+      "narration": "這個常見圖比較兩個入口，不能當成所有電子來源的完整地圖。要看實際酵素把電子交給誰。下一章，分開追質子，並找回流方向。",
+      "steps": [
+        "先找電子來源與入口。",
+        "再看是否經過質子泵。",
+        "下一章：從梯度支持 ATP 合成。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Theo dõi electron",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

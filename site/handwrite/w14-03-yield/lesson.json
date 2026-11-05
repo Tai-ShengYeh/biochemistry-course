@@ -1,0 +1,377 @@
+{
+  "title": "每圈產物與每葡萄糖總帳",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w14.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w14.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "一圈，先列四種產物",
+      "narration": "每一份乙醯基完成一圈常見的檸檬酸循環，形成三份還原型菸鹼醯胺載體、一份還原型黃素載體、一份高能核苷酸，以及兩個二氧化碳。先分欄記，不全部叫三磷酸腺苷。",
+      "steps": [
+        "每圈：3 NADH",
+        "1 FADH₂、1 GTP",
+        "2 CO₂"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Sản phẩm một vòng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "載體、核苷酸與碳，分開列",
+      "narration": "這裡用三磷酸鳥苷表示循環的受質層次磷酸化產物。不同組織或同功酵素也可能直接形成三磷酸腺苷。電子載體之後的產能，留到下一週另算。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "NADH · FADH₂ · GTP · CO₂",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "1 圈 TCA",
+          "x": 720,
+          "y": 340,
+          "size": 70,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "3 NADH",
+          "x": 300,
+          "y": 510,
+          "size": 67,
+          "at": 2,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "1 FADH₂",
+          "x": 1130,
+          "y": 510,
+          "size": 67,
+          "at": 3,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "1 GTP",
+          "x": 300,
+          "y": 725,
+          "size": 67,
+          "at": 4,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2 CO₂",
+          "x": 1130,
+          "y": 725,
+          "size": 67,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "只計循環；丙酮酸氧化與糖解另外列帳。",
+          "x": 420,
+          "y": 875,
+          "size": 39,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "兩圈的 FADH₂，是幾份？",
+      "narration": "同一個葡萄糖提供兩份乙醯基，各完成一圈循環。只計這兩圈，還原型黃素載體有幾份？",
+      "steps": [
+        "每圈：1 FADH₂",
+        "A：1 份　B：2 份　C：6 份"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hai vòng TCA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。兩圈是2份FADH₂；6份是NADH。"
+    },
+    {
+      "title": "核對：先選正確欄，再乘圈數",
+      "narration": "兩圈循環產生六份還原型菸鹼醯胺載體、兩份還原型黃素載體、兩份三磷酸鳥苷與四個二氧化碳。不要把不同載體的數量互換。",
+      "steps": [],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đếm theo từng sản phẩm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2 圈 TCA",
+          "x": 720,
+          "y": 340,
+          "size": 70,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "6 NADH",
+          "x": 300,
+          "y": 510,
+          "size": 67,
+          "at": 2,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2 FADH₂",
+          "x": 1130,
+          "y": 510,
+          "size": 67,
+          "at": 3,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "2 GTP",
+          "x": 300,
+          "y": 725,
+          "size": 67,
+          "at": 4,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "4 CO₂",
+          "x": 1130,
+          "y": 725,
+          "size": 67,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "只計循環；丙酮酸氧化與糖解另外列帳。",
+          "x": 420,
+          "y": 875,
+          "size": 39,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "加上入口，但別把階段混在一起",
+      "narration": "每個葡萄糖的糖解有兩份還原型菸鹼醯胺載體，入口再有兩份，兩圈循環有六份，合計十份。氧化成二氧化碳的總碳數，也要把入口算進去。",
+      "steps": [
+        "NADH：糖解 2＋入口 2＋TCA 6",
+        "合計：10 NADH、2 FADH₂",
+        "CO₂：入口 2＋TCA 4 = 6"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tổng theo một glucose",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "每葡萄糖的 CO₂，只有四個？",
+      "narration": "若一個六碳葡萄糖完全經這條有氧氧化路徑分解，只把兩圈循環的四個二氧化碳當總量，少了哪個階段？",
+      "steps": [
+        "A：丙酮酸氧化的 2 CO₂",
+        "B：糖解放出的 2 CO₂"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        2,
+        9,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kiểm tra carbon",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。糖解不釋 CO₂；入口另有兩個。"
+    },
+    {
+      "title": "核對：六個碳，階段合計六個 CO₂",
+      "narration": "入口放出兩個二氧化碳，循環再放出四個，和葡萄糖的六個碳對得上。電子載體與直接形成的高能核苷酸，則保留各自的帳，下一週再估算總三磷酸腺苷。",
+      "steps": [
+        "CO₂：2＋4 = 6",
+        "NADH、FADH₂：載體帳",
+        "ATP、GTP：直接核苷酸帳"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cân đối sổ sách",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

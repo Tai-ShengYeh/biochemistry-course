@@ -1,7 +1,7 @@
-/* Opt-in links from the eight authored lessons; existing simulations stay intact. */
+/* Opt-in links from the sixteen authored lessons; existing simulations stay intact. */
 (() => {
   const week = typeof WEEK !== 'undefined' ? Number(WEEK.week) : 0;
-  if (week < 1 || week > 8 || document.getElementById('handwrite-link')) return;
+  if (![1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17].includes(week) || document.getElementById('handwrite-link')) return;
   const host = document.querySelector('#keypoints');
   if (!host) return;
   const section = document.createElement('section');

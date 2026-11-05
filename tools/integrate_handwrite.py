@@ -1,16 +1,16 @@
-"""Publish the already-validated W01–W08 handwriting lessons and course entry points.
+"""Publish the already-validated W01–W08 / W10–W17 handwriting lessons and course entry points.
 
-python tools/integrate_handwrite.py --source-root <folder containing both lesson packages>
+python tools/integrate_handwrite.py --source-root <folder containing all three lesson packages>
 Rerun after embedding/exporting the weekly labs. Never copies synthesis cache or skill sources.
 """
 import argparse,hashlib,html,json,re,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];SITE=ROOT/'site';OUT=SITE/'handwrite'
-TITLES={1:'細胞與生物分子',2:'水、pH 與緩衝溶液',3:'胺基酸與胜肽',4:'蛋白質三維結構',5:'肌紅蛋白與血紅蛋白',6:'酵素的催化作用',7:'酵素動力學與調節',8:'碳水化合物'}
+TITLES={1:'細胞與生物分子',2:'水、pH 與緩衝溶液',3:'胺基酸與胜肽',4:'蛋白質三維結構',5:'肌紅蛋白與血紅蛋白',6:'酵素的催化作用',7:'酵素動力學與調節',8:'碳水化合物',10:'脂質與生物膜',11:'核苷酸與核酸',12:'生物能量學',13:'糖解作用',14:'檸檬酸循環',15:'氧化磷酸化',16:'脂肪酸與胺基酸代謝',17:'代謝整合與激素調節'}
 STYLE='''*{box-sizing:border-box}body{margin:0;background:#f5f2e8;color:#213b49;font:17px/1.7 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:35px 20px}h1{font-size:clamp(30px,5vw,48px);line-height:1.35}nav{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}nav a{border:1px solid #507a75;padding:8px 16px;border-radius:9px;text-decoration:none}a{color:#245f58}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.card{display:block;background:#fffef9;color:inherit;text-decoration:none;padding:24px;border:1px solid #dbd8c9;border-radius:15px;box-shadow:0 6px 0 #e5dfcd}.card span{font-weight:800;color:#2b7369}.card h2{font-size:23px;line-height:1.4}.card p{font-size:15px}a:focus-visible{outline:3px solid #e1a735}aside{padding:18px;background:#e6f0eb;border-left:5px solid #2b7369;margin:28px 0}footer{font-size:15px;color:#50636b}'''
 
 def page(title,body,nav):
-    return f'<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}｜手寫教學</title><style>{STYLE}</style><main><small>Hóa sinh · 手寫動畫課堂</small><h1>{html.escape(title)}</h1><p>中文女聲＋越南語關鍵詞。先看圖、作答，再說出理由。遇到題目停頓，想好後按「繼續」。</p><nav>{nav}</nav>{body}<footer><p>可暫停、拖曳、切換幕次與調速。手機建議橫放。</p><p><a href="notes/w01-w02.md">第 1–2 週來源與教學備註</a> · <a href="notes/w03-w08.md">第 3–8 週來源與教學備註</a></p></footer></main></html>'
+    return f'<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}｜手寫教學</title><style>{STYLE}</style><main><small>Hóa sinh · 手寫動畫課堂</small><h1>{html.escape(title)}</h1><p>中文女聲＋越南語關鍵詞。先看圖、作答，再說出理由。遇到題目停頓，想好後按「繼續」。</p><nav>{nav}</nav>{body}<footer><p>可暫停、拖曳、切換幕次與調速。手機建議橫放。</p><p><a href="notes/w01-w02.md">第 1–2 週來源與教學備註</a> · <a href="notes/w03-w08.md">第 3–8 週來源與教學備註</a> · <a href="notes/w10-w17.md">第 10–17 週來源與教學備註</a></p></footer></main></html>'
 
 def marked(content,name,new):
     """Replace only the integration's own marked block, keeping host content."""
@@ -20,7 +20,7 @@ def marked(content,name,new):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--source-root',type=Path,required=True);args=parser.parse_args()
     records=[];provenance=[]
-    for package in ['biochemistry-w01-w02','biochemistry-w03-w08']:
+    for package in ['biochemistry-w01-w02','biochemistry-w03-w08','biochemistry-w10-w17']:
         source=args.source_root/package
         rows=json.loads((source/'course-manifest.json').read_text(encoding='utf-8'))
         assert all(r['audio'] for r in rows)
@@ -35,11 +35,11 @@ def main():
             records.append(row)
             provenance.append({'chapter':row['id'],'source_package':package,'lesson_sha256':hashlib.sha256((original/'lesson.json').read_bytes()).hexdigest()})
         notes=OUT/'notes';notes.mkdir(parents=True,exist_ok=True)
-        tag='w01-w02' if 'w01' in package else 'w03-w08'
+        tag=package.removeprefix('biochemistry-')
         shutil.copy2(source/'teacher-notes.md',notes/(tag+'.md'))
         if (source/'source-map.md').exists():shutil.copy2(source/'source-map.md',notes/(tag+'-source-map.md'))
         licenses=OUT/'licenses';shutil.copytree(source/'licenses',licenses,dirs_exist_ok=True)
-    records.sort(key=lambda r:r['id']);assert len(records)==32
+    records.sort(key=lambda r:r['id']);assert len(records)==4*len(TITLES)
     (OUT/'course-manifest.json').write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding='utf-8')
     for i,row in enumerate(records):
         path=OUT/row['id']/'player.html';content=path.read_text(encoding='utf-8');w=row['week']
@@ -74,10 +74,10 @@ def main():
         tag='<script src="../../assets/handwrite-links.js"></script>'
         if tag not in content:content=content.replace('</body>',tag+'\n</body>')
         path.write_text(content,encoding='utf-8')
-    body=f'<p><b>第 1–8 週 · 32 章 · {scenes} 幕 · 約 {total:.0f} 分鐘 · {pauses} 個作答停頓</b>（另加思考時間）</p><section class="grid">{cards}</section>'
+    body=f'<p><b>第 1–8、10–17 週 · {len(records)} 章 · {scenes} 幕 · 約 {total:.0f} 分鐘 · {pauses} 個作答停頓</b>（另加思考時間）</p><section class="grid">{cards}</section>'
     (OUT/'index.html').write_text(page('生物化學：手寫教學動畫',body,'<a href="../index.html">← 課程首頁</a>'+week_links),encoding='utf-8')
     for relative,href in [('index.html','handwrite/index.html'),('vi-a2/lessons/index.html','../../handwrite/index.html'),('animations.html','handwrite/index.html')]:
-        path=SITE/relative;content=path.read_text(encoding='utf-8');content,block=marked(content,'overview',f'<p style="text-align:center;padding:12px"><a href="{href}">✍ 第 1–8 週手寫動畫／Bài giảng viết tay</a></p>')
+        path=SITE/relative;content=path.read_text(encoding='utf-8');content,block=marked(content,'overview',f'<p style="text-align:center;padding:12px"><a href="{href}">✍ 第 1–8、10–17 週手寫動畫／Bài giảng viết tay</a></p>')
         content=content.replace('<body>','<body>\n'+block,1);path.write_text(content,encoding='utf-8')
     # Add direct per-week links to the existing homepage week cells.
     path=SITE/'index.html';content=path.read_text(encoding='utf-8')
@@ -86,7 +86,7 @@ def main():
         pattern=rf'(<a class="lesson" href="vi-a2/lessons/w{w:02}\.html">.*?</a>)'
         content,count=re.subn(pattern,lambda m:m[0]+block,content,count=1);assert count==1
     path.write_text(content,encoding='utf-8')
-    report={'chapters':32,'scenes':scenes,'audio_files':scenes,'pauses':pauses,'minutes':round(total,2),'source_lessons':provenance}
+    report={'chapters':len(records),'scenes':scenes,'audio_files':scenes,'pauses':pauses,'minutes':round(total,2),'source_lessons':provenance}
     (ROOT/'reports/handwrite').mkdir(parents=True,exist_ok=True)
     (ROOT/'reports/handwrite/integration.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='source_lessons'},ensure_ascii=False))

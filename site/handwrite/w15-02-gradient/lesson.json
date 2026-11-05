@@ -1,0 +1,513 @@
+{
+  "title": "化學滲透：質子泵與 ATP 合成酶",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w15.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先分兩側：膜間隙與基質",
+      "narration": "粒線體內膜分開基質與膜間隙。電子傳遞支持部分複合體，把質子從基質送向膜間隙，建立包含電位差與酸鹼差的電化學梯度。",
+      "steps": [
+        "內膜兩側：基質／膜間隙",
+        "質子泵：基質 → 膜間隙",
+        "梯度：電位差＋pH 差"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khoang gian màng · Chất nền",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "流回合成酶，方向相反",
+      "narration": "建立梯度的質子泵，與使用梯度的合成酶，箭頭方向相反。質子經合成酶回到基質，讓構形與旋轉變化支持三磷酸腺苷生成，不是把質子本身改名成產物。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thẩm thấu hóa học · ATP synthase",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "膜間隙：H⁺ 較多",
+          "x": 240,
+          "y": 330,
+          "size": 44,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "基質：H⁺ 較少",
+          "x": 240,
+          "y": 790,
+          "size": 44,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              520
+            ],
+            [
+              1650,
+              520
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              615
+            ],
+            [
+              1650,
+              615
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 400,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 530,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 660,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 790,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 920,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1050,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1180,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1310,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1440,
+          "y": 400,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 500,
+          "y": 700,
+          "size": 35,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 730,
+          "cy": 565,
+          "rx": 100,
+          "ry": 75,
+          "at": 2,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "泵",
+          "x": 700,
+          "y": 530,
+          "size": 48,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            730,
+            750
+          ],
+          "to": [
+            730,
+            380
+          ],
+          "at": 3,
+          "color": "green",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "circle",
+          "cx": 1220,
+          "cy": 565,
+          "rx": 110,
+          "ry": 75,
+          "at": 3,
+          "color": "purple",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "合成酶",
+          "x": 1135,
+          "y": 535,
+          "size": 42,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1220,
+            380
+          ],
+          "to": [
+            1220,
+            750
+          ],
+          "at": 4,
+          "color": "purple",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "ADP + Pi → ATP",
+          "x": 1060,
+          "y": 805,
+          "size": 46,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "梯度包含膜電位與 pH 差；圖上粒子數不代表 ATP 產率。",
+          "x": 290,
+          "y": 880,
+          "size": 35,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "ATP 的原料，就是流過的 H⁺？",
+      "narration": "質子經合成酶回流，可以支持三磷酸腺苷生成。是否表示，那些流過的質子本身，就直接變成三磷酸腺苷的整個分子？",
+      "steps": [
+        "A：是，H⁺ 直接變 ATP",
+        "B：不是，ADP 與 Pi 才是合成原料"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nguyên liệu và động lực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。H⁺ 回流提供耦合驅動，ATP 由 ADP 與 Pi 合成。"
+    },
+    {
+      "title": "核對：物質與能量路徑分開",
+      "narration": "二磷酸腺苷與無機磷酸參與合成三磷酸腺苷；質子沿電化學梯度回流，提供驅動這個過程的條件。把原料、機器與驅動分開，才不會畫成質子變成能量分子。",
+      "steps": [
+        "原料：ADP＋Pi",
+        "催化與耦合：ATP 合成酶",
+        "驅動：H⁺ 順電化學梯度回流"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ghép cặp hóa-thẩm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "第十週建立梯度，現在利用梯度",
+      "narration": "第十週的鈉鉀幫浦使用三磷酸腺苷，建立離子梯度。這裡在呼吸供能模式下，合成酶使用質子梯度來合成。方向依機制與條件而定，不是所有幫浦都做同一件事。",
+      "steps": [
+        "鈉鉀幫浦：ATP 支持建立梯度",
+        "本例合成酶：梯度支持合成 ATP",
+        "比較：能量轉移的方向不同。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tạo gradient · Dùng gradient",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "只有 pH 相同，就一定沒有驅動？",
+      "narration": "如果兩側酸鹼值相同，但仍有膜電位差，能只靠酸鹼值相同，就保證質子的電化學驅動完全為零嗎？",
+      "steps": [
+        "A：能，梯度只看 pH",
+        "B：不能，還有電位差這一項"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gradient điện hóa proton",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。質子驅動力包含化學與電位兩部分。"
+    },
+    {
+      "title": "核對：兩種差，都要考慮",
+      "narration": "質子帶正電，因此兩側的電位差與酸鹼差，都會影響回流。圖上的粒子數只幫助看方向，不能拿幾顆畫出的質子，直接算出細胞真實產量。",
+      "steps": [
+        "H⁺：帶正電的粒子",
+        "判讀：pH 差＋電位差",
+        "示意粒子數，不是實測產率。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đọc mô hình",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

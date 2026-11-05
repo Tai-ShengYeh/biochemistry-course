@@ -1,0 +1,795 @@
+{
+  "title": "鹼基配對、氫鍵與雙股構造",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w11.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "配對規則，先說是哪種核酸",
+      "narration": "常見雙股去氧核糖核酸中，腺嘌呤配胸腺嘧啶，鳥嘌呤配胞嘧啶。嘌呤有雙環，嘧啶有單環，配對要看相容的形狀與化學互動。",
+      "steps": [
+        "A、G：嘌呤，雙環",
+        "C、T、U：嘧啶，單環",
+        "常見 DNA 配對：A—T、G—C"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Bắt cặp base",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "同股骨架，跨股配對",
+      "narration": "上下的線表示各股糖磷酸骨架。中間短線表示鹼基配對氫鍵。典型的腺嘌呤與胸腺嘧啶有兩個，鳥嘌呤與胞嘧啶有三個。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết hydrogen",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "5′",
+          "x": 240,
+          "y": 380,
+          "size": 58,
+          "at": 1,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "3′",
+          "x": 1550,
+          "y": 380,
+          "size": 58,
+          "at": 1,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "3′",
+          "x": 240,
+          "y": 730,
+          "size": 58,
+          "at": 1,
+          "color": "green",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "5′",
+          "x": 1550,
+          "y": 730,
+          "size": 58,
+          "at": 1,
+          "color": "green",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              440
+            ],
+            [
+              1510,
+              440
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              350,
+              760
+            ],
+            [
+              1510,
+              760
+            ]
+          ],
+          "at": 1,
+          "color": "green",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 470,
+          "y": 465,
+          "size": 63,
+          "at": 2.0,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 470,
+          "y": 660,
+          "size": 63,
+          "at": 2.0,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              475,
+              575
+            ],
+            [
+              475,
+              625
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              488,
+              575
+            ],
+            [
+              488,
+              625
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 610,
+          "y": 465,
+          "size": 63,
+          "at": 2.35,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 610,
+          "y": 660,
+          "size": 63,
+          "at": 2.35,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              615,
+              575
+            ],
+            [
+              615,
+              625
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              628,
+              575
+            ],
+            [
+              628,
+              625
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 750,
+          "y": 465,
+          "size": 63,
+          "at": 2.7,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 750,
+          "y": 660,
+          "size": 63,
+          "at": 2.7,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              755,
+              575
+            ],
+            [
+              755,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              768,
+              575
+            ],
+            [
+              768,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              781,
+              575
+            ],
+            [
+              781,
+              625
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 890,
+          "y": 465,
+          "size": 63,
+          "at": 3.05,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 890,
+          "y": 660,
+          "size": 63,
+          "at": 3.05,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              895,
+              575
+            ],
+            [
+              895,
+              625
+            ]
+          ],
+          "at": 4.9,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              908,
+              575
+            ],
+            [
+              908,
+              625
+            ]
+          ],
+          "at": 4.9,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              921,
+              575
+            ],
+            [
+              921,
+              625
+            ]
+          ],
+          "at": 4.9,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 1030,
+          "y": 465,
+          "size": 63,
+          "at": 3.4,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "G",
+          "x": 1030,
+          "y": 660,
+          "size": 63,
+          "at": 3.4,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1035,
+              575
+            ],
+            [
+              1035,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1048,
+              575
+            ],
+            [
+              1048,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1061,
+              575
+            ],
+            [
+              1061,
+              625
+            ]
+          ],
+          "at": 5.2,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 1170,
+          "y": 465,
+          "size": 63,
+          "at": 3.75,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 1170,
+          "y": 660,
+          "size": 63,
+          "at": 3.75,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1175,
+              575
+            ],
+            [
+              1175,
+              625
+            ]
+          ],
+          "at": 5.5,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1188,
+              575
+            ],
+            [
+              1188,
+              625
+            ]
+          ],
+          "at": 5.5,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "T",
+          "x": 1310,
+          "y": 465,
+          "size": 63,
+          "at": 4.1,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "A",
+          "x": 1310,
+          "y": 660,
+          "size": 63,
+          "at": 4.1,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1315,
+              575
+            ],
+            [
+              1315,
+              625
+            ]
+          ],
+          "at": 5.8,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1328,
+              575
+            ],
+            [
+              1328,
+              625
+            ]
+          ],
+          "at": 5.8,
+          "color": "orange",
+          "stroke": 3,
+          "dur": 0.25
+        },
+        {
+          "type": "text",
+          "text": "上下兩條線：糖磷酸骨架；中間短線：配對氫鍵示意。",
+          "x": 270,
+          "y": 865,
+          "size": 36,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "把同一股連起來，也是氫鍵？",
+      "narration": "去氧核糖核酸同一股中，核苷酸之間由糖磷酸骨架相連。這種主鏈連接，能全部叫作跨股配對氫鍵嗎？",
+      "steps": [
+        "A：可以，核酸裡都是氫鍵",
+        "B：不能，骨架含共價磷酸雙酯鍵"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết phosphodiester",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。骨架共價連接與跨股配對氫鍵，屬不同關係。"
+    },
+    {
+      "title": "核對：不要把兩種連接混用",
+      "narration": "同股的磷酸雙酯鍵，把核苷酸連成有方向的鏈。不同股之間，互補鹼基形成氫鍵；鹼基堆疊也參與雙股穩定。只畫梯子的橫線，還不是完整分子結構。",
+      "steps": [
+        "同股：糖磷酸共價骨架",
+        "跨股：互補鹼基配對",
+        "穩定性：也受鹼基堆疊影響。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khung đường-phosphate",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "GC 多，常較耐熱，但有條件",
+      "narration": "長度、鹽濃度等條件相近時，較高的鳥嘌呤與胞嘧啶比例，常提高雙股熔解溫度。但配對氫鍵數不是唯一原因，序列與堆疊也重要。",
+      "steps": [
+        "相近條件下：GC 比例高常較耐熱",
+        "還要看序列、長度與鹽條件。",
+        "不能只加總氫鍵就算出熔點。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Độ bền chuỗi kép",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "RNA 一定完全沒有配對區嗎？",
+      "narration": "核糖核酸常被畫成單股。能因此說，它一定沒有任何局部配對，也不會形成摺疊構造嗎？",
+      "steps": [
+        "A：可以，單股完全不能配對",
+        "B：不能，RNA 可有局部配對與摺疊"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu trúc RNA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。常見單股 RNA 仍可形成配對區；也有雙股 RNA 的情況。"
+    },
+    {
+      "title": "核對：常見外形，不是絕對規則",
+      "narration": "許多核糖核酸是一條鏈，但可以在不同區段互相配對。常見去氧核糖核酸是雙股，也不能把這個描述改成每一種情況都相同。分類時要保留通常這個條件。",
+      "steps": [
+        "常見 DNA：雙股",
+        "常見 RNA：單股，可有局部配對",
+        {
+          "text": "常見，不代表沒有例外。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu trúc và điều kiện",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

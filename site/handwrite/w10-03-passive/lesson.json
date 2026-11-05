@@ -1,0 +1,447 @@
+{
+  "title": "被動運輸：梯度與淨方向",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w10.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "過膜，先問往哪個方向",
+      "narration": "被動運輸的淨方向，是沿著相應的勢能梯度。對不帶電粒子，先比較濃度；對離子，還要加入膜兩側電位的影響。",
+      "steps": [
+        "不帶電粒子：先看濃度梯度",
+        "離子：看電化學梯度",
+        "被動運輸：不直接耦合耗能。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vận chuyển thụ động",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "高到低，是淨結果",
+      "narration": "圖中左側濃度較高，右側較低。粒子仍有雙向隨機運動，但平均有較多粒子從高濃度側移到低濃度側，形成淨通量。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gradient · Khuếch tán",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              970,
+              350
+            ],
+            [
+              970,
+              820
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 7,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1020,
+              350
+            ],
+            [
+              1020,
+              820
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 7,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "高濃度",
+          "x": 380,
+          "y": 330,
+          "size": 52,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "低濃度",
+          "x": 1320,
+          "y": 330,
+          "size": 52,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 440,
+          "cy": 480,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 540,
+          "cy": 480,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 640,
+          "cy": 480,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 740,
+          "cy": 480,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 440,
+          "cy": 600,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 540,
+          "cy": 600,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 640,
+          "cy": 600,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 740,
+          "cy": 600,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1350,
+          "cy": 480,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1480,
+          "cy": 600,
+          "rx": 20,
+          "ry": 20,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "arrow",
+          "from": [
+            650,
+            735
+          ],
+          "to": [
+            1320,
+            735
+          ],
+          "at": 4,
+          "color": "green",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "順濃度淨擴散：仍有雙向隨機運動",
+          "x": 390,
+          "y": 815,
+          "size": 43,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "此圖限定不帶電粒子；離子要看電化學梯度。",
+          "x": 420,
+          "y": 880,
+          "size": 32,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "被動通道裡，只能單向走嗎？",
+      "narration": "這個通道允許粒子通過。淨方向是左到右，是否代表每一個粒子，都完全不可能從右到左？",
+      "steps": [
+        "A：是，所有粒子只能單向",
+        "B：不是，淨通量是雙向運動的差"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dòng thuần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。被動擴散有雙向運動，梯度決定淨方向。"
+    },
+    {
+      "title": "核對：分清個別運動與淨通量",
+      "narration": "兩側粒子都在移動。左到右的數量較多，才有向右的淨通量。當沒有淨通量時，也不表示所有粒子都停止運動。",
+      "steps": [
+        "個別粒子：仍可雙向移動",
+        "淨通量：兩方向通量的差",
+        "平衡：不等於停止熱運動。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cân bằng động",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "需要蛋白質，仍可能是被動",
+      "narration": "氧等小型非極性分子可以直接穿過脂雙層。另一些物質需要通道或載體，但只要沿著相應梯度、不直接耦合耗能，也可以是被動運輸。",
+      "steps": [
+        "簡單擴散：直接穿過脂雙層",
+        "促進性擴散：通道或載體協助",
+        "有蛋白質 ≠ 一定主動運輸"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khuếch tán hỗ trợ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "離子只要看高到低就夠？",
+      "narration": "如果濃度差推動一種正離子向右，電位差卻推動它向左，只看濃度就一定能判定淨方向嗎？",
+      "steps": [
+        "A：一定，只看濃度",
+        "B：不一定，要合看電化學梯度"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gradient điện hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。離子移動同時受濃度與電位影響。"
+    },
+    {
+      "title": "核對：梯度的種類要說清楚",
+      "narration": "不帶電粒子的簡圖，不能直接套到所有離子。判讀離子通量時，要把濃度與電位的影響合起來。下一章，再看細胞如何用能量建立梯度。",
+      "steps": [
+        "先說粒子是否帶電。",
+        "再比較濃度與電位。",
+        "下一章：幫浦與能量耦合。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điện tích và vận chuyển",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

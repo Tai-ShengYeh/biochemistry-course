@@ -1,0 +1,366 @@
+{
+  "title": "訊號、磷酸化與血糖調節",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w17.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w17.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "受體與瘦體素，是不同角色",
+      "narration": "受體是接收訊號的分子。瘦體素則是一種激素，參與反映較長時間的能量儲存狀態，不是每一餐吃飽的唯一通知。名字相似，角色仍要分清楚。",
+      "steps": [
+        "受體：receptor，接收訊號",
+        "瘦體素：leptin，一種激素",
+        "瘦體素參與能量儲存狀態訊號。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thụ thể · Leptin",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "訊號經過受體，再調節酵素",
+      "narration": "相應激素與受體互動後，可以透過訊號路徑影響多種酵素。蛋白激酶加上磷酸基，磷酸酶移除；每個目標酵素的活性方向，要看自身機制。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hormone · Thụ thể · Phosphoryl hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "激素訊號",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "分子間互動",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "相應受體",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "啟動訊號路徑",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "酵素調節",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "含磷酸化等方式",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "加上磷酸，一定把所有酵素打開？",
+      "narration": "同一種激素訊號可以影響很多酵素。可以因此把磷酸化統一說成，每個酵素都一定被打開、活性上升嗎？",
+      "steps": [
+        "A：可以，加磷酸永遠是開",
+        "B：不能，效果依酵素與位點而定"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hiệu quả tùy enzyme",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。磷酸化可能活化或抑制，不能用通用開關取代機制。"
+    },
+    {
+      "title": "核對：第七週的條件，還要保留",
+      "narration": "磷酸化是調節方式，不是固定的開字標籤。受體、訊號路徑與目標蛋白不同，效果就可能不同。用條件解釋，才能把分子訊號連到器官的代謝需求。",
+      "steps": [
+        "同一修飾：不同目標可有不同效果",
+        "相應受體與路徑，決定反應。",
+        {
+          "text": "調節方向，要看蛋白質與位點。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cơ chế truyền tín hiệu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "血糖調節失衡，有不同機制",
+      "narration": "第一型糖尿病常涉及免疫系統破壞胰臟貝塔細胞，使胰島素嚴重不足。第二型則常有胰島素阻抗，加上分泌功能不足，與多種因素有關，不能只歸因於體型或單一受體故障。",
+      "steps": [
+        "第一型：β 細胞受損，胰島素嚴重不足",
+        "第二型：阻抗＋分泌功能不足",
+        "遺傳、環境等多種因素共同相關。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đái tháo đường type 1 · Type 2",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "第二型，一定完全沒有胰島素？",
+      "narration": "若一個人有第二型糖尿病，就能直接說，他的身體一定從頭到尾完全沒有任何胰島素嗎？",
+      "steps": [
+        "A：能，第二型永遠完全不分泌",
+        "B：不能，阻抗與分泌功能要分開看"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        13,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kháng insulin · Tiết insulin",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。第二型常有胰島素阻抗與逐漸不足的分泌功能，不等於始終完全沒有。"
+    },
+    {
+      "title": "核對：把整學期的方法串起來",
+      "narration": "第二型不能只用完全沒有胰島素來解釋。回顧這學期，我們從結構看互動，從酵素看路徑，再用器官與激素條件說明分工。到互動實驗改條件時，請先預測，再指出觀察到的證據。",
+      "steps": [
+        "結構 → 互動 → 功能",
+        "路徑：分開追碳、電子與能量",
+        "器官與訊號：依條件調節",
+        "先預測、再觀察、說出理由。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập học kỳ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

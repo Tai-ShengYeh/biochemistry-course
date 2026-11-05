@@ -1,0 +1,397 @@
+{
+  "title": "肝、肌肉、脂肪與腦的分工",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w17.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w17.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "同一種燃料，不同器官有不同角色",
+      "narration": "這週把代謝路徑放回身體。肝臟參與血糖調節、酮體與尿素生成；肌肉、脂肪組織與腦，各有不同需求與能力。器官之間需要交換物質與訊號。",
+      "steps": [
+        "肝臟：供糖與多種代謝處理",
+        "肌肉：支援收縮與局部需求",
+        "脂肪：儲存與動員，也傳遞訊號",
+        "腦：依狀態使用合適燃料"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gan · Cơ · Mô mỡ · Não",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "先畫供應對象，再畫箭頭",
+      "narration": "肝臟可以把葡萄糖送入血液，供腦等組織使用。肌肉儲存的肝醣，主要支援自己的工作。兩者都叫肝醣，不代表輸出方向與用途完全相同。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân công giữa các cơ quan",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肝臟",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "供應葡萄糖",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "血液",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "運送燃料",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "腦",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "一般主要用葡萄糖",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肌肝醣 → 肌肉主要自用",
+          "x": 430,
+          "y": 775,
+          "size": 57,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "長期空腹腦仍需部分葡萄糖；腎也可參與供糖。",
+          "x": 330,
+          "y": 875,
+          "size": 37,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "肌肝醣，能直接當肝臟那樣供血糖？",
+      "narration": "骨骼肌分解自己的肝醣後，是否能依肝臟的同一個末端步驟，直接輸出大量游離葡萄糖來維持血糖？",
+      "steps": [
+        "A：能，兩種器官有相同末端酵素",
+        "B：不能，骨骼肌缺乏葡萄糖-6-磷酸酶"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        8,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Glycogen cơ chủ yếu tự dùng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。肌肉不能像肝臟一樣用此末端步驟輸出游離葡萄糖。"
+    },
+    {
+      "title": "核對：主要自用，也可以間接交換",
+      "narration": "肌肉缺少肝臟那個釋出游離葡萄糖的末端酵素。肌肉仍可釋出乳酸、丙胺酸等物質，讓其他器官再利用。因此主要自用，不是說它和全身沒有任何物質交換。",
+      "steps": [
+        "肌肉：G6P 主要進局部代謝",
+        "乳酸、丙胺酸等可參與器官交換。",
+        {
+          "text": "直接供血糖，與間接交換不同。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Trao đổi giữa các cơ quan",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "肝臟重要，但不是唯一供糖器官",
+      "narration": "腎臟不只排尿，也能進行醣質新生，在較長空腹等條件下參與供糖。器官分工圖是簡化模型，不能把肝臟是重要供應者，改成只有肝臟能做。",
+      "steps": [
+        "肝臟：重要的供糖器官",
+        "腎臟：也能進行醣質新生",
+        "貢獻比例：依狀態改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thận · Tân tạo glucose",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "成熟紅血球，能改用酮體供 ATP？",
+      "narration": "長期空腹時，腦可以增加利用酮體。成熟哺乳類紅血球沒有粒線體，也能直接套用相同利用路徑，改靠酮體供應自己的三磷酸腺苷嗎？",
+      "steps": [
+        "A：能，所有組織都一樣",
+        "B：不能，仍需要糖解供 ATP"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hồng cầu và ty thể",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。成熟紅血球缺乏粒線體，不能套用酮體氧化路徑。"
+    },
+    {
+      "title": "核對：需要哪個器官構造，也要看",
+      "narration": "不同組織的酵素與構造不同，能用的燃料也不同。成熟紅血球仍依賴葡萄糖的糖解；腦在長期空腹時則能增加利用酮體。用器官名字配合能力，才畫得出正確箭頭。",
+      "steps": [
+        "成熟紅血球：沒有粒線體",
+        "腦：長期空腹可增加利用酮體",
+        "肝、腎、肌肉：分工不完全相同。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Năng lực của từng mô",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "title": "酮體：肝臟製造、其他組織利用",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "脂肪動員後，可以形成酮體",
+      "narration": "長期空腹等條件下，肝臟脂肪酸氧化增加，乙醯輔酶Ａ的去路改變，可以促進酮體生成。酮體可經血液送給其他組織使用，不是脂肪酸突然直接變成血糖。",
+      "steps": [
+        "脂肪酸氧化 → 乙醯 CoA",
+        "肝臟：可以生成酮體",
+        "酮體：可經血液輸送。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thể ceton · Gan",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "腦可以增加利用酮體",
+      "narration": "肝臟製造的酮體可以送到腦等組織，作為長期空腹時的重要替代燃料。但腦仍有部分葡萄糖需求，不能把它說成從此完全不需要葡萄糖。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        10,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhiên liệu thay thế",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肝臟",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "葡萄糖＋酮體",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "血液",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "運送燃料",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "腦",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "可增加利用酮體",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肌肝醣 → 肌肉主要自用",
+          "x": 430,
+          "y": 775,
+          "size": 57,
+          "at": 5,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "長期空腹腦仍需部分葡萄糖；腎也可參與供糖。",
+          "x": 330,
+          "y": 875,
+          "size": 37,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "肝臟做酮體，主要都自己用？",
+      "narration": "肝臟是酮體的重要製造者。是否表示它也能用同樣的酮體利用途徑，大量把自己做的酮體當燃料？",
+      "steps": [
+        "A：是，製造與利用一定相同",
+        "B：不是，肝臟缺乏關鍵利用酵素"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tạo ra và sử dụng khác nhau",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。肝臟缺乏SCOT等關鍵酮體利用步驟，主要供其他組織。"
+    },
+    {
+      "title": "核對：器官角色要分開",
+      "narration": "肝臟主要製造並輸出酮體；有相應粒線體酵素的組織，可以把酮體轉回乙醯輔酶Ａ再氧化。成熟紅血球沒有粒線體，因此也不能套用這條利用路徑。",
+      "steps": [
+        "肝臟：製造、輸出",
+        "其他適合組織：轉回乙醯 CoA",
+        "成熟紅血球：不能靠此路供 ATP。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân công giữa các mô",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "有酮體，不等於已經酮酸中毒",
+      "narration": "乙醯乙酸與貝塔羥丁酸增加，可增加酸負荷；丙酮則不屬於同樣的酸。正常生成與病理性過度生成不同，是否酸中毒還要看累積程度及身體調節。",
+      "steps": [
+        "乙醯乙酸、β-羥丁酸：可增加酸負荷",
+        "丙酮：不是同樣的酸",
+        "正常酮生成 ≠ 一定酮酸中毒"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ketone body · Acid-base",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "空腹出現酮體，就一定是疾病？",
+      "narration": "如果只知道空腹時酮體增加，沒有其他臨床或酸鹼資料，可以直接斷定一定發生酮酸中毒嗎？",
+      "steps": [
+        "A：可以，任何酮體都是疾病",
+        "B：不可以，需區分生理與病理條件"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Sinh lý và bệnh lý",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。酮體可作正常燃料，不能只由出現酮體判定酸中毒。"
+    },
+    {
+      "title": "核對：用條件解釋酮體",
+      "narration": "酮體可以幫助運送脂肪來源的燃料，也可能在特定疾病狀態下過度累積。這裡用機制區分兩種情況，不用一個分子名字，就取代完整判斷。",
+      "steps": [
+        "來源：肝臟酮生成",
+        "用途：輸送到適合組織供能",
+        "酸鹼影響：看種類、量與調節。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điều kiện quyết định ý nghĩa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

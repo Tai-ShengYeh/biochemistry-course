@@ -1,0 +1,406 @@
+{
+  "title": "ATP 水解：完整反應的能量差",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w12.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w12.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "ATP 可以再生，不是用完就消失",
+      "narration": "三磷酸腺苷參與能量轉移，水解後常形成二磷酸腺苷與無機磷酸。細胞還可以用其他有利反應提供能量，再合成三磷酸腺苷。",
+      "steps": [
+        "ATP + H₂O → ADP + Pi",
+        "ADP + Pi → ATP：需能量支持",
+        "比較的是完整反應的收支。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "ATP · Thủy phân",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "三個磷酸，不是三包神奇能量",
+      "narration": "這個簡圖標示腺苷與三個磷酸。斷開化學鍵本身需要能量。水解的淨放能，要把所有斷鍵、成鍵與產物和水的互動，一起比較。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết · Năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "腺苷",
+          "x": 250,
+          "y": 490,
+          "size": 60,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "ATP",
+          "x": 800,
+          "y": 345,
+          "size": 65,
+          "at": 1,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 700,
+          "cy": 540,
+          "rx": 80,
+          "ry": 65,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "P",
+          "x": 675,
+          "y": 500,
+          "size": 65,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              440,
+              540
+            ],
+            [
+              615,
+              540
+            ]
+          ],
+          "at": 2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1030,
+          "cy": 540,
+          "rx": 80,
+          "ry": 65,
+          "at": 3,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "P",
+          "x": 1005,
+          "y": 500,
+          "size": 65,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              785,
+              540
+            ],
+            [
+              945,
+              540
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1360,
+          "cy": 540,
+          "rx": 80,
+          "ry": 65,
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "P",
+          "x": 1335,
+          "y": 500,
+          "size": 65,
+          "at": 4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1115,
+              540
+            ],
+            [
+              1275,
+              540
+            ]
+          ],
+          "at": 4,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "ATP + H₂O → ADP + Pi",
+          "x": 420,
+          "y": 750,
+          "size": 63,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "斷鍵本身需能量；淨放能要比較完整反應的兩端。",
+          "x": 300,
+          "y": 865,
+          "size": 38,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "只要切一個鍵，就會自動放能？",
+      "narration": "如果只說切開化學鍵這個動作，不考慮形成的新鍵與其他互動，可以把它說成必定釋出能量嗎？",
+      "steps": [
+        "A：可以，切鍵本身都放能",
+        "B：不能，斷鍵本身需要能量"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        8,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phá liên kết cần năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。淨放能來自整個反應的能量差，不是單獨斷鍵。"
+    },
+    {
+      "title": "核對：看總變化，不看單一動作",
+      "narration": "三磷酸腺苷水解的產物，在許多細胞條件下具有較低自由能。共振、溶劑化與電荷互動等因素，都影響總差值。不能把能量想成從切開的鍵裡流出來。",
+      "steps": [
+        "斷鍵：需能量",
+        "成鍵與其他互動：也要列入",
+        "淨放能：比較反應物與產物。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tổng biến đổi năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "高能鍵，是一個需要解釋的簡稱",
+      "narration": "課本稱高能磷酸鍵，重點是水解或磷酸基轉移，可以和有利的自由能變化相關。不是說那個鍵本身最難斷，也不是三個磷酸都代表相同的反應。",
+      "steps": [
+        "高能：描述可耦合的自由能變化",
+        "不是只比較一根鍵的強弱。",
+        "水解路徑與反應條件都重要。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuyển nhóm phosphate",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "產物多了，ΔG 仍永遠相同？",
+      "narration": "如果水解產物與反應物的濃度比例改變，實際自由能差還一定是完全相同的固定數字嗎？",
+      "steps": [
+        "A：一定，實際值永遠不變",
+        "B：不一定，實際 ΔG 受濃度影響"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nồng độ ảnh hưởng ΔG",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。標準條件的數值與細胞內實際 ΔG 要分開。"
+    },
+    {
+      "title": "核對：記住功能，也保留條件",
+      "narration": "三磷酸腺苷的功能，是參與可再生的能量轉移與反應耦合。要估算實際自由能差，需要濃度等條件。下一章用假定數字練習，先把計量基準寫清楚。",
+      "steps": [
+        "ATP：可再生的能量轉移工具",
+        "ΔG：隨指定反應與條件而定",
+        "接下來：練習真正的反應耦合。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ghép cặp năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

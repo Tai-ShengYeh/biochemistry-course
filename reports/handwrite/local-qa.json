@@ -1,6 +1,6 @@
 {
-  "base": "http://127.0.0.1:57719/biochemistry-course/",
-  "static_references_checked": 886,
+  "base": "http://127.0.0.1:58597/biochemistry-course/",
+  "static_references_checked": 1895,
   "weeks": [
     {
       "week": 1,
@@ -60,6 +60,70 @@
     },
     {
       "week": 8,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 10,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 11,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 12,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 13,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 14,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 15,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 16,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 17,
       "four_chapters": true,
       "lesson_entry": true,
       "reveal_route": true,
@@ -291,9 +355,234 @@
       "pause_gates": 2,
       "mobile": true,
       "seek_reset_speed": true
+    },
+    {
+      "id": "w10-01-fatty",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w10-02-bilayer",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w10-03-passive",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w10-04-active",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w11-01-nucleotide",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w11-02-pairing",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w11-03-direction",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w11-04-information",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w12-01-dg",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w12-02-atp",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w12-03-coupling",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w12-04-redox",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w13-01-overview",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w13-02-ledger",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w13-03-regulation",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w13-04-fermentation",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w14-01-entry",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w14-02-cycle",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w14-03-yield",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w14-04-refill",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w15-01-electrons",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w15-02-gradient",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w15-03-disrupt",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w15-04-total",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w16-01-entry",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w16-02-beta",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w16-03-ketones",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w16-04-nitrogen",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w17-01-organs",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w17-02-fedfast",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w17-03-fasting",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w17-04-signals",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
     }
   ],
   "page_errors": [],
   "failed_requests": [],
-  "http_errors": []
+  "http_errors": [],
+  "recovered_http_errors": []
 }

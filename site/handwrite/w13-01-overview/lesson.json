@@ -1,0 +1,378 @@
+{
+  "title": "糖解：位置、碳數與兩期",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w13.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先限定範圍：只計糖解",
+      "narration": "糖解在細胞質中進行。這裡從一個游離葡萄糖開始，經過十個主要反應步驟，得到兩個丙酮酸。先不要把後面的循環與電子鏈混進帳裡。",
+      "steps": [
+        "位置：細胞質",
+        "起點：1 葡萄糖，6C",
+        "終點：2 丙酮酸，各 3C"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đường phân · Bào tương",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "六個碳，分成兩份三碳",
+      "narration": "六碳的糖在途中分成兩份三碳單元，兩份都繼續走後半段。因此盤點後半段的產物，必須同時算進兩份，不能只看圖上一條代表線。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Sáu carbon → Hai phần ba carbon",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "葡萄糖 6C",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "細胞質中開始",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "2 份三碳單元",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "後半段要乘 2",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "2 丙酮酸 3C",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "碳數：6 = 2 × 3",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "每個游離葡萄糖：投入 2、生成 4、淨得 2 ATP。",
+          "x": 300,
+          "y": 820,
+          "size": 44,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "一個葡萄糖，只有一個丙酮酸？",
+      "narration": "只計糖解，一個六碳葡萄糖走完後，若答案只寫一個三碳丙酮酸，碳數是否完整？",
+      "steps": [
+        "A：完整，6C 變 3C",
+        "B：不完整，要有 2 個 3C"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Bảo toàn carbon",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。6=2×3，糖解不以 CO₂ 補掉另外三個碳。"
+    },
+    {
+      "title": "核對：先用碳數自查",
+      "narration": "兩個丙酮酸各有三個碳，合起來保留六個碳。糖解本身沒有這種脫羧放出二氧化碳的步驟。後面丙酮酸氧化與循環的二氧化碳，要另外列。",
+      "steps": [
+        "1 × 6C = 2 × 3C",
+        "糖解：不釋出 CO₂",
+        "後續氧化：才另列脫羧。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Không tạo CO₂ trong đường phân",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "先投入，再回收",
+      "narration": "前半段常稱投資期，先花兩個三磷酸腺苷。後半段稱收穫期，兩份三碳單元合計生成四個三磷酸腺苷，以及兩份還原型電子載體。",
+      "steps": [
+        "投資期：投入 2 ATP",
+        "收穫期：生成 4 ATP、2 NADH",
+        "分期是整理，不是兩條無關路徑。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giai đoạn đầu tư · Thu hồi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "這張圖是一條線，還要乘二嗎？",
+      "narration": "簡圖用一條箭頭代表後半段，但每個葡萄糖已分成兩份三碳單元。盤點後半段每份的產物時，要不要算兩次？",
+      "steps": [
+        "A：要，兩份三碳都繼續反應",
+        "B：不要，圖上只畫一條線"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đừng quên nhân hai",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。箭頭是代表畫法，計量仍依兩份三碳。"
+    },
+    {
+      "title": "核對：先看計量，再看畫法",
+      "narration": "一條畫出的代表路徑，可能同時代表兩份相同反應。先標出每個葡萄糖產生幾份三碳單元，再盤點收穫，才不會漏算。",
+      "steps": [
+        "先限定：每一個游離葡萄糖。",
+        "再標出：兩份三碳單元。",
+        "最後：投入與生成分開列。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tỉ lượng phản ứng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

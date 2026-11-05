@@ -1,0 +1,328 @@
+{
+  "title": "氧化還原與代謝分工",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w12.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w12.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "氧化還原，是電子的轉移",
+      "narration": "氧化表示失去電子，還原表示得到電子。在一組氧化還原反應裡，電子由一方轉移到另一方，不會因為畫了一個箭頭，就從系統裡消失。",
+      "steps": [
+        "氧化：失去電子",
+        "還原：得到電子",
+        "電子供體與受體，要成對比較。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Oxy hóa · Khử",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "NAD⁺ 接受還原當量，成為 NADH",
+      "narration": "菸鹼醯胺腺嘌呤二核苷酸的氧化型，可以在酵素反應中接受還原當量，形成還原型。圖中的電子式只是形式收支，不代表細胞裡有游離電子直接漂來。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "NAD⁺ · NADH",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "NAD⁺",
+          "x": 350,
+          "y": 470,
+          "size": 90,
+          "at": 1,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "NADH",
+          "x": 1230,
+          "y": 470,
+          "size": 90,
+          "at": 2,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            700,
+            535
+          ],
+          "to": [
+            1130,
+            535
+          ],
+          "at": 3,
+          "color": "orange",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "接受還原當量",
+          "x": 700,
+          "y": 390,
+          "size": 48,
+          "at": 3,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1140,
+            680
+          ],
+          "to": [
+            700,
+            680
+          ],
+          "at": 4,
+          "color": "blue",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "氧化後可再使用",
+          "x": 720,
+          "y": 720,
+          "size": 46,
+          "at": 5,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "形式整理：NAD⁺ + 2 e⁻ + H⁺ → NADH",
+          "x": 350,
+          "y": 850,
+          "size": 43,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "誰被還原，誰提供電子？",
+      "narration": "若底物把電子交給受體，底物本身被氧化，還是被還原？請從電子離開哪一方判斷。",
+      "steps": [
+        "A：底物被氧化",
+        "B：底物被還原"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chất cho electron",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。失去電子的一方被氧化，得到電子的一方被還原。"
+    },
+    {
+      "title": "核對：電子沒有消失",
+      "narration": "底物失去電子，被氧化；受體得到電子，被還原。後續電子傳遞鏈，可以把還原型載體再氧化，讓載體循環使用，並和能量轉移相連。",
+      "steps": [
+        "底物 → 電子 → 受體",
+        "底物氧化；受體還原",
+        "載體可在氧化型與還原型間循環。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chất nhận electron",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "異化與同化，看整條路徑的工作",
+      "narration": "異化通常分解分子，整體可提供能量與還原當量。同化則用來合成分子，常需要能量與還原力。這不是說異化每一步都放能，或所有合成都只用一種工具。",
+      "steps": [
+        "異化：分解，整體可供能",
+        "同化：合成，常需能量與還原力",
+        "單一步驟與整條路徑要分開。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dị hóa · Đồng hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "異化每一步，ΔG 都必須負？",
+      "narration": "一條分解路徑，整體可以供能。這是否表示路徑裡每一個孤立步驟，都一定有負的自由能差？",
+      "steps": [
+        "A：是，每一步都一樣",
+        "B：不是，要看條件與步驟耦合"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        11,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Từng bước và toàn con đường",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。整體收支有利，不代表每一步孤立看都相同。"
+    },
+    {
+      "title": "核對：下一週，把工具一起用",
+      "narration": "判讀代謝時，要同時看碳、電子與能量的流向。下一週從葡萄糖開始，用投入與產出的帳，練習糖解作用，並追蹤電子載體如何再生。",
+      "steps": [
+        "碳：物質到哪裡？",
+        "電子：誰氧化，誰還原？",
+        "能量：總收支與耦合如何？",
+        "下一週：糖解作用"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 12",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

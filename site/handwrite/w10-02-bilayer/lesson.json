@@ -1,0 +1,1393 @@
+{
+  "title": "磷脂雙層與流體鑲嵌模型",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷",
+    "ADP": "二磷酸腺苷",
+    "NADH": "N A D H",
+    "NAD⁺": "N A D 正",
+    "FADH₂": "F A D H 二",
+    "DNA": "D N A",
+    "RNA": "R N A",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w10.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "兩親性，不是整個分子都愛水",
+      "narration": "典型的雙尾磷脂，有親水的頭部與疏水的尾部。兩親性表示同一分子有不同性質的區域，別把它和整體帶正負電的兩性離子混成一個概念。",
+      "steps": [
+        "兩親性：有親水與疏水區域",
+        "典型磷脂：頭部＋兩條尾部",
+        "兩親性 ≠ 兩性離子"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        3,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Lưỡng ái · Amphipathic",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "雙層：兩邊都能接觸水",
+      "narration": "外側水相接觸一層親水頭，內側水相也接觸另一層親水頭。兩層疏水尾相向，形成膜的疏水內部。這裡的內部不是細胞質。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Lớp lipid kép",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "外側水相",
+          "x": 260,
+          "y": 330,
+          "size": 46,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "內側水相",
+          "x": 260,
+          "y": 820,
+          "size": 46,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 450,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              439,
+              460
+            ],
+            [
+              436,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              461,
+              460
+            ],
+            [
+              465,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 450,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              439,
+              700
+            ],
+            [
+              436,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              461,
+              700
+            ],
+            [
+              465,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 550,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              539,
+              460
+            ],
+            [
+              536,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              561,
+              460
+            ],
+            [
+              565,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 550,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              539,
+              700
+            ],
+            [
+              536,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              561,
+              700
+            ],
+            [
+              565,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 650,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              639,
+              460
+            ],
+            [
+              636,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              661,
+              460
+            ],
+            [
+              665,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 650,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              639,
+              700
+            ],
+            [
+              636,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              661,
+              700
+            ],
+            [
+              665,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 750,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              739,
+              460
+            ],
+            [
+              736,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              761,
+              460
+            ],
+            [
+              765,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 750,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              739,
+              700
+            ],
+            [
+              736,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              761,
+              700
+            ],
+            [
+              765,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 850,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              839,
+              460
+            ],
+            [
+              836,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              861,
+              460
+            ],
+            [
+              865,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 850,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              839,
+              700
+            ],
+            [
+              836,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              861,
+              700
+            ],
+            [
+              865,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 950,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              939,
+              460
+            ],
+            [
+              936,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              961,
+              460
+            ],
+            [
+              965,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 950,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              939,
+              700
+            ],
+            [
+              936,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              961,
+              700
+            ],
+            [
+              965,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1050,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1039,
+              460
+            ],
+            [
+              1036,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1061,
+              460
+            ],
+            [
+              1065,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1050,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1039,
+              700
+            ],
+            [
+              1036,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1061,
+              700
+            ],
+            [
+              1065,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1150,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1139,
+              460
+            ],
+            [
+              1136,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1161,
+              460
+            ],
+            [
+              1165,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1150,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1139,
+              700
+            ],
+            [
+              1136,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1161,
+              700
+            ],
+            [
+              1165,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1250,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1239,
+              460
+            ],
+            [
+              1236,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1261,
+              460
+            ],
+            [
+              1265,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1250,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1239,
+              700
+            ],
+            [
+              1236,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1261,
+              700
+            ],
+            [
+              1265,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1350,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1339,
+              460
+            ],
+            [
+              1336,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1361,
+              460
+            ],
+            [
+              1365,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1350,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1339,
+              700
+            ],
+            [
+              1336,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1361,
+              700
+            ],
+            [
+              1365,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1450,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1439,
+              460
+            ],
+            [
+              1436,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1461,
+              460
+            ],
+            [
+              1465,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1450,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1439,
+              700
+            ],
+            [
+              1436,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1461,
+              700
+            ],
+            [
+              1465,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1550,
+          "cy": 430,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1539,
+              460
+            ],
+            [
+              1536,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1561,
+              460
+            ],
+            [
+              1565,
+              570
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1550,
+          "cy": 730,
+          "rx": 26,
+          "ry": 26,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1539,
+              700
+            ],
+            [
+              1536,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1561,
+              700
+            ],
+            [
+              1565,
+              590
+            ]
+          ],
+          "at": 2,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "親水頭",
+          "x": 1570,
+          "y": 390,
+          "size": 42,
+          "at": 3,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "疏水尾",
+          "x": 1570,
+          "y": 555,
+          "size": 42,
+          "at": 3,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "親水頭",
+          "x": 1570,
+          "y": 690,
+          "size": 42,
+          "at": 3,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "兩邊接觸水；兩層尾部朝向膜內部。",
+          "x": 450,
+          "y": 870,
+          "size": 42,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "細胞內側那一層，頭朝哪裡？",
+      "narration": "請看靠近細胞質的那一層磷脂。它的親水頭，應朝向細胞質的水，還是埋在兩層疏水尾之間？",
+      "steps": [
+        "A：朝向細胞質的水",
+        "B：埋進疏水尾部"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        8,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đầu ưa nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。雙層兩側的頭都接觸各自的水相。"
+    },
+    {
+      "title": "核對：膜內部與細胞內不同",
+      "narration": "膜的疏水內部，是兩層尾部所在的位置。細胞內部的細胞質，則含大量水。說尾朝內時，要說清楚是朝膜的疏水內部。",
+      "steps": [
+        "膜的中間：疏水尾",
+        "細胞質一側：仍是水相",
+        {
+          "text": "不要把「膜內」當成「細胞內」。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đuôi kỵ nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "膜能流動，但每個成分不都自由",
+      "narration": "膜中的脂質與許多蛋白質可以側向移動。有些蛋白質被骨架或其他結構固定。膽固醇對流動性的影響，還要看溫度與膜的組成。",
+      "steps": [
+        "許多成分：可以側向移動",
+        "部分蛋白質：受結構限制",
+        "膽固醇：調節流動與排列"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mô hình khảm lỏng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "膽固醇一定只讓膜更軟？",
+      "narration": "在不同溫度與膜組成下，能把膽固醇的影響，一律說成只會讓膜更軟、更流動嗎？",
+      "steps": [
+        "A：可以，方向永遠相同",
+        "B：不能，要看溫度與組成"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cholesterol",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。膽固醇可限制部分移動，也可減少低溫下的緊密堆積。"
+    },
+    {
+      "title": "核對：看環境與局部排列",
+      "narration": "膽固醇插在磷脂之間，改變排列與移動。在較低溫時，它能減少過度緊密堆積；在其他條件下，也會限制部分活動。不是永遠同方向的軟化劑。",
+      "steps": [
+        "磷脂雙層：提供基本屏障",
+        "蛋白質：增加運輸、訊號等功能",
+        "流動性：看溫度與分子組成。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu trúc màng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

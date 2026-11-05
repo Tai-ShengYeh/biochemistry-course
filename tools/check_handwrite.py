@@ -7,6 +7,7 @@ from urllib.parse import urljoin,urlsplit,unquote
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1];SITE=ROOT/'site';OUT=ROOT/'reports/handwrite'
 OUT.mkdir(parents=True,exist_ok=True)
+WEEKS=[1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17]
 
 class Links(HTMLParser):
     def __init__(self):super().__init__();self.refs=[]
@@ -67,12 +68,14 @@ def main():
         page.on('requestfailed',lambda r:report['failed_requests'].append({'url':r.url,'error':r.failure}) if r.failure!='net::ERR_ABORTED' and r.url.startswith(base) else None)
         page.on('response',lambda r:report['http_errors'].append({'url':r.url,'status':r.status}) if r.status>=400 and r.url.startswith(base) else None)
         records=page.request.get(base+'handwrite/course-manifest.json').json()
-        assert len(records)==32 and sum(r['scenes'] for r in records)==234
-        page.goto(base);assert page.locator('a.handwrite-link').count()==8
+        expected=json.loads((SITE/'handwrite/course-manifest.json').read_text(encoding='utf-8'))
+        assert records==expected and len(records)==4*len(WEEKS)
+        page.goto(base);assert page.locator('a.handwrite-link').count()==len(WEEKS)
         page.locator('a[href="handwrite/index.html"]').first.click()
-        assert page.locator('a.week').count()==8
+        assert page.locator('a.week').count()==len(WEEKS)
         page.screenshot(path=str(OUT/('live-overview.png' if args.base else 'local-overview.png')),full_page=True)
-        for w in range(1,9):
+        for w in WEEKS:
+            print("Checking week",w,flush=True)
             page.goto(base+f'handwrite/w{w:02}.html');assert page.locator('a.chapter').count()==4
             page.goto(base+f'vi-a2/lessons/w{w:02}.html')
             link=page.locator('#handwrite-link a');assert link.count()==1
@@ -82,9 +85,14 @@ def main():
             page.wait_for_function('window.Reveal&&Reveal.isReady()&&Reveal.getCurrentSlide()?.id==="handwrite"')
             assert page.locator('#handwrite a.handwrite-chapter').count()==4
             for size in [{'width':1280,'height':720},{'width':844,'height':390}]:
-                page.set_viewport_size(size);page.wait_for_timeout(80)
-                assert page.locator('#handwrite').evaluate('''el=>[...el.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=-1&&r.right<=innerWidth+1&&r.top>=-1&&r.bottom<=innerHeight+1})''')
-            if w in [1,8]:page.screenshot(path=str(OUT/f'{"live" if args.base else "local"}-w{w:02}-reveal.png'))
+                page.set_viewport_size(size);page.evaluate('Reveal.layout()')
+                # Resize and Reveal's transform settle asynchronously. Judge the
+                # final viewport, rather than an intermediate transition frame.
+                page.wait_for_function('''()=>{const el=document.querySelector('#handwrite');return [...el.querySelectorAll('a')].every(a=>{const r=a.getBoundingClientRect();return r.left>=-1&&r.right<=innerWidth+1&&r.top>=-1&&r.bottom<=innerHeight+1})}''',timeout=5000)
+                bad=page.locator('#handwrite').evaluate('''el=>[...el.querySelectorAll('a')].map(a=>{const r=a.getBoundingClientRect();return {text:a.textContent,left:r.left,right:r.right,top:r.top,bottom:r.bottom}}).filter(r=>r.left< -1||r.right>innerWidth+1||r.top< -1||r.bottom>innerHeight+1)''')
+                if bad:page.screenshot(path=str(OUT/f'overflow-w{w:02}.png'))
+                assert not bad,(w,size,bad)
+            if w in [1,8,10,17]:page.screenshot(path=str(OUT/f'{"live" if args.base else "local"}-w{w:02}-reveal.png'))
             page.set_viewport_size({'width':1440,'height':1100})
             # The original interactive lab still runs and pauses when leaving its route.
             page.locator('#handwrite a[href="#/animation"]').click()
@@ -123,11 +131,33 @@ def main():
             page.set_viewport_size({'width':390,'height':844});page.wait_for_timeout(50)
             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
             page.locator('#next').click();assert page.evaluate('lessonPlayer.time')==meta['scenes'][1]['start']
-            if record['id'] in ['w01-01-life','w08-03-polysaccharides']:page.screenshot(path=str(OUT/f'{"live" if args.base else "local"}-{record["id"]}-mobile.png'),full_page=True)
+            if record['id'] in ['w01-01-life','w08-03-polysaccharides','w10-02-bilayer','w17-03-fasting']:page.screenshot(path=str(OUT/f'{"live" if args.base else "local"}-{record["id"]}-mobile.png'),full_page=True)
             nav=page.locator('#course-nav')
             assert nav.locator('a[href$="/simulation.html"]').get_attribute('href')==f'../../assets/animations/w{record["week"]:02}/simulation.html'
             page.set_viewport_size({'width':1440,'height':1100})
             report['chapters'].append({'id':record['id'],'audio_files':record['scenes'],'pause_gates':record['pauses'],'mobile':True,'seek_reset_speed':True})
+        # Retry only transient server errors. A recovered MP3 must also decode
+        # and advance at its actual scene, rather than merely pass an HTTP HEAD.
+        recovered=[]
+        if args.base:
+            pending={e['url']:e for e in report['http_errors'] if 500<=e['status']<600 and '/assets/voice/' in e['url']}
+            for url,error in pending.items():
+                ok=False
+                for attempt in range(3):
+                    response=page.request.get(url,headers={'Range':'bytes=0-1023'})
+                    if response.status in [200,206]:ok=True;break
+                    page.wait_for_timeout(500)
+                if not ok:continue
+                page.goto(url.split('/assets/voice/')[0]+'/player.html');page.wait_for_function('lessonPlayer.ready')
+                start=page.evaluate('u=>Number([...document.querySelector("#frame").contentDocument.querySelectorAll("audio")].find(a=>a.src===u).dataset.start)',url)
+                page.evaluate('t=>lessonPlayer.jump(t)',start+.35);page.locator('#play').click()
+                page.wait_for_function('u=>[...document.querySelector("#frame").contentDocument.querySelectorAll("audio")].some(a=>a.src===u&&!a.paused&&!a.seeking&&a.readyState>=2)',arg=url,timeout=10000)
+                read='u=>[...document.querySelector("#frame").contentDocument.querySelectorAll("audio")].find(a=>a.src===u).currentTime'
+                before=page.evaluate(read,url);page.wait_for_timeout(450);after=page.evaluate(read,url)
+                assert after>before+.2,(url,before,after)
+                recovered.append({**error,'retry_status':response.status,'audio_progress':round(after-before,3)})
+                report['http_errors']=[e for e in report['http_errors'] if e['url']!=url]
+        report['recovered_http_errors']=recovered
         browser.close()
     if server:server.shutdown()
     name='live' if args.base else 'local'
