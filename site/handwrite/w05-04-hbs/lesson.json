@@ -1,0 +1,360 @@
+{
+  "title": "一個序列改變，如何影響功能？",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w05.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w05.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "從一級結構，走到細胞形狀",
+      "narration": "鐮刀型血紅蛋白提供一個例子。成熟貝塔鏈第六位的麩胺酸改成纈胺酸，改變局部表面性質。接著要看缺氧條件下，分子如何聚合。",
+      "steps": [
+        "成熟 β 鏈：第 6 位",
+        "Glu → Val",
+        "局部表面性質改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hồng cầu hình liềm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "缺氧時，HbS 可能聚成纖維",
+      "narration": "脫氧的鐮刀型血紅蛋白，可能透過新的分子間互動，聚成長纖維。纖維可使紅血球變形，不是先把每條蛋白質的胜肽鍵剪斷。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "HbS khử oxy · Sợi polymer",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "側鏈改變",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "Glu → Val",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "脫氧時聚合",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "HbS 形成纖維",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "細胞可變形",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "不是主鏈被剪碎",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "形成纖維，是胜肽鍵斷開？",
+      "narration": "請比較兩個說法。哪一個比較符合鐮刀型血紅蛋白在脫氧時的關鍵機制？",
+      "steps": [
+        "A：胜肽鍵斷開，分子碎掉",
+        "B：分子互相聚合成纖維"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        14,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Polymer hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。關鍵是脫氧 HbS 的聚合，不是一般性胜肽鍵斷裂。"
+    },
+    {
+      "title": "核對：先找改變的互動",
+      "narration": "麩胺酸與纈胺酸的側鏈性質不同。這個表面差異，在脫氧狀態下促進特定分子間互動。從序列、互動到細胞形狀，是一條有條件的因果鏈。",
+      "steps": [
+        "序列差異 → 表面互動差異",
+        "脫氧條件 → HbS 纖維",
+        "纖維 → 紅血球變形風險"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Trình tự → Tương tác",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "一個位置，不是四條鏈只換一次",
+      "narration": "這個變異指的是貝塔鏈的特定位置。成人血紅蛋白有兩條阿法鏈、兩條貝塔鏈。不要把它說成整個四聚體永遠只有一個殘基被換掉。",
+      "steps": [
+        "HbA：2 α＋2 β",
+        "變異位置：成熟 β6",
+        "數鏈與數變異位置，要分清楚。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuỗi beta",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "缺鐵，等於所有貧血原因？",
+      "narration": "血紅蛋白含鐵，因此可以直接說所有貧血都是缺鐵造成的嗎？請用這週的蛋白質變異例子來想。",
+      "steps": [
+        "A：可以，原因只有缺鐵",
+        "B：不能，可能有不同機制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Không chỉ một nguyên nhân",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。缺鐵是原因之一；不能由 heme 含鐵推論所有貧血。"
+    },
+    {
+      "title": "核對：從機制解釋例子",
+      "narration": "含鐵的結構，幫助理解氧結合；序列變異，幫助理解分子間互動。不同問題要找不同證據。下一週，用結合位置來理解酵素。",
+      "steps": [
+        "結構：heme 與 Fe²⁺",
+        "功能：載氧、釋氧與條件",
+        "變異：互動改變，不是剪碎主鏈",
+        "下週：受質與活性位置"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        17,
+        18
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 5",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

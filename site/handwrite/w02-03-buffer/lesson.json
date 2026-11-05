@@ -1,0 +1,527 @@
+{
+  "title": "緩衝：反應、容量與半中和",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w02.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w02.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "緩衝液：兩個角色一起在",
+      "narration": "弱酸和它的共軛鹼，同時存在，就能一起抵抗酸鹼值改變。抵抗改變，不是永遠不變。",
+      "steps": [
+        "HA：可以給出 H⁺",
+        "A⁻：可以接受 H⁺",
+        {
+          "text": "緩衝液不是 pH 完全不變。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dung dịch đệm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "加酸，誰來接住 H⁺？",
+      "narration": "向這個緩衝液加少量酸。帶來的氫離子，主要由未解離的弱酸，還是共軛鹼接住？",
+      "steps": [
+        "A：HA",
+        "B：A⁻"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thêm acid",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。A⁻ + H⁺ → HA。"
+    },
+    {
+      "title": "核對：加酸，A⁻ 變 HA",
+      "narration": "共軛鹼接住氫離子，變回弱酸。加入的氫沒有消失，而是成為弱酸的一部分。酸鹼值仍會下降，只是通常變化較小。",
+      "steps": [
+        "A⁻ + H⁺ → HA",
+        "A⁻ 減少；HA 增加",
+        "H 成為 HA 的一部分。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "A⁻ → HA",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "換成加鹼，誰提供 H⁺？",
+      "narration": "現在加入少量氫氧根。緩衝液裡，誰可以提供氫離子，幫忙中和氫氧根？",
+      "steps": [
+        "A：HA",
+        "B：A⁻"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Thêm base",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。HA + OH⁻ → A⁻ + H₂O。"
+    },
+    {
+      "title": "核對：加鹼，HA 變 A⁻",
+      "narration": "弱酸提供氫離子，與氫氧根形成水。整體反應可以寫成，弱酸加氫氧根，形成共軛鹼和水。酸鹼值仍可能小幅上升。",
+      "steps": [
+        "HA + OH⁻ → A⁻ + H₂O",
+        "HA 減少；A⁻ 增加",
+        "加鹼後，pH 通常小幅上升。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "HA → A⁻",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "比例相等時，pH 約等於 pKa",
+      "narration": "在適用的近似下，先看共軛鹼和弱酸的濃度比。兩者相等，比值是一，對數是零。所以 pH 約等於 pKa。",
+      "steps": [
+        "pH ≈ pKa + log₁₀([A⁻]/[HA])",
+        "[A⁻] = [HA] → 比值 1",
+        {
+          "text": "log₁₀(1)=0 → pH≈pKa",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tỉ lệ bằng nhau",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "半中和，不是當量點",
+      "narration": "弱酸被強鹼滴定時，在半中和的位置，弱酸與共軛鹼約相等。當量點在更後面。不要把圖上半中和的位置，當成全部弱酸都反應完。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nửa trung hòa · Điểm tương đương",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            280,
+            805
+          ],
+          "to": [
+            1660,
+            805
+          ],
+          "at": 1,
+          "color": "ink",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "arrow",
+          "from": [
+            280,
+            805
+          ],
+          "to": [
+            280,
+            350
+          ],
+          "at": 1,
+          "color": "ink",
+          "bend": 0,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "加鹼的量",
+          "x": 1430,
+          "y": 840,
+          "size": 40,
+          "at": 1.4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "pH",
+          "x": 175,
+          "y": 350,
+          "size": 42,
+          "at": 1.4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              320,
+              755
+            ],
+            [
+              450,
+              665
+            ],
+            [
+              620,
+              620
+            ],
+            [
+              790,
+              590
+            ],
+            [
+              960,
+              555
+            ],
+            [
+              1120,
+              510
+            ],
+            [
+              1240,
+              430
+            ],
+            [
+              1310,
+              360
+            ],
+            [
+              1370,
+              330
+            ],
+            [
+              1560,
+              315
+            ]
+          ],
+          "at": 2,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 2
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              790,
+              590
+            ],
+            [
+              790,
+              805
+            ]
+          ],
+          "at": 4,
+          "color": "green",
+          "stroke": 3,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              280,
+              590
+            ],
+            [
+              790,
+              590
+            ]
+          ],
+          "at": 4,
+          "color": "green",
+          "stroke": 3,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 790,
+          "cy": 590,
+          "rx": 25,
+          "ry": 25,
+          "at": 5,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "半中和",
+          "x": 660,
+          "y": 840,
+          "size": 42,
+          "at": 5.3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "[HA] = [A⁻]",
+          "x": 450,
+          "y": 430,
+          "size": 53,
+          "at": 5.7,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "pH = pKa",
+          "x": 450,
+          "y": 505,
+          "size": 53,
+          "at": 6.3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "當量點在更後面",
+          "x": 1240,
+          "y": 650,
+          "size": 42,
+          "at": 6.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1370,
+            640
+          ],
+          "to": [
+            1320,
+            380
+          ],
+          "at": 7,
+          "color": "orange",
+          "bend": 0.2,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "title": "一直加酸，能一直擋嗎？",
+      "narration": "如果持續加很多酸，可接受氫離子的共軛鹼會一直增加，還是逐漸減少？緩衝能力有沒有容量限制？",
+      "steps": [
+        "A：沒有容量，可以一直擋",
+        "B：有容量，A⁻ 可能不足"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        4,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khả năng đệm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。有效緩衝成分不足後，pH變化會更明顯。"
+    },
+    {
+      "title": "核對：比例與總量都重要",
+      "narration": "同樣的弱酸和共軛鹼比例，可以有相近的酸鹼值。可是，總量更多的緩衝成分，通常能處理更多加入的酸或鹼。比較時要固定體積等條件。",
+      "steps": [
+        "相同比例 → pH 可相近",
+        "固定體積：總濃度高，容量常較大",
+        {
+          "text": "pH 相同，不代表容量相同。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        4,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tỉ lệ · Tổng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "用實驗，看容量如何用完",
+      "narration": "現在到緩衝液實驗室。先預測，再看加酸與加鹼。連續加酸時，追蹤共軛鹼的剩餘量。實驗中的數字是教學示意。",
+      "steps": [
+        "先猜：哪杯 pH 變更多？",
+        "加酸看 A⁻；加鹼看 HA。",
+        "連續加酸，觀察容量。"
+      ],
+      "stage": "recap",
+      "wait": 1.3,
+      "source_slides": [
+        4
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dự đoán → Quan sát",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

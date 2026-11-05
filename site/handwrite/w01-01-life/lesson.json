@@ -1,0 +1,476 @@
+{
+  "title": "生命的化學：飯與 ATP",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w01.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w01.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "這兩週，先看關係",
+      "narration": "先認識細胞、生物分子與官能基。再看水、酸鹼與緩衝。先看圖，再用一句短中文說出關係。",
+      "steps": [
+        "細胞裡，有很多分子。",
+        "分子反應，連到細胞工作。",
+        "先預測，再看圖、說理由。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        3
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hóa sinh · Tế bào",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "飯，是直接變成 ATP 嗎？",
+      "narration": "吃飯後，細胞可以工作。可是，整條澱粉會直接變成一個三磷酸腺苷嗎？先想一想。",
+      "steps": [
+        "飯 → 澱粉",
+        "澱粉直接變成 ATP？"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "不是。先消化、吸收，再由細胞反應把部分能量轉到 ATP。"
+    },
+    {
+      "title": "先消化，再吸收",
+      "narration": "澱粉先被消化成較小的分子，例如葡萄糖。葡萄糖被吸收後，可以進入細胞參與反應。",
+      "steps": [],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tiêu hóa → Hấp thu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "澱粉",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "先消化",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "葡萄糖",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "再吸收",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "細胞反應",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "多步反應",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "物質，不等於能量",
+      "narration": "葡萄糖和三磷酸腺苷不是同一種分子。葡萄糖參與多步反應，部分能量可用來合成三磷酸腺苷。",
+      "steps": [
+        "葡萄糖 ≠ ATP",
+        "ADP + Pi → ATP",
+        "需要能量支持合成。",
+        "ATP 參與能量轉移。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân tử · Năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "細胞工作，需要能量",
+      "narration": "細胞用能量做很多事，例如搬運物質與肌肉收縮。三磷酸腺苷參與能量轉移，不是把所有食物直接改名字。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "ATP · Công việc tế bào",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "食物反應",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "能量來源之一",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "ATP",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "轉移能量",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "細胞工作",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "例如收縮與運輸",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "少了消化，先卡在哪裡？",
+      "narration": "如果這條澱粉路徑沒有消化作用，哪一步會先受影響？是吸收前，還是細胞已經做完工作後？",
+      "steps": [
+        "A：吸收前",
+        "B：工作做完後"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        4,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tiêu hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。澱粉需要先變成可吸收的小分子。"
+    },
+    {
+      "title": "核對：先看停止的位置",
+      "narration": "少了消化，這條路徑先無法產生可吸收的葡萄糖。不是所有細胞反應都突然消失。等一下可在互動實驗改變條件。",
+      "steps": [
+        "澱粉 → 先消化 → 再吸收",
+        {
+          "text": "改條件，要看哪一步變。",
+          "emphasis": "box"
+        },
+        "到實驗室，比較三種條件。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        4,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đổi điều kiện",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

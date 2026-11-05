@@ -1,0 +1,290 @@
+[
+  {
+    "id": "w01-01-life",
+    "week": 1,
+    "title": "生命的化學：飯與 ATP",
+    "scenes": 7,
+    "minutes": 1.47,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w01-02-cells",
+    "week": 1,
+    "title": "細胞：五個構造與功能",
+    "scenes": 9,
+    "minutes": 1.99,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w01-03-molecules",
+    "week": 1,
+    "title": "四大類生物分子",
+    "scenes": 8,
+    "minutes": 1.8,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w01-04-groups",
+    "week": 1,
+    "title": "官能基：看連接，不只看顏色",
+    "scenes": 8,
+    "minutes": 1.72,
+    "pauses": 1,
+    "audio": true
+  },
+  {
+    "id": "w02-01-water",
+    "week": 2,
+    "title": "水：極性、氫鍵與疏水效應",
+    "scenes": 8,
+    "minutes": 1.78,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w02-02-ph",
+    "week": 2,
+    "title": "pH：十倍、弱酸與 pKa",
+    "scenes": 8,
+    "minutes": 1.83,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w02-03-buffer",
+    "week": 2,
+    "title": "緩衝：反應、容量與半中和",
+    "scenes": 10,
+    "minutes": 2.32,
+    "pauses": 3,
+    "audio": true
+  },
+  {
+    "id": "w02-04-apply",
+    "week": 2,
+    "title": "把緩衝概念帶回血液",
+    "scenes": 8,
+    "minutes": 1.91,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w03-01-amino",
+    "week": 3,
+    "title": "胺基酸：骨架、側鏈與電荷",
+    "scenes": 7,
+    "minutes": 1.499,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w03-02-sidechains",
+    "week": 3,
+    "title": "側鏈分類與疏水效應",
+    "scenes": 7,
+    "minutes": 1.589,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w03-03-peptide",
+    "week": 3,
+    "title": "胜肽鍵：方向、數量與轉動",
+    "scenes": 7,
+    "minutes": 1.585,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w03-04-pi",
+    "week": 3,
+    "title": "等電點、雙硫鍵與應用",
+    "scenes": 7,
+    "minutes": 1.594,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w04-01-levels",
+    "week": 4,
+    "title": "蛋白質的四級結構",
+    "scenes": 7,
+    "minutes": 1.561,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w04-02-secondary",
+    "week": 4,
+    "title": "α 螺旋、β 摺板與氫鍵",
+    "scenes": 7,
+    "minutes": 1.663,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w04-03-fold",
+    "week": 4,
+    "title": "三級結構：互動與摺疊",
+    "scenes": 7,
+    "minutes": 1.623,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w04-04-denature",
+    "week": 4,
+    "title": "變性：形狀變了，序列呢？",
+    "scenes": 7,
+    "minutes": 1.669,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w05-01-binding",
+    "week": 5,
+    "title": "結合位置、親和力與 heme",
+    "scenes": 7,
+    "minutes": 1.724,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w05-02-oxygen",
+    "week": 5,
+    "title": "讀圖：Mb 與 Hb 的氧結合曲線",
+    "scenes": 7,
+    "minutes": 1.637,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w05-03-cooperate",
+    "week": 5,
+    "title": "協同性與 Bohr 效應",
+    "scenes": 7,
+    "minutes": 1.67,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w05-04-hbs",
+    "week": 5,
+    "title": "一個序列改變，如何影響功能？",
+    "scenes": 7,
+    "minutes": 1.687,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w06-01-catalysis",
+    "week": 6,
+    "title": "酵素：降低活化障礙",
+    "scenes": 7,
+    "minutes": 1.65,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w06-02-active",
+    "week": 6,
+    "title": "活性位置、專一性與誘導契合",
+    "scenes": 7,
+    "minutes": 1.523,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w06-03-cofactor",
+    "week": 6,
+    "title": "輔因子、輔酶與維生素",
+    "scenes": 7,
+    "minutes": 1.647,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w06-04-control",
+    "week": 6,
+    "title": "酵素原與催化概念整合",
+    "scenes": 7,
+    "minutes": 1.676,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w07-01-mm",
+    "week": 7,
+    "title": "受質濃度與 Michaelis–Menten 曲線",
+    "scenes": 7,
+    "minutes": 1.684,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w07-02-parameters",
+    "week": 7,
+    "title": "Km、親和力與酵素量",
+    "scenes": 7,
+    "minutes": 1.717,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w07-03-inhibit",
+    "week": 7,
+    "title": "競爭性、純非競爭性與混合抑制",
+    "scenes": 7,
+    "minutes": 1.705,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w07-04-regulate",
+    "week": 7,
+    "title": "回饋抑制與磷酸化調節",
+    "scenes": 7,
+    "minutes": 1.575,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w08-01-glucose",
+    "week": 8,
+    "title": "葡萄糖環與 α、β 異構",
+    "scenes": 7,
+    "minutes": 1.64,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w08-02-disaccharides",
+    "week": 8,
+    "title": "雙醣與還原性",
+    "scenes": 7,
+    "minutes": 1.594,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w08-03-polysaccharides",
+    "week": 8,
+    "title": "澱粉、肝醣與纖維素",
+    "scenes": 7,
+    "minutes": 1.615,
+    "pauses": 2,
+    "audio": true
+  },
+  {
+    "id": "w08-04-food",
+    "week": 8,
+    "title": "食物應用：β 鍵與消化條件",
+    "scenes": 7,
+    "minutes": 1.59,
+    "pauses": 2,
+    "audio": true
+  }
+]

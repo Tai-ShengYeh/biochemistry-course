@@ -1,0 +1,356 @@
+{
+  "title": "Km、親和力與酵素量",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w07.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w07.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "Km 不是普遍的解離常數",
+      "narration": "米氏常數由受質結合、解離，以及後續催化共同決定。它可以方便比較動力學，但不能在所有機制下直接等同結合親和力。",
+      "steps": [
+        "簡單機制：E + S ⇌ ES → E + P",
+        "Km = (k₋₁ + kcat) / k₁",
+        "Kd = k₋₁ / k₁"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hằng số Michaelis · Ái lực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "只有特定近似下，才接近 Kd",
+      "narration": "如果催化步驟遠慢於受質解離，在簡單機制下，米氏常數才會近似解離常數。先確認機制與條件，再用它推論結合。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điều kiện xấp xỉ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "kcat 很小",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "相對於 k₋₁",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "Km 約等於 Kd",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "簡單機制條件",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "才能近似比較",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "不是通用等號",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "Km 小，就一定抓得更緊？",
+      "narration": "兩個不同機制的酵素，甲的米氏常數較小。沒有其他資料，可以保證甲對受質的結合一定更強嗎？",
+      "steps": [
+        "A：可以，Km 永遠就是 Kd",
+        "B：不能，還要看機制與速率常數"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Không đồng nhất Km với Kd",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。Km 包含結合與催化的影響，不是普遍的純親和力指標。"
+    },
+    {
+      "title": "核對：用半最大速率先描述",
+      "narration": "在符合米氏模型的條件下，較小的米氏常數，表示達到自己半最大速率所需的受質較少。這個描述比直接宣布結合更強，保留了必要條件。",
+      "steps": [
+        "Km 小：達自己半 Vmax 所需 [S] 較低",
+        "是否等於親和力較高？",
+        "要看額外的機制證據。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mô tả đúng điều kiện",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "酵素加倍，Vmax 如何變？",
+      "narration": "在酵素活性與其他條件相同的簡單模型中，最大速率等於周轉數乘總酵素濃度。因此酵素量加倍，最大速率加倍，米氏常數不因此改變。",
+      "steps": [
+        "Vmax = kcat × [E]total",
+        "酵素量 × 2 → Vmax × 2",
+        "同模型與條件下：Km 不變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nồng độ enzyme · kcat",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "同受質，酵素加倍後呢？",
+      "narration": "原本最大速率是十，米氏常數是二，受質濃度也是二。如果活性酵素加倍，其他條件相同，新的初速率是多少？",
+      "steps": [
+        "新 Vmax = 20；Km = 2",
+        "v = 20 × 2 / (2 + 2)",
+        "A：5　B：10　C：20"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gấp đôi enzyme",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B，新的初速率為10。假設初速率測量且受質未明顯耗盡。"
+    },
+    {
+      "title": "核對：條件與參數一起說",
+      "narration": "最大速率變成二十，在相同受質濃度下，初速率變成十。這需要固定溫度等條件，維持活性比例，並在受質還沒明顯耗盡的初期測量。",
+      "steps": [
+        "Vmax：10 → 20",
+        "[S] = Km → v = Vmax/2 = 10",
+        "初速率、固定條件，是假設。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Giả định của mô hình",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

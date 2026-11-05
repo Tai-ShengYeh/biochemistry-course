@@ -1,0 +1,922 @@
+{
+  "title": "細胞：五個構造與功能",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w01.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w01.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "細菌，也有 DNA 嗎？",
+      "narration": "細菌沒有細胞核。這是不是代表細菌沒有遺傳資訊？先選一個，再看兩種細胞。",
+      "steps": [
+        "A：沒有細胞核，就沒有 DNA",
+        "B：有 DNA，但沒有膜包住的核"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tế bào nhân sơ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。原核細胞也有 DNA。"
+    },
+    {
+      "title": "原核與真核：看核膜",
+      "narration": "兩種細胞都有遺傳資訊。原核細胞沒有核膜包住的細胞核。真核細胞的細胞核，則有膜把主要的遺傳資訊包住。",
+      "steps": [],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhân sơ · Nhân thực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 550,
+          "cy": 535,
+          "rx": 325,
+          "ry": 205,
+          "at": 1,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1370,
+          "cy": 535,
+          "rx": 325,
+          "ry": 205,
+          "at": 1,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "原核細胞",
+          "x": 330,
+          "y": 780,
+          "size": 60,
+          "at": 1.3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "真核細胞",
+          "x": 1160,
+          "y": 780,
+          "size": 60,
+          "at": 1.3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              430,
+              490
+            ],
+            [
+              490,
+              550
+            ],
+            [
+              560,
+              480
+            ],
+            [
+              620,
+              560
+            ],
+            [
+              680,
+              500
+            ]
+          ],
+          "at": 2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1350,
+          "cy": 530,
+          "rx": 110,
+          "ry": 90,
+          "at": 2.5,
+          "color": "purple",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1280,
+              500
+            ],
+            [
+              1330,
+              540
+            ],
+            [
+              1390,
+              495
+            ],
+            [
+              1430,
+              545
+            ]
+          ],
+          "at": 3,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "DNA 沒有核膜包住",
+          "x": 270,
+          "y": 340,
+          "size": 45,
+          "at": 4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "DNA 在細胞核內",
+          "x": 1120,
+          "y": 340,
+          "size": 45,
+          "at": 4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "兩種細胞都有 DNA、細胞膜與核糖體。",
+          "x": 260,
+          "y": 865,
+          "size": 38,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "先找五個位置",
+      "narration": "這是動物細胞的簡圖。先找外面的細胞膜，再找細胞核、粒線體、粗面內質網與高基氏體。圖形只表示位置關係。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu trúc tế bào",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 980,
+          "cy": 555,
+          "rx": 440,
+          "ry": 240,
+          "at": 1,
+          "color": "green",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 860,
+          "cy": 490,
+          "rx": 100,
+          "ry": 80,
+          "at": 1.4,
+          "color": "purple",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              805,
+              465
+            ],
+            [
+              840,
+              505
+            ],
+            [
+              880,
+              470
+            ],
+            [
+              915,
+              510
+            ]
+          ],
+          "at": 1.8,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1120,
+          "cy": 670,
+          "rx": 100,
+          "ry": 45,
+          "at": 2.2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1045,
+              670
+            ],
+            [
+              1080,
+              645
+            ],
+            [
+              1100,
+              685
+            ],
+            [
+              1130,
+              650
+            ],
+            [
+              1160,
+              687
+            ],
+            [
+              1190,
+              665
+            ]
+          ],
+          "at": 2.6,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              960,
+              440
+            ],
+            [
+              1010,
+              420
+            ],
+            [
+              1070,
+              445
+            ],
+            [
+              1130,
+              430
+            ]
+          ],
+          "at": 3.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1230,
+              480
+            ],
+            [
+              1270,
+              465
+            ],
+            [
+              1320,
+              480
+            ],
+            [
+              1360,
+              465
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              960,
+              466
+            ],
+            [
+              1010,
+              446
+            ],
+            [
+              1070,
+              471
+            ],
+            [
+              1130,
+              456
+            ]
+          ],
+          "at": 3.3,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1230,
+              508
+            ],
+            [
+              1270,
+              493
+            ],
+            [
+              1320,
+              508
+            ],
+            [
+              1360,
+              493
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              960,
+              492
+            ],
+            [
+              1010,
+              472
+            ],
+            [
+              1070,
+              497
+            ],
+            [
+              1130,
+              482
+            ]
+          ],
+          "at": 3.6,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1230,
+              536
+            ],
+            [
+              1270,
+              521
+            ],
+            [
+              1320,
+              536
+            ],
+            [
+              1360,
+              521
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "細胞膜",
+          "x": 170,
+          "y": 370,
+          "size": 50,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            420,
+            420
+          ],
+          "to": [
+            565,
+            455
+          ],
+          "at": 5.6,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "細胞核",
+          "x": 1540,
+          "y": 360,
+          "size": 50,
+          "at": 5.5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1510,
+            405
+          ],
+          "to": [
+            850,
+            410
+          ],
+          "at": 6.1,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "粒線體",
+          "x": 1510,
+          "y": 680,
+          "size": 50,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1490,
+            720
+          ],
+          "to": [
+            1230,
+            690
+          ],
+          "at": 6.6,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "粗面內質網",
+          "x": 150,
+          "y": 630,
+          "size": 50,
+          "at": 6.5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            480,
+            675
+          ],
+          "to": [
+            1010,
+            490
+          ],
+          "at": 7.1,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "高基氏體",
+          "x": 1510,
+          "y": 520,
+          "size": 50,
+          "at": 7,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1480,
+            555
+          ],
+          "to": [
+            1360,
+            520
+          ],
+          "at": 7.6,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "title": "細胞核，保管大部分 DNA",
+      "narration": "在人類這類真核細胞裡，大部分遺傳資訊在細胞核。注意，大部分不是全部。粒線體本身也有少量的遺傳資訊。",
+      "steps": [
+        "細胞核：大部分 DNA",
+        "粒線體：也有自己的 DNA",
+        {
+          "text": "不能說「只有核才有 DNA」。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhân tế bào · Ty thể",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "粒線體：與 ATP 生成有關",
+      "narration": "粒線體是細胞呼吸的重要位置，參與大量三磷酸腺苷的生成。但不是所有三磷酸腺苷都在粒線體產生。",
+      "steps": [
+        "粒線體：參與 ATP 生成",
+        "細胞質也有產生 ATP 的反應。",
+        "說主要功能，不說唯一位置。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ty thể",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "蛋白質：誰合成，誰加工？",
+      "narration": "核糖體合成蛋白質。有些核糖體附在粗面內質網上。這些新蛋白質會進入內質網，再送到高基氏體整理與分送。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ribosome · Lưới nội chất · Golgi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "核糖體",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "合成部分蛋白質",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "粗面內質網",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "摺疊、初步加工",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "高基氏體",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "修飾、分類、分送",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "我要找細胞的邊界",
+      "narration": "如果要指出細胞的邊界，應該找高基氏體，還是細胞膜？用「它做什麼」來解釋。",
+      "steps": [
+        "A：高基氏體",
+        "B：細胞膜"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Màng tế bào",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B，細胞膜是邊界，選擇性調節物質進出。"
+    },
+    {
+      "title": "核對：細胞膜有選擇性",
+      "narration": "細胞膜分開細胞內外，也參與調節物質進出。高基氏體主要做分類和分送。不要只看圖的顏色，要說出功能。",
+      "steps": [
+        "細胞膜：邊界、選擇性進出",
+        "高基氏體：分類、分送",
+        {
+          "text": "位置與功能，要一起說。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Màng tế bào · Bộ máy Golgi",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "一句話練習",
+      "narration": "現在，用一句話說明一個構造。例如，這是粒線體，它參與三磷酸腺苷生成。再請同學換一個構造說說看。",
+      "steps": [
+        "這是＿＿＿。",
+        "它主要做＿＿＿。",
+        "不要把「主要」說成「唯一」。"
+      ],
+      "stage": "recap",
+      "wait": 1.3,
+      "source_slides": [
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nói một câu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

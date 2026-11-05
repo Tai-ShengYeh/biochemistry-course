@@ -1,0 +1,354 @@
+{
+  "title": "輔因子、輔酶與維生素",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w06.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w06.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "有些酵素，需要幫手",
+      "narration": "有些酵素需要非蛋白質成分協助工作，統稱輔因子。它們可能是金屬離子，也可能是有機分子。不是所有酵素都需要同一種幫手。",
+      "steps": [
+        "輔因子：cofactor",
+        "金屬離子，或有機成分",
+        "有機輔因子常稱輔酶。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Yếu tố phụ · Coenzyme",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "先分化學性質，再看結合方式",
+      "narration": "金屬與有機輔因子，是化學性質的分類。輔基則強調結合較緊密。不要把這兩種分類的問題，當成完全相同。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ion kim loại · Nhóm ngoại",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "輔因子",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "非蛋白質成分",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "化學性質",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "金屬／有機",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "結合方式",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "鬆緊與停留不同",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "輔酶，是金屬離子的別名？",
+      "narration": "鎂離子和某些有機輔酶，都可能幫助酵素。能把所有金屬離子都直接稱為有機輔酶嗎？",
+      "steps": [
+        "A：可以，所有名字都一樣",
+        "B：不可以，金屬與有機成分不同"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân loại yếu tố phụ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。輔因子是較大的概念；有機輔因子常稱輔酶。"
+    },
+    {
+      "title": "核對：大類與小類要分清楚",
+      "narration": "輔因子包含金屬離子與有機成分。有些有機輔酶在反應間移動，有些則結合很緊。輔基也不一定都只有一種化學成分。",
+      "steps": [
+        "輔因子 ⊃ 金屬與有機成分",
+        "輔酶：有機輔因子的常用名稱",
+        "輔基：強調緊密結合。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Coenzyme · Nhóm ngoại",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "B 群，常是輔酶的前驅物",
+      "narration": "許多Ｂ群維生素是輔酶的前驅物。例如菸鹼素與菸鹼醯胺參與形成菸鹼醯胺腺嘌呤二核苷酸；硫胺素可形成焦磷酸硫胺素。",
+      "steps": [
+        "B₃ → NAD⁺ 等",
+        "B₁ → TPP",
+        "維生素可作為輔酶前驅物。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vitamin B · Tiền chất",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "所有維生素，人體都完全不能合成？",
+      "narration": "課堂說很多維生素需要從飲食獲得。是否可以把它改成，人體對所有維生素都完全沒有任何合成能力？",
+      "steps": [
+        "A：可以，沒有例外",
+        "B：不可以，像維生素 D 有內源生成"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Vitamin D · Niacin",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。還有菸鹼素可由色胺酸轉化等例外；不能一概而論。"
+    },
+    {
+      "title": "核對：需要量，還要看來源",
+      "narration": "許多維生素需要飲食供應，但來源與轉化能力各不相同。這一章重點是維生素與輔酶的關係，不從這張分類圖推算個人的補充劑量。",
+      "steps": [
+        "多種來源：飲食、合成或轉化",
+        "本章：認識輔酶前驅物",
+        {
+          "text": "不要把「很多」改成「全部」。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nguồn vitamin",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

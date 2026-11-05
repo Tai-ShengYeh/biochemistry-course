@@ -1,0 +1,357 @@
+{
+  "title": "回饋抑制與磷酸化調節",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w07.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w07.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "細胞要調節，不是一直做最多",
+      "narration": "代謝路徑需要配合需求。產物已多時，回饋抑制可以降低前段關鍵步驟的活性，避免持續投入過多物質。",
+      "steps": [
+        "產物累積 → 回饋訊號",
+        "常調節前段關鍵承諾步驟",
+        "不一定是圖上第一個酵素。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ức chế ngược",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "產物回頭，影響前段通量",
+      "narration": "從原料經過多步反應產生產物。終產物可影響較早的調節酵素。要找被調節的實際步驟，不能把每條路徑的第一個箭頭都當答案。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điều hòa con đường chuyển hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "前段關鍵步驟",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "活性可被抑制",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "多步反應",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "通量隨之改變",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "終產物累積",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "回饋前段調節",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "回饋一定打在第一個箭頭？",
+      "narration": "課本簡圖把回饋畫到最前面。是否代表所有代謝路徑，一定都是第一個酵素受抑制？",
+      "steps": [
+        "A：一定，沒有其他位置",
+        "B：不一定，要看關鍵調節步驟"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Bước điều hòa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。常見的是早期關鍵或承諾步驟，不保證是字面上的第一個。"
+    },
+    {
+      "title": "核對：功能位置，比排序重要",
+      "narration": "同一物質可能通往很多路徑。調節承諾步驟，可以控制特定分支的投入。要找出反應網路與證據，再說回饋作用在哪個酵素。",
+      "steps": [
+        "看分支與承諾步驟。",
+        "看終產物影響哪個酵素。",
+        {
+          "text": "不是只背「第一個」。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Bước cam kết",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "磷酸化：效果依酵素而定",
+      "narration": "蛋白激酶加上磷酸基，磷酸酶移除磷酸基。這種修飾可改變酵素活性，但有些被活化，有些被抑制，不能統一叫開或關。",
+      "steps": [
+        "激酶：加磷酸基",
+        "磷酸酶：去磷酸基",
+        "對活性的方向：看酵素。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phosphoryl hóa",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "加磷酸，一定比較活躍？",
+      "narration": "兩個不同酵素都被磷酸化。可以不看酵素種類，就說兩個的活性一定都上升嗎？",
+      "steps": [
+        "A：可以，加磷酸永遠是開",
+        "B：不能，要看各自的調節機制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        12,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kinase · Phosphatase",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。磷酸化對活性的影響依蛋白質與位點而定。"
+    },
+    {
+      "title": "核對：從曲線回到調節",
+      "narration": "這週學會讀初速率曲線，分辨參數與抑制模型，也知道調節需要條件。請用提高、降低或不變三個詞，說明每個例子與比較基準。",
+      "steps": [
+        "v、Vmax、Km：不要混用",
+        "抑制分類：機制＋數據",
+        "調節效果：看酵素與條件",
+        "下週：糖的結構與連接"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14,
+        15
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 7",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

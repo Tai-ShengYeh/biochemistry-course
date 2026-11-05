@@ -1,0 +1,469 @@
+{
+  "title": "pH：十倍、弱酸與 pKa",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w02.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w02.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "酸與鹼：先看 H⁺",
+      "narration": "這裡用氫離子作為水中酸的簡寫。酸可以給出氫離子，鹼可以接受。這一週的鹼，和核酸裡的含氮鹼基，不是同一個分類問題。",
+      "steps": [
+        "酸：給出 H⁺",
+        "鹼：接受 H⁺",
+        "水中 H⁺ 常是 H₃O⁺ 的簡寫。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        6,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Acid · Base",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "pH：不是酸的總重量",
+      "narration": "稀溶液中，先用氫離子濃度近似計算酸鹼值。氫離子越多，酸鹼值越小。它不是直接在說，有多少百分比已經解離。",
+      "steps": [
+        "pH ≈ −log₁₀[H⁺]",
+        "[H⁺] 越多 → pH 越小",
+        "25 °C：中性水約 pH 7"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nồng độ · pH",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "pH 5 比 pH 6，多一點？",
+      "narration": "酸鹼值從六降到五，氫離子濃度是多一點，還是變成十倍？先用十的次方想一想。",
+      "steps": [
+        "pH 5：[H⁺] ≈ 10⁻⁵ M",
+        "pH 6：[H⁺] ≈ 10⁻⁶ M"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "10 lần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "十倍。10⁻⁵ ÷10⁻⁶ =10。"
+    },
+    {
+      "title": "核對：差一，等於十倍",
+      "narration": "在等體積的比較裡，酸鹼值五的氫離子濃度，是酸鹼值六的十倍。這些符號只是相對數量，並不是畫出杯子裡的全部粒子。",
+      "steps": [],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Lệch 1 → 10 lần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 570,
+          "cy": 560,
+          "rx": 270,
+          "ry": 190,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1350,
+          "cy": 560,
+          "rx": 270,
+          "ry": 190,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "pH 5",
+          "x": 470,
+          "y": 335,
+          "size": 66,
+          "at": 1.2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "pH 6",
+          "x": 1250,
+          "y": 335,
+          "size": 66,
+          "at": 1.2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 420,
+          "y": 490,
+          "size": 42,
+          "at": 2.0,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 490,
+          "y": 490,
+          "size": 42,
+          "at": 2.25,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 560,
+          "y": 490,
+          "size": 42,
+          "at": 2.5,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 630,
+          "y": 490,
+          "size": 42,
+          "at": 2.75,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 700,
+          "y": 490,
+          "size": 42,
+          "at": 3.0,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 420,
+          "y": 600,
+          "size": 42,
+          "at": 3.25,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 490,
+          "y": 600,
+          "size": 42,
+          "at": 3.5,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 560,
+          "y": 600,
+          "size": 42,
+          "at": 3.75,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 630,
+          "y": 600,
+          "size": 42,
+          "at": 4.0,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 700,
+          "y": 600,
+          "size": 42,
+          "at": 4.25,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H⁺",
+          "x": 1320,
+          "y": 530,
+          "size": 42,
+          "at": 2,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "10 份",
+          "x": 480,
+          "y": 790,
+          "size": 60,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "1 份",
+          "x": 1290,
+          "y": 790,
+          "size": 60,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "等體積的相對數量示意",
+          "x": 750,
+          "y": 865,
+          "size": 36,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "差兩個單位，是一百倍",
+      "narration": "酸鹼值五和七，差兩個單位。每差一個單位，氫離子濃度差十倍。連續兩次十倍，就是一百倍。",
+      "steps": [
+        "pH 5 比 pH 7，低 2",
+        {
+          "text": "[H⁺] 比值 = 10² = 100",
+          "emphasis": "box"
+        },
+        "pH 不是線性刻度。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "100 lần",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "弱酸：有平衡，不是沒作用",
+      "narration": "弱酸在水中只有部分解離。未解離的酸和共軛鹼，會同時存在。在相同條件下，pKa 越小，酸越容易給出氫離子。",
+      "steps": [
+        "HA ⇌ H⁺ + A⁻",
+        "HA：弱酸；A⁻：共軛鹼",
+        "相同條件：pKa 越小，酸越強。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Acid yếu · Base liên hợp",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "弱酸，就一定 pH 比較高？",
+      "narration": "一杯濃的弱酸和一杯非常稀的強酸，哪一杯酸鹼值較低？只知道強或弱，資料夠不夠？",
+      "steps": [
+        "只知道：強酸／弱酸",
+        "不知道：濃度與條件"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        11,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nồng độ khác nhau",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "資料不夠。還需要濃度、酸度常數及其他條件。"
+    },
+    {
+      "title": "核對：強度與濃度分開看",
+      "narration": "強弱描述酸給出氫離子的傾向。濃度描述一杯裡有多少。判斷酸鹼值時，兩者都要看，不能只用強酸或弱酸的名字。",
+      "steps": [
+        {
+          "text": "酸的強弱 ≠ 酸的濃度",
+          "emphasis": "box"
+        },
+        "判斷 pH，要同時看條件。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Độ mạnh · Nồng độ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

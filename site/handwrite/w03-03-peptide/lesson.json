@@ -1,0 +1,572 @@
+{
+  "title": "胜肽鍵：方向、數量與轉動",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w03.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w03.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "胺基酸如何連起來？",
+      "narration": "胜肽鍵連接一個胺基酸的羰基碳，與下一個胺基酸的氮。先辨認真正的連接位置，再數有幾個鍵。",
+      "steps": [
+        "羰基碳 — 氮：胜肽鍵",
+        "側鏈不是這條主鏈的接點。",
+        "讀序列：N 端 → C 端"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        12,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết peptide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "畫出一條二胜肽",
+      "narration": "從左側氮端讀到右側碳端。圈出的碳氮連接是胜肽鍵，旁邊有碳氧雙鍵。兩個側鏈仍保留在各自的阿法碳上。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đầu N → Đầu C",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "N 端",
+          "x": 200,
+          "y": 350,
+          "size": 52,
+          "at": 1,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C 端",
+          "x": 1510,
+          "y": 350,
+          "size": 52,
+          "at": 1,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H₂N",
+          "x": 230,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "CH",
+          "x": 535,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 785,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "N",
+          "x": 1035,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "CH",
+          "x": 1285,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "COOH",
+          "x": 1520,
+          "y": 515,
+          "size": 64,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              370,
+              560
+            ],
+            [
+              520,
+              560
+            ]
+          ],
+          "at": 2.5,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              635,
+              560
+            ],
+            [
+              780,
+              560
+            ]
+          ],
+          "at": 2.5,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              865,
+              560
+            ],
+            [
+              1030,
+              560
+            ]
+          ],
+          "at": 2.5,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1115,
+              560
+            ],
+            [
+              1275,
+              560
+            ]
+          ],
+          "at": 2.5,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1385,
+              560
+            ],
+            [
+              1500,
+              560
+            ]
+          ],
+          "at": 2.5,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              590,
+              615
+            ],
+            [
+              590,
+              715
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "R₁",
+          "x": 560,
+          "y": 735,
+          "size": 58,
+          "at": 3,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1090,
+              615
+            ],
+            [
+              1090,
+              715
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 1060,
+          "y": 735,
+          "size": 58,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1340,
+              615
+            ],
+            [
+              1340,
+              715
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "R₂",
+          "x": 1310,
+          "y": 735,
+          "size": 58,
+          "at": 3,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 800,
+          "y": 345,
+          "size": 60,
+          "at": 3,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              820,
+              430
+            ],
+            [
+              820,
+              500
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              840,
+              430
+            ],
+            [
+              840,
+              500
+            ]
+          ],
+          "at": 3,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 955,
+          "cy": 560,
+          "rx": 190,
+          "ry": 75,
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "胜肽鍵：羰基碳 — 氮",
+          "x": 580,
+          "y": 850,
+          "size": 46,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "五個殘基，要幾個胜肽鍵？",
+      "narration": "一條沒有分支、沒有環的直鏈，共有五個胺基酸殘基。相鄰單元間，要幾個胜肽鍵才接得起來？",
+      "steps": [
+        "A：4 個",
+        "B：5 個",
+        "C：6 個"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        11,
+        13,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đếm liên kết",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。直鏈 n 個殘基有 n−1 個胜肽鍵。"
+    },
+    {
+      "title": "核對：數相鄰接點",
+      "narration": "兩個單元只要一個接點。繼續增加單元，每多一個就多一個接點。因此，五個殘基有四個胜肽鍵。環狀結構需要另外計算。",
+      "steps": [
+        "2 個殘基 → 1 個鍵",
+        "5 個殘基 → 4 個鍵",
+        "直鏈：n − 1"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        13,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chuỗi thẳng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "脫水圖，是形式上的整理",
+      "narration": "課本用脫水來整理形成醯胺鍵的原子變化。細胞裡合成蛋白質，還需要活化的轉運核糖核酸、核糖體與能量，不是游離胺基酸自己一直脫水。",
+      "steps": [
+        "形式整理：縮合可寫出水。",
+        "細胞合成：活化單元＋核糖體",
+        "需要能量與多個步驟。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ngưng tụ · Ribosome",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "整條主鏈，完全不能轉嗎？",
+      "narration": "胜肽鍵的碳氮鍵有部分雙鍵性。這是否代表蛋白質主鏈上的每一個鍵，都完全不能轉動？",
+      "steps": [
+        "A：每個鍵都不能轉",
+        "B：胜肽 C—N 的轉動受限"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        12,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mặt phẳng peptide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。鄰近單鍵仍有構形自由度，但也受空間限制。"
+    },
+    {
+      "title": "核對：限制的位置要說清楚",
+      "narration": "共振讓胜肽碳氮鍵的轉動受限，這段胜肽單元近似平面。鄰近的主鏈單鍵仍可改變角度，讓整條鏈有不同摺疊方式。",
+      "steps": [
+        "胜肽 C—N：轉動受限",
+        "胜肽單元：近似平面",
+        "鄰近主鏈單鍵：仍可改變構形"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        12,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu dạng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

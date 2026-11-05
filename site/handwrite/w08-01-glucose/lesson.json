@@ -1,0 +1,507 @@
+{
+  "title": "葡萄糖環與 α、β 異構",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w08.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w08.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "醣類，先看結構與連接",
+      "narration": "這週從蛋白質轉到碳水化合物。中文有糖與醣的用法差異，但甜不甜不是完整的科學分類標準。澱粉和纖維素也都是醣類。",
+      "steps": [
+        "單醣：小單元",
+        "雙醣：兩個單醣單元",
+        "多醣：很多單元連接",
+        "不以甜度決定所有分類。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Carbohydrate · Đường",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "D-葡萄糖：比較 C1 的 OH",
+      "narration": "這是常見的葡萄糖環圖，只畫比較需要的部分。找第一號碳上的羥基，再和參考的羥甲基比較。阿法在異側，貝塔在同側。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Glucose · Carbon anomer",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              453.5,
+              536.5
+            ],
+            [
+              606.5,
+              536.5
+            ],
+            [
+              683.0,
+              595.0
+            ],
+            [
+              606.5,
+              653.5
+            ],
+            [
+              453.5,
+              653.5
+            ],
+            [
+              377.0,
+              595.0
+            ],
+            [
+              453.5,
+              536.5
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 2
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 584.0,
+          "y": 487.0,
+          "size": 46,
+          "at": 2,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C1",
+          "x": 687.5,
+          "y": 559.0,
+          "size": 37,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              453.5,
+              536.5
+            ],
+            [
+              453.5,
+              428.5
+            ]
+          ],
+          "at": 3,
+          "color": "green",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "CH₂OH",
+          "x": 341.0,
+          "y": 370.0,
+          "size": 43,
+          "at": 3,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              683.0,
+              595.0
+            ],
+            [
+              683.0,
+              711.28
+            ]
+          ],
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "OH",
+          "x": 656.0,
+          "y": 766.0,
+          "size": 46,
+          "at": 4,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1243.5,
+              536.5
+            ],
+            [
+              1396.5,
+              536.5
+            ],
+            [
+              1473.0,
+              595.0
+            ],
+            [
+              1396.5,
+              653.5
+            ],
+            [
+              1243.5,
+              653.5
+            ],
+            [
+              1167.0,
+              595.0
+            ],
+            [
+              1243.5,
+              536.5
+            ]
+          ],
+          "at": 1,
+          "color": "blue",
+          "stroke": 6,
+          "dur": 2
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 1374.0,
+          "y": 487.0,
+          "size": 46,
+          "at": 2,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C1",
+          "x": 1477.5,
+          "y": 559.0,
+          "size": 37,
+          "at": 3,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1243.5,
+              536.5
+            ],
+            [
+              1243.5,
+              428.5
+            ]
+          ],
+          "at": 3,
+          "color": "green",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "CH₂OH",
+          "x": 1131.0,
+          "y": 370.0,
+          "size": 43,
+          "at": 3,
+          "color": "green",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1473.0,
+              595.0
+            ],
+            [
+              1473.0,
+              481.78
+            ]
+          ],
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "OH",
+          "x": 1446.0,
+          "y": 428.5,
+          "size": 46,
+          "at": 4,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "α：與 CH₂OH 異側",
+          "x": 220,
+          "y": 850,
+          "size": 43,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "β：與 CH₂OH 同側",
+          "x": 1020,
+          "y": 850,
+          "size": 43,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "D-葡萄糖常見 Haworth 畫法；省略其他 OH 與 H。",
+          "x": 320,
+          "y": 330,
+          "size": 35,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "α 與 β，是碳數不同嗎？",
+      "narration": "兩張圖都表示葡萄糖。阿法與貝塔形式的差異，主要在這裡哪一個位置？",
+      "steps": [
+        "A：異頭碳 C1 上 OH 的方向",
+        "B：一個有五碳、一個有六碳"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Anomer alpha · Beta",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。這裡比較環狀 D-葡萄糖在 C1 的異頭構型。"
+    },
+    {
+      "title": "核對：同一種糖，比較異頭構型",
+      "narration": "兩者都是六碳葡萄糖。環化後形成異頭碳，第一號碳上的構型可以不同。畫法轉動時，不能只背上或下，要與參考基團比較。",
+      "steps": [
+        "相同分子式，相同碳數",
+        "D-葡萄糖：異頭碳是 C1",
+        "常見環圖：α 異側、β 同側"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "So sánh vị trí tương đối",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "環式與開鏈，可以互相轉換",
+      "narration": "水溶液裡，葡萄糖的環式與少量開鏈形式可以互相轉換。開環再閉環，可以讓阿法與貝塔形式互相轉換，稱為變旋。",
+      "steps": [
+        "環式 ⇌ 開鏈 ⇌ 另一異頭形式",
+        "自由異頭碳：可以參與開環",
+        "不是整個分子失去碳原子。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dạng vòng · Mạch hở",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "環圖少畫其他 OH，代表沒有？",
+      "narration": "為了比較第一號碳，這張教學圖省略其他氫和羥基。是否可以把它當成完整結構，說其他碳上都沒有羥基？",
+      "steps": [
+        "A：可以，沒畫就是不存在",
+        "B：不能，這是局部簡化圖"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Sơ đồ giản lược",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。圖註已說省略其他 OH 與 H，完整結構仍要補回。"
+    },
+    {
+      "title": "核對：先讀圖註與方向",
+      "narration": "簡圖只留下要比較的部位。讀分子圖要知道畫了什麼、略了什麼。之後看雙醣的連接，還要指出哪一個異頭碳參與鍵結。",
+      "steps": [
+        "找 C1，再比較 OH 方向。",
+        "讀圖註，補回省略資訊。",
+        "接下來：看糖苷鍵。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Đọc chú thích",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

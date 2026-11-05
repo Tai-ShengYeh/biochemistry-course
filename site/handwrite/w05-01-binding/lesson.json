@@ -1,0 +1,392 @@
+{
+  "title": "結合位置、親和力與 heme",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w05.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w05.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "形狀，如何連到工作？",
+      "narration": "蛋白質可以和配體結合。配體是能和蛋白質結合的分子或離子。結合位置的形狀與化學互動，會影響能結合什麼。",
+      "steps": [
+        "蛋白質＋配體 ⇌ 複合體",
+        "結合位置：形狀與互動",
+        "可逆結合：也能分開。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        1,
+        2,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phối tử · Vị trí gắn",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "heme：讓氧有結合的位置",
+      "narration": "肌紅蛋白與血紅蛋白都有血基質，也就是 heme。中央的二價鐵參與可逆氧結合。這兩種蛋白質的鏈數和血基質數目不同。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Heme · Sắt hóa trị hai",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "肌紅蛋白 Mb",
+          "x": 290,
+          "y": 350,
+          "size": 58,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 520,
+          "cy": 520,
+          "rx": 105,
+          "ry": 75,
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 520,
+          "cy": 520,
+          "rx": 35,
+          "ry": 30,
+          "at": 3.0,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "1 鏈 · 1 heme",
+          "x": 320,
+          "y": 840,
+          "size": 50,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "血紅蛋白 HbA",
+          "x": 1070,
+          "y": 350,
+          "size": 58,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 1205,
+          "cy": 520,
+          "rx": 105,
+          "ry": 75,
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1205,
+          "cy": 520,
+          "rx": 35,
+          "ry": 30,
+          "at": 3.0,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1395,
+          "cy": 520,
+          "rx": 105,
+          "ry": 75,
+          "at": 2.5,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1395,
+          "cy": 520,
+          "rx": 35,
+          "ry": 30,
+          "at": 3.5,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1205,
+          "cy": 690,
+          "rx": 105,
+          "ry": 75,
+          "at": 3.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1205,
+          "cy": 690,
+          "rx": 35,
+          "ry": 30,
+          "at": 4.0,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1395,
+          "cy": 690,
+          "rx": 105,
+          "ry": 75,
+          "at": 3.5,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1395,
+          "cy": 690,
+          "rx": 35,
+          "ry": 30,
+          "at": 4.5,
+          "color": "red",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "4 鏈 · 4 heme",
+          "x": 1100,
+          "y": 840,
+          "size": 50,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "每個蛋白質，都要有 heme？",
+      "narration": "這兩種運氧蛋白質都有血基質。是否可以推論，所有蛋白質都需要血基質才有功能？",
+      "steps": [
+        "A：可以，所有蛋白質都一樣",
+        "B：不能，這是特定蛋白質的輔基"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        6
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhóm ngoại",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。並非所有蛋白質都含 heme。"
+    },
+    {
+      "title": "核對：例子不能套成全部",
+      "narration": "肌紅蛋白與血紅蛋白用血基質結合氧。其他蛋白質有自己的結構與功能需求。正常二價鐵若被氧化成三價鐵，就失去這種正常的可逆氧結合能力。",
+      "steps": [
+        "Mb、Hb：heme 中的 Fe²⁺",
+        "氧化成 Fe³⁺：不能正常結合 O₂",
+        "不能推成所有蛋白質都需鐵。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        6,
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Fe²⁺ · Fe³⁺",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "簡單單位點：Kd 小，較易結合",
+      "narration": "在簡單、獨立單一位點模型裡，解離常數越小，代表相同游離配體濃度下，平均較多位點被占據。這裡比較的是平衡，不是反應速度。",
+      "steps": [
+        "單位點：Y = [L] / (Kd + [L])",
+        "[L] = Kd 時，Y = 1/2",
+        "Kd 較小 → 此模型中親和力較高。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ái lực · Hằng số phân ly",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "同樣濃度，哪個占據率較高？",
+      "narration": "只考慮剛才的單位點模型。游離配體濃度是二，甲的解離常數是二，乙是六。哪個占據率較高？",
+      "steps": [
+        "甲：2 / (2 + 2)",
+        "乙：2 / (6 + 2)",
+        "A：甲　B：乙"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "So sánh ái lực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "A。甲為 1/2，乙為 1/4。"
+    },
+    {
+      "title": "核對：先說模型，再做比較",
+      "narration": "甲的占據率是一半，乙是四分之一。這說明單位點模型裡的平衡差異。血紅蛋白有多個互相影響的位點，不能用一個獨立位點常數就完整描述。",
+      "steps": [
+        "甲：Y = 0.50",
+        "乙：Y = 0.25",
+        {
+          "text": "多位點協同性，需要另一種描述。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        5,
+        8,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mô hình một vị trí",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

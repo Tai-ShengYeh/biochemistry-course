@@ -1,0 +1,299 @@
+{
+  "base": "http://127.0.0.1:57719/biochemistry-course/",
+  "static_references_checked": 886,
+  "weeks": [
+    {
+      "week": 1,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 2,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 3,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 4,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 5,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 6,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 7,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    },
+    {
+      "week": 8,
+      "four_chapters": true,
+      "lesson_entry": true,
+      "reveal_route": true,
+      "landscape": true,
+      "existing_lab_pause": true
+    }
+  ],
+  "chapters": [
+    {
+      "id": "w01-01-life",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w01-02-cells",
+      "audio_files": 9,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w01-03-molecules",
+      "audio_files": 8,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w01-04-groups",
+      "audio_files": 8,
+      "pause_gates": 1,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w02-01-water",
+      "audio_files": 8,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w02-02-ph",
+      "audio_files": 8,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w02-03-buffer",
+      "audio_files": 10,
+      "pause_gates": 3,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w02-04-apply",
+      "audio_files": 8,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w03-01-amino",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w03-02-sidechains",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w03-03-peptide",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w03-04-pi",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w04-01-levels",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w04-02-secondary",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w04-03-fold",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w04-04-denature",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w05-01-binding",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w05-02-oxygen",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w05-03-cooperate",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w05-04-hbs",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w06-01-catalysis",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w06-02-active",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w06-03-cofactor",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w06-04-control",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w07-01-mm",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w07-02-parameters",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w07-03-inhibit",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w07-04-regulate",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w08-01-glucose",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w08-02-disaccharides",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w08-03-polysaccharides",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    },
+    {
+      "id": "w08-04-food",
+      "audio_files": 7,
+      "pause_gates": 2,
+      "mobile": true,
+      "seek_reset_speed": true
+    }
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "http_errors": []
+}

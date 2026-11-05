@@ -1,0 +1,526 @@
+{
+  "title": "官能基：看連接，不只看顏色",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w01.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w01.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "六種圖式：先看連接",
+      "narration": "原教材圖上有醛、酮、羧基、酸酐、胺基和醯胺。先看哪些原子相連，不用今天一次背完所有反應。",
+      "steps": [
+        "醛、酮：都有 C=O",
+        "羧基、酸酐：連接不同",
+        "胺基、醯胺：看 N 的鄰居"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhóm chức",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "醛與酮：共同的 C=O",
+      "narration": "這兩個圖都有碳氧雙鍵。左邊的碳，還連著一個氫，是醛。右邊兩側都連碳基團，是酮。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Aldehyde · Ketone",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 558,
+          "y": 485,
+          "size": 65,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 558,
+          "y": 335,
+          "size": 65,
+          "at": 1.3,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "R",
+          "x": 405,
+          "y": 485,
+          "size": 65,
+          "at": 1.5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 725,
+          "y": 485,
+          "size": 65,
+          "at": 1.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              480,
+              520
+            ],
+            [
+              545,
+              520
+            ]
+          ],
+          "at": 1.8,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              620,
+              520
+            ],
+            [
+              710,
+              520
+            ]
+          ],
+          "at": 2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              570,
+              465
+            ],
+            [
+              570,
+              405
+            ]
+          ],
+          "at": 2.1,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              590,
+              465
+            ],
+            [
+              590,
+              405
+            ]
+          ],
+          "at": 2.2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "C",
+          "x": 1298,
+          "y": 485,
+          "size": 65,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 1298,
+          "y": 335,
+          "size": 65,
+          "at": 1.3,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "R",
+          "x": 1145,
+          "y": 485,
+          "size": 65,
+          "at": 1.5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "R",
+          "x": 1465,
+          "y": 485,
+          "size": 65,
+          "at": 1.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1220,
+              520
+            ],
+            [
+              1285,
+              520
+            ]
+          ],
+          "at": 1.8,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1360,
+              520
+            ],
+            [
+              1450,
+              520
+            ]
+          ],
+          "at": 2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1310,
+              465
+            ],
+            [
+              1310,
+              405
+            ]
+          ],
+          "at": 2.1,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1330,
+              465
+            ],
+            [
+              1330,
+              405
+            ]
+          ],
+          "at": 2.2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "醛：末端有 H",
+          "x": 340,
+          "y": 710,
+          "size": 56,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "酮：兩側連碳基團",
+          "x": 1070,
+          "y": 710,
+          "size": 56,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "兩者都有 C=O，但相連的基團不同。",
+          "x": 320,
+          "y": 835,
+          "size": 43,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "羧基：可以給出 H⁺",
+      "narration": "羧基有碳氧雙鍵，也有羥基。它可以給出氫離子，變成帶負電的羧酸根。給出多少，還要看酸鹼條件。",
+      "steps": [
+        "R—COOH ⇌ R—COO⁻ + H⁺",
+        {
+          "text": "羧基：可給出 H⁺",
+          "emphasis": "box"
+        },
+        "形式會隨 pH 改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Carboxyl · Acid",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "胺基：可以接住 H⁺",
+      "narration": "中性的胺基，可以接受氫離子，變成帶正電的銨基。圖上的兩種形式，不是同時都沒有電荷。",
+      "steps": [
+        "R—NH₂ + H⁺ ⇌ R—NH₃⁺",
+        "左：中性形式",
+        "右：帶正電形式"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Amino · Base",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "酸酐與醯胺：注意鄰居",
+      "narration": "酸酐有兩個羰基，中間由氧相連。醯胺的氮，直接連在羰基碳上。看到氮，還要看它接在哪裡。",
+      "steps": [
+        "酸酐：R—C(=O)—O—C(=O)—R",
+        "醯胺：R—C(=O)—NH₂",
+        "胺基：R—NH₂"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Anhydride · Amide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "看到 NH₂，就都是胺基嗎？",
+      "narration": "請比較這兩個圖。第二個的氮，直接接在碳氧雙鍵旁的碳上。能把兩者當成同一種官能基嗎？",
+      "steps": [
+        "A：R—NH₂",
+        "B：R—C(=O)—NH₂"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhìn liên kết",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "不能。A是胺基，B是醯胺；連接方式不同。"
+    },
+    {
+      "title": "核對：連接比顏色重要",
+      "narration": "第一個是胺基，第二個是醯胺。圖中的紅色和藍色，只幫忙找氧和氮。顏色不能替代連接方式，也不能直接決定酸鹼性。",
+      "steps": [
+        "A：胺基",
+        "B：醯胺",
+        {
+          "text": "先看原子，再看連接。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhóm amino · Nhóm amide",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "第 1 週，說得出這三件事",
+      "narration": "你現在可以指出細胞構造，說出四類生物分子，也能比較官能基。下一週，就看這些分子如何和水、氫離子互動。",
+      "steps": [
+        "指出構造，說主要功能。",
+        "把單體和分子配對。",
+        "比較官能基的連接。"
+      ],
+      "stage": "recap",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        15,
+        16
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 1",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

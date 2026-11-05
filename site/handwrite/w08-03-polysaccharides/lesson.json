@@ -1,0 +1,868 @@
+{
+  "title": "澱粉、肝醣與纖維素",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w08.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w08.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "都由葡萄糖組成，卻不同",
+      "narration": "澱粉、肝醣與纖維素，都可以由許多葡萄糖單元組成。它們的鍵結構型與分支不同，因此形狀、用途與可消化性也不同。",
+      "steps": [
+        "澱粉：植物常見儲存醣",
+        "肝醣：動物常見儲存醣",
+        "纖維素：植物細胞壁結構"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tinh bột · Glycogen · Cellulose",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "直鏈、分支，先找接點",
+      "narration": "直鏈澱粉主要是阿法一接四的鏈。支鏈澱粉與肝醣另有阿法一接六分支，肝醣通常分支更密。圖中的圓表示葡萄糖單元。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Mạch thẳng · Phân nhánh",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "直鏈澱粉",
+          "x": 170,
+          "y": 435,
+          "size": 45,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 650,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              672,
+              460
+            ],
+            [
+              730,
+              460
+            ]
+          ],
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 755,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.15,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              777,
+              460
+            ],
+            [
+              835,
+              460
+            ]
+          ],
+          "at": 2.15,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 860,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.3,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              882,
+              460
+            ],
+            [
+              940,
+              460
+            ]
+          ],
+          "at": 2.3,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 965,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.45,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              987,
+              460
+            ],
+            [
+              1045,
+              460
+            ]
+          ],
+          "at": 2.45,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1070,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.6,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1092,
+              460
+            ],
+            [
+              1150,
+              460
+            ]
+          ],
+          "at": 2.6,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1175,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.75,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1197,
+              460
+            ],
+            [
+              1255,
+              460
+            ]
+          ],
+          "at": 2.75,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1280,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.9,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1302,
+              460
+            ],
+            [
+              1360,
+              460
+            ]
+          ],
+          "at": 2.9,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1385,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 3.05,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1407,
+              460
+            ],
+            [
+              1465,
+              460
+            ]
+          ],
+          "at": 3.05,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1490,
+          "cy": 460,
+          "rx": 21,
+          "ry": 21,
+          "at": 3.2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "肝醣",
+          "x": 170,
+          "y": 735,
+          "size": 45,
+          "at": 1,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 650,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              672,
+              760
+            ],
+            [
+              730,
+              760
+            ]
+          ],
+          "at": 2.0,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 755,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.15,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              777,
+              760
+            ],
+            [
+              835,
+              760
+            ]
+          ],
+          "at": 2.15,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 860,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.3,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              882,
+              760
+            ],
+            [
+              940,
+              760
+            ]
+          ],
+          "at": 2.3,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 965,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.45,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              987,
+              760
+            ],
+            [
+              1045,
+              760
+            ]
+          ],
+          "at": 2.45,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1070,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.6,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1092,
+              760
+            ],
+            [
+              1150,
+              760
+            ]
+          ],
+          "at": 2.6,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1175,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.75,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1197,
+              760
+            ],
+            [
+              1255,
+              760
+            ]
+          ],
+          "at": 2.75,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1280,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 2.9,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1302,
+              760
+            ],
+            [
+              1360,
+              760
+            ]
+          ],
+          "at": 2.9,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1385,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 3.05,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1407,
+              760
+            ],
+            [
+              1465,
+              760
+            ]
+          ],
+          "at": 3.05,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1490,
+          "cy": 760,
+          "rx": 21,
+          "ry": 21,
+          "at": 3.2,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              860,
+              737
+            ],
+            [
+              910,
+              655
+            ],
+            [
+              1000,
+              655
+            ]
+          ],
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 910,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1000,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.0,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1175,
+              737
+            ],
+            [
+              1225,
+              655
+            ],
+            [
+              1315,
+              655
+            ]
+          ],
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1225,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1315,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.3,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1490,
+              737
+            ],
+            [
+              1540,
+              655
+            ],
+            [
+              1630,
+              655
+            ]
+          ],
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 4,
+          "dur": 0.7
+        },
+        {
+          "type": "circle",
+          "cx": 1540,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1630,
+          "cy": 655,
+          "rx": 20,
+          "ry": 20,
+          "at": 4.6,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "主鏈 α(1→4)；肝醣分支點 α(1→6)",
+          "x": 520,
+          "y": 865,
+          "size": 43,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "肝醣，只存在肝臟嗎？",
+      "narration": "名稱裡有肝這個字，是否代表人體的肝醣只存在肝臟，肌肉完全不儲存？",
+      "steps": [
+        "A：只在肝臟",
+        "B：肝臟與骨骼肌等處都可儲存"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gan · Cơ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。肝臟與骨骼肌都是重要的肝醣儲存部位。"
+    },
+    {
+      "title": "核對：名稱不是唯一位置",
+      "narration": "肝臟的肝醣與維持血糖有關。骨骼肌的肝醣主要支持肌肉本身的能量需求。兩者都是肝醣，但所在位置與生理用途不同。",
+      "steps": [
+        "肝臟：參與血糖調節",
+        "骨骼肌：支持局部工作",
+        "同一種聚合物，使用情境不同。"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Dự trữ năng lượng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "纖維素：β 一接四的鏈",
+      "narration": "纖維素由貝塔一接四葡萄糖鏈構成，可以形成有強度的纖維結構。人體缺少可有效水解這種連接的纖維素酶，所以不能像澱粉一樣消化它。",
+      "steps": [
+        "纖維素：β(1→4) 葡萄糖鏈",
+        "可形成強韌纖維結構",
+        "人體缺乏相應纖維素酶。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        9
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cellulose · Chất xơ",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "單元相同，消化性就相同？",
+      "narration": "澱粉與纖維素都能由葡萄糖單元組成。只知道單元相同，能保證人體對兩者的消化能力相同嗎？",
+      "steps": [
+        "A：能，都是葡萄糖即可",
+        "B：不能，還要看鍵與酵素"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7,
+        9,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết và enzyme",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。酵素辨認特定連接；α、β 與接點影響可水解性。"
+    },
+    {
+      "title": "核對：把上一週的酵素接回來",
+      "narration": "消化需要能辨認並水解對應糖苷鍵的酵素。單元相同，不表示整體結構相同。把單元、鍵結與分支三個層次一起比較。",
+      "steps": [
+        "單元：是不是葡萄糖？",
+        "連接：α 或 β，接到哪一碳？",
+        "分支：有沒有、密度如何？"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10,
+        13
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "So sánh ba đặc điểm",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

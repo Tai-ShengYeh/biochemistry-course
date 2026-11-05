@@ -1,0 +1,361 @@
+{
+  "title": "變性：形狀變了，序列呢？",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w04.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w04.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "蛋白煮熟，改變哪裡？",
+      "narration": "生蛋白加熱後變白，流動性也改變。這可以用蛋白質變性與聚集來理解。先比較三維構造和胺基酸序列，別把它們混在一起。",
+      "steps": [
+        "加熱 → 構形改變",
+        "可能聚集 → 外觀、性質改變",
+        "變性不等於切碎整條主鏈。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        12,
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Biến tính protein",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "環境影響維持構形的作用",
+      "narration": "高溫、極端酸鹼或尿素，可能干擾維持蛋白質構形的作用。不同處理方式不會只針對同一種鍵，效果也不完全一樣。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        13,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nhiệt · pH · Urea",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "環境變化",
+          "x": 200,
+          "y": 450,
+          "size": 67,
+          "at": 1.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f0"
+        },
+        {
+          "type": "box",
+          "of": "f0",
+          "at": 2.0,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "高溫或酸鹼等",
+          "x": 200,
+          "y": 625,
+          "size": 38,
+          "at": 2.0,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            530,
+            510
+          ],
+          "to": [
+            690,
+            510
+          ],
+          "at": 2.5,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "構形改變",
+          "x": 740,
+          "y": 450,
+          "size": 67,
+          "at": 2.8,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f1"
+        },
+        {
+          "type": "box",
+          "of": "f1",
+          "at": 3.8,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "互動被改變",
+          "x": 740,
+          "y": 625,
+          "size": 38,
+          "at": 3.8,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            1070,
+            510
+          ],
+          "to": [
+            1230,
+            510
+          ],
+          "at": 4.3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "text",
+          "text": "功能可能下降",
+          "x": 1280,
+          "y": 450,
+          "size": 67,
+          "at": 4.6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0,
+          "id": "f2"
+        },
+        {
+          "type": "box",
+          "of": "f2",
+          "at": 5.6,
+          "color": "blue",
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "也可能聚集",
+          "x": 1280,
+          "y": 625,
+          "size": 38,
+          "at": 5.6,
+          "color": "ink",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "變性，就是胜肽鍵都斷了？",
+      "narration": "煮蛋造成蛋白質變性。這是否表示，所有胜肽鍵都已經斷開，變成游離胺基酸？",
+      "steps": [
+        "A：是，所有主鏈都斷開",
+        "B：不是，通常先談高級構造改變"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        14,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Biến tính ≠ Thủy phân",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。一般變性通常保留主要序列，不能等同水解。"
+    },
+    {
+      "title": "核對：變性與水解不同",
+      "narration": "變性主要談高級構造的改變。水解則會切開胜肽鍵。某些嚴重處理可能伴隨化學破壞，但不能把這些作用全部叫作同一件事。",
+      "steps": [
+        "變性：主要是構形改變",
+        "水解：切開胜肽鍵",
+        {
+          "text": "說清楚改變的層級。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        14,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu dạng · Trình tự",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "冷卻後，能全部摺回嗎？",
+      "narration": "有些蛋白質移除變性條件後，可以重新摺疊。但如果已經聚集，或發生其他不可逆改變，就不一定恢復。煮熟的蛋，不會單靠冷卻變回生蛋。",
+      "steps": [
+        "有些條件下：可重新摺疊",
+        "聚集或化學破壞：可能難恢復",
+        "能否恢復，要實際確認。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        12,
+        14
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tái gấp cuộn",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "如果序列沒變，功能必定不變？",
+      "narration": "一個蛋白質的胺基酸順序沒變，但結合位置已經失去原本形狀。功能是否一定保持？",
+      "steps": [
+        "A：一定，序列沒變就夠了",
+        "B：不一定，功能也依賴三維構造"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        14,
+        17
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cấu trúc → Chức năng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。序列相同，不保證當下的構形與功能相同。"
+    },
+    {
+      "title": "核對：把四個層級連起來",
+      "narration": "序列影響可形成的互動；環境也影響摺疊。合適的三維構造，才能支持許多結合與催化功能。下週用肌紅蛋白與血紅蛋白來比較。",
+      "steps": [
+        "序列＋環境 → 互動與摺疊",
+        "構形 → 結合與功能",
+        "下週：一條鏈與四條鏈運氧"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        17,
+        18
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ôn tập tuần 4",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

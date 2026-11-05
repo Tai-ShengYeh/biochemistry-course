@@ -1,0 +1,344 @@
+{
+  "title": "活性位置、專一性與誘導契合",
+  "objective": "能用短句指出圖中證據、說明關係，並應用到新的例子。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "胜肽": "生肽",
+    "pKa": "P K A",
+    "pH": "P H",
+    "pI": "等電點",
+    "Km": "K M",
+    "Vmax": "最大速率",
+    "HbA": "成人血紅蛋白",
+    "HbS": "鐮刀型血紅蛋白",
+    "ATP": "三磷酸腺苷"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w06.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w06.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "受質，要先到適合的位置",
+      "narration": "受質是酵素反應中的作用對象。活性位置提供結合與催化所需的環境，形狀、電荷與化學基團都重要。",
+      "steps": [
+        "受質：substrate",
+        "活性位置：結合與催化",
+        "不只看外形是否放得進去。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        5,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Cơ chất · Trung tâm hoạt động",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "誘導契合：結合時可調整",
+      "narration": "這張圖表示酵素和受質結合時，局部構形可以調整。調整有助於形成適合催化的排列，不是酵素永遠完全僵硬。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Khớp cảm ứng",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 540,
+          "cy": 570,
+          "rx": 260,
+          "ry": 175,
+          "at": 1,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "酵素",
+          "x": 420,
+          "y": 740,
+          "size": 55,
+          "at": 2,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "circle",
+          "cx": 520,
+          "cy": 480,
+          "rx": 70,
+          "ry": 50,
+          "at": 2,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "受質",
+          "x": 360,
+          "y": 340,
+          "size": 52,
+          "at": 2,
+          "color": "orange",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "arrow",
+          "from": [
+            820,
+            570
+          ],
+          "to": [
+            1040,
+            570
+          ],
+          "at": 3,
+          "color": "blue",
+          "bend": 0.1,
+          "dur": 0.8
+        },
+        {
+          "type": "circle",
+          "cx": 1390,
+          "cy": 570,
+          "rx": 260,
+          "ry": 175,
+          "at": 4,
+          "color": "blue",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "circle",
+          "cx": 1370,
+          "cy": 480,
+          "rx": 83,
+          "ry": 60,
+          "at": 4,
+          "color": "orange",
+          "stroke": 5,
+          "dur": 1
+        },
+        {
+          "type": "text",
+          "text": "結合後，構形可調整",
+          "x": 1100,
+          "y": 790,
+          "size": 46,
+          "at": 5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "誘導契合：不是完全僵硬的鎖與鑰匙。",
+          "x": 400,
+          "y": 870,
+          "size": 40,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "活性位置只是一個洞嗎？",
+      "narration": "一個分子大小剛好放得進去，就一定能被這個酵素催化嗎？還要考慮什麼？",
+      "steps": [
+        "A：只看大小即可",
+        "B：還要看化學互動與催化排列"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hình dạng và hóa học",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。結合能力與催化能力都需要合適的化學條件。"
+    },
+    {
+      "title": "核對：對得上，還要做得成",
+      "narration": "受質需要適合的結合互動，也需要讓反應基團進入有利的排列。酵素還可能穩定過渡態。可以結合，不代表一定快速產生產物。",
+      "steps": [
+        "形狀：影響能否靠近",
+        "電荷、基團：影響互動",
+        "催化排列：影響反應途徑"
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        8,
+        10,
+        11
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ổn định trạng thái chuyển tiếp",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "專一性，不是只能認一個名字",
+      "narration": "有些酵素很嚴格，有些能作用於一群相關受質。專一性描述的是偏好的受質或反應類型，不能一律說一個酵素只認一種分子。",
+      "steps": [
+        "可能偏好特定受質。",
+        "也可能接受一群相似受質。",
+        "要看實際酵素與條件。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Tính đặc hiệu",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "誘導契合，是否不需要專一性？",
+      "narration": "酵素結合時可以改變形狀，所以任何分子都能當它的受質。這個說法對嗎？",
+      "steps": [
+        "A：對，能變形就什麼都行",
+        "B：錯，調整仍受結構與化學限制"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        10,
+        11,
+        18
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Chọn cơ chất phù hợp",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。可調整不代表所有分子都能適合結合與催化。"
+    },
+    {
+      "title": "核對：可調整，仍有條件",
+      "narration": "誘導契合說明構形不是完全固定。專一性則說明不同分子有不同的結合與反應傾向。兩者可以同時存在，不互相抵消。",
+      "steps": [
+        "構形可調整。",
+        "受質仍有選擇性。",
+        {
+          "text": "結合、調整、催化：逐步解釋。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        10,
+        11,
+        12
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Gắn → Điều chỉnh → Xúc tác",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}

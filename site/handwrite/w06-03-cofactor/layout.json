@@ -1,0 +1,80 @@
+{
+ "T": 98.802,
+ "width": 1920,
+ "height": 1080,
+ "voices": [
+  {
+   "file": "assets/voice/s01_2c9d7a8400.mp3",
+   "start": 0.2,
+   "dur": 13.538
+  },
+  {
+   "file": "assets/voice/s02_9a7626b834.mp3",
+   "start": 15.238,
+   "dur": 12.043
+  },
+  {
+   "file": "assets/voice/s03_bff60f77f8.mp3",
+   "start": 28.781,
+   "dur": 8.752
+  },
+  {
+   "file": "assets/voice/s04_bd5544b710.mp3",
+   "start": 41.733,
+   "dur": 12.473
+  },
+  {
+   "file": "assets/voice/s05_c4dfd7fbdd.mp3",
+   "start": 55.706,
+   "dur": 12.62
+  },
+  {
+   "file": "assets/voice/s06_158601101a.mp3",
+   "start": 69.826,
+   "dur": 10.384
+  },
+  {
+   "file": "assets/voice/s07_787f94a46a.mp3",
+   "start": 84.41,
+   "dur": 13.092
+  }
+ ],
+ "music": false,
+ "scenes": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 15.038
+  },
+  {
+   "index": 1,
+   "start": 15.038,
+   "end": 28.581
+  },
+  {
+   "index": 2,
+   "start": 28.581,
+   "end": 41.533
+  },
+  {
+   "index": 3,
+   "start": 41.533,
+   "end": 55.506
+  },
+  {
+   "index": 4,
+   "start": 55.506,
+   "end": 69.626
+  },
+  {
+   "index": 5,
+   "start": 69.626,
+   "end": 84.21
+  },
+  {
+   "index": 6,
+   "start": 84.21,
+   "end": 98.802
+  }
+ ]
+}

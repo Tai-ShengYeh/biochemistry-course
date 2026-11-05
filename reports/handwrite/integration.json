@@ -1,0 +1,169 @@
+{
+  "chapters": 32,
+  "scenes": 234,
+  "audio_files": 234,
+  "pauses": 64,
+  "minutes": 53.94,
+  "source_lessons": [
+    {
+      "chapter": "w01-01-life",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "676cce3daad6ea6a8e08060836d3105b983a2c8ac6552b91f4449b9be9f24f6e"
+    },
+    {
+      "chapter": "w01-02-cells",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "6f487a34d8766e2c5352fc07f53f480ee64aa2b353366af7e6d165aafeb6424c"
+    },
+    {
+      "chapter": "w01-03-molecules",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "afd97bf9986fb44cc5925dc38165c93965cd83b9c6dbbe5f697f7c2eb745f7d0"
+    },
+    {
+      "chapter": "w01-04-groups",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "64b2b5fd0b55bde457592a25e20f2fb0e571d31ddcd4fc4e407712919a877d77"
+    },
+    {
+      "chapter": "w02-01-water",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "04ef4e7f21efaba3062995581ef28b402c77967ef58db01fd30fedf8b48f1425"
+    },
+    {
+      "chapter": "w02-02-ph",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "f0cfad3313bdbc73543c6ed2fa9a8d57b439bba60b5e681f1bff5486fa2f101d"
+    },
+    {
+      "chapter": "w02-03-buffer",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "102ed87aff0f938dd2829a9207253b0c2dfa9efa4ab9ab05c3d214f64f04a03f"
+    },
+    {
+      "chapter": "w02-04-apply",
+      "source_package": "biochemistry-w01-w02",
+      "lesson_sha256": "e14314bad2607f1734fcc1538441e7ffb8c92a67395a0bab7c3dff0d5105a89e"
+    },
+    {
+      "chapter": "w03-01-amino",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "6fa566d6e3cbcca2787badbce8a352636c10ef5f9e3e3536447a67551997f341"
+    },
+    {
+      "chapter": "w03-02-sidechains",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "b44328227d29eff8442fa5231a11e21df4a631c65015ebacea17a979d945b2a5"
+    },
+    {
+      "chapter": "w03-03-peptide",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "0adc3cabe6cae2bdf6af52d0215bdd3f25eea6c1222b906048c3e47b6df61013"
+    },
+    {
+      "chapter": "w03-04-pi",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "b16894512d62d73b606f562063977dc9adbf06ba9a0a8d02a9c82e6571753382"
+    },
+    {
+      "chapter": "w04-01-levels",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "8a1f0824682f093453e41e525fde9192a9c849785c86a16a16a302b3b770ca7d"
+    },
+    {
+      "chapter": "w04-02-secondary",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "4f3e722548dd1e79d60e4ee1999f8dc3c8dc24f323c3fa48e106631f9ba93546"
+    },
+    {
+      "chapter": "w04-03-fold",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "a93d9a29130be9e220a8216f868e68319d5ca47b81aaea07ac502c682b76f382"
+    },
+    {
+      "chapter": "w04-04-denature",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "f5ad6dc33b358c8a1a38bc5a0fb13bbecee378aa181dedcaa6fd6844c76f14b0"
+    },
+    {
+      "chapter": "w05-01-binding",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "92ac3964e66571bf4857c4b3b84aeebc6e0952e137228f64e1e6b2880e4df56b"
+    },
+    {
+      "chapter": "w05-02-oxygen",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "e9341923466acd34c6d5fce3c67c71c425607f6889c87ed37d482cfdca1f1a7e"
+    },
+    {
+      "chapter": "w05-03-cooperate",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "764213e88e9cfda9e3a936c12a5b8d62c2ae3a0a02cf56dea787ed369a08a980"
+    },
+    {
+      "chapter": "w05-04-hbs",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "d0c2531c022af9401bd8bad791a1761e46bd8736584a745cdfd6623c83e1beab"
+    },
+    {
+      "chapter": "w06-01-catalysis",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "fd523d6a598c11f43eb02e1e202b8149e247d965e8efccd78d741d0fecf01975"
+    },
+    {
+      "chapter": "w06-02-active",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "4c61eadd47674d71c0457c5d081041cad6389c2eef80c837cdc154180ecdfb60"
+    },
+    {
+      "chapter": "w06-03-cofactor",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "96a1115ee46583432e3bc0fad44a5f3a0eedbff8f2be1fc4b80b031ceb4c0a20"
+    },
+    {
+      "chapter": "w06-04-control",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "3e666cc9b3a4e20558da9e9a5fbeebf52d0d71d15f2dcae342daa952a8802402"
+    },
+    {
+      "chapter": "w07-01-mm",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "fcf1a5fac6f47b9bad476a4a58288c5c87b53e66c70dcfbfe8cf507d6b6b40f8"
+    },
+    {
+      "chapter": "w07-02-parameters",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "d37ec68e1b384dce125301991a7a2317f79c845dd644257c62a3ce6f34a10e3d"
+    },
+    {
+      "chapter": "w07-03-inhibit",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "d15e14e7874f9e10ad2469b08ff917c89bc33064b901ebfafdd263ff0e6dc203"
+    },
+    {
+      "chapter": "w07-04-regulate",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "1d474b9439f208fc2727ea68ca11a91dd3119fab35ca19914de65f144dc486e7"
+    },
+    {
+      "chapter": "w08-01-glucose",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "3276fa4d660203847f3f3c36917203aef1a0b2a6f083f66163885456494f9afa"
+    },
+    {
+      "chapter": "w08-02-disaccharides",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "bc7f39134756584071b588fb698ee8d44dc7b8b3aa3003aa2249c8fe4d559ed1"
+    },
+    {
+      "chapter": "w08-03-polysaccharides",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "004c4a20518fd81af1679594ab0810bcfac21fe4de95762fddb63ebe55b77f87"
+    },
+    {
+      "chapter": "w08-04-food",
+      "source_package": "biochemistry-w03-w08",
+      "lesson_sha256": "e5ea36ee81b8ac14b5ce3685660277f849a8b6f2529676e61b19c50f8afc5605"
+    }
+  ]
+}

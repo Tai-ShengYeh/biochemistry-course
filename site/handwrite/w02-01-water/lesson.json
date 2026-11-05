@@ -1,0 +1,630 @@
+{
+  "title": "水：極性、氫鍵與疏水效應",
+  "objective": "能用短句中文說明關係，指出圖中證據，再應用到新情境。",
+  "audience": "越南籍 A2 中文程度的生物化學初學者",
+  "aspect": "16:9",
+  "theme": "notebook",
+  "music": false,
+  "voice": {
+    "preset": "female",
+    "speed": 0.92
+  },
+  "pronounce": {
+    "pKa": "P K A",
+    "pH": "P H",
+    "Pi": "無機磷酸"
+  },
+  "sources": [
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w02.html",
+    "https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w02.html",
+    "科學校核見上層 teacher-notes.md。"
+  ],
+  "scenes": [
+    {
+      "title": "先連回上一週",
+      "narration": "上一週看到氧、氮與官能基。這一週先看水的電荷分布，再看這些分子能不能與水互動。",
+      "steps": [
+        "氧、氮與官能基",
+        "水：有極性",
+        "分子間：會互相作用"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        2,
+        3,
+        5
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Nước · Phân cực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "水分子，整體帶負電嗎？",
+      "narration": "水的氧附近偏負，氫附近偏正。這是不是表示，一整個水分子就是一個帶負電的離子？",
+      "steps": [
+        "A：是，水就是負離子",
+        "B：不是，要看整體電荷"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Điện tích",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B，水分子是電中性的極性分子，δ表示部分電荷。"
+    },
+    {
+      "title": "核對：部分電荷，整體中性",
+      "narration": "水分子裡的電子分布不平均。氧附近有部分負電，氫附近有部分正電。它們不是完整的一個正電或負電，整個水分子仍是中性。",
+      "steps": [
+        "O 附近：δ⁻",
+        "H 附近：δ⁺",
+        {
+          "text": "有極性，但整體電中性。",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        7
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Phân cực",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "兩種線，不是同一種鍵",
+      "narration": "同一個水分子裡，氧和氫由共價鍵相連。不同水分子間，可以形成氫鍵。不要把圖中的實線和虛線當成同一種鍵。",
+      "steps": [],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        7,
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết cộng hóa trị · Hydrogen",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 573,
+          "y": 400,
+          "size": 75,
+          "at": 1.1,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "δ⁻",
+          "x": 630,
+          "y": 335,
+          "size": 40,
+          "at": 1.7000000000000002,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 410,
+          "y": 550,
+          "size": 65,
+          "at": 2.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 730,
+          "y": 550,
+          "size": 65,
+          "at": 2.0,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              565,
+              475
+            ],
+            [
+              480,
+              550
+            ]
+          ],
+          "at": 2.2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              640,
+              475
+            ],
+            [
+              730,
+              550
+            ]
+          ],
+          "at": 2.2,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "δ⁺",
+          "x": 390,
+          "y": 640,
+          "size": 38,
+          "at": 2.4000000000000004,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "δ⁺",
+          "x": 730,
+          "y": 640,
+          "size": 38,
+          "at": 2.4000000000000004,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "O",
+          "x": 1213,
+          "y": 400,
+          "size": 75,
+          "at": 3.5,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "δ⁻",
+          "x": 1270,
+          "y": 335,
+          "size": 40,
+          "at": 4.1,
+          "color": "red",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 1050,
+          "y": 550,
+          "size": 65,
+          "at": 4.4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "H",
+          "x": 1370,
+          "y": 550,
+          "size": 65,
+          "at": 4.4,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1205,
+              475
+            ],
+            [
+              1120,
+              550
+            ]
+          ],
+          "at": 4.6,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              1280,
+              475
+            ],
+            [
+              1370,
+              550
+            ]
+          ],
+          "at": 4.6,
+          "color": "ink",
+          "stroke": 5,
+          "dur": 0.7
+        },
+        {
+          "type": "text",
+          "text": "δ⁺",
+          "x": 1030,
+          "y": 640,
+          "size": 38,
+          "at": 4.8,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "δ⁺",
+          "x": 1370,
+          "y": 640,
+          "size": 38,
+          "at": 4.8,
+          "color": "blue",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              650.0,
+              465.0
+            ],
+            [
+              674.375,
+              472.1875
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              698.75,
+              479.375
+            ],
+            [
+              723.125,
+              486.5625
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              747.5,
+              493.75
+            ],
+            [
+              771.875,
+              500.9375
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              796.25,
+              508.125
+            ],
+            [
+              820.625,
+              515.3125
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              845.0,
+              522.5
+            ],
+            [
+              869.375,
+              529.6875
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              893.75,
+              536.875
+            ],
+            [
+              918.125,
+              544.0625
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              942.5,
+              551.25
+            ],
+            [
+              966.875,
+              558.4375
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              991.25,
+              565.625
+            ],
+            [
+              1015.625,
+              572.8125
+            ]
+          ],
+          "at": 5.7,
+          "color": "blue",
+          "stroke": 4,
+          "dur": 0.18
+        },
+        {
+          "type": "text",
+          "text": "分子內：共價鍵",
+          "x": 250,
+          "y": 780,
+          "size": 48,
+          "at": 6,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        },
+        {
+          "type": "text",
+          "text": "分子間：氫鍵（虛線）",
+          "x": 1040,
+          "y": 780,
+          "size": 48,
+          "at": 6.5,
+          "color": "ink",
+          "font": "hand",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "單個較弱，很多個有影響",
+      "narration": "通常，單個氫鍵比共價鍵弱。但很多氫鍵共同作用，可以影響水的性質與生物分子的結構。強度不是固定的二十分之一。",
+      "steps": [
+        "單個氫鍵：通常較弱",
+        "很多個共同作用：影響明顯",
+        "強度會隨分子與環境改變。"
+      ],
+      "stage": "explain",
+      "wait": 1.3,
+      "source_slides": [
+        8
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Liên kết hydrogen",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "油不溶於水，是因為討厭？",
+      "narration": "油滴聚在一起，是因為油會討厭水嗎？還是要比較分子之間的互動與整個系統？",
+      "steps": [
+        "A：油有感情，討厭水",
+        "B：比較分子互動與整個系統"
+      ],
+      "stage": "practice",
+      "wait": 4,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Kỵ nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ],
+      "pause": true,
+      "answer": "B。這是疏水效應，不是油有意願，也不是水把油化學消除。"
+    },
+    {
+      "title": "核對：油滴聚在一起",
+      "narration": "非極性表面不容易與水形成有利的互動。油聚在一起，可以減少與水接觸的表面。這是整個系統的結果，不是單純一股排斥力。",
+      "steps": [
+        "油：主要是非極性分子",
+        "聚在一起 → 接觸水的表面變少",
+        {
+          "text": "疏水效應 ≠ 油討厭水",
+          "emphasis": "box"
+        }
+      ],
+      "stage": "answer",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Hiệu ứng kỵ nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    },
+    {
+      "title": "親水，也要看條件",
+      "narration": "帶電或有極性的部分，常能與水互動。鹽、糖與許多胺基酸，是本課例子。但溶解度還受分子大小、結構和條件影響。",
+      "steps": [
+        "有電荷或極性 → 常親水",
+        "非極性表面 → 常疏水",
+        "不能只看一個標籤決定溶解度。"
+      ],
+      "stage": "recap",
+      "wait": 1.3,
+      "source_slides": [
+        9,
+        10
+      ],
+      "items": [
+        {
+          "type": "text",
+          "text": "Ưa nước · Kỵ nước",
+          "x": 180,
+          "y": 265,
+          "size": 34,
+          "at": 0.5,
+          "color": "blue",
+          "font": "cute",
+          "anim": "write",
+          "jitter": 0
+        }
+      ]
+    }
+  ]
+}
