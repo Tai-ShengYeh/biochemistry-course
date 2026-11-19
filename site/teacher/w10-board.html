@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>生物化學 W10 上課流程板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--p:#1f5f8b;--a:#a04c08;--t:#117a65;--ink:#1b2a2b;--mut:#5a6a6b;--line:#cfd8dc;--bg:#f3f6f8}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.5}
+header{background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px}header .meta{font-size:15px;opacity:.9}
+.master{font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;background:#fff;color:var(--p);border-radius:8px;padding:2px 14px}.master.warn{color:#c00}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:18px 22px;max-width:1500px;margin:0 auto}
+.part{font-size:19px;font-weight:700;color:#fff;background:var(--t);border-radius:8px;padding:6px 14px;margin:6px 0 10px}
+.blk{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 18px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.blk.active{border-color:var(--a);box-shadow:0 0 0 4px #fbe9dc}.blk.done{opacity:.55}
+.hd{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center}
+.time{font-size:20px;font-weight:700;color:var(--p)}.ttl h2{margin:0;font-size:22px}.sub{color:var(--mut);font-size:15px}
+.timer{text-align:right}.clock{display:block;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;color:var(--t)}.blk.active .clock.low{color:#c00}
+.go{font:inherit;font-size:15px;padding:4px 12px;border-radius:6px;border:1px solid var(--p);background:#fff;color:var(--p);cursor:pointer}.blk.active .go{background:var(--a);border-color:var(--a);color:#fff}
+.steps{margin:8px 0 6px;padding-left:26px}.steps li{margin:4px 0}
+.links a.lnk{display:inline-block;margin:4px 8px 0 0;padding:4px 12px;border-radius:6px;background:#eaf2f8;color:var(--p);text-decoration:none;font-size:15px;border:1px solid #c9dbe8}.links a.lnk:hover{background:#d9e8f3}
+.show{background:#f7f9fb;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:6px 0}.showt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px}.ck{font-size:13px;color:var(--p);font-weight:700}.cv{font-size:17px}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) auto auto 92px;gap:8px;align-items:center;margin:4px 0}
+.trow label{font-size:14px;color:var(--mut);white-space:nowrap}
+.tin{font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:3px 6px;background:#fff}.tin.wk{width:100%;min-width:0}.tin.num{width:3.2em;margin-left:4px;text-align:center}
+.delta{font-weight:700;color:var(--t);font-variant-numeric:tabular-nums}
+aside{position:sticky;top:12px;align-self:start}
+.qr{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-bottom:12px;display:none}.qr.show{display:block;border-color:var(--a)}.qr img{width:100%;max-width:250px;display:block;margin:0 auto}
+.qt{font-weight:700;font-size:20px;margin-top:4px}.qn{font-size:14px;color:var(--mut)}.qu{font-size:11px;color:var(--mut);word-break:break-all}
+.roster{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px}.roster h3{margin:0 0 6px;font-size:17px}.roster .n{color:var(--a);font-weight:700}
+.stu{display:flex;gap:6px;align-items:center;margin:3px 0}.stu .nm{flex:1;min-width:0;font:inherit;font-size:15px;border:0;border-bottom:1px solid var(--line);padding:2px 4px}.stu input[type=checkbox]{width:20px;height:20px}
+.note{background:#fff8e6;border-left:4px solid var(--a);padding:8px 12px;border-radius:6px;font-size:15px;margin-bottom:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{position:static}.hd{grid-template-columns:1fr auto}.time{grid-column:1/-1}.trow{grid-template-columns:1fr 1fr}.trow .wk{grid-column:1/-1}}
+@media print{header,.go,aside{display:none}.qr{display:block}}
+</style></head><body>
+<header><div><h1>生物化學 W10 上課流程板</h1><div class="meta">國合班 · 以 100 分鐘算 · 第一節考後學習、第二節脂質與細胞膜 · 第二節通關就可以先走 · 全部在課堂完成</div></div>
+<div><span class="master" id="master">00:00</span> <button class="go" onclick="toggleMaster()" id="mbtn">上課開始</button></div></header>
+<main>
+<div>
+<div class="note">按每段的「開始這段」會啟動該段倒數，右邊 QR 會切到那一段學生要掃的。<b>課前要做</b>：在第 2 段填好期中考最弱 3 題。LingoAct 試用改到 W11，這週不加新工具。<br><b>學生下課後沒有讀書時間</b>：今天每件事都在教室做完，不出回家作業；連續坐著聽不超過 10 分鐘。</div>
+<div class="part">第一節　考後學習：讓錯題變成會的題</div><section class="blk" id="b1" data-min="5">
+  <div class="hd">
+    <div class="time">0–5 分</div>
+    <div class="ttl"><h2>發回考卷＋概念回饋條</h2><div class="sub">回饋條三語：你會的／Bạn đã nắm、再看一次／Xem lại</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b1')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>先發考卷，給 2 分鐘自己看，不急著講答案</li><li>說一句定調：「錯的題，今天就會變成會的題」</li><li>請學生把答錯的題號<b>圈起來</b>，下一段要用</li></ol>
+  
+</section>
+<section class="blk" id="b2" data-min="10">
+  <div class="hd">
+    <div class="time">5–15 分</div>
+    <div class="ttl"><h2>全班最弱 3 題：投票 → 討論 → 再投票</h2><div class="sub">每題約 3 分鐘；不必說中文，用手指比 1–4 作答</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b2')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">期中考最弱 3 題（課前填好；數字只存在這台電腦）</div><div class="trow"><input class="tin wk" data-k="weak1" placeholder="第 1 弱的題／概念（例：W07 競爭性抑制）"><label>第一次對<input class="tin num" data-k="v1_1" inputmode="numeric"></label><label>討論後對<input class="tin num" data-k="v2_1" inputmode="numeric"></label><span class="delta" data-d="1"></span></div><div class="trow"><input class="tin wk" data-k="weak2" placeholder="第 2 弱的題／概念（例：W07 競爭性抑制）"><label>第一次對<input class="tin num" data-k="v1_2" inputmode="numeric"></label><label>討論後對<input class="tin num" data-k="v2_2" inputmode="numeric"></label><span class="delta" data-d="2"></span></div><div class="trow"><input class="tin wk" data-k="weak3" placeholder="第 3 弱的題／概念（例：W07 競爭性抑制）"><label>第一次對<input class="tin num" data-k="v1_3" inputmode="numeric"></label><label>討論後對<input class="tin num" data-k="v2_3" inputmode="numeric"></label><span class="delta" data-d="3"></span></div></div><ol class="steps"><li>投影第 1 題（原考題）→ 全班<b>同時</b>比手指 1–4，數答對人數記在上面「第一次對」</li><li>不公布答案。兩人一組<b>用越南語</b>討論 1 分鐘：Thảo luận 1 phút bằng tiếng Việt</li><li>再比一次 → 記「討論後對」→ 公布答案，請一位答對的學生用指的說明</li><li>三題做完，投影這張板子給全班看兩次答對人數的差距</li></ol>
+  
+</section>
+<section class="blk" id="b3" data-min="25">
+  <div class="hd">
+    <div class="time">15–40 分</div>
+    <div class="ttl"><h2>課堂訂正（兩人一組）</h2><div class="sub">每題寫：正確答案＋一句「為什麼」，中、英、越都可以</div></div>
+    <div class="timer"><span class="clock">25:00</span><button class="go" onclick="startBlock('b3')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">白板範例</div><div class="cards"><div class="card"><div class="ck">題號</div><div class="cv">第 7 題</div></div><div class="card"><div class="ck">正確答案</div><div class="cv">B　競爭性抑制</div></div><div class="card"><div class="ck">為什麼（一句）</div><div class="cv">抑制劑和受質搶同一個位置。</div></div></div></div><ol class="steps"><li>兩人一組，同一張桌子；先訂正兩人<b>都</b>錯的題</li><li>訂正格式寫在白板：<b>題號｜正確答案｜為什麼（一句）</b></li><li>老師巡堂；卡住的組舉手，先問旁邊組再問老師</li><li>最後 5 分鐘：請兩組各分享一題「我原本以為…其實是…」</li></ol>
+  
+</section>
+<section class="blk" id="b4" data-min="10">
+  <div class="hd">
+    <div class="time">40–50 分</div>
+    <div class="ttl"><h2>訂正收尾，當場交、當場加分</h2><div class="sub">每題補回一半分數，最高補到 80 分；只算課堂上寫的，不帶回家</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b4')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>投影規則：訂正一題補一半分數，總分最多補到 80 分</li><li>最後 7 分鐘把剩下的寫完 → <b>全部當場收</b>，老師改完在考卷上寫新分數</li><li>真的沒寫完的，W11 開場 5 分鐘在教室補寫（不出回家作業）</li><li>下課休息：請大家站起來、離開座位、喝水</li></ol>
+  
+</section>
+<div class="part">第二節　第 10 週新課：脂質與細胞膜（通關就下課）</div><section class="blk" id="b5" data-min="5" data-qr="w10">
+  <div class="hd">
+    <div class="time">50–55 分</div>
+    <div class="ttl"><h2>公布通關卡＋開場預測題：肥皂為什麼能洗掉油？</h2><div class="sub">先講怎樣可以早點走；預測題先猜，不公布答案</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b5')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">投影：今日通關卡（三格都打勾就收書包）</div><div class="cards"><div class="card"><div class="ck">① 訂正單</div><div class="cv">第一節已交 ✓</div></div><div class="card"><div class="ck">② 離場卡</div><div class="cv">紙條寫完交給老師（手機收著）</div></div><div class="card"><div class="ck">③ 還一週課件 W06</div><div class="cv">先填「學號 姓名」→ 完成 3 個以上小遊戲 → 手機給老師看</div></div><div class="card"><div class="ck">時間</div><div class="cv">離場卡 3＋課件 3 個遊戲約 6 ≈ 9 分鐘；84 分開始，快的約 93 分能走</div></div></div></div><div class="show"><div class="showt">Vì sao xà phòng rửa sạch dầu?</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">肥皂一頭愛水、一頭愛油</div></div><div class="card"><div class="ck">2</div><div class="cv">肥皂把油變成水</div></div><div class="card"><div class="ck">3</div><div class="cv">肥皂把油分解掉</div></div><div class="card"><div class="ck">4</div><div class="cv">因為用熱水</div></div></div><div class="sub">答案：1 → 接到「磷脂：一頭愛水，一頭怕水」</div></div><ol class="steps"><li>先投影通關卡，講清楚：<b>三格打勾就可以先走</b>，最晚照表定時間下課</li><li>投影預測題，全班比手指 1–4，記人數在下面備註</li><li>不給答案，只說：「看完動畫你就知道」</li></ol>
+  
+</section>
+<section class="blk" id="b6" data-min="7" data-qr="w10">
+  <div class="hd">
+    <div class="time">55–62 分</div>
+    <div class="ttl"><h2>解說動畫（2 分 49 秒）＋再答一次</h2><div class="sub">觀看任務：哪一種運輸要用 ATP？</div></div>
+    <div class="timer"><span class="clock">07:00</span><button class="go" onclick="startBlock('b6')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>播放前先念觀看任務（投影片上有）</li><li>播完：開場題再比一次手指，和第一次比較</li><li>再問觀看任務：「哪一種運輸要用 ATP？」→ 主動運輸</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html#/explainer-video">w10 動畫頁 ↗</a></div>
+</section>
+<section class="blk" id="b7" data-min="16" data-qr="w10">
+  <div class="hd">
+    <div class="time">62–78 分</div>
+    <div class="ttl"><h2>講課＋小問題（壓縮成 16 分鐘）</h2><div class="sub">飽和／不飽和 → 磷脂與脂雙層 → 跨膜運輸</div></div>
+    <div class="timer"><span class="clock">16:00</span><button class="go" onclick="startBlock('b7')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>62–67</b>　飽和與不飽和、「那個彎」→ 小問題：細胞膜的流動性主要受什麼影響？（答：脂肪酸飽和程度）</li><li><b>67–72</b>　磷脂、脂雙層、流體鑲嵌 → 小問題：哪一個配對正確？（答：磷脂—兩親性）</li><li><b>72–78</b>　被動／主動運輸、鈉鉀幫浦 → 小問題：要用 ATP 的是哪一種？（答：主動運輸、鈉鉀幫浦）</li><li>小問題一律：先自己比手指 → 再公布；錯的人多就停下來再講一次</li><li>看到有人精神不好，就改成<b>站坐題</b>：念一句話，「對」站起來、「錯」坐著（Đúng: đứng lên／Sai: ngồi）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html">w10 投影片 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html#/animation">互動實驗室 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w10.html">手寫動畫目錄 ↗</a></div>
+</section>
+<section class="blk" id="b8" data-min="6">
+  <div class="hd">
+    <div class="time">78–84 分</div>
+    <div class="ttl"><h2>標圖：跨膜運輸</h2><div class="sub">對應期末題型 W10-E01／E02；投影標號圖，比手指作答</div></div>
+    <div class="timer"><span class="clock">06:00</span><button class="go" onclick="startBlock('b8')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>投影下面的標號圖，請學生比手指答「標號 1 是什麼？標號 3 是什麼？」</li><li>詞庫給四個：擴散、離子通道、主動運輸、鈉鉀幫浦</li><li>有 W10 Pin Answer 再開；沒有就用標號圖，不要等</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="img/w10_transport_labeled.jpg">跨膜運輸標號圖 ↗</a><a class="lnk" target="_blank" rel="noopener" href="img/w10_membrane_labeled.jpg">細胞膜標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b9" data-min="16" data-qr="w06">
+  <div class="hd">
+    <div class="time">84–100 分</div>
+    <div class="ttl"><h2>通關：離場卡 → 還一週課件 W06 → 下課</h2><div class="sub">先紙本再手機；給老師看完就可以收書包</div></div>
+    <div class="timer"><span class="clock">16:00</span><button class="go" onclick="startBlock('b9')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>手機收著</b>，寫離場卡：今天的一個術語（中文｜越南語｜英文）＋「今天最難的是＿＿＿（Hôm nay khó nhất là ＿＿＿）」→ 交給老師</li><li>掃 QR 開 <b>W06 酵素（一）課件</b> → 第一次會問姓名，<b>填「學號 姓名」</b>（填錯點 👤 可以改）</li><li>完成 <b>3 個以上</b>小遊戲 → 手機給老師看：上方「完成遊戲 3/5 以上」＋👤 姓名 → 老師在點名表打勾 → 下課</li><li>5/5 全部做完加平時分；先走的可以留下來幫一位同學，他也通關就加平時分</li><li>頁面顯示 📴（沒上傳）也沒關係，老師看過畫面、打勾就算</li><li>表定下課時間到還沒通關的照常下課，W11 開場 5 分鐘補完；最常出現的「最難」記在下面備註</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w06.html">W06 課件（學生） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板（課後核對） ↗</a></div>
+</section>
+
+<div class="roster"><h3>點名＋通關打勾 <span class="n" id="cnt">0</span>/11　<span class="sub">名單會自動帶入 W09 板子填過的姓名</span></h3><label class="stu"><input type="checkbox" data-i="0"><input class="nm" type="text" placeholder="學生 1" data-i="0"></label><label class="stu"><input type="checkbox" data-i="1"><input class="nm" type="text" placeholder="學生 2" data-i="1"></label><label class="stu"><input type="checkbox" data-i="2"><input class="nm" type="text" placeholder="學生 3" data-i="2"></label><label class="stu"><input type="checkbox" data-i="3"><input class="nm" type="text" placeholder="學生 4" data-i="3"></label><label class="stu"><input type="checkbox" data-i="4"><input class="nm" type="text" placeholder="學生 5" data-i="4"></label><label class="stu"><input type="checkbox" data-i="5"><input class="nm" type="text" placeholder="學生 6" data-i="5"></label><label class="stu"><input type="checkbox" data-i="6"><input class="nm" type="text" placeholder="學生 7" data-i="6"></label><label class="stu"><input type="checkbox" data-i="7"><input class="nm" type="text" placeholder="學生 8" data-i="7"></label><label class="stu"><input type="checkbox" data-i="8"><input class="nm" type="text" placeholder="學生 9" data-i="8"></label><label class="stu"><input type="checkbox" data-i="9"><input class="nm" type="text" placeholder="學生 10" data-i="9"></label><label class="stu"><input type="checkbox" data-i="10"><input class="nm" type="text" placeholder="學生 11" data-i="10"></label></div>
+<div class="roster"><h3>今天記下來（開場題兩次人數、離場卡最常見的「最難」、誰還沒通關、要個別關心的學生）</h3><textarea id="memo" style="width:100%;height:110px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px"></textarea></div>
+</div>
+<aside>
+<div class="qr" id="qr-kahoot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuAQAAAACHdwtDAAABA0lEQVR42u1XwQ0DIQyLmgEyEqszEgNEorHDXT/9Vq7UIoQOXpZjOznb71babz8vq+U4h6+Bi4182Nv1yedCMgpRIcmYGdvrsmRIyIZlnYTkYiTFzExC+gYkFmJOoBPq11ggnU7aO6O30ju94J1d+5hbg2SCikBpWrG6PKFUSqh78tTpBJzYyZObHBEnsG1MZ5kKDwSjypOoJEHUw0TMN5l3mgqEyaRadMm2OuTxnUKd0DJ56nLACNO+Ww/DxHTJ1hkL3TqDJU3bd+xiRoike3EPJ+BEVp1rPskzzZp4eiwHnWBB69FywszfHS/a2d7v0VqWJ/QOB8gqDWBoZ7b/3+jr+QnQ2DWQM2VTpAAAAABJRU5ErkJggg==" alt="QR kahoot.it"><div class="qt">kahoot.it</div><div class="qn">輸入 PIN，暱稱＝學號後三碼＋姓名</div><div class="qu">https://kahoot.it</div></div><div class="qr" id="qr-w06"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqAQAAAACE7+TjAAACcUlEQVR4nNVZQapjIRCsfgpvqfAPkKM8bxZyM4W5yL+BbxlQeqj2DbP6GWaVjgsTlEDZVpfVHVG8GG17tQu8dXsKh31vOGXmJlJsFsnvhYbXYyRVraqq/Rg4AmcEWxmpOka+AU0yZm5IFanODCSdGdMuwjdyG2eZUnCWoA+cot0RtH9tH3vHro8pZVfG/P9+/Z7tgxFOdaSH0b4+c4ukunpHfopIAdrMeP4J9QBEJL4b2uuhNkZihJfCqFZQcKg5npGPVBdmU0LD3KmKtugaufYDiTE3tjPmSHUJe/CNfKQaOmO+UnXwLLZh8u4Y+RY6njcVKdoxbxo6InWmAnxMHSOHPf2kx0g6wPTU/jfs3tmiSlYbVZCYqoOzd21RJc8Z8ET8FvMjMOZMVfcZepDVJun0iom3gKTOkSthL5IQ7boC5S3UT1DFYz2jRvVjiSSP4Br5BmDeHkLH0uat7paeETRd03tNVJdHWQYA4NNpBsB5TQRDfrkUg62Wp9e6b+RqFeilKitVhy36Rr6ZdLeIY1pBMc4yzhIBK05d81wvc049X74rGM/96/kwr2iOhRnKpx+ruHPO84izKBTa4mgz9wHERAJFHsAzWzbrrpDnz3xZRO2rA0Oqu0aOtnemZ+hEO+UuGeH7ark45/mwx4hiaOk51oZ3nuOq/c10LVUPFPbrFJ6RD5utLKInH7ayLsK9KuqCbQEn+GCma1V2vpFXa1MsT26S3m3Dwu4Y+XZ9mmPZv2Vm1ke8hfPuBNoPI16f5/3XYNdixvL86vOro+eYPqCXGzqmlOW+9o54lnmj1PjXlnE1AZieWM0u79oiH/vf3G8EdfSioyh0YgAAAABJRU5ErkJggg==" alt="QR W06 課件"><div class="qt">W06 酵素（一）課件</div><div class="qn">先填「學號 姓名」，做 3 個以上小遊戲</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w06.html</div></div><div class="qr" id="qr-w10"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2AQAAAADNaUdlAAAB00lEQVR42u1ZwW3EMAwT6gE8klf3SBlAgCqR0hX99FccCJwRBEn8kRWKJmWLP4fbZ/6f5x/LseKu5+QDvt4VUV/t+Jf9Pd49n/GfjHjxemo5jsjzNack4q9on37I5PuuyPPLUor/ZOYz+CBydsjFn2m3fRm8Vv4L/3W/dQFIroR/8E8l/Nclwz8cCLgw0+R5ml818G8kz4SN7wsK7Y8K+b9EUWV7aKfWsotIJfBD/u+x7zwflf13kfkTSJnwqeUqAR3+ZMHma0GoSvhq6R9uXkw7qqDuGvyDQcFQdwg5x0bsGvx/3Zp8mPxA8it4U9l/fwiT5BO0Axr8+ZI95nx9fkAlkX+wDcU/hFxr0RDhnykBKjdYgFrRltGflG0EPzwxd+Gjon8Q/IXyMWxhN9oOqOC/yf8Fp0I+EKXBP6hZbF7jH3sJGv5lNCfFw50dQQT/8C+t9qF8jMpny/ivhV9gox/oH3X0Q5UqxQ/1fyMqQiV+WphaRS+k/ZdG/2f6D27NQs3/pehCpv8Dze/WzZ8YCynUf0PzJHwsQHckdPrP69W81cL/xM/6BfPfOQtQ6j/T/LJ/S/0mdf5yYeEPD498eFWn/8zmA8zLM/5XqP/8Od98z/w3T/pAJvK8Uh4AAAAASUVORK5CYII=" alt="QR w10 課程頁"><div class="qt">w10 課程頁</div><div class="qn">投影片、互動實驗、手寫動畫都在這一頁</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html</div></div>
+<div class="roster"><h3>連結備忘</h3><div style="font-size:14px"><a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html">w10 頁</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w10.html#/explainer-video">動畫</a> · <a target="_blank" rel="noopener" href="https://create.kahoot.it/user-reports">Kahoot 報告</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板</a></div></div>
+</aside>
+</main>
+<footer>來源：D:/course/biochemistry/W10_上課流程板.html（線上版圖片在 teacher/img/）· 點名、最弱題與備註只存在這台電腦的瀏覽器</footer>
+<script>
+'use strict';
+const KEY='bio_w10_board';const TOTAL=100;
+function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
+let st=load(KEY);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+if(!st.names){const prev=load('bio_w09_board');if(prev.names){st.names=prev.names;save();}}
+document.querySelectorAll('.stu').forEach(l=>{const cb=l.querySelector('[type=checkbox]'),nm=l.querySelector('.nm');const i=cb.dataset.i;
+  cb.checked=!!(st.present||{})[i]; nm.value=(st.names||{})[i]||'';
+  cb.onchange=()=>{st.present=st.present||{};st.present[i]=cb.checked;save();cnt();};
+  nm.oninput=()=>{st.names=st.names||{};st.names[i]=nm.value;save();};});
+function cnt(){document.getElementById('cnt').textContent=Object.values(st.present||{}).filter(Boolean).length;}cnt();
+st.tally=st.tally||{};
+function deltas(){[1,2,3].forEach(n=>{const a=parseInt(st.tally['v1_'+n]),b=parseInt(st.tally['v2_'+n]);const el=document.querySelector('[data-d="'+n+'"]');
+  el.textContent=(isNaN(a)||isNaN(b))?'':(a+' → '+b+' 人');});}
+document.querySelectorAll('.tin').forEach(el=>{el.value=st.tally[el.dataset.k]||'';el.oninput=()=>{st.tally[el.dataset.k]=el.value;save();deltas();};});deltas();
+const memo=document.getElementById('memo');memo.value=st.memo||'';memo.oninput=()=>{st.memo=memo.value;save();};
+let mStart=st.mStart||null;const mEl=document.getElementById('master'),mBtn=document.getElementById('mbtn');
+function toggleMaster(){ if(mStart){mStart=null;mBtn.textContent='上課開始';mEl.textContent='00:00';} else {mStart=Date.now();mBtn.textContent='重設';} st.mStart=mStart;save(); }
+if(mStart)mBtn.textContent='重設';
+let cur=null,curEnd=0;
+function showQr(k){document.querySelectorAll('.qr').forEach(q=>q.classList.toggle('show',q.id==='qr-'+k));}
+function startBlock(id){
+  document.querySelectorAll('.blk').forEach(b=>{ if(b.id===id){b.classList.add('active');b.classList.remove('done');} else if(b.classList.contains('active')){b.classList.remove('active');b.classList.add('done');} });
+  const b=document.getElementById(id);cur=b;curEnd=Date.now()+Number(b.dataset.min)*60000;if(b.dataset.qr)showQr(b.dataset.qr);
+  if(!mStart){mStart=Date.now();st.mStart=mStart;save();mBtn.textContent='重設';}
+}
+function fmt(ms){const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+setInterval(()=>{
+  if(mStart){const el=Date.now()-mStart;mEl.textContent=fmt(el);mEl.classList.toggle('warn',el>TOTAL*60000);}
+  if(cur){const left=curEnd-Date.now();const c=cur.querySelector('.clock');c.textContent=fmt(left);c.classList.toggle('low',left<120000);}
+},500);
+showQr('w10');
+</script></body></html>
