@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>生物化學 W16 上課流程板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--p:#1f5f8b;--a:#a04c08;--t:#117a65;--ink:#1b2a2b;--mut:#5a6a6b;--line:#cfd8dc;--bg:#f3f6f8}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.5}
+header{background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px}header .meta{font-size:15px;opacity:.9}
+.master{font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;background:#fff;color:var(--p);border-radius:8px;padding:2px 14px}.master.warn{color:#c00}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:18px 22px;max-width:1500px;margin:0 auto}
+.part{font-size:19px;font-weight:700;color:#fff;background:var(--t);border-radius:8px;padding:6px 14px;margin:6px 0 10px}
+.blk{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 18px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.blk.active{border-color:var(--a);box-shadow:0 0 0 4px #fbe9dc}.blk.done{opacity:.55}
+.hd{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center}
+.time{font-size:20px;font-weight:700;color:var(--p)}.ttl h2{margin:0;font-size:22px}.sub{color:var(--mut);font-size:15px}
+.timer{text-align:right}.clock{display:block;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;color:var(--t)}.blk.active .clock.low{color:#c00}
+.go{font:inherit;font-size:15px;padding:4px 12px;border-radius:6px;border:1px solid var(--p);background:#fff;color:var(--p);cursor:pointer}.blk.active .go{background:var(--a);border-color:var(--a);color:#fff}
+.steps{margin:8px 0 6px;padding-left:26px}.steps li{margin:4px 0}
+.links a.lnk{display:inline-block;margin:4px 8px 0 0;padding:4px 12px;border-radius:6px;background:#eaf2f8;color:var(--p);text-decoration:none;font-size:15px;border:1px solid #c9dbe8}.links a.lnk:hover{background:#d9e8f3}
+.show{background:#f7f9fb;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:6px 0}.showt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px}.ck{font-size:13px;color:var(--p);font-weight:700}.cv{font-size:17px}
+.seq{font-family:Consolas,"Courier New",monospace;font-size:22px;letter-spacing:.12em}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) auto auto 92px;gap:8px;align-items:center;margin:4px 0}
+.trow label{font-size:14px;color:var(--mut);white-space:nowrap}
+.tin{font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:3px 6px;background:#fff}.tin.num{width:3.2em;margin-left:4px;text-align:center}
+.delta{font-weight:700;color:var(--t);font-variant-numeric:tabular-nums}
+aside{position:sticky;top:12px;align-self:start}
+.qr{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-bottom:12px;display:none}.qr.show{display:block;border-color:var(--a)}.qr img{width:100%;max-width:250px;display:block;margin:0 auto}
+.qt{font-weight:700;font-size:20px;margin-top:4px}.qn{font-size:14px;color:var(--mut)}.qu{font-size:11px;color:var(--mut);word-break:break-all}
+.roster{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px}.roster h3{margin:0 0 6px;font-size:17px}.roster .n{color:var(--a);font-weight:700}
+.stu{display:flex;gap:6px;align-items:center;margin:3px 0}.stu .nm{flex:1;min-width:0;font:inherit;font-size:15px;border:0;border-bottom:1px solid var(--line);padding:2px 4px}.stu input[type=checkbox]{width:20px;height:20px}
+.note{background:#fff8e6;border-left:4px solid var(--a);padding:8px 12px;border-radius:6px;font-size:15px;margin-bottom:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{position:static}.hd{grid-template-columns:1fr auto}.time{grid-column:1/-1}.trow{grid-template-columns:1fr 1fr}.trow .wk{grid-column:1/-1}}
+@media print{header,.go,aside{display:none}.qr{display:block}}
+</style></head><body>
+<header><div><h1>生物化學 W16 上課流程板</h1><div class="meta">國合班 · 以 100 分鐘算 · 第一節脂肪酸 β-氧化與酮體、第二節胺基酸代謝、尿素循環與三種燃料匯集 · 第二節通關就可以先走 · 全部在課堂完成</div></div>
+<div><span class="master" id="master">00:00</span> <button class="go" onclick="toggleMaster()" id="mbtn">上課開始</button></div></header>
+<main>
+<div>
+<div class="note">按每段的「開始這段」會啟動該段倒數，右邊 QR 會切到那一段學生要掃的。<b>課前要做</b>：印 <a href="w16-pass-sheet.pdf" target="_blank" rel="noopener">W16 通關單</a>（A4 雙面，一人一張）；查 W15 點名表，記下還沒通關的人（第 1 段要補）。<br><b>通關 ③ 還一週課件 W03</b>（照補做表：W11 還 W06、W12 還 W07、W13 還 W08、W14 還 W05、W15 還 W04、W16 還 W03）；W16 課件小遊戲當練習。<b>規則同上週</b>：寫紙本的時候手機放講台籃子；簽名前隨機抽 2 位用嘴巴說一個術語。<br><b>學生下課後沒有讀書時間</b>：今天每件事都在教室做完，不出回家作業；連續坐著聽不超過 10 分鐘。</div>
+<div class="part">第一節　脂肪酸：β-氧化怎麼切、酮體是什麼？</div>
+<section class="blk" id="b1" data-min="5" data-qr="prev">
+  <div class="hd">
+    <div class="time">0–5 分</div>
+    <div class="ttl"><h2>W15 補完＋三題回顧 W15</h2><div class="sub">W15 沒通關的人先補；其他人比手指答回顧題</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b1')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>先發<b>通關單</b>（A4 雙面，一人一張；今天的題目都寫在上面，通關時整張交回）</li><li>講規則：<b>寫紙本的時候手機放講台籃子</b>，寫完、老師簽名後再拿回去；寫完可能被抽到「說給我聽」</li><li>W15 還沒通關的人：坐前面補玩 W15 課件（右邊 QR），<b>5 分鐘為限</b></li><li>其他人：投影三題回顧，全班比手指 1–3</li><li>回顧完說一句：「前兩週燒的都是葡萄糖，今天看另外兩種燃料——脂肪和蛋白質——怎麼接進同一條發電線」</li></ol>
+<div class="show"><div class="showt">W15 回顧（比手指 1–3）</div><div class="cards"><div class="card"><div class="ck">回顧 1</div><div class="cv">電子傳遞鏈最後把電子交給誰？ 1 水　2 氧氣　3 二氧化碳</div></div><div class="card"><div class="ck">回顧 2</div><div class="cv">質子經過哪一個結構流回基質？ 1 複合體 II　2 細胞色素 c　3 ATP 合成酶</div></div><div class="card"><div class="ck">回顧 3</div><div class="cv">一個葡萄糖完整氧化，約可產生多少 ATP？ 1 約 8 個　2 約 36–38 個　3 約 30–32 個</div></div></div></div>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w16-pass-sheet.pdf">W16 通關單 PDF（列印用） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html">W15 課件（補玩） ↗</a></div>
+</section>
+<section class="blk" id="b2" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">5–10 分</div>
+    <div class="ttl"><h2>開場預測題：C16 脂肪酸做 β-氧化，要切幾圈？</h2><div class="sub">先猜，不公布答案；記下答對的人數</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b2')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">Acid béo C16 cần cắt mấy vòng？</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">6 圈</div></div><div class="card"><div class="ck">2</div><div class="cv">7 圈</div></div><div class="card"><div class="ck">3</div><div class="cv">8 圈</div></div><div class="card"><div class="ck">4</div><div class="cv">16 圈</div></div></div></div>
+<div class="show"><div class="showt">預測題人數（只存在這台電腦）</div><div class="trow"><span class="sub">答對的人數</span><label>看動畫前<input class="tin num" data-k="p1" inputmode="numeric"></label><label>看動畫後<input class="tin num" data-k="p2" inputmode="numeric"></label><span class="delta" id="pd"></span></div></div>
+  <ol class="steps"><li>投影預測題，全班<b>同時</b>比手指 1–4，數答對的人記在上面；學生也在通關單正面圈第一次</li><li>兩人一組<b>用越南語</b>說 30 秒：「為什麼你選這個？」（Vì sao bạn chọn đáp án này?）</li><li>不給答案，只說：「看完動畫你就知道」</li></ol>
+</section>
+<section class="blk" id="b3" data-min="6" data-qr="page">
+  <div class="hd">
+    <div class="time">10–16 分</div>
+    <div class="ttl"><h2>解說動畫（2 分 32 秒）＋再答一次</h2><div class="sub">觀看任務：C16 脂肪酸要切幾圈？氨要變成什麼才能排出？</div></div>
+    <div class="timer"><span class="clock">06:00</span><button class="go" onclick="startBlock('b3')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>播放前先念觀看任務（投影片上有，通關單正面也有兩個空格）</li><li>播完：預測題再比一次手指，記「看動畫後」人數</li><li>再問觀看任務，請兩位學生各說一句；說不出來的人下一段會再聽到</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html#/explainer-video">w16 動畫頁 ↗</a></div>
+</section>
+<section class="blk" id="b4" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">16–24 分</div>
+    <div class="ttl"><h2>講課①：β-氧化（把脂肪酸一圈一圈切碎）</h2><div class="sub">脂肪酸先活化、搭肉鹼穿梭進粒線體，再在基質裡一圈一圈切短</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b4')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">白板路線（三語）</div><div class="cards"><div class="card"><div class="ck">位置</div><div class="cv">粒線體基質 · Chất nền ti thể · Mitochondrial matrix</div></div><div class="card"><div class="ck">入口</div><div class="cv">脂肪酸（細胞質）→ 醯基輔酶 A → 肉鹼穿梭 Thoi carnitine → 粒線體</div></div><div class="card"><div class="ck">一圈四步</div><div class="cv">氧化 → 水合 → 氧化 → 硫解（每圈的產物，等學生說，白板先不寫）</div></div><div class="card"><div class="ck">第 14–15 週對照</div><div class="cv">產出的載體交給電子傳遞鏈，跟葡萄糖是同一條發電線</div></div></div></div>
+  <ol class="steps"><li><b>16–20</b>　脂肪酸要先活化、搭肉鹼穿梭才進得了粒線體；進去後一圈四步，每圈把脂肪酸切短一截 → 小問題：每一圈從脂肪酸尾巴切下幾個碳？ 1 一個　2 兩個　3 四個</li><li><b>20–24</b>　帶學生在白板上走一次 C16：一圈一圈寫剩下幾個碳，<b>讓學生自己數圈</b>，走到最後剩 4 個碳那一圈先停 → 小問題：這最後一圈會形成什麼？ 1 一個乙醯 CoA　2 兩個乙醯 CoA　3 四個乙醯 CoA；再請學生回頭算：圈數和乙醯 CoA 的個數一樣嗎？（這個 off-by-one 幾乎人人會錯，慢一點）</li><li>小問題一律：先自己比手指 → 再公布；錯的人多就停下來再講一次</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html">w16 投影片 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16-01-entry/player.html">手寫動畫：脂肪酸活化與進入粒線體 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16-02-beta/player.html">手寫動畫：β-氧化 ↗</a></div>
+</section>
+<section class="blk" id="b5" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">24–32 分</div>
+    <div class="ttl"><h2>講課②：酮體——飢餓時的備用燃料</h2><div class="sub">長期沒東西吃時，脂肪燒很多，乙醯 CoA 用不完會怎樣？</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b5')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">白板（三語）</div><div class="cards"><div class="card"><div class="ck">關鍵詞</div><div class="cv">酮體 · Thể ceton · Ketone body　／　酮酸中毒 · Nhiễm toan ceton · Ketoacidosis</div></div><div class="card"><div class="ck">連回第 2 週</div><div class="cv">pH 與緩衝：酸太多，血液 pH 會被推到哪個方向？（糖尿病那個伏筆）</div></div></div></div>
+  <ol class="steps"><li><b>24–28</b>　先請學生口頭排一排：長期飢餓、大量燒脂肪、乙醯 CoA 用不完、做成酮體，先後順序怎麼接？（白板先不寫，通關單 ① 題 2 會再排一次）→ 小問題：乙醯 CoA 用不完時，肝臟會做出什麼？ 1 酮體　2 肝醣　3 胰島素</li><li><b>28–32</b>　酮體可以當備用燃料；但酮體是酸 → 小問題：酮體太多，血液 pH 會怎樣？ 1 往上升　2 往下降　3 沒影響 → 站坐題：「酮體可以當飢餓時的備用燃料」「酮體是由脂肪酸燃燒時多出來的乙醯 CoA 做成的」</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16-03-ketones/player.html">手寫動畫：酮體 ↗</a></div>
+</section>
+<section class="blk" id="b6" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">32–37 分</div>
+    <div class="ttl"><h2>對或錯：β-氧化與酮體</h2><div class="sub">先自己比手勢 O／X，再公布；錯的人多就停下來再講</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b6')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">投影（O／X）</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">C16 脂肪酸做 β-氧化要 8 圈 · Acid béo C16 qua β-oxy hóa cần 8 vòng</div></div><div class="card"><div class="ck">2</div><div class="cv">酮體是酸，太多會讓血液 pH 下降 · Thể ceton là acid, nhiều quá làm pH máu giảm</div></div></div></div>
+  <ol class="steps"><li>每題比完手勢，請一位說「為什麼」（中文、越南語都可以）；第 1 題請他用白板數給大家看</li><li>想一想（口頭就好）：為什麼身體用脂肪來儲存長期能量，不全用肝醣？</li></ol>
+</section>
+<section class="blk" id="b7" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">37–42 分</div>
+    <div class="ttl"><h2>標圖①：β-氧化圖</h2><div class="sub">對應期末題型 W16-E01；投影標號圖，比手指作答；只問 ①（②③④ 不考）</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b7')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">詞庫（比手指 1–4）</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">FADH₂</div></div><div class="card"><div class="ck">2</div><div class="cv">輔酶 A</div></div><div class="card"><div class="ck">3</div><div class="cv">NADH</div></div><div class="card"><div class="ck">4</div><div class="cv">乙醯 CoA</div></div></div></div>
+  <ol class="steps"><li>投影 β-氧化標號圖，詞庫：1 FADH₂　2 輔酶 A　3 NADH　4 乙醯 CoA</li><li>問「標號 ① 這一步驟的產物是什麼？」→ 比手指 1–4，請一位說依據（看圖上哪個箭頭、哪個酵素）</li><li>標號 ②③④ 不考，不問</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/assets/figures/labeled/w16_beta_ox.jpg">β-氧化標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b8" data-min="8">
+  <div class="hd">
+    <div class="time">42–50 分</div>
+    <div class="ttl"><h2>第一節收尾：三句話＋休息</h2><div class="sub">兩人互說，寫在通關單正面「四」</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b8')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>兩人一組，互相說三句（中文說不出來就用越南語先說，再一起找中文）：<br>「脂肪酸在粒線體裡一圈一圈被切短，切下來的二碳單位變成乙醯 CoA，同時做出 FADH₂ 和 NADH」「長期飢餓時乙醯 CoA 用不完，肝臟把它做成酮體」「酮體是酸，太多會讓血液 pH 下降，這叫酮酸中毒」</li><li>老師抽兩組說給全班聽</li><li>下課休息：請大家站起來、離開座位、喝水</li></ol>
+</section>
+<div class="part">第二節　胺基酸與尿素循環、三種燃料匯集（通關就下課）</div>
+<section class="blk" id="b9" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">50–55 分</div>
+    <div class="ttl"><h2>公布通關卡</h2><div class="sub">先講怎樣可以早點走</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b9')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">投影：今日通關卡（三格都打勾就收書包）</div><div class="cards"><div class="card"><div class="ck">① 計算與判斷</div><div class="cv">通關單背面題目寫完（手機在籃子），給老師看 ✓</div></div><div class="card"><div class="ck">② 離場卡</div><div class="cv">手機在籃子寫 → 可能被抽問說一個術語 → 老師簽名</div></div><div class="card"><div class="ck">③ 還一週課件 W03</div><div class="cv">拿回手機 → 填「學號 姓名」→ W03 完成 3 個以上小遊戲 → 給老師看</div></div><div class="card"><div class="ck">時間</div><div class="cv">離場卡 3＋課件 3 個遊戲約 6 ≈ 9 分鐘；84 分開始，快的約 93 分能走</div></div></div></div>
+  <ol class="steps"><li>投影通關卡，講清楚：<b>三格打勾就可以先走</b>，最晚照表定時間下課</li><li>提醒：課件這週還的是 <b>W03 胺基酸與胜肽</b>，W16 課件只是練習</li></ol>
+</section>
+<section class="blk" id="b10" data-min="7" data-qr="page">
+  <div class="hd">
+    <div class="time">55–62 分</div>
+    <div class="ttl"><h2>講課③：蛋白質當燃料——先處理氮，再把氨變安全</h2><div class="sub">碳架可以去燒；胺基裡的氮不能燒，還會出問題</div></div>
+    <div class="timer"><span class="clock">07:00</span><button class="go" onclick="startBlock('b10')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">白板（三語）</div><div class="cards"><div class="card"><div class="ck">兩個動作</div><div class="cv">轉胺作用 Sự chuyển amin　／　去胺作用 Sự khử amin（各做什麼，等學生說，白板先不寫）</div></div><div class="card"><div class="ck">問題</div><div class="cv">氨 NH₃ · Ammonia · 能不能留在血液裡？</div></div><div class="card"><div class="ck">處理</div><div class="cv">尿素循環 Chu trình urê · Urea cycle（在肝臟）</div></div></div></div>
+  <ol class="steps"><li><b>55–59</b>　蛋白質要當燃料，胺基酸裡的氮得先處理：一個動作把胺基搬給別的分子、碳架留下去燒；另一個動作把胺基拿掉 → 小問題：哪一個動作會放出氨？ 1 轉胺作用　2 去胺作用　3 肉鹼穿梭（麩胺酸是常見的例子）</li><li><b>59–62</b>　氨對身體有毒，不能放在血裡，肝臟要先把它變成較安全的東西再排出 → 先請學生猜變成什麼（觀看任務有出現過）；接著口頭講尿素循環的位置分工（哪幾步在粒線體、哪幾步在細胞質——不寫在白板，等標圖②學生自己看圖答）</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16-04-nitrogen/player.html">手寫動畫：胺基酸、氮的處理與碳架去路 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html#/animation">互動實驗室 ↗</a></div>
+</section>
+<section class="blk" id="b11" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">62–67 分</div>
+    <div class="ttl"><h2>標圖②：尿素循環圖</h2><div class="sub">對應期末題型 W16-E02；投影標號圖，比手指作答；只問 ①④（②③ 不考）</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b11')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">詞庫</div><div class="cards"><div class="card"><div class="ck">標號 ①（比手指 1–2）</div><div class="cv">1 粒線體基質　2 細胞質基質</div></div><div class="card"><div class="ck">標號 ④（比手指 1–4）</div><div class="cv">1 鳥胺酸　2 尿素　3 精胺酸　4 瓜胺酸</div></div></div></div>
+  <ol class="steps"><li>投影尿素循環標號圖，先問「標號 ① 的 NH₃ 進來後，第一步發生在哪裡？」→ 比手指 1–2</li><li>再問「標號 ④ 這一步驟的最終產物是什麼？」→ 比手指 1–4，請一位說依據（看圖上哪個箭頭）</li><li>標號 ②③ 不考，不問</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/assets/figures/labeled/w16_urea.jpg">尿素循環標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b12" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">67–75 分</div>
+    <div class="ttl"><h2>講課④：三種燃料一條線（大整合）</h2><div class="sub">葡萄糖、脂肪酸、胺基酸各怎麼進來？最後匯到哪裡？</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b12')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">白板（讓學生來填，先蓋住右邊）</div><div class="cards"><div class="card"><div class="ck">葡萄糖</div><div class="cv">→ 丙酮酸 → ＿＿＿</div></div><div class="card"><div class="ck">脂肪酸</div><div class="cv">→ ＿＿＿ → ＿＿＿</div></div><div class="card"><div class="ck">胺基酸</div><div class="cv">→ 去掉氮 → ＿＿＿／中間物</div></div><div class="card"><div class="ck">全部匯集</div><div class="cv">＿＿＿ → 檸檬酸循環 → 電子傳遞鏈 → ATP</div></div></div></div>
+  <ol class="steps"><li><b>67–71</b>　一格一格請學生上來填，填完對照第 13–15 週：這條「發電線」我們已經走完了</li><li><b>71–75</b>　三種燃料的特色：脂肪酸同重量能量比糖多；胺基酸要先處理氮 → 小問題：三種燃料最後都匯集到哪個分子？ 1 丙酮酸　2 乙醯 CoA　3 乳酸　→ 預告下週 W17：身體怎麼決定「現在燒哪個」（餐後與飢餓），課前看詞彙表第 17 週</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html">w16 投影片 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16.html">手寫動畫目錄 ↗</a></div>
+</section>
+<section class="blk" id="b13" data-min="9" data-qr="page">
+  <div class="hd">
+    <div class="time">75–84 分</div>
+    <div class="ttl"><h2>動手：計算與判斷（兩人一組）＝ 通關 ①</h2><div class="sub">寫在通關單背面 ①，寫完給老師看就打勾</div></div>
+    <div class="timer"><span class="clock">09:00</span><button class="go" onclick="startBlock('b13')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">先在白板示範欄位（不給數字），再讓學生填</div><div class="cards"><div class="card"><div class="ck">題 1　計算</div><div class="cv">C16 脂肪酸做 β-氧化：幾圈？幾個乙醯 CoA？再換 C18 一次（不照抄，要自己算）</div></div><div class="card"><div class="ck">題 2　排酮體路線</div><div class="cv">四格：乙醯 CoA 過剩、大量燒脂肪、做成酮體、長期飢餓，寫 1–4</div></div><div class="card"><div class="ck">題 3　配對</div><div class="cv">轉胺作用、去胺作用，各配 A 或 B 一句話</div></div><div class="card"><div class="ck">題 4　判斷</div><div class="cv">氨對身體有毒；尿素循環把氨變成尿素；脂肪酸和葡萄糖都會變成乙醯 CoA</div></div></div></div>
+  <ol class="steps"><li><b>手機放講台籃子</b>，只用紙筆</li><li>兩人一組：一人填，一人檢查，題 2 換手</li><li>最常見的錯：圈數和乙醯 CoA 個數搞混（C16 和 C18 兩題對照著看）；酮體路線方向反了；把轉胺和去胺的兩句話配反</li><li>老師巡堂，全部都對就在通關單 ① 打勾</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16-02-beta/player.html">手寫動畫：β-氧化 ↗</a></div>
+</section>
+<section class="blk" id="b14" data-min="16" data-qr="w03">
+  <div class="hd">
+    <div class="time">84–100 分</div>
+    <div class="ttl"><h2>通關：離場卡 → 還一週課件 W03 → 下課</h2><div class="sub">先紙本（手機在籃子）→ 老師簽名 → 拿手機做 W03</div></div>
+    <div class="timer"><span class="clock">16:00</span><button class="go" onclick="startBlock('b14')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>手機在籃子</b>，寫通關單背面的離場卡 ②：今天的一個術語（中文｜越南語｜英文）＋「今天最難的是＿＿＿（Hôm nay khó nhất là ＿＿＿）」</li><li>寫完舉手 → <b>隨機抽 2 位</b>用嘴巴說出離場卡上的術語是什麼意思（中文、越南文都可以）→ 說得出來就簽名，說不出來就和老師一起看課程頁再說一次 → 簽名後去籃子拿手機</li><li>掃 QR 開 <b>W03 胺基酸與胜肽課件</b> → 第一次會問姓名，<b>填「學號 姓名」</b>（填錯點 👤 可以改）</li><li>完成 <b>3 個以上</b>小遊戲 → 手機給老師看：上方「完成遊戲 3/5 以上」＋👤 姓名 → 老師在點名表打勾 → <b>整張通關單交回</b> → 下課</li><li>5/5 全部做完加平時分；先走的可以留下來幫一位同學，他也通關就加平時分</li><li>頁面顯示 📴（沒上傳）也沒關係，老師看過畫面、打勾就算</li><li>表定時間到照常下課，W17 開場 5 分鐘補完；最常出現的「最難」記在下面備註</li></ol>
+<div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w03.html">W03 課件（學生） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html">W16 課件（練習） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板（課後核對） ↗</a></div>
+</section>
+
+<div class="roster"><h3>點名＋通關打勾 <span class="n" id="cnt">0</span>/11　<span class="sub">名單會自動帶入上週板子填過的姓名</span></h3><label class="stu"><input type="checkbox" data-i="0"><input class="nm" type="text" placeholder="學生 1" data-i="0"></label><label class="stu"><input type="checkbox" data-i="1"><input class="nm" type="text" placeholder="學生 2" data-i="1"></label><label class="stu"><input type="checkbox" data-i="2"><input class="nm" type="text" placeholder="學生 3" data-i="2"></label><label class="stu"><input type="checkbox" data-i="3"><input class="nm" type="text" placeholder="學生 4" data-i="3"></label><label class="stu"><input type="checkbox" data-i="4"><input class="nm" type="text" placeholder="學生 5" data-i="4"></label><label class="stu"><input type="checkbox" data-i="5"><input class="nm" type="text" placeholder="學生 6" data-i="5"></label><label class="stu"><input type="checkbox" data-i="6"><input class="nm" type="text" placeholder="學生 7" data-i="6"></label><label class="stu"><input type="checkbox" data-i="7"><input class="nm" type="text" placeholder="學生 8" data-i="7"></label><label class="stu"><input type="checkbox" data-i="8"><input class="nm" type="text" placeholder="學生 9" data-i="8"></label><label class="stu"><input type="checkbox" data-i="9"><input class="nm" type="text" placeholder="學生 10" data-i="9"></label><label class="stu"><input type="checkbox" data-i="10"><input class="nm" type="text" placeholder="學生 11" data-i="10"></label></div>
+<div class="roster"><h3>今天記下來（預測題兩次人數、離場卡最常見的「最難」、誰還沒通關、要個別關心的學生）</h3><textarea id="memo" style="width:100%;height:110px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px"></textarea></div>
+</div>
+<aside>
+<div class="qr" id="qr-w03"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE0UlEQVR4nO3d23HUQBAFUEMRhjKA/COBDJTH8r8fKqb6ds/YnPNHYUuy91Zv73ge316v1weUfa9fAiSJGDWJDEki48fbv6+fvz5G3H9+py71/MzPN3r73rcvrlz52dJ9l2606xVUk8iQJDIkiQxJoqfj3tUX9/W2SyoNeEXflcdeQTWJDEkiQ5LIkCRGOu5KY1jp9Sqt7tJ9g+PUfY8RvFHfb1JNIkOSyJAkMiSJHR33LksNaaWprEznqNh13yA1iQxJIkOSyJAkvlbHXRmoXeqal8aLK5M9rrYR8LGZ2kvUJDIkiQxJIkOS2NFx7xp7XRoCrvzvs+C6yqtt5eSuV1BNIkOSyJAkMiSJkY57bDg1uDtHZci7rx+/z/iw0kdNIkOSyJAkMiSJno77kBnEfXuGnDlcHrTrFVSTyJAkMiSJDEliZD/uvr3ldjWGYzt73Lkb9W0aHty6RE0iQ5LIkCQyJImRMe5D9v1YulTfRJHnG/U1s8FXofLFz9QkMiSJDEkiQ5L45GPcYx3okr7x4jv3EwU7/SXP2VCTyJAkMiSJDEki49vr9fr3rw6uQjxkqeSnOHv+WXCcuvKSqUlkSBIZkkSGJHH8XiVj48WVSdBLlp7qbjs288y/FqhJZEgSGZJEhiSxY1ZJX6+3tOyw8pC7Jl0sCY5Tj81qV5PIkCQyJIkMSWJkVklff7priebY9tzX1FMFX6PKDBw1iQxJIkOSyJAkjl852Tfpe+m+u3YH7NsWvK+Xt1cJ+3l3I0OSyJAkdqycfLNrdLXvyrtWTl6b5rwHH0NNIkOSyJAkMiSJno571xj3s7ENuIPd667fxhIn4HAc725kSBIZksSOvUrGVgNWGtKxmdpLjxG061giuwMywbsbGZJEhiRx/Bh3xZmPMTYQf7UdFNk3TK8mkSFJZEgSGZLEyBh30Jlbez8b28mkT2Ue99KWjWoSGZJEhiSRIUn0dNxji/Qq+tZVVm50HXnGzRg1iQxJIkOSyJAkRmaVjG2td4hdB8ZfbTcamxijJpEhSWRIEhmSxMgYd/AA9UoX2XcETN8zv1masNE3j3vJ0pXVJDIkiQxJIkOSOOAEnENa7Mog79gOKn0N+BKnvHM6725kSBIZksSOlZNnDkyPnd+4dKkxwQ8cS0sl36hJZEgSGZJEhiSxo+P+jIe8jN3obtv5+vl/+06XX/qApSaRIUlkSBIZksR5Y9zPgjPEdw1qV1wr3etSI1z5w0NwXF5NIkOSyJAkMiSJ807AOeSwx693rHuf4GukJpEhSWRIEhmSRE/HvUtfB3rIKsSr8HFkbBvCyherSWRIEhmSRIYkMbJXSZ++3Tkqqx/HpldfbRsrBv+WsPSxQE0iQ5LIkCQyJImRedy7DoqsDAFX9t+oHDJ55zr9sQ8cwSurSWRIEhmSRIYkcfzKyUrr19fMVm4U3OjjTXBr74rK1Bc1iQxJIkOSyJAkdnTcu4zNdTmk811yyApVNYkMSSJDksiQJP6njntsNDk4rfvODZcH77t0Kae8s4F3NzIkiQxJ4rwTcL7eOYpL7rYNRnYdarP0vWoSGZJEhiSRIUmMdNyHTOfo28pj6UZL7txu3cEfv+8Dh5pEhiSRIUlkSBJfaz9uPjs1iQxJIkOSyJAkPiL+AjdbcRQnQWq0AAAAAElFTkSuQmCC" alt="QR W03 胺基酸與胜肽課件（還一週）"><div class="qt">W03 胺基酸與胜肽課件（還一週）</div><div class="qn">先填「學號 姓名」，做 3 個以上小遊戲</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w03.html</div></div><div class="qr" id="qr-page"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE7klEQVR4nO3dwW3dMBAFQDtIGeog6b8SpwP14dx1IEDw7ZIyZm7BtyXZeaBWNLX8/P7+/oBlv9YPAZJEjDGJDEki4/fj39efvx8t7n9fg0+nLmN8qLGVEz2+9174dOq8Y7v+B41JZEgSGZJEhiRRU3EHi9m62nblvI8j1xXR9/BXN/UDjj+dOtGK8WUYk8iQJDIkiQxJoqXiftg1Mzs1Ib7yxW2zydfMNdedd2zqqoxJZEgSGZJEhiSxo+Jus7LmZGU5x8o8dfA5YCw4bR1kTCJDksiQJDIkiR9dcU+pK2aD5fm1MKldd6ggYxIZkkSGJJEhSeyouNuKu+Aik6nvHQu+/XiVzYBPXUaQMYkMSSJDksiQJFoq7rbGF3VzzcF56jZXrs9J2/+gMYkMSSJDksiQJDI+D+nHHZzzXXkL8cyKe+yQazYmkSFJZEgSGZJETcUdnF0dq1v1HOzhV/fzXjMPDcEvnqJXCRu4u5EhSWRIEjvmuFequbZmgVOHWjny+ER32aFWCvC6DuPGJDIkiQxJIkOSOGBVyZlzr21vXe5a5B4UfBfUmESGJJEhSWRIEjtWlYzVlatt88W7Nox/eMX+8SpuSri7kSFJZEgSB+w5ObVh4yveBlwpwO+ujiLBqfbgNL0xiQxJIkOSyJAkzuvHPVWP103UBqvI4Lr1K/cHgF0774wZk8iQJDIkiQxJ4vjugIessqg71NSRxw55wlh5SjAmkSFJZEgSGZLEjh1wVurTus0eV1azrHy66ynhkB04H4xJZEgSGZJEhiTR8ubkWN07e21twaeuauw644XG8aGCfQcfjElkSBIZkkSGJFEzx/2KDRvrXtFsW219bdqnxjpuTufuRoYkkSFJnDfH/YpdbOo2e5xS9/Zj3RKU8aGMSWRIEhmSRIYksaNXycPKOu5d/bgPOfLdVWJPWTmRMYkMSSJDksiQJI7vDjj+tO1QbYugx4Jds4Ndwqc+tY6bDu5uZEgSGZLEeTvgjLW19AteRl3hf5f9NurOO2ZMIkOSyJAkMiSJHW9O7qptx5cxdc1tm9pcmybE2w5lHTcl3N3IkCQyJInzVpXUfe+uhdttk+l32cKYseADljGJDEkiQ5LIkCR27DnZtiXjK7aPmXJv2igy+OmYMYkMSSJDksiQJHZ0Bzyked4r9mA8pHd523mNSWRIEhmSRIYk0bKqpK1ZR92bk3UlZ9188dW1QWXw6cSYRIYkkSFJZEgSb+sOOC5I6ya1x87s+zHW9suZYkwiQ5LIkCQyJInjuwOurCCuawe4qwAPWunrUtdPxphEhiSRIUlkSBI73pyss2v9eF2zwLvslcW2tT1TJzImkSFJZEgSGZJEzRx33czsw7g93lQT7V1LpOuaBa4I/h1i6sjGJDIkiQxJIkOS2PHm5Iqpam58GW2b2gS3Zn9oW+U9Zs9JjuPuRoYkkSFJHLCOu227nLo+4G1dwq9cLT++qinBpS/GJDIkiQxJIkOS2FFxt6mbXA42Rak71EPdE4Y5bo7j7kaGJJEhSfzoirtue/Uzd8K8czX1ysLtlQcdYxIZkkSGJJEhSZzXj3vFrk1tgr28g3Vx8EQrXzx1GcYkMiSJDEkiQ5JoqbjbWpe0rRCfuoyp+eK6N0WnTtS21+WDMYkMSSJDksiQJH5WP27ezphEhiSRIUlkSBIfEf8B152p2RfN3n8AAAAASUVORK5CYII=" alt="QR w16 課程頁"><div class="qt">w16 課程頁</div><div class="qn">投影片、互動實驗、手寫動畫都在這一頁</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html</div></div><div class="qr" id="qr-prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE2klEQVR4nO3d0Y3rNhAF0PeClOEOkv4rSTpQH5t/fRBgeGeGuzjnb2FbktcX9Jighr+/vr5+wbE/zg8BkkSMMYkMSSLjz9ffn7/+/tXi+fef//3a9UW+jhx8R+sjP7nzrv85defd8jqvMYkMSSJDksiQJGoq7mBd/FJXCdYVwidHfnb+da/Xbv2kuOQTNCaRIUlkSBIZkkRLxf1yUq5uHbmu1K0rk7dsnXddj9dd89aRjUlkSBIZkkSGJDFRcbdZF4Zbj27NcZ8U78Gaum6euo4xiQxJIkOSyJAkfnTFHSxmgyfaerTumoOHCjImkSFJZEgSGZLERMV9SXHXtvZjfd62JeFBdZ+gMYkMSSJDksiQJFoq7rbGF2t3ruPeOvKJkyO3fYLGJDIkiQxJIkOSyPh9ST/uqR5+QZ/cWuy6+xvrGJPIkCQyJIkMSaKm4m5b7XCygHp9qLoV01uXMXWits/oxZhEhiSRIUlkSBI1q0rqJky36uK6Sn9rJrquwWHdKu9gY8Wt3y7GJDIkiQxJIkOSuGCOe6rjXdtONHV3Tl6yXj74joxJZEgSGZJEhiRx3zruH1Dq3rky5OnaVHNtfV5jEhmSRIYkkSFJTFTcUzs01lXNUxPxwcu4ZH7cmESGJJEhSWRIEvfdORmcMA2+9s57QZ+yOe6T854wJpEhSWRIEhmSRMscd7BnyMmTt17bVsyufbquaqrxtzluSvh2I0OSyJAk7tvlPVhit+3BeLKPe1vhvzZ1/+qLMYkMSSJDksiQJCZWlbxMtS5pm3m/8/fHy1TfwRdjEhmSRIYkkSFJTOzyvtWu+s453/WTv+M0/XPwfoOMSWRIEhmSRIYkcf2ek5e09PsWE+Lfse2JddyU8O1GhiSRIUlcsKrkElMrYdaergYjU1vRq7gp4duNDEkiQ5KYuHOyrqVfW7furUfbOpmsnZw3uK27ddx08O1GhiSRIUnct+fk1Drutg3j79zc8rnjUMYkMiSJDEkiQ5K44M7J9ZO3Hl1bF8KXLBT5lN1lenLNwTs2rSqhg283MiSJDEmipuKe2oNxbasgPal8X+oq32d5VVO/IU6ObEwiQ5LIkCQyJImainurmF2bap431eq6btq6reP2ySITYxIZkkSGJJEhSbT0Kqm7DS9oaiOeratau+Sfc8KYRIYkkSFJZEgSLeu4gyX2VAV6Sb/Dp2tTzalfJ8YkMiSJDEkiQ5KY6A54Mot9SUuN4JHb9nH/Ftv0GJPIkCQyJIkMSeK+HXCmOvydqOvH/SlrPxIUXAhkTCJDksiQJDIkiev7cW+5c3+cqSU3T1lr77pfGMYkMiSJDEkiQ5KYuHMyaOoexS1126t/cq+9ZK29MYkMSSJDksiQJCbunDwR3G19LbjYo20G/KVuTn99IntOMs+3GxmSRIYkMXHnZFu/kbpGg23LOT65jttTm3luPWpMIkOSyJAkMiSJiYr7EpdsxHOyjeRaXV+Xrf05txiTyJAkMiSJDEniR1fcdW2jgyXnye7yn7KeMFs9GoOraIxJZEgSGZJEhiRxQT/uoGBzkrYu4VuX8RJsMHJJnxNjEhmSRIYkkSFJtFTcba1L6u6rDC4UCc68f3be0daJ6mrqNWMSGZJEhiSRIUn8rH7cfHfGJDIkiQxJIkOS+BXxH/Vduho2EkaDAAAAAElFTkSuQmCC" alt="QR W15 課件（補玩）"><div class="qt">W15 課件（補玩）</div><div class="qn">只給 W15 還沒通關的人</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w15.html</div></div>
+<div class="roster"><h3>連結備忘</h3><div style="font-size:14px"><a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w16-pass-sheet.pdf">通關單 PDF</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w03.html">W03 課件</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w16.html">W16 課件</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html">w16 頁</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w16.html#/explainer-video">動畫</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w16.html">手寫動畫目錄</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w15-board.html">W15 板子</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板</a></div></div>
+</aside>
+</main>
+<footer>生物化學 W16 上課流程板（線上版圖片在 teacher/img/）· 點名、預測題人數與備註只存在這台電腦的瀏覽器</footer>
+<script>
+'use strict';
+const KEY='bio_w16_board';const TOTAL=100;
+function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
+let st=load(KEY);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+if(!st.names){const prev=['bio_w15_board','bio_w14_board','bio_w13_board'].map(load).find(p=>p.names)||{};if(prev.names){st.names=prev.names;save();}}
+document.querySelectorAll('.stu').forEach(l=>{const cb=l.querySelector('[type=checkbox]'),nm=l.querySelector('.nm');const i=cb.dataset.i;
+  cb.checked=!!(st.present||{})[i]; nm.value=(st.names||{})[i]||'';
+  cb.onchange=()=>{st.present=st.present||{};st.present[i]=cb.checked;save();cnt();};
+  nm.oninput=()=>{st.names=st.names||{};st.names[i]=nm.value;save();};});
+function cnt(){document.getElementById('cnt').textContent=Object.values(st.present||{}).filter(Boolean).length;}cnt();
+st.tally=st.tally||{};
+function deltas(){const a=parseInt(st.tally.p1),b=parseInt(st.tally.p2);document.getElementById('pd').textContent=(isNaN(a)||isNaN(b))?'':(a+' → '+b+' 人');}
+document.querySelectorAll('.tin').forEach(el=>{el.value=st.tally[el.dataset.k]||'';el.oninput=()=>{st.tally[el.dataset.k]=el.value;save();deltas();};});deltas();
+const memo=document.getElementById('memo');memo.value=st.memo||'';memo.oninput=()=>{st.memo=memo.value;save();};
+let mStart=st.mStart||null;const mEl=document.getElementById('master'),mBtn=document.getElementById('mbtn');
+function toggleMaster(){ if(mStart){mStart=null;mBtn.textContent='上課開始';mEl.textContent='00:00';} else {mStart=Date.now();mBtn.textContent='重設';} st.mStart=mStart;save(); }
+if(mStart)mBtn.textContent='重設';
+let cur=null,curEnd=0;
+function showQr(k){document.querySelectorAll('.qr').forEach(q=>q.classList.toggle('show',q.id==='qr-'+k));}
+function startBlock(id){
+  document.querySelectorAll('.blk').forEach(b=>{ if(b.id===id){b.classList.add('active');b.classList.remove('done');} else if(b.classList.contains('active')){b.classList.remove('active');b.classList.add('done');} });
+  const b=document.getElementById(id);cur=b;curEnd=Date.now()+Number(b.dataset.min)*60000;if(b.dataset.qr)showQr(b.dataset.qr);
+  if(!mStart){mStart=Date.now();st.mStart=mStart;save();mBtn.textContent='重設';}
+}
+function fmt(ms){const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+setInterval(()=>{
+  if(mStart){const el=Date.now()-mStart;mEl.textContent=fmt(el);mEl.classList.toggle('warn',el>TOTAL*60000);}
+  if(cur){const left=curEnd-Date.now();const c=cur.querySelector('.clock');c.textContent=fmt(left);c.classList.toggle('low',left<120000);}
+},500);
+showQr('page');
+</script></body></html>
