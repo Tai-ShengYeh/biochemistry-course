@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>生物化學 W11 上課流程板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--p:#1f5f8b;--a:#a04c08;--t:#117a65;--ink:#1b2a2b;--mut:#5a6a6b;--line:#cfd8dc;--bg:#f3f6f8}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.5}
+header{background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px}header .meta{font-size:15px;opacity:.9}
+.master{font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;background:#fff;color:var(--p);border-radius:8px;padding:2px 14px}.master.warn{color:#c00}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:18px 22px;max-width:1500px;margin:0 auto}
+.part{font-size:19px;font-weight:700;color:#fff;background:var(--t);border-radius:8px;padding:6px 14px;margin:6px 0 10px}
+.blk{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 18px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.blk.active{border-color:var(--a);box-shadow:0 0 0 4px #fbe9dc}.blk.done{opacity:.55}
+.hd{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center}
+.time{font-size:20px;font-weight:700;color:var(--p)}.ttl h2{margin:0;font-size:22px}.sub{color:var(--mut);font-size:15px}
+.timer{text-align:right}.clock{display:block;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;color:var(--t)}.blk.active .clock.low{color:#c00}
+.go{font:inherit;font-size:15px;padding:4px 12px;border-radius:6px;border:1px solid var(--p);background:#fff;color:var(--p);cursor:pointer}.blk.active .go{background:var(--a);border-color:var(--a);color:#fff}
+.steps{margin:8px 0 6px;padding-left:26px}.steps li{margin:4px 0}
+.links a.lnk{display:inline-block;margin:4px 8px 0 0;padding:4px 12px;border-radius:6px;background:#eaf2f8;color:var(--p);text-decoration:none;font-size:15px;border:1px solid #c9dbe8}.links a.lnk:hover{background:#d9e8f3}
+.show{background:#f7f9fb;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:6px 0}.showt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px}.ck{font-size:13px;color:var(--p);font-weight:700}.cv{font-size:17px}
+.seq{font-family:Consolas,"Courier New",monospace;font-size:22px;letter-spacing:.12em}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) auto auto 92px;gap:8px;align-items:center;margin:4px 0}
+.trow label{font-size:14px;color:var(--mut);white-space:nowrap}
+.tin{font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:3px 6px;background:#fff}.tin.num{width:3.2em;margin-left:4px;text-align:center}
+.delta{font-weight:700;color:var(--t);font-variant-numeric:tabular-nums}
+aside{position:sticky;top:12px;align-self:start}
+.qr{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-bottom:12px;display:none}.qr.show{display:block;border-color:var(--a)}.qr img{width:100%;max-width:250px;display:block;margin:0 auto}
+.qt{font-weight:700;font-size:20px;margin-top:4px}.qn{font-size:14px;color:var(--mut)}.qu{font-size:11px;color:var(--mut);word-break:break-all}
+.roster{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px}.roster h3{margin:0 0 6px;font-size:17px}.roster .n{color:var(--a);font-weight:700}
+.stu{display:flex;gap:6px;align-items:center;margin:3px 0}.stu .nm{flex:1;min-width:0;font:inherit;font-size:15px;border:0;border-bottom:1px solid var(--line);padding:2px 4px}.stu input[type=checkbox]{width:20px;height:20px}
+.note{background:#fff8e6;border-left:4px solid var(--a);padding:8px 12px;border-radius:6px;font-size:15px;margin-bottom:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{position:static}.hd{grid-template-columns:1fr auto}.time{grid-column:1/-1}.trow{grid-template-columns:1fr 1fr}.trow .wk{grid-column:1/-1}}
+@media print{header,.go,aside{display:none}.qr{display:block}}
+</style></head><body>
+<header><div><h1>生物化學 W11 上課流程板</h1><div class="meta">國合班 · 以 100 分鐘算 · 第一節核苷酸、第二節 DNA 雙螺旋與鹼基配對 · 第二節通關就可以先走 · 全部在課堂完成</div></div>
+<div><span class="master" id="master">00:00</span> <button class="go" onclick="toggleMaster()" id="mbtn">上課開始</button></div></header>
+<main>
+<div>
+<div class="note">按每段的「開始這段」會啟動該段倒數，右邊 QR 會切到那一段學生要掃的。<b>課前要做</b>：準備離場卡紙條；查 W10 點名表，記下還沒通關、還沒交訂正的人（第 1 段要補）。<br><b>本週課件 = W11</b>：通關做 W11 小遊戲，不補舊週。W10 板子寫「LingoAct 試用改到 W11」，這份流程<b>沒有排進去</b>；要試的話，可以拿第 75–84 分「標圖②」那段來用。<br><b>學生下課後沒有讀書時間</b>：今天每件事都在教室做完，不出回家作業；連續坐著聽不超過 10 分鐘。</div>
+<div class="part">第一節　核苷酸：DNA 的積木</div>
+<section class="blk" id="b1" data-min="5" data-qr="w10">
+  <div class="hd">
+    <div class="time">0–5 分</div>
+    <div class="ttl"><h2>W10 補完＋三題回顧</h2><div class="sub">W10 沒通關的人先補；其他人比手指答回顧題</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b1')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>W10 還沒交訂正、還沒做完 W10 課件的人：坐前面補寫／補玩（右邊 QR 是 W10 課件），<b>5 分鐘為限</b></li><li>其他人：投影三題回顧，全班比手指 1–3</li><li>回顧完說一句：「上週是膜，今天換成存放遺傳資訊的分子」</li></ol>
+  <div class="show"><div class="showt">W10 回顧（比手指 1–3）</div><div class="cards"><div class="card"><div class="ck">回顧 1</div><div class="cv">主動運輸需要什麼？ 1 ATP　2 水　3 鹼基<br><span class="sub">答：1</span></div></div><div class="card"><div class="ck">回顧 2</div><div class="cv">磷脂怕水的尾巴，在膜裡朝哪裡？ 1 膜的內側　2 膜的外側　3 沒有固定<br><span class="sub">答：1</span></div></div><div class="card"><div class="ck">回顧 3</div><div class="cv">細胞膜的流動性主要受什麼影響？ 1 脂肪酸飽和程度　2 膜的顏色　3 鹼基<br><span class="sub">答：1</span></div></div></div></div>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w10.html">W10 課件（補玩） ↗</a></div>
+</section>
+<section class="blk" id="b2" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">5–10 分</div>
+    <div class="ttl"><h2>開場預測題：哪一段 DNA 比較耐熱？</h2><div class="sub">先猜，不公布答案；記下選 2 的人數</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b2')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">Đoạn DNA nào chịu nhiệt tốt hơn?</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">A–T 比較多的 DNA</div></div><div class="card"><div class="ck">2</div><div class="cv">G–C 比較多的 DNA</div></div><div class="card"><div class="ck">3</div><div class="cv">一樣耐熱</div></div><div class="card"><div class="ck">4</div><div class="cv">看 DNA 長度，跟鹼基無關</div></div></div><div class="sub">答案：2 → G 和 C 之間有三個氫鍵，A 和 T 只有兩個</div></div>
+  <div class="show"><div class="showt">預測題人數（只存在這台電腦）</div><div class="trow"><span class="sub">選 2（G–C 多）的人數</span><label>看動畫前<input class="tin num" data-k="p1" inputmode="numeric"></label><label>看動畫後<input class="tin num" data-k="p2" inputmode="numeric"></label><span class="delta" id="pd"></span></div></div>
+  <ol class="steps"><li>投影預測題，全班<b>同時</b>比手指 1–4，數選 2 的人記在上面</li><li>兩人一組<b>用越南語</b>說 30 秒：「為什麼你選這個？」（Vì sao bạn chọn đáp án này?）</li><li>不給答案，只說：「看完動畫你就知道」</li></ol>
+</section>
+<section class="blk" id="b3" data-min="6" data-qr="page">
+  <div class="hd">
+    <div class="time">10–16 分</div>
+    <div class="ttl"><h2>解說動畫（2 分 47 秒）＋再答一次</h2><div class="sub">觀看任務：G 和 C 之間有幾個氫鍵？</div></div>
+    <div class="timer"><span class="clock">06:00</span><button class="go" onclick="startBlock('b3')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>播放前先念觀看任務（投影片上有）</li><li>播完：預測題再比一次手指，記「看動畫後」人數</li><li>再問觀看任務：「G 和 C 之間有幾個氫鍵？」→ 三個；「A 和 T 呢？」→ 兩個</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html#/explainer-video">w11 動畫頁 ↗</a></div>
+</section>
+<section class="blk" id="b4" data-min="10" data-qr="page">
+  <div class="hd">
+    <div class="time">16–26 分</div>
+    <div class="ttl"><h2>講課①：核苷酸的三個部分、核苷 vs 核苷酸</h2><div class="sub">鹼基＋醣＝核苷；核苷＋磷酸＝核苷酸</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b4')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">白板公式（三語）</div><div class="cards"><div class="card"><div class="ck">核苷 Nucleoside</div><div class="cv">鹼基 ＋ 醣</div></div><div class="card"><div class="ck">核苷酸 Nucleotide</div><div class="cv">鹼基 ＋ 醣 ＋ 磷酸</div></div><div class="card"><div class="ck">差別</div><div class="cv">只差一個磷酸</div></div></div></div>
+  <ol class="steps"><li><b>16–21</b>　核苷酸三部分：含氮鹼基、五碳醣、磷酸（接在 5 號碳）→ 小問題：核苷酸的三個部分是鹼基、醣和什麼？（答：磷酸）</li><li><b>21–26</b>　核苷 vs 核苷酸 → 小問題：一個分子只有鹼基和醣，沒有磷酸，叫什麼？（答：核苷）</li><li>小問題一律：先自己比手指 → 再公布；錯的人多就停下來再講一次</li><li>補一句：這週的 base 是「鹼基」，不是酸鹼的「鹼」</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html">w11 投影片 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w11-01-nucleotide/player.html">手寫動畫：核苷酸 ↗</a></div>
+</section>
+<section class="blk" id="b5" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">26–34 分</div>
+    <div class="ttl"><h2>嘌呤與嘧啶：站坐分類</h2><div class="sub">嘌呤（雙環）＝ A、G；嘧啶（單環）＝ C、T、U</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b5')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>2 分鐘講：嘌呤兩個環、嘧啶一個環（白板畫兩個圈 vs 一個圈）</li><li>站坐題：老師念一個鹼基，<b>嘌呤站起來、嘧啶坐著</b>（Purine: đứng lên／Pyrimidine: ngồi）</li><li>順序：A → C → G → T → U → G → C，越念越快</li><li>最後問：「哪一個只有 RNA 有？」（答：U 尿嘧啶）</li></ol>
+</section>
+<section class="blk" id="b6" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">34–42 分</div>
+    <div class="ttl"><h2>標圖①：核苷酸結構</h2><div class="sub">對應期末題型 W11-E02；投影標號圖，比手指作答</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b6')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>投影核苷酸標號圖，詞庫四個：1 磷酸　2 去氧核糖　3 含氮鹼基　4 核苷</li><li>依序問「標號 3 是什麼？」「標號 1 是什麼？」→ 比手指 1–4</li><li>答案：①磷酸 ②去氧核糖 ③含氮鹼基 ④核苷（右邊紫色那塊，沒有磷酸）</li><li>錯最多的那個標號，請一位答對的學生上來用手指</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="img/w11_nucleotide_labeled.jpg">核苷酸標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b7" data-min="8">
+  <div class="hd">
+    <div class="time">42–50 分</div>
+    <div class="ttl"><h2>第一節收尾：三句話＋休息</h2><div class="sub">兩人互說，再站起來休息</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b7')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>兩人一組，互相說三句（中文說不出來就用越南語先說，再一起找中文）：<br>「核苷酸有三個部分」「核苷少一個磷酸」「A 和 G 是嘌呤」</li><li>老師抽兩組說給全班聽</li><li>下課休息：請大家站起來、離開座位、喝水</li></ol>
+</section>
+<div class="part">第二節　DNA 雙螺旋與鹼基配對（通關就下課）</div>
+<section class="blk" id="b8" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">50–55 分</div>
+    <div class="ttl"><h2>公布通關卡</h2><div class="sub">先講怎樣可以早點走</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b8')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">投影：今日通關卡（三格都打勾就收書包）</div><div class="cards"><div class="card"><div class="ck">① 互補股</div><div class="cv">第 65–75 分的三題寫完，給老師看 ✓</div></div><div class="card"><div class="ck">② 離場卡</div><div class="cv">紙條寫完交給老師（手機收著）</div></div><div class="card"><div class="ck">③ 本週課件 W11</div><div class="cv">先填「學號 姓名」→ 完成 3 個以上小遊戲 → 手機給老師看</div></div><div class="card"><div class="ck">時間</div><div class="cv">離場卡 3＋課件 3 個遊戲約 6 ≈ 9 分鐘；84 分開始，快的約 93 分能走</div></div></div></div>
+  <ol class="steps"><li>投影通關卡，講清楚：<b>三格打勾就可以先走</b>，最晚照表定時間下課</li><li>提醒：課件這週做 <b>W11</b>，不是 W10</li></ol>
+</section>
+<section class="blk" id="b9" data-min="10" data-qr="page">
+  <div class="hd">
+    <div class="time">55–65 分</div>
+    <div class="ttl"><h2>講課②：雙螺旋、鹼基配對、反平行</h2><div class="sub">A 配 T（兩個氫鍵）、G 配 C（三個氫鍵）；兩股方向相反</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b9')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>55–60</b>　雙螺旋＋鹼基配對 → 小問題：哪一個配對正確？ 1 T—G　2 A—T　3 G—U　4 A—C（答：2，期末題型 W11-E03）</li><li><b>60–65</b>　反平行：一股 5′→3′，另一股 3′→5′（雙手比：一手指上、一手指下）→ 小問題：DNA 兩股方向相同嗎？（答：不同，反平行）</li><li>回扣開場題：「為什麼 G–C 多的 DNA 比較耐熱？」→ 氫鍵比較多</li><li>看到有人精神不好，就改成<b>站坐題</b>：念一句話，「對」站起來、「錯」坐著（Đúng: đứng lên／Sai: ngồi）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html#/animation">互動實驗室 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w11-02-pairing/player.html">手寫動畫：配對 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w11-03-direction/player.html">手寫動畫：方向 ↗</a></div>
+</section>
+<section class="blk" id="b10" data-min="10" data-qr="page">
+  <div class="hd">
+    <div class="time">65–75 分</div>
+    <div class="ttl"><h2>動手：寫互補股（兩人一組）＝ 通關 ①</h2><div class="sub">寫在紙上，三題寫完給老師看就打勾</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b10')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">投影三題（記得標方向 5′／3′）</div><div class="cards"><div class="card"><div class="ck">題 1</div><div class="cv seq">5′-ATGCCGTA-3′</div><div class="sub">答：3′-TACGGCAT-5′</div></div><div class="card"><div class="ck">題 2</div><div class="cv seq">5′-GGCATTAC-3′</div><div class="sub">答：3′-CCGTAATG-5′</div></div><div class="card"><div class="ck">題 3（期末題型 W11-E04）</div><div class="cv">DNA 中 A 占 30%，T 約占多少？</div><div class="sub">答：30%（A＝T）；加問：G 占多少？→ 20%</div></div></div></div>
+  <ol class="steps"><li>兩人一組：一人寫，一人檢查，題 2 換手</li><li>最常見的錯：忘了方向，或把 A 配成 U（那是 RNA）</li><li>老師巡堂，三題都對就在紙上打勾 → 通關 ①</li></ol>
+</section>
+<section class="blk" id="b11" data-min="9" data-qr="page">
+  <div class="hd">
+    <div class="time">75–84 分</div>
+    <div class="ttl"><h2>DNA vs RNA ＋ 標圖②：雙螺旋</h2><div class="sub">對應期末題型 W11-E01；投影標號圖，比手指作答</div></div>
+    <div class="timer"><span class="clock">09:00</span><button class="go" onclick="startBlock('b11')">開始這段</button></div>
+  </div>
+  <div class="show"><div class="showt">DNA vs RNA（投影或寫白板）</div><div class="cards"><div class="card"><div class="ck">醣</div><div class="cv">DNA 去氧核糖｜RNA 核糖</div></div><div class="card"><div class="ck">鹼基</div><div class="cv">DNA 用 T｜RNA 用 U</div></div><div class="card"><div class="ck">股數</div><div class="cv">DNA 雙股｜RNA 多半單股</div></div></div></div>
+  <ol class="steps"><li><b>75–79</b>　DNA vs RNA → 站坐題：「RNA 用 T」（錯，坐著）、「DNA 的醣是去氧核糖」（對，站起來）</li><li><b>79–84</b>　投影雙螺旋標號圖，詞庫四個：1 大溝　2 小溝　3 腺嘌呤（A）　4 鳥嘌呤（G）→ 問「標號 1 是什麼？」</li><li>答案：①大溝 ②小溝 ③腺嘌呤 ④鳥嘌呤（右邊 A–T 兩條虛線、G–C 三條虛線，順便再數一次氫鍵）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="img/w11_dna_helix_labeled.jpg">雙螺旋標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b12" data-min="16" data-qr="w11">
+  <div class="hd">
+    <div class="time">84–100 分</div>
+    <div class="ttl"><h2>通關：離場卡 → 本週課件 W11 → 下課</h2><div class="sub">先紙本再手機；給老師看完就可以收書包</div></div>
+    <div class="timer"><span class="clock">16:00</span><button class="go" onclick="startBlock('b12')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>手機收著</b>，寫離場卡：今天的一個術語（中文｜越南語｜英文）＋「今天最難的是＿＿＿（Hôm nay khó nhất là ＿＿＿）」→ 交給老師</li><li>掃 QR 開 <b>W11 核苷酸與核酸課件</b> → 第一次會問姓名，<b>填「學號 姓名」</b>（填錯點 👤 可以改）</li><li>完成 <b>3 個以上</b>小遊戲 → 手機給老師看：上方「完成遊戲 3/5 以上」＋👤 姓名 → 老師在點名表打勾 → 下課</li><li>5/5 全部做完加平時分；先走的可以留下來幫一位同學，他也通關就加平時分</li><li>頁面顯示 📴（沒上傳）也沒關係，老師看過畫面、打勾就算</li><li>表定下課時間到還沒通關的照常下課，W12 開場 5 分鐘補完；最常出現的「最難」記在下面備註</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w11.html">W11 課件（學生） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板（課後核對） ↗</a></div>
+</section>
+
+<div class="roster"><h3>點名＋通關打勾 <span class="n" id="cnt">0</span>/11　<span class="sub">名單會自動帶入 W10 板子填過的姓名</span></h3><label class="stu"><input type="checkbox" data-i="0"><input class="nm" type="text" placeholder="學生 1" data-i="0"></label><label class="stu"><input type="checkbox" data-i="1"><input class="nm" type="text" placeholder="學生 2" data-i="1"></label><label class="stu"><input type="checkbox" data-i="2"><input class="nm" type="text" placeholder="學生 3" data-i="2"></label><label class="stu"><input type="checkbox" data-i="3"><input class="nm" type="text" placeholder="學生 4" data-i="3"></label><label class="stu"><input type="checkbox" data-i="4"><input class="nm" type="text" placeholder="學生 5" data-i="4"></label><label class="stu"><input type="checkbox" data-i="5"><input class="nm" type="text" placeholder="學生 6" data-i="5"></label><label class="stu"><input type="checkbox" data-i="6"><input class="nm" type="text" placeholder="學生 7" data-i="6"></label><label class="stu"><input type="checkbox" data-i="7"><input class="nm" type="text" placeholder="學生 8" data-i="7"></label><label class="stu"><input type="checkbox" data-i="8"><input class="nm" type="text" placeholder="學生 9" data-i="8"></label><label class="stu"><input type="checkbox" data-i="9"><input class="nm" type="text" placeholder="學生 10" data-i="9"></label><label class="stu"><input type="checkbox" data-i="10"><input class="nm" type="text" placeholder="學生 11" data-i="10"></label></div>
+<div class="roster"><h3>今天記下來（預測題兩次人數、離場卡最常見的「最難」、誰還沒通關、要個別關心的學生）</h3><textarea id="memo" style="width:100%;height:110px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px"></textarea></div>
+</div>
+<aside>
+<div class="qr" id="qr-w11"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2AQAAAADNaUdlAAACQklEQVR4nO1ZUWrsMAwcx4H36YUeYI/ivdk7U2+QPUoPUHD+tUwZKdn+hUIpjaD+CEn8M5GlmZFSiKP1mA63gb/978UHHLpW0ho5UEf3l7oC3c4eX3B0kpUkFw5YW8gFzd+MHPiBrrA3Grr5G9Mb1AT45/3mjrVwXNDG/H7/x31j+mV801f3u7XlceW8lseVtt7Ohu9gn1yAex2KeR3g261c4OmEU+A7WhNwL6UAfV7/17ebbvwrHqXoK06A73gx1s6i5FJJQKRE8vT1i6B6YW4C7MjFn5soTAnib4Ch+xEIfJCntcVaBvyjV8+ZUC7RvspZ34IU+kuXrSbxdS128XVR48iBv5KizaEU8sfleQSWxD9Yk3+rXgJ+oyuT1C8csLJFJaD4W1P8LUX8Kfxu2yDBVSE8vVzP4p+h/BFz+r3yf3OkU4L+hd68BIUG87sQMwn+XiUB6lbE+VG2TeCRJ3/sCRvws5AKcOTJf8gwB/io4jgUS4F/uAp4wIP/Q4iZAr+vcDveCKud+WyEpwz8M7aGffOikf9Z+N+DH52LSmB3EXnyH5FC5vmztzA7I005/BscbchW9I+5/AOdf9zFyba5hWAW/DXI07v43UV7CTBD/sTaxrZSLu/F/CBaBvxDVzec22NMPqOFtCT5Xx02om3ZC4Ep8mfsshsDZ0nA1vzWTPPnPhvL9XXGzV5AYH6/cP19fNOX42/eM25TlBikINH/lyWcj1NQtMM9i3+DD5x9BKqZYUzUk/BP+ft/erh+Ov4fpuNNPHa3e38AAAAASUVORK5CYII=" alt="QR W11 課件"><div class="qt">W11 核苷酸與核酸課件</div><div class="qn">先填「學號 姓名」，做 3 個以上小遊戲</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w11.html</div></div><div class="qr" id="qr-page"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2AQAAAADNaUdlAAACb0lEQVR4nO1ZW6rjMAw9tgP9dOAuoEtxdlZmSbMDZSldwIDyWXDQRVLafk3uhWHAgmtKGuyf4yPp6JEkOFt7Pj0Gfs7/jR8I67MIFVFTFG6F4e9A66PzC+EmIsV+qNQriRDQiojw+PgzgJQWbOmRlnK/YVuw3dQoW5oGwXe2pudLKzz3j9+oPP1ZU+VpDHzfxr/uV5pqS1j2q6gVxsD3nXNxh2eNZQ3e+7LPQJU+CL6zlYE1paSW2G7Tk/YLY08pzUPgO10ZVUSUauUc6CZB+wzdFRoA3xdLuJn+2y2qpwB0HJt9fPxC3UNAwTcR0nTAbgiJgF+U7UqWgqlYOrbVwuRfNrZVgpR/VCnqVC1C/oWwlgqFW1fYag63hR22APjF6pwqRrvu2EV0R2LEr7x9xoo3EyLlvwfhv/vTE24lu4gGdY+Bnwyzebvpp8vpcYscgf9qJmAnX/OXOZXEwM/GtkuQJoJ3OCOA/2SvoTvWx4ypEraEShdej9YyD4DvS/5Z+191GBPPVxSXGPpJRbTmtM7daoZK1hRTBP3P/ne5L/uVHrMG74WRZuzaFC+j4Pv7EiF3IUteJvuaebUj6wHiF66TNjx51//WTrYY/s+HhHrO9XTwfuYI9bNo5eaEezl6OA8i+A+3brLpJZzLjpXQEgV/sZnn05FeA+mmGTlG/SxuBVehQ/+1KQvh//BRgw+szAraOR65LEeJ3+ZdvG5ZCee+1GPMf5rVzOo21sgH8v/8ettnpOuvy/02mfgUXiPMP/HkXyv/d/HmgxQE+v5COrCyEDblP6K4R9Ef1rA18fQpkPW/GB9/+vl+err+N/+fdOMo++6t52YAAAAASUVORK5CYII=" alt="QR w11 課程頁"><div class="qt">w11 課程頁</div><div class="qn">投影片、互動實驗、手寫動畫都在這一頁</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html</div></div><div class="qr" id="qr-w10"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2AQAAAADNaUdlAAACWklEQVR4nO1ZQYrcMBAsW4Y5amAfkKfIPwt5Un6geco+YEE+BtpU6GrP5hSzEMK6YXXQDNKl1OquqpYn4mzs8+k28LX/b/EBh8+FLPSrKKNp0Weg2dXjC45GgTedxWonO6qvcOTADzQPeyWPUzTzFZQE+Jfnnwe2yRZYHcvb48bnxvzJ+OYP71slKpdt2r/RtvVy+P6+T3YAtyjkAb6u0x2onkuXwHc2ZuAxTRPQsK231xVoi06xT5Of4gL4zgdjPFmU7HQidVIiefn6RVB9kP8TufNnLFqG+BcRJmo3gQ/ytNqtZsA/mtXuUivlctpXOXtFoKWIvynsHKHFEl+JGhPoF6JOPWEcsNKJ/f0KLIl/sErzsAuz4m9hJzLEH7KdUQgRf1UELEX82YN5lEJA7X4jLr4tB/4h5+PIo5CJ6vkfjtQy4C+eMK5cVp0/fVZRIwf+VkZzqdURji5AXhQ58qcFZtWvJ5Lzj1SAI0//OA4L5ESqKj4uZc6Af8QtiHnE/yHETIB/jh+3+tv3/Y4yHmU89jv2acW2XgXf+X7t8fhwY/91x35vN/5Y0PYk/UsR23sLI9oJF5Eo/03m549+aU7jf0Z7d8shWyIimQfk4M8SaquccTuhXkwvci0H/iGr47Qp8VIv78dhhvyJoZpVCbt5DlGwHP4Hempw53bYOb18RlFYHv9ASfDhf0KUyUTvz5QKiEiP5rdken8G0H69/Fyw2gsILG93bp+Pb/5o/CHneXi54yEFib6/9CCccBHxFYMJ8gcH/xzmJxpJb+qT8M/09f30dPzv+P8G19oxaCMlEG0AAAAASUVORK5CYII=" alt="QR W10 課件"><div class="qt">W10 課件（補玩）</div><div class="qn">只給 W10 還沒通關的人</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w10.html</div></div>
+<div class="roster"><h3>連結備忘</h3><div style="font-size:14px"><a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html">w11 頁</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w11.html#/explainer-video">動畫</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w11.html">手寫動畫目錄</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w10-board.html">W10 板子</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板</a></div></div>
+</aside>
+</main>
+<footer>生物化學 W11 上課流程板（線上版圖片在 teacher/img/）· 點名、預測題人數與備註只存在這台電腦的瀏覽器</footer>
+<script>
+'use strict';
+const KEY='bio_w11_board';const TOTAL=100;
+function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
+let st=load(KEY);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+if(!st.names){const prev=load('bio_w10_board').names?load('bio_w10_board'):load('bio_w09_board');if(prev.names){st.names=prev.names;save();}}
+document.querySelectorAll('.stu').forEach(l=>{const cb=l.querySelector('[type=checkbox]'),nm=l.querySelector('.nm');const i=cb.dataset.i;
+  cb.checked=!!(st.present||{})[i]; nm.value=(st.names||{})[i]||'';
+  cb.onchange=()=>{st.present=st.present||{};st.present[i]=cb.checked;save();cnt();};
+  nm.oninput=()=>{st.names=st.names||{};st.names[i]=nm.value;save();};});
+function cnt(){document.getElementById('cnt').textContent=Object.values(st.present||{}).filter(Boolean).length;}cnt();
+st.tally=st.tally||{};
+function deltas(){const a=parseInt(st.tally.p1),b=parseInt(st.tally.p2);document.getElementById('pd').textContent=(isNaN(a)||isNaN(b))?'':(a+' → '+b+' 人');}
+document.querySelectorAll('.tin').forEach(el=>{el.value=st.tally[el.dataset.k]||'';el.oninput=()=>{st.tally[el.dataset.k]=el.value;save();deltas();};});deltas();
+const memo=document.getElementById('memo');memo.value=st.memo||'';memo.oninput=()=>{st.memo=memo.value;save();};
+let mStart=st.mStart||null;const mEl=document.getElementById('master'),mBtn=document.getElementById('mbtn');
+function toggleMaster(){ if(mStart){mStart=null;mBtn.textContent='上課開始';mEl.textContent='00:00';} else {mStart=Date.now();mBtn.textContent='重設';} st.mStart=mStart;save(); }
+if(mStart)mBtn.textContent='重設';
+let cur=null,curEnd=0;
+function showQr(k){document.querySelectorAll('.qr').forEach(q=>q.classList.toggle('show',q.id==='qr-'+k));}
+function startBlock(id){
+  document.querySelectorAll('.blk').forEach(b=>{ if(b.id===id){b.classList.add('active');b.classList.remove('done');} else if(b.classList.contains('active')){b.classList.remove('active');b.classList.add('done');} });
+  const b=document.getElementById(id);cur=b;curEnd=Date.now()+Number(b.dataset.min)*60000;if(b.dataset.qr)showQr(b.dataset.qr);
+  if(!mStart){mStart=Date.now();st.mStart=mStart;save();mBtn.textContent='重設';}
+}
+function fmt(ms){const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+setInterval(()=>{
+  if(mStart){const el=Date.now()-mStart;mEl.textContent=fmt(el);mEl.classList.toggle('warn',el>TOTAL*60000);}
+  if(cur){const left=curEnd-Date.now();const c=cur.querySelector('.clock');c.textContent=fmt(left);c.classList.toggle('low',left<120000);}
+},500);
+showQr('page');
+</script></body></html>
