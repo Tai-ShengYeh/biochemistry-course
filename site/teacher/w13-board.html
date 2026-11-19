@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><title>生物化學 W13 上課流程板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--p:#1f5f8b;--a:#a04c08;--t:#117a65;--ink:#1b2a2b;--mut:#5a6a6b;--line:#cfd8dc;--bg:#f3f6f8}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.5}
+header{background:var(--p);color:#fff;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px}header .meta{font-size:15px;opacity:.9}
+.master{font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;background:#fff;color:var(--p);border-radius:8px;padding:2px 14px}.master.warn{color:#c00}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:18px 22px;max-width:1500px;margin:0 auto}
+.part{font-size:19px;font-weight:700;color:#fff;background:var(--t);border-radius:8px;padding:6px 14px;margin:6px 0 10px}
+.blk{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 18px;margin-bottom:14px;transition:border-color .2s,box-shadow .2s}
+.blk.active{border-color:var(--a);box-shadow:0 0 0 4px #fbe9dc}.blk.done{opacity:.55}
+.hd{display:grid;grid-template-columns:110px 1fr auto;gap:12px;align-items:center}
+.time{font-size:20px;font-weight:700;color:var(--p)}.ttl h2{margin:0;font-size:22px}.sub{color:var(--mut);font-size:15px}
+.timer{text-align:right}.clock{display:block;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;color:var(--t)}.blk.active .clock.low{color:#c00}
+.go{font:inherit;font-size:15px;padding:4px 12px;border-radius:6px;border:1px solid var(--p);background:#fff;color:var(--p);cursor:pointer}.blk.active .go{background:var(--a);border-color:var(--a);color:#fff}
+.steps{margin:8px 0 6px;padding-left:26px}.steps li{margin:4px 0}
+.links a.lnk{display:inline-block;margin:4px 8px 0 0;padding:4px 12px;border-radius:6px;background:#eaf2f8;color:var(--p);text-decoration:none;font-size:15px;border:1px solid #c9dbe8}.links a.lnk:hover{background:#d9e8f3}
+.show{background:#f7f9fb;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:6px 0}.showt{font-size:14px;color:var(--mut);margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px}.ck{font-size:13px;color:var(--p);font-weight:700}.cv{font-size:17px}
+.seq{font-family:Consolas,"Courier New",monospace;font-size:22px;letter-spacing:.12em}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) auto auto 92px;gap:8px;align-items:center;margin:4px 0}
+.trow label{font-size:14px;color:var(--mut);white-space:nowrap}
+.tin{font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:3px 6px;background:#fff}.tin.num{width:3.2em;margin-left:4px;text-align:center}
+.delta{font-weight:700;color:var(--t);font-variant-numeric:tabular-nums}
+aside{position:sticky;top:12px;align-self:start}
+.qr{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;margin-bottom:12px;display:none}.qr.show{display:block;border-color:var(--a)}.qr img{width:100%;max-width:250px;display:block;margin:0 auto}
+.qt{font-weight:700;font-size:20px;margin-top:4px}.qn{font-size:14px;color:var(--mut)}.qu{font-size:11px;color:var(--mut);word-break:break-all}
+.roster{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:14px}.roster h3{margin:0 0 6px;font-size:17px}.roster .n{color:var(--a);font-weight:700}
+.stu{display:flex;gap:6px;align-items:center;margin:3px 0}.stu .nm{flex:1;min-width:0;font:inherit;font-size:15px;border:0;border-bottom:1px solid var(--line);padding:2px 4px}.stu input[type=checkbox]{width:20px;height:20px}
+.note{background:#fff8e6;border-left:4px solid var(--a);padding:8px 12px;border-radius:6px;font-size:15px;margin-bottom:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{position:static}.hd{grid-template-columns:1fr auto}.time{grid-column:1/-1}.trow{grid-template-columns:1fr 1fr}.trow .wk{grid-column:1/-1}}
+@media print{header,.go,aside{display:none}.qr{display:block}}
+</style></head><body>
+<header><div><h1>生物化學 W13 上課流程板</h1><div class="meta">國合班 · 以 100 分鐘算 · 第一節糖解作用、第二節發酵與 NAD⁺ 再生 · 第二節通關就可以先走 · 全部在課堂完成</div></div>
+<div><span class="master" id="master">00:00</span> <button class="go" onclick="toggleMaster()" id="mbtn">上課開始</button></div></header>
+<main>
+<div>
+<div class="note">按每段的「開始這段」會啟動該段倒數，右邊 QR 會切到那一段學生要掃的。<b>課前要做</b>：印 <a href="w13-pass-sheet.pdf" target="_blank" rel="noopener">W13 通關單</a>（A4 雙面，一人一張）；查 W12 點名表，記下還沒通關的人（第 1 段要補）。<br><b>通關 ③ 還一週課件 W08</b>（照補做表：W11 還 W06、W12 還 W07、W13 還 W08）；W13 課件小遊戲當練習。<b>新規則</b>：寫紙本的時候手機放講台籃子；簽名前隨機抽 2 位用嘴巴說一個術語。<br><b>學生下課後沒有讀書時間</b>：今天每件事都在教室做完，不出回家作業；連續坐著聽不超過 10 分鐘。</div>
+<div class="part">第一節　糖解作用：葡萄糖怎麼變成能量？</div>
+<section class="blk" id="b1" data-min="5" data-qr="prev">
+  <div class="hd">
+    <div class="time">0–5 分</div>
+    <div class="ttl"><h2>W12 補完＋三題回顧 W12</h2><div class="sub">W12 沒通關的人先補；其他人比手指答回顧題</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b1')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>先發<b>通關單</b>（A4 雙面，一人一張；今天的題目都寫在上面，通關時整張交回）</li><li>講新規則：<b>寫紙本的時候手機放講台籃子</b>，寫完、老師簽名後再拿回去；寫完可能被抽到「說給我聽」</li><li>W12 還沒通關的人：坐前面補玩 W12 課件（右邊 QR），<b>5 分鐘為限</b></li><li>其他人：投影三題回顧，全班比手指 1–3</li><li>回顧完說一句：「上週是 ATP 能量貨幣，今天燒第一個燃料：葡萄糖」</li></ol>
+<div class="show"><div class="showt">W12 回顧（比手指 1–3）</div><div class="cards"><div class="card"><div class="ck">回顧 1</div><div class="cv">ΔG 小於零的反應叫什麼？ 1 吸能反應　2 放能反應　3 不會發生的反應<br><span class="sub">答：2</span></div></div><div class="card"><div class="ck">回顧 2</div><div class="cv">ATP 水解變成 ADP＋Pi，會怎樣？ 1 吸收能量　2 沒有變化　3 放出能量<br><span class="sub">答：3</span></div></div><div class="card"><div class="ck">回顧 3</div><div class="cv">氧化是什麼意思？ 1 失去電子　2 得到電子　3 得到 ATP<br><span class="sub">答：1</span></div></div></div></div>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w13-pass-sheet.pdf">W13 通關單 PDF（列印用） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w12.html">W12 課件（補玩） ↗</a></div>
+</section>
+<section class="blk" id="b2" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">5–10 分</div>
+    <div class="ttl"><h2>開場預測題：一個葡萄糖走完糖解，淨賺幾個 ATP？</h2><div class="sub">先猜，不公布答案；記下選 2 的人數</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b2')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">Một phân tử glucose qua đường phân, thu ròng bao nhiêu ATP？（提示：先花、再賺）</div><div class="cards"><div class="card"><div class="ck">1</div><div class="cv">淨賺 4 個</div></div><div class="card"><div class="ck">2</div><div class="cv">淨賺 2 個</div></div><div class="card"><div class="ck">3</div><div class="cv">淨賺 1 個</div></div><div class="card"><div class="ck">4</div><div class="cv">淨賺 0 個</div></div></div><div class="sub">答案：2 → 花 2、生成 4，淨賺 2（最常見的錯是只看生成的 4）</div></div>
+<div class="show"><div class="showt">預測題人數（只存在這台電腦）</div><div class="trow"><span class="sub">選 2（淨賺 2 個）的人數</span><label>看動畫前<input class="tin num" data-k="p1" inputmode="numeric"></label><label>看動畫後<input class="tin num" data-k="p2" inputmode="numeric"></label><span class="delta" id="pd"></span></div></div>
+  <ol class="steps"><li>投影預測題，全班<b>同時</b>比手指 1–4，數選 2 的人記在上面；學生也在通關單正面圈第一次</li><li>兩人一組<b>用越南語</b>說 30 秒：「為什麼你選這個？」（Vì sao bạn chọn đáp án này?）</li><li>不給答案，只說：「看完動畫你就知道」</li></ol>
+</section>
+<section class="blk" id="b3" data-min="6" data-qr="page">
+  <div class="hd">
+    <div class="time">10–16 分</div>
+    <div class="ttl"><h2>解說動畫（2 分 29 秒）＋再答一次</h2><div class="sub">觀看任務：糖解淨產幾個 ATP？為什麼要乘以二？</div></div>
+    <div class="timer"><span class="clock">06:00</span><button class="go" onclick="startBlock('b3')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>播放前先念觀看任務（投影片上有）</li><li>播完：預測題再比一次手指，記「看動畫後」人數</li><li>再問觀看任務 → 投入 2、生成 4（兩份三碳 ×2）、淨 2 ATP＋2 NADH</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html#/explainer-video">w13 動畫頁 ↗</a></div>
+</section>
+<section class="blk" id="b4" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">16–24 分</div>
+    <div class="ttl"><h2>講課①：糖解總覽（位置、碳數、兩期）</h2><div class="sub">在細胞質；一個六碳葡萄糖，十個步驟，分成兩期，得到兩個丙酮酸</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b4')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">白板對照（三語）</div><div class="cards"><div class="card"><div class="ck">位置</div><div class="cv">細胞質 · Bào tương · Cytosol</div></div><div class="card"><div class="ck">前 5 步</div><div class="cv">投資期 · Giai đoạn đầu tư · 花 2 ATP</div></div><div class="card"><div class="ck">後 5 步</div><div class="cv">收穫期 · Giai đoạn thu hồi · 做 4 ATP＋2 NADH</div></div><div class="card"><div class="ck">終產物</div><div class="cv">丙酮酸 · Pyruvate</div></div></div></div>
+  <ol class="steps"><li><b>16–20</b>　從葡萄糖（6 個碳）開始，十步驟，只算糖解，後面循環先不混進來 → 小問題：糖解在哪裡進行？ 1 粒線體　2 細胞質　3 細胞核（答：2）</li><li><b>20–24</b>　六碳在途中裂成<b>兩個三碳</b>，後半段兩份都要走；一個葡萄糖走完得到幾個丙酮酸？ 1 一個　2 兩個　3 三個（答：2，6＝2×3；糖解本身不放 CO₂）</li><li>小問題一律：先自己比手指 → 再公布；錯的人多就停下來再講一次</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html">w13 投影片 ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13-01-overview/player.html">手寫動畫：糖解總覽 ↗</a></div>
+</section>
+<section class="blk" id="b5" data-min="8" data-qr="page">
+  <div class="hd">
+    <div class="time">24–32 分</div>
+    <div class="ttl"><h2>講課②：ATP 與 NADH 帳（先花，再賺）</h2><div class="sub">投資期花 2 ATP；收穫期生成 4 ATP＋2 NADH；淨得 2 ATP</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b5')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">三欄帳（寫白板，一個葡萄糖）</div><div class="cards"><div class="card"><div class="ck">投入</div><div class="cv">2 ATP（投資期）</div></div><div class="card"><div class="ck">生成</div><div class="cv">4 ATP＋2 NADH（收穫期，兩份三碳 ×2）</div></div><div class="card"><div class="ck">淨得</div><div class="cv">4 − 2 ＝ 2 ATP；另外有 2 NADH、2 丙酮酸</div></div></div></div>
+  <ol class="steps"><li><b>24–28</b>　先講「<b>忘記 ×2</b> 是最常見的錯：做出的是 4，不是 2」；淨得＝生成 − 投入 → 小問題：一個葡萄糖糖解，淨產生多少 ATP 與 NADH？ 1　2 ATP、2 NADH　2　2 ATP、4 NADH　3　4 ATP、2 NADH　4　4 ATP、4 NADH（答：1，期末題型 W13-E04）</li><li><b>28–32</b>　站坐題：「糖解淨得 4 ATP」（錯，坐）「投資期花 2 ATP」（對，站）「NADH 就是 ATP」（錯，坐：NADH 是電子載體，要分開列）「糖解的 ATP 由受質層次磷酸化直接轉磷酸基」（對，站）</li><li>兩個葡萄糖就全部乘二：投入 4、生成 8、淨得 4 ATP，NADH 4、丙酮酸 4（通關 ① 會用到）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13-02-ledger/player.html">手寫動畫：ATP 與 NADH 帳 ↗</a></div>
+</section>
+<section class="blk" id="b6" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">32–37 分</div>
+    <div class="ttl"><h2>三個調節點：哪裡是閥門？</h2><div class="sub">己糖激酶（第 1 步）、PFK-1（第 3 步，最重要的閥門）、丙酮酸激酶（第 10 步）</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b6')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">對照表</div><div class="cards"><div class="card"><div class="ck">己糖激酶</div><div class="cv">第 1 步 · 把葡萄糖鎖進細胞（磷酸化）</div></div><div class="card"><div class="ck">PFK-1</div><div class="cv">第 3 步 · 最重要的閥門</div></div><div class="card"><div class="ck">丙酮酸激酶</div><div class="cv">第 10 步 · 最後一步，產生丙酮酸與 ATP</div></div></div></div>
+  <ol class="steps"><li>講 PFK-1：ATP 多就抑制它（能量夠了，不用再燒糖）→ 接回 W07 回饋抑制；也提醒實際控制還受組織與其他訊號影響</li><li>小問題：哪一個配對正確？ 1 丙酮酸激酶—糖解第一步　2 己糖激酶—磷酸化葡萄糖　3 磷酸果糖激酶—最後一步（答：2，期末題型 W13-E03）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13-03-regulation/player.html">手寫動畫：調節點 ↗</a></div>
+</section>
+<section class="blk" id="b7" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">37–42 分</div>
+    <div class="ttl"><h2>標圖①：糖解作用圖</h2><div class="sub">對應期末題型 W13-E01／E02；投影標號圖，比手指作答</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b7')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>投影糖解標號圖，詞庫：1 投資期　2 收穫期　3 丙酮酸　4 NADH</li><li>依序問「標號 1 是什麼？」「標號 2 是什麼？」→ 比手指 1–4</li><li>答案：① 投資期（前半，花 2 ATP）② 收穫期（後半，做 4 ATP＋2 NADH）③ 丙酮酸 ④ NADH；圖下方 NET 一行可念：葡萄糖 → 2 丙酮酸＋2 ATP＋2 NADH</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/assets/figures/labeled/w13_glycolysis.jpg">糖解標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b8" data-min="8">
+  <div class="hd">
+    <div class="time">42–50 分</div>
+    <div class="ttl"><h2>第一節收尾：三句話＋休息</h2><div class="sub">兩人互說，寫在通關單正面「四」</div></div>
+    <div class="timer"><span class="clock">08:00</span><button class="go" onclick="startBlock('b8')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li>兩人一組，互相說三句（中文說不出來就用越南語先說，再一起找中文）：<br>「糖解在細胞質」「先花 2 個 ATP，再生成 4 個，淨得 2 個」「PFK-1 是重要的閥門」</li><li>老師抽兩組說給全班聽</li><li>下課休息：請大家站起來、離開座位、喝水</li></ol>
+</section>
+<div class="part">第二節　發酵與 NAD⁺ 再生（通關就下課）</div>
+<section class="blk" id="b9" data-min="5" data-qr="page">
+  <div class="hd">
+    <div class="time">50–55 分</div>
+    <div class="ttl"><h2>公布通關卡</h2><div class="sub">先講怎樣可以早點走</div></div>
+    <div class="timer"><span class="clock">05:00</span><button class="go" onclick="startBlock('b9')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">投影：今日通關卡（三格都打勾就收書包）</div><div class="cards"><div class="card"><div class="ck">① 糖解能量帳</div><div class="cv">通關單背面表格填完（手機在籃子），給老師看 ✓</div></div><div class="card"><div class="ck">② 離場卡</div><div class="cv">手機在籃子寫 → 可能被抽問說一個術語 → 老師簽名</div></div><div class="card"><div class="ck">③ 還一週課件 W08</div><div class="cv">拿回手機 → 填「學號 姓名」→ W08 完成 3 個以上小遊戲 → 給老師看</div></div><div class="card"><div class="ck">時間</div><div class="cv">離場卡 3＋課件 3 個遊戲約 6 ≈ 9 分鐘；84 分開始，快的約 93 分能走</div></div></div></div>
+  <ol class="steps"><li>投影通關卡，講清楚：<b>三格打勾就可以先走</b>，最晚照表定時間下課</li><li>提醒：課件這週還的是 <b>W08</b>，W13 課件只是練習</li></ol>
+</section>
+<section class="blk" id="b10" data-min="10" data-qr="page">
+  <div class="hd">
+    <div class="time">55–65 分</div>
+    <div class="ttl"><h2>講課③：發酵——為什麼要再生 NAD⁺？</h2><div class="sub">糖解需要 NAD⁺，用完糖解就停；發酵把 NADH 變回 NAD⁺，糖解才能繼續</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b10')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">三條去路（白板）</div><div class="cards"><div class="card"><div class="ck">有氧</div><div class="cv">丙酮酸 → 乙醯 CoA（進循環，下週）</div></div><div class="card"><div class="ck">缺氧（動物）</div><div class="cv">丙酮酸 → 乳酸（乳酸發酵，不產 CO₂）</div></div><div class="card"><div class="ck">缺氧（酵母）</div><div class="cv">丙酮酸 → 乙醇＋CO₂（酒精發酵）</div></div></div></div>
+  <ol class="steps"><li><b>55–60</b>　糖解的一步用掉 NAD⁺ 變成 NADH；NAD⁺ 用完，糖解就停 → 發酵把 NADH 變回 NAD⁺ → 小問題：缺氧時，動物細胞的丙酮酸變成什麼？ 1 乙醯 CoA　2 乳酸　3 乙醇（答：2）</li><li><b>60–65</b>　發酵<b>不是為了產能</b>（乳酸生成不另外製造 ATP；糖解淨得仍是 2 ATP）；乳酸、乙醇只是副產物 → 小問題：發酵的目的是什麼？ 1 多產很多 ATP　2 再生 NAD⁺　3 做出葡萄糖（答：2）</li><li>補一句：紅血球沒有粒線體，只能靠糖解；酒精發酵產生 CO₂，所以麵包會膨脹</li><li>注意：不要把「運動後隔天痠痛」直接說成乳酸堆積（課件旁白也不採用這個說法）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13-04-fermentation/player.html">手寫動畫：發酵與 NAD⁺ ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html#/animation">互動實驗室 ↗</a></div>
+</section>
+<section class="blk" id="b11" data-min="10" data-qr="page">
+  <div class="hd">
+    <div class="time">65–75 分</div>
+    <div class="ttl"><h2>動手：糖解能量帳（兩人一組）＝ 通關 ①</h2><div class="sub">寫在通關單背面 ①，寫完給老師看就打勾</div></div>
+    <div class="timer"><span class="clock">10:00</span><button class="go" onclick="startBlock('b11')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">先在白板做一次示範（一個葡萄糖）：投入 2、生成 4、淨得 2</div><div class="cards"><div class="card"><div class="ck">題 1（期末題型 W13-E04）</div><div class="cv">一個葡萄糖：投入 ATP、生成 ATP、淨得 ATP、NADH、丙酮酸各幾個？<br><span class="sub">答：2、4、2、2、2</span></div></div><div class="card"><div class="ck">題 2</div><div class="cv">兩個葡萄糖（全部乘二）：同樣五格<br><span class="sub">答：4、8、4、4、4</span></div></div><div class="card"><div class="ck">題 3（判斷）</div><div class="cv">「一個葡萄糖糖解淨產 4 ATP」；「乳酸發酵再多給 2 ATP」<br><span class="sub">答：兩句都錯（淨得 2；乳酸生成不另加 ATP）</span></div></div></div></div>
+  <ol class="steps"><li><b>手機放講台籃子</b>，只用紙筆</li><li>兩人一組：一人填，一人檢查「淨得＝生成 − 投入」，題 2 換手</li><li>最常見的錯：忘了 ×2（寫成淨 4）；把 NADH 當成 ATP 算進去</li><li>老師巡堂，全部都對就在通關單 ① 打勾</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13-02-ledger/player.html">手寫動畫：ATP 與 NADH 帳 ↗</a></div>
+</section>
+<section class="blk" id="b12" data-min="9" data-qr="page">
+  <div class="hd">
+    <div class="time">75–84 分</div>
+    <div class="ttl"><h2>標圖②：丙酮酸的缺氧去路＋乳酸／酒精比較</h2><div class="sub">看發酵標號圖，再把比較表填完</div></div>
+    <div class="timer"><span class="clock">09:00</span><button class="go" onclick="startBlock('b12')">開始這段</button></div>
+  </div>
+<div class="show"><div class="showt">比較表（投影或寫白板）</div><div class="cards"><div class="card"><div class="ck">乳酸發酵</div><div class="cv">丙酮酸 → 乳酸；再生 NAD⁺；不產 CO₂；例：動物細胞缺氧</div></div><div class="card"><div class="ck">酒精發酵</div><div class="cv">丙酮酸 → 乙醇＋CO₂；再生 NAD⁺；產 CO₂（麵包膨脹）；例：酵母</div></div></div></div>
+  <ol class="steps"><li><b>75–80</b>　投影發酵標號圖，詞庫：1 丙酮酸　2 NAD⁺　3 乙醇　4 NAD⁺ 再生；只問 ①②④（③ 不考）→ 比手指</li><li><b>80–84</b>　站坐題：「乳酸發酵會產生 CO₂」（錯，坐）「酒精發酵會產生 CO₂」（對，站）「發酵是為了再生 NAD⁺」（對，站）「糖解淨產 4 個 ATP」（錯，坐）</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/assets/figures/labeled/w13_fermentation.jpg">發酵標號圖 ↗</a></div>
+</section>
+<section class="blk" id="b13" data-min="16" data-qr="w08">
+  <div class="hd">
+    <div class="time">84–100 分</div>
+    <div class="ttl"><h2>通關：離場卡 → 還一週課件 W08 → 下課</h2><div class="sub">先紙本（手機在籃子）→ 老師簽名 → 拿手機做 W08</div></div>
+    <div class="timer"><span class="clock">16:00</span><button class="go" onclick="startBlock('b13')">開始這段</button></div>
+  </div>
+  <ol class="steps"><li><b>手機在籃子</b>，寫通關單背面的離場卡 ②：今天的一個術語（中文｜越南語｜英文）＋「今天最難的是＿＿＿（Hôm nay khó nhất là ＿＿＿）」</li><li>寫完舉手 → <b>隨機抽 2 位</b>用嘴巴說出離場卡上的術語是什麼意思（中文、越南文都可以）→ 說得出來就簽名，說不出來就和老師一起看課程頁再說一次 → 簽名後去籃子拿手機</li><li>掃 QR 開 <b>W08 碳水化合物課件</b> → 第一次會問姓名，<b>填「學號 姓名」</b>（填錯點 👤 可以改）</li><li>完成 <b>3 個以上</b>小遊戲 → 手機給老師看：上方「完成遊戲 3/5 以上」＋👤 姓名 → 老師在點名表打勾 → <b>整張通關單交回</b> → 下課</li><li>5/5 全部做完加平時分；先走的可以留下來幫一位同學，他也通關就加平時分</li><li>頁面顯示 📴（沒上傳）也沒關係，老師看過畫面、打勾就算</li><li>表定下課時間到還沒通關的照常下課，W14 開場 5 分鐘補完；最常出現的「最難」記在下面備註</li></ol>
+  <div class="links"><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w08.html">W08 課件（學生） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w13.html">W13 課件（練習） ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板（課後核對） ↗</a></div>
+</section>
+
+<div class="roster"><h3>點名＋通關打勾 <span class="n" id="cnt">0</span>/11　<span class="sub">名單會自動帶入上週板子填過的姓名</span></h3><label class="stu"><input type="checkbox" data-i="0"><input class="nm" type="text" placeholder="學生 1" data-i="0"></label><label class="stu"><input type="checkbox" data-i="1"><input class="nm" type="text" placeholder="學生 2" data-i="1"></label><label class="stu"><input type="checkbox" data-i="2"><input class="nm" type="text" placeholder="學生 3" data-i="2"></label><label class="stu"><input type="checkbox" data-i="3"><input class="nm" type="text" placeholder="學生 4" data-i="3"></label><label class="stu"><input type="checkbox" data-i="4"><input class="nm" type="text" placeholder="學生 5" data-i="4"></label><label class="stu"><input type="checkbox" data-i="5"><input class="nm" type="text" placeholder="學生 6" data-i="5"></label><label class="stu"><input type="checkbox" data-i="6"><input class="nm" type="text" placeholder="學生 7" data-i="6"></label><label class="stu"><input type="checkbox" data-i="7"><input class="nm" type="text" placeholder="學生 8" data-i="7"></label><label class="stu"><input type="checkbox" data-i="8"><input class="nm" type="text" placeholder="學生 9" data-i="8"></label><label class="stu"><input type="checkbox" data-i="9"><input class="nm" type="text" placeholder="學生 10" data-i="9"></label><label class="stu"><input type="checkbox" data-i="10"><input class="nm" type="text" placeholder="學生 11" data-i="10"></label></div>
+<div class="roster"><h3>今天記下來（預測題兩次人數、離場卡最常見的「最難」、誰還沒通關、要個別關心的學生）</h3><textarea id="memo" style="width:100%;height:110px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px"></textarea></div>
+</div>
+<aside>
+<div class="qr" id="qr-w08"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE+UlEQVR4nO3dwY0jNxAF0Fljw1AGdv6R2Bkoj9l7HwgX+KtIDd67LVZS90gfVIkokr++v7+/YNtf+y8BkkSMMYkMSSLj9+Pfr7//+Rrx/u/f/3/d9YN3Xmrnzy9dt++lgrdR8riuMYkMSSJDksiQJHoq7lJ9WrJTU5fuqq8QflgX/ms7f2DJ2CdoTCJDksiQJDIkiZGK+2Fn7rVkZyb68dzS/HjpQjsPfm+U5ztvbN9NGpPIkCQyJIkMSeJExd1np4hev1TpucGp9of1SwWbak4xJpEhSWRIEhmSxM+quEtKNXWwPg1OiJeMtWbvMCaRIUlkSBIZksSJintsOjVYNfc1Mpdmzx/GlneWXnmHMYkMSSJDksiQJEYq7o+YXS1tXbJTy1/yyiVjn6AxiQxJIkOSyJAkMn5dsh/32N4dpeuWbuM1tTvgJY3bD8YkMiSJDEkiQ5IY2Y87uKXGWG0b3NLvVP/GO9egErzu+q0zJpEhSWRIEhmSxMgc91gRXbpuSbD34yPO1nm3/eBYP9iYRIYkkSFJZEgSJ7pKgmXj2DTuJafYvKZmoh/GGlSMSWRIEhmSRIYkcaKrJLh08BNPai+9G2OrLseWWZrjZoJvNzIkiQxJ4kRXyVpfS8ap7TjGDoxf6/t1sr7Qmj5uWvh2I0OSyJAkLujj3nnw+rk/r0HldWjGf32TOy/1YEwiQ5LIkCQyJImRrpLS/66dKpNLTi0N7VO60M5nZEwiQ5LIkCQyJInrT3nv2+ck+LOg78ibtWAr+tg+4GvGJDIkiQxJIkOSuGCvkrHVgGtjyw4v2W/kPfXbZf3cB2MSGZJEhiSRIUn0VNx9LcOXzAiPvdTY0UKl5+5QcTPBtxsZkkSGJNHTVdJXCY5t2re+bumed34lvCqtL2OrH/tOiDcmkSFJZEgSGZLEfX3cY4etlKyr5uBa0L5W9OBWLWv24+Y8325kSBIZksSJvUp25k+D9fhOa/ZYE/S7rYsmuNwx+KEYk8iQJDIkiQxJ4kQf946P2PejbxHmK/f3XnLw0IMxiQxJIkOSyJAkTuxVsnZqK4+SUxuqlIxV6zt39WBMIkOSyJAkMiSJ+7pK1vpWIZbq076tvdf6jqAMznE7AYfzfLuRIUlkSBIje5XsFKRjJXawAF/fxtjk8nvjl03fh7JmTCJDksiQJDIkifv6uMd26+471OZUG8md9XiJMYkMSSJDksiQJO47c3L94JKxArzvyJu+qee+VZe6SjjPtxsZkkSGJHHBftxj24AE56lLd7U2Vq0/9O3HvcOYRIYkkSFJZEgSF5zyfudU7NiWKWM/OB4u2ZzkwZhEhiSRIUlkSBL37Q6445IW6VO7dY/NnvfdszGJDEkiQ5LIkCRO7A4YFOz96DsCZqfJ5J2btg6eEF9ijpsDfLuRIUlkSBIjfdx93cfrC40V/n1Hwr+uPILyIXghYxIZkkSGJJEhSZxYOXmq2+GStYJ9BfjDJW3dpb/XmESGJJEhSWRIEhfsVRLUt7Cwr7ujb9r61dYJ0/djxZhEhiSRIUlkSBI/q+Je6zv1vG+L7dcdnSHBd8PKSSb4diNDksiQJE5U3Jds/Ty2rjJ4Vw/BXwnBdZU7xbsxiQxJIkOSyJAkRiruS1YwPv43eORN6TZKXhtvXbAFpa/XxcpJWvh2I0OSyJAkftZ+3Hw6YxIZkkSGJJEhSXxF/AHLXZr2RVpyjgAAAABJRU5ErkJggg==" alt="QR W08 課件"><div class="qt">W08 碳水化合物課件（還一週）</div><div class="qn">先填「學號 姓名」，做 3 個以上小遊戲</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w08.html</div></div><div class="qr" id="qr-page"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE0ElEQVR4nO3dwY3cMBAEwLPhMJSBnX8kdgbK4/zXgwDBniG1qPoZu5aEvQY1Iqjhj+/v7y9Y9nP9ECBJxBiTyJAkMn49/n39/vPV4v73d/Dp1GVMHerx5ZUTTR35zp13bNdf0JhEhiSRIUlkSBI1FfdKrTdWV9uuqCui7+FFThXg40+nTrRifBnGJDIkiQxJIkOSaKm4H3bNzK7MYgdPNHWosZVniOB5x6auyphEhiSRIUlkSBI7Ku42K1XzrnnquueAumnrIGMSGZJEhiSRIUl8dMVdV/mOrSz2uHMF+FjdGpsVxiQyJIkMSSJDkthRcbcVd3XruIP/t21l+pV7GbLuL2hMIkOSyJAkMiSJloq7rfHFiuCa6EPmi69cn5O2v6AxiQxJIkOSyJAkMn4c0o97V0+7V1TcY4dcszGJDEkiQ5LIkCRqKu7g7OpY20x0sAvKinvml6z78hS9StjA3Y0MSSJDktgxx123Mc2U4GuHdUe+yw61UoDXdW4xJpEhSWRIEhmSxAEV9yF7MLY9B9TNJu8S/CWNSWRIEhmSRIYk0bLLe9ucb7A8r+vwt3Kiup3pg88BK48jxiQyJIkMSSJDkjivO2BdFTl1ohW7CvCra4p/5bxjxiQyJIkMSSJDknjbDjh1DanbCvAp9xnz8m3NWIxJZEgSGZJEhiRxXsV9Zoe/uncF65qi3GXLSOp6pBiTyJAkMiSJDEmi5c3Juvp0xa4NGx/aWog8HNIcUcVNCXc3MiSJDEmi5c3J8afBntqH7BsZfGi4u17grFuvMj7UgzGJDEkiQ5LIkCQO2HPy85oF1nUHvMtmsYNU3Ozn7kaGJJEhSbTsOTmlrk1dXc/CqfOOvzyl7u3Htj02rSqhhLsbGZJEhiTxWb1KHtr6ce/avvLuKrGn6MfNfu5uZEgSGZLEef24g2uEg7vJjAVfdxwLds0Odglf6fryYEwiQ5LIkCQyJIkdvUrObNYRXE995jaSh+wLOmZMIkOSyJAkMiSJHb1KprQ1lW6baz6k/ciUukNZx00JdzcyJIkMSaJlVUldt7w6K0sjdk2m32ULY8aCK8SNSWRIEhmSRIYkcV6vkil1TTPqloKsuHONXKaO3LblpjGJDEkiQ5LIkCRaKu66nWh29Q7c1Qj7esP+nCuMSWRIEhmSRIYkcV53wF27re8qOdt20Rzb9VRkHTcl3N3IkCQyJIkdFXewwUjbkQ9pvBd05vaVxiQyJIkMSSJDknjbqpJdu1nuWmRybZrTnxJc5W1MIkOSyJAkMiSJln7cbXatxW5bTn6d0Y+7bscfYxIZkkSGJJEhSRzfj3ts3B5vqtY7ZFObQ5agBH+6qSMbk8iQJDIkiQxJ4m39uFequZX948fGJwpuzf7Qtsp7zJ6THMfdjQxJIkOSOODNyTfunlO3nOOa+fSQXSWt4+Y47m5kSBIZksR53QGD6l7CDPb9CPZXucpWpk8V/itPNsYkMiSJDEkiQ5L46Iq77qXEh7Y57oe6njArC7dXHmWMSWRIEhmSRIYksaPiPqTHdHBmtq7/37VQFwdPtPLlqcswJpEhSWRIEhmSREvF3da65JDu1SuNPh5W3vacKs+DC0XMcbOfuxsZkkSGJPFZ/bh5O2MSGZJEhiSRIUl8RfwH07amO+YY9ZAAAAAASUVORK5CYII=" alt="QR w13 課程頁"><div class="qt">w13 課程頁</div><div class="qn">投影片、互動實驗、手寫動畫都在這一頁</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html</div></div><div class="qr" id="qr-prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMMAAADDCAIAAACwHTL9AAAE5klEQVR4nO3dwY0bORAF0LGxYTADO/9IdjNQHrNn94EwwV9FSnjvZkjqlqwPdonDLv74/v7+gm0/9w8BkkSMMYkMSSLjn8e/x6/fXy1e//37909eeldtR3689jV9dMn8I9Sdd8njvMYkMiSJDEkiQ5Koqbh3qte5YAW6VHJe8ujc47Xz/6ulI7d9g8YkMiSJDEkiQ5JoqbhPzTXvFLNLjwbL5CVL553X45f8tcCYRIYkkSFJZEgSJyruNvPC8FThv3TksVFTL53oEsYkMiSJDEkiQ5L46Iq7biFzsBBeKvzHxsR03aGCjElkSBIZkkSGJHGi4m4r7nbmfOvuJKxbkfLquvux7hs0JpEhSWRIEhmSREvF3db44qFu2jpYNc+N3JF36vG2b9CYRIYkkSFJZEgSGT8u6cf9AaueR9m6kTmrSvgorm5kSBIZkkRLP+62FRp1zUl2tFW+I3eiuu9ozphEhiSRIUlkSBItc9xLs8l165qX1G09s3Te18qPleDeOqc6jBuTyJAkMiSJDEmipuLeWd2xMyF+SVPpnWL2konpJcFPZEwiQ5LIkCQyJIkT67hP1Zh1y7rvXHw9chPTO29j6V0Zk8iQJDIkiQxJ4t3unKxbKTF/8tK72jnUqXtBL5kfNyaRIUlkSBIZksSJVSV1pW7da0/dC9r2ntsm8eeMSWRIEhmSRIYk8W57TgZr+aUKtO5ewbnRVWIH23PvfCnGJDIkiQxJIkOSuH4HnFPbKrbt41439TzuWOS+xJhEhiSRIUlkSBIX7PL+qObaVmqf6iiy9NrRtTL91H/sgzGJDEkiQ5LIkCTuW1VyyZzvzruqK5NH2Zz+0q8E67i5nasbGZJEhiRxwZ2Tp7rWBdeNzM97yXby48q2J9ZxU8LVjQxJIkOSuH6Oe+nRugXjbfdGPrQ1GDnVbuXBmESGJJEhSWRIEp/Vq2T+5Lk7742c22kwsrOMZOevFNZx08HVjQxJIkOSuODOyVN14pK69ePBD7ikrQBfYkwiQ5LIkCQyJImWPSdPzeoGBW93PLUf0Di0NHt+KOu4KeHqRoYkkSFJnLhz8pIb/JYOtXPk4InGleu4g9+RMYkMSSJDksiQJO7rVTLXNl+88zbmT156V+PQ7vJ13WbmjElkSBIZkkSGJHFBxd22NvmSroRLxqHzzt+GftzcztWNDEkiQ5K4787Jtl1slh7deXLQ6451MnVT/MYkMiSJDEkiQ5K4oDvgUvnWtiNlW0OVtn3c32KbHmMSGZJEhiSRIUm8+Z6Tp+aaL9nFZhzq3PJgHTfXcXUjQ5LIkCRaugO2ads4MXjeUz9HxqF5eTvg0MHVjQxJIkOSaJnjrtPW52RHXavrUdZo8NRdpsYkMiSJDEkiQ5JoWcfd1rvj1JqTecnZNgP+UHeX6fxE9pzkPFc3MiSJDEnixJ2Tp/aaqetGcsnGNGPl58jOiR6C8+PGJDIkiQxJIkOSuKBXSZ3gupFgR5H5kV9/HupUW/ClqtkcN9dxdSNDksiQJD664q5rGx0sOZcO9erqaLjTo3Hnl40xiQxJIkOSyJAk7tsBZ0fbjYXz1waNXJvs4BL4uj4nxiQyJIkMSSJDkmipuNtal+wsVQ4u56jr4Rf8RPND1dXUc8YkMiSJDEkiQ5L4rH7cvDtjEhmSRIYkkSFJfEX8D6UD0knLn+KQAAAAAElFTkSuQmCC" alt="QR W12 課件"><div class="qt">W12 課件（補玩）</div><div class="qn">只給 W12 還沒通關的人</div><div class="qu">https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w12.html</div></div>
+<div class="roster"><h3>連結備忘</h3><div style="font-size:14px"><a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w13-pass-sheet.pdf">通關單 PDF</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w08.html">W08 課件</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/lessons/w13.html">W13 課件</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html">w13 頁</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/vi-a2/w13.html#/explainer-video">動畫</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/handwrite/w13.html">手寫動畫目錄</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/w12-board.html">W12 板子</a> · <a target="_blank" rel="noopener" href="https://tai-shengyeh.github.io/biochemistry-course/teacher/dashboard.html">教師儀表板</a></div></div>
+</aside>
+</main>
+<footer>生物化學 W13 上課流程板（線上版圖片在 teacher/img/）· 點名、預測題人數與備註只存在這台電腦的瀏覽器</footer>
+<script>
+'use strict';
+const KEY='bio_w13_board';const TOTAL=100;
+function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
+let st=load(KEY);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+if(!st.names){const prev=['bio_w12_board','bio_w11_board','bio_w10_board'].map(load).find(p=>p.names)||{};if(prev.names){st.names=prev.names;save();}}
+document.querySelectorAll('.stu').forEach(l=>{const cb=l.querySelector('[type=checkbox]'),nm=l.querySelector('.nm');const i=cb.dataset.i;
+  cb.checked=!!(st.present||{})[i]; nm.value=(st.names||{})[i]||'';
+  cb.onchange=()=>{st.present=st.present||{};st.present[i]=cb.checked;save();cnt();};
+  nm.oninput=()=>{st.names=st.names||{};st.names[i]=nm.value;save();};});
+function cnt(){document.getElementById('cnt').textContent=Object.values(st.present||{}).filter(Boolean).length;}cnt();
+st.tally=st.tally||{};
+function deltas(){const a=parseInt(st.tally.p1),b=parseInt(st.tally.p2);document.getElementById('pd').textContent=(isNaN(a)||isNaN(b))?'':(a+' → '+b+' 人');}
+document.querySelectorAll('.tin').forEach(el=>{el.value=st.tally[el.dataset.k]||'';el.oninput=()=>{st.tally[el.dataset.k]=el.value;save();deltas();};});deltas();
+const memo=document.getElementById('memo');memo.value=st.memo||'';memo.oninput=()=>{st.memo=memo.value;save();};
+let mStart=st.mStart||null;const mEl=document.getElementById('master'),mBtn=document.getElementById('mbtn');
+function toggleMaster(){ if(mStart){mStart=null;mBtn.textContent='上課開始';mEl.textContent='00:00';} else {mStart=Date.now();mBtn.textContent='重設';} st.mStart=mStart;save(); }
+if(mStart)mBtn.textContent='重設';
+let cur=null,curEnd=0;
+function showQr(k){document.querySelectorAll('.qr').forEach(q=>q.classList.toggle('show',q.id==='qr-'+k));}
+function startBlock(id){
+  document.querySelectorAll('.blk').forEach(b=>{ if(b.id===id){b.classList.add('active');b.classList.remove('done');} else if(b.classList.contains('active')){b.classList.remove('active');b.classList.add('done');} });
+  const b=document.getElementById(id);cur=b;curEnd=Date.now()+Number(b.dataset.min)*60000;if(b.dataset.qr)showQr(b.dataset.qr);
+  if(!mStart){mStart=Date.now();st.mStart=mStart;save();mBtn.textContent='重設';}
+}
+function fmt(ms){const s=Math.max(0,Math.round(ms/1000));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+setInterval(()=>{
+  if(mStart){const el=Date.now()-mStart;mEl.textContent=fmt(el);mEl.classList.toggle('warn',el>TOTAL*60000);}
+  if(cur){const left=curEnd-Date.now();const c=cur.querySelector('.clock');c.textContent=fmt(left);c.classList.toggle('low',left<120000);}
+},500);
+showQr('page');
+</script></body></html>
