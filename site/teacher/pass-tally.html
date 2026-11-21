@@ -13,7 +13,7 @@ h1{font-size:24px;margin:0 0 4px}h2{font-size:19px;margin:0 0 8px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0}
 .legend span{display:inline-block;margin:2px 10px 2px 0}
 .wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:760px}
+table{border-collapse:collapse;width:100%;min-width:420px}
 th,td{border:1px solid var(--line);padding:4px 6px;text-align:center;font-size:15px}
 th{background:var(--bg);font-weight:600}
 th.wk{font-size:16px}
@@ -33,13 +33,15 @@ button.c:disabled{background:var(--na-bg);color:var(--na);cursor:not-allowed;bor
 .big{font-size:26px;font-weight:700;color:var(--a)}
 .stuck{font-size:15px;margin-top:8px}
 textarea{width:100%;min-height:70px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--card);color:var(--ink)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.tabs button{font:inherit;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}.tabs button.on{background:var(--a);color:#fff;border-color:var(--a)}
+#trend{min-width:560px}#trend td:first-child{text-align:left}
 .tools button{font:inherit;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;margin:4px 6px 4px 0}
 .tools button.pri{background:var(--a);color:#fff;border-color:var(--a)}
 @media print{.tools,.noprint{display:none}body{padding:0;background:#fff}.card{border:0;padding:6px 0}}
 @media (max-width:600px){.gate{grid-template-columns:80px 1fr 80px}}
 </style></head><body><main>
-<h1>通關完成率統計：W10–W11</h1>
-<div class="sub">拿收回來的紙本通關單，一張一張點。資料只存在這台電腦的瀏覽器，不會上傳。從 GitHub Pages 開時，會自動帶入 W11（或 W10）流程板填過的姓名。</div>
+<h1>通關完成率統計：W10–W16</h1>
+<div class="sub">拿收回來的紙本通關單，一張一張點。資料只存在這台電腦的瀏覽器，不會上傳。從 GitHub Pages 開時，空白的姓名會自動帶入最近一週流程板填過的姓名。</div>
 
 <div class="card legend">
 <b>點一下格子會依序切換：</b>
@@ -47,45 +49,57 @@ textarea{width:100%;min-height:70px;font:inherit;font-size:15px;border:1px solid
 <div class="sub">「缺」的人不算進那週的分母。W10 的 ③（還 W06 課件）那週沒有執行，整欄鎖住不計。</div>
 </div>
 
-<div class="card"><div class="wrap"><table id="tb"></table></div>
+<div class="card"><div class="tabs noprint" id="tabs"></div><h2 id="wkt"></h2><div class="wrap"><table id="tb"></table></div>
 <div class="tools noprint"><button id="addrow">＋ 加一位學生</button><button id="csv">下載 CSV</button><button class="pri" onclick="print()">列印這頁</button><button id="clear">清空全部</button></div></div>
 
-<div class="stats" id="stats"></div>
+<div class="stats"><div id="stats"></div>
+<div class="card"><h2 id="memot">離場卡上最常寫的「今天最難的是」</h2><textarea id="memo" placeholder="例：主動運輸 ×4、磷脂 ×2"></textarea></div></div>
 
-<div class="card"><h2>離場卡上最常寫的「今天最難的是」</h2>
-<div class="stats"><label>W10<textarea data-memo="w10" placeholder="例：主動運輸 ×4、磷脂 ×2"></textarea></label><label>W11<textarea data-memo="w11" placeholder="例：互補股 5'→3' ×5"></textarea></label></div></div>
+<div class="card"><h2>各週比較</h2><div class="sub">分母＝那週出席（有填格子）的人。「—」＝那週還沒填。</div><div class="wrap"><table id="trend"></table></div></div>
 </main>
 <script>
 'use strict';
 const KEY='bio_pass_tally';
 const WEEKS=[
  {id:'w10',label:'W10 脂質與細胞膜',gates:[{k:'g1',t:'① 訂正'},{k:'g2',t:'② 離場卡'},{k:'g3',t:'③ 課件 W06',na:true}]},
- {id:'w11',label:'W11 核苷酸與核酸',gates:[{k:'g1',t:'① 互補股'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W06'}]}
+ {id:'w11',label:'W11 核苷酸與核酸',gates:[{k:'g1',t:'① 互補股三題'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W06'}]},
+ {id:'w12',label:'W12 自由能與 ATP',gates:[{k:'g1',t:'① 能量耦合三題'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W07'}]},
+ {id:'w13',label:'W13 糖解作用與發酵',gates:[{k:'g1',t:'① 糖解能量帳'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W08'}]},
+ {id:'w14',label:'W14 檸檬酸循環',gates:[{k:'g1',t:'① 檸檬酸循環帳'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W05'}]},
+ {id:'w15',label:'W15 氧化磷酸化',gates:[{k:'g1',t:'① 電子路線與總帳'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W04'}]},
+ {id:'w16',label:'W16 脂肪酸與胺基酸代謝',gates:[{k:'g1',t:'① 計算與判斷'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W03'}]}
 ];
 const CYCLE=['','ok','mk','no','ab'];
 const SHOW={'':'','ok':'✓','mk':'補','no':'✗','ab':'缺'};
 function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
 let st=load(KEY);
-if(!st.rows){
-  st.rows=[];
-  const b=load('bio_w11_board').names?load('bio_w11_board'):load('bio_w10_board');
-  const names=b.names||{};
-  for(let i=0;i<11;i++)st.rows.push({name:(names[i]||'').trim(),c:{}});
+if(!st.rows){st.rows=[];for(let i=0;i<11;i++)st.rows.push({name:'',c:{}});}
+(function prefill(){ // 空白姓名用最近一週流程板的名單補上（不覆蓋已填的）
+  for(const w of [...WEEKS].reverse()){const n=load('bio_'+w.id+'_board').names;if(!n)continue;
+    st.rows.forEach((r,i)=>{if(!(r.name||'').trim()&&(n[i]||'').trim())r.name=n[i].trim();});break;}
   save();
-}
+})();
 st.memo=st.memo||{};
+if(!WEEKS.some(w=>w.id===st.sel))st.sel='w10';
+const tabs=document.getElementById('tabs');
+tabs.innerHTML=WEEKS.map(w=>`<button data-w="${w.id}">${w.id.toUpperCase()}</button>`).join('');
+tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{st.sel=b.dataset.w;save();render();});
+const memo=document.getElementById('memo');memo.oninput=()=>{st.memo[st.sel]=memo.value;save();};
 
 const tb=document.getElementById('tb');
 function render(){
-  let h='<tr><th rowspan="2">學生</th>';
-  WEEKS.forEach(w=>h+=`<th class="wk" colspan="${w.gates.length}">${w.label}</th>`);
-  h+='</tr><tr>';
-  WEEKS.forEach(w=>w.gates.forEach(g=>h+=`<th>${g.t}${g.na?'<br><span class="sub">沒執行</span>':''}</th>`));
+  const SEL=WEEKS.filter(w=>w.id===st.sel);
+  tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.w===st.sel));
+  document.getElementById('wkt').textContent=SEL[0].label;
+  document.getElementById('memot').textContent=st.sel.toUpperCase()+' 離場卡上最常寫的「今天最難的是」';
+  memo.value=st.memo[st.sel]||'';
+  let h='<tr><th>學生</th>';
+  SEL.forEach(w=>w.gates.forEach(g=>h+=`<th>${g.t}${g.na?'<br><span class="sub">沒執行</span>':''}</th>`));
   h+='</tr>';
   st.rows.forEach((r,i)=>{
     h+=`<tr><td class="nm"><input data-r="${i}" value="${(r.name||'').replace(/"/g,'&quot;')}" placeholder="學生 ${i+1}"></td>`;
-    WEEKS.forEach(w=>w.gates.forEach(g=>{
+    SEL.forEach(w=>w.gates.forEach(g=>{
       const key=w.id+g.k, v=r.c[key]||'';
       h+= g.na?`<td><button class="c" disabled>—</button></td>`
               :`<td><button class="c" data-r="${i}" data-k="${key}" data-w="${w.id}" data-v="${v}">${SHOW[v]}</button></td>`;
@@ -107,9 +121,25 @@ function render(){
   stats();
 }
 function pct(n,d){return d?Math.round(n*100/d)+'%':'—';}
+function summary(w){
+  const gs=w.gates.filter(g=>!g.na);
+  const att=st.rows.filter(r=>gs.some(g=>r.c[w.id+g.k]&&r.c[w.id+g.k]!=='ab'));
+  return {gs,att,d:att.length,
+    gate:g=>att.filter(r=>r.c[w.id+g.k]==='ok').length,
+    allOk:att.filter(r=>gs.every(g=>r.c[w.id+g.k]==='ok')).length,
+    allDone:att.filter(r=>gs.every(g=>['ok','mk'].includes(r.c[w.id+g.k]))).length};
+}
+function trend(){
+  let h='<tr><th>週次</th><th>出席</th><th>①</th><th>②</th><th>③</th><th>當堂全部通關</th><th>含補完</th></tr>';
+  WEEKS.forEach(w=>{const s=summary(w);
+    const cell=k=>{const g=w.gates.find(x=>x.k===k);return g.na?'<span class="sub">沒執行</span>':(s.d?pct(s.gate(g),s.d):'—');};
+    h+=`<tr><td>${w.label}</td><td>${s.d||'—'}</td><td>${cell('g1')}</td><td>${cell('g2')}</td><td>${cell('g3')}</td><td><b>${s.d?pct(s.allOk,s.d):'—'}</b></td><td>${s.d?pct(s.allDone,s.d):'—'}</td></tr>`;});
+  document.getElementById('trend').innerHTML=h;
+}
 function stats(){
+  trend();
   let h='';
-  WEEKS.forEach(w=>{
+  WEEKS.filter(w=>w.id===st.sel).forEach(w=>{
     const gs=w.gates.filter(g=>!g.na);
     // 有填任何一格且不是缺席＝出席
     const att=st.rows.filter(r=>gs.some(g=>r.c[w.id+g.k]&&r.c[w.id+g.k]!=='ab'));
@@ -132,7 +162,6 @@ function stats(){
   });
   document.getElementById('stats').innerHTML=h;
 }
-document.querySelectorAll('textarea[data-memo]').forEach(t=>{t.value=st.memo[t.dataset.memo]||'';t.oninput=()=>{st.memo[t.dataset.memo]=t.value;save();};});
 document.getElementById('addrow').onclick=()=>{st.rows.push({name:'',c:{}});save();render();};
 document.getElementById('clear').onclick=()=>{if(confirm('清空這頁的全部紀錄？這個動作不能復原。')){localStorage.removeItem(KEY);location.reload();}};
 document.getElementById('csv').onclick=()=>{
@@ -141,7 +170,7 @@ document.getElementById('csv').onclick=()=>{
   const q=s=>'"'+String(s).replace(/"/g,'""')+'"';
   let out=['學生',...cols.map(c=>c.t)].map(q).join(',')+'\n';
   st.rows.forEach(r=>out+=[r.name,...cols.map(c=>lab[r.c[c.k]||''])].map(q).join(',')+'\n');
-  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+out],{type:'text/csv'}));a.download='通關完成率_W10-W11.csv';a.click();
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+out],{type:'text/csv'}));a.download='通關完成率_W10-W16.csv';a.click();
 };
 render();
 </script></body></html>
