@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>通關完成率統計</title>
+<style>
+:root{--bg:#f7f5ef;--card:#fff;--ink:#1f2933;--sub:#5b6670;--line:#d9d4c7;--a:#1f6f5c;--ok:#2e7d32;--ok-bg:#e3f2e5;--mk:#b26a00;--mk-bg:#fff1d6;--no:#b3261e;--no-bg:#fde4e2;--na:#9aa3ab;--na-bg:#eef0f2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15191c;--card:#1e2428;--ink:#e6e9ec;--sub:#9aa5ae;--line:#33404a;--a:#5fc4a8;--ok:#7bd88a;--ok-bg:#1f3524;--mk:#f0b85a;--mk-bg:#3a2e17;--no:#ff8a80;--no-bg:#3d1f1d;--na:#7d8790;--na-bg:#262d32}}
+:root[data-theme="dark"]{--bg:#15191c;--card:#1e2428;--ink:#e6e9ec;--sub:#9aa5ae;--line:#33404a;--a:#5fc4a8;--ok:#7bd88a;--ok-bg:#1f3524;--mk:#f0b85a;--mk-bg:#3a2e17;--no:#ff8a80;--no-bg:#3d1f1d;--na:#7d8790;--na-bg:#262d32}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;padding:16px}
+main{max-width:1100px;margin:0 auto}
+h1{font-size:24px;margin:0 0 4px}h2{font-size:19px;margin:0 0 8px}
+.sub{color:var(--sub);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:14px 0}
+.legend span{display:inline-block;margin:2px 10px 2px 0}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th,td{border:1px solid var(--line);padding:4px 6px;text-align:center;font-size:15px}
+th{background:var(--bg);font-weight:600}
+th.wk{font-size:16px}
+td.nm{text-align:left;min-width:120px}
+td.nm input{width:100%;font:inherit;border:0;background:transparent;color:var(--ink)}
+button.c{width:100%;min-width:48px;height:34px;border:1px solid var(--line);border-radius:6px;font:inherit;font-weight:700;cursor:pointer;background:var(--card);color:var(--sub)}
+button.c[data-v="ok"]{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+button.c[data-v="mk"]{background:var(--mk-bg);color:var(--mk);border-color:var(--mk)}
+button.c[data-v="no"]{background:var(--no-bg);color:var(--no);border-color:var(--no)}
+button.c[data-v="ab"]{background:var(--na-bg);color:var(--na)}
+button.c:disabled{background:var(--na-bg);color:var(--na);cursor:not-allowed;border-style:dashed}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.gate{display:grid;grid-template-columns:110px 1fr 92px;gap:8px;align-items:center;margin:6px 0;font-size:15px}
+.bar{height:18px;background:var(--na-bg);border-radius:9px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.bar .b1{background:var(--ok)}.bar .b2{background:var(--mk)}
+.big{font-size:26px;font-weight:700;color:var(--a)}
+.stuck{font-size:15px;margin-top:8px}
+textarea{width:100%;min-height:70px;font:inherit;font-size:15px;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--card);color:var(--ink)}
+.tools button{font:inherit;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;margin:4px 6px 4px 0}
+.tools button.pri{background:var(--a);color:#fff;border-color:var(--a)}
+@media print{.tools,.noprint{display:none}body{padding:0;background:#fff}.card{border:0;padding:6px 0}}
+@media (max-width:600px){.gate{grid-template-columns:80px 1fr 80px}}
+</style></head><body><main>
+<h1>通關完成率統計：W10–W11</h1>
+<div class="sub">拿收回來的紙本通關單，一張一張點。資料只存在這台電腦的瀏覽器，不會上傳。從 GitHub Pages 開時，會自動帶入 W11（或 W10）流程板填過的姓名。</div>
+
+<div class="card legend">
+<b>點一下格子會依序切換：</b>
+<span>空白＝還沒填</span><span style="color:var(--ok)">✓ 當堂完成</span><span style="color:var(--mk)">補 下週開場補完</span><span style="color:var(--no)">✗ 沒完成</span><span style="color:var(--na)">缺 那週沒來</span>
+<div class="sub">「缺」的人不算進那週的分母。W10 的 ③（還 W06 課件）那週沒有執行，整欄鎖住不計。</div>
+</div>
+
+<div class="card"><div class="wrap"><table id="tb"></table></div>
+<div class="tools noprint"><button id="addrow">＋ 加一位學生</button><button id="csv">下載 CSV</button><button class="pri" onclick="print()">列印這頁</button><button id="clear">清空全部</button></div></div>
+
+<div class="stats" id="stats"></div>
+
+<div class="card"><h2>離場卡上最常寫的「今天最難的是」</h2>
+<div class="stats"><label>W10<textarea data-memo="w10" placeholder="例：主動運輸 ×4、磷脂 ×2"></textarea></label><label>W11<textarea data-memo="w11" placeholder="例：互補股 5'→3' ×5"></textarea></label></div></div>
+</main>
+<script>
+'use strict';
+const KEY='bio_pass_tally';
+const WEEKS=[
+ {id:'w10',label:'W10 脂質與細胞膜',gates:[{k:'g1',t:'① 訂正'},{k:'g2',t:'② 離場卡'},{k:'g3',t:'③ 課件 W06',na:true}]},
+ {id:'w11',label:'W11 核苷酸與核酸',gates:[{k:'g1',t:'① 互補股'},{k:'g2',t:'② 離場卡＋抽問'},{k:'g3',t:'③ 課件 W06'}]}
+];
+const CYCLE=['','ok','mk','no','ab'];
+const SHOW={'':'','ok':'✓','mk':'補','no':'✗','ab':'缺'};
+function load(k){try{return JSON.parse(localStorage.getItem(k)||'{}');}catch(e){return {};}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+let st=load(KEY);
+if(!st.rows){
+  st.rows=[];
+  const b=load('bio_w11_board').names?load('bio_w11_board'):load('bio_w10_board');
+  const names=b.names||{};
+  for(let i=0;i<11;i++)st.rows.push({name:(names[i]||'').trim(),c:{}});
+  save();
+}
+st.memo=st.memo||{};
+
+const tb=document.getElementById('tb');
+function render(){
+  let h='<tr><th rowspan="2">學生</th>';
+  WEEKS.forEach(w=>h+=`<th class="wk" colspan="${w.gates.length}">${w.label}</th>`);
+  h+='</tr><tr>';
+  WEEKS.forEach(w=>w.gates.forEach(g=>h+=`<th>${g.t}${g.na?'<br><span class="sub">沒執行</span>':''}</th>`));
+  h+='</tr>';
+  st.rows.forEach((r,i)=>{
+    h+=`<tr><td class="nm"><input data-r="${i}" value="${(r.name||'').replace(/"/g,'&quot;')}" placeholder="學生 ${i+1}"></td>`;
+    WEEKS.forEach(w=>w.gates.forEach(g=>{
+      const key=w.id+g.k, v=r.c[key]||'';
+      h+= g.na?`<td><button class="c" disabled>—</button></td>`
+              :`<td><button class="c" data-r="${i}" data-k="${key}" data-w="${w.id}" data-v="${v}">${SHOW[v]}</button></td>`;
+    }));
+    h+='</tr>';
+  });
+  tb.innerHTML=h;
+  tb.querySelectorAll('input[data-r]').forEach(el=>el.oninput=()=>{st.rows[el.dataset.r].name=el.value;save();});
+  tb.querySelectorAll('button.c:not(:disabled)').forEach(b=>b.onclick=()=>{
+    const r=st.rows[b.dataset.r], cur=r.c[b.dataset.k]||'';
+    let nv=CYCLE[(CYCLE.indexOf(cur)+1)%CYCLE.length];
+    r.c[b.dataset.k]=nv;
+    // 缺席是整週的事：點成「缺」就把那週其他格也設成缺；從缺切走就清掉其他格的缺
+    const w=WEEKS.find(x=>x.id===b.dataset.w);
+    w.gates.filter(g=>!g.na).forEach(g=>{const k=w.id+g.k;if(k===b.dataset.k)return;
+      if(nv==='ab')r.c[k]='ab'; else if(cur==='ab'&&r.c[k]==='ab')r.c[k]='';});
+    save();render();
+  });
+  stats();
+}
+function pct(n,d){return d?Math.round(n*100/d)+'%':'—';}
+function stats(){
+  let h='';
+  WEEKS.forEach(w=>{
+    const gs=w.gates.filter(g=>!g.na);
+    // 有填任何一格且不是缺席＝出席
+    const att=st.rows.filter(r=>gs.some(g=>r.c[w.id+g.k]&&r.c[w.id+g.k]!=='ab'));
+    const absent=st.rows.filter(r=>gs.every(g=>r.c[w.id+g.k]==='ab')).length;
+    const d=att.length;
+    h+=`<div class="card"><h2>${w.label}</h2><div class="sub">出席（有填格子）${d} 人${absent?`，缺席 ${absent} 人`:''}</div>`;
+    gs.forEach(g=>{
+      const ok=att.filter(r=>r.c[w.id+g.k]==='ok').length, mk=att.filter(r=>r.c[w.id+g.k]==='mk').length;
+      h+=`<div class="gate"><span>${g.t}</span><div class="bar" title="深色＝當堂，淺色＝下週補完"><i class="b1" style="width:${d?ok*100/d:0}%"></i><i class="b2" style="width:${d?mk*100/d:0}%"></i></div><span>${ok}/${d} 當堂${mk?`<br><span class="sub">＋${mk} 補完</span>`:''}</span></div>`;
+    });
+    const allOk=att.filter(r=>gs.every(g=>r.c[w.id+g.k]==='ok')).length;
+    const allDone=att.filter(r=>gs.every(g=>['ok','mk'].includes(r.c[w.id+g.k]))).length;
+    h+=`<div style="margin-top:10px"><span class="big">${pct(allOk,d)}</span> 當堂全部通關（${allOk}/${d}）<br><span class="sub">含下週補完：${allDone}/${d}（${pct(allDone,d)}）</span></div>`;
+    // 卡在哪一格：第一個不是「當堂完成」的格子
+    const stuck={};let blank=0;
+    att.forEach(r=>{const g=gs.find(g=>r.c[w.id+g.k]!=='ok');if(!g)return;
+      if(!r.c[w.id+g.k]){blank++;return;} stuck[g.t]=(stuck[g.t]||0)+1;});
+    const parts=gs.filter(g=>stuck[g.t]).map(g=>`${g.t} ${stuck[g.t]} 人`);
+    h+=`<div class="stuck"><b>當堂沒通關的人，第一個卡住的格子：</b>${parts.length?parts.join('、'):'沒有'}${blank?`<br><span class="sub">另有 ${blank} 人還有格子沒填</span>`:''}</div></div>`;
+  });
+  document.getElementById('stats').innerHTML=h;
+}
+document.querySelectorAll('textarea[data-memo]').forEach(t=>{t.value=st.memo[t.dataset.memo]||'';t.oninput=()=>{st.memo[t.dataset.memo]=t.value;save();};});
+document.getElementById('addrow').onclick=()=>{st.rows.push({name:'',c:{}});save();render();};
+document.getElementById('clear').onclick=()=>{if(confirm('清空這頁的全部紀錄？這個動作不能復原。')){localStorage.removeItem(KEY);location.reload();}};
+document.getElementById('csv').onclick=()=>{
+  const cols=[];WEEKS.forEach(w=>w.gates.filter(g=>!g.na).forEach(g=>cols.push({k:w.id+g.k,t:w.id.toUpperCase()+' '+g.t})));
+  const lab={'':'','ok':'當堂','mk':'補完','no':'沒完成','ab':'缺席'};
+  const q=s=>'"'+String(s).replace(/"/g,'""')+'"';
+  let out=['學生',...cols.map(c=>c.t)].map(q).join(',')+'\n';
+  st.rows.forEach(r=>out+=[r.name,...cols.map(c=>lab[r.c[c.k]||''])].map(q).join(',')+'\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+out],{type:'text/csv'}));a.download='通關完成率_W10-W11.csv';a.click();
+};
+render();
+</script></body></html>
